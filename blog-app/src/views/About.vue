@@ -13,25 +13,60 @@ export default {
   name: 'About',
   data () {
     return {
-      content: '#### 关于本项目\n' +
-        '本项目是基于Spring Boot 和 Vue3 开发的一个前后端分离的简易博客项目\n' + '\n' +
-        '实现了创建、修改、删除文章操作\n' + '\n' +
-        '文章支持 markdown 语法\n' + '\n' +
-        '##### 技术栈：\n' + '\n' +
-        '**后端：**\n' + '\n' +
-        '- Spring Boot 2.x\n' + '\n' +
-        '- Spring JPA\n' + '\n' +
-        '- [smart doc](https://gitee.com/smart-doc-team/smart-doc) 生成 API 文档\n' + '\n' +
-        '**前端：**\n' + '\n' +
-        '- Vue 3.x\n' + '\n' +
-        '- [md-editor-v3](https://imzbf.github.io/md-editor-v3/) markdown 编辑器\n' + '\n' +
-        '- [vue-simple-markdown](https://github.com/Vivify-Ideas/vue-simple-markdown) markdown 转 html 预览\n' + '\n' +
-        '- bootstrap\n' + '\n' +
-        '#### 关于我\n' + '\n' +
-        '\n' +
-        '半个技术宅，喜欢尝试新事物，想法很多\n' + '\n' +
-        '计算机专业在读，目前对后端开发感兴趣\n' + '\n' +
-        'Java 在学，为了构建完整 web 应用还准备学前端'
+      content: '# Lblog\n' + '\n' +
+      'Springboot + Vue 前后端分离个人博客项目\n' + '\n' +
+      '后端技术：\n' + '\n' +
+      '- SpringBoot\n' + '\n' +
+      '- Spring Data JPA\n' + '\n' +
+      '- Sa-token\n' + '\n' +
+      '- smart-doc\n' + '\n' +
+    '前端技术：\n' + '\n' +
+    '- Vue3\n' + '\n' +
+    '- axios\n' + '\n' +
+    '- markdown-it\n' + '\n' +
+    '- ElementPlus\n' + '\n' +
+    '- md-editor-v3\n' + '\n' +
+    '## Install\n' + '\n' +
+    '```shell\n' + '\n' +
+    'git clone https://github.com/wjl-lab/lblog\n' + '\n' +
+    '```\n' + '\n' +
+    '## Usage\n' + '\n' +
+    '- 数据库\n' + '\n' +
+    '创建 `lblog` 数据库，修改 `yml` 配置文件，表会在项目启动时自动生成\n' + '\n' +
+    '- 后端\n' + '\n' +
+    '```shell\n' + '\n' +
+    '$ cd blog-server\n' + '\n' +
+    '$ mvn clean package\n' + '\n' +
+    '$ cd target\n' + '\n' +
+    '$ java -jar lblog-0.0.1.jar\n' + '\n' +
+    '```\n' + '\n' +
+    '- 博客页面\n' + '\n' +
+    '```shell\n' + '\n' +
+    '$ cd blog-app\n' + '\n' +
+    '$ npm install\n' + '\n' +
+    '$ npm run serve\n' + '\n' +
+    '```\n' + '\n' +
+    '- 博客后台管理\n' + '\n' +
+    '```shell\n' + '\n' +
+    '$ cd blog-admin\n' + '\n' +
+    '$ npm install\n' + '\n' +
+    '$ npm run serve\n' + '\n' +
+    '```\n' + '\n' +
+    '## API\n' + '\n' +
+    '```\n' + '\n' +
+    'https://wangjialei.xyz/lblog\n' + '\n' +
+    '```\n' + '\n' +
+    '## Todo\n' + '\n' +
+    '1. 前端页面不是响应式布局，需要修改\n' + '\n' +
+    '2. 文章详情页没有代码高亮，布局丑陋\n' + '\n' +
+    '3. 登录密码未加密，明文存储在数据库\n' + '\n' +
+    '4. 图片上传后图片在服务器中的路径显示方式不方便复制\n' + '\n' +
+    '5. 关于页面需要完善内容，加上开发进展时间线\n' + '\n' +
+    '6. README 还需要完善\n' + '\n' +
+    '## Contributing\n' + '\n' +
+    'PRs accepted.\n' + '\n' +
+    '## License\n' + '\n' +
+    '[GPL-3.0](LICENSE) © wjl\n' + '\n'
     }
   },
   methods: {
