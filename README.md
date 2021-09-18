@@ -20,6 +20,26 @@ Springboot + Vue 前后端分离个人博客项目
 
 
 
+![Snipaste_2021-09-18_23-22-45](https://gitee.com/wang-jia-lei/mypic/raw/master/Snipaste_2021-09-18_23-22-45.png)
+
+![Snipaste_2021-09-18_23-22-54](https://gitee.com/wang-jia-lei/mypic/raw/master/Snipaste_2021-09-18_23-22-54.png)
+
+![Snipaste_2021-09-18_23-23-04](https://gitee.com/wang-jia-lei/mypic/raw/master/Snipaste_2021-09-18_23-23-04.png)
+
+![Snipaste_2021-09-18_23-31-39](https://gitee.com/wang-jia-lei/mypic/raw/master/Snipaste_2021-09-18_23-31-39.png)
+
+![Snipaste_2021-09-18_23-31-55](https://gitee.com/wang-jia-lei/mypic/raw/master/Snipaste_2021-09-18_23-31-55.png)
+
+![Snipaste_2021-09-18_23-32-14](https://gitee.com/wang-jia-lei/mypic/raw/master/Snipaste_2021-09-18_23-32-14.png)
+
+![Snipaste_2021-09-18_23-34-00](https://gitee.com/wang-jia-lei/mypic/raw/master/Snipaste_2021-09-18_23-34-00.png)
+
+![Snipaste_2021-09-18_23-34-07](https://gitee.com/wang-jia-lei/mypic/raw/master/Snipaste_2021-09-18_23-34-07.png)
+
+![Snipaste_2021-09-18_23-34-38](https://gitee.com/wang-jia-lei/mypic/raw/master/Snipaste_2021-09-18_23-34-38.png)
+
+
+
 ## Install
 
 ```shell
