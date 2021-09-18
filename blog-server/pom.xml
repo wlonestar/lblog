@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.wjl</groupId>
+    <artifactId>lblog</artifactId>
+    <version>0.0.1</version>
+    <name>lblog</name>
+    <description>blog-server</description>
+
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>2.5.4</version>
+        <relativePath/>
+    </parent>
+
+    <properties>
+        <java.version>16</java.version>
+    </properties>
+
+    <dependencies>
+        <!-- spring-web -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+            <!-- 除去 logging -->
+            <exclusions>
+                <exclusion>
+                    <groupId>org.springframework.boot</groupId>
+                    <artifactId>spring-boot-starter-logging</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+        <!-- log4j2 -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-log4j2</artifactId>
+        </dependency>
+        <!-- mysql -->
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+        </dependency>
+        <!-- spring data jpa -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-jpa</artifactId>
+        </dependency>
+        <!-- sa-token -->
+        <dependency>
+            <groupId>cn.dev33</groupId>
+            <artifactId>sa-token-spring-boot-starter</artifactId>
+            <version>1.25.0</version>
+        </dependency>
+        <!-- hutool 工具类 -->
+        <dependency>
+            <groupId>cn.hutool</groupId>
+            <artifactId>hutool-all</artifactId>
+            <version>5.7.12</version>
+        </dependency>
+        <!-- StringUtils -->
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-lang3</artifactId>
+        </dependency>
+        <!-- fastjson -->
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>fastjson</artifactId>
+            <version>1.2.44</version>
+        </dependency>
+        <!-- spring devtools 热部署-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-devtools</artifactId>
+        </dependency>
+        <!-- lombok 插件-->
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+        </dependency>
+        <!-- spring test -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
+        </dependency>
+        <!-- junit -->
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <!-- maven 打包插件 -->
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+            <!-- smart-doc 生成 API 文档插件 -->
+            <plugin>
+                <groupId>com.github.shalousun</groupId>
+                <artifactId>smart-doc-maven-plugin</artifactId>
+                <version>2.2.4</version>
+                <configuration>
+                    <configFile>./src/main/resources/smart-doc.json</configFile>
+                    <projectName>myblog</projectName>
+                </configuration>
+                <executions>
+                    <execution>
+                        <!-- 预设输出 html 格式 -->
+                        <goals>
+                            <goal>html</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+
+</project>

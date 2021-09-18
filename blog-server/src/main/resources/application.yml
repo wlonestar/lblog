@@ -1,0 +1,39 @@
+server:
+  port: 8088
+
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/lblog?useSSL=false&serverTimezone=UTC
+    username: root
+    password: 123456
+    hikari:
+      minimum-idle: 1
+      maximum-pool-size: 20
+      initialization-fail-timeout: 60000
+  jpa:
+    show-sql: false
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        format_sql: true
+    database-platform: org.hibernate.dialect.MySQL8Dialect
+
+sa-token:
+  token-name: satoken
+  timeout: 30000
+  activity-timeout: -1
+  is-share: false
+  token-style: uuid
+  is-log: true
+
+#logging:
+#  level:
+#    root: warn
+#    com.wjl.miniblog: info
+#  file:
+#    name: log/log.log
+#  logback:
+#    rollingpolicy:
+#      max-file-size: 2MB

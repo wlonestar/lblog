@@ -1,0 +1,11 @@
+{
+  "isStrict": false,
+  "allInOne": true,
+  "outPath": "src/main/resources/docs",
+  "coverOld": true,
+  "createDebugPage": true,
+  "md5EncryptedHtmlName": false,
+  "projectName": "Lblog",
+  "showAuthor":true,
+  "allInOneDocFileName":"API.html"
+}
