@@ -82,7 +82,6 @@ public class CategoryController {
     @RequestMapping(method = RequestMethod.DELETE)
     public Long deleteById(@RequestParam("id") Long id) {
         return categoryService.deleteById(id);
-//        return id;
     }
 
 }

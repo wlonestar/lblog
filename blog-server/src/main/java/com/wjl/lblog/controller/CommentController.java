@@ -87,9 +87,10 @@ public class CommentController {
     /**
      * 删除所有留言
      */
-//    @DeleteMapping("/delete")
-//    public void deleteAll() {
-//        commentService.deleteAll();
-//    }
+    @Deprecated
+    @DeleteMapping("/delete")
+    public void deleteAll() {
+        commentService.deleteAll();
+    }
 
 }

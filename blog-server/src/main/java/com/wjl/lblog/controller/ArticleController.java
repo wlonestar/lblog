@@ -81,7 +81,6 @@ public class ArticleController {
     @RequestMapping(method = RequestMethod.DELETE)
     public Long deleteById(@RequestParam("id") Long id) {
         return articleService.deleteById(id);
-//        return id;
     }
 
 }

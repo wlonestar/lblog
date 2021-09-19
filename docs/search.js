@@ -92,6 +92,10 @@ api[2].list.push({
     order: '6',
     desc: '根据id删除留言',
 });
+api[2].list.push({
+    order: '7',
+    desc: '删除所有留言',
+});
 api.push({
     alias: 'IdeaController',
     order: '4',

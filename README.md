@@ -26,8 +26,6 @@ Springboot + Vue 前后端分离个人博客项目
 
 ![Snipaste_2021-09-18_23-23-04](https://gitee.com/wang-jia-lei/mypic/raw/master/Snipaste_2021-09-18_23-23-04.png)
 
-![Snipaste_2021-09-18_23-31-39](https://gitee.com/wang-jia-lei/mypic/raw/master/Snipaste_2021-09-18_23-31-39.png)
-
 ![Snipaste_2021-09-18_23-31-55](https://gitee.com/wang-jia-lei/mypic/raw/master/Snipaste_2021-09-18_23-31-55.png)
 
 ![Snipaste_2021-09-18_23-32-14](https://gitee.com/wang-jia-lei/mypic/raw/master/Snipaste_2021-09-18_23-32-14.png)
@@ -95,9 +93,9 @@ https://wangjialei.xyz/lblog
 
 1. 前端页面不是响应式布局，需要修改
 2. ~~文章详情页没有代码高亮，布局丑陋~~
-3. 登录密码未加密，明文存储在数据库
+3. ~~登录密码未加密，明文存储在数据库~~
 4. ~~图片上传后图片在服务器中的路径显示方式不方便复制~~
-5. 关于页面需要完善内容，加上开发进展时间线
+5. ~~关于页面需要完善内容，加上开发进展时间线~~
 6. README 还需要完善
 
 
