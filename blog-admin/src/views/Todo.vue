@@ -116,7 +116,7 @@ export default {
         })
       } else {
         addTodo(this.form).then(data => {
-          console.log(data)
+          // console.log(data)
           if (data.code === 200) {
             this.$message({
               type: 'success',
@@ -135,7 +135,7 @@ export default {
     },
     handleEdit (row) {
       this.form = JSON.parse(JSON.stringify(row))
-      console.log(this.form)
+      // console.log(this.form)
       this.dialogVisible = true
     },
     handleDelete (id) {

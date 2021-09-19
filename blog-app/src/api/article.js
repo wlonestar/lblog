@@ -28,35 +28,3 @@ export function getArticle (id) {
     data: id
   })
 }
-
-// 增加文章
-export function addArticle (article) {
-  return request({
-    url: '/article',
-    method: 'post',
-    data: article
-  })
-}
-
-// 根据 id 更新文章
-export function updateArticle (id, article) {
-  return request({
-    url: '/article',
-    method: 'put',
-    params: {
-      id: id
-    },
-    data: article
-  })
-}
-
-// 根据 id 删除文章
-export function deleteArticle (id) {
-  return request({
-    url: '/article',
-    method: 'delete',
-    params: {
-      id
-    }
-  })
-}

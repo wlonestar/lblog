@@ -117,10 +117,6 @@ export default {
   width: 850px;
 }
 
-.box-card {
-  width: 780px;
-}
-
 .box-card-mid {
   width: 500px;
 }

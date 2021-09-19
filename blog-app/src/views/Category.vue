@@ -8,7 +8,9 @@
       <p style="font-size: 15px; font-weight: 400; margin-top: 5px;">{{ category.description }}</p>
     </el-card>
     <el-card v-for="article in category.articleList" :key="article.id" class="text item" style="margin-bottom: 15px;">
-      <p style="font-size: 22px; font-weight: 500; margin-bottom: 5px;">{{ article.title }}</p>
+      <p style="font-size: 22px; font-weight: 500; margin-bottom: 5px;">
+        <a @click="redirectToArticle(article.id)">{{ article.title }}</a>
+      </p>
       <span style="color: #777777;">{{ new Date(article.updateTime).toLocaleDateString() }}</span>
       <p style="font-size: 15px; font-weight: 400; margin-top: 5px;">{{ article.summary }}</p>
     </el-card>
@@ -32,6 +34,9 @@ export default {
       getCategory(this.$route.params.id).then(data => {
         this.category = data.data.data
       })
+    },
+    redirectToArticle (id) {
+      this.$router.push(`/p/${id}`)
     }
   }
 }

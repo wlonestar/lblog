@@ -1,8 +1,8 @@
 <template>
   <div>
     <Header></Header>
-    <div style="display: flex; margin-left: 15%; width: 70%;">
-      <router-view style="flex: 1; margin: 15px 5% 30px 5%;"/>
+    <div class="main" style="display: flex;">
+      <router-view style="flex: 1; margin: 30px 30px 30px 0;"/>
       <Aside/>
     </div>
     <Footer />
@@ -24,5 +24,24 @@ export default {
 </script>
 
 <style scoped>
+@media (max-width: 1920px) {
+  .main {
+    margin-left: 20%;
+    margin-right: 20%;
+  }
+}
 
+@media (max-width: 1440px) {
+  .main {
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+}
+
+@media (max-width: 700px) {
+  .main {
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+}
 </style>

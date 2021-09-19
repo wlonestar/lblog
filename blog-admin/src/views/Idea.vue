@@ -17,15 +17,10 @@
         </template>
       </el-table-column>
       <el-table-column prop="content" label="内容" sortable></el-table-column>
-<!--      <el-table-column label="图片" width="300px">-->
-<!--        <template #default="scope">-->
-<!--          <el-image fit="contain" style="height: 100px;" :src="scope.row.image" :preview-src-list="[scope.row.image]"></el-image>-->
-<!--        </template>-->
-<!--      </el-table-column>-->
       <el-table-column label="操作"  width="155px;">
         <template #default="scope">
           <el-button @click="handleEdit(scope.row)" size="mini">编辑</el-button>
-          <el-popconfirm title="确定删除文章吗？" @confirm="handleDelete(scope.row.id)">
+          <el-popconfirm title="确定删除动态吗？" @confirm="handleDelete(scope.row.id)">
             <template #reference>
               <el-button type="danger" size="mini">删除</el-button>
             </template>
@@ -45,9 +40,6 @@
       </el-pagination>
       <el-dialog title="编辑" v-model="dialogVisible" width="50%" center>
         <el-form :model="form" label-width="100px">
-          <el-form-item label="图片">
-            <el-input v-model="form.image" style="width: 100%;"></el-input>
-          </el-form-item>
           <el-form-item label="内容">
             <el-input type="textarea" :autosize="{ minRows: 5, maxRows: 10 }" v-model="form.content" style="width: 100%;"></el-input>
           </el-form-item>
@@ -138,7 +130,7 @@ export default {
     },
     handleEdit (row) {
       this.form = JSON.parse(JSON.stringify(row))
-      console.log(this.form)
+      // console.log(this.form)
       this.dialogVisible = true
     },
     handleDelete (id) {

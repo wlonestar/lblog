@@ -5,7 +5,7 @@
 
     <groupId>com.wjl</groupId>
     <artifactId>lblog</artifactId>
-    <version>0.0.1</version>
+    <version>1.0.0</version>
     <name>lblog</name>
     <description>blog-server</description>
 
@@ -59,17 +59,6 @@
             <groupId>cn.hutool</groupId>
             <artifactId>hutool-all</artifactId>
             <version>5.7.12</version>
-        </dependency>
-        <!-- StringUtils -->
-        <dependency>
-            <groupId>org.apache.commons</groupId>
-            <artifactId>commons-lang3</artifactId>
-        </dependency>
-        <!-- fastjson -->
-        <dependency>
-            <groupId>com.alibaba</groupId>
-            <artifactId>fastjson</artifactId>
-            <version>1.2.44</version>
         </dependency>
         <!-- spring devtools 热部署-->
         <dependency>

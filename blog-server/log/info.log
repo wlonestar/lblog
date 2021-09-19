@@ -316,3 +316,233 @@ Error starting ApplicationContext. To display the conditions report re-run your 
 [2021-09-19 14:52:12,262][SpringApplicationShutdownHook][INFO][org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean:651] Closing JPA EntityManagerFactory for persistence unit 'default'
 [2021-09-19 14:52:12,263][SpringApplicationShutdownHook][INFO][com.zaxxer.hikari.HikariDataSource:350] HikariPool-2 - Shutdown initiated...
 [2021-09-19 14:52:12,264][SpringApplicationShutdownHook][INFO][com.zaxxer.hikari.HikariDataSource:352] HikariPool-2 - Shutdown completed.
+[2021-09-19 15:15:50,129][restartedMain][INFO][com.wjl.lblog.BlogServerApplication:55] Starting BlogServerApplication using Java 16.0.1 on lonestar with PID 9016 (D:\wjl\repository\blog\Lblog\blog-server\target\classes started by wjl in D:\wjl\repository\blog\Lblog\blog-server)
+[2021-09-19 15:15:50,129][restartedMain][INFO][com.wjl.lblog.BlogServerApplication:659] No active profile set, falling back to default profiles: default
+[2021-09-19 15:15:50,161][restartedMain][INFO][org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor:255] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+[2021-09-19 15:15:50,161][restartedMain][INFO][org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor:255] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+[2021-09-19 15:15:50,659][restartedMain][INFO][org.springframework.data.repository.config.RepositoryConfigurationDelegate:132] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[2021-09-19 15:15:50,737][restartedMain][INFO][org.springframework.data.repository.config.RepositoryConfigurationDelegate:201] Finished Spring Data repository scanning in 65 ms. Found 7 JPA repository interfaces.
+[2021-09-19 15:15:51,127][restartedMain][INFO][org.springframework.boot.web.embedded.tomcat.TomcatWebServer:108] Tomcat initialized with port(s): 8088 (http)
+[2021-09-19 15:15:51,127][restartedMain][INFO][org.apache.coyote.http11.Http11NioProtocol:173] Initializing ProtocolHandler ["http-nio-8088"]
+[2021-09-19 15:15:51,127][restartedMain][INFO][org.apache.catalina.core.StandardService:173] Starting service [Tomcat]
+[2021-09-19 15:15:51,127][restartedMain][INFO][org.apache.catalina.core.StandardEngine:173] Starting Servlet engine: [Apache Tomcat/9.0.52]
+[2021-09-19 15:15:51,127][restartedMain][INFO][org.apache.catalina.core.AprLifecycleListener:173] Loaded Apache Tomcat Native library [1.2.30] using APR version [1.7.0].
+[2021-09-19 15:15:51,127][restartedMain][INFO][org.apache.catalina.core.AprLifecycleListener:173] APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true], UDS [true].
+[2021-09-19 15:15:51,127][restartedMain][INFO][org.apache.catalina.core.AprLifecycleListener:173] APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+[2021-09-19 15:15:51,143][restartedMain][INFO][org.apache.catalina.core.AprLifecycleListener:173] OpenSSL successfully initialized [OpenSSL 1.1.1k  25 Mar 2021]
+[2021-09-19 15:15:51,205][restartedMain][INFO][org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]:173] Initializing Spring embedded WebApplicationContext
+[2021-09-19 15:15:51,205][restartedMain][INFO][org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext:290] Root WebApplicationContext: initialization completed in 1044 ms
+[2021-09-19 15:15:51,299][restartedMain][INFO][org.hibernate.jpa.internal.util.LogHelper:31] HHH000204: Processing PersistenceUnitInfo [name: default]
+[2021-09-19 15:15:51,330][restartedMain][INFO][org.hibernate.Version:44] HHH000412: Hibernate ORM core version 5.4.32.Final
+[2021-09-19 15:15:51,392][restartedMain][INFO][org.hibernate.annotations.common.Version:56] HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+[2021-09-19 15:15:51,455][restartedMain][INFO][com.zaxxer.hikari.HikariDataSource:110] HikariPool-1 - Starting...
+[2021-09-19 15:15:51,533][restartedMain][INFO][com.zaxxer.hikari.HikariDataSource:123] HikariPool-1 - Start completed.
+[2021-09-19 15:15:51,549][restartedMain][INFO][org.hibernate.dialect.Dialect:175] HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+[2021-09-19 15:15:51,987][restartedMain][INFO][org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator:52] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[2021-09-19 15:15:52,003][restartedMain][INFO][org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean:437] Initialized JPA EntityManagerFactory for persistence unit 'default'
+[2021-09-19 15:15:52,721][restartedMain][INFO][org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer:58] LiveReload server is running on port 35729
+[2021-09-19 15:15:52,737][restartedMain][INFO][org.apache.coyote.http11.Http11NioProtocol:173] Starting ProtocolHandler ["http-nio-8088"]
+[2021-09-19 15:15:52,768][restartedMain][INFO][org.springframework.boot.web.embedded.tomcat.TomcatWebServer:220] Tomcat started on port(s): 8088 (http) with context path ''
+[2021-09-19 15:15:52,784][restartedMain][INFO][com.wjl.lblog.BlogServerApplication:61] Started BlogServerApplication in 2.924 seconds (JVM running for 3.75)
+[2021-09-19 15:16:02,928][http-nio-8088-exec-1][INFO][org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]:173] Initializing Spring DispatcherServlet 'dispatcherServlet'
+[2021-09-19 15:16:02,929][http-nio-8088-exec-1][INFO][org.springframework.web.servlet.DispatcherServlet:525] Initializing Servlet 'dispatcherServlet'
+[2021-09-19 15:16:02,930][http-nio-8088-exec-1][INFO][org.springframework.web.servlet.DispatcherServlet:547] Completed initialization in 1 ms
+[2021-09-19 16:53:48,679][SpringApplicationShutdownHook][INFO][org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean:651] Closing JPA EntityManagerFactory for persistence unit 'default'
+[2021-09-19 16:53:48,694][SpringApplicationShutdownHook][INFO][com.zaxxer.hikari.HikariDataSource:350] HikariPool-1 - Shutdown initiated...
+[2021-09-19 16:53:48,694][SpringApplicationShutdownHook][INFO][com.zaxxer.hikari.HikariDataSource:352] HikariPool-1 - Shutdown completed.
+[2021-09-19 16:55:19,611][restartedMain][INFO][com.wjl.lblog.BlogServerApplication:55] Starting BlogServerApplication using Java 16.0.1 on lonestar with PID 18444 (D:\wjl\repository\blog\Lblog\blog-server\target\classes started by wjl in D:\wjl\repository\blog\Lblog\blog-server)
+[2021-09-19 16:55:19,619][restartedMain][INFO][com.wjl.lblog.BlogServerApplication:659] No active profile set, falling back to default profiles: default
+[2021-09-19 16:55:19,658][restartedMain][INFO][org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor:255] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+[2021-09-19 16:55:19,658][restartedMain][INFO][org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor:255] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+[2021-09-19 16:55:20,259][restartedMain][INFO][org.springframework.data.repository.config.RepositoryConfigurationDelegate:132] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[2021-09-19 16:55:20,354][restartedMain][INFO][org.springframework.data.repository.config.RepositoryConfigurationDelegate:201] Finished Spring Data repository scanning in 86 ms. Found 7 JPA repository interfaces.
+[2021-09-19 16:55:20,785][restartedMain][INFO][org.springframework.boot.web.embedded.tomcat.TomcatWebServer:108] Tomcat initialized with port(s): 8088 (http)
+[2021-09-19 16:55:20,792][restartedMain][INFO][org.apache.coyote.http11.Http11NioProtocol:173] Initializing ProtocolHandler ["http-nio-8088"]
+[2021-09-19 16:55:20,793][restartedMain][INFO][org.apache.catalina.core.StandardService:173] Starting service [Tomcat]
+[2021-09-19 16:55:20,793][restartedMain][INFO][org.apache.catalina.core.StandardEngine:173] Starting Servlet engine: [Apache Tomcat/9.0.52]
+[2021-09-19 16:55:20,795][restartedMain][INFO][org.apache.catalina.core.AprLifecycleListener:173] Loaded Apache Tomcat Native library [1.2.30] using APR version [1.7.0].
+[2021-09-19 16:55:20,795][restartedMain][INFO][org.apache.catalina.core.AprLifecycleListener:173] APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true], UDS [true].
+[2021-09-19 16:55:20,796][restartedMain][INFO][org.apache.catalina.core.AprLifecycleListener:173] APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+[2021-09-19 16:55:20,798][restartedMain][INFO][org.apache.catalina.core.AprLifecycleListener:173] OpenSSL successfully initialized [OpenSSL 1.1.1k  25 Mar 2021]
+[2021-09-19 16:55:20,867][restartedMain][INFO][org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]:173] Initializing Spring embedded WebApplicationContext
+[2021-09-19 16:55:20,867][restartedMain][INFO][org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext:290] Root WebApplicationContext: initialization completed in 1208 ms
+[2021-09-19 16:55:20,970][restartedMain][INFO][org.hibernate.jpa.internal.util.LogHelper:31] HHH000204: Processing PersistenceUnitInfo [name: default]
+[2021-09-19 16:55:21,003][restartedMain][INFO][org.hibernate.Version:44] HHH000412: Hibernate ORM core version 5.4.32.Final
+[2021-09-19 16:55:21,092][restartedMain][INFO][org.hibernate.annotations.common.Version:56] HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+[2021-09-19 16:55:21,195][restartedMain][INFO][com.zaxxer.hikari.HikariDataSource:110] HikariPool-1 - Starting...
+[2021-09-19 16:55:21,316][restartedMain][INFO][com.zaxxer.hikari.HikariDataSource:123] HikariPool-1 - Start completed.
+[2021-09-19 16:55:21,328][restartedMain][INFO][org.hibernate.dialect.Dialect:175] HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+[2021-09-19 16:55:22,045][restartedMain][INFO][org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator:52] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[2021-09-19 16:55:22,052][restartedMain][INFO][org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean:437] Initialized JPA EntityManagerFactory for persistence unit 'default'
+[2021-09-19 16:55:22,642][restartedMain][INFO][org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer:58] LiveReload server is running on port 35729
+[2021-09-19 16:55:22,658][restartedMain][INFO][org.apache.coyote.http11.Http11NioProtocol:173] Starting ProtocolHandler ["http-nio-8088"]
+[2021-09-19 16:55:22,691][restartedMain][INFO][org.springframework.boot.web.embedded.tomcat.TomcatWebServer:220] Tomcat started on port(s): 8088 (http) with context path ''
+[2021-09-19 16:55:22,700][restartedMain][INFO][com.wjl.lblog.BlogServerApplication:61] Started BlogServerApplication in 3.396 seconds (JVM running for 4.547)
+[2021-09-19 16:55:45,810][http-nio-8088-exec-2][INFO][org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]:173] Initializing Spring DispatcherServlet 'dispatcherServlet'
+[2021-09-19 16:55:45,810][http-nio-8088-exec-2][INFO][org.springframework.web.servlet.DispatcherServlet:525] Initializing Servlet 'dispatcherServlet'
+[2021-09-19 16:55:45,811][http-nio-8088-exec-2][INFO][org.springframework.web.servlet.DispatcherServlet:547] Completed initialization in 1 ms
+[2021-09-19 19:38:49,727][Thread-5][INFO][org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean:651] Closing JPA EntityManagerFactory for persistence unit 'default'
+[2021-09-19 19:38:49,734][Thread-5][INFO][com.zaxxer.hikari.HikariDataSource:350] HikariPool-1 - Shutdown initiated...
+[2021-09-19 19:38:49,739][Thread-5][INFO][com.zaxxer.hikari.HikariDataSource:352] HikariPool-1 - Shutdown completed.
+[2021-09-19 19:38:51,806][restartedMain][INFO][com.wjl.lblog.BlogServerApplication:55] Starting BlogServerApplication using Java 16.0.1 on lonestar with PID 18444 (D:\wjl\repository\blog\Lblog\blog-server\target\classes started by wjl in D:\wjl\repository\blog\Lblog\blog-server)
+[2021-09-19 19:38:51,808][restartedMain][INFO][com.wjl.lblog.BlogServerApplication:659] No active profile set, falling back to default profiles: default
+[2021-09-19 19:38:52,015][restartedMain][INFO][org.springframework.data.repository.config.RepositoryConfigurationDelegate:132] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[2021-09-19 19:38:52,016][restartedMain][INFO][org.springframework.data.repository.config.RepositoryConfigurationDelegate:201] Finished Spring Data repository scanning in 0 ms. Found 0 JPA repository interfaces.
+[2021-09-19 19:38:52,141][restartedMain][INFO][org.springframework.boot.web.embedded.tomcat.TomcatWebServer:108] Tomcat initialized with port(s): 8088 (http)
+[2021-09-19 19:38:52,143][restartedMain][INFO][org.apache.coyote.http11.Http11NioProtocol:173] Initializing ProtocolHandler ["http-nio-8088"]
+[2021-09-19 19:38:52,143][restartedMain][INFO][org.apache.catalina.core.StandardService:173] Starting service [Tomcat]
+[2021-09-19 19:38:52,144][restartedMain][INFO][org.apache.catalina.core.StandardEngine:173] Starting Servlet engine: [Apache Tomcat/9.0.52]
+[2021-09-19 19:38:52,144][restartedMain][INFO][org.apache.catalina.core.AprLifecycleListener:173] Loaded Apache Tomcat Native library [1.2.30] using APR version [1.7.0].
+[2021-09-19 19:38:52,145][restartedMain][INFO][org.apache.catalina.core.AprLifecycleListener:173] APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true], UDS [true].
+[2021-09-19 19:38:52,145][restartedMain][INFO][org.apache.catalina.core.AprLifecycleListener:173] APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+[2021-09-19 19:38:52,145][restartedMain][INFO][org.apache.catalina.core.AprLifecycleListener:173] OpenSSL successfully initialized [OpenSSL 1.1.1k  25 Mar 2021]
+[2021-09-19 19:38:52,166][restartedMain][INFO][org.apache.catalina.core.ContainerBase.[Tomcat-1].[localhost].[/]:173] Initializing Spring embedded WebApplicationContext
+[2021-09-19 19:38:52,166][restartedMain][INFO][org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext:290] Root WebApplicationContext: initialization completed in 356 ms
+[2021-09-19 19:38:52,224][restartedMain][INFO][org.hibernate.jpa.internal.util.LogHelper:31] HHH000204: Processing PersistenceUnitInfo [name: default]
+[2021-09-19 19:38:52,231][restartedMain][INFO][com.zaxxer.hikari.HikariDataSource:110] HikariPool-2 - Starting...
+[2021-09-19 19:38:52,242][restartedMain][INFO][com.zaxxer.hikari.HikariDataSource:123] HikariPool-2 - Start completed.
+[2021-09-19 19:38:52,243][restartedMain][INFO][org.hibernate.dialect.Dialect:175] HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+[2021-09-19 19:38:52,274][restartedMain][INFO][org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator:52] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[2021-09-19 19:38:52,275][restartedMain][INFO][org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean:437] Initialized JPA EntityManagerFactory for persistence unit 'default'
+[2021-09-19 19:38:52,493][restartedMain][INFO][org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer:58] LiveReload server is running on port 35729
+[2021-09-19 19:38:52,506][restartedMain][INFO][org.apache.coyote.http11.Http11NioProtocol:173] Starting ProtocolHandler ["http-nio-8088"]
+[2021-09-19 19:38:52,512][restartedMain][INFO][org.springframework.boot.web.embedded.tomcat.TomcatWebServer:220] Tomcat started on port(s): 8088 (http) with context path ''
+[2021-09-19 19:38:52,517][restartedMain][INFO][com.wjl.lblog.BlogServerApplication:61] Started BlogServerApplication in 0.779 seconds (JVM running for 9814.363)
+[2021-09-19 19:38:52,519][restartedMain][INFO][org.springframework.boot.devtools.autoconfigure.ConditionEvaluationDeltaLoggingListener:63] Condition evaluation unchanged
+[2021-09-19 19:38:55,988][Thread-8][INFO][org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean:651] Closing JPA EntityManagerFactory for persistence unit 'default'
+[2021-09-19 19:38:55,990][Thread-8][INFO][com.zaxxer.hikari.HikariDataSource:350] HikariPool-2 - Shutdown initiated...
+[2021-09-19 19:38:55,992][Thread-8][INFO][com.zaxxer.hikari.HikariDataSource:352] HikariPool-2 - Shutdown completed.
+[2021-09-19 19:38:56,134][restartedMain][INFO][com.wjl.lblog.BlogServerApplication:55] Starting BlogServerApplication using Java 16.0.1 on lonestar with PID 18444 (D:\wjl\repository\blog\Lblog\blog-server\target\classes started by wjl in D:\wjl\repository\blog\Lblog\blog-server)
+[2021-09-19 19:38:56,135][restartedMain][INFO][com.wjl.lblog.BlogServerApplication:659] No active profile set, falling back to default profiles: default
+[2021-09-19 19:38:56,445][restartedMain][INFO][org.springframework.data.repository.config.RepositoryConfigurationDelegate:132] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[2021-09-19 19:38:56,500][restartedMain][INFO][org.springframework.data.repository.config.RepositoryConfigurationDelegate:201] Finished Spring Data repository scanning in 54 ms. Found 7 JPA repository interfaces.
+[2021-09-19 19:38:56,600][restartedMain][INFO][org.springframework.boot.web.embedded.tomcat.TomcatWebServer:108] Tomcat initialized with port(s): 8088 (http)
+[2021-09-19 19:38:56,601][restartedMain][INFO][org.apache.coyote.http11.Http11NioProtocol:173] Initializing ProtocolHandler ["http-nio-8088"]
+[2021-09-19 19:38:56,601][restartedMain][INFO][org.apache.catalina.core.StandardService:173] Starting service [Tomcat]
+[2021-09-19 19:38:56,602][restartedMain][INFO][org.apache.catalina.core.StandardEngine:173] Starting Servlet engine: [Apache Tomcat/9.0.52]
+[2021-09-19 19:38:56,602][restartedMain][INFO][org.apache.catalina.core.AprLifecycleListener:173] Loaded Apache Tomcat Native library [1.2.30] using APR version [1.7.0].
+[2021-09-19 19:38:56,603][restartedMain][INFO][org.apache.catalina.core.AprLifecycleListener:173] APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true], UDS [true].
+[2021-09-19 19:38:56,603][restartedMain][INFO][org.apache.catalina.core.AprLifecycleListener:173] APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+[2021-09-19 19:38:56,603][restartedMain][INFO][org.apache.catalina.core.AprLifecycleListener:173] OpenSSL successfully initialized [OpenSSL 1.1.1k  25 Mar 2021]
+[2021-09-19 19:38:56,623][restartedMain][INFO][org.apache.catalina.core.ContainerBase.[Tomcat-1].[localhost].[/]:173] Initializing Spring embedded WebApplicationContext
+[2021-09-19 19:38:56,624][restartedMain][INFO][org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext:290] Root WebApplicationContext: initialization completed in 483 ms
+[2021-09-19 19:38:56,663][restartedMain][INFO][org.hibernate.jpa.internal.util.LogHelper:31] HHH000204: Processing PersistenceUnitInfo [name: default]
+[2021-09-19 19:38:56,667][restartedMain][INFO][com.zaxxer.hikari.HikariDataSource:110] HikariPool-3 - Starting...
+[2021-09-19 19:38:56,674][restartedMain][INFO][com.zaxxer.hikari.HikariDataSource:123] HikariPool-3 - Start completed.
+[2021-09-19 19:38:56,675][restartedMain][INFO][org.hibernate.dialect.Dialect:175] HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+[2021-09-19 19:38:56,809][restartedMain][INFO][org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator:52] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[2021-09-19 19:38:56,810][restartedMain][INFO][org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean:437] Initialized JPA EntityManagerFactory for persistence unit 'default'
+[2021-09-19 19:38:57,174][restartedMain][INFO][org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer:58] LiveReload server is running on port 35729
+[2021-09-19 19:38:57,183][restartedMain][INFO][org.apache.coyote.http11.Http11NioProtocol:173] Starting ProtocolHandler ["http-nio-8088"]
+[2021-09-19 19:38:57,186][restartedMain][INFO][org.springframework.boot.web.embedded.tomcat.TomcatWebServer:220] Tomcat started on port(s): 8088 (http) with context path ''
+[2021-09-19 19:38:57,191][restartedMain][INFO][com.wjl.lblog.BlogServerApplication:61] Started BlogServerApplication in 1.117 seconds (JVM running for 9819.038)
+[2021-09-19 19:38:57,192][restartedMain][INFO][org.springframework.boot.devtools.autoconfigure.ConditionEvaluationDeltaLoggingListener:63] Condition evaluation unchanged
+[2021-09-19 19:38:59,274][main][INFO][org.springframework.boot.test.context.SpringBootTestContextBootstrapper:305] Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.wjl.lblog.BlogServerApplicationTests], using SpringBootContextLoader
+[2021-09-19 19:38:59,283][main][INFO][org.springframework.test.context.support.AbstractContextLoader:264] Could not detect default resource locations for test class [com.wjl.lblog.BlogServerApplicationTests]: no resource found for suffixes {-context.xml, Context.groovy}.
+[2021-09-19 19:38:59,285][main][INFO][org.springframework.test.context.support.AnnotationConfigContextLoaderUtils:83] Could not detect default configuration classes for test class [com.wjl.lblog.BlogServerApplicationTests]: BlogServerApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+[2021-09-19 19:38:59,426][main][INFO][org.springframework.boot.test.context.SpringBootTestContextBootstrapper:238] Found @SpringBootConfiguration com.wjl.lblog.BlogServerApplication for test class com.wjl.lblog.BlogServerApplicationTests
+[2021-09-19 19:38:59,537][main][INFO][org.springframework.boot.test.context.SpringBootTestContextBootstrapper:245] Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+[2021-09-19 19:38:59,560][main][INFO][org.springframework.boot.test.context.SpringBootTestContextBootstrapper:174] Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@70d2e40b, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@120f38e6, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@7a0e1b5e, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@702ed190, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@173b9122, org.springframework.test.context.support.DirtiesContextTestExecutionListener@7c18432b, org.springframework.test.context.transaction.TransactionalTestExecutionListener@7646731d, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@70e29e14, org.springframework.test.context.event.EventPublishingTestExecutionListener@3b1bb3ab, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@5a4bef8, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@40bffbca, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@2449cff7, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@42a9a63e, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@62da83ed, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@5d8445d7]
+[2021-09-19 19:38:59,982][main][INFO][com.wjl.lblog.BlogServerApplicationTests:55] Starting BlogServerApplicationTests using Java 16.0.1 on lonestar with PID 9160 (started by wjl in D:\wjl\repository\blog\Lblog\blog-server)
+[2021-09-19 19:38:59,995][main][INFO][com.wjl.lblog.BlogServerApplicationTests:659] No active profile set, falling back to default profiles: default
+[2021-09-19 19:39:01,076][main][INFO][org.springframework.data.repository.config.RepositoryConfigurationDelegate:132] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[2021-09-19 19:39:01,240][main][INFO][org.springframework.data.repository.config.RepositoryConfigurationDelegate:201] Finished Spring Data repository scanning in 149 ms. Found 7 JPA repository interfaces.
+[2021-09-19 19:39:02,030][main][INFO][org.hibernate.jpa.internal.util.LogHelper:31] HHH000204: Processing PersistenceUnitInfo [name: default]
+[2021-09-19 19:39:02,158][main][INFO][org.hibernate.Version:44] HHH000412: Hibernate ORM core version 5.4.32.Final
+[2021-09-19 19:39:02,391][main][INFO][org.hibernate.annotations.common.Version:56] HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+[2021-09-19 19:39:02,626][main][INFO][com.zaxxer.hikari.HikariDataSource:110] HikariPool-1 - Starting...
+[2021-09-19 19:39:02,841][main][INFO][com.zaxxer.hikari.HikariDataSource:123] HikariPool-1 - Start completed.
+[2021-09-19 19:39:02,865][main][INFO][org.hibernate.dialect.Dialect:175] HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+[2021-09-19 19:39:03,731][main][INFO][org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator:52] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[2021-09-19 19:39:03,740][main][INFO][org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean:437] Initialized JPA EntityManagerFactory for persistence unit 'default'
+[2021-09-19 19:39:05,527][main][INFO][com.wjl.lblog.BlogServerApplicationTests:61] Started BlogServerApplicationTests in 5.883 seconds (JVM running for 7.448)
+[2021-09-19 19:39:05,874][SpringApplicationShutdownHook][INFO][org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean:651] Closing JPA EntityManagerFactory for persistence unit 'default'
+[2021-09-19 19:39:05,877][SpringApplicationShutdownHook][INFO][com.zaxxer.hikari.HikariDataSource:350] HikariPool-1 - Shutdown initiated...
+[2021-09-19 19:39:05,887][SpringApplicationShutdownHook][INFO][com.zaxxer.hikari.HikariDataSource:352] HikariPool-1 - Shutdown completed.
+[2021-09-19 19:39:51,083][SpringApplicationShutdownHook][INFO][org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean:651] Closing JPA EntityManagerFactory for persistence unit 'default'
+[2021-09-19 19:39:51,084][SpringApplicationShutdownHook][INFO][com.zaxxer.hikari.HikariDataSource:350] HikariPool-3 - Shutdown initiated...
+[2021-09-19 19:39:51,085][SpringApplicationShutdownHook][INFO][com.zaxxer.hikari.HikariDataSource:352] HikariPool-3 - Shutdown completed.
+[2021-09-19 19:40:51,309][restartedMain][INFO][com.wjl.lblog.BlogServerApplication:55] Starting BlogServerApplication using Java 16.0.1 on lonestar with PID 1260 (D:\wjl\repository\blog\Lblog\blog-server\target\classes started by wjl in D:\wjl\repository\blog\Lblog\blog-server)
+[2021-09-19 19:40:51,316][restartedMain][INFO][com.wjl.lblog.BlogServerApplication:659] No active profile set, falling back to default profiles: default
+[2021-09-19 19:40:51,359][restartedMain][INFO][org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor:255] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+[2021-09-19 19:40:51,359][restartedMain][INFO][org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor:255] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+[2021-09-19 19:40:52,049][restartedMain][INFO][org.springframework.data.repository.config.RepositoryConfigurationDelegate:132] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[2021-09-19 19:40:52,160][restartedMain][INFO][org.springframework.data.repository.config.RepositoryConfigurationDelegate:201] Finished Spring Data repository scanning in 101 ms. Found 7 JPA repository interfaces.
+[2021-09-19 19:40:52,643][restartedMain][INFO][org.springframework.boot.web.embedded.tomcat.TomcatWebServer:108] Tomcat initialized with port(s): 8088 (http)
+[2021-09-19 19:40:52,651][restartedMain][INFO][org.apache.coyote.http11.Http11NioProtocol:173] Initializing ProtocolHandler ["http-nio-8088"]
+[2021-09-19 19:40:52,653][restartedMain][INFO][org.apache.catalina.core.StandardService:173] Starting service [Tomcat]
+[2021-09-19 19:40:52,654][restartedMain][INFO][org.apache.catalina.core.StandardEngine:173] Starting Servlet engine: [Apache Tomcat/9.0.52]
+[2021-09-19 19:40:52,657][restartedMain][INFO][org.apache.catalina.core.AprLifecycleListener:173] Loaded Apache Tomcat Native library [1.2.30] using APR version [1.7.0].
+[2021-09-19 19:40:52,658][restartedMain][INFO][org.apache.catalina.core.AprLifecycleListener:173] APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true], UDS [true].
+[2021-09-19 19:40:52,658][restartedMain][INFO][org.apache.catalina.core.AprLifecycleListener:173] APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+[2021-09-19 19:40:52,662][restartedMain][INFO][org.apache.catalina.core.AprLifecycleListener:173] OpenSSL successfully initialized [OpenSSL 1.1.1k  25 Mar 2021]
+[2021-09-19 19:40:52,745][restartedMain][INFO][org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]:173] Initializing Spring embedded WebApplicationContext
+[2021-09-19 19:40:52,746][restartedMain][INFO][org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext:290] Root WebApplicationContext: initialization completed in 1385 ms
+[2021-09-19 19:40:52,876][restartedMain][INFO][org.hibernate.jpa.internal.util.LogHelper:31] HHH000204: Processing PersistenceUnitInfo [name: default]
+[2021-09-19 19:40:52,914][restartedMain][INFO][org.hibernate.Version:44] HHH000412: Hibernate ORM core version 5.4.32.Final
+[2021-09-19 19:40:52,998][restartedMain][INFO][org.hibernate.annotations.common.Version:56] HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+[2021-09-19 19:40:53,066][restartedMain][INFO][com.zaxxer.hikari.HikariDataSource:110] HikariPool-1 - Starting...
+[2021-09-19 19:40:53,175][restartedMain][INFO][com.zaxxer.hikari.HikariDataSource:123] HikariPool-1 - Start completed.
+[2021-09-19 19:40:53,190][restartedMain][INFO][org.hibernate.dialect.Dialect:175] HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+[2021-09-19 19:40:53,689][restartedMain][INFO][org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator:52] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[2021-09-19 19:40:53,697][restartedMain][INFO][org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean:437] Initialized JPA EntityManagerFactory for persistence unit 'default'
+[2021-09-19 19:40:54,384][restartedMain][INFO][org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer:58] LiveReload server is running on port 35729
+[2021-09-19 19:40:54,406][restartedMain][INFO][org.apache.coyote.http11.Http11NioProtocol:173] Starting ProtocolHandler ["http-nio-8088"]
+[2021-09-19 19:40:54,444][restartedMain][INFO][org.springframework.boot.web.embedded.tomcat.TomcatWebServer:220] Tomcat started on port(s): 8088 (http) with context path ''
+[2021-09-19 19:40:54,453][restartedMain][INFO][com.wjl.lblog.BlogServerApplication:61] Started BlogServerApplication in 3.585 seconds (JVM running for 4.744)
+[2021-09-19 19:40:57,488][SpringApplicationShutdownHook][INFO][org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean:651] Closing JPA EntityManagerFactory for persistence unit 'default'
+[2021-09-19 19:40:57,492][SpringApplicationShutdownHook][INFO][com.zaxxer.hikari.HikariDataSource:350] HikariPool-1 - Shutdown initiated...
+[2021-09-19 19:40:57,496][SpringApplicationShutdownHook][INFO][com.zaxxer.hikari.HikariDataSource:352] HikariPool-1 - Shutdown completed.
+[2021-09-19 19:41:17,610][main][INFO][org.springframework.boot.test.context.SpringBootTestContextBootstrapper:305] Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.wjl.lblog.BlogServerApplicationTests], using SpringBootContextLoader
+[2021-09-19 19:41:17,626][main][INFO][org.springframework.test.context.support.AbstractContextLoader:264] Could not detect default resource locations for test class [com.wjl.lblog.BlogServerApplicationTests]: no resource found for suffixes {-context.xml, Context.groovy}.
+[2021-09-19 19:41:17,628][main][INFO][org.springframework.test.context.support.AnnotationConfigContextLoaderUtils:83] Could not detect default configuration classes for test class [com.wjl.lblog.BlogServerApplicationTests]: BlogServerApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+[2021-09-19 19:41:17,765][main][INFO][org.springframework.boot.test.context.SpringBootTestContextBootstrapper:238] Found @SpringBootConfiguration com.wjl.lblog.BlogServerApplication for test class com.wjl.lblog.BlogServerApplicationTests
+[2021-09-19 19:41:17,857][main][INFO][org.springframework.boot.test.context.SpringBootTestContextBootstrapper:245] Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+[2021-09-19 19:41:17,879][main][INFO][org.springframework.boot.test.context.SpringBootTestContextBootstrapper:174] Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@24be2d9c, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@5bd73d1a, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@aec50a1, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@2555fff0, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@70d2e40b, org.springframework.test.context.support.DirtiesContextTestExecutionListener@120f38e6, org.springframework.test.context.transaction.TransactionalTestExecutionListener@7a0e1b5e, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@702ed190, org.springframework.test.context.event.EventPublishingTestExecutionListener@173b9122, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@7c18432b, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@7646731d, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@70e29e14, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@3b1bb3ab, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@5a4bef8, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@40bffbca]
+[2021-09-19 19:41:18,310][main][INFO][com.wjl.lblog.BlogServerApplicationTests:55] Starting BlogServerApplicationTests using Java 16.0.1 on lonestar with PID 1648 (started by wjl in D:\wjl\repository\blog\Lblog\blog-server)
+[2021-09-19 19:41:18,317][main][INFO][com.wjl.lblog.BlogServerApplicationTests:659] No active profile set, falling back to default profiles: default
+[2021-09-19 19:41:19,483][main][INFO][org.springframework.data.repository.config.RepositoryConfigurationDelegate:132] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[2021-09-19 19:41:19,651][main][INFO][org.springframework.data.repository.config.RepositoryConfigurationDelegate:201] Finished Spring Data repository scanning in 154 ms. Found 7 JPA repository interfaces.
+[2021-09-19 19:41:20,352][main][INFO][org.hibernate.jpa.internal.util.LogHelper:31] HHH000204: Processing PersistenceUnitInfo [name: default]
+[2021-09-19 19:41:20,448][main][INFO][org.hibernate.Version:44] HHH000412: Hibernate ORM core version 5.4.32.Final
+[2021-09-19 19:41:20,624][main][INFO][org.hibernate.annotations.common.Version:56] HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+[2021-09-19 19:41:20,859][main][INFO][com.zaxxer.hikari.HikariDataSource:110] HikariPool-1 - Starting...
+[2021-09-19 19:41:21,065][main][INFO][com.zaxxer.hikari.HikariDataSource:123] HikariPool-1 - Start completed.
+[2021-09-19 19:41:21,084][main][INFO][org.hibernate.dialect.Dialect:175] HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+[2021-09-19 19:41:21,976][main][INFO][org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator:52] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[2021-09-19 19:41:21,984][main][INFO][org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean:437] Initialized JPA EntityManagerFactory for persistence unit 'default'
+[2021-09-19 19:41:23,774][main][INFO][com.wjl.lblog.BlogServerApplicationTests:61] Started BlogServerApplicationTests in 5.818 seconds (JVM running for 7.334)
+[2021-09-19 19:41:24,100][SpringApplicationShutdownHook][INFO][org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean:651] Closing JPA EntityManagerFactory for persistence unit 'default'
+[2021-09-19 19:41:24,104][SpringApplicationShutdownHook][INFO][com.zaxxer.hikari.HikariDataSource:350] HikariPool-1 - Shutdown initiated...
+[2021-09-19 19:41:24,116][SpringApplicationShutdownHook][INFO][com.zaxxer.hikari.HikariDataSource:352] HikariPool-1 - Shutdown completed.
+[2021-09-19 19:48:27,986][restartedMain][INFO][com.wjl.lblog.BlogServerApplication:55] Starting BlogServerApplication using Java 16.0.1 on lonestar with PID 16048 (D:\wjl\repository\blog\Lblog\blog-server\target\classes started by wjl in D:\wjl\repository\blog\Lblog\blog-server)
+[2021-09-19 19:48:27,995][restartedMain][INFO][com.wjl.lblog.BlogServerApplication:659] No active profile set, falling back to default profiles: default
+[2021-09-19 19:48:28,036][restartedMain][INFO][org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor:255] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+[2021-09-19 19:48:28,037][restartedMain][INFO][org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor:255] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+[2021-09-19 19:48:28,781][restartedMain][INFO][org.springframework.data.repository.config.RepositoryConfigurationDelegate:132] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[2021-09-19 19:48:28,907][restartedMain][INFO][org.springframework.data.repository.config.RepositoryConfigurationDelegate:201] Finished Spring Data repository scanning in 117 ms. Found 7 JPA repository interfaces.
+[2021-09-19 19:48:29,450][restartedMain][INFO][org.springframework.boot.web.embedded.tomcat.TomcatWebServer:108] Tomcat initialized with port(s): 8088 (http)
+[2021-09-19 19:48:29,460][restartedMain][INFO][org.apache.coyote.http11.Http11NioProtocol:173] Initializing ProtocolHandler ["http-nio-8088"]
+[2021-09-19 19:48:29,461][restartedMain][INFO][org.apache.catalina.core.StandardService:173] Starting service [Tomcat]
+[2021-09-19 19:48:29,461][restartedMain][INFO][org.apache.catalina.core.StandardEngine:173] Starting Servlet engine: [Apache Tomcat/9.0.52]
+[2021-09-19 19:48:29,465][restartedMain][INFO][org.apache.catalina.core.AprLifecycleListener:173] Loaded Apache Tomcat Native library [1.2.30] using APR version [1.7.0].
+[2021-09-19 19:48:29,466][restartedMain][INFO][org.apache.catalina.core.AprLifecycleListener:173] APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true], UDS [true].
+[2021-09-19 19:48:29,466][restartedMain][INFO][org.apache.catalina.core.AprLifecycleListener:173] APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+[2021-09-19 19:48:29,472][restartedMain][INFO][org.apache.catalina.core.AprLifecycleListener:173] OpenSSL successfully initialized [OpenSSL 1.1.1k  25 Mar 2021]
+[2021-09-19 19:48:29,563][restartedMain][INFO][org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]:173] Initializing Spring embedded WebApplicationContext
+[2021-09-19 19:48:29,564][restartedMain][INFO][org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext:290] Root WebApplicationContext: initialization completed in 1526 ms
+[2021-09-19 19:48:29,684][restartedMain][INFO][org.hibernate.jpa.internal.util.LogHelper:31] HHH000204: Processing PersistenceUnitInfo [name: default]
+[2021-09-19 19:48:29,724][restartedMain][INFO][org.hibernate.Version:44] HHH000412: Hibernate ORM core version 5.4.32.Final
+[2021-09-19 19:48:29,818][restartedMain][INFO][org.hibernate.annotations.common.Version:56] HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+[2021-09-19 19:48:29,893][restartedMain][INFO][com.zaxxer.hikari.HikariDataSource:110] HikariPool-1 - Starting...
+[2021-09-19 19:48:30,009][restartedMain][INFO][com.zaxxer.hikari.HikariDataSource:123] HikariPool-1 - Start completed.
+[2021-09-19 19:48:30,020][restartedMain][INFO][org.hibernate.dialect.Dialect:175] HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+[2021-09-19 19:48:30,543][restartedMain][INFO][org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator:52] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[2021-09-19 19:48:30,550][restartedMain][INFO][org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean:437] Initialized JPA EntityManagerFactory for persistence unit 'default'
+[2021-09-19 19:48:31,291][restartedMain][INFO][org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer:58] LiveReload server is running on port 35729
+[2021-09-19 19:48:31,316][restartedMain][INFO][org.apache.coyote.http11.Http11NioProtocol:173] Starting ProtocolHandler ["http-nio-8088"]
+[2021-09-19 19:48:31,362][restartedMain][INFO][org.springframework.boot.web.embedded.tomcat.TomcatWebServer:220] Tomcat started on port(s): 8088 (http) with context path ''
+[2021-09-19 19:48:31,375][restartedMain][INFO][com.wjl.lblog.BlogServerApplication:61] Started BlogServerApplication in 3.731 seconds (JVM running for 4.966)
+[2021-09-19 19:49:03,164][SpringApplicationShutdownHook][INFO][org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean:651] Closing JPA EntityManagerFactory for persistence unit 'default'
+[2021-09-19 19:49:03,167][SpringApplicationShutdownHook][INFO][com.zaxxer.hikari.HikariDataSource:350] HikariPool-1 - Shutdown initiated...
+[2021-09-19 19:49:03,172][SpringApplicationShutdownHook][INFO][com.zaxxer.hikari.HikariDataSource:352] HikariPool-1 - Shutdown completed.

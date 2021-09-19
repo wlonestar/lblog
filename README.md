@@ -5,9 +5,9 @@ Springboot + Vue 前后端分离个人博客项目
 后端技术：
 
 - SpringBoot
-
 - Spring Data JPA
 - Sa-token
+- hu-tool
 - smart-doc
 
 前端技术：
@@ -15,24 +15,49 @@ Springboot + Vue 前后端分离个人博客项目
 - Vue3
 - axios
 - markdown-it
-- ElementPlus
+- element-plus
+- @element-plus/icons
 - md-editor-v3
+- github-markdown-css
+- Font Awesome
 
 
+
+博客主页
 
 ![Snipaste_2021-09-18_23-22-45](https://gitee.com/wang-jia-lei/mypic/raw/master/Snipaste_2021-09-18_23-22-45.png)
 
+分类页
+
 ![Snipaste_2021-09-18_23-22-54](https://gitee.com/wang-jia-lei/mypic/raw/master/Snipaste_2021-09-18_23-22-54.png)
+
+留言页
 
 ![Snipaste_2021-09-18_23-23-04](https://gitee.com/wang-jia-lei/mypic/raw/master/Snipaste_2021-09-18_23-23-04.png)
 
+后台登录页
+
+![](https://wangjialei.xyz/lblog/login.png)
+
+
+
+后台页面
+
 ![Snipaste_2021-09-18_23-31-55](https://gitee.com/wang-jia-lei/mypic/raw/master/Snipaste_2021-09-18_23-31-55.png)
+
+文章管理
 
 ![Snipaste_2021-09-18_23-32-14](https://gitee.com/wang-jia-lei/mypic/raw/master/Snipaste_2021-09-18_23-32-14.png)
 
+编辑文章，支持 markdown 编辑器
+
 ![Snipaste_2021-09-18_23-34-00](https://gitee.com/wang-jia-lei/mypic/raw/master/Snipaste_2021-09-18_23-34-00.png)
 
+
+
 ![Snipaste_2021-09-18_23-34-07](https://gitee.com/wang-jia-lei/mypic/raw/master/Snipaste_2021-09-18_23-34-07.png)
+
+修改文章
 
 ![Snipaste_2021-09-18_23-34-38](https://gitee.com/wang-jia-lei/mypic/raw/master/Snipaste_2021-09-18_23-34-38.png)
 
@@ -52,10 +77,11 @@ git clone https://github.com/wjl-lab/lblog
 
   创建 `lblog` 数据库，修改 `yml` 配置文件，表会在项目启动时自动生成
 
+  注意修改表 `article` 的 `content` 字段为 `longtext` 类型
+
 - 后端
 
 ```shell
-
 $ cd blog-server
 $ mvn clean package
 $ cd target
@@ -96,7 +122,8 @@ https://wangjialei.xyz/lblog
 3. ~~登录密码未加密，明文存储在数据库~~
 4. ~~图片上传后图片在服务器中的路径显示方式不方便复制~~
 5. ~~关于页面需要完善内容，加上开发进展时间线~~
-6. README 还需要完善
+6. ~~README 还需要完善~~
+7. 文章、分类分页功能小问题
 
 
 

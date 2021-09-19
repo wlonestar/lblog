@@ -1,6 +1,6 @@
 import request from '../utils/request'
 
-// 分页查询分类
+// 分页查询留言
 export function getCommentByPage (page, size) {
   return request({
     url: '/comment',
@@ -12,7 +12,7 @@ export function getCommentByPage (page, size) {
   })
 }
 
-// 查询所有分类
+// 查询所有留言
 export function getAllComment () {
   return request({
     url: '/comment/all',
@@ -20,7 +20,7 @@ export function getAllComment () {
   })
 }
 
-// 根据 id 查询分类
+// 根据 id 查询留言
 export function getComment (id) {
   return request({
     url: '/comment',
@@ -31,34 +31,11 @@ export function getComment (id) {
   })
 }
 
-// 增加分类
+// 增加留言
 export function addComment (Comment) {
   return request({
     url: '/comment',
     method: 'post',
     data: Comment
-  })
-}
-
-// 根据 id 更新分类
-export function updateComment (id, comment) {
-  return request({
-    url: '/comment',
-    method: 'put',
-    params: {
-      id: id
-    },
-    data: comment
-  })
-}
-
-// 根据 id 删除分类
-export function deleteComment (id) {
-  return request({
-    url: '/comment',
-    method: 'delete',
-    params: {
-      id
-    }
   })
 }

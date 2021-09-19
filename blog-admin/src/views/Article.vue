@@ -108,7 +108,7 @@ export default {
   methods: {
     load () {
       getArticleByPage(this.pageNum, this.pageSize).then(data => {
-        console.log(data.data)
+        // console.log(data.data)
         this.tableData = data.data.content
         this.total = data.data.totalElements
       })
@@ -132,7 +132,7 @@ export default {
     },
     handleEdit (row) {
       this.form = JSON.parse(JSON.stringify(row))
-      console.log(this.form)
+      // console.log(this.form)
       this.dialogVisible = true
     },
     handleDelete (id) {

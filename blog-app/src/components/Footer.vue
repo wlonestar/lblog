@@ -2,10 +2,10 @@
   <div class="footer">
     <div style="padding-top: 27px;">
       <p>
-        powerby <a href="https://spring.io" target="_blank">springboot</a> & <a href="https://v3.cn.vuejs.org/" target="_blank">vue</a>
+        powerby <a href="https://spring.io" target="_blank">SpringBoot</a> & <a href="https://v3.cn.vuejs.org/" target="_blank">Vue</a>
       </p>
       <p style="margin-top: 5px;">
-        copyright <a href="https://wangjialei.xyz" target="_blank">wjl</a>
+        copyright <a href="https://wangjialei.xyz" target="_blank">lonestar</a>
       </p>
     </div>
   </div>

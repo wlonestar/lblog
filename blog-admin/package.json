@@ -16,7 +16,6 @@
     "md-editor-v3": "^1.4.3",
     "vue": "^3.0.0",
     "vue-router": "^4.0.0-0",
-    "vue-simple-markdown": "^1.1.5",
     "vuex": "^4.0.0-0"
   },
   "devDependencies": {

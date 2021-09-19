@@ -5,7 +5,7 @@
       :on-success="fileUploadSuccess">
       <el-button size="small" type="primary">点击上传</el-button>
       <template #tip style="margin-top: 20px;">
-        <div class="el-upload__tip">只能上传 jpg/png 文件，且不超过 5mb</div>
+        <div class="el-upload__tip">只能上传 jpg/png 文件，且不超过 1mb</div>
       </template>
     </el-upload>
     <P style="margin-top: 20px;">已上传图片列表</p>
@@ -37,11 +37,18 @@ export default {
       })
     },
     fileUploadSuccess (data) {
-      console.log(data.data)
-      this.$message({
-        type: 'success',
-        message: '上传成功'
-      })
+      // console.log(data.data)
+      if (data.code === 200) {
+        this.$message({
+          type: 'success',
+          message: '上传成功'
+        })
+      } else {
+        this.$message({
+          type: 'fail',
+          message: '上传失败，文件过大'
+        })
+      }
       this.load()
     }
   }

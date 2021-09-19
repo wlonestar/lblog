@@ -62,7 +62,7 @@ export default {
       this.$refs[formName].validate((valid) => {
         if (valid) {
           addArticle(this.ruleForm).then(data => {
-            console.log(this.fileList)
+            // console.log(this.fileList)
             this.$router.push('/article')
           })
           alert('文章保存成功')
@@ -71,10 +71,10 @@ export default {
     },
     resetForm (formName) {
       this.$refs[formName].resetFields()
-    },
-    filesUploadSuccess (res) {
-      this.form.cover = res.data
     }
+    // filesUploadSuccess (res) {
+    //   this.form.cover = res.data
+    // }
   }
 }
 </script>

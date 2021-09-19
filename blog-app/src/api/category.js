@@ -28,35 +28,3 @@ export function getCategory (id) {
     data: id
   })
 }
-
-// 增加分类
-export function addCategory (category) {
-  return request({
-    url: '/category',
-    method: 'post',
-    data: category
-  })
-}
-
-// 根据 id 更新分类
-export function updateCategory (id, category) {
-  return request({
-    url: '/category',
-    method: 'put',
-    params: {
-      id: id
-    },
-    data: category
-  })
-}
-
-// 根据 id 删除分类
-export function deleteCategory (id) {
-  return request({
-    url: '/category',
-    method: 'delete',
-    params: {
-      id
-    }
-  })
-}
