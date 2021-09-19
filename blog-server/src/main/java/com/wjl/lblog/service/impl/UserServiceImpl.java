@@ -1,5 +1,6 @@
 package com.wjl.lblog.service.impl;
 
+import cn.dev33.satoken.secure.SaBase64Util;
 import com.wjl.lblog.model.entity.User;
 import com.wjl.lblog.repository.UserRepository;
 import com.wjl.lblog.service.intf.UserService;
@@ -36,6 +37,8 @@ public class UserServiceImpl implements UserService {
      */
     @Override
     public User add(User user) {
+        String encode = SaBase64Util.encode(user.getPassword());
+        user.setPassword(encode);
         return userRepository.save(user);
     }
 

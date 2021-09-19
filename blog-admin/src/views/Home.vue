@@ -2,9 +2,7 @@
   <div style="margin: 20px 20px;">
     <el-card class="box-card-mid">
       <template #header>
-        <div class="card-header">
-          <span>时间线</span>
-        </div>
+        <div class="card-header"><span>时间线</span></div>
       </template>
       <el-timeline>
         <el-timeline-item v-for="idea in ideas.slice(0, 6)" :key="idea" :timestamp="new Date(idea.createTime).toLocaleString()" placement="top">
@@ -16,9 +14,7 @@
   <div style="margin: 20px 20px;">
     <el-card class="box-card-big">
       <template #header>
-        <div class="card-header">
-          <span>最新文章</span>
-        </div>
+        <div class="card-header"><span>最新文章</span></div>
       </template>
       <div v-for="article in articles.slice(0, 3)" :key="article" class="text item" style="margin-bottom: 25px;">
         <p style="font-size: 18px; font-weight: 500; margin-bottom: 5px;">{{ article.title }}</p>
@@ -31,9 +27,7 @@
     </el-card>
     <el-card class="box-card-big" style="margin-top: 20px;">
       <template #header>
-        <div class="card-header">
-          <span>最新留言</span>
-        </div>
+        <div class="card-header"><span>最新留言</span></div>
       </template>
       <div v-for="comment in comments.slice(0, 3)" :key="comment" class="text item">
         <el-row>
@@ -50,9 +44,7 @@
   <div style="margin: 20px 20px;">
     <el-card class="box-card-small" style="margin-top: 0;">
       <template #header>
-        <div class="card-header">
-          <span>待办事项</span>
-        </div>
+        <div class="card-header"><span>待办事项</span></div>
       </template>
       <div v-for="todo in todos.slice(0, 5)" :key="todo" class="text item">
         <span style="color: #777777;">{{ new Date(todo.updateTime).toLocaleDateString() }}</span>

@@ -1,5 +1,6 @@
 package com.wjl.lblog.service.intf;
 
+import com.wjl.lblog.model.entity.Article;
 import com.wjl.lblog.model.vo.ArticleVo;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;

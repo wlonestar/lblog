@@ -1,18 +1,27 @@
 <template>
   <div>
     <el-card>
+      <el-timeline>
+        <el-timeline-item v-for="idea in ideas.slice(0, 5)" :key="idea" :timestamp="new Date(idea.createTime).toLocaleString()" placement="top">
+          <el-card><p>{{ idea.content }}</p></el-card>
+        </el-timeline-item>
+      </el-timeline>
+    </el-card>
+    <el-card style="margin-top: 20px;">
       <div class="markdown-body" v-html="m2h()" style="margin: 20px 20px;"></div>
     </el-card>
   </div>
 </template>
 
 <script>
-
+import { getAllIdea } from '../api/idea'
 import 'vue-simple-markdown/dist/vue-simple-markdown.css'
+
 export default {
   name: 'About',
   data () {
     return {
+      ideas: [],
       content: '# Lblog\n' + '\n' +
         'Springboot + Vue 前后端分离个人博客项目\n' + '\n' +
         '后端技术：\n' + '\n' +
@@ -69,7 +78,15 @@ export default {
         '[GPL-3.0](LICENSE) © wjl\n' + '\n'
     }
   },
+  created () {
+    this.load()
+  },
   methods: {
+    load () {
+      getAllIdea().then(data => {
+        this.ideas = data.data.data.reverse()
+      })
+    },
     m2h (result) {
       const hljs = require('highlight.js')
       const md = require('markdown-it')({

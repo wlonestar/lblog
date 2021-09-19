@@ -19,9 +19,12 @@ export default {
 
 <style scoped>
 .footer {
-  background-color: #e9eef3;
-  color: var(--el-text-color-primary);
+  color: #777777;
   text-align: center;
   height: 100px;
+}
+
+a {
+  color: #0366d6;
 }
 </style>

@@ -29,7 +29,7 @@ export default {
   data () {
     return {
       currentPage: 1,
-      pageNum: 0,
+      pageNum: 1,
       pageSize: 5,
       total: 0,
       articles: []
@@ -52,7 +52,7 @@ export default {
       this.load()
     },
     handleCurrentChange (pageNum) {
-      this.pageNum = pageNum - 1
+      this.pageNum = pageNum
       this.load()
     }
   }

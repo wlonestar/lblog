@@ -31,8 +31,8 @@ public class CategoryController {
      */
     @RequestMapping(method = RequestMethod.GET)
     public Page<CategoryVo> findAllByPage(
-            @RequestParam(defaultValue = "0") int page, @RequestParam(defaultValue = "10") int size) {
-        return categoryService.findAllByPage(PageRequest.of(page, size));
+            @RequestParam(defaultValue = "1") int page, @RequestParam(defaultValue = "10") int size) {
+        return categoryService.findAllByPage(PageRequest.of(page - 1, size));
     }
 
     /**

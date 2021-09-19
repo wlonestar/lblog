@@ -5,7 +5,7 @@
       <span style="color: #777777;">{{ new Date(article.updateTime).toLocaleDateString() }}</span>
       <span style="margin-left: 20px; margin-bottom: 20px;">
           <collection-tag style="width: 18px; height: 18px;" color="#777777"/>{{ article.category }}
-        </span>
+      </span>
       <img :src="article.image" style="width: 100%; margin: 20px 0 20px 0;" alt="">
       <p style="font-size: 15px; font-weight: 400; margin-top: 5px;">{{ article.summary }}</p>
       <div class="markdown-body" v-html="article.content" style="margin: 20px 5px 20px 5px; font-size: 120%;"></div>
@@ -14,8 +14,6 @@
 </template>
 
 <script>
-import 'md-editor-v3/lib/style.css'
-import 'highlight.js/styles/default.css'
 import { getArticle } from '../api/article'
 import { CollectionTag } from '@element-plus/icons'
 
@@ -24,7 +22,8 @@ export default {
   components: { CollectionTag },
   data () {
     return {
-      article: {}
+      article: {},
+      ideas: []
     }
   },
   created () {

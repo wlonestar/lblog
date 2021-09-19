@@ -2,10 +2,9 @@
   <div style="margin-top: 15px;">
     <el-card class="box-card" style="width: 280px;">
       <div class="card-header">
-<!--        <p class="title">do what you love</p>-->
-        <p><i class="fas fa-user-alt" style="margin-right: 7px;"></i> lonestar <i class="fas fa-mars" style="color: steelblue;"></i></p>
-        <p><i class="fas fa-map-marker-alt" style="margin-right: 7px;"></i> 常州 </p>
-        <p><i class="fas fa-user-graduate" style="margin-right: 7px;"></i> college student </p>
+        <p><i class="fas fa-user-alt"></i> lonestar <i class="fas fa-mars" style="color: steelblue;"></i></p>
+        <p><i class="fas fa-map-marker-alt"></i> 常州 </p>
+        <p><i class="fas fa-user-graduate"></i> college student </p>
       </div>
       <div class="card-body">
         <a href="https://github.com/wjl-lab" target="_blank"><i class="fab fa-github"></i></a>
@@ -62,6 +61,7 @@ p {
 }
 
 i {
+  margin-right: 7px;
   color: #777777;
 }
 
@@ -73,7 +73,6 @@ i {
 .title {
   font-size: 24px;
   font-weight: 500;
-  /*text-align: center;*/
   color: #111;
 }
 </style>

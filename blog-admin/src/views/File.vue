@@ -9,10 +9,11 @@
       </template>
     </el-upload>
     <P style="margin-top: 20px;">已上传图片列表</p>
-    <div v-for="image in images" :key="image" style="margin-top: 20px;">
+    <el-card v-for="image in images" :key="image" style="margin-top: 20px; width: 600px;">
+      <el-image fit="contain" style="height: 150px;" :src="image.url" :preview-src-list="[image.url]"></el-image>
       <p>{{ image.name }}</p>
       <p>{{ image.url }}</p>
-    </div>
+    </el-card>
   </div>
 </template>
 
@@ -32,16 +33,16 @@ export default {
   methods: {
     load () {
       getAllImage().then(data => {
-        console.log(data.data)
-        this.images = data.data
+        this.images = data.data.reverse()
       })
     },
     fileUploadSuccess (data) {
       console.log(data.data)
       this.$message({
         type: 'success',
-        message: '您的图片路径为: ' + data.data
+        message: '上传成功'
       })
+      this.load()
     }
   }
 }

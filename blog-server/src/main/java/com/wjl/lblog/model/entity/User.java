@@ -30,7 +30,4 @@ public class User {
     @Column(name = "satoken")
     private String satoken;
 
-    @Column(name = "role")
-    private Integer role;
-
 }

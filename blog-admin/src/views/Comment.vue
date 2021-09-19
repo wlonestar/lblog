@@ -71,8 +71,8 @@ export default {
         content: ''
       },
       dialogVisible: false,
-      currentPage: 0,
-      pageNum: 0,
+      currentPage: 1,
+      pageNum: 1,
       pageSize: 5,
       total: 0,
       tableData: []
@@ -119,7 +119,7 @@ export default {
       this.load()
     },
     handleCurrentChange (pageNum) {
-      this.pageNum = pageNum - 1
+      this.pageNum = pageNum
       this.load()
     }
   }

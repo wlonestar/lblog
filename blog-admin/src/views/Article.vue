@@ -95,7 +95,7 @@ export default {
         content: ''
       },
       dialogVisible: false,
-      currentPage: 0,
+      currentPage: 1,
       pageNum: 1,
       pageSize: 5,
       total: 0,

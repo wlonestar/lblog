@@ -77,7 +77,7 @@ export default {
       form: {},
       dialogVisible: false,
       currentPage: 1,
-      pageNum: 0,
+      pageNum: 1,
       pageSize: 10,
       total: 0,
       tableData: []
@@ -100,7 +100,6 @@ export default {
     save () {
       if (this.form.id) {
         updateTodo(this.form.id, this.form).then(data => {
-          // console.log(data)
           if (data.code === 200) {
             this.$message({
               type: 'success',
@@ -161,7 +160,7 @@ export default {
       this.load()
     },
     handleCurrentChange (pageNum) {
-      this.pageNum = pageNum - 1
+      this.pageNum = pageNum
       this.load()
     }
   }

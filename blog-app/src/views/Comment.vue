@@ -73,7 +73,7 @@ export default {
         content: [{ required: true, message: '请输入留言内容', trigger: 'change' }]
       },
       currentPage: 1,
-      pageNum: 0,
+      pageNum: 1,
       pageSize: 5,
       total: 0,
       comments: []
@@ -107,7 +107,7 @@ export default {
       this.load()
     },
     handleCurrentChange (pageNum) {
-      this.pageNum = pageNum - 1
+      this.pageNum = pageNum
       this.load()
     }
   }

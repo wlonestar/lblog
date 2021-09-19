@@ -4,13 +4,13 @@
     <div class="header-title"> Lblog </div>
     <router-link to="/"><i class="fas fa-home" style="margin-right: 7px;"></i>首 页</router-link>
     <router-link to="/archive"><i class="fas fa-archive" style="margin-right: 7px;"></i>归 档</router-link>
-    <router-link to="/category"><i class="far fa-bookmark" style="margin-right: 11.25px;"></i>分 类</router-link>
+    <router-link to="/category"><i class="far fa-bookmark" style="margin-right: 11px;"></i>分 类</router-link>
     <router-link to="/comment"><i class="far fa-comment-alt" style="margin-right: 7px;"></i>留 言</router-link>
     <router-link to="/about"><i class="fas fa-user-alt" style="margin-right: 7px;"></i>关 于</router-link>
     <div style="flex: 0.45;"></div>
     <div class="header-info">
       <router-link to="/about">
-        <img src="../assets/img/avatar.jpg" alt="" style="width: 50px; height: 50px; border-radius: 100%; margin-top: 2px;">
+        <img src="../assets/img/avatar.jpg" alt="" style="width: 45px; height: 45px; border-radius: 20%; margin-top: 5px;">
       </router-link>
     </div>
   </div>

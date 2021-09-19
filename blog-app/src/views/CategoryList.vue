@@ -5,11 +5,6 @@
         <a @click="redirectToCategory(category.id)">{{ category.name }}</a>
         <span style="margin-left: 1%">({{ category.number }})</span>
       </p>
-<!--      <span style="color: #777777;">{{ new Date(article.updateTime).toLocaleDateString() }}</span>-->
-<!--      <span style="margin-left: 20px; margin-bottom: 20px;">-->
-<!--          <collection-tag style="width: 18px; height: 18px;" color="#777777"/>{{ article.category }}-->
-<!--        </span>-->
-<!--      <img :src="article.image" style="width: 100%; margin-top: 10px; margin-bottom: 10px;" alt="">-->
       <p style="font-size: 15px; font-weight: 400; margin-top: 5px;">{{ category.description }}</p>
     </el-card>
   </div>

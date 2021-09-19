@@ -14,10 +14,8 @@
     "element-plus": "^1.1.0-beta.12",
     "github-markdown-css": "^4.0.0",
     "markdown-it": "^12.2.0",
-    "md-editor-v3": "^1.4.3",
     "vue": "^3.0.0",
-    "vue-router": "^4.0.0-0",
-    "vue-simple-markdown": "^1.1.5"
+    "vue-router": "^4.0.0-0"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "~4.5.0",

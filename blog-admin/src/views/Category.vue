@@ -60,7 +60,7 @@ export default {
       form: {},
       dialogVisible: false,
       currentPage: 1,
-      pageNum: 0,
+      pageNum: 1,
       pageSize: 5,
       total: 0,
       tableData: []

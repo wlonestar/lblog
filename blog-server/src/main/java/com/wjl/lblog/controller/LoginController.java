@@ -1,5 +1,6 @@
 package com.wjl.lblog.controller;
 
+import cn.dev33.satoken.secure.SaBase64Util;
 import cn.dev33.satoken.stp.StpUtil;
 import com.wjl.lblog.model.entity.User;
 import com.wjl.lblog.service.intf.UserService;
@@ -33,10 +34,9 @@ public class LoginController {
         String password = user.getPassword();
         User user1 = userService.findByUsername(username);
         if (!Objects.isNull(user1)) {
-            if (user1.getPassword().equals(password)) {
+            if (SaBase64Util.decode(user1.getPassword()).equals(password)) {
                 StpUtil.login(username);
                 user1.setSatoken(StpUtil.getTokenValue());
-//                userService.update(user1);
                 return Result.success(user1);
             }
         }

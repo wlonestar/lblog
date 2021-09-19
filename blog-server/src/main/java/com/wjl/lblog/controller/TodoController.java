@@ -31,8 +31,8 @@ public class TodoController {
      */
     @RequestMapping(method = RequestMethod.GET)
     public Page<Todo> findAllByPage(
-            @RequestParam(defaultValue = "0") int page, @RequestParam(defaultValue = "10") int size) {
-        return TodoService.findAllByPage(PageRequest.of(page, size));
+            @RequestParam(defaultValue = "1") int page, @RequestParam(defaultValue = "10") int size) {
+        return TodoService.findAllByPage(PageRequest.of(page - 1, size));
     }
 
     /**
