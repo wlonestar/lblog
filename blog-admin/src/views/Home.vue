@@ -3,7 +3,7 @@
     <el-card class="box-card-mid">
       <template #header>
         <div class="card-header">
-          <span>开发进展</span>
+          <span>时间线</span>
         </div>
       </template>
       <el-timeline>
@@ -20,7 +20,7 @@
           <span>最新文章</span>
         </div>
       </template>
-      <div v-for="article in articles.slice(0, 5)" :key="article" class="text item" style="margin-bottom: 25px;">
+      <div v-for="article in articles.slice(0, 3)" :key="article" class="text item" style="margin-bottom: 25px;">
         <p style="font-size: 18px; font-weight: 500; margin-bottom: 5px;">{{ article.title }}</p>
         <span style="color: #777777;">{{ new Date(article.updateTime).toLocaleDateString() }}</span>
         <span style="margin-left: 20px; margin-bottom: 20px;">
@@ -35,7 +35,7 @@
           <span>最新留言</span>
         </div>
       </template>
-      <div v-for="comment in comments.slice(0, 5)" :key="comment" class="text item">
+      <div v-for="comment in comments.slice(0, 3)" :key="comment" class="text item">
         <el-row>
           <el-avatar :size="50" :src="comment.avatar"></el-avatar>
           <div style="margin-bottom: 20px; margin-left: 15px;">

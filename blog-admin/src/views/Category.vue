@@ -61,7 +61,7 @@ export default {
       dialogVisible: false,
       currentPage: 1,
       pageNum: 0,
-      pageSize: 10,
+      pageSize: 5,
       total: 0,
       tableData: []
     }

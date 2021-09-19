@@ -95,9 +95,9 @@ export default {
         content: ''
       },
       dialogVisible: false,
-      currentPage: 1,
-      pageNum: 0,
-      pageSize: 10,
+      currentPage: 0,
+      pageNum: 1,
+      pageSize: 5,
       total: 0,
       tableData: []
     }
@@ -108,6 +108,7 @@ export default {
   methods: {
     load () {
       getArticleByPage(this.pageNum, this.pageSize).then(data => {
+        console.log(data.data)
         this.tableData = data.data.content
         this.total = data.data.totalElements
       })

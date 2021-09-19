@@ -1,14 +1,14 @@
 <template>
   <div>
-    <el-card style="margin-bottom: 25px;">
-      <p style="font-size: 18px; font-weight: 500; margin-bottom: 5px;">
+    <el-card style="margin-bottom: 25px; background-color: #eeeeee;">
+      <p style="font-size: 24px; font-weight: 500; margin-bottom: 5px;">
         {{ category.name }}
         <span style="margin-left: 1%">({{ category.number }})</span>
       </p>
       <p style="font-size: 15px; font-weight: 400; margin-top: 5px;">{{ category.description }}</p>
     </el-card>
     <el-card v-for="article in category.articleList" :key="article.id" class="text item" style="margin-bottom: 15px;">
-      <p style="font-size: 18px; font-weight: 500; margin-bottom: 5px;">{{ article.title }}</p>
+      <p style="font-size: 22px; font-weight: 500; margin-bottom: 5px;">{{ article.title }}</p>
       <p style="font-size: 15px; font-weight: 400; margin-top: 5px;">{{ article.summary }}</p>
     </el-card>
   </div>

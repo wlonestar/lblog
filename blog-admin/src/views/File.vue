@@ -8,13 +8,34 @@
         <div class="el-upload__tip">只能上传 jpg/png 文件，且不超过 5mb</div>
       </template>
     </el-upload>
+    <P style="margin-top: 20px;">已上传图片列表</p>
+    <div v-for="image in images" :key="image" style="margin-top: 20px;">
+      <p>{{ image.name }}</p>
+      <p>{{ image.url }}</p>
+    </div>
   </div>
 </template>
 
 <script>
+import { getAllImage } from '../api/image'
+
 export default {
   name: 'File',
+  data () {
+    return {
+      images: []
+    }
+  },
+  created () {
+    this.load()
+  },
   methods: {
+    load () {
+      getAllImage().then(data => {
+        console.log(data.data)
+        this.images = data.data
+      })
+    },
     fileUploadSuccess (data) {
       console.log(data.data)
       this.$message({

@@ -1,7 +1,7 @@
 <template>
   <div>
     <el-card v-for="category in categories" :key="category.id" class="text item" style="margin-bottom: 25px;">
-      <p style="font-size: 18px; font-weight: 500; margin-bottom: 5px;">
+      <p style="font-size: 24px; font-weight: 500; margin-bottom: 5px;">
         <a @click="redirectToCategory(category.id)">{{ category.name }}</a>
         <span style="margin-left: 1%">({{ category.number }})</span>
       </p>

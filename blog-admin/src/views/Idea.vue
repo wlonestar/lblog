@@ -3,7 +3,7 @@
     <div style="margin: 10px 10px;">
       <el-button type="primary" @click="add">新增</el-button>
     </div>
-    <el-table :data="tableData" border stripe style="width: 100%">
+    <el-table :data="tableData" border stripe style="width: 80%">
       <el-table-column prop="createTime" label="创建时间" sortable width="180px;">
         <template #default="scope">
           <i class="el-icon-time"></i>
@@ -17,11 +17,11 @@
         </template>
       </el-table-column>
       <el-table-column prop="content" label="内容" sortable></el-table-column>
-      <el-table-column label="图片" width="300px">
-        <template #default="scope">
-          <el-image fit="contain" style="height: 100px;" :src="scope.row.image" :preview-src-list="[scope.row.image]"></el-image>
-        </template>
-      </el-table-column>
+<!--      <el-table-column label="图片" width="300px">-->
+<!--        <template #default="scope">-->
+<!--          <el-image fit="contain" style="height: 100px;" :src="scope.row.image" :preview-src-list="[scope.row.image]"></el-image>-->
+<!--        </template>-->
+<!--      </el-table-column>-->
       <el-table-column label="操作"  width="155px;">
         <template #default="scope">
           <el-button @click="handleEdit(scope.row)" size="mini">编辑</el-button>
@@ -92,6 +92,7 @@ export default {
   methods: {
     load () {
       getIdeaByPage(this.pageNum, this.pageSize).then(data => {
+        // console.log(data)
         this.tableData = data.data.content
         this.total = data.data.totalElements
       })

@@ -1,7 +1,7 @@
 <template>
   <div>
     <el-card v-for="article in articles.slice(0, 5)" :key="article.id" class="text item" style="margin-bottom: 25px;">
-        <p style="font-size: 18px; font-weight: 500; margin-bottom: 5px;">
+        <p style="font-size: 24px; font-weight: 500; margin-bottom: 5px;">
           <a @click="redirectToArticle(article.id)">{{ article.title }}</a>
         </p>
         <span style="color: #777777;">{{ new Date(article.updateTime).toLocaleDateString() }}</span>
@@ -11,6 +11,11 @@
         <img :src="article.image" style="width: 100%; margin-top: 10px; margin-bottom: 10px;" alt="">
         <p style="font-size: 15px; font-weight: 400; margin-top: 5px;">{{ article.summary }}</p>
     </el-card>
+    <div style="text-align: center;">
+      <el-button @click="$router.push('/archive')" type="primary" size="small" style="font-size: 18px;">
+        more
+      </el-button>
+    </div>
   </div>
 </template>
 
