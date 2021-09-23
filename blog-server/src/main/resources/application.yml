@@ -27,13 +27,3 @@ sa-token:
   is-share: false
   token-style: uuid
   is-log: true
-
-#logging:
-#  level:
-#    root: warn
-#    com.wjl.miniblog: info
-#  file:
-#    name: log/log.log
-#  logback:
-#    rollingpolicy:
-#      max-file-size: 2MB

@@ -36,7 +36,7 @@ export default {
     }
   },
   created () {
-    sessionStorage.removeItem('satoken')
+    localStorage.removeItem('satoken')
   },
   methods: {
     login () {
@@ -45,8 +45,7 @@ export default {
           request.post('/login', this.form).then(res => {
             if (res.code === 200) {
               this.$message({ type: 'success', message: '登录成功' })
-              sessionStorage.setItem('satoken', JSON.stringify(res.data.satoken))
-              console.log(sessionStorage.getItem('satoken'))
+              localStorage.setItem('satoken', JSON.stringify(res.data.satoken))
               this.$router.push('/home')
             } else {
               this.$message({ type: 'error', message: res.msg })

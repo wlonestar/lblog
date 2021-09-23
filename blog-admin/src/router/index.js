@@ -69,7 +69,7 @@ router.beforeEach((to, from, next) => {
   if (to.matched.some((item) => {
     return item.meta.auth
   })) {
-    if ((sessionStorage.getItem('satoken'))) {
+    if ((localStorage.getItem('satoken'))) {
       next()
     } else {
       next({

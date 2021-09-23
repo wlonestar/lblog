@@ -12,8 +12,7 @@ const request = axios.create({
 request.interceptors.request.use(config => {
   config.headers['Content-Type'] = 'application/json;charset=utf-8'
   // config.headers['token'] = user.token;  // 设置请求头
-  // const satoken = localStorage.getItem('user')
-  const userJson = sessionStorage.getItem('satoken')
+  const userJson = localStorage.getItem('satoken')
   if (!userJson) {
     router.push('/login')
   }

@@ -36,7 +36,8 @@ export default {
           console.log('log2')
           this.$message({ type: 'success', message: '注销成功' })
           this.$router.push('/login')
-          sessionStorage.removeItem('satoken')
+          // sessionStorage.removeItem('satoken')
+          localStorage.removeItem('satoken')
         } else {
           this.$message({ type: 'error', message: data.data.msg })
         }

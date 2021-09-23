@@ -4,7 +4,7 @@ const logout = axios.create({
   baseURL: 'http://localhost:8088',
   timeout: 5000,
   headers: {
-    tokenValue: sessionStorage.getItem('satoken')
+    tokenValue: localStorage.getItem('satoken')
   }
 })
 
