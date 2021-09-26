@@ -15,13 +15,18 @@ public interface UserService {
     User findByUsername(String username);
 
     /**
+     * 通过 id 查找用户
+     */
+    User findById(Long id);
+
+    /**
      * 添加用户
      */
     User add(User user);
 
     /**
-     * 更新密码
+     * 更新
      */
-    User update(User user);
+    User update(Long id, User user);
 
 }

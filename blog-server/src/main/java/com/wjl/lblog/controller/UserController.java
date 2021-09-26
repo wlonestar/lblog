@@ -24,9 +24,30 @@ public class UserController {
      *
      * @param user
      */
-    @PostMapping("/add")
+    @RequestMapping(method = RequestMethod.POST)
     public User add(@RequestBody User user) {
         return userService.add(user);
+    }
+
+    /**
+     * 根据 id 获取用户信息
+     */
+    @RequestMapping(method = RequestMethod.GET, value = "/u")
+    public User getUserById(@RequestParam Long id) {
+        User user = userService.findById(id);
+        user.setPassword(null);
+        return user;
+    }
+
+    /**
+     * 根据用户名获取用户信息
+     */
+    @RequestMapping(method = RequestMethod.GET)
+    public User getUserInfo(@RequestParam String username) {
+        User user = userService.findByUsername(username);
+        user.setId(null);
+        user.setPassword(null);
+        return user;
     }
 
     /**
@@ -34,9 +55,9 @@ public class UserController {
      *
      * @param user
      */
-    @PutMapping("/update")
-    public User update(@RequestBody User user) {
-        return userService.update(user);
+    @RequestMapping(method = RequestMethod.PUT)
+    public User update(@RequestParam Long id, @RequestBody User user) {
+        return userService.update(id, user);
     }
 
 }

@@ -30,6 +30,11 @@ public interface ArticleService {
     ArticleVo findById(Long id);
 
     /**
+     * 根据标题查询
+     */
+    ArticleVo findByTitle(String title);
+
+    /**
      * 增加
      */
     ArticleVo add(ArticleVo articleVo);

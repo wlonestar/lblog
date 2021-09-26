@@ -41,37 +41,20 @@
       </div>
     </el-card>
   </div>
-  <div style="margin: 20px 20px;">
-    <el-card class="box-card-small" style="margin-top: 0;">
-      <template #header>
-        <div class="card-header"><span>待办事项</span></div>
-      </template>
-      <div v-for="todo in todos.slice(0, 5)" :key="todo" class="text item">
-        <span style="color: #777777;">{{ new Date(todo.updateTime).toLocaleDateString() }}</span>
-        <p style="font-size: 18px; font-weight: 500;">
-          <span v-if="todo.state === 1"><close style="width: 20px; height: 20px;" color="#f56c6c"/></span>
-          <span v-if="todo.state === 2"><check style="width: 20px; height: 20px;" color="#67c23a"/></span>
-          {{ todo.content }}
-        </p>
-      </div>
-    </el-card>
-  </div>
 </template>
 
 <script>
 import { getAllArticle } from '../api/article'
 import { getAllComment } from '../api/comment'
-import { getAllTodo } from '../api/todo'
 import { getAllIdea } from '../api/idea'
-import { CollectionTag, Check, Close } from '@element-plus/icons'
+import { CollectionTag } from '@element-plus/icons'
 
 export default {
   name: 'Home',
-  components: { CollectionTag, Check, Close },
+  components: { CollectionTag },
   data () {
     return {
       articles: [],
-      todos: [],
       comments: [],
       ideas: []
     }
@@ -86,9 +69,6 @@ export default {
       })
       getAllComment().then(data => {
         this.comments = data.data.reverse()
-      })
-      getAllTodo().then(data => {
-        this.todos = data.data.reverse()
       })
       getAllIdea().then(data => {
         this.ideas = data.data.reverse()
@@ -114,14 +94,10 @@ export default {
 }
 
 .box-card-big {
-  width: 850px;
+  width: 1000px;
 }
 
 .box-card-mid {
-  width: 500px;
-}
-
-.box-card-small {
-  width: 300px;
+  width: 400px;
 }
 </style>

@@ -5,6 +5,7 @@ import com.wjl.lblog.service.intf.CategoryService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Sort;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -32,7 +33,7 @@ public class CategoryController {
     @RequestMapping(method = RequestMethod.GET)
     public Page<CategoryVo> findAllByPage(
             @RequestParam(defaultValue = "1") int page, @RequestParam(defaultValue = "10") int size) {
-        return categoryService.findAllByPage(PageRequest.of(page - 1, size));
+        return categoryService.findAllByPage(PageRequest.of(page - 1, size, Sort.Direction.DESC, "createTime"));
     }
 
     /**
@@ -51,6 +52,16 @@ public class CategoryController {
     @RequestMapping(value = "/{id}", method = RequestMethod.GET)
     public CategoryVo get(@PathVariable Long id) {
         return categoryService.findById(id);
+    }
+
+    /**
+     * 根据名称查询分类
+     *
+     * @param name
+     */
+    @RequestMapping(method = RequestMethod.GET, value = "/c")
+    public CategoryVo get(@RequestParam String name) {
+        return categoryService.findCategoryByName(name);
     }
 
     /**

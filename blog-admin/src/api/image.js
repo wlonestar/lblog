@@ -7,3 +7,14 @@ export function getAllImage () {
     method: 'get'
   })
 }
+
+export function getAllByPage (page, size) {
+  return request({
+    url: '/files',
+    method: 'get',
+    params: {
+      page,
+      size
+    }
+  })
+}

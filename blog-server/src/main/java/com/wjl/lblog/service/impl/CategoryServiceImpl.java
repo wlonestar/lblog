@@ -9,6 +9,7 @@ import com.wjl.lblog.service.intf.CategoryService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageImpl;
+import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
@@ -45,7 +46,6 @@ public class CategoryServiceImpl implements CategoryService {
             categoryVoList.add(categoryVo);
         }
         return new PageImpl<>(categoryVoList);
-//        return categoryRepository.findAll(pageable);
     }
 
     /**
@@ -61,7 +61,6 @@ public class CategoryServiceImpl implements CategoryService {
             categoryVos.add(categoryVo);
         }
         return categoryVos;
-//        return categoryRepository.findAll();
     }
 
     /**
@@ -90,11 +89,24 @@ public class CategoryServiceImpl implements CategoryService {
         if (!Objects.isNull(category)) {
             return category;
         } else {
-            Category category1 = new Category();
-            category1.setName(categoryName);
-            categoryRepository.save(category1);
-            return category1;
+            return null;
         }
+    }
+
+    /**
+     * 根据名称查询
+     *
+     * @param name
+     */
+    @Override
+    public CategoryVo findCategoryByName(String name) {
+        Category category = categoryRepository.findCategoryByName(name);
+        if (!Objects.isNull(category)) {
+            CategoryVo categoryVo = new CategoryVo();
+            copyFromCategoryToCategoryVo(category, categoryVo);
+            return categoryVo;
+        }
+        return null;
     }
 
     /**
@@ -106,9 +118,21 @@ public class CategoryServiceImpl implements CategoryService {
     public CategoryVo add(CategoryVo categoryVo) {
         Category category = new Category();
         category.setName(categoryVo.getName());
-        category.setDescription(categoryVo.getDescription());
+        if (!Objects.isNull(categoryVo.getDescription())) {
+            category.setDescription(categoryVo.getDescription());
+        }
         categoryRepository.save(category);
         return categoryVo;
+    }
+
+    /**
+     * 增加分类
+     *
+     * @param category
+     */
+    @Override
+    public Category add(Category category) {
+        return categoryRepository.save(category);
     }
 
     /**
@@ -125,6 +149,24 @@ public class CategoryServiceImpl implements CategoryService {
             category.setDescription(categoryVo.getDescription());
             categoryRepository.save(category);
             return categoryVo;
+        }
+        return null;
+    }
+
+    /**
+     * 更新
+     *
+     * @param id
+     * @param category
+     */
+    @Override
+    public Category update(Long id, Category category) {
+        Category category1 = categoryRepository.findById(id).orElseThrow();
+        if (!Objects.isNull(category1)) {
+            category1.setName(category.getName());
+            category1.setDescription(category.getDescription());
+            category1.setNumber(category.getArticleList().size());
+            categoryRepository.save(category1);
         }
         return null;
     }

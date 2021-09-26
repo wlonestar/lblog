@@ -7,6 +7,9 @@ import com.wjl.lblog.model.entity.Image;
 import com.wjl.lblog.service.intf.ImageService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Sort;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
@@ -40,9 +43,21 @@ public class ImageController {
     /**
      * 获取已上传的图片列表
      */
-    @RequestMapping(method = RequestMethod.GET)
+    @RequestMapping(method = RequestMethod.GET, value = "/all")
     public List<Image> getAll() {
         return imageService.findAll();
+    }
+
+    /**
+     * 分页查询
+     *
+     * @param page
+     * @param size
+     */
+    @RequestMapping(method = RequestMethod.GET)
+    public Page<Image> findAllByPage(
+            @RequestParam(defaultValue = "1") int page, @RequestParam(defaultValue = "10") int size) {
+        return imageService.findAllByPage(PageRequest.of(page - 1, size, Sort.Direction.DESC, "createTime"));
     }
 
     /**

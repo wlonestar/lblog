@@ -46,6 +46,7 @@ export default {
             if (res.code === 200) {
               this.$message({ type: 'success', message: '登录成功' })
               localStorage.setItem('satoken', JSON.stringify(res.data.satoken))
+              localStorage.setItem('user', res.data.username)
               this.$router.push('/home')
             } else {
               this.$message({ type: 'error', message: res.msg })

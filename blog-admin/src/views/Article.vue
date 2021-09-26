@@ -108,14 +108,13 @@ export default {
   methods: {
     load () {
       getArticleByPage(this.pageNum, this.pageSize).then(data => {
-        // console.log(data.data)
         this.tableData = data.data.content
         this.total = data.data.totalElements
       })
     },
     update (id, form) {
-      updateArticle(id, form).then(res => {
-        if (res.code === 200) {
+      updateArticle(id, form).then(data => {
+        if (data.code === 200) {
           this.$message({
             type: 'success',
             message: 'add success'
@@ -123,7 +122,7 @@ export default {
         } else {
           this.$message({
             type: 'error',
-            message: res.msg
+            message: data.msg
           })
         }
         this.load()
@@ -132,12 +131,11 @@ export default {
     },
     handleEdit (row) {
       this.form = JSON.parse(JSON.stringify(row))
-      // console.log(this.form)
       this.dialogVisible = true
     },
     handleDelete (id) {
-      deleteArticle(id).then(res => {
-        if (res.code === 200) {
+      deleteArticle(id).then(data => {
+        if (data.code === 200) {
           this.$message({
             type: 'success',
             message: '删除文章成功'
@@ -145,7 +143,7 @@ export default {
         } else {
           this.$message({
             type: 'error',
-            message: res.msg
+            message: data.msg
           })
         }
         this.load()

@@ -4,7 +4,6 @@ import com.wjl.lblog.model.entity.Article;
 import com.wjl.lblog.model.entity.Category;
 import com.wjl.lblog.model.vo.ArticleVo;
 import com.wjl.lblog.repository.ArticleRepository;
-import com.wjl.lblog.repository.CategoryRepository;
 import com.wjl.lblog.service.intf.ArticleService;
 import com.wjl.lblog.service.intf.CategoryService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -29,9 +28,6 @@ public class ArticleServiceImpl implements ArticleService {
     private ArticleRepository articleRepository;
 
     @Autowired
-    private CategoryRepository categoryRepository;
-
-    @Autowired
     private CategoryService categoryService;
 
     /**
@@ -42,14 +38,14 @@ public class ArticleServiceImpl implements ArticleService {
     @Override
     public Page<ArticleVo> findAllByPage(Pageable pageable) {
         Page<Article> articlePage = articleRepository.findAll(pageable);
-        List<Article> articleList = articlePage.getContent();
-        List<ArticleVo> articleVoList = new ArrayList<>();
-        for (Article article : articleList) {
+        List<Article> articles = articlePage.getContent();
+        List<ArticleVo> articleVos = new ArrayList<>();
+        for (Article article : articles) {
             ArticleVo articleVo = new ArticleVo();
             copyFromArticleToArticleVo(article, articleVo);
-            articleVoList.add(articleVo);
+            articleVos.add(articleVo);
         }
-        return new PageImpl<>(articleVoList);
+        return new PageImpl<>(articleVos);
     }
 
     /**
@@ -83,24 +79,29 @@ public class ArticleServiceImpl implements ArticleService {
     }
 
     /**
+     * 根据标题查询
+     *
+     * @param title
+     */
+    @Override
+    public ArticleVo findByTitle(String title) {
+        Article article = articleRepository.findArticleByTitle(title);
+        ArticleVo articleVo = new ArticleVo();
+        if (!Objects.isNull(article)) {
+            copyFromArticleToArticleVo(article, articleVo);
+        }
+        return articleVo;
+    }
+
+    /**
      * 增加
      *
      * @param articleVo
      */
     @Override
     public ArticleVo add(ArticleVo articleVo) {
-        // category
-        String categoryName = articleVo.getCategory();
-        Category category = categoryService.findByName(categoryName);
-        categoryRepository.save(category);
         Article article = new Article();
-        copyFromArticleVoToArticle(articleVo, article);
-        // category
-        article.setCategory(category);
-        category.setNumber(category.getNumber() + 1);
-        categoryRepository.save(category);
-        articleRepository.save(article);
-        return articleVo;
+        return dealWithArticleCategory(article, articleVo);
     }
 
     /**
@@ -111,21 +112,12 @@ public class ArticleServiceImpl implements ArticleService {
      */
     @Override
     public ArticleVo update(Long id, ArticleVo articleVo) {
-        // category
-        String categoryName = articleVo.getCategory();
-        Category category = categoryService.findByName(categoryName);
-        categoryRepository.save(category);
         Article article = articleRepository.findById(id).orElseThrow();
-        if (!Objects.equals(article, null)) {
-            copyFromArticleVoToArticle(articleVo, article);
-            // category
-            article.setCategory(category);
-            category.setNumber(category.getArticleList().size());
-            categoryRepository.save(category);
-            articleRepository.save(article);
-            return articleVo;
+        if (!Objects.isNull(article)) {
+            return dealWithArticleCategory(article, articleVo);
+        } else {
+            return null;
         }
-        return null;
     }
 
     /**
@@ -138,10 +130,8 @@ public class ArticleServiceImpl implements ArticleService {
         Article article = articleRepository.findById(id).orElseThrow();
         if (!Objects.isNull(article)) {
             articleRepository.deleteById(id);
-            // category
             Category category = article.getCategory();
-            category.setNumber(category.getArticleList().size());
-            categoryRepository.save(category);
+            categoryService.update(category.getId(), category);
             return id;
         }
         return null;
@@ -153,6 +143,24 @@ public class ArticleServiceImpl implements ArticleService {
     @Override
     public void deleteAll() {
         articleRepository.deleteAll();
+    }
+
+    public ArticleVo dealWithArticleCategory(Article article, ArticleVo articleVo) {
+        copyFromArticleVoToArticle(articleVo, article);
+        String categoryName = articleVo.getCategory();
+        Category category = categoryService.findByName(categoryName);
+        if (Objects.isNull(category)) {
+            Category category1 = new Category();
+            category1.setName(categoryName);
+            category1.setNumber(1);
+            categoryService.add(category1);
+            article.setCategory(category1);
+        } else {
+            article.setCategory(category);
+            categoryService.update(category.getId(), category);
+        }
+        articleRepository.save(article);
+        return articleVo;
     }
 
     public static void copyFromArticleToArticleVo(Article article, ArticleVo articleVo) {

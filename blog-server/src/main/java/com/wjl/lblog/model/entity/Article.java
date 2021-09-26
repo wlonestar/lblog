@@ -1,5 +1,6 @@
 package com.wjl.lblog.model.entity;
 
+import lombok.Data;
 import lombok.Getter;
 import lombok.Setter;
 import org.hibernate.annotations.CreationTimestamp;
@@ -9,12 +10,13 @@ import javax.persistence.*;
 import java.util.Date;
 
 /**
+ * 文章
+ *
  * @author: wjl
  * @date: 2021/9/13 20:46
  * @version: v1.0
  */
-@Getter
-@Setter
+@Data
 @Entity
 @Table(name = "article")
 public class Article {

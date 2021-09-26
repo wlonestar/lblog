@@ -1,5 +1,5 @@
 <template>
-  <div style="margin: 20px 20px;">
+  <div style="margin: 20px 20px 20px 20px;">
     <el-upload class="upload-demo"
       action="http://localhost:8088/files/"
       :on-success="fileUploadSuccess">
@@ -14,16 +14,29 @@
       <p>{{ image.name }}</p>
       <p>{{ image.url }}</p>
     </el-card>
+    <el-pagination style="margin-top: 20px;"
+      @size-change="handleSizeChange"
+      @current-change="handleCurrentChange"
+      :current-page="currentPage"
+      :page-sizes="[5, 10, 20]"
+      :page-size="pageSize"
+      layout="total, sizes, prev, pager, next, jumper"
+      :total="total">
+    </el-pagination>
   </div>
 </template>
 
 <script>
-import { getAllImage } from '../api/image'
+import { getAllByPage } from '../api/image'
 
 export default {
   name: 'File',
   data () {
     return {
+      currentPage: 1,
+      pageNum: 1,
+      pageSize: 5,
+      total: 0,
       images: []
     }
   },
@@ -32,12 +45,13 @@ export default {
   },
   methods: {
     load () {
-      getAllImage().then(data => {
-        this.images = data.data.reverse()
+      getAllByPage(this.pageNum, this.pageSize).then(data => {
+        this.images = data.data.content
+        console.log(this.data)
+        this.total = data.data.totalElements
       })
     },
     fileUploadSuccess (data) {
-      // console.log(data.data)
       if (data.code === 200) {
         this.$message({
           type: 'success',
@@ -49,6 +63,14 @@ export default {
           message: '上传失败，文件过大'
         })
       }
+      this.load()
+    },
+    handleSizeChange (pageSize) {
+      this.pageSize = pageSize
+      this.load()
+    },
+    handleCurrentChange (pageNum) {
+      this.pageNum = pageNum
       this.load()
     }
   }

@@ -16,4 +16,6 @@ public interface ArticleRepository extends JpaRepository<Article, Long> {
 
     Page<Article> findAll(Pageable pageable);
 
+    Article findArticleByTitle(String title);
+
 }

@@ -31,6 +31,20 @@ public class UserServiceImpl implements UserService {
     }
 
     /**
+     * 通过 id 查找用户
+     *
+     * @param id
+     */
+    @Override
+    public User findById(Long id) {
+        User user = userRepository.findById(id).orElseThrow();
+        if (!Objects.isNull(user)) {
+            return user;
+        }
+        return null;
+    }
+
+    /**
      * 添加用户
      *
      * @param user
@@ -48,11 +62,14 @@ public class UserServiceImpl implements UserService {
      * @param user
      */
     @Override
-    public User update(User user) {
-        User user1 = userRepository.findByUsername(user.getUsername());
+    public User update(Long id, User user) {
+        User user1 = userRepository.findById(id).orElseThrow();
         if (!Objects.isNull(user1)) {
-            user1.setUsername(user.getPassword());
-            user1.setSatoken(user.getSatoken());
+            user1.setUsername(user.getUsername());
+            user1.setPassword(SaBase64Util.encode(user.getPassword()));
+            user1.setTitle(user.getTitle());
+            user1.setSubtitle(user.getSubtitle());
+            user1.setAvatar(user.getAvatar());
             return userRepository.save(user1);
         }
         return null;

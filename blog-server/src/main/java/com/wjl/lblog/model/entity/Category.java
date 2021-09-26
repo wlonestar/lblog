@@ -1,5 +1,6 @@
 package com.wjl.lblog.model.entity;
 
+import lombok.Data;
 import lombok.Getter;
 import lombok.Setter;
 import org.hibernate.annotations.CreationTimestamp;
@@ -10,12 +11,13 @@ import java.util.Date;
 import java.util.List;
 
 /**
+ * 分类
+ *
  * @author: wjl
  * @date: 2021/9/13 20:54
  * @version: v1.0
  */
-@Getter
-@Setter
+@Data
 @Entity
 @Table(name = "category")
 public class Category {

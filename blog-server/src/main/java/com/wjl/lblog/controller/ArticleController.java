@@ -1,5 +1,6 @@
 package com.wjl.lblog.controller;
 
+import com.wjl.lblog.model.entity.Article;
 import com.wjl.lblog.model.vo.ArticleVo;
 import com.wjl.lblog.service.intf.ArticleService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -31,13 +32,13 @@ public class ArticleController {
     @RequestMapping(method = RequestMethod.GET)
     public Page<ArticleVo> findAllByPage(
             @RequestParam(defaultValue = "1") int page, @RequestParam(defaultValue = "10") int size) {
-        return articleService.findAllByPage(PageRequest.of(page - 1, size));
+        return articleService.findAllByPage(PageRequest.of(page - 1, size, Sort.Direction.DESC, "createTime"));
     }
 
     /**
      * 查询所有文章
      */
-    @RequestMapping(value = "/all", method = RequestMethod.GET)
+    @RequestMapping(method = RequestMethod.GET, value = "/all")
     public List<ArticleVo> getAll() {
         return articleService.findAll();
     }
@@ -47,9 +48,19 @@ public class ArticleController {
      *
      * @param id
      */
-    @RequestMapping(value = "/{id}", method = RequestMethod.GET)
+    @RequestMapping(method = RequestMethod.GET, value = "/{id}")
     public ArticleVo get(@PathVariable Long id) {
         return articleService.findById(id);
+    }
+
+    /**
+     * 根据标题查询文章
+     *
+     * @param title
+     */
+    @RequestMapping(method = RequestMethod.GET, value = "/p")
+    public ArticleVo get(@RequestParam String title) {
+        return articleService.findByTitle(title);
     }
 
     /**

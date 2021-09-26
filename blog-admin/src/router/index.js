@@ -17,6 +17,11 @@ const routes = [
         component: () => import('../views/Home.vue')
       },
       {
+        path: 'person',
+        name: 'Person',
+        component: () => import('../views/Person.vue')
+      },
+      {
         path: 'article',
         name: 'Article',
         component: () => import('../views/Article.vue')
@@ -40,11 +45,6 @@ const routes = [
         path: 'idea',
         name: 'Idea',
         component: () => import('../views/Idea.vue')
-      },
-      {
-        path: 'todo',
-        name: 'Todo',
-        component: () => import('../views/Todo.vue')
       },
       {
         path: 'file',

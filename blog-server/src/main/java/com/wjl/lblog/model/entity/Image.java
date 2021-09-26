@@ -3,12 +3,13 @@ package com.wjl.lblog.model.entity;
 import lombok.Getter;
 import lombok.Setter;
 import org.hibernate.annotations.CreationTimestamp;
-import org.hibernate.annotations.UpdateTimestamp;
 
 import javax.persistence.*;
 import java.util.Date;
 
 /**
+ * 图片
+ *
  * @author: wjl
  * @date: 2021/9/18 22:28
  * @version: v1.0
@@ -25,20 +26,12 @@ public class Image {
     private Long id;
 
     /**
-     * 创建时间
+     * 上传时间
      */
     @Column(name = "create_time")
     @Temporal(TemporalType.TIMESTAMP)
     @CreationTimestamp
     private Date createTime;
-
-    /**
-     * 更新时间
-     */
-    @Column(name = "update_time")
-    @Temporal(TemporalType.TIMESTAMP)
-    @UpdateTimestamp
-    private Date updateTime;
 
     /**
      * 名称

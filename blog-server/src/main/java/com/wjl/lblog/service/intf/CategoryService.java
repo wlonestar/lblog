@@ -35,14 +35,29 @@ public interface CategoryService {
     Category findByName(String categoryName);
 
     /**
+     * 根据名称查询
+     */
+    CategoryVo findCategoryByName(String name);
+
+    /**
      * 增加
      */
     CategoryVo add(CategoryVo categoryVo);
 
     /**
+     * 增加分类
+     */
+    Category add(Category category);
+
+    /**
      * 更新
      */
     CategoryVo update(Long id, CategoryVo categoryVo);
+
+    /**
+     * 更新
+     */
+    Category update(Long id, Category category);
 
     /**
      * 根据 id 删除

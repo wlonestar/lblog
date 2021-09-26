@@ -2,14 +2,15 @@
   <div class="header-position">
     <div class="header-title">Lblog 后台管理</div>
     <div class="header-empty"></div>
+    <el-avatar shape="square" :size="45" :src="user.avatar" style="margin-top:2px;"></el-avatar>
     <div class="header-info">
       <el-dropdown size="small">
         <span class="el-dropdown-link">
-          admin <i class="el-icon-arrow-down el-icon--right"></i>
+          {{ user.username }} <i class="el-icon-arrow-down el-icon--right"></i>
         </span>
         <template #dropdown>
           <el-dropdown-menu>
-<!--            <el-dropdown-item @click="$router.push('/person')">个人信息</el-dropdown-item>-->
+            <el-dropdown-item @click="$router.push('/person')">个人信息</el-dropdown-item>
             <el-dropdown-item @click="logout">退出</el-dropdown-item>
           </el-dropdown-menu>
         </template>
@@ -20,24 +21,31 @@
 
 <script>
 import logout from '../utils/logout'
+import { getInfo } from '../api/setting'
 
 export default {
   name: 'Header',
-  props: ['user'],
   data () {
+    return {
+      user: {}
+    }
   },
   created () {
+    this.load()
   },
   methods: {
+    load () {
+      getInfo(localStorage.getItem('user')).then(data => {
+        this.user = data.data
+      })
+    },
     logout () {
       logout.post('/logout').then(data => {
-        console.log(data)
         if (data.data.code === 200) {
-          console.log('log2')
           this.$message({ type: 'success', message: '注销成功' })
           this.$router.push('/login')
-          // sessionStorage.removeItem('satoken')
           localStorage.removeItem('satoken')
+          localStorage.removeItem('user')
         } else {
           this.$message({ type: 'error', message: data.data.msg })
         }

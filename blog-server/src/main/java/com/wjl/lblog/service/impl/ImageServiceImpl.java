@@ -4,6 +4,8 @@ import com.wjl.lblog.model.entity.Image;
 import com.wjl.lblog.repository.ImageRepository;
 import com.wjl.lblog.service.intf.ImageService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -22,6 +24,11 @@ public class ImageServiceImpl implements ImageService {
     @Override
     public List<Image> findAll() {
         return imageRepository.findAll();
+    }
+
+    @Override
+    public Page<Image> findAllByPage(Pageable pageable) {
+        return imageRepository.findAll(pageable);
     }
 
     @Override

@@ -94,7 +94,6 @@ export default {
     },
     handleEdit (row) {
       this.form = JSON.parse(JSON.stringify(row))
-      // console.log(this.form)
       this.dialogVisible = true
     },
     handleDelete (id) {

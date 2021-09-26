@@ -8,6 +8,8 @@ import javax.persistence.*;
 import java.util.Date;
 
 /**
+ * 留言
+ *
  * @author: wjl
  * @date: 2021/9/13 22:48
  * @version: v1.0

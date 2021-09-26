@@ -1,6 +1,8 @@
 package com.wjl.lblog.model.vo;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import java.util.Date;
 
@@ -10,6 +12,8 @@ import java.util.Date;
  * @version: v1.0
  */
 @Data
+@AllArgsConstructor
+@NoArgsConstructor
 public class ArticleVo {
 
     private Long id;
