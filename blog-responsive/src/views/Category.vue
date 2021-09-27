@@ -10,8 +10,8 @@
     </div>
   </div>
   <section class="article-list--compact">
-    <article v-for="article in category.articles" :key="article">
-      <a :href="'/p/' + article.id">
+    <article v-for="article in category.articleList" :key="article">
+      <a @click="redirectToArticle(article.title)">
         <div class="article-details">
           <h2 class="article-title">{{ article.title }}</h2>
           <footer class="article-time">
@@ -24,9 +24,11 @@
 </template>
 
 <script>
+import { getByName } from '../api/category'
+
 export default {
   name: 'Category',
-  setup () {
+  data () {
     return {
       category: {
         id: 0,
@@ -34,17 +36,7 @@ export default {
         number: 3,
         name: '开源项目',
         description: '我的开源项目的README',
-        articles: [
-          {
-            id: 0,
-            title: '个人博客项目开发完成',
-            createTime: 'Sep 20 2021'
-          },
-          {
-            id: 0,
-            title: '个人博客项目开发完成',
-            createTime: 'Sep 20 2021'
-          },
+        articleList: [
           {
             id: 0,
             title: '个人博客项目开发完成',
@@ -52,6 +44,20 @@ export default {
           }
         ]
       }
+    }
+  },
+  created () {
+    this.load()
+  },
+  methods: {
+    load () {
+      getByName(this.$route.params.name).then(data => {
+        this.category = data.data.data
+        console.log(data.data.data)
+      })
+    },
+    redirectToArticle (title) {
+      this.$router.push(`/p/${title}`)
     }
   }
 }

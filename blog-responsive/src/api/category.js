@@ -30,10 +30,12 @@ export function getCategory (id) {
 }
 
 // 根据标题查询分类
-export function getByTitle (name) {
+export function getByName (name) {
   return request({
-    url: '/category/p',
+    url: '/category/c',
     method: 'get',
-    params: name
+    params: {
+      name: name
+    }
   })
 }

@@ -1,17 +1,17 @@
 <template>
   <section class="article-list">
     <article class="has-image" v-for="article in articles.slice(0, 7)" :key="article">
-      <a href="#">
+      <a @click="redirectToArticle(article.title)">
         <div class="article-image">
           <img :src="article.image" loading="lazy" alt=""/>
         </div>
       </a>
       <div class="article-details">
         <header class="article-category">
-          <a href="#">{{article.category }}</a>
+          <a @click="redirectToCategory(article.category)">{{article.category }}</a>
         </header>
         <h2 class="article-title">
-          <a @click="redirectToArticle(article.id)">{{ article.title }}</a>
+          <a @click="redirectToArticle(article.title)">{{ article.title }}</a>
         </h2>
         <h3 class="article-subtitle">{{ article.subtitle }}</h3>
         <footer class="article-time">
@@ -34,10 +34,11 @@
 
 <script>
 import { Calendar, ClockRegular } from '@vicons/fa'
+import { NButton } from 'naive-ui'
 import { getAllArticle } from '../api/article'
 export default {
   name: 'Home',
-  components: { Calendar, ClockRegular },
+  components: { Calendar, ClockRegular, NButton },
   data () {
     return {
       articles: [
@@ -63,8 +64,11 @@ export default {
         this.articles = data.data.data.reverse()
       })
     },
-    redirectToArticle (id) {
-      this.$router.push(`/p/${id}`)
+    redirectToArticle (name) {
+      this.$router.push(`/p/${name}`)
+    },
+    redirectToCategory (name) {
+      this.$router.push(`/category/${name}`)
     }
   }
 }

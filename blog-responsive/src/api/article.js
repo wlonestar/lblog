@@ -32,7 +32,10 @@ export function getArticle (id) {
 // 根据标题查询文章
 export function getByTitle (title) {
   return request({
-    url: `/article/p/?title=${title}`,
-    method: 'get'
+    url: '/article/p',
+    method: 'get',
+    params: {
+      title: title
+    }
   })
 }

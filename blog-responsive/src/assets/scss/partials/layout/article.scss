@@ -272,7 +272,7 @@
     //& > p {
     //    margin: 1.5em 0;
     //}
-    //
+
     //h1,
     //h2,
     //h3,
@@ -283,7 +283,7 @@
     //    padding-left: calc(var(--card-padding) - var(--heading-border-size));
     //    border-left: var(--heading-border-size) solid var(--accent-color);
     //}
-    //
+
     //figure {
     //    text-align: center;
     //
@@ -292,7 +292,7 @@
     //        color: var(--card-text-color-secondary);
     //    }
     //}
-    //
+
     //blockquote {
     //    position: relative;
     //    margin: 1.5em 0;
@@ -300,7 +300,7 @@
     //    padding: 15px calc(var(--card-padding) - var(--blockquote-border-size));
     //    background-color: var(--blockquote-background-color);
     //}
-    //
+
     //hr {
     //    width: 100px;
     //    margin: 40px auto;
@@ -309,7 +309,7 @@
     //    border: 0;
     //    opacity: 0.55;
     //}
-    //
+
     //code {
     //    color: var(--code-text-color);
     //    background-color: var(--code-background-color);
@@ -352,28 +352,28 @@
     //    }
     //}
 
-    table {
-        width: 100%;
-        border-collapse: collapse;
-        border-spacing: 0;
-        margin-bottom: 1.5em;
-        font-size: 0.96em;
-    }
+    //table {
+    //    width: 100%;
+    //    border-collapse: collapse;
+    //    border-spacing: 0;
+    //    margin-bottom: 1.5em;
+    //    font-size: 0.96em;
+    //}
 
-    th,
-    td {
-        text-align: left;
-        padding: 4px 8px 4px 10px;
-        border: 1px solid var(--table-border-color);
-    }
+    //th,
+    //td {
+    //    text-align: left;
+    //    padding: 4px 8px 4px 10px;
+    //    border: 1px solid var(--table-border-color);
+    //}
 
-    td {
-        vertical-align: top;
-    }
+    //td {
+    //    vertical-align: top;
+    //}
 
-    tr:nth-child(even) {
-        background-color: var(--tr-even-background-color);
-    }
+    //tr:nth-child(even) {
+    //    background-color: var(--tr-even-background-color);
+    //}
 
     .twitter-tweet {
         color: var(--card-text-color-main);

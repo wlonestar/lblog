@@ -1,6 +1,6 @@
 package com.wjl.lblog.repository;
 
-import com.wjl.lblog.model.entity.Time;
+import com.wjl.lblog.model.entity.Timeline;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;
@@ -12,8 +12,8 @@ import org.springframework.stereotype.Repository;
  * @version: v1.0
  */
 @Repository
-public interface TimeRepository extends JpaRepository<Time, Long> {
+public interface TimelineRepository extends JpaRepository<Timeline, Long> {
 
-    Page<Time> findAll(Pageable pageable);
+    Page<Timeline> findAll(Pageable pageable);
 
 }

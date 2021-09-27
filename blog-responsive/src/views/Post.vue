@@ -9,7 +9,7 @@
         </div>
         <div class="article-details">
           <header class="article-category">
-            <a href="#">{{ article.category }}</a>
+            <a @click="redirectToCategory(article.category)">{{ article.category }}</a>
           </header>
           <h2 class="article-title">
             <a href="#">{{ article.title }}</a>
@@ -18,7 +18,7 @@
           <footer class="article-time">
             <div>
               <Calendar></Calendar>
-              <time class="article-time--published">{{ article.createTime }}</time>
+              <time class="article-time--published">{{ new Date(article.createTime).toLocaleString() }}</time>
             </div>
             <div>
               <ClockRegular></ClockRegular>
@@ -29,7 +29,6 @@
       </header>
       <section class="article-content">
         <div class="markdown-body" v-html="article.content"></div>
-<!--        {{ article.content }}-->
       </section>
       <footer class="article-footer">
         <section class="article-tags">
@@ -42,7 +41,7 @@
 
 <script>
 import { Calendar, ClockRegular } from '@vicons/fa'
-import { getArticle } from '../api/article'
+import { getByTitle } from '../api/article'
 export default {
   name: 'Post',
   components: { Calendar, ClockRegular },
@@ -65,7 +64,7 @@ export default {
   },
   methods: {
     load () {
-      getArticle(this.$route.params.id).then(data => {
+      getByTitle(this.$route.params.title).then(data => {
         this.article = data.data.data
         const hljs = require('highlight.js')
         const md = require('markdown-it')({
@@ -80,6 +79,9 @@ export default {
         })
         this.article.content = md.render(this.article.content)
       })
+    },
+    redirectToCategory (name) {
+      this.$router.push(`/category/${name}`)
     }
   }
 }

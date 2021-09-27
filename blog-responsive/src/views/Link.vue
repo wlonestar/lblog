@@ -10,7 +10,7 @@
       <section class="article-content">
         <n-card v-for="link in links" :key="link" :title="link.name" style="margin-bottom: 20px;">
           <template #cover>
-            <a :href="link.url">
+            <a :href="link.url" target="_blank">
               <img :src="link.image" alt="" />
             </a>
           </template>
@@ -25,26 +25,32 @@
 </template>
 
 <script>
+import { NCard } from 'naive-ui'
+import { getAllLink } from '../api/link'
 export default {
   name: 'Link',
-  setup () {
+  components: { NCard },
+  data () {
     return {
       links: [
         {
           id: 0,
-          url: 'http://localhost:8080',
-          image: 'https://blog.wangjialei.xyz/img/avatar_hud2f63dea884dfc84ed96fda9ff62e373_105884_300x0_resize_q75_box.jpg',
-          name: 'ewvwgeg',
-          slogan: 'ewfwefwefwegwegewgeg'
-        },
-        {
-          id: 0,
-          url: 'http://localhost:8080',
-          image: 'https://blog.wangjialei.xyz/img/avatar_hud2f63dea884dfc84ed96fda9ff62e373_105884_300x0_resize_q75_box.jpg',
-          name: 'wewe',
-          slogan: 'ewfewfewfewfewfwe'
+          url: '',
+          image: '',
+          name: '',
+          slogan: ''
         }
       ]
+    }
+  },
+  created () {
+    this.load()
+  },
+  methods: {
+    load () {
+      getAllLink().then(data => {
+        this.links = data.data.data.reverse()
+      })
     }
   }
 }

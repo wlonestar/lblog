@@ -7,11 +7,11 @@
   </div>
   <section class="article-list--compact">
     <article v-for="category in categories" :key="category">
-      <a :href="'/category/' + category.id">
+      <a @click="redirectToCategory(category.name)">
         <div class="article-details">
           <h2 class="article-title">{{ category.name }}</h2>
           <footer class="article-time">
-            <time class="article-time--published">{{ category.createTime }}</time>
+            <time class="article-time--published">{{ new Date(category.createTime).toLocaleString() }}</time>
           </footer>
         </div>
       </a>
@@ -20,27 +20,32 @@
 </template>
 
 <script>
+import { getAllCategory } from '../api/category'
+
 export default {
   name: 'CategoryList',
-  setup () {
+  data () {
     return {
       categories: [
         {
           id: 0,
           name: '开源项目',
           createTime: 'Sep 20 2021'
-        },
-        {
-          id: 0,
-          name: '开源项目',
-          createTime: 'Sep 20 2021'
-        },
-        {
-          id: 0,
-          name: '开源项目',
-          createTime: 'Sep 20 2021'
         }
       ]
+    }
+  },
+  created () {
+    this.load()
+  },
+  methods: {
+    load () {
+      getAllCategory().then(data => {
+        this.categories = data.data.data
+      })
+    },
+    redirectToCategory (name) {
+      this.$router.push(`/category/${name}`)
     }
   }
 }

@@ -18,8 +18,8 @@ import java.util.Date;
 @Getter
 @Setter
 @Entity
-@Table(name = "time")
-public class Time {
+@Table(name = "timeline")
+public class Timeline {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

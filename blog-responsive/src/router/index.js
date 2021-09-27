@@ -8,7 +8,7 @@ const routes = [
     component: Home
   },
   {
-    path: '/p/:id',
+    path: '/p/:title',
     name: 'Post',
     component: () => import('../views/Post.vue')
   },
@@ -23,7 +23,7 @@ const routes = [
     component: () => import('../views/CategoryList.vue')
   },
   {
-    path: '/category/:id',
+    path: '/category/:name',
     name: 'Category',
     component: () => import('../views/Category.vue')
   },
@@ -31,6 +31,11 @@ const routes = [
     path: '/link',
     name: 'Link',
     component: () => import('../views/Link.vue')
+  },
+  {
+    path: '/comment',
+    name: 'Comment',
+    component: () => import('../views/Comment.vue')
   },
   {
     path: '/about',

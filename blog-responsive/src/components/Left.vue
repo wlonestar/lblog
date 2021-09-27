@@ -10,7 +10,7 @@
         <img :src="info.avatar" class="site-logo" loading="lazy" alt="Avatar">
         <span class="emoji">3</span>
       </figure>
-      <h1 class="site-name"><a href="#">{{ info.title }}</a></h1>
+      <h1 class="site-name"><a href="/">{{ info.title }}</a></h1>
       <h2 class="site-description">{{ info.subtitle }}</h2>
     </header>
     <ol class="menu" id="main-menu">
@@ -35,6 +35,11 @@
         </router-link>
       </li>
       <li>
+        <router-link to="/comment">
+          <Comment class="icon"></Comment><span>留言</span>
+        </router-link>
+      </li>
+      <li>
         <router-link to="/about">
           <User class="icon"></User><span>关于</span>
         </router-link>
@@ -44,7 +49,7 @@
 </template>
 
 <script>
-import { Home, Archive, Bookmark, Link, User } from '@vicons/fa'
+import { Home, Archive, Bookmark, Link, Comment, User } from '@vicons/fa'
 import { getInfoById } from '../api/user'
 export default {
   name: 'Left',
@@ -53,6 +58,7 @@ export default {
     Archive,
     Bookmark,
     Link,
+    Comment,
     User
   },
   data () {

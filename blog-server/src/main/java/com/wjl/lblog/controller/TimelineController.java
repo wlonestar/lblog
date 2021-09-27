@@ -1,7 +1,7 @@
 package com.wjl.lblog.controller;
 
-import com.wjl.lblog.model.entity.Time;
-import com.wjl.lblog.service.intf.TimeService;
+import com.wjl.lblog.model.entity.Timeline;
+import com.wjl.lblog.service.intf.TimelineService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
@@ -19,10 +19,10 @@ import java.util.List;
  */
 @RestController
 @RequestMapping("/idea")
-public class TimeController {
+public class TimelineController {
 
     @Autowired
-    private TimeService TimeService;
+    private TimelineService TimelineService;
 
     /**
      * 分页查询动态
@@ -31,17 +31,17 @@ public class TimeController {
      * @param size
      */
     @RequestMapping(method = RequestMethod.GET)
-    public Page<Time> findAllByPage(
+    public Page<Timeline> findAllByPage(
             @RequestParam(defaultValue = "1") int page, @RequestParam(defaultValue = "10") int size) {
-        return TimeService.findAllByPage(PageRequest.of(page - 1, size, Sort.Direction.DESC, "createTime"));
+        return TimelineService.findAllByPage(PageRequest.of(page - 1, size, Sort.Direction.DESC, "createTime"));
     }
 
     /**
      * 查询所有动态
      */
     @RequestMapping(value = "/all", method = RequestMethod.GET)
-    public List<Time> findAll() {
-        return TimeService.findAll();
+    public List<Timeline> findAll() {
+        return TimelineService.findAll();
     }
 
     /**
@@ -50,8 +50,8 @@ public class TimeController {
      * @param id
      */
     @RequestMapping(value = "/{id}", method = RequestMethod.GET)
-    public Time findById(@PathVariable Long id) {
-        return TimeService.findById(id);
+    public Timeline findById(@PathVariable Long id) {
+        return TimelineService.findById(id);
     }
 
     /**
@@ -60,8 +60,8 @@ public class TimeController {
      * @param idea
      */
     @RequestMapping(method = RequestMethod.POST)
-    public Time add(@RequestBody Time idea) {
-        return TimeService.add(idea);
+    public Timeline add(@RequestBody Timeline idea) {
+        return TimelineService.add(idea);
     }
 
     /**
@@ -71,8 +71,8 @@ public class TimeController {
      * @param idea
      */
     @RequestMapping(method = RequestMethod.PUT)
-    public Time update(@RequestParam("id") Long id, @RequestBody Time idea) {
-        return TimeService.update(id, idea);
+    public Timeline update(@RequestParam("id") Long id, @RequestBody Timeline idea) {
+        return TimelineService.update(id, idea);
     }
 
     /**
@@ -82,7 +82,7 @@ public class TimeController {
      */
     @RequestMapping(method = RequestMethod.DELETE)
     public Long deleteById(@RequestParam("id") Long id) {
-        return TimeService.deleteById(id);
+        return TimelineService.deleteById(id);
     }
 
     /**
@@ -90,7 +90,7 @@ public class TimeController {
      */
     @DeleteMapping("/delete")
     public void deleteAll() {
-        TimeService.deleteAll();
+        TimelineService.deleteAll();
     }
 
 }

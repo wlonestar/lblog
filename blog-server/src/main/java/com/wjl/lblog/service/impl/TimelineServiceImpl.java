@@ -1,8 +1,8 @@
 package com.wjl.lblog.service.impl;
 
-import com.wjl.lblog.model.entity.Time;
-import com.wjl.lblog.repository.TimeRepository;
-import com.wjl.lblog.service.intf.TimeService;
+import com.wjl.lblog.model.entity.Timeline;
+import com.wjl.lblog.repository.TimelineRepository;
+import com.wjl.lblog.service.intf.TimelineService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -17,10 +17,10 @@ import java.util.Objects;
  * @version: v1.0
  */
 @Service
-public class TimeServiceImpl implements TimeService {
+public class TimelineServiceImpl implements TimelineService {
 
     @Autowired
-    private TimeRepository timeRepository;
+    private TimelineRepository timelineRepository;
 
     /**
      * 分页查询
@@ -28,16 +28,16 @@ public class TimeServiceImpl implements TimeService {
      * @param pageable
      */
     @Override
-    public Page<Time> findAllByPage(Pageable pageable) {
-        return timeRepository.findAll(pageable);
+    public Page<Timeline> findAllByPage(Pageable pageable) {
+        return timelineRepository.findAll(pageable);
     }
 
     /**
      * 查询所有
      */
     @Override
-    public List<Time> findAll() {
-        return timeRepository.findAll();
+    public List<Timeline> findAll() {
+        return timelineRepository.findAll();
     }
 
     /**
@@ -46,8 +46,8 @@ public class TimeServiceImpl implements TimeService {
      * @param id
      */
     @Override
-    public Time findById(Long id) {
-        Time idea = timeRepository.findById(id).orElseThrow();
+    public Timeline findById(Long id) {
+        Timeline idea = timelineRepository.findById(id).orElseThrow();
         if (!Objects.isNull(idea)) {
             return idea;
         } else {
@@ -61,8 +61,8 @@ public class TimeServiceImpl implements TimeService {
      * @param idea
      */
     @Override
-    public Time add(Time idea) {
-        return timeRepository.save(idea);
+    public Timeline add(Timeline idea) {
+        return timelineRepository.save(idea);
     }
 
     /**
@@ -72,11 +72,11 @@ public class TimeServiceImpl implements TimeService {
      * @param idea
      */
     @Override
-    public Time update(Long id, Time idea) {
-        Time idea1 = timeRepository.findById(id).orElseThrow();
+    public Timeline update(Long id, Timeline idea) {
+        Timeline idea1 = timelineRepository.findById(id).orElseThrow();
         if (!Objects.isNull(idea1)) {
             idea1.setContent(idea.getContent());
-            timeRepository.save(idea1);
+            timelineRepository.save(idea1);
             return idea1;
         } else {
             return null;
@@ -90,9 +90,9 @@ public class TimeServiceImpl implements TimeService {
      */
     @Override
     public Long deleteById(Long id) {
-        Time idea = timeRepository.findById(id).orElseThrow();
+        Timeline idea = timelineRepository.findById(id).orElseThrow();
         if (!Objects.isNull(idea)) {
-            timeRepository.deleteById(id);
+            timelineRepository.deleteById(id);
             return id;
         } else {
             return null;
@@ -104,6 +104,6 @@ public class TimeServiceImpl implements TimeService {
      */
     @Override
     public void deleteAll() {
-        timeRepository.deleteAll();
+        timelineRepository.deleteAll();
     }
 }
