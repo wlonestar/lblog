@@ -20,14 +20,18 @@ api[0].list.push({
 });
 api[0].list.push({
     order: '4',
-    desc: '增加文章',
+    desc: '根据标题查询文章',
 });
 api[0].list.push({
     order: '5',
-    desc: '根据id更新文章',
+    desc: '增加文章',
 });
 api[0].list.push({
     order: '6',
+    desc: '根据id更新文章',
+});
+api[0].list.push({
+    order: '7',
     desc: '根据id删除文章',
 });
 api.push({
@@ -51,14 +55,18 @@ api[1].list.push({
 });
 api[1].list.push({
     order: '4',
-    desc: '增加分类',
+    desc: '根据名称查询分类',
 });
 api[1].list.push({
     order: '5',
-    desc: '根据id更新分类',
+    desc: '增加分类',
 });
 api[1].list.push({
     order: '6',
+    desc: '根据id更新分类',
+});
+api[1].list.push({
+    order: '7',
     desc: '根据id删除分类',
 });
 api.push({
@@ -97,58 +105,38 @@ api[2].list.push({
     desc: '删除所有留言',
 });
 api.push({
-    alias: 'IdeaController',
-    order: '4',
-    link: '动态',
-    desc: '动态',
-    list: []
-})
-api[3].list.push({
-    order: '1',
-    desc: '分页查询动态',
-});
-api[3].list.push({
-    order: '2',
-    desc: '查询所有动态',
-});
-api[3].list.push({
-    order: '3',
-    desc: '根据id查询动态',
-});
-api[3].list.push({
-    order: '4',
-    desc: '增加动态',
-});
-api[3].list.push({
-    order: '5',
-    desc: '更新动态',
-});
-api[3].list.push({
-    order: '6',
-    desc: '根据id删除动态',
-});
-api[3].list.push({
-    order: '7',
-    desc: '删除所有动态',
-});
-api.push({
     alias: 'ImageController',
-    order: '5',
+    order: '4',
     link: '图片',
     desc: '图片',
     list: []
 })
-api[4].list.push({
+api[3].list.push({
     order: '1',
     desc: '获取已上传的图片列表',
 });
-api[4].list.push({
+api[3].list.push({
     order: '2',
+    desc: '分页查询',
+});
+api[3].list.push({
+    order: '3',
     desc: '图片上传',
 });
-api[4].list.push({
-    order: '3',
+api[3].list.push({
+    order: '4',
     desc: '图片下载',
+});
+api.push({
+    alias: 'LinkController',
+    order: '5',
+    link: '友链',
+    desc: '友链',
+    list: []
+})
+api[4].list.push({
+    order: '1',
+    desc: '获取所有友链',
 });
 api.push({
     alias: 'LoginController',
@@ -166,39 +154,39 @@ api[5].list.push({
     desc: '注销',
 });
 api.push({
-    alias: 'TodoController',
+    alias: 'TimelineController',
     order: '7',
-    link: '待办',
-    desc: '待办',
+    link: '时间线',
+    desc: '时间线',
     list: []
 })
 api[6].list.push({
     order: '1',
-    desc: '分页查询待办',
+    desc: '分页查询动态',
 });
 api[6].list.push({
     order: '2',
-    desc: '查询所有待办',
+    desc: '查询所有动态',
 });
 api[6].list.push({
     order: '3',
-    desc: '根据id查询待办',
+    desc: '根据id查询动态',
 });
 api[6].list.push({
     order: '4',
-    desc: '增加待办',
+    desc: '增加动态',
 });
 api[6].list.push({
     order: '5',
-    desc: '更新待办',
+    desc: '更新动态',
 });
 api[6].list.push({
     order: '6',
-    desc: '根据id删除待办',
+    desc: '根据id删除动态',
 });
 api[6].list.push({
     order: '7',
-    desc: '删除所有待办',
+    desc: '删除所有动态',
 });
 api.push({
     alias: 'UserController',
@@ -213,6 +201,14 @@ api[7].list.push({
 });
 api[7].list.push({
     order: '2',
+    desc: '根据id获取用户信息',
+});
+api[7].list.push({
+    order: '3',
+    desc: '根据用户名获取用户信息',
+});
+api[7].list.push({
+    order: '4',
     desc: '更新密码',
 });
 api.push({

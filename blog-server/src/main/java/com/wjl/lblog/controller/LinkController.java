@@ -10,6 +10,8 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.List;
 
 /**
+ * 友链
+ *
  * @author: wjl
  * @date: 2021/9/27 10:55
  * @version: v1.0
