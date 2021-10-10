@@ -22,7 +22,7 @@ public class UserController {
     /**
      * 添加用户
      *
-     * @param user
+     * @param user 用户
      */
     @RequestMapping(method = RequestMethod.POST)
     public User add(@RequestBody User user) {
@@ -53,7 +53,7 @@ public class UserController {
     /**
      * 更新密码
      *
-     * @param user
+     * @param user 用户信息
      */
     @RequestMapping(method = RequestMethod.PUT)
     public User update(@RequestParam Long id, @RequestBody User user) {

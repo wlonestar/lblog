@@ -3,6 +3,7 @@ package com.wjl.lblog.model.entity;
 import lombok.Data;
 import lombok.Getter;
 import lombok.Setter;
+import lombok.ToString;
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.UpdateTimestamp;
 
@@ -16,7 +17,9 @@ import java.util.Date;
  * @date: 2021/9/13 20:46
  * @version: v1.0
  */
-@Data
+@Getter
+@Setter
+@ToString
 @Entity
 @Table(name = "article")
 public class Article {
@@ -66,8 +69,10 @@ public class Article {
     @Column(name = "content")
     private String content;
 
-    @ManyToOne(optional = false)
-    @JoinColumn(name="category_id")
-    private Category category;
+    /**
+     * 所属分类 id
+     */
+    @Column(name="category_id")
+    private Long categoryId;
 
 }

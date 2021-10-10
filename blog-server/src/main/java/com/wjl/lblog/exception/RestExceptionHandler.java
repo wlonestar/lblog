@@ -1,7 +1,7 @@
 package com.wjl.lblog.exception;
 
-import com.wjl.lblog.constant.enums.ReturnCode;
-import com.wjl.lblog.utils.Result;
+import com.wjl.lblog.constants.enums.ReturnCode;
+import com.wjl.lblog.constants.constnts.Result;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.ExceptionHandler;

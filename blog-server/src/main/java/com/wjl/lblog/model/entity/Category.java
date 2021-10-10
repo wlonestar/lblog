@@ -1,14 +1,13 @@
 package com.wjl.lblog.model.entity;
 
-import lombok.Data;
 import lombok.Getter;
 import lombok.Setter;
+import lombok.ToString;
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.UpdateTimestamp;
 
 import javax.persistence.*;
 import java.util.Date;
-import java.util.List;
 
 /**
  * 分类
@@ -17,7 +16,9 @@ import java.util.List;
  * @date: 2021/9/13 20:54
  * @version: v1.0
  */
-@Data
+@Getter
+@Setter
+@ToString
 @Entity
 @Table(name = "category")
 public class Category {
@@ -60,12 +61,5 @@ public class Category {
      */
     @Column(name = "category_number")
     private Integer number = 0;
-
-    /**
-     * 分类下文章列表
-     * 一种分类下文章不止一篇
-     */
-    @OneToMany(mappedBy = "category", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
-    private List<Article> articleList;
 
 }

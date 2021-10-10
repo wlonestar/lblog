@@ -27,8 +27,8 @@ public class TimelineController {
     /**
      * 分页查询动态
      *
-     * @param page
-     * @param size
+     * @param page 页数
+     * @param size 数量
      */
     @RequestMapping(method = RequestMethod.GET)
     public Page<Timeline> findAllByPage(
@@ -47,7 +47,7 @@ public class TimelineController {
     /**
      * 根据 id 查询动态
      *
-     * @param id
+     * @param id id
      */
     @RequestMapping(value = "/{id}", method = RequestMethod.GET)
     public Timeline findById(@PathVariable Long id) {
@@ -57,7 +57,7 @@ public class TimelineController {
     /**
      * 增加动态
      *
-     * @param idea
+     * @param idea 动态
      */
     @RequestMapping(method = RequestMethod.POST)
     public Timeline add(@RequestBody Timeline idea) {
@@ -67,8 +67,8 @@ public class TimelineController {
     /**
      * 更新动态
      *
-     * @param id
-     * @param idea
+     * @param id id
+     * @param idea 动态
      */
     @RequestMapping(method = RequestMethod.PUT)
     public Timeline update(@RequestParam("id") Long id, @RequestBody Timeline idea) {
@@ -78,7 +78,7 @@ public class TimelineController {
     /**
      * 根据 id 删除动态
      *
-     * @param id
+     * @param id id
      */
     @RequestMapping(method = RequestMethod.DELETE)
     public Long deleteById(@RequestParam("id") Long id) {

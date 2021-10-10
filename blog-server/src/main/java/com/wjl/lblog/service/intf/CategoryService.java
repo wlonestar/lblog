@@ -1,7 +1,8 @@
 package com.wjl.lblog.service.intf;
 
 import com.wjl.lblog.model.entity.Category;
-import com.wjl.lblog.model.vo.CategoryVo;
+import com.wjl.lblog.model.dto.CategoryDto;
+import com.wjl.lblog.model.dto.CategoryArticleDto;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 
@@ -15,44 +16,36 @@ import java.util.List;
 public interface CategoryService {
 
     /**
-     * 分页查询
+     * 分页查询分类实体
      */
-    Page<CategoryVo> findAllByPage(Pageable pageable);
+    Page<Category> findAllCategoryByPage(Pageable pageable);
 
     /**
-     * 查询所有
+     * 分页查询某分类下文章
      */
-    List<CategoryVo> findAll();
+    CategoryArticleDto findOneCategoryAndArticleById(Long id, Pageable pageable);
 
     /**
-     * 根据 id 查询
+     * 查询所有分类实体
      */
-    CategoryVo findById(Long id);
+    List<Category> findAllCategory();
 
     /**
-     * 根据名称查询
+     * 根据 id 查询分类实体
      */
-    Category findByName(String categoryName);
+    Category findCategoryById(Long id);
 
     /**
-     * 根据名称查询
+     * 根据分类名查询分类实体
      */
-    CategoryVo findCategoryByName(String name);
+    Category findCategoryByName(String name);
+
+    ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
     /**
      * 增加
      */
-    CategoryVo add(CategoryVo categoryVo);
-
-    /**
-     * 增加分类
-     */
     Category add(Category category);
-
-    /**
-     * 更新
-     */
-    CategoryVo update(Long id, CategoryVo categoryVo);
 
     /**
      * 更新
@@ -62,7 +55,7 @@ public interface CategoryService {
     /**
      * 根据 id 删除
      */
-    Long deleteById(Long id);
+    Category deleteById(Long id);
 
     /**
      * 删除所有

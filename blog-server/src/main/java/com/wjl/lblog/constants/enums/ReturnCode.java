@@ -1,4 +1,4 @@
-package com.wjl.lblog.constant.enums;
+package com.wjl.lblog.constants.enums;
 
 import lombok.Getter;
 

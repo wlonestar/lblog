@@ -1,7 +1,8 @@
 package com.wjl.lblog.service.intf;
 
+import com.wjl.lblog.model.dto.ArticleDto;
+import com.wjl.lblog.model.dto.ArticleSummaryDto;
 import com.wjl.lblog.model.entity.Article;
-import com.wjl.lblog.model.vo.ArticleVo;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 
@@ -17,37 +18,39 @@ public interface ArticleService {
     /**
      * 分页查询
      */
-    Page<ArticleVo> findAllByPage(Pageable pageable);
+    Page<ArticleSummaryDto> findAllByPage(Pageable pageable);
 
     /**
      * 查询所有
      */
-    List<ArticleVo> findAll();
+    List<ArticleSummaryDto> findAllArticleSummary();
 
     /**
      * 根据 id 查询
      */
-    ArticleVo findById(Long id);
+    ArticleDto findById(Long id);
 
     /**
      * 根据标题查询
      */
-    ArticleVo findByTitle(String title);
+    ArticleDto findByTitle(String title);
+
+    ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
     /**
      * 增加
      */
-    ArticleVo add(ArticleVo articleVo);
+    ArticleDto add(ArticleDto articleDto);
 
     /**
      * 更新
      */
-    ArticleVo update(Long id, ArticleVo articleVo);
+    ArticleDto update(Long id, ArticleDto articleDto);
 
     /**
      * 根据 id 删除
      */
-    Long deleteById(Long id);
+    Article deleteById(Long id);
 
     /**
      * 删除所有

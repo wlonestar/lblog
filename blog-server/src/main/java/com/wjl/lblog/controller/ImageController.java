@@ -20,8 +20,8 @@ import java.net.URLEncoder;
 import java.nio.charset.StandardCharsets;
 import java.util.List;
 
-import static com.wjl.lblog.constant.constnts.GlobalConstants.folder;
-import static com.wjl.lblog.constant.constnts.GlobalConstants.ip;
+import static com.wjl.lblog.constants.constnts.GlobalConstants.folder;
+import static com.wjl.lblog.constants.constnts.GlobalConstants.ip;
 
 /**
  * 图片

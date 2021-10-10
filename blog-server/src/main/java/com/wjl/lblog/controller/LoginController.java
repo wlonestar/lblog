@@ -4,7 +4,7 @@ import cn.dev33.satoken.secure.SaBase64Util;
 import cn.dev33.satoken.stp.StpUtil;
 import com.wjl.lblog.model.entity.User;
 import com.wjl.lblog.service.intf.UserService;
-import com.wjl.lblog.utils.Result;
+import com.wjl.lblog.constants.constnts.Result;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -26,7 +26,7 @@ public class LoginController {
     /**
      * 登录
      *
-     * @param user
+     * @param user 用户信息
      */
     @PostMapping("/login")
     public Result<User> login(@RequestBody User user) {

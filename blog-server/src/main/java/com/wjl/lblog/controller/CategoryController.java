@@ -1,6 +1,8 @@
 package com.wjl.lblog.controller;
 
-import com.wjl.lblog.model.vo.CategoryVo;
+import com.wjl.lblog.model.dto.CategoryDto;
+import com.wjl.lblog.model.entity.Category;
+import com.wjl.lblog.model.dto.CategoryArticleDto;
 import com.wjl.lblog.service.intf.CategoryService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
@@ -25,73 +27,88 @@ public class CategoryController {
     private CategoryService categoryService;
 
     /**
-     * 分页查询分类
+     * 分页查询分类实体
      *
-     * @param page
-     * @param size
+     * @param page 页数
+     * @param size 数量
      */
-    @RequestMapping(method = RequestMethod.GET)
-    public Page<CategoryVo> findAllByPage(
-            @RequestParam(defaultValue = "1") int page, @RequestParam(defaultValue = "10") int size) {
-        return categoryService.findAllByPage(PageRequest.of(page - 1, size, Sort.Direction.DESC, "createTime"));
+    @RequestMapping(value = "/page", method = RequestMethod.GET)
+    public Page<Category> findAllByPage(@RequestParam(defaultValue = "1") int page,
+                                        @RequestParam(defaultValue = "7") int size) {
+        return categoryService.findAllCategoryByPage(
+                PageRequest.of(page - 1, size, Sort.Direction.DESC, "createTime"));
     }
 
     /**
-     * 查询所有分类
+     * 查询所有分类实体
      */
     @RequestMapping(value = "/all", method = RequestMethod.GET)
-    public List<CategoryVo> getAll() {
-        return categoryService.findAll();
+    public List<Category> getAll() {
+        return categoryService.findAllCategory();
     }
 
     /**
-     * 根据 id 查询分类
+     * 分页查询某分类下文章
      *
-     * @param id
+     * @param id id
+     * @param page page
+     * @param size size
      */
-    @RequestMapping(value = "/{id}", method = RequestMethod.GET)
-    public CategoryVo get(@PathVariable Long id) {
-        return categoryService.findById(id);
+    @RequestMapping(value = "/article", method = RequestMethod.GET)
+    public CategoryArticleDto findOneCategoryAndArticleById(@RequestParam("id") Long id,
+                                                            @RequestParam(defaultValue = "1") int page,
+                                                            @RequestParam(defaultValue = "7") int size) {
+        return categoryService.findOneCategoryAndArticleById(id, PageRequest.of(page - 1, size));
     }
 
     /**
-     * 根据名称查询分类
+     * 根据 id 查询分类实体
      *
-     * @param name
+     * @param id id
      */
-    @RequestMapping(method = RequestMethod.GET, value = "/c")
-    public CategoryVo get(@RequestParam String name) {
+    @RequestMapping(value = "/id", method = RequestMethod.GET)
+    public Category get(@RequestParam Long id) {
+        return categoryService.findCategoryById(id);
+    }
+
+    /**
+     * 根据名称查询分类实体
+     *
+     * @param name name
+     */
+    @RequestMapping(value = "/name", method = RequestMethod.GET)
+    public Category get(@RequestParam String name) {
         return categoryService.findCategoryByName(name);
     }
 
     /**
      * 增加分类
      *
-     * @param categoryVo
+     * @param category category
      */
     @RequestMapping(method = RequestMethod.POST)
-    public CategoryVo add(@RequestBody CategoryVo categoryVo) {
-        return categoryService.add(categoryVo);
+    public Category add(@RequestBody Category category) {
+        return categoryService.add(category);
     }
 
     /**
      * 根据 id 更新分类
      *
-     * @param id
-     * @param categoryVo
+     * @param id id
+     * @param category category
      */
     @RequestMapping(method = RequestMethod.PUT)
-    public CategoryVo update(@RequestParam("id") Long id, @RequestBody CategoryVo categoryVo) {
-        return categoryService.update(id, categoryVo);
+    public Category update(@RequestParam("id") Long id, @RequestBody Category category) {
+        return categoryService.update(id, category);
     }
 
     /**
      * 根据 id 删除分类
      *
-     * @param id
+     * @param id id
      */
     @RequestMapping(method = RequestMethod.DELETE)
-    public Long deleteById(@RequestParam("id") Long id) {
+    public Category deleteById(@RequestParam("id") Long id) {
         return categoryService.deleteById(id);
     }
 

@@ -1,23 +1,24 @@
 package com.wjl.lblog.service.impl;
 
-import com.wjl.lblog.model.entity.Article;
+import com.google.common.collect.Lists;
+import com.querydsl.core.QueryResults;
+import com.querydsl.core.Tuple;
+import com.wjl.lblog.component.QueryComponent;
+import com.wjl.lblog.model.dto.ArticleTitleDto;
 import com.wjl.lblog.model.entity.Category;
-import com.wjl.lblog.model.vo.ArticleVo;
-import com.wjl.lblog.model.vo.CategoryVo;
+import com.wjl.lblog.model.entity.QArticle;
+import com.wjl.lblog.model.entity.QCategory;
+import com.wjl.lblog.model.dto.CategoryArticleDto;
 import com.wjl.lblog.repository.CategoryRepository;
 import com.wjl.lblog.service.intf.CategoryService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageImpl;
-import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
-
-import static com.wjl.lblog.service.impl.ArticleServiceImpl.copyFromArticleToArticleVo;
 
 /**
  * @author: wjl
@@ -28,65 +29,120 @@ import static com.wjl.lblog.service.impl.ArticleServiceImpl.copyFromArticleToArt
 public class CategoryServiceImpl implements CategoryService {
 
     @Autowired
+    private QueryComponent queryComponent;
+
+    @Autowired
     private CategoryRepository categoryRepository;
 
+    QCategory qCategory = QCategory.category;
+
+    QArticle qArticle = QArticle.article;
+
     /**
-     * 分页查询
+     * 分页查询分类实体
      *
-     * @param pageable
+     * @param pageable pageable
      */
     @Override
-    public Page<CategoryVo> findAllByPage(Pageable pageable) {
-        Page<Category> categoryPage = categoryRepository.findAll(pageable);
-        List<Category> categoryList = categoryPage.getContent();
-        List<CategoryVo> categoryVoList = new ArrayList<>();
-        for (Category category : categoryList) {
-            CategoryVo categoryVo = new CategoryVo();
-            copyFromCategoryToCategoryVo(category, categoryVo);
-            categoryVoList.add(categoryVo);
-        }
-        return new PageImpl<>(categoryVoList);
+    public Page<Category> findAllCategoryByPage(Pageable pageable) {
+        return categoryRepository.findAll(pageable);
     }
 
     /**
-     * 查询所有
+     * 分页查询某分类下文章
+     *
+     * @param id id
+     * @param pageable pageable
      */
     @Override
-    public List<CategoryVo> findAll() {
-        List<Category> categories = categoryRepository.findAll();
-        List<CategoryVo> categoryVos = new ArrayList<>();
-        for (Category category : categories) {
-            CategoryVo categoryVo = new CategoryVo();
-            copyFromCategoryToCategoryVo(category, categoryVo);
-            categoryVos.add(categoryVo);
-        }
-        return categoryVos;
+    public CategoryArticleDto findOneCategoryAndArticleById(Long id, Pageable pageable) {
+        CategoryArticleDto categoryArticleDto = new CategoryArticleDto();
+        Category category = findCategoryById(id);
+        // query articles by category id
+        QueryResults<Tuple> queryResults = queryComponent.queryFactory()
+                .select(
+                        qArticle.id,
+                        qArticle.createTime,
+                        qArticle.title
+                )
+                .from(qArticle)
+                .where(qArticle.categoryId.eq(id))
+                .orderBy(qArticle.createTime.desc())
+                .offset(pageable.getOffset())
+                .limit(pageable.getPageSize())
+                .fetchResults();
+        List<Tuple> tuples = queryResults.getResults();
+        List<ArticleTitleDto> articleTitleDtos = this.tupleToArticleTitleDto(tuples);
+        Page<ArticleTitleDto> articleTitleDtoPage = new PageImpl<>(articleTitleDtos, pageable, queryResults.getTotal());
+        // category to categoryArticleDto
+        categoryArticleDto.setId(category.getId());
+        categoryArticleDto.setCreateTime(category.getCreateTime());
+        categoryArticleDto.setUpdateTime(category.getUpdateTime());
+        categoryArticleDto.setName(category.getName());
+        categoryArticleDto.setDescription(category.getDescription());
+        categoryArticleDto.setNumber(category.getNumber());
+        categoryArticleDto.setArticles(articleTitleDtoPage);
+        return categoryArticleDto;
     }
 
     /**
-     * 根据 id 查询
-     *
-     * @param id
+     * 查询所有分类
      */
     @Override
-    public CategoryVo findById(Long id) {
-        Category category = categoryRepository.findById(id).orElseThrow();
-        CategoryVo categoryVo = new CategoryVo();
+    public List<Category> findAllCategory() {
+        return categoryRepository.findAll();
+    }
+
+    /**
+     * 根据 id 查询分类实体
+     *
+     * @param id id
+     */
+    @Override
+    public Category findCategoryById(Long id) {
+        return categoryRepository.findById(id).orElseThrow();
+    }
+
+    /**
+     * 根据分类名查询分类实体
+     *
+     * @param name name
+     */
+    @Override
+    public Category findCategoryByName(String name) {
+        return categoryRepository.findCategoryByName(name);
+    }
+
+    /**
+     * 增加
+     *
+     * @param category category
+     */
+    @Override
+    public Category add(Category category) {
         if (!Objects.isNull(category)) {
-            copyFromCategoryToCategoryVo(category, categoryVo);
+            return categoryRepository.save(category);
+        } else {
+            return null;
         }
-        return categoryVo;
     }
 
     /**
-     * 根据名称查询
+     * 更新
      *
-     * @param categoryName
+     * @param id id
+     * @param category category
      */
     @Override
-    public Category findByName(String categoryName) {
-        Category category = categoryRepository.findCategoryByName(categoryName);
-        if (!Objects.isNull(category)) {
+    public Category update(Long id, Category category) {
+        Category category1 = categoryRepository.findById(id).orElseThrow();
+        if (!Objects.isNull(category1)) {
+            queryComponent.queryFactory()
+                    .update(qCategory)
+                    .where(qCategory.id.eq(id))
+                    .set(qCategory.name, category.getName())
+                    .set(qCategory.description, category.getDescription())
+                    .execute();
             return category;
         } else {
             return null;
@@ -94,96 +150,15 @@ public class CategoryServiceImpl implements CategoryService {
     }
 
     /**
-     * 根据名称查询
-     *
-     * @param name
-     */
-    @Override
-    public CategoryVo findCategoryByName(String name) {
-        Category category = categoryRepository.findCategoryByName(name);
-        if (!Objects.isNull(category)) {
-            CategoryVo categoryVo = new CategoryVo();
-            copyFromCategoryToCategoryVo(category, categoryVo);
-            return categoryVo;
-        }
-        return null;
-    }
-
-    /**
-     * 增加
-     *
-     * @param categoryVo
-     */
-    @Override
-    public CategoryVo add(CategoryVo categoryVo) {
-        Category category = new Category();
-        category.setName(categoryVo.getName());
-        if (!Objects.isNull(categoryVo.getDescription())) {
-            category.setDescription(categoryVo.getDescription());
-        }
-        categoryRepository.save(category);
-        return categoryVo;
-    }
-
-    /**
-     * 增加分类
-     *
-     * @param category
-     */
-    @Override
-    public Category add(Category category) {
-        return categoryRepository.save(category);
-    }
-
-    /**
-     * 更新
-     *
-     * @param id
-     * @param categoryVo
-     */
-    @Override
-    public CategoryVo update(Long id, CategoryVo categoryVo) {
-        Category category = categoryRepository.findById(id).orElseThrow();
-        if (!Objects.isNull(category)) {
-            category.setName(categoryVo.getName());
-            category.setDescription(categoryVo.getDescription());
-            categoryRepository.save(category);
-            return categoryVo;
-        }
-        return null;
-    }
-
-    /**
-     * 更新
-     *
-     * @param id
-     * @param category
-     */
-    @Override
-    public Category update(Long id, Category category) {
-        Category category1 = categoryRepository.findById(id).orElseThrow();
-        if (!Objects.isNull(category1)) {
-            category1.setName(category.getName());
-            category1.setDescription(category.getDescription());
-            category1.setNumber(category.getArticleList().size());
-            categoryRepository.save(category1);
-        }
-        return null;
-    }
-
-    /**
      * 根据 id 删除
      *
-     * @param id
+     * @param id id
      */
     @Override
-    public Long deleteById(Long id) {
+    public Category deleteById(Long id) {
         Category category = categoryRepository.findById(id).orElseThrow();
         if (!Objects.isNull(category)) {
-            if (category.getNumber() == 0) {
-                categoryRepository.deleteById(id);
-                return id;
-            }
+            categoryRepository.deleteById(id);
         }
         return null;
     }
@@ -193,24 +168,19 @@ public class CategoryServiceImpl implements CategoryService {
      */
     @Override
     public void deleteAll() {
-
+        categoryRepository.deleteAll();
     }
 
-    public static void copyFromCategoryToCategoryVo(Category category, CategoryVo categoryVo) {
-        categoryVo.setId(category.getId());
-        categoryVo.setCreateTime(category.getCreateTime());
-        categoryVo.setUpdateTime(category.getUpdateTime());
-        categoryVo.setName(category.getName());
-        categoryVo.setDescription(category.getDescription());
-        categoryVo.setNumber(category.getNumber());
-        List<Article> articleList = category.getArticleList();
-        List<ArticleVo> articleVoList = new ArrayList<>();
-        for (Article article : articleList) {
-            ArticleVo articleVo = new ArticleVo();
-            copyFromArticleToArticleVo(article, articleVo);
-            articleVoList.add(articleVo);
+    private List<ArticleTitleDto> tupleToArticleTitleDto(List<Tuple> tuples) {
+        List<ArticleTitleDto> articleTitleDtos = Lists.newArrayList();
+        for (Tuple tuple : tuples) {
+            ArticleTitleDto articleTitleDto = new ArticleTitleDto();
+            articleTitleDto.setArticleId(tuple.get(qArticle.id));
+            articleTitleDto.setArticleTime(tuple.get(qArticle.createTime));
+            articleTitleDto.setArticleTitle(tuple.get(qArticle.title));
+            articleTitleDtos.add(articleTitleDto);
         }
-        categoryVo.setArticleList(articleVoList);
+        return articleTitleDtos;
     }
 
 }

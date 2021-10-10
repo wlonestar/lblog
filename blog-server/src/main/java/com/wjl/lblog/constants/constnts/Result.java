@@ -1,6 +1,6 @@
-package com.wjl.lblog.utils;
+package com.wjl.lblog.constants.constnts;
 
-import com.wjl.lblog.constant.enums.ReturnCode;
+import com.wjl.lblog.constants.enums.ReturnCode;
 import lombok.Data;
 
 /**
