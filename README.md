@@ -4,7 +4,7 @@ Springboot + Vue 前后端分离个人博客项目
 
 GitHub: [wjl-lab/lblog: 前后端分离个人博客，支持markdown渲染，图片上传下载 (github.com)](https://github.com/wjl-lab/lblog)
 
-Gitee: [lblog: 前后端分离个人博客，支持markdown渲染，图片上传下载 (gitee.com)](https://gitee.com/wjl-lab/lblog)
+<!-- Gitee: [lblog: 前后端分离个人博客，支持markdown渲染，图片上传下载 (gitee.com)](https://gitee.com/wjl-lab/lblog) -->
 
 后端技术：
 
