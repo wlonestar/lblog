@@ -1,22 +1,29 @@
 package com.wjl.lblog.service.impl;
 
+import cn.hutool.core.bean.BeanUtil;
+import com.querydsl.core.QueryResults;
 import com.querydsl.core.Tuple;
+import com.querydsl.core.types.Projections;
 import com.wjl.lblog.component.QueryComponent;
+import com.wjl.lblog.model.dto.ArticleDto;
+import com.wjl.lblog.model.entity.*;
 import com.wjl.lblog.model.vo.ArticleSummaryVo;
-import com.wjl.lblog.model.entity.Article;
 import com.wjl.lblog.model.vo.ArticleDetailVo;
-import com.wjl.lblog.model.entity.Category;
-import com.wjl.lblog.model.entity.QArticle;
-import com.wjl.lblog.model.entity.QCategory;
+import com.wjl.lblog.model.vo.ArticleTitleVo;
 import com.wjl.lblog.repository.ArticleRepository;
+import com.wjl.lblog.repository.ArticleTagRepository;
 import com.wjl.lblog.repository.CategoryRepository;
+import com.wjl.lblog.repository.TagRepository;
 import com.wjl.lblog.service.intf.ArticleService;
 import com.wjl.lblog.service.intf.CategoryService;
+import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageImpl;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
@@ -38,6 +45,12 @@ public class ArticleServiceImpl implements ArticleService {
     private CategoryRepository categoryRepository;
 
     @Autowired
+    private TagRepository tagRepository;
+
+    @Autowired
+    private ArticleTagRepository articleTagRepository;
+
+    @Autowired
     private CategoryService categoryService;
 
     QArticle qArticle = QArticle.article;
@@ -52,26 +65,35 @@ public class ArticleServiceImpl implements ArticleService {
     @Deprecated
     @Override
     public Page<ArticleSummaryVo> findAllByPage(Pageable pageable) {
-//        QueryResults<Tuple> queryResults = queryComponent.queryFactory()
-//                .select(
-//                        qArticle.id,
-//                        qArticle.createTime,
-//                        qArticle.updateTime,
-//                        qArticle.title,
-//                        qArticle.summary,
-//                        qArticle.image,
-//                        qCategory.id.as("categoryId"),
-//                        qCategory.name.as("categoryName")
-//                )
-//                .from(qArticle, qCategory)
-//                .where(qArticle.categoryId.eq(qCategory.id))
-//                .orderBy(qArticle.createTime.desc())
-//                .offset(pageable.getOffset())
-//                .limit(pageable.getPageSize())
-//                .fetchResults();
-//        List<Tuple> tuples = queryResults.getResults();
-//        List<ArticleSummaryDto> articleSummaryDtos = this.tupleToArticleSummaryDto(tuples);
-//        return new PageImpl<>(articleSummaryDtos, pageable, queryResults.getTotal());
+        QueryResults<Tuple> queryResults = queryComponent.queryFactory()
+                .select(
+                        qArticle.id,
+                        qArticle.createTime,
+                        qArticle.updateTime,
+                        qArticle.title,
+                        qArticle.summary,
+                        qArticle.cover,
+                        qCategory.id.as("categoryId"),
+                        qCategory.name.as("categoryName")
+                )
+                .from(qArticle, qCategory)
+                .where(qArticle.categoryId.eq(qCategory.id))
+                .orderBy(qArticle.createTime.desc())
+                .offset(pageable.getOffset())
+                .limit(pageable.getPageSize())
+                .fetchResults();
+        List<Tuple> tuples = queryResults.getResults();
+        List<ArticleSummaryVo> articleSummaryDtos = this.tupleToArticleSummaryDto(tuples);
+        return new PageImpl<>(articleSummaryDtos, pageable, queryResults.getTotal());
+    }
+
+    @Override
+    public Page<ArticleDetailVo> findArticleDetailsByPage(Pageable pageable) {
+        return null;
+    }
+
+    @Override
+    public Page<ArticleTitleVo> findArticleTitlesByPage(Pageable pageable) {
         return null;
     }
 
@@ -101,6 +123,31 @@ public class ArticleServiceImpl implements ArticleService {
         return null;
     }
 
+    @Override
+    public List<ArticleDetailVo> findArticleDetails() {
+        return null;
+    }
+
+    @Override
+    public List<ArticleTitleVo> findArticleTitles() {
+        return null;
+    }
+
+    @Override
+    public List<Article> findArticles() {
+        return null;
+    }
+
+    @Override
+    public List<ArticleDto> findAllArticleDtoByArticleId(Long aid) {
+        return null;
+    }
+
+    @Override
+    public List<ArticleDto> findAllArticleDtoByTagId(Long tid) {
+        return null;
+    }
+
     /**
      * 根据 id 查询
      *
@@ -108,28 +155,66 @@ public class ArticleServiceImpl implements ArticleService {
      */
     @Override
     public ArticleDetailVo findById(Long id) {
-//        return queryComponent.queryFactory()
-//                .select(
-//                        Projections.bean(
-//                                ArticleDto.class,
-//                                qArticle.id,
-//                                qArticle.createTime,
-//                                qArticle.updateTime,
-//                                qArticle.title,
-//                                qArticle.summary,
-//                                qArticle.image,
-//                                qArticle.content,
-//                                qCategory.id.as("categoryId"),
-//                                qCategory.name.as("categoryName")
-//                        )
-//                )
-//                .from(qArticle, qCategory)
-//                .where(
-//                        qArticle.id.eq(id)
-//                                .and(qArticle.categoryId.eq(qCategory.id))
-//                )
-//                .orderBy(qArticle.createTime.desc())
-//                .fetchOne();
+        Article article = findArticleById(id);
+        if (!Objects.isNull(article)) {
+            ArticleSummaryVo articleSummaryVo = findArticleSummaryById(id);
+            ArticleDetailVo articleDetailVo = new ArticleDetailVo();
+            BeanUtils.copyProperties(articleSummaryVo, articleDetailVo);
+            articleDetailVo.setContent(article.getContent());
+            return articleDetailVo;
+        }
+        return null;
+    }
+
+    @Override
+    public ArticleSummaryVo findArticleSummaryById(Long id) {
+        Article article = findArticleById(id);
+        if (!Objects.isNull(article)) {
+            Category category = categoryRepository.findCategoryById(article.getCategoryId());
+            if (!Objects.isNull(category)) {
+                List<ArticleTag> articleTags = articleTagRepository.findArticleTagsByAid(id);
+                List<Tag> tags = new ArrayList<>();
+                for (ArticleTag articleTag : articleTags) {
+                    Tag tag = tagRepository.findTagById(articleTag.getTid());
+                    if (!Objects.isNull(tag)) {
+                        tags.add(tag);
+                    }
+                }
+                ArticleSummaryVo articleSummaryVo = new ArticleSummaryVo();
+                BeanUtils.copyProperties(article, articleSummaryVo, "category_id", "content");
+                articleSummaryVo.setCategory(category);
+                articleSummaryVo.setTags(tags);
+                return articleSummaryVo;
+            }
+        }
+        return null;
+    }
+
+    @Override
+    public ArticleTitleVo findArticleTitleById(Long id) {
+        if (!Objects.isNull(findArticleById(id))) {
+            return queryComponent.queryFactory()
+                    .select(
+                            Projections.bean(
+                                    ArticleTitleVo.class,
+                                    qArticle.id,
+                                    qArticle.createTime.as("articleTime"),
+                                    qArticle.title
+                            )
+                    )
+                    .from(qArticle)
+                    .where(qArticle.id.eq(id))
+                    .fetchOne();
+        }
+        return null;
+    }
+
+    @Override
+    public Article findArticleById(Long id) {
+        Article article = articleRepository.findArticleById(id);
+        if (!Objects.isNull(article)) {
+            return article;
+        }
         return null;
     }
 
@@ -229,14 +314,6 @@ public class ArticleServiceImpl implements ArticleService {
             return article;
         }
         return null;
-    }
-
-    /**
-     * 删除所有
-     */
-    @Override
-    public void deleteAll() {
-        articleRepository.deleteAll();
     }
 
     @Deprecated
