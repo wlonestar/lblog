@@ -1,5 +1,6 @@
 package com.wjl.lblog.model.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
@@ -21,6 +22,7 @@ import java.util.Date;
 @ToString
 @Entity
 @Table(name = "category")
+@JsonIgnoreProperties({"handler", "hibernateLazyInitializer"})
 public class Category {
 
     @Id

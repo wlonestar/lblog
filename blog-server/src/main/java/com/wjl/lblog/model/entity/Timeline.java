@@ -1,5 +1,6 @@
 package com.wjl.lblog.model.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.Getter;
 import lombok.Setter;
 import org.hibernate.annotations.CreationTimestamp;
@@ -19,6 +20,7 @@ import java.util.Date;
 @Setter
 @Entity
 @Table(name = "timeline")
+@JsonIgnoreProperties({"handler", "hibernateLazyInitializer"})
 public class Timeline {
 
     @Id
