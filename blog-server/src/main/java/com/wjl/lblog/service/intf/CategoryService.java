@@ -1,8 +1,7 @@
 package com.wjl.lblog.service.intf;
 
 import com.wjl.lblog.model.entity.Category;
-import com.wjl.lblog.model.dto.CategoryDto;
-import com.wjl.lblog.model.dto.CategoryArticleDto;
+import com.wjl.lblog.model.vo.CategoryArticleVo;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 
@@ -23,7 +22,7 @@ public interface CategoryService {
     /**
      * 分页查询某分类下文章
      */
-    CategoryArticleDto findOneCategoryAndArticleById(Long id, Pageable pageable);
+    CategoryArticleVo findOneCategoryAndArticleById(Long id, Pageable pageable);
 
     /**
      * 查询所有分类实体

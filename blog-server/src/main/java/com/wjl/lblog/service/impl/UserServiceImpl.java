@@ -67,8 +67,8 @@ public class UserServiceImpl implements UserService {
         if (!Objects.isNull(user1)) {
             user1.setUsername(user.getUsername());
             user1.setPassword(SaBase64Util.encode(user.getPassword()));
-            user1.setTitle(user.getTitle());
-            user1.setSubtitle(user.getSubtitle());
+//            user1.setTitle(user.getTitle());
+//            user1.setSubtitle(user.getSubtitle());
             user1.setAvatar(user.getAvatar());
             return userRepository.save(user1);
         }

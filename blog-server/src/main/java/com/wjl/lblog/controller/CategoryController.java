@@ -1,8 +1,7 @@
 package com.wjl.lblog.controller;
 
-import com.wjl.lblog.model.dto.CategoryDto;
 import com.wjl.lblog.model.entity.Category;
-import com.wjl.lblog.model.dto.CategoryArticleDto;
+import com.wjl.lblog.model.vo.CategoryArticleVo;
 import com.wjl.lblog.service.intf.CategoryService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
@@ -55,9 +54,9 @@ public class CategoryController {
      * @param size size
      */
     @RequestMapping(value = "/article", method = RequestMethod.GET)
-    public CategoryArticleDto findOneCategoryAndArticleById(@RequestParam("id") Long id,
-                                                            @RequestParam(defaultValue = "1") int page,
-                                                            @RequestParam(defaultValue = "7") int size) {
+    public CategoryArticleVo findOneCategoryAndArticleById(@RequestParam("id") Long id,
+                                                           @RequestParam(defaultValue = "1") int page,
+                                                           @RequestParam(defaultValue = "7") int size) {
         return categoryService.findOneCategoryAndArticleById(id, PageRequest.of(page - 1, size));
     }
 

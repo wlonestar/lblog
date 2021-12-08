@@ -3,24 +3,25 @@ package com.wjl.lblog.model.entity;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.Getter;
 import lombok.Setter;
+import lombok.ToString;
 import org.hibernate.annotations.CreationTimestamp;
+import org.hibernate.annotations.UpdateTimestamp;
 
 import javax.persistence.*;
 import java.util.Date;
 
 /**
- * 图片
- *
  * @author: wjl
- * @date: 2021/9/18 22:28
+ * @date: 2021/12/8 18:53
  * @version: v1.0
  */
 @Getter
 @Setter
+@ToString
 @Entity
-@Table(name = "image")
+@Table(name = "role")
 @JsonIgnoreProperties({"handler", "hibernateLazyInitializer"})
-public class Image {
+public class Role {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -28,7 +29,7 @@ public class Image {
     private Long id;
 
     /**
-     * 上传时间
+     * 创建时间
      */
     @Column(name = "create_time")
     @Temporal(TemporalType.TIMESTAMP)
@@ -36,15 +37,17 @@ public class Image {
     private Date createTime;
 
     /**
-     * 名称
+     * 更新时间
      */
-    @Column(name = "name")
-    private String name;
+    @Column(name = "update_time")
+    @Temporal(TemporalType.TIMESTAMP)
+    @UpdateTimestamp
+    private Date updateTime;
 
     /**
-     * 路径
+     * 角色
      */
-    @Column(name = "url")
-    private String url;
+    @Column(name = "role")
+    private String role;
 
 }

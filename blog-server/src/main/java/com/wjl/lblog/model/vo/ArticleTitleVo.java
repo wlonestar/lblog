@@ -1,4 +1,4 @@
-package com.wjl.lblog.model.dto;
+package com.wjl.lblog.model.vo;
 
 import lombok.Data;
 
@@ -10,12 +10,12 @@ import java.util.Date;
  * @version: v1.0
  */
 @Data
-public class ArticleTitleDto {
+public class ArticleTitleVo {
 
-    private Long articleId;
+    private Long id;
 
     private Date articleTime;
 
-    private String articleTitle;
+    private String title;
 
 }

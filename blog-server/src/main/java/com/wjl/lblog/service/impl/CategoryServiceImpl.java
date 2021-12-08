@@ -1,14 +1,13 @@
 package com.wjl.lblog.service.impl;
 
-import com.google.common.collect.Lists;
 import com.querydsl.core.QueryResults;
 import com.querydsl.core.Tuple;
 import com.wjl.lblog.component.QueryComponent;
-import com.wjl.lblog.model.dto.ArticleTitleDto;
+import com.wjl.lblog.model.vo.ArticleTitleVo;
 import com.wjl.lblog.model.entity.Category;
 import com.wjl.lblog.model.entity.QArticle;
 import com.wjl.lblog.model.entity.QCategory;
-import com.wjl.lblog.model.dto.CategoryArticleDto;
+import com.wjl.lblog.model.vo.CategoryArticleVo;
 import com.wjl.lblog.repository.CategoryRepository;
 import com.wjl.lblog.service.intf.CategoryService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -55,8 +54,8 @@ public class CategoryServiceImpl implements CategoryService {
      * @param pageable pageable
      */
     @Override
-    public CategoryArticleDto findOneCategoryAndArticleById(Long id, Pageable pageable) {
-        CategoryArticleDto categoryArticleDto = new CategoryArticleDto();
+    public CategoryArticleVo findOneCategoryAndArticleById(Long id, Pageable pageable) {
+        CategoryArticleVo categoryArticleVo = new CategoryArticleVo();
         Category category = findCategoryById(id);
         // query articles by category id
         QueryResults<Tuple> queryResults = queryComponent.queryFactory()
@@ -72,17 +71,17 @@ public class CategoryServiceImpl implements CategoryService {
                 .limit(pageable.getPageSize())
                 .fetchResults();
         List<Tuple> tuples = queryResults.getResults();
-        List<ArticleTitleDto> articleTitleDtos = this.tupleToArticleTitleDto(tuples);
-        Page<ArticleTitleDto> articleTitleDtoPage = new PageImpl<>(articleTitleDtos, pageable, queryResults.getTotal());
+        List<ArticleTitleVo> articleTitleVos = this.tupleToArticleTitleDto(tuples);
+        Page<ArticleTitleVo> articleTitleDtoPage = new PageImpl<>(articleTitleVos, pageable, queryResults.getTotal());
         // category to categoryArticleDto
-        categoryArticleDto.setId(category.getId());
-        categoryArticleDto.setCreateTime(category.getCreateTime());
-        categoryArticleDto.setUpdateTime(category.getUpdateTime());
-        categoryArticleDto.setName(category.getName());
-        categoryArticleDto.setDescription(category.getDescription());
-        categoryArticleDto.setNumber(category.getNumber());
-        categoryArticleDto.setArticles(articleTitleDtoPage);
-        return categoryArticleDto;
+        categoryArticleVo.setId(category.getId());
+        categoryArticleVo.setCreateTime(category.getCreateTime());
+        categoryArticleVo.setUpdateTime(category.getUpdateTime());
+        categoryArticleVo.setName(category.getName());
+        categoryArticleVo.setDescription(category.getDescription());
+        categoryArticleVo.setNumber(category.getNumber());
+        categoryArticleVo.setArticles(articleTitleDtoPage);
+        return categoryArticleVo;
     }
 
     /**
@@ -171,16 +170,17 @@ public class CategoryServiceImpl implements CategoryService {
         categoryRepository.deleteAll();
     }
 
-    private List<ArticleTitleDto> tupleToArticleTitleDto(List<Tuple> tuples) {
-        List<ArticleTitleDto> articleTitleDtos = Lists.newArrayList();
+    private List<ArticleTitleVo> tupleToArticleTitleDto(List<Tuple> tuples) {
+//        List<ArticleTitleDto> articleTitleDtos = Lists.newArrayList();
         for (Tuple tuple : tuples) {
-            ArticleTitleDto articleTitleDto = new ArticleTitleDto();
-            articleTitleDto.setArticleId(tuple.get(qArticle.id));
-            articleTitleDto.setArticleTime(tuple.get(qArticle.createTime));
-            articleTitleDto.setArticleTitle(tuple.get(qArticle.title));
-            articleTitleDtos.add(articleTitleDto);
+            ArticleTitleVo articleTitleVo = new ArticleTitleVo();
+//            articleTitleVo.setArticleId(tuple.get(qArticle.id));
+            articleTitleVo.setArticleTime(tuple.get(qArticle.createTime));
+//            articleTitleVo.setArticleTitle(tuple.get(qArticle.title));
+//            articleTitleDtos.add(articleTitleDto);
         }
-        return articleTitleDtos;
+//        return articleTitleDtos;
+        return null;
     }
 
 }

@@ -73,7 +73,7 @@ public class CommentServiceImpl implements CommentService {
             comment1.setAvatar(comment.getAvatar());
             comment1.setContent(comment.getContent());
             comment1.setEmail(comment.getEmail());
-            comment1.setNickname(comment.getNickname());
+//            comment1.setNickname(comment.getNickname());
             comment1.setSite(comment.getSite());
             commentRepository.save(comment1);
             return comment1;

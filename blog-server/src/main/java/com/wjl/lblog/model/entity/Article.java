@@ -27,7 +27,7 @@ public class Article {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "article_id")
+    @Column(name = "id")
     private Long id;
 
     /**
@@ -61,8 +61,8 @@ public class Article {
     /**
      * 题图
      */
-    @Column(name = "image")
-    private String image;
+    @Column(name = "cover")
+    private String cover;
 
     /**
      * 正文

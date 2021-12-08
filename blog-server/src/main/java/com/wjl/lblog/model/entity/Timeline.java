@@ -45,6 +45,12 @@ public class Timeline {
     private Date updateTime;
 
     /**
+     * 标题
+     */
+    @Column(name = "title")
+    private String title;
+
+    /**
      * 正文
      */
     @Column(name = "content")

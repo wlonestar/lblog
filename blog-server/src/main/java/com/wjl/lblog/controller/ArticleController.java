@@ -1,7 +1,7 @@
 package com.wjl.lblog.controller;
 
-import com.wjl.lblog.model.dto.ArticleDto;
-import com.wjl.lblog.model.dto.ArticleSummaryDto;
+import com.wjl.lblog.model.vo.ArticleDetailVo;
+import com.wjl.lblog.model.vo.ArticleSummaryVo;
 import com.wjl.lblog.model.entity.Article;
 import com.wjl.lblog.service.intf.ArticleService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -24,6 +24,17 @@ public class ArticleController {
     @Autowired
     private ArticleService articleService;
 
+    // GET
+    ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+    /**
+     * 查询所有文章摘要
+     */
+    @RequestMapping(value = "/all", method = RequestMethod.GET)
+    public List<ArticleSummaryVo> getAll() {
+        return articleService.findAllArticleSummary();
+    }
+
     /**
      * 分页查询文章摘要
      *
@@ -31,17 +42,9 @@ public class ArticleController {
      * @param size size
      */
     @RequestMapping(value = "/page", method = RequestMethod.GET)
-    public Page<ArticleSummaryDto> findAllByPage(@RequestParam(defaultValue = "1") int page,
-                                                 @RequestParam(defaultValue = "10") int size) {
+    public Page<ArticleSummaryVo> findAllByPage(@RequestParam(defaultValue = "1") int page,
+                                                @RequestParam(defaultValue = "10") int size) {
         return articleService.findAllByPage(PageRequest.of(page - 1, size));
-    }
-
-    /**
-     * 查询所有文章摘要
-     */
-    @RequestMapping(value = "/all", method = RequestMethod.GET)
-    public List<ArticleSummaryDto> getAll() {
-        return articleService.findAllArticleSummary();
     }
 
     /**
@@ -50,7 +53,7 @@ public class ArticleController {
      * @param id id
      */
     @RequestMapping(value = "/id", method = RequestMethod.GET)
-    public ArticleDto getById(@RequestParam Long id) {
+    public ArticleDetailVo getById(@RequestParam Long id) {
         return articleService.findById(id);
     }
 
@@ -60,30 +63,40 @@ public class ArticleController {
      * @param title title
      */
     @RequestMapping(value = "/title", method = RequestMethod.GET)
-    public ArticleDto getByTitle(@RequestParam String title) {
+    public ArticleDetailVo getByTitle(@RequestParam String title) {
         return articleService.findByTitle(title);
     }
+
+
+    // POST
+    ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
     /**
      * 增加文章
      *
-     * @param articleDto
+     * @param articleDetailVo
      */
     @RequestMapping(method = RequestMethod.POST)
-    public ArticleDto add(@RequestBody ArticleDto articleDto) {
-        return articleService.add(articleDto);
+    public ArticleDetailVo add(@RequestBody ArticleDetailVo articleDetailVo) {
+        return articleService.add(articleDetailVo);
     }
+
+    // PUT
+    ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
     /**
      * 根据 id 更新文章
      *
      * @param id
-     * @param articleDto
+     * @param articleDetailVo
      */
     @RequestMapping(method = RequestMethod.PUT)
-    public ArticleDto update(@RequestParam("id") Long id, @RequestBody ArticleDto articleDto) {
-        return articleService.update(id, articleDto);
+    public ArticleDetailVo update(@RequestParam("id") Long id, @RequestBody ArticleDetailVo articleDetailVo) {
+        return articleService.update(id, articleDetailVo);
     }
+
+    // DELETE
+    ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
     /**
      * 根据 id 删除文章

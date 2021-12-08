@@ -36,7 +36,7 @@ public class LoginController {
         if (!Objects.isNull(user1)) {
             if (SaBase64Util.decode(user1.getPassword()).equals(password)) {
                 StpUtil.login(username);
-                user1.setSatoken(StpUtil.getTokenValue());
+                user1.setToken(StpUtil.getTokenValue());
                 user1.setPassword(null);
                 return Result.success(user1);
             }

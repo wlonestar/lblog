@@ -40,25 +40,44 @@ public class User {
     /**
      * token
      */
-    @Column(name = "satoken")
-    private String satoken;
-
-    /**
-     * 网站标题
-     */
-    @Column(name = "title")
-    private String title;
-
-    /**
-     * 网站slogan
-     */
-    @Column(name = "subtitle")
-    private String subtitle;
+    @Column(name = "token")
+    private String token;
 
     /**
      * 头像
      */
     @Column(name = "avatar")
     private String avatar;
+
+    /**
+     * 年龄
+     */
+    @Column(name = "age")
+    private Integer age;
+
+    /**
+     * 性别
+     */
+    @Column(name = "gender")
+    private Boolean gender;
+
+    /**
+     * 地址
+     */
+    @Column(name = "location")
+    private String location;
+
+    /**
+     * 个性签名
+     */
+    @Column(name = "signature")
+    private String signature;
+
+    /**
+     * 简介
+     */
+    @Lob
+    @Column(name = "profile")
+    private String profile;
 
 }

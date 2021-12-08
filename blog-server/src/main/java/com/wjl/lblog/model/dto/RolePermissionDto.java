@@ -4,16 +4,16 @@ import lombok.Data;
 
 /**
  * @author: wjl
- * @date: 2021/12/8 20:09
+ * @date: 2021/12/8 20:46
  * @version: v1.0
  */
 @Data
-public class ArticleDto {
+public class RolePermissionDto {
 
     private Long id;
 
-    private Long categoryId;
+    private String role;
 
-    private Long tagId;
+    private String permission;
 
 }

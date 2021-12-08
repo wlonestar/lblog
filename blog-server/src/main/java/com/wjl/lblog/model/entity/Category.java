@@ -27,7 +27,7 @@ public class Category {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "category_id")
+    @Column(name = "id")
     private Long id;
 
     /**
@@ -49,19 +49,19 @@ public class Category {
     /**
      * 分类名称
      */
-    @Column(name = "category_name")
+    @Column(name = "name")
     private String name;
 
     /**
      * 分类说明
      */
-    @Column(name = "category_desc")
+    @Column(name = "description")
     private String description;
 
     /**
      * 分类下文章数量
      */
-    @Column(name = "category_number")
+    @Column(name = "number")
     private Integer number = 0;
 
 }

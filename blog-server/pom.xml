@@ -70,6 +70,12 @@
             <artifactId>hutool-all</artifactId>
             <version>5.7.16</version>
         </dependency>
+        <!-- cos -->
+        <dependency>
+            <groupId>com.qcloud</groupId>
+            <artifactId>cos_api</artifactId>
+            <version>5.6.61</version>
+        </dependency>
         <!-- spring devtools 热部署-->
         <dependency>
             <groupId>org.springframework.boot</groupId>

@@ -1,13 +1,10 @@
 package com.wjl.lblog.service.impl;
 
-import com.google.common.collect.Lists;
-import com.querydsl.core.QueryResults;
 import com.querydsl.core.Tuple;
-import com.querydsl.core.types.Projections;
 import com.wjl.lblog.component.QueryComponent;
-import com.wjl.lblog.model.dto.ArticleSummaryDto;
+import com.wjl.lblog.model.vo.ArticleSummaryVo;
 import com.wjl.lblog.model.entity.Article;
-import com.wjl.lblog.model.dto.ArticleDto;
+import com.wjl.lblog.model.vo.ArticleDetailVo;
 import com.wjl.lblog.model.entity.Category;
 import com.wjl.lblog.model.entity.QArticle;
 import com.wjl.lblog.model.entity.QCategory;
@@ -17,7 +14,6 @@ import com.wjl.lblog.service.intf.ArticleService;
 import com.wjl.lblog.service.intf.CategoryService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
-import org.springframework.data.domain.PageImpl;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
@@ -53,53 +49,56 @@ public class ArticleServiceImpl implements ArticleService {
      *
      * @param pageable pageable
      */
+    @Deprecated
     @Override
-    public Page<ArticleSummaryDto> findAllByPage(Pageable pageable) {
-        QueryResults<Tuple> queryResults = queryComponent.queryFactory()
-                .select(
-                        qArticle.id,
-                        qArticle.createTime,
-                        qArticle.updateTime,
-                        qArticle.title,
-                        qArticle.summary,
-                        qArticle.image,
-                        qCategory.id.as("categoryId"),
-                        qCategory.name.as("categoryName")
-                )
-                .from(qArticle, qCategory)
-                .where(qArticle.categoryId.eq(qCategory.id))
-                .orderBy(qArticle.createTime.desc())
-                .offset(pageable.getOffset())
-                .limit(pageable.getPageSize())
-                .fetchResults();
-        List<Tuple> tuples = queryResults.getResults();
-        List<ArticleSummaryDto> articleSummaryDtos = this.tupleToArticleSummaryDto(tuples);
-        return new PageImpl<>(articleSummaryDtos, pageable, queryResults.getTotal());
+    public Page<ArticleSummaryVo> findAllByPage(Pageable pageable) {
+//        QueryResults<Tuple> queryResults = queryComponent.queryFactory()
+//                .select(
+//                        qArticle.id,
+//                        qArticle.createTime,
+//                        qArticle.updateTime,
+//                        qArticle.title,
+//                        qArticle.summary,
+//                        qArticle.image,
+//                        qCategory.id.as("categoryId"),
+//                        qCategory.name.as("categoryName")
+//                )
+//                .from(qArticle, qCategory)
+//                .where(qArticle.categoryId.eq(qCategory.id))
+//                .orderBy(qArticle.createTime.desc())
+//                .offset(pageable.getOffset())
+//                .limit(pageable.getPageSize())
+//                .fetchResults();
+//        List<Tuple> tuples = queryResults.getResults();
+//        List<ArticleSummaryDto> articleSummaryDtos = this.tupleToArticleSummaryDto(tuples);
+//        return new PageImpl<>(articleSummaryDtos, pageable, queryResults.getTotal());
+        return null;
     }
 
     /**
      * 查询所有
      */
     @Override
-    public List<ArticleSummaryDto> findAllArticleSummary() {
-        return queryComponent.queryFactory()
-                .select(
-                        Projections.bean(
-                                ArticleSummaryDto.class,
-                                qArticle.id,
-                                qArticle.createTime,
-                                qArticle.updateTime,
-                                qArticle.title,
-                                qArticle.summary,
-                                qArticle.image,
-                                qCategory.id.as("categoryId"),
-                                qCategory.name.as("categoryName")
-                        )
-                )
-                .from(qArticle, qCategory)
-                .where(qArticle.categoryId.eq(qCategory.id))
-                .orderBy(qArticle.createTime.desc())
-                .fetch();
+    public List<ArticleSummaryVo> findAllArticleSummary() {
+//        return queryComponent.queryFactory()
+//                .select(
+//                        Projections.bean(
+//                                ArticleSummaryDto.class,
+//                                qArticle.id,
+//                                qArticle.createTime,
+//                                qArticle.updateTime,
+//                                qArticle.title,
+//                                qArticle.summary,
+//                                qArticle.image,
+//                                qCategory.id.as("categoryId"),
+//                                qCategory.name.as("categoryName")
+//                        )
+//                )
+//                .from(qArticle, qCategory)
+//                .where(qArticle.categoryId.eq(qCategory.id))
+//                .orderBy(qArticle.createTime.desc())
+//                .fetch();
+        return null;
     }
 
     /**
@@ -108,29 +107,30 @@ public class ArticleServiceImpl implements ArticleService {
      * @param id id
      */
     @Override
-    public ArticleDto findById(Long id) {
-        return queryComponent.queryFactory()
-                .select(
-                        Projections.bean(
-                                ArticleDto.class,
-                                qArticle.id,
-                                qArticle.createTime,
-                                qArticle.updateTime,
-                                qArticle.title,
-                                qArticle.summary,
-                                qArticle.image,
-                                qArticle.content,
-                                qCategory.id.as("categoryId"),
-                                qCategory.name.as("categoryName")
-                        )
-                )
-                .from(qArticle, qCategory)
-                .where(
-                        qArticle.id.eq(id)
-                                .and(qArticle.categoryId.eq(qCategory.id))
-                )
-                .orderBy(qArticle.createTime.desc())
-                .fetchOne();
+    public ArticleDetailVo findById(Long id) {
+//        return queryComponent.queryFactory()
+//                .select(
+//                        Projections.bean(
+//                                ArticleDto.class,
+//                                qArticle.id,
+//                                qArticle.createTime,
+//                                qArticle.updateTime,
+//                                qArticle.title,
+//                                qArticle.summary,
+//                                qArticle.image,
+//                                qArticle.content,
+//                                qCategory.id.as("categoryId"),
+//                                qCategory.name.as("categoryName")
+//                        )
+//                )
+//                .from(qArticle, qCategory)
+//                .where(
+//                        qArticle.id.eq(id)
+//                                .and(qArticle.categoryId.eq(qCategory.id))
+//                )
+//                .orderBy(qArticle.createTime.desc())
+//                .fetchOne();
+        return null;
     }
 
     /**
@@ -139,74 +139,76 @@ public class ArticleServiceImpl implements ArticleService {
      * @param title title
      */
     @Override
-    public ArticleDto findByTitle(String title) {
-        return queryComponent.queryFactory()
-                .select(
-                        Projections.bean(
-                                ArticleDto.class,
-                                qArticle.id,
-                                qArticle.createTime,
-                                qArticle.updateTime,
-                                qArticle.title,
-                                qArticle.summary,
-                                qArticle.image,
-                                qArticle.content,
-                                qCategory.id.as("categoryId"),
-                                qCategory.name.as("categoryName")
-                        )
-                )
-                .from(qArticle, qCategory)
-                .where(
-                        qArticle.title.eq(title)
-                                .and(qArticle.categoryId.eq(qCategory.id))
-                )
-                .orderBy(qArticle.createTime.desc())
-                .fetchOne();
+    public ArticleDetailVo findByTitle(String title) {
+//        return queryComponent.queryFactory()
+//                .select(
+//                        Projections.bean(
+//                                ArticleDto.class,
+//                                qArticle.id,
+//                                qArticle.createTime,
+//                                qArticle.updateTime,
+//                                qArticle.title,
+//                                qArticle.summary,
+//                                qArticle.image,
+//                                qArticle.content,
+//                                qCategory.id.as("categoryId"),
+//                                qCategory.name.as("categoryName")
+//                        )
+//                )
+//                .from(qArticle, qCategory)
+//                .where(
+//                        qArticle.title.eq(title)
+//                                .and(qArticle.categoryId.eq(qCategory.id))
+//                )
+//                .orderBy(qArticle.createTime.desc())
+//                .fetchOne();
+        return null;
     }
 
     /**
      * 增加
      *
-     * @param articleDto articleDto
+     * @param articleDetailVo articleDto
      */
     @Override
-    public ArticleDto add(ArticleDto articleDto) {
+    public ArticleDetailVo add(ArticleDetailVo articleDetailVo) {
         Article article = new Article();
-        article.setTitle(articleDto.getTitle());
-        article.setSummary(articleDto.getSummary());
-        article.setImage(articleDto.getImage());
-        article.setContent(articleDto.getContent());
-        Category category = categoryRepository.findCategoryByName(articleDto.getCategoryName());
-        if (!Objects.isNull(category)) {
-            article.setCategoryId(article.getCategoryId());
-            articleRepository.save(article);
-            return articleDto;
-        } else {
-            return null;
-        }
+        article.setTitle(articleDetailVo.getTitle());
+        article.setSummary(articleDetailVo.getSummary());
+//        article.setImage(articleDto.getImage());
+        article.setContent(articleDetailVo.getContent());
+//        Category category = categoryRepository.findCategoryByName(articleDetailVo.getCategoryName());
+//        if (!Objects.isNull(category)) {
+//            article.setCategoryId(article.getCategoryId());
+//            articleRepository.save(article);
+//            return articleDetailVo;
+//        } else {
+//            return null;
+//        }
+        return null;
     }
 
     /**
      * 更新
      *
      * @param id id
-     * @param articleDto articleDto
+     * @param articleDetailVo articleDto
      */
     @Override
-    public ArticleDto update(Long id, ArticleDto articleDto) {
+    public ArticleDetailVo update(Long id, ArticleDetailVo articleDetailVo) {
         Article article = articleRepository.findById(id).orElseThrow();
-        Category category = categoryRepository.findCategoryByName(articleDto.getCategoryName());
+//        Category category = categoryRepository.findCategoryByName(articleDetailVo.getCategoryName());
         if (!Objects.isNull(article)) {
-            queryComponent.queryFactory()
-                    .update(qArticle)
-                    .where(qArticle.id.eq(id))
-                    .set(qArticle.title, articleDto.getTitle())
-                    .set(qArticle.summary, articleDto.getSummary())
-                    .set(qArticle.image, articleDto.getImage())
-                    .set(qArticle.content, articleDto.getContent())
-                    .set(qArticle.categoryId, category.getId())
-                    .execute();
-            return articleDto;
+//            queryComponent.queryFactory()
+//                    .update(qArticle)
+//                    .where(qArticle.id.eq(id))
+//                    .set(qArticle.title, articleDto.getTitle())
+//                    .set(qArticle.summary, articleDto.getSummary())
+//                    .set(qArticle.image, articleDto.getImage())
+//                    .set(qArticle.content, articleDto.getContent())
+//                    .set(qArticle.categoryId, category.getId())
+//                    .execute();
+            return articleDetailVo;
         } else {
             return null;
         }
@@ -237,21 +239,23 @@ public class ArticleServiceImpl implements ArticleService {
         articleRepository.deleteAll();
     }
 
-    private List<ArticleSummaryDto> tupleToArticleSummaryDto(List<Tuple> tuples) {
-        List<ArticleSummaryDto> articleSummaryDtos = Lists.newArrayList();
+    @Deprecated
+    private List<ArticleSummaryVo> tupleToArticleSummaryDto(List<Tuple> tuples) {
+//        List<ArticleSummaryDto> articleSummaryDtos = Lists.newArrayList();
         for (Tuple tuple : tuples) {
-            ArticleSummaryDto articleSummaryDto = new ArticleSummaryDto();
-            articleSummaryDto.setId(tuple.get(qArticle.id));
-            articleSummaryDto.setCreateTime(tuple.get(qArticle.createTime));
-            articleSummaryDto.setUpdateTime(tuple.get(qArticle.updateTime));
-            articleSummaryDto.setTitle(tuple.get(qArticle.title));
-            articleSummaryDto.setSummary(tuple.get(qArticle.summary));
-            articleSummaryDto.setImage(tuple.get(qArticle.image));
-            articleSummaryDto.setCategoryId(tuple.get(qCategory.id));
-            articleSummaryDto.setCategoryName(tuple.get(qCategory.name));
-            articleSummaryDtos.add(articleSummaryDto);
+            ArticleSummaryVo articleSummaryVo = new ArticleSummaryVo();
+            articleSummaryVo.setId(tuple.get(qArticle.id));
+            articleSummaryVo.setCreateTime(tuple.get(qArticle.createTime));
+            articleSummaryVo.setUpdateTime(tuple.get(qArticle.updateTime));
+            articleSummaryVo.setTitle(tuple.get(qArticle.title));
+            articleSummaryVo.setSummary(tuple.get(qArticle.summary));
+//            articleSummaryDto.setImage(tuple.get(qArticle.image));
+//            articleSummaryDto.setCategoryId(tuple.get(qCategory.id));
+//            articleSummaryDto.setCategoryName(tuple.get(qCategory.name));
+//            articleSummaryDtos.add(articleSummaryDto);
         }
-        return articleSummaryDtos;
+//        return articleSummaryDtos;
+        return null;
     }
 
 }

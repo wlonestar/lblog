@@ -1,8 +1,11 @@
-package com.wjl.lblog.model.dto;
+package com.wjl.lblog.model.vo;
 
+import com.wjl.lblog.model.entity.Category;
+import com.wjl.lblog.model.entity.Tag;
 import lombok.Data;
 
 import java.util.Date;
+import java.util.List;
 
 /**
  * @author: wjl
@@ -10,7 +13,7 @@ import java.util.Date;
  * @version: v1.0
  */
 @Data
-public class ArticleSummaryDto {
+public class ArticleSummaryVo {
 
     private Long id;
 
@@ -22,10 +25,10 @@ public class ArticleSummaryDto {
 
     private String summary;
 
-    private String image;
+    private String cover;
 
-    private Long categoryId;
+    private Category category;
 
-    private String categoryName;
+    private List<Tag> tags;
 
 }

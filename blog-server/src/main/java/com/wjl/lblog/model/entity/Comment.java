@@ -4,6 +4,7 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.Getter;
 import lombok.Setter;
 import org.hibernate.annotations.CreationTimestamp;
+import org.hibernate.annotations.UpdateTimestamp;
 
 import javax.persistence.*;
 import java.util.Date;
@@ -24,7 +25,7 @@ public class Comment {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "comment_id")
+    @Column(name = "id")
     private Long id;
 
     /**
@@ -36,16 +37,30 @@ public class Comment {
     private Date createTime;
 
     /**
-     * 头像
+     * 更新时间
      */
-    @Column(name = "avatar")
-    private String avatar;
+    @Column(name = "update_time")
+    @Temporal(TemporalType.TIMESTAMP)
+    @UpdateTimestamp
+    private Date updateTime;
+
+    /**
+     * 留言正文
+     */
+    @Column(name = "content")
+    private String content;
 
     /**
      * 昵称
      */
-    @Column(name = "nickname")
-    private String nickname;
+    @Column(name = "username")
+    private String username;
+
+    /**
+     * 头像
+     */
+    @Column(name = "avatar")
+    private String avatar;
 
     /**
      * 个人网站
@@ -58,11 +73,5 @@ public class Comment {
      */
     @Column(name = "email")
     private String email;
-
-    /**
-     * 留言正文
-     */
-    @Column(name = "content")
-    private String content;
 
 }

@@ -1,6 +1,5 @@
-package com.wjl.lblog.model.dto;
+package com.wjl.lblog.model.vo;
 
-import com.wjl.lblog.model.dto.ArticleTitleDto;
 import lombok.Data;
 import org.springframework.data.domain.Page;
 
@@ -8,11 +7,11 @@ import java.util.Date;
 
 /**
  * @author: wjl
- * @date: 2021/10/10 18:11
+ * @date: 2021/12/8 20:21
  * @version: v1.0
  */
 @Data
-public class CategoryArticleDto {
+public class TagArticleVo {
 
     private Long id;
 
@@ -22,10 +21,8 @@ public class CategoryArticleDto {
 
     private String name;
 
-    private String description;
-
     private Integer number = 0;
 
-    Page<ArticleTitleDto> articles;
+    Page<ArticleTitleVo> articles;
 
 }
