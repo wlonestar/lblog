@@ -4,7 +4,7 @@ import cn.dev33.satoken.secure.SaBase64Util;
 import cn.dev33.satoken.stp.StpUtil;
 import com.wjl.lblog.model.entity.User;
 import com.wjl.lblog.service.intf.UserService;
-import com.wjl.lblog.constants.constnts.Result;
+import com.wjl.lblog.common.constants.Result;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 

@@ -1,4 +1,4 @@
-package com.wjl.lblog.constants.constnts;
+package com.wjl.lblog.common.constants;
 
 /**
  * 全局常量

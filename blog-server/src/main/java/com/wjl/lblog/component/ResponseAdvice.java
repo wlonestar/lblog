@@ -1,7 +1,7 @@
 package com.wjl.lblog.component;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.wjl.lblog.constants.constnts.Result;
+import com.wjl.lblog.common.constants.Result;
 import lombok.SneakyThrows;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.MethodParameter;

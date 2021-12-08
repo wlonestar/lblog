@@ -22,7 +22,7 @@ spring:
 
 sa-token:
   token-name: satoken
-  timeout: 30000
+  timeout: 86400
   activity-timeout: -1
   is-share: false
   token-style: uuid

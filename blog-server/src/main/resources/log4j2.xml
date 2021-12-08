@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <configuration>
     <properties>
-        <Property name="app_name">Lblog</Property>
+        <Property name="app_name">lblog</Property>
         <Property name="log_path">log/</Property>
     </properties>
     <appenders>
@@ -16,12 +16,9 @@
             </Filters>
             <PatternLayout pattern="[%d][%t][%p][%c:%L] %m%n"/>
             <Policies>
-                <!-- 归档每天的文件 -->
                 <TimeBasedTriggeringPolicy interval="1" modulate="true"/>
-                <!-- 限制单个文件大小 -->
                 <SizeBasedTriggeringPolicy size="2 MB"/>
             </Policies>
-            <!-- 限制每天文件个数 -->
             <DefaultRolloverStrategy compressionLevel="0" max="10"/>
         </RollingFile>
         <RollingFile name="RollingFileWarn" fileName="${log_path}/warn.log"
@@ -32,12 +29,9 @@
             </Filters>
             <PatternLayout pattern="[%d][%t][%p][%c:%L] %m%n"/>
             <Policies>
-                <!-- 归档每天的文件 -->
                 <TimeBasedTriggeringPolicy interval="1" modulate="true"/>
-                <!-- 限制单个文件大小 -->
                 <SizeBasedTriggeringPolicy size="2 MB"/>
             </Policies>
-            <!-- 限制每天文件个数 -->
             <DefaultRolloverStrategy compressionLevel="0" max="10"/>
         </RollingFile>
         <RollingFile name="RollingFileError" fileName="${log_path}/error.log"
@@ -45,16 +39,12 @@
             <ThresholdFilter level="ERROR"/>
             <PatternLayout pattern="[%d][%t][%p][%c:%L] %m%n"/>
             <Policies>
-                <!-- 归档每天的文件 -->
                 <TimeBasedTriggeringPolicy interval="1" modulate="true"/>
-                <!-- 限制单个文件大小 -->
                 <SizeBasedTriggeringPolicy size="2 MB"/>
             </Policies>
-            <!-- 限制每天文件个数 -->
             <DefaultRolloverStrategy compressionLevel="0" max="10"/>
         </RollingFile>
     </appenders>
-
     <loggers>
         <root level="info">
             <appender-ref ref="Console"/>

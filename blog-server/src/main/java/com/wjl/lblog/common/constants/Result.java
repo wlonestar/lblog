@@ -1,6 +1,6 @@
-package com.wjl.lblog.constants.constnts;
+package com.wjl.lblog.common.constants;
 
-import com.wjl.lblog.constants.enums.ReturnCode;
+import com.wjl.lblog.common.enums.HttpStatus;
 import lombok.Data;
 
 /**
@@ -17,15 +17,15 @@ public class Result<T> {
 
     public static <T> Result<T> success(T data) {
         Result<T> Result = new Result<>();
-        Result.setCode(ReturnCode.RC200.getCode());
-        Result.setMsg(ReturnCode.RC200.getMsg());
+        Result.setCode(HttpStatus.OK.getCode());
+        Result.setMsg(HttpStatus.OK.getMsg());
         Result.setData(data);
         return Result;
     }
 
     public static <T> Result<T> success(String msg) {
         Result<T> Result = new Result<>();
-        Result.setCode(ReturnCode.RC200.getCode());
+        Result.setCode(HttpStatus.OK.getCode());
         Result.setMsg(msg);
         return Result;
     }

@@ -12,7 +12,7 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>2.5.5</version>
+        <version>2.6.1</version>
         <relativePath/>
     </parent>
 
@@ -62,13 +62,13 @@
         <dependency>
             <groupId>cn.dev33</groupId>
             <artifactId>sa-token-spring-boot-starter</artifactId>
-            <version>1.25.0</version>
+            <version>1.28.0</version>
         </dependency>
         <!-- hutool 工具类 -->
         <dependency>
             <groupId>cn.hutool</groupId>
             <artifactId>hutool-all</artifactId>
-            <version>5.7.12</version>
+            <version>5.7.16</version>
         </dependency>
         <!-- spring devtools 热部署-->
         <dependency>
@@ -96,30 +96,20 @@
 
     <build>
         <plugins>
-            <!-- maven 打包插件 -->
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
             </plugin>
-            <!-- smart-doc 生成 API 文档插件 -->
+            <!-- smart-doc -->
             <plugin>
                 <groupId>com.github.shalousun</groupId>
                 <artifactId>smart-doc-maven-plugin</artifactId>
-                <version>2.2.4</version>
+                <version>2.3.1</version>
                 <configuration>
                     <configFile>./src/main/resources/smart-doc.json</configFile>
-                    <projectName>myblog</projectName>
                 </configuration>
-                <executions>
-                    <execution>
-                        <!-- 预设输出 html 格式 -->
-                        <goals>
-                            <goal>html</goal>
-                        </goals>
-                    </execution>
-                </executions>
             </plugin>
-            <!-- querydsl 生成 entity 对应的查询类 -->
+            <!-- querydsl -->
             <plugin>
                 <groupId>com.mysema.maven</groupId>
                 <artifactId>apt-maven-plugin</artifactId>

@@ -1,9 +1,8 @@
 package com.wjl.lblog.exception;
 
-import com.wjl.lblog.constants.enums.ReturnCode;
-import com.wjl.lblog.constants.constnts.Result;
+import com.wjl.lblog.common.enums.HttpStatus;
+import com.wjl.lblog.common.constants.Result;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
@@ -20,10 +19,10 @@ import org.springframework.web.bind.annotation.RestControllerAdvice;
 public class RestExceptionHandler {
 
     @ExceptionHandler(Exception.class)
-    @ResponseStatus(HttpStatus.INTERNAL_SERVER_ERROR)
+    @ResponseStatus(org.springframework.http.HttpStatus.INTERNAL_SERVER_ERROR)
     public Result<String> exception(Exception e) {
         log.error("全局异常信息 ex={}", e.getMessage(), e);
-        return Result.fail(ReturnCode.RC400.getCode(), e.getMessage());
+        return Result.fail(HttpStatus.FAILED.getCode(), e.getMessage());
     }
 
 }
