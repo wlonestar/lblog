@@ -30,19 +30,19 @@ public class LoginController {
      */
     @PostMapping("/login")
     public Result<User> login(@RequestBody User user) {
-        String username = user.getUsername();
-        String password = user.getPassword();
-        User user1 = userService.findByUsername(username);
-        if (!Objects.isNull(user1)) {
-            if (SaBase64Util.decode(user1.getPassword()).equals(password)) {
-                StpUtil.login(username);
-                user1.setToken(StpUtil.getTokenValue());
-                user1.setPassword(null);
-                return Result.success(user1);
-            }
-        }
-        return Result.fail(401, "登录失败");
-//        return null;
+//        String username = user.getUsername();
+//        String password = user.getPassword();
+//        User user1 = userService.findByUsername(username);
+//        if (!Objects.isNull(user1)) {
+//            if (SaBase64Util.decode(user1.getPassword()).equals(password)) {
+//                StpUtil.login(username);
+//                user1.setToken(StpUtil.getTokenValue());
+//                user1.setPassword(null);
+//                return Result.success(user1);
+//            }
+//        }
+//        return Result.fail(401, "登录失败");
+        return null;
     }
 
     /**
