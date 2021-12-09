@@ -1,6 +1,7 @@
 package com.wjl.lblog.model.entity;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.wjl.lblog.common.constants.GlobalConstants;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -47,7 +48,7 @@ public class User {
      * 头像
      */
     @Column(name = "avatar")
-    private String avatar;
+    private String avatar = GlobalConstants.AVATAR;
 
     /**
      * 年龄

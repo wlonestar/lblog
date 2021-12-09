@@ -26,7 +26,7 @@ public class UserController {
      */
     @RequestMapping(value = "/", method = RequestMethod.POST)
     public User add(@RequestBody User user) {
-        return userService.add(user);
+        return userService.addUser(user);
     }
 
     /**

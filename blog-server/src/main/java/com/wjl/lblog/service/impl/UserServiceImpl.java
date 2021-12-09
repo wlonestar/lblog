@@ -4,9 +4,12 @@ import cn.dev33.satoken.secure.SaBase64Util;
 import com.wjl.lblog.model.entity.User;
 import com.wjl.lblog.repository.UserRepository;
 import com.wjl.lblog.service.intf.UserService;
+import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Objects;
 
 /**
@@ -20,59 +23,93 @@ public class UserServiceImpl implements UserService {
     @Autowired
     private UserRepository userRepository;
 
-    /**
-     * 通过用户名查找用户
-     *
-     * @param username
-     */
     @Override
-    public User findByUsername(String username) {
-        return userRepository.findByUsername(username);
+    public List<User> findAll() {
+        return userRepository.findAll();
     }
 
-    /**
-     * 通过 id 查找用户
-     *
-     * @param id
-     */
+    @Override
+    public List<String> findAllUsername() {
+        List<User> users = findAll();
+        List<String> usernames = new ArrayList<>();
+        for (User user : users) {
+            String username = user.getUsername();
+            usernames.add(username);
+        }
+        return usernames;
+    }
+
     @Override
     public User findById(Long id) {
-        User user = userRepository.findById(id).orElseThrow();
+        User user = userRepository.findUserById(id);
         if (!Objects.isNull(user)) {
             return user;
         }
         return null;
     }
 
-    /**
-     * 添加用户
-     *
-     * @param user
-     */
     @Override
-    public User add(User user) {
-        String encode = SaBase64Util.encode(user.getPassword());
-        user.setPassword(encode);
-        return userRepository.save(user);
-    }
-
-    /**
-     * 更新密码
-     *
-     * @param user
-     */
-    @Override
-    public User update(Long id, User user) {
-        User user1 = userRepository.findById(id).orElseThrow();
-        if (!Objects.isNull(user1)) {
-            user1.setUsername(user.getUsername());
-            user1.setPassword(SaBase64Util.encode(user.getPassword()));
-//            user1.setTitle(user.getTitle());
-//            user1.setSubtitle(user.getSubtitle());
-            user1.setAvatar(user.getAvatar());
-            return userRepository.save(user1);
+    public User findByUsername(String username) {
+        User user = userRepository.findUserByUsername(username);
+        if (!Objects.isNull(user)) {
+            return user;
         }
         return null;
+    }
+
+    @Override
+    public User findByUsernameAndPassword(String username, String password) {
+        User user = userRepository.findUserByUsernameAndPassword(username, password);
+        if (!Objects.isNull(user)) {
+            return user;
+        }
+        return null;
+    }
+
+    @Override
+    public boolean addUser(User user) {
+        if (!Objects.isNull(user)) {
+            User user1 = new User();
+            BeanUtils.copyProperties(user, user1, "id", "token");
+            userRepository.save(user1);
+            return true;
+        }
+        return false;
+    }
+
+    @Override
+    public boolean updateUser(Long id, User user) {
+        if (!Objects.isNull(user)) {
+            User user1 = userRepository.findUserById(id);
+            if (!Objects.isNull(user1)) {
+                BeanUtils.copyProperties(user, user1, "id");
+                userRepository.save(user1);
+                return true;
+            }
+        }
+        return false;
+    }
+
+    @Override
+    public boolean updateUser(String username, User user) {
+        if (!Objects.isNull(user)) {
+            User user1 = findByUsername(username);
+            if (!Objects.isNull(user1)) {
+                BeanUtils.copyProperties(user, user1, "id", "token", "password");
+                userRepository.save(user1);
+                return true;
+            }
+        }
+        return false;
+    }
+
+    @Override
+    public boolean deleteById(Long id) {
+        if (!Objects.isNull(userRepository.findUserById(id))) {
+            userRepository.deleteById(id);
+            return true;
+        }
+        return false;
     }
 
 }

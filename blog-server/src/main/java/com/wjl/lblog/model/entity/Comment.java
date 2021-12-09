@@ -1,6 +1,7 @@
 package com.wjl.lblog.model.entity;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.wjl.lblog.common.constants.GlobalConstants;
 import lombok.Getter;
 import lombok.Setter;
 import org.hibernate.annotations.CreationTimestamp;
@@ -60,7 +61,7 @@ public class Comment {
      * 头像
      */
     @Column(name = "avatar")
-    private String avatar;
+    private String avatar = GlobalConstants.AVATAR;
 
     /**
      * 个人网站

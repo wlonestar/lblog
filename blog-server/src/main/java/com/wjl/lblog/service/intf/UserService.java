@@ -2,6 +2,8 @@ package com.wjl.lblog.service.intf;
 
 import com.wjl.lblog.model.entity.User;
 
+import java.util.List;
+
 /**
  * @author: wjl
  * @date: 2021/9/15 16:34
@@ -9,24 +11,24 @@ import com.wjl.lblog.model.entity.User;
  */
 public interface UserService {
 
-    /**
-     * 通过用户名查找用户
-     */
-    User findByUsername(String username);
+    List<User> findAll();
 
-    /**
-     * 通过 id 查找用户
-     */
+    List<String> findAllUsername();
+
+
     User findById(Long id);
 
-    /**
-     * 添加用户
-     */
-    User add(User user);
+    User findByUsername(String username);
 
-    /**
-     * 更新
-     */
-    User update(Long id, User user);
+    User findByUsernameAndPassword(String username, String password);
+
+
+    boolean addUser(User user);
+
+    boolean updateUser(Long id, User user);
+
+    boolean updateUser(String username, User user);
+
+    boolean deleteById(Long id);
 
 }

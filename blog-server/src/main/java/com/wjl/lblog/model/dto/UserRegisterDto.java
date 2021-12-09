@@ -12,6 +12,6 @@ public class UserRegisterDto {
 
     private String username;
     private String password;
-    private String repeatPassword;
+    private String passwordRepeat;
 
 }
