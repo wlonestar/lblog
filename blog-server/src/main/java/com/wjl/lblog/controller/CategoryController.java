@@ -14,7 +14,7 @@ import java.util.List;
 import java.util.Objects;
 
 /**
- * 分类
+ * 分类接口
  *
  * @author: wjl
  * @date: 2021/9/14 15:30

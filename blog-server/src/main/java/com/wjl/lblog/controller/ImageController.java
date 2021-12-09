@@ -16,7 +16,7 @@ import java.util.List;
 import java.util.Objects;
 
 /**
- * 图片
+ * 图片接口
  *
  * @author: wjl
  * @date: 2021/9/16 14:23
@@ -64,6 +64,10 @@ public class ImageController {
     public Object upload(@RequestParam(name = "file") MultipartFile file) {
         if (!Objects.isNull(file)) {
             Object object = fileService.fileUpload(file);
+            Image image = new Image();
+            image.setName(file.getOriginalFilename());
+            image.setUrl(object.toString());
+            imageService.add(image);
             return Result.success(object);
         } else {
             return Result.fail(HttpStatus.FAILED.getCode(), "upload failed");

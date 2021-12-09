@@ -13,39 +13,18 @@ import java.util.List;
  */
 public interface CommentService {
 
-    /**
-     * 分页查询
-     */
     Page<Comment> findAllByPage(Pageable pageable);
 
-    /**
-     * 查询所有
-     */
     List<Comment> findAll();
 
-    /**
-     * 根据 id 查询
-     */
     Comment findById(Long id);
 
-    /**
-     * 增加
-     */
     Comment add(Comment comment);
 
-    /**
-     * 更新
-     */
     Comment update(Long id, Comment comment);
 
-    /**
-     * 根据 id 删除
-     */
     Long deleteById(Long id);
 
-    /**
-     * 删除所有
-     */
     void deleteAll();
 
 }

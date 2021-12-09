@@ -22,32 +22,19 @@ public class TimelineServiceImpl implements TimelineService {
     @Autowired
     private TimelineRepository timelineRepository;
 
-    /**
-     * 分页查询
-     *
-     * @param pageable
-     */
     @Override
     public Page<Timeline> findAllByPage(Pageable pageable) {
         return timelineRepository.findAll(pageable);
     }
 
-    /**
-     * 查询所有
-     */
     @Override
     public List<Timeline> findAll() {
         return timelineRepository.findAll();
     }
 
-    /**
-     * 根据 id 查询
-     *
-     * @param id
-     */
     @Override
     public Timeline findById(Long id) {
-        Timeline idea = timelineRepository.findById(id).orElseThrow();
+        Timeline idea = timelineRepository.findTimelineById(id);
         if (!Objects.isNull(idea)) {
             return idea;
         } else {
@@ -55,25 +42,14 @@ public class TimelineServiceImpl implements TimelineService {
         }
     }
 
-    /**
-     * 增加
-     *
-     * @param idea
-     */
     @Override
     public Timeline add(Timeline idea) {
         return timelineRepository.save(idea);
     }
 
-    /**
-     * 更新
-     *
-     * @param id
-     * @param idea
-     */
     @Override
     public Timeline update(Long id, Timeline idea) {
-        Timeline idea1 = timelineRepository.findById(id).orElseThrow();
+        Timeline idea1 = timelineRepository.findTimelineById(id);
         if (!Objects.isNull(idea1)) {
             idea1.setContent(idea.getContent());
             timelineRepository.save(idea1);
@@ -83,14 +59,9 @@ public class TimelineServiceImpl implements TimelineService {
         }
     }
 
-    /**
-     * 根据 id 删除
-     *
-     * @param id
-     */
     @Override
     public Long deleteById(Long id) {
-        Timeline idea = timelineRepository.findById(id).orElseThrow();
+        Timeline idea = timelineRepository.findTimelineById(id);
         if (!Objects.isNull(idea)) {
             timelineRepository.deleteById(id);
             return id;
@@ -99,11 +70,9 @@ public class TimelineServiceImpl implements TimelineService {
         }
     }
 
-    /**
-     * 删除所有
-     */
     @Override
     public void deleteAll() {
         timelineRepository.deleteAll();
     }
+
 }

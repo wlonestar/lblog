@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 /**
- * 留言
+ * 留言接口
  *
  * @author: wjl
  * @date: 2021/9/13 22:53

@@ -50,10 +50,6 @@ public class ArticleServiceImpl implements ArticleService {
 
     QCategory qCategory = QCategory.category;
 
-    QTag qTag = QTag.tag;
-
-    QArticleTag qArticleTag = QArticleTag.articleTag;
-
     @Override
     public List<ArticleSummaryVo> findAllSummary() {
         List<Article> articles = articleRepository.findAll();

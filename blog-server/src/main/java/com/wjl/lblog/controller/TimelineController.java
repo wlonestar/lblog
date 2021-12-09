@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 /**
- * 时间线
+ * 时间线接口
  *
  * @author: wjl
  * @date: 2021/9/16 15:00
@@ -25,7 +25,7 @@ public class TimelineController {
     private TimelineService TimelineService;
 
     /**
-     * 分页查询动态
+     * 分页查询时间线
      *
      * @param page 页数
      * @param size 数量
@@ -39,7 +39,7 @@ public class TimelineController {
     }
 
     /**
-     * 查询所有动态
+     * 查询所有时间线
      */
     @RequestMapping(value = "/all", method = RequestMethod.GET)
     public List<Timeline> findAll() {
@@ -47,7 +47,7 @@ public class TimelineController {
     }
 
     /**
-     * 根据 id 查询动态
+     * 根据 id 查询时间线
      *
      * @param id id
      */
@@ -57,9 +57,9 @@ public class TimelineController {
     }
 
     /**
-     * 增加动态
+     * 增加时间线
      *
-     * @param idea 动态
+     * @param idea 时间线
      */
     @RequestMapping(value = "/", method = RequestMethod.POST)
     public Timeline add(@RequestBody Timeline idea) {
@@ -67,10 +67,10 @@ public class TimelineController {
     }
 
     /**
-     * 更新动态
+     * 更新时间线
      *
      * @param id id
-     * @param idea 动态
+     * @param idea 时间线
      */
     @RequestMapping(value = "/", method = RequestMethod.PUT)
     public Timeline update(@RequestParam(name = "id") Long id, @RequestBody Timeline idea) {
@@ -78,7 +78,7 @@ public class TimelineController {
     }
 
     /**
-     * 根据 id 删除动态
+     * 根据 id 删除时间线
      *
      * @param id id
      */
@@ -88,7 +88,7 @@ public class TimelineController {
     }
 
     /**
-     * 删除所有动态
+     * 删除所有时间线
      */
     @RequestMapping(value = "/", method = RequestMethod.DELETE)
     public void deleteAll() {

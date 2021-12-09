@@ -1,12 +1,14 @@
 package com.wjl.lblog.controller;
 
+import com.wjl.lblog.common.constants.Result;
+import com.wjl.lblog.common.enums.HttpStatus;
 import com.wjl.lblog.model.entity.User;
 import com.wjl.lblog.service.intf.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 /**
- * 用户
+ * 用户接口
  *
  * @author: wjl
  * @date: 2021/9/15 16:56
@@ -25,8 +27,11 @@ public class UserController {
      * @param user 用户
      */
     @RequestMapping(value = "/", method = RequestMethod.POST)
-    public User add(@RequestBody User user) {
-        return userService.addUser(user);
+    public Object add(@RequestBody User user) {
+        if (userService.addUser(user)) {
+            return user;
+        }
+        return Result.fail(HttpStatus.FAILED.getCode(), "failed");
     }
 
     /**
@@ -56,8 +61,12 @@ public class UserController {
      * @param user 用户信息
      */
     @RequestMapping(value = "/password", method = RequestMethod.PUT)
-    public User update(@RequestParam(name = "id") Long id, @RequestBody User user) {
-        return userService.update(id, user);
+    public Object update(@RequestParam(name = "id") Long id, @RequestBody User user) {
+        if (userService.updateUser(id, user)) {
+            return user;
+        } else {
+            return Result.fail(HttpStatus.FAILED.getCode(), "failed");
+        }
     }
 
 }

@@ -4,7 +4,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
- * 角色
+ * 角色接口
  *
  * @author: wjl
  * @date: 2021/12/8 19:09

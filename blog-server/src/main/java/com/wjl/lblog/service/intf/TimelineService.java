@@ -13,39 +13,18 @@ import java.util.List;
  */
 public interface TimelineService {
 
-    /**
-     * 分页查询
-     */
     Page<Timeline> findAllByPage(Pageable pageable);
 
-    /**
-     * 查询所有
-     */
     List<Timeline> findAll();
 
-    /**
-     * 根据 id 查询
-     */
     Timeline findById(Long id);
 
-    /**
-     * 增加
-     */
     Timeline add(Timeline idea);
 
-    /**
-     * 更新
-     */
     Timeline update(Long id, Timeline idea);
 
-    /**
-     * 根据 id 删除
-     */
     Long deleteById(Long id);
 
-    /**
-     * 删除所有
-     */
     void deleteAll();
 
 }

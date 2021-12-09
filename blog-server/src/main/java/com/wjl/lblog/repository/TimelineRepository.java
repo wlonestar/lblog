@@ -16,4 +16,6 @@ public interface TimelineRepository extends JpaRepository<Timeline, Long> {
 
     Page<Timeline> findAll(Pageable pageable);
 
+    Timeline findTimelineById(Long id);
+
 }

@@ -15,7 +15,7 @@ import java.util.List;
 import java.util.Objects;
 
 /**
- * 文章
+ * 文章接口
  *
  * @author: wjl
  * @date: 2021/9/13 22:16
@@ -27,9 +27,6 @@ public class ArticleController {
 
     @Autowired
     private ArticleService articleService;
-
-    // GET
-    ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
     /**
      * 查询所有文章摘要
@@ -98,9 +95,6 @@ public class ArticleController {
         }
     }
 
-    // POST
-    ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
     /**
      * 增加文章
      *
@@ -121,9 +115,6 @@ public class ArticleController {
         }
     }
 
-    // PUT
-    ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
     /**
      * 根据 id 更新文章
      *
@@ -134,9 +125,6 @@ public class ArticleController {
     public ArticleDetailVo update(@RequestParam(name = "id") Long id, @RequestBody ArticleDto articleDto) {
         return null;
     }
-
-    // DELETE
-    ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
     /**
      * 根据 id 删除文章
