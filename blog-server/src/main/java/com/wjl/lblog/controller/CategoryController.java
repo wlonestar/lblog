@@ -1,7 +1,8 @@
 package com.wjl.lblog.controller;
 
+import com.wjl.lblog.common.constants.Result;
+import com.wjl.lblog.common.enums.HttpStatus;
 import com.wjl.lblog.model.entity.Category;
-import com.wjl.lblog.model.vo.CategoryArticleVo;
 import com.wjl.lblog.service.intf.CategoryService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
@@ -10,6 +11,7 @@ import org.springframework.data.domain.Sort;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Objects;
 
 /**
  * 分类
@@ -32,9 +34,10 @@ public class CategoryController {
      * @param size 数量
      */
     @RequestMapping(value = "/page", method = RequestMethod.GET)
-    public Page<Category> findAllByPage(@RequestParam(defaultValue = "1") int page,
-                                        @RequestParam(defaultValue = "7") int size) {
-        return categoryService.findAllCategoryByPage(
+    public Page<Category> findAllByPage(
+            @RequestParam(name = "page", defaultValue = "1") int page,
+            @RequestParam(name = "size", defaultValue = "5") int size) {
+        return categoryService.findByPage(
                 PageRequest.of(page - 1, size, Sort.Direction.DESC, "createTime"));
     }
 
@@ -43,7 +46,7 @@ public class CategoryController {
      */
     @RequestMapping(value = "/all", method = RequestMethod.GET)
     public List<Category> getAll() {
-        return categoryService.findAllCategory();
+        return categoryService.findAll();
     }
 
     /**
@@ -54,10 +57,16 @@ public class CategoryController {
      * @param size size
      */
     @RequestMapping(value = "/article", method = RequestMethod.GET)
-    public CategoryArticleVo findOneCategoryAndArticleById(@RequestParam("id") Long id,
-                                                           @RequestParam(defaultValue = "1") int page,
-                                                           @RequestParam(defaultValue = "7") int size) {
-        return categoryService.findOneCategoryAndArticleById(id, PageRequest.of(page - 1, size));
+    public Object findOneCategoryAndArticleById(
+            @RequestParam(name = "id") Long id,
+            @RequestParam(name = "page", defaultValue = "1") int page,
+            @RequestParam(name = "size", defaultValue = "7") int size) {
+        Category category = categoryService.findById(id);
+        if (!Objects.isNull(category)) {
+            return categoryService.findCategoryById(id, PageRequest.of(page - 1, size));
+        } else {
+            return Result.fail(HttpStatus.FAILED.getCode(), "can't get the category");
+        }
     }
 
     /**
@@ -66,8 +75,13 @@ public class CategoryController {
      * @param id id
      */
     @RequestMapping(value = "/id", method = RequestMethod.GET)
-    public Category get(@RequestParam Long id) {
-        return categoryService.findCategoryById(id);
+    public Object getById(@RequestParam(name = "id") Long id) {
+        Category category = categoryService.findById(id);
+        if (!Objects.isNull(category)) {
+            return category;
+        } else {
+            return Result.fail(HttpStatus.FAILED.getCode(), "can't get the category");
+        }
     }
 
     /**
@@ -76,8 +90,13 @@ public class CategoryController {
      * @param name name
      */
     @RequestMapping(value = "/name", method = RequestMethod.GET)
-    public Category get(@RequestParam String name) {
-        return categoryService.findCategoryByName(name);
+    public Object getByName(@RequestParam(name = "name") String name) {
+        Category category = categoryService.findByName(name);
+        if (!Objects.isNull(category)) {
+            return category;
+        } else {
+            return Result.fail(HttpStatus.FAILED.getCode(), "can't get the category");
+        }
     }
 
     /**
@@ -85,9 +104,13 @@ public class CategoryController {
      *
      * @param category category
      */
-    @RequestMapping(method = RequestMethod.POST)
-    public Category add(@RequestBody Category category) {
-        return categoryService.add(category);
+    @RequestMapping(value = "/", method = RequestMethod.POST)
+    public Object add(@RequestBody Category category) {
+        if (categoryService.add(category)) {
+            return category;
+        } else {
+            return Result.fail(HttpStatus.FAILED.getCode(), "can't add category");
+        }
     }
 
     /**
@@ -96,9 +119,13 @@ public class CategoryController {
      * @param id id
      * @param category category
      */
-    @RequestMapping(method = RequestMethod.PUT)
-    public Category update(@RequestParam("id") Long id, @RequestBody Category category) {
-        return categoryService.update(id, category);
+    @RequestMapping(value = "/", method = RequestMethod.PUT)
+    public Object update(@RequestParam(name = "id") Long id, @RequestBody Category category) {
+        if (categoryService.update(id, category)) {
+            return category;
+        } else {
+            return Result.fail(HttpStatus.FAILED.getCode(), "can't update category");
+        }
     }
 
     /**
@@ -106,9 +133,13 @@ public class CategoryController {
      *
      * @param id id
      */
-    @RequestMapping(method = RequestMethod.DELETE)
-    public Category deleteById(@RequestParam("id") Long id) {
-        return categoryService.deleteById(id);
+    @RequestMapping(value = "/", method = RequestMethod.DELETE)
+    public Object deleteById(@RequestParam(name = "id") Long id) {
+        if (categoryService.deleteById(id)) {
+            return id;
+        } else {
+            return Result.fail(HttpStatus.FAILED.getCode(), "can't delete category");
+        }
     }
 
 }

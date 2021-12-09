@@ -16,6 +16,6 @@ public interface ArticleTagRepository extends JpaRepository<ArticleTag, Long> {
 
     List<ArticleTag> findArticleTagsByAid(Long aid);
 
-    ArticleTag findArticleTagByTid(Long tid);
+    List<ArticleTag> findArticleTagByTid(Long tid);
 
 }

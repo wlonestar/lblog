@@ -17,41 +17,29 @@ import java.util.List;
  */
 public interface ArticleService {
 
-    Page<ArticleSummaryVo> findAllByPage(Pageable pageable);
+    List<ArticleSummaryVo> findAllSummary();
 
-    Page<ArticleDetailVo> findArticleDetailsByPage(Pageable pageable);
+    List<ArticleDetailVo> findAllDetail();
 
-    Page<ArticleTitleVo> findArticleTitlesByPage(Pageable pageable);
+    List<ArticleTitleVo> findAllTitle();
 
-
-    List<ArticleSummaryVo> findAllArticleSummary();
-
-    List<ArticleDetailVo> findArticleDetails();
-
-    List<ArticleTitleVo> findArticleTitles();
-
-    List<Article> findArticles();
-
-    List<ArticleDto> findAllArticleDtoByArticleId(Long aid);
-
-    List<ArticleDto> findAllArticleDtoByTagId(Long tid);
+    Page<ArticleSummaryVo> findSummaryByPage(Pageable pageable);
 
 
-    ArticleDetailVo findById(Long id);
+    ArticleDetailVo getById(Long id);
 
-    ArticleSummaryVo findArticleSummaryById(Long id);
+    ArticleDetailVo getByTitle(String title);
 
-    ArticleTitleVo findArticleTitleById(Long id);
+    Article findById(Long id);
 
-    Article findArticleById(Long id);
+    Article findByTitle(String title);
 
 
-    ArticleDetailVo findByTitle(String title);
+    boolean add(ArticleDto articleDto);
 
-    ArticleDetailVo add(ArticleDetailVo articleDetailVo);
+    boolean update(Long id, ArticleDto articleDto);
 
-    ArticleDetailVo update(Long id, ArticleDetailVo articleDetailVo);
 
-    Article deleteById(Long id);
+    boolean deleteById(Long id);
 
 }

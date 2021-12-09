@@ -26,7 +26,7 @@ public class LinkController {
     /**
      * 获取所有友链
      */
-    @RequestMapping(method = RequestMethod.GET)
+    @RequestMapping(value = "/", method = RequestMethod.GET)
     public List<Link> findAll() {
         return linkService.findAll();
     }

@@ -11,9 +11,7 @@ import lombok.Data;
 public class UserRegisterDto {
 
     private String username;
-
     private String password;
-
     private String repeatPassword;
 
 }

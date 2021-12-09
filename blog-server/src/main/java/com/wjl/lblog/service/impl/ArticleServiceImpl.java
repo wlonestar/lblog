@@ -1,21 +1,13 @@
 package com.wjl.lblog.service.impl;
 
-import cn.hutool.core.bean.BeanUtil;
 import com.querydsl.core.QueryResults;
 import com.querydsl.core.Tuple;
-import com.querydsl.core.types.Projections;
 import com.wjl.lblog.component.QueryComponent;
-import com.wjl.lblog.model.dto.ArticleDto;
+import com.wjl.lblog.model.dto.*;
 import com.wjl.lblog.model.entity.*;
-import com.wjl.lblog.model.vo.ArticleSummaryVo;
-import com.wjl.lblog.model.vo.ArticleDetailVo;
-import com.wjl.lblog.model.vo.ArticleTitleVo;
-import com.wjl.lblog.repository.ArticleRepository;
-import com.wjl.lblog.repository.ArticleTagRepository;
-import com.wjl.lblog.repository.CategoryRepository;
-import com.wjl.lblog.repository.TagRepository;
-import com.wjl.lblog.service.intf.ArticleService;
-import com.wjl.lblog.service.intf.CategoryService;
+import com.wjl.lblog.model.vo.*;
+import com.wjl.lblog.repository.*;
+import com.wjl.lblog.service.intf.*;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
@@ -23,9 +15,7 @@ import org.springframework.data.domain.PageImpl;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Objects;
+import java.util.*;
 
 /**
  * @author: wjl
@@ -51,20 +41,69 @@ public class ArticleServiceImpl implements ArticleService {
     private ArticleTagRepository articleTagRepository;
 
     @Autowired
+    private TagService tagService;
+
+    @Autowired
     private CategoryService categoryService;
 
     QArticle qArticle = QArticle.article;
 
     QCategory qCategory = QCategory.category;
 
-    /**
-     * 分页查询
-     *
-     * @param pageable pageable
-     */
-    @Deprecated
+    QTag qTag = QTag.tag;
+
+    QArticleTag qArticleTag = QArticleTag.articleTag;
+
     @Override
-    public Page<ArticleSummaryVo> findAllByPage(Pageable pageable) {
+    public List<ArticleSummaryVo> findAllSummary() {
+        List<Article> articles = articleRepository.findAll();
+        List<ArticleSummaryVo> articleSummaryVos = new ArrayList<>();
+        for (Article article : articles) {
+            ArticleSummaryVo articleSummaryVo = new ArticleSummaryVo();
+            BeanUtils.copyProperties(article, articleSummaryVo, "content", "categoryId");
+            // category
+            CategoryDto categoryDto = categoryService.findCategoryDtoById(article.getCategoryId());
+            articleSummaryVo.setCategory(categoryDto.getName());
+            articleSummaryVo.setCategoryId(categoryDto.getId());
+            // add to list
+            articleSummaryVos.add(articleSummaryVo);
+        }
+        return articleSummaryVos;
+    }
+
+    @Override
+    public List<ArticleDetailVo> findAllDetail() {
+        List<Article> articles = articleRepository.findAll();
+        List<ArticleDetailVo> articleDetailVos = new ArrayList<>();
+        for (Article article : articles) {
+            ArticleDetailVo articleDetailVo = new ArticleDetailVo();
+            BeanUtils.copyProperties(article, articleDetailVo, "categoryId");
+            // category
+            CategoryDto categoryDto = categoryService.findCategoryDtoById(article.getCategoryId());
+            articleDetailVo.setCategory(categoryDto);
+            // tag
+            List<TagDto> tags = tagService.findTagsByArticleId(article.getId());
+            articleDetailVo.setTags(tags);
+            // add to list
+            articleDetailVos.add(articleDetailVo);
+        }
+        return articleDetailVos;
+    }
+
+    @Override
+    public List<ArticleTitleVo> findAllTitle() {
+        List<Article> articles = articleRepository.findAll();
+        List<ArticleTitleVo> articleTitleVos = new ArrayList<>();
+        for (Article article : articles) {
+            ArticleTitleVo articleTitleVo = new ArticleTitleVo(article.getId(),
+                    article.getCreateTime(), article.getTitle());
+            articleTitleVos.add(articleTitleVo);
+        }
+        return articleTitleVos;
+    }
+
+    @Override
+    public Page<ArticleSummaryVo> findSummaryByPage(Pageable pageable) {
         QueryResults<Tuple> queryResults = queryComponent.queryFactory()
                 .select(
                         qArticle.id,
@@ -73,8 +112,8 @@ public class ArticleServiceImpl implements ArticleService {
                         qArticle.title,
                         qArticle.summary,
                         qArticle.cover,
-                        qCategory.id.as("categoryId"),
-                        qCategory.name.as("categoryName")
+                        qCategory.id,
+                        qCategory.name
                 )
                 .from(qArticle, qCategory)
                 .where(qArticle.categoryId.eq(qCategory.id))
@@ -83,242 +122,7 @@ public class ArticleServiceImpl implements ArticleService {
                 .limit(pageable.getPageSize())
                 .fetchResults();
         List<Tuple> tuples = queryResults.getResults();
-        List<ArticleSummaryVo> articleSummaryDtos = this.tupleToArticleSummaryDto(tuples);
-        return new PageImpl<>(articleSummaryDtos, pageable, queryResults.getTotal());
-    }
-
-    @Override
-    public Page<ArticleDetailVo> findArticleDetailsByPage(Pageable pageable) {
-        return null;
-    }
-
-    @Override
-    public Page<ArticleTitleVo> findArticleTitlesByPage(Pageable pageable) {
-        return null;
-    }
-
-    /**
-     * 查询所有
-     */
-    @Override
-    public List<ArticleSummaryVo> findAllArticleSummary() {
-//        return queryComponent.queryFactory()
-//                .select(
-//                        Projections.bean(
-//                                ArticleSummaryDto.class,
-//                                qArticle.id,
-//                                qArticle.createTime,
-//                                qArticle.updateTime,
-//                                qArticle.title,
-//                                qArticle.summary,
-//                                qArticle.image,
-//                                qCategory.id.as("categoryId"),
-//                                qCategory.name.as("categoryName")
-//                        )
-//                )
-//                .from(qArticle, qCategory)
-//                .where(qArticle.categoryId.eq(qCategory.id))
-//                .orderBy(qArticle.createTime.desc())
-//                .fetch();
-        return null;
-    }
-
-    @Override
-    public List<ArticleDetailVo> findArticleDetails() {
-        return null;
-    }
-
-    @Override
-    public List<ArticleTitleVo> findArticleTitles() {
-        return null;
-    }
-
-    @Override
-    public List<Article> findArticles() {
-        return null;
-    }
-
-    @Override
-    public List<ArticleDto> findAllArticleDtoByArticleId(Long aid) {
-        return null;
-    }
-
-    @Override
-    public List<ArticleDto> findAllArticleDtoByTagId(Long tid) {
-        return null;
-    }
-
-    /**
-     * 根据 id 查询
-     *
-     * @param id id
-     */
-    @Override
-    public ArticleDetailVo findById(Long id) {
-        Article article = findArticleById(id);
-        if (!Objects.isNull(article)) {
-            ArticleSummaryVo articleSummaryVo = findArticleSummaryById(id);
-            ArticleDetailVo articleDetailVo = new ArticleDetailVo();
-            BeanUtils.copyProperties(articleSummaryVo, articleDetailVo);
-            articleDetailVo.setContent(article.getContent());
-            return articleDetailVo;
-        }
-        return null;
-    }
-
-    @Override
-    public ArticleSummaryVo findArticleSummaryById(Long id) {
-        Article article = findArticleById(id);
-        if (!Objects.isNull(article)) {
-            Category category = categoryRepository.findCategoryById(article.getCategoryId());
-            if (!Objects.isNull(category)) {
-                List<ArticleTag> articleTags = articleTagRepository.findArticleTagsByAid(id);
-                List<Tag> tags = new ArrayList<>();
-                for (ArticleTag articleTag : articleTags) {
-                    Tag tag = tagRepository.findTagById(articleTag.getTid());
-                    if (!Objects.isNull(tag)) {
-                        tags.add(tag);
-                    }
-                }
-                ArticleSummaryVo articleSummaryVo = new ArticleSummaryVo();
-                BeanUtils.copyProperties(article, articleSummaryVo, "category_id", "content");
-                articleSummaryVo.setCategory(category);
-                articleSummaryVo.setTags(tags);
-                return articleSummaryVo;
-            }
-        }
-        return null;
-    }
-
-    @Override
-    public ArticleTitleVo findArticleTitleById(Long id) {
-        if (!Objects.isNull(findArticleById(id))) {
-            return queryComponent.queryFactory()
-                    .select(
-                            Projections.bean(
-                                    ArticleTitleVo.class,
-                                    qArticle.id,
-                                    qArticle.createTime.as("articleTime"),
-                                    qArticle.title
-                            )
-                    )
-                    .from(qArticle)
-                    .where(qArticle.id.eq(id))
-                    .fetchOne();
-        }
-        return null;
-    }
-
-    @Override
-    public Article findArticleById(Long id) {
-        Article article = articleRepository.findArticleById(id);
-        if (!Objects.isNull(article)) {
-            return article;
-        }
-        return null;
-    }
-
-    /**
-     * 根据标题查询
-     *
-     * @param title title
-     */
-    @Override
-    public ArticleDetailVo findByTitle(String title) {
-//        return queryComponent.queryFactory()
-//                .select(
-//                        Projections.bean(
-//                                ArticleDto.class,
-//                                qArticle.id,
-//                                qArticle.createTime,
-//                                qArticle.updateTime,
-//                                qArticle.title,
-//                                qArticle.summary,
-//                                qArticle.image,
-//                                qArticle.content,
-//                                qCategory.id.as("categoryId"),
-//                                qCategory.name.as("categoryName")
-//                        )
-//                )
-//                .from(qArticle, qCategory)
-//                .where(
-//                        qArticle.title.eq(title)
-//                                .and(qArticle.categoryId.eq(qCategory.id))
-//                )
-//                .orderBy(qArticle.createTime.desc())
-//                .fetchOne();
-        return null;
-    }
-
-    /**
-     * 增加
-     *
-     * @param articleDetailVo articleDto
-     */
-    @Override
-    public ArticleDetailVo add(ArticleDetailVo articleDetailVo) {
-        Article article = new Article();
-        article.setTitle(articleDetailVo.getTitle());
-        article.setSummary(articleDetailVo.getSummary());
-//        article.setImage(articleDto.getImage());
-        article.setContent(articleDetailVo.getContent());
-//        Category category = categoryRepository.findCategoryByName(articleDetailVo.getCategoryName());
-//        if (!Objects.isNull(category)) {
-//            article.setCategoryId(article.getCategoryId());
-//            articleRepository.save(article);
-//            return articleDetailVo;
-//        } else {
-//            return null;
-//        }
-        return null;
-    }
-
-    /**
-     * 更新
-     *
-     * @param id id
-     * @param articleDetailVo articleDto
-     */
-    @Override
-    public ArticleDetailVo update(Long id, ArticleDetailVo articleDetailVo) {
-        Article article = articleRepository.findById(id).orElseThrow();
-//        Category category = categoryRepository.findCategoryByName(articleDetailVo.getCategoryName());
-        if (!Objects.isNull(article)) {
-//            queryComponent.queryFactory()
-//                    .update(qArticle)
-//                    .where(qArticle.id.eq(id))
-//                    .set(qArticle.title, articleDto.getTitle())
-//                    .set(qArticle.summary, articleDto.getSummary())
-//                    .set(qArticle.image, articleDto.getImage())
-//                    .set(qArticle.content, articleDto.getContent())
-//                    .set(qArticle.categoryId, category.getId())
-//                    .execute();
-            return articleDetailVo;
-        } else {
-            return null;
-        }
-    }
-
-    /**
-     * 根据 id 删除
-     *
-     * @param id
-     */
-    @Override
-    public Article deleteById(Long id) {
-        Article article = articleRepository.findById(id).orElseThrow();
-        if (!Objects.isNull(article)) {
-            articleRepository.deleteById(id);
-            Category category = categoryRepository.findCategoryById(article.getCategoryId());
-            categoryService.update(category.getId(), category);
-            return article;
-        }
-        return null;
-    }
-
-    @Deprecated
-    private List<ArticleSummaryVo> tupleToArticleSummaryDto(List<Tuple> tuples) {
-//        List<ArticleSummaryDto> articleSummaryDtos = Lists.newArrayList();
+        List<ArticleSummaryVo> articleSummaryVos = new ArrayList<>();
         for (Tuple tuple : tuples) {
             ArticleSummaryVo articleSummaryVo = new ArticleSummaryVo();
             articleSummaryVo.setId(tuple.get(qArticle.id));
@@ -326,13 +130,130 @@ public class ArticleServiceImpl implements ArticleService {
             articleSummaryVo.setUpdateTime(tuple.get(qArticle.updateTime));
             articleSummaryVo.setTitle(tuple.get(qArticle.title));
             articleSummaryVo.setSummary(tuple.get(qArticle.summary));
-//            articleSummaryDto.setImage(tuple.get(qArticle.image));
-//            articleSummaryDto.setCategoryId(tuple.get(qCategory.id));
-//            articleSummaryDto.setCategoryName(tuple.get(qCategory.name));
-//            articleSummaryDtos.add(articleSummaryDto);
+            articleSummaryVo.setCover(tuple.get(qArticle.cover));
+            articleSummaryVo.setCategoryId(tuple.get(qCategory.id));
+            articleSummaryVo.setCategory(tuple.get(qCategory.name));
+            articleSummaryVos.add(articleSummaryVo);
         }
-//        return articleSummaryDtos;
+        return new PageImpl<>(articleSummaryVos, pageable, queryResults.getTotal());
+    }
+
+    @Override
+    public ArticleDetailVo getById(Long id) {
+        ArticleDetailVo articleDetailVo = new ArticleDetailVo();
+        Article article = articleRepository.findArticleById(id);
+        if (!Objects.isNull(article)) {
+            BeanUtils.copyProperties(article, articleDetailVo, "categoryId");
+            CategoryDto categoryDto = categoryService.findCategoryDtoById(article.getCategoryId());
+            articleDetailVo.setCategory(categoryDto);
+            List<TagDto> tagDtos = tagService.findTagsByArticleId(article.getId());
+            articleDetailVo.setTags(tagDtos);
+            return articleDetailVo;
+        } else {
+            return null;
+        }
+    }
+
+    @Override
+    public ArticleDetailVo getByTitle(String title) {
+        Article article = articleRepository.findArticleByTitle(title);
+        if (!Objects.isNull(article)) {
+            return getById(article.getId());
+        } else {
+            return null;
+        }
+    }
+
+    @Override
+    public Article findById(Long id) {
+        Article article = articleRepository.findArticleById(id);
+        if (!Objects.isNull(article)) {
+            return article;
+        }
         return null;
+    }
+
+    @Override
+    public Article findByTitle(String title) {
+        Article article = articleRepository.findArticleByTitle(title);
+        if (!Objects.isNull(article)) {
+            return article;
+        }
+        return null;
+    }
+
+    @Override
+    public boolean add(ArticleDto articleDto) {
+        if (!Objects.isNull(articleDto)) {
+            Article article = new Article();
+            BeanUtils.copyProperties(articleDto, article, "categoryName", "tagName");
+            // category
+            String categoryName = articleDto.getCategory();
+            if (!Objects.isNull(categoryName)) {
+                Category category = categoryRepository.findCategoryByName(categoryName);
+                if (Objects.isNull(category)) {
+                    Category category1 = new Category();
+                    category1.setName(categoryName);
+                    category1.setNumber(1);
+                    categoryRepository.save(category1);
+                    Category category2 = categoryRepository.findCategoryByName(categoryName);
+                    article.setCategoryId(category2.getId());
+                } else {
+                    category.setNumber(category.getNumber() + 1);
+                    article.setCategoryId(category.getId());
+                }
+                articleRepository.save(article);
+                // tag
+                // 去重
+                List<String> tags = articleDto.getTags();
+                Set<String> set = new HashSet<>(tags);
+                tags.clear();
+                tags.addAll(set);
+                for (String tagName : tags) {
+                    ArticleTag articleTag = new ArticleTag();
+                    articleTag.setAid(articleRepository.findArticleByTitle(article.getTitle()).getId());
+                    if (!Objects.isNull(tagName)) {
+                        Tag tag = tagRepository.findTagByName(tagName);
+                        if (Objects.isNull(tag)) {
+                            Tag tag1 = new Tag();
+                            tag1.setName(tagName);
+                            tag1.setNumber(1);
+                            tagRepository.save(tag1);
+                            Tag tag2 = tagRepository.findTagByName(tagName);
+                            articleTag.setTid(tag2.getId());
+                            articleTagRepository.save(articleTag);
+                        } else {
+                            tag.setNumber(tag.getNumber() + 1);
+                            articleTag.setTid(tag.getId());
+                            articleTagRepository.save(articleTag);
+                        }
+                    }
+                }
+                return true;
+            }
+        }
+        return false;
+    }
+
+    // TODO
+    @Override
+    public boolean update(Long id, ArticleDto articleDto) {
+        Article article = articleRepository.findArticleById(id);
+        if (!Objects.isNull(article)) {
+            BeanUtils.copyProperties(articleDto, article, "categoryName", "tagName");
+            articleRepository.save(article);
+        }
+        return false;
+    }
+
+    @Override
+    public boolean deleteById(Long id) {
+        Article article = articleRepository.findArticleById(id);
+        if (!Objects.isNull(article)) {
+            articleRepository.deleteById(id);
+            return true;
+        }
+        return false;
     }
 
 }

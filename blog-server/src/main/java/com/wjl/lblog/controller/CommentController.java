@@ -27,13 +27,15 @@ public class CommentController {
     /**
      * 分页查询留言
      *
-     * @param page
-     * @param size
+     * @param page page
+     * @param size size
      */
-    @RequestMapping(method = RequestMethod.GET)
+    @RequestMapping(value = "/page", method = RequestMethod.GET)
     public Page<Comment> findAllByPage(
-            @RequestParam(defaultValue = "1") int page, @RequestParam(defaultValue = "5") int size) {
-        return commentService.findAllByPage(PageRequest.of(page - 1, size, Sort.Direction.DESC, "createTime"));
+            @RequestParam(name = "page", defaultValue = "1") int page,
+            @RequestParam(name = "size", defaultValue = "5") int size) {
+        return commentService.findAllByPage(
+                PageRequest.of(page - 1, size, Sort.Direction.DESC, "createTime"));
     }
 
     /**
@@ -47,19 +49,19 @@ public class CommentController {
     /**
      * 根据 id 查询留言
      *
-     * @param id
+     * @param id id
      */
     @RequestMapping(value = "/{id}", method = RequestMethod.GET)
-    public Comment findById(@PathVariable Long id) {
+    public Comment findById(@PathVariable(name = "id") Long id) {
         return commentService.findById(id);
     }
 
     /**
      * 增加留言
      *
-     * @param comment
+     * @param comment comment
      */
-    @RequestMapping(method = RequestMethod.POST)
+    @RequestMapping(value = "/", method = RequestMethod.POST)
     public Comment add(@RequestBody Comment comment) {
         return commentService.add(comment);
     }
@@ -67,10 +69,10 @@ public class CommentController {
     /**
      * 更新留言
      *
-     * @param id
-     * @param comment
+     * @param id id
+     * @param comment comment
      */
-    @RequestMapping(method = RequestMethod.PUT)
+    @RequestMapping(value = "/", method = RequestMethod.PUT)
     public Comment update(@RequestParam("id") Long id, @RequestBody Comment comment) {
         return commentService.update(id, comment);
     }
@@ -78,9 +80,9 @@ public class CommentController {
     /**
      * 根据 id 删除留言
      *
-     * @param id
+     * @param id id
      */
-    @RequestMapping(method = RequestMethod.DELETE)
+    @RequestMapping(value = "/", method = RequestMethod.DELETE)
     public Long deleteById(@RequestParam("id") Long id) {
         return commentService.deleteById(id);
     }
@@ -88,8 +90,7 @@ public class CommentController {
     /**
      * 删除所有留言
      */
-    @Deprecated
-    @DeleteMapping("/delete")
+    @RequestMapping(value = "/delete", method = RequestMethod.DELETE)
     public void deleteAll() {
         commentService.deleteAll();
     }

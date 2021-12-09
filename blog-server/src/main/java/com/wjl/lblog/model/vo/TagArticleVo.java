@@ -14,15 +14,10 @@ import java.util.Date;
 public class TagArticleVo {
 
     private Long id;
-
     private Date createTime;
-
     private Date updateTime;
-
     private String name;
-
     private Integer number = 0;
-
     Page<ArticleTitleVo> articles;
 
 }

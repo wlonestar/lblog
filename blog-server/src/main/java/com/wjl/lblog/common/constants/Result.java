@@ -11,13 +11,13 @@ import lombok.Data;
 @Data
 public class Result<T> {
 
-    private int code;
+    private int status;
     private String msg;
     private T data;
 
     public static <T> Result<T> success(T data) {
         Result<T> Result = new Result<>();
-        Result.setCode(HttpStatus.OK.getCode());
+        Result.setStatus(HttpStatus.OK.getCode());
         Result.setMsg(HttpStatus.OK.getMsg());
         Result.setData(data);
         return Result;
@@ -25,14 +25,14 @@ public class Result<T> {
 
     public static <T> Result<T> success(String msg) {
         Result<T> Result = new Result<>();
-        Result.setCode(HttpStatus.OK.getCode());
+        Result.setStatus(HttpStatus.OK.getCode());
         Result.setMsg(msg);
         return Result;
     }
 
     public static <T> Result<T> fail(int code, String msg) {
         Result<T> Result = new Result<>();
-        Result.setCode(code);
+        Result.setStatus(code);
         Result.setMsg(msg);
         return Result;
     }

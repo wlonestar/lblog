@@ -14,17 +14,11 @@ import java.util.Date;
 public class CategoryArticleVo {
 
     private Long id;
-
     private Date createTime;
-
     private Date updateTime;
-
     private String name;
-
     private String description;
-
     private Integer number = 0;
-
     Page<ArticleTitleVo> articles;
 
 }

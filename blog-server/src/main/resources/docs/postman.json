@@ -1,7 +1,7 @@
 {
   "info": {
     "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-    "_postman_id": "fd184162-cfe0-449a-b00c-a7245aac1ca8",
+    "_postman_id": "70da61f4-e036-4d19-8c13-599b05997926",
     "name": "lblog"
   },
   "item": [
@@ -16,11 +16,12 @@
               "mode": "formdata"
             },
             "url": {
-              "raw": "http://localhost:8088/article/all",
+              "raw": "http://localhost:8088/article/all/summary",
               "protocol": "http",
               "path": [
                 "article",
-                "all"
+                "all",
+                "summary"
               ],
               "host": [
                 "localhost"
@@ -33,6 +34,60 @@
             "header": []
           },
           "description": "查询所有文章摘要"
+        },
+        {
+          "name": "查询所有文章详情",
+          "request": {
+            "method": "GET",
+            "body": {
+              "mode": "formdata"
+            },
+            "url": {
+              "raw": "http://localhost:8088/article/all/detail",
+              "protocol": "http",
+              "path": [
+                "article",
+                "all",
+                "detail"
+              ],
+              "host": [
+                "localhost"
+              ],
+              "port": "8088",
+              "query": [],
+              "variable": []
+            },
+            "description": "查询所有文章详情",
+            "header": []
+          },
+          "description": "查询所有文章详情"
+        },
+        {
+          "name": "查询所有文章",
+          "request": {
+            "method": "GET",
+            "body": {
+              "mode": "formdata"
+            },
+            "url": {
+              "raw": "http://localhost:8088/article/all/title",
+              "protocol": "http",
+              "path": [
+                "article",
+                "all",
+                "title"
+              ],
+              "host": [
+                "localhost"
+              ],
+              "port": "8088",
+              "query": [],
+              "variable": []
+            },
+            "description": "查询所有文章",
+            "header": []
+          },
+          "description": "查询所有文章"
         },
         {
           "name": "分页查询文章摘要",
@@ -51,15 +106,16 @@
                   "key": "size",
                   "type": "text",
                   "description": "size",
-                  "value": "10"
+                  "value": "5"
                 }
               ]
             },
             "url": {
-              "raw": "http://localhost:8088/article/page?page\u003d1\u0026size\u003d10",
+              "raw": "http://localhost:8088/article/all/page?size\u003d5\u0026page\u003d1",
               "protocol": "http",
               "path": [
                 "article",
+                "all",
                 "page"
               ],
               "host": [
@@ -74,7 +130,7 @@
                 },
                 {
                   "key": "size",
-                  "value": "10",
+                  "value": "5",
                   "description": "size"
                 }
               ],
@@ -96,15 +152,16 @@
                   "key": "id",
                   "type": "text",
                   "description": "id",
-                  "value": "227"
+                  "value": "846"
                 }
               ]
             },
             "url": {
-              "raw": "http://localhost:8088/article/id?id\u003d227",
+              "raw": "http://localhost:8088/article/single/id?id\u003d846",
               "protocol": "http",
               "path": [
                 "article",
+                "single",
                 "id"
               ],
               "host": [
@@ -114,7 +171,7 @@
               "query": [
                 {
                   "key": "id",
-                  "value": "758",
+                  "value": "779",
                   "description": "id"
                 }
               ],
@@ -136,15 +193,16 @@
                   "key": "title",
                   "type": "text",
                   "description": "title",
-                  "value": "7qze3s"
+                  "value": "41hu0a"
                 }
               ]
             },
             "url": {
-              "raw": "http://localhost:8088/article/title?title\u003d7qze3s",
+              "raw": "http://localhost:8088/article/single/title?title\u003d41hu0a",
               "protocol": "http",
               "path": [
                 "article",
+                "single",
                 "title"
               ],
               "host": [
@@ -154,7 +212,7 @@
               "query": [
                 {
                   "key": "title",
-                  "value": "ckigvs",
+                  "value": "3gf8jl",
                   "description": "title"
                 }
               ],
@@ -171,7 +229,7 @@
             "method": "POST",
             "body": {
               "mode": "raw",
-              "raw": "{\n  \"id\": 944,\n  \"createTime\": \"2021-12-08 21:07:20\",\n  \"updateTime\": \"2021-12-08 21:07:20\",\n  \"title\": \"vxyx09\",\n  \"summary\": \"59card\",\n  \"cover\": \"cpflaz\",\n  \"content\": \"e57bft\",\n  \"category\": {\n    \"id\": 132,\n    \"createTime\": \"2021-12-08 21:07:20\",\n    \"updateTime\": \"2021-12-08 21:07:20\",\n    \"name\": \"sherwood.wilkinson\",\n    \"description\": \"2fvnu9\",\n    \"number\": 859\n  },\n  \"tags\": [\n    {\n      \"id\": 463,\n      \"createTime\": \"2021-12-08 21:07:20\",\n      \"updateTime\": \"2021-12-08 21:07:20\",\n      \"name\": \"sherwood.wilkinson\",\n      \"number\": 698\n    }\n  ]\n}",
+              "raw": "{\n  \"title\": \"i0uklq\",\n  \"summary\": \"tlju1n\",\n  \"cover\": \"rislc7\",\n  \"content\": \"ojiz14\",\n  \"category\": \"mcz0zu\",\n  \"tags\": [\n    \"qz3vn1\"\n  ]\n}",
               "options": {
                 "raw": {
                   "language": "json"
@@ -203,7 +261,7 @@
             "method": "PUT",
             "body": {
               "mode": "raw",
-              "raw": "{\n  \"id\": 301,\n  \"createTime\": \"2021-12-08 21:07:20\",\n  \"updateTime\": \"2021-12-08 21:07:20\",\n  \"title\": \"5ub914\",\n  \"summary\": \"dx5kjm\",\n  \"cover\": \"rp0zww\",\n  \"content\": \"v38ju6\",\n  \"category\": {\n    \"id\": 813,\n    \"createTime\": \"2021-12-08 21:07:20\",\n    \"updateTime\": \"2021-12-08 21:07:20\",\n    \"name\": \"sherwood.wilkinson\",\n    \"description\": \"b98qy7\",\n    \"number\": 774\n  },\n  \"tags\": [\n    {\n      \"id\": 301,\n      \"createTime\": \"2021-12-08 21:07:20\",\n      \"updateTime\": \"2021-12-08 21:07:20\",\n      \"name\": \"sherwood.wilkinson\",\n      \"number\": 31\n    }\n  ]\n}",
+              "raw": "{\n  \"title\": \"mbraup\",\n  \"summary\": \"x9sl25\",\n  \"cover\": \"bo5lnt\",\n  \"content\": \"c2amtm\",\n  \"category\": \"npyka8\",\n  \"tags\": [\n    \"pfnfnn\"\n  ]\n}",
               "options": {
                 "raw": {
                   "language": "json"
@@ -211,7 +269,7 @@
               }
             },
             "url": {
-              "raw": "http://localhost:8088/article/?id\u003d531",
+              "raw": "http://localhost:8088/article/?id\u003d361",
               "protocol": "http",
               "path": [
                 "article",
@@ -224,8 +282,8 @@
               "query": [
                 {
                   "key": "id",
-                  "value": "610",
-                  "description": "No comments found."
+                  "value": "868",
+                  "description": "id"
                 }
               ],
               "variable": []
@@ -241,34 +299,27 @@
             "method": "DELETE",
             "body": {
               "mode": "formdata",
-              "formdata": [
-                {
-                  "key": "id",
-                  "type": "text",
-                  "description": "No comments found.",
-                  "value": "295"
-                }
-              ]
+              "formdata": []
             },
             "url": {
-              "raw": "http://localhost:8088/article/?id\u003d295",
+              "raw": "http://localhost:8088/article/708",
               "protocol": "http",
               "path": [
                 "article",
-                ""
+                ":id"
               ],
               "host": [
                 "localhost"
               ],
               "port": "8088",
-              "query": [
+              "query": [],
+              "variable": [
                 {
                   "key": "id",
-                  "value": "816",
-                  "description": "No comments found."
+                  "value": "754",
+                  "description": "id"
                 }
-              ],
-              "variable": []
+              ]
             },
             "description": "根据 id 删除文章",
             "header": []
@@ -297,12 +348,12 @@
                   "key": "size",
                   "type": "text",
                   "description": "数量",
-                  "value": "7"
+                  "value": "5"
                 }
               ]
             },
             "url": {
-              "raw": "http://localhost:8088/category/page?size\u003d7\u0026page\u003d1",
+              "raw": "http://localhost:8088/category/page?size\u003d5\u0026page\u003d1",
               "protocol": "http",
               "path": [
                 "category",
@@ -320,7 +371,7 @@
                 },
                 {
                   "key": "size",
-                  "value": "7",
+                  "value": "5",
                   "description": "数量"
                 }
               ],
@@ -368,7 +419,7 @@
                   "key": "id",
                   "type": "text",
                   "description": "id",
-                  "value": "826"
+                  "value": "4"
                 },
                 {
                   "key": "page",
@@ -385,7 +436,7 @@
               ]
             },
             "url": {
-              "raw": "http://localhost:8088/category/article?page\u003d1\u0026size\u003d7\u0026id\u003d826",
+              "raw": "http://localhost:8088/category/article?id\u003d4\u0026page\u003d1\u0026size\u003d7",
               "protocol": "http",
               "path": [
                 "category",
@@ -398,7 +449,7 @@
               "query": [
                 {
                   "key": "id",
-                  "value": "140",
+                  "value": "166",
                   "description": "id"
                 },
                 {
@@ -430,12 +481,12 @@
                   "key": "id",
                   "type": "text",
                   "description": "id",
-                  "value": "765"
+                  "value": "342"
                 }
               ]
             },
             "url": {
-              "raw": "http://localhost:8088/category/id?id\u003d765",
+              "raw": "http://localhost:8088/category/id?id\u003d342",
               "protocol": "http",
               "path": [
                 "category",
@@ -448,7 +499,7 @@
               "query": [
                 {
                   "key": "id",
-                  "value": "501",
+                  "value": "403",
                   "description": "id"
                 }
               ],
@@ -470,12 +521,12 @@
                   "key": "name",
                   "type": "text",
                   "description": "name",
-                  "value": "sherwood.wilkinson"
+                  "value": "sallie.dicki"
                 }
               ]
             },
             "url": {
-              "raw": "http://localhost:8088/category/name?name\u003dsherwood.wilkinson",
+              "raw": "http://localhost:8088/category/name?name\u003dsallie.dicki",
               "protocol": "http",
               "path": [
                 "category",
@@ -488,7 +539,7 @@
               "query": [
                 {
                   "key": "name",
-                  "value": "sherwood.wilkinson",
+                  "value": "sallie.dicki",
                   "description": "name"
                 }
               ],
@@ -505,7 +556,7 @@
             "method": "POST",
             "body": {
               "mode": "raw",
-              "raw": "{\n  \"id\": 859,\n  \"createTime\": \"2021-12-08 21:07:20\",\n  \"updateTime\": \"2021-12-08 21:07:20\",\n  \"name\": \"sherwood.wilkinson\",\n  \"description\": \"0ls3s6\",\n  \"number\": 223\n}",
+              "raw": "{\n  \"id\": 626,\n  \"createTime\": \"2021-12-09 16:49:56\",\n  \"updateTime\": \"2021-12-09 16:49:56\",\n  \"name\": \"sallie.dicki\",\n  \"description\": \"5rn5cr\",\n  \"number\": 257\n}",
               "options": {
                 "raw": {
                   "language": "json"
@@ -537,7 +588,7 @@
             "method": "PUT",
             "body": {
               "mode": "raw",
-              "raw": "{\n  \"id\": 307,\n  \"createTime\": \"2021-12-08 21:07:20\",\n  \"updateTime\": \"2021-12-08 21:07:20\",\n  \"name\": \"sherwood.wilkinson\",\n  \"description\": \"9d0fyt\",\n  \"number\": 814\n}",
+              "raw": "{\n  \"id\": 770,\n  \"createTime\": \"2021-12-09 16:49:56\",\n  \"updateTime\": \"2021-12-09 16:49:56\",\n  \"name\": \"sallie.dicki\",\n  \"description\": \"0gjbnd\",\n  \"number\": 97\n}",
               "options": {
                 "raw": {
                   "language": "json"
@@ -545,7 +596,7 @@
               }
             },
             "url": {
-              "raw": "http://localhost:8088/category/?id\u003d258",
+              "raw": "http://localhost:8088/category/?id\u003d303",
               "protocol": "http",
               "path": [
                 "category",
@@ -558,7 +609,7 @@
               "query": [
                 {
                   "key": "id",
-                  "value": "175",
+                  "value": "349",
                   "description": "id"
                 }
               ],
@@ -580,12 +631,12 @@
                   "key": "id",
                   "type": "text",
                   "description": "id",
-                  "value": "807"
+                  "value": "236"
                 }
               ]
             },
             "url": {
-              "raw": "http://localhost:8088/category/?id\u003d807",
+              "raw": "http://localhost:8088/category/?id\u003d236",
               "protocol": "http",
               "path": [
                 "category",
@@ -598,7 +649,7 @@
               "query": [
                 {
                   "key": "id",
-                  "value": "802",
+                  "value": "673",
                   "description": "id"
                 }
               ],
@@ -624,23 +675,23 @@
                 {
                   "key": "page",
                   "type": "text",
-                  "description": "No comments found.",
+                  "description": "page",
                   "value": "1"
                 },
                 {
                   "key": "size",
                   "type": "text",
-                  "description": "No comments found.",
+                  "description": "size",
                   "value": "5"
                 }
               ]
             },
             "url": {
-              "raw": "http://localhost:8088/comment/?page\u003d1\u0026size\u003d5",
+              "raw": "http://localhost:8088/comment/page?page\u003d1\u0026size\u003d5",
               "protocol": "http",
               "path": [
                 "comment",
-                ""
+                "page"
               ],
               "host": [
                 "localhost"
@@ -650,12 +701,12 @@
                 {
                   "key": "page",
                   "value": "1",
-                  "description": "No comments found."
+                  "description": "page"
                 },
                 {
                   "key": "size",
                   "value": "5",
-                  "description": "No comments found."
+                  "description": "size"
                 }
               ],
               "variable": []
@@ -700,7 +751,7 @@
               "formdata": []
             },
             "url": {
-              "raw": "http://localhost:8088/comment/468",
+              "raw": "http://localhost:8088/comment/595",
               "protocol": "http",
               "path": [
                 "comment",
@@ -714,8 +765,8 @@
               "variable": [
                 {
                   "key": "id",
-                  "value": "946",
-                  "description": "No comments found."
+                  "value": "820",
+                  "description": "id"
                 }
               ]
             },
@@ -730,7 +781,7 @@
             "method": "POST",
             "body": {
               "mode": "raw",
-              "raw": "{\n  \"id\": 62,\n  \"createTime\": \"2021-12-08 21:07:20\",\n  \"updateTime\": \"2021-12-08 21:07:20\",\n  \"content\": \"g4kj0z\",\n  \"username\": \"sherwood.wilkinson\",\n  \"avatar\": \"uc8bqg\",\n  \"site\": \"vncqiq\",\n  \"email\": \"kourtney.zulauf@hotmail.com\"\n}",
+              "raw": "{\n  \"id\": 773,\n  \"createTime\": \"2021-12-09 16:49:57\",\n  \"updateTime\": \"2021-12-09 16:49:57\",\n  \"content\": \"acfjaz\",\n  \"username\": \"sallie.dicki\",\n  \"avatar\": \"slhi46\",\n  \"site\": \"im8s0b\",\n  \"email\": \"hollis.gusikowski@hotmail.com\"\n}",
               "options": {
                 "raw": {
                   "language": "json"
@@ -762,7 +813,7 @@
             "method": "PUT",
             "body": {
               "mode": "raw",
-              "raw": "{\n  \"id\": 414,\n  \"createTime\": \"2021-12-08 21:07:20\",\n  \"updateTime\": \"2021-12-08 21:07:20\",\n  \"content\": \"i7afsp\",\n  \"username\": \"sherwood.wilkinson\",\n  \"avatar\": \"1gi127\",\n  \"site\": \"nm43nu\",\n  \"email\": \"kourtney.zulauf@hotmail.com\"\n}",
+              "raw": "{\n  \"id\": 418,\n  \"createTime\": \"2021-12-09 16:49:57\",\n  \"updateTime\": \"2021-12-09 16:49:57\",\n  \"content\": \"qud27m\",\n  \"username\": \"sallie.dicki\",\n  \"avatar\": \"pf7ovf\",\n  \"site\": \"g4kkfy\",\n  \"email\": \"hollis.gusikowski@hotmail.com\"\n}",
               "options": {
                 "raw": {
                   "language": "json"
@@ -770,7 +821,7 @@
               }
             },
             "url": {
-              "raw": "http://localhost:8088/comment/?id\u003d312",
+              "raw": "http://localhost:8088/comment/?id\u003d609",
               "protocol": "http",
               "path": [
                 "comment",
@@ -783,8 +834,8 @@
               "query": [
                 {
                   "key": "id",
-                  "value": "89",
-                  "description": "No comments found."
+                  "value": "252",
+                  "description": "id"
                 }
               ],
               "variable": []
@@ -804,13 +855,13 @@
                 {
                   "key": "id",
                   "type": "text",
-                  "description": "No comments found.",
-                  "value": "405"
+                  "description": "id",
+                  "value": "192"
                 }
               ]
             },
             "url": {
-              "raw": "http://localhost:8088/comment/?id\u003d405",
+              "raw": "http://localhost:8088/comment/?id\u003d192",
               "protocol": "http",
               "path": [
                 "comment",
@@ -823,8 +874,8 @@
               "query": [
                 {
                   "key": "id",
-                  "value": "184",
-                  "description": "No comments found."
+                  "value": "42",
+                  "description": "id"
                 }
               ],
               "variable": []
@@ -901,19 +952,19 @@
                 {
                   "key": "page",
                   "type": "text",
-                  "description": "No comments found.",
+                  "description": "page",
                   "value": "1"
                 },
                 {
                   "key": "size",
                   "type": "text",
-                  "description": "No comments found.",
+                  "description": "size",
                   "value": "10"
                 }
               ]
             },
             "url": {
-              "raw": "http://localhost:8088/files/?size\u003d10\u0026page\u003d1",
+              "raw": "http://localhost:8088/files/?page\u003d1\u0026size\u003d10",
               "protocol": "http",
               "path": [
                 "files",
@@ -927,12 +978,12 @@
                 {
                   "key": "page",
                   "value": "1",
-                  "description": "No comments found."
+                  "description": "page"
                 },
                 {
                   "key": "size",
                   "value": "10",
-                  "description": "No comments found."
+                  "description": "size"
                 }
               ],
               "variable": []
@@ -952,17 +1003,17 @@
                 {
                   "key": "file",
                   "type": "file",
-                  "description": "No comments found.",
+                  "description": "file",
                   "value": ""
                 }
               ]
             },
             "url": {
-              "raw": "http://localhost:8088/files/",
+              "raw": "http://localhost:8088/files/upload",
               "protocol": "http",
               "path": [
                 "files",
-                ""
+                "upload"
               ],
               "host": [
                 "localhost"
@@ -972,7 +1023,7 @@
                 {
                   "key": "file",
                   "value": "",
-                  "description": "No comments found."
+                  "description": "file"
                 }
               ],
               "variable": []
@@ -981,39 +1032,6 @@
             "header": []
           },
           "description": "图片上传"
-        },
-        {
-          "name": "图片下载",
-          "request": {
-            "method": "GET",
-            "body": {
-              "mode": "formdata",
-              "formdata": []
-            },
-            "url": {
-              "raw": "http://localhost:8088/files/g2k810",
-              "protocol": "http",
-              "path": [
-                "files",
-                ":flag"
-              ],
-              "host": [
-                "localhost"
-              ],
-              "port": "8088",
-              "query": [],
-              "variable": [
-                {
-                  "key": "flag",
-                  "value": "paimgp",
-                  "description": "No comments found."
-                }
-              ]
-            },
-            "description": "图片下载",
-            "header": []
-          },
-          "description": "图片下载"
         }
       ]
     },
@@ -1057,7 +1075,7 @@
             "method": "POST",
             "body": {
               "mode": "raw",
-              "raw": "{\n  \"id\": 592,\n  \"username\": \"sherwood.wilkinson\",\n  \"password\": \"bi88wh\",\n  \"token\": \"yrsn34\",\n  \"avatar\": \"6oxdnz\",\n  \"age\": 46,\n  \"gender\": true,\n  \"location\": \"n37c22\",\n  \"signature\": \"wbzgh3\",\n  \"profile\": \"ldbj9x\"\n}",
+              "raw": "{\n  \"id\": 428,\n  \"username\": \"sallie.dicki\",\n  \"password\": \"v0sh8p\",\n  \"token\": \"wf07s9\",\n  \"avatar\": \"b8m5jc\",\n  \"age\": 3,\n  \"gender\": true,\n  \"location\": \"1x8jm3\",\n  \"signature\": \"krqjj5\",\n  \"profile\": \"fdldfd\"\n}",
               "options": {
                 "raw": {
                   "language": "json"
@@ -1119,16 +1137,339 @@
       ]
     },
     {
-      "name": "Interface name is not set.",
+      "name": "权限",
       "item": []
     },
     {
-      "name": "Interface name is not set.",
+      "name": "角色",
       "item": []
     },
     {
-      "name": "Interface name is not set.",
-      "item": []
+      "name": "标签",
+      "item": [
+        {
+          "name": "查询所有标签",
+          "request": {
+            "method": "GET",
+            "body": {
+              "mode": "formdata"
+            },
+            "url": {
+              "raw": "http://localhost:8088/tag/all",
+              "protocol": "http",
+              "path": [
+                "tag",
+                "all"
+              ],
+              "host": [
+                "localhost"
+              ],
+              "port": "8088",
+              "query": [],
+              "variable": []
+            },
+            "description": "查询所有标签",
+            "header": []
+          },
+          "description": "查询所有标签"
+        },
+        {
+          "name": "分页查询所有标签",
+          "request": {
+            "method": "GET",
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "page",
+                  "type": "text",
+                  "description": "page",
+                  "value": "1"
+                },
+                {
+                  "key": "size",
+                  "type": "text",
+                  "description": "size",
+                  "value": "5"
+                }
+              ]
+            },
+            "url": {
+              "raw": "http://localhost:8088/tag/page?page\u003d1\u0026size\u003d5",
+              "protocol": "http",
+              "path": [
+                "tag",
+                "page"
+              ],
+              "host": [
+                "localhost"
+              ],
+              "port": "8088",
+              "query": [
+                {
+                  "key": "page",
+                  "value": "1",
+                  "description": "page"
+                },
+                {
+                  "key": "size",
+                  "value": "5",
+                  "description": "size"
+                }
+              ],
+              "variable": []
+            },
+            "description": "分页查询所有标签",
+            "header": []
+          },
+          "description": "分页查询所有标签"
+        },
+        {
+          "name": "分页查询标签下所有文章",
+          "request": {
+            "method": "GET",
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "id",
+                  "type": "text",
+                  "description": "id",
+                  "value": "269"
+                },
+                {
+                  "key": "page",
+                  "type": "text",
+                  "description": "page",
+                  "value": "1"
+                },
+                {
+                  "key": "size",
+                  "type": "text",
+                  "description": "size",
+                  "value": "5"
+                }
+              ]
+            },
+            "url": {
+              "raw": "http://localhost:8088/tag/article?page\u003d1\u0026id\u003d269\u0026size\u003d5",
+              "protocol": "http",
+              "path": [
+                "tag",
+                "article"
+              ],
+              "host": [
+                "localhost"
+              ],
+              "port": "8088",
+              "query": [
+                {
+                  "key": "id",
+                  "value": "22",
+                  "description": "id"
+                },
+                {
+                  "key": "page",
+                  "value": "1",
+                  "description": "page"
+                },
+                {
+                  "key": "size",
+                  "value": "5",
+                  "description": "size"
+                }
+              ],
+              "variable": []
+            },
+            "description": "分页查询标签下所有文章",
+            "header": []
+          },
+          "description": "分页查询标签下所有文章"
+        },
+        {
+          "name": "根据 id 查询标签",
+          "request": {
+            "method": "GET",
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "id",
+                  "type": "text",
+                  "description": "id",
+                  "value": "354"
+                }
+              ]
+            },
+            "url": {
+              "raw": "http://localhost:8088/tag/id?id\u003d354",
+              "protocol": "http",
+              "path": [
+                "tag",
+                "id"
+              ],
+              "host": [
+                "localhost"
+              ],
+              "port": "8088",
+              "query": [
+                {
+                  "key": "id",
+                  "value": "997",
+                  "description": "id"
+                }
+              ],
+              "variable": []
+            },
+            "description": "根据 id 查询标签",
+            "header": []
+          },
+          "description": "根据 id 查询标签"
+        },
+        {
+          "name": "根据标签名查询标签",
+          "request": {
+            "method": "GET",
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "name",
+                  "type": "text",
+                  "description": "name",
+                  "value": "sallie.dicki"
+                }
+              ]
+            },
+            "url": {
+              "raw": "http://localhost:8088/tag/name?name\u003dsallie.dicki",
+              "protocol": "http",
+              "path": [
+                "tag",
+                "name"
+              ],
+              "host": [
+                "localhost"
+              ],
+              "port": "8088",
+              "query": [
+                {
+                  "key": "name",
+                  "value": "sallie.dicki",
+                  "description": "name"
+                }
+              ],
+              "variable": []
+            },
+            "description": "根据标签名查询标签",
+            "header": []
+          },
+          "description": "根据标签名查询标签"
+        },
+        {
+          "name": "添加标签",
+          "request": {
+            "method": "POST",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"id\": 950,\n  \"createTime\": \"2021-12-09 16:49:57\",\n  \"updateTime\": \"2021-12-09 16:49:57\",\n  \"name\": \"sallie.dicki\",\n  \"number\": 487\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8088/tag/",
+              "protocol": "http",
+              "path": [
+                "tag",
+                ""
+              ],
+              "host": [
+                "localhost"
+              ],
+              "port": "8088",
+              "query": [],
+              "variable": []
+            },
+            "description": "添加标签",
+            "header": []
+          },
+          "description": "添加标签"
+        },
+        {
+          "name": "根据 id 更新标签",
+          "request": {
+            "method": "PUT",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"id\": 40,\n  \"createTime\": \"2021-12-09 16:49:57\",\n  \"updateTime\": \"2021-12-09 16:49:57\",\n  \"name\": \"sallie.dicki\",\n  \"number\": 675\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8088/tag/?id\u003d697",
+              "protocol": "http",
+              "path": [
+                "tag",
+                ""
+              ],
+              "host": [
+                "localhost"
+              ],
+              "port": "8088",
+              "query": [
+                {
+                  "key": "id",
+                  "value": "815",
+                  "description": "id"
+                }
+              ],
+              "variable": []
+            },
+            "description": "根据 id 更新标签",
+            "header": []
+          },
+          "description": "根据 id 更新标签"
+        },
+        {
+          "name": "根据 id 删除标签",
+          "request": {
+            "method": "DELETE",
+            "body": {
+              "mode": "formdata",
+              "formdata": []
+            },
+            "url": {
+              "raw": "http://localhost:8088/tag/378",
+              "protocol": "http",
+              "path": [
+                "tag",
+                ":id"
+              ],
+              "host": [
+                "localhost"
+              ],
+              "port": "8088",
+              "query": [],
+              "variable": [
+                {
+                  "key": "id",
+                  "value": "939",
+                  "description": "id"
+                }
+              ]
+            },
+            "description": "根据 id 删除标签",
+            "header": []
+          },
+          "description": "根据 id 删除标签"
+        }
+      ]
     },
     {
       "name": "时间线",
@@ -1219,7 +1560,7 @@
               "formdata": []
             },
             "url": {
-              "raw": "http://localhost:8088/idea/739",
+              "raw": "http://localhost:8088/idea/53",
               "protocol": "http",
               "path": [
                 "idea",
@@ -1233,7 +1574,7 @@
               "variable": [
                 {
                   "key": "id",
-                  "value": "424",
+                  "value": "783",
                   "description": "id"
                 }
               ]
@@ -1249,7 +1590,7 @@
             "method": "POST",
             "body": {
               "mode": "raw",
-              "raw": "{\n  \"id\": 280,\n  \"createTime\": \"2021-12-08 21:07:20\",\n  \"updateTime\": \"2021-12-08 21:07:20\",\n  \"title\": \"qm5yi7\",\n  \"content\": \"6d34tx\"\n}",
+              "raw": "{\n  \"id\": 12,\n  \"createTime\": \"2021-12-09 16:49:57\",\n  \"updateTime\": \"2021-12-09 16:49:57\",\n  \"title\": \"uvkei4\",\n  \"content\": \"q9ur7x\"\n}",
               "options": {
                 "raw": {
                   "language": "json"
@@ -1281,7 +1622,7 @@
             "method": "PUT",
             "body": {
               "mode": "raw",
-              "raw": "{\n  \"id\": 442,\n  \"createTime\": \"2021-12-08 21:07:20\",\n  \"updateTime\": \"2021-12-08 21:07:20\",\n  \"title\": \"8x0mzs\",\n  \"content\": \"xsbxtf\"\n}",
+              "raw": "{\n  \"id\": 912,\n  \"createTime\": \"2021-12-09 16:49:57\",\n  \"updateTime\": \"2021-12-09 16:49:57\",\n  \"title\": \"164hzp\",\n  \"content\": \"hrmfei\"\n}",
               "options": {
                 "raw": {
                   "language": "json"
@@ -1289,7 +1630,7 @@
               }
             },
             "url": {
-              "raw": "http://localhost:8088/idea/?id\u003d599",
+              "raw": "http://localhost:8088/idea/?id\u003d780",
               "protocol": "http",
               "path": [
                 "idea",
@@ -1302,7 +1643,7 @@
               "query": [
                 {
                   "key": "id",
-                  "value": "941",
+                  "value": "905",
                   "description": "id"
                 }
               ],
@@ -1324,12 +1665,12 @@
                   "key": "id",
                   "type": "text",
                   "description": "id",
-                  "value": "260"
+                  "value": "31"
                 }
               ]
             },
             "url": {
-              "raw": "http://localhost:8088/idea/?id\u003d260",
+              "raw": "http://localhost:8088/idea/?id\u003d31",
               "protocol": "http",
               "path": [
                 "idea",
@@ -1342,7 +1683,7 @@
               "query": [
                 {
                   "key": "id",
-                  "value": "145",
+                  "value": "14",
                   "description": "id"
                 }
               ],
@@ -1390,7 +1731,7 @@
             "method": "POST",
             "body": {
               "mode": "raw",
-              "raw": "{\n  \"id\": 510,\n  \"username\": \"sherwood.wilkinson\",\n  \"password\": \"jazef0\",\n  \"token\": \"sv8ux4\",\n  \"avatar\": \"he3or8\",\n  \"age\": 46,\n  \"gender\": true,\n  \"location\": \"gbtosk\",\n  \"signature\": \"48hp4w\",\n  \"profile\": \"7nnl2i\"\n}",
+              "raw": "{\n  \"id\": 63,\n  \"username\": \"sallie.dicki\",\n  \"password\": \"yxhh0k\",\n  \"token\": \"lrylxo\",\n  \"avatar\": \"ixjc80\",\n  \"age\": 3,\n  \"gender\": true,\n  \"location\": \"jiqhny\",\n  \"signature\": \"ztemk8\",\n  \"profile\": \"xbnye1\"\n}",
               "options": {
                 "raw": {
                   "language": "json"
@@ -1427,12 +1768,12 @@
                   "key": "id",
                   "type": "text",
                   "description": "No comments found.",
-                  "value": "681"
+                  "value": "27"
                 }
               ]
             },
             "url": {
-              "raw": "http://localhost:8088/user/u?id\u003d681",
+              "raw": "http://localhost:8088/user/u?id\u003d27",
               "protocol": "http",
               "path": [
                 "user",
@@ -1445,7 +1786,7 @@
               "query": [
                 {
                   "key": "id",
-                  "value": "999",
+                  "value": "757",
                   "description": "No comments found."
                 }
               ],
@@ -1467,12 +1808,12 @@
                   "key": "username",
                   "type": "text",
                   "description": "No comments found.",
-                  "value": "sherwood.wilkinson"
+                  "value": "sallie.dicki"
                 }
               ]
             },
             "url": {
-              "raw": "http://localhost:8088/user/?username\u003dsherwood.wilkinson",
+              "raw": "http://localhost:8088/user/?username\u003dsallie.dicki",
               "protocol": "http",
               "path": [
                 "user",
@@ -1485,7 +1826,7 @@
               "query": [
                 {
                   "key": "username",
-                  "value": "sherwood.wilkinson",
+                  "value": "sallie.dicki",
                   "description": "No comments found."
                 }
               ],
@@ -1502,7 +1843,7 @@
             "method": "PUT",
             "body": {
               "mode": "raw",
-              "raw": "{\n  \"id\": 704,\n  \"username\": \"sherwood.wilkinson\",\n  \"password\": \"a34j2n\",\n  \"token\": \"7g707l\",\n  \"avatar\": \"gi7ktb\",\n  \"age\": 46,\n  \"gender\": true,\n  \"location\": \"g2b3ww\",\n  \"signature\": \"iqq3h3\",\n  \"profile\": \"oj6o1c\"\n}",
+              "raw": "{\n  \"id\": 130,\n  \"username\": \"sallie.dicki\",\n  \"password\": \"lr34in\",\n  \"token\": \"hgiw9a\",\n  \"avatar\": \"8qcj6m\",\n  \"age\": 3,\n  \"gender\": true,\n  \"location\": \"f91bmj\",\n  \"signature\": \"uhzk6j\",\n  \"profile\": \"uh26jh\"\n}",
               "options": {
                 "raw": {
                   "language": "json"
@@ -1510,7 +1851,7 @@
               }
             },
             "url": {
-              "raw": "http://localhost:8088/user/?id\u003d600",
+              "raw": "http://localhost:8088/user/?id\u003d466",
               "protocol": "http",
               "path": [
                 "user",
@@ -1523,7 +1864,7 @@
               "query": [
                 {
                   "key": "id",
-                  "value": "691",
+                  "value": "554",
                   "description": "No comments found."
                 }
               ],

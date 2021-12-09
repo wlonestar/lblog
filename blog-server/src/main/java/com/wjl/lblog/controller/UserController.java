@@ -24,7 +24,7 @@ public class UserController {
      *
      * @param user 用户
      */
-    @RequestMapping(method = RequestMethod.POST)
+    @RequestMapping(value = "/", method = RequestMethod.POST)
     public User add(@RequestBody User user) {
         return userService.add(user);
     }
@@ -32,8 +32,8 @@ public class UserController {
     /**
      * 根据 id 获取用户信息
      */
-    @RequestMapping(method = RequestMethod.GET, value = "/u")
-    public User getUserById(@RequestParam Long id) {
+    @RequestMapping(value = "/user", method = RequestMethod.GET)
+    public User getUserById(@RequestParam(name = "id") Long id) {
         User user = userService.findById(id);
         user.setPassword(null);
         return user;
@@ -42,8 +42,8 @@ public class UserController {
     /**
      * 根据用户名获取用户信息
      */
-    @RequestMapping(method = RequestMethod.GET)
-    public User getUserInfo(@RequestParam String username) {
+    @RequestMapping(value = "/name", method = RequestMethod.GET)
+    public User getUserInfo(@RequestParam(name = "username") String username) {
         User user = userService.findByUsername(username);
         user.setId(null);
         user.setPassword(null);
@@ -55,8 +55,8 @@ public class UserController {
      *
      * @param user 用户信息
      */
-    @RequestMapping(method = RequestMethod.PUT)
-    public User update(@RequestParam Long id, @RequestBody User user) {
+    @RequestMapping(value = "/password", method = RequestMethod.PUT)
+    public User update(@RequestParam(name = "id") Long id, @RequestBody User user) {
         return userService.update(id, user);
     }
 

@@ -30,10 +30,12 @@ public class TimelineController {
      * @param page 页数
      * @param size 数量
      */
-    @RequestMapping(method = RequestMethod.GET)
+    @RequestMapping(value = "/page", method = RequestMethod.GET)
     public Page<Timeline> findAllByPage(
-            @RequestParam(defaultValue = "1") int page, @RequestParam(defaultValue = "10") int size) {
-        return TimelineService.findAllByPage(PageRequest.of(page - 1, size, Sort.Direction.DESC, "createTime"));
+            @RequestParam(name = "page", defaultValue = "1") int page,
+            @RequestParam(name = "size", defaultValue = "10") int size) {
+        return TimelineService.findAllByPage(
+                PageRequest.of(page - 1, size, Sort.Direction.DESC, "createTime"));
     }
 
     /**
@@ -50,7 +52,7 @@ public class TimelineController {
      * @param id id
      */
     @RequestMapping(value = "/{id}", method = RequestMethod.GET)
-    public Timeline findById(@PathVariable Long id) {
+    public Timeline findById(@PathVariable(name = "id") Long id) {
         return TimelineService.findById(id);
     }
 
@@ -59,7 +61,7 @@ public class TimelineController {
      *
      * @param idea 动态
      */
-    @RequestMapping(method = RequestMethod.POST)
+    @RequestMapping(value = "/", method = RequestMethod.POST)
     public Timeline add(@RequestBody Timeline idea) {
         return TimelineService.add(idea);
     }
@@ -70,8 +72,8 @@ public class TimelineController {
      * @param id id
      * @param idea 动态
      */
-    @RequestMapping(method = RequestMethod.PUT)
-    public Timeline update(@RequestParam("id") Long id, @RequestBody Timeline idea) {
+    @RequestMapping(value = "/", method = RequestMethod.PUT)
+    public Timeline update(@RequestParam(name = "id") Long id, @RequestBody Timeline idea) {
         return TimelineService.update(id, idea);
     }
 
@@ -80,15 +82,15 @@ public class TimelineController {
      *
      * @param id id
      */
-    @RequestMapping(method = RequestMethod.DELETE)
-    public Long deleteById(@RequestParam("id") Long id) {
+    @RequestMapping(value = "/{id}", method = RequestMethod.DELETE)
+    public Long deleteById(@PathVariable(name = "id") Long id) {
         return TimelineService.deleteById(id);
     }
 
     /**
      * 删除所有动态
      */
-    @DeleteMapping("/delete")
+    @RequestMapping(value = "/", method = RequestMethod.DELETE)
     public void deleteAll() {
         TimelineService.deleteAll();
     }

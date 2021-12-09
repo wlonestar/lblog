@@ -1,14 +1,18 @@
 package com.wjl.lblog.controller;
 
+import com.wjl.lblog.common.constants.Result;
+import com.wjl.lblog.common.enums.HttpStatus;
+import com.wjl.lblog.model.dto.ArticleDto;
 import com.wjl.lblog.model.vo.ArticleDetailVo;
 import com.wjl.lblog.model.vo.ArticleSummaryVo;
-import com.wjl.lblog.model.entity.Article;
+import com.wjl.lblog.model.vo.ArticleTitleVo;
 import com.wjl.lblog.service.intf.ArticleService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.*;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Objects;
 
 /**
  * 文章
@@ -30,9 +34,25 @@ public class ArticleController {
     /**
      * 查询所有文章摘要
      */
-    @RequestMapping(value = "/all", method = RequestMethod.GET)
-    public List<ArticleSummaryVo> getAll() {
-        return articleService.findAllArticleSummary();
+    @RequestMapping(value = "/all/summary", method = RequestMethod.GET)
+    public List<ArticleSummaryVo> getAllSummary() {
+        return articleService.findAllSummary();
+    }
+
+    /**
+     * 查询所有文章详情
+     */
+    @RequestMapping(value = "/all/detail", method = RequestMethod.GET)
+    public List<ArticleDetailVo> getAllDetail() {
+        return articleService.findAllDetail();
+    }
+
+    /**
+     * 查询所有文章
+     */
+    @RequestMapping(value = "/all/title", method = RequestMethod.GET)
+    public List<ArticleTitleVo> getAllTitle() {
+        return articleService.findAllTitle();
     }
 
     /**
@@ -41,10 +61,11 @@ public class ArticleController {
      * @param page page
      * @param size size
      */
-    @RequestMapping(value = "/page", method = RequestMethod.GET)
-    public Page<ArticleSummaryVo> findAllByPage(@RequestParam(defaultValue = "1") int page,
-                                                @RequestParam(defaultValue = "10") int size) {
-        return articleService.findAllByPage(PageRequest.of(page - 1, size));
+    @RequestMapping(value = "/all/page", method = RequestMethod.GET)
+    public Page<ArticleSummaryVo> findAllByPage(
+            @RequestParam(name = "page", defaultValue = "1") int page,
+            @RequestParam(name = "size", defaultValue = "5") int size) {
+        return articleService.findSummaryByPage(PageRequest.of(page - 1, size));
     }
 
     /**
@@ -52,9 +73,14 @@ public class ArticleController {
      *
      * @param id id
      */
-    @RequestMapping(value = "/id", method = RequestMethod.GET)
-    public ArticleDetailVo getById(@RequestParam Long id) {
-        return articleService.findById(id);
+    @RequestMapping(value = "/single/id", method = RequestMethod.GET)
+    public Object getById(@RequestParam(name = "id") Long id) {
+        ArticleDetailVo articleDetailVo = articleService.getById(id);
+        if (!Objects.isNull(articleDetailVo)) {
+            return articleDetailVo;
+        } else {
+            return Result.fail(HttpStatus.FAILED.getCode(), "can't find article by param");
+        }
     }
 
     /**
@@ -62,11 +88,15 @@ public class ArticleController {
      *
      * @param title title
      */
-    @RequestMapping(value = "/title", method = RequestMethod.GET)
-    public ArticleDetailVo getByTitle(@RequestParam String title) {
-        return articleService.findByTitle(title);
+    @RequestMapping(value = "/single/title", method = RequestMethod.GET)
+    public Object getByTitle(@RequestParam(name = "title") String title) {
+        ArticleDetailVo articleDetailVo = articleService.getByTitle(title);
+        if (!Objects.isNull(articleDetailVo)) {
+            return articleDetailVo;
+        } else {
+            return Result.fail(HttpStatus.FAILED.getCode(), "can't find article by param");
+        }
     }
-
 
     // POST
     ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -74,11 +104,21 @@ public class ArticleController {
     /**
      * 增加文章
      *
-     * @param articleDetailVo
+     * @param articleDto arrticle
      */
-    @RequestMapping(method = RequestMethod.POST)
-    public ArticleDetailVo add(@RequestBody ArticleDetailVo articleDetailVo) {
-        return articleService.add(articleDetailVo);
+    @RequestMapping(value = "/", method = RequestMethod.POST)
+    public Object add(@RequestBody ArticleDto articleDto) {
+        if (Objects.isNull(articleDto)) {
+            return Result.fail(HttpStatus.FAILED.getCode(), "the input is null");
+        }
+        if (!Objects.isNull(articleService.findByTitle(articleDto.getTitle()))) {
+            return Result.fail(HttpStatus.FAILED.getCode(), "the article title is same");
+        }
+        if (articleService.add(articleDto)) {
+            return articleDto;
+        } else {
+            return Result.fail(HttpStatus.FAILED.getCode(), "can't add article");
+        }
     }
 
     // PUT
@@ -87,12 +127,12 @@ public class ArticleController {
     /**
      * 根据 id 更新文章
      *
-     * @param id
-     * @param articleDetailVo
+     * @param id id
+     * @param articleDto article
      */
-    @RequestMapping(method = RequestMethod.PUT)
-    public ArticleDetailVo update(@RequestParam("id") Long id, @RequestBody ArticleDetailVo articleDetailVo) {
-        return articleService.update(id, articleDetailVo);
+    @RequestMapping(value = "/", method = RequestMethod.PUT)
+    public ArticleDetailVo update(@RequestParam(name = "id") Long id, @RequestBody ArticleDto articleDto) {
+        return null;
     }
 
     // DELETE
@@ -101,11 +141,15 @@ public class ArticleController {
     /**
      * 根据 id 删除文章
      *
-     * @param id
+     * @param id id
      */
-    @RequestMapping(method = RequestMethod.DELETE)
-    public Article deleteById(@RequestParam("id") Long id) {
-        return articleService.deleteById(id);
+    @RequestMapping(value = "/{id}", method = RequestMethod.DELETE)
+    public Object deleteById(@PathVariable(name = "id") Long id) {
+        if (articleService.deleteById(id)) {
+            return id;
+        } else {
+            return Result.fail(HttpStatus.FAILED.getCode(), "delete failed");
+        }
     }
 
 }

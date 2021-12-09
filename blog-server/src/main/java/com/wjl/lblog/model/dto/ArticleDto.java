@@ -2,18 +2,21 @@ package com.wjl.lblog.model.dto;
 
 import lombok.Data;
 
+import java.util.List;
+
 /**
  * @author: wjl
- * @date: 2021/12/8 20:09
+ * @date: 2021/12/9 10:08
  * @version: v1.0
  */
 @Data
 public class ArticleDto {
 
-    private Long id;
-
-    private Long categoryId;
-
-    private Long tagId;
+    private String title;
+    private String summary;
+    private String cover;
+    private String content;
+    private String category;
+    private List<String> tags;
 
 }
