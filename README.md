@@ -6,6 +6,8 @@ GitHub: [wjl-lab/lblog: 前后端分离个人博客，支持markdown渲染，图
 
 <!-- Gitee: [lblog: 前后端分离个人博客，支持markdown渲染，图片上传下载 (gitee.com)](https://gitee.com/wjl-lab/lblog) -->
 
+**缓慢修改中，如果需要参考源代码请去release下载**
+
 后端技术：
 
 - SpringBoot
