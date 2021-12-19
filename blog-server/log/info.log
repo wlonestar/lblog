@@ -367,3 +367,1121 @@ Error starting ApplicationContext. To display the conditions report re-run your 
 [2021-12-19 10:07:30,981][SpringApplicationShutdownHook][INFO][org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean:651] Closing JPA EntityManagerFactory for persistence unit 'default'
 [2021-12-19 10:07:30,981][SpringApplicationShutdownHook][INFO][com.zaxxer.hikari.HikariDataSource:350] HikariPool-1 - Shutdown initiated...
 [2021-12-19 10:07:30,981][SpringApplicationShutdownHook][INFO][com.zaxxer.hikari.HikariDataSource:352] HikariPool-1 - Shutdown completed.
+[2021-12-19 20:43:22,902][main][INFO][com.wjl.lblog.BlogServerApplication:55] Starting BlogServerApplication using Java 17 on lonestar with PID 35336 (D:\wjl\repository\blog\Lblog\blog-server\target\classes started by wjl in D:\wjl\repository\blog\Lblog\blog-server)
+[2021-12-19 20:43:22,910][main][INFO][com.wjl.lblog.BlogServerApplication:635] No active profile set, falling back to default profiles: default
+[2021-12-19 20:43:23,535][main][INFO][org.springframework.data.repository.config.RepositoryConfigurationDelegate:132] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[2021-12-19 20:43:23,619][main][INFO][org.springframework.data.repository.config.RepositoryConfigurationDelegate:201] Finished Spring Data repository scanning in 75 ms. Found 8 JPA repository interfaces.
+[2021-12-19 20:43:24,056][main][INFO][org.springframework.boot.web.embedded.tomcat.TomcatWebServer:108] Tomcat initialized with port(s): 8088 (http)
+[2021-12-19 20:43:24,072][main][INFO][org.apache.coyote.http11.Http11NioProtocol:173] Initializing ProtocolHandler ["http-nio-8088"]
+[2021-12-19 20:43:24,072][main][INFO][org.apache.catalina.core.StandardService:173] Starting service [Tomcat]
+[2021-12-19 20:43:24,073][main][INFO][org.apache.catalina.core.StandardEngine:173] Starting Servlet engine: [Apache Tomcat/9.0.55]
+[2021-12-19 20:43:24,075][main][INFO][org.apache.catalina.core.AprLifecycleListener:173] Loaded Apache Tomcat Native library [1.2.30] using APR version [1.7.0].
+[2021-12-19 20:43:24,075][main][INFO][org.apache.catalina.core.AprLifecycleListener:173] APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true], UDS [true].
+[2021-12-19 20:43:24,075][main][INFO][org.apache.catalina.core.AprLifecycleListener:173] APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+[2021-12-19 20:43:24,086][main][INFO][org.apache.catalina.core.AprLifecycleListener:173] OpenSSL successfully initialized [OpenSSL 1.1.1k  25 Mar 2021]
+[2021-12-19 20:43:24,175][main][INFO][org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]:173] Initializing Spring embedded WebApplicationContext
+[2021-12-19 20:43:24,175][main][INFO][org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext:290] Root WebApplicationContext: initialization completed in 1228 ms
+[2021-12-19 20:43:24,285][main][INFO][org.hibernate.jpa.internal.util.LogHelper:31] HHH000204: Processing PersistenceUnitInfo [name: default]
+[2021-12-19 20:43:24,332][main][INFO][org.hibernate.Version:44] HHH000412: Hibernate ORM core version 5.6.1.Final
+[2021-12-19 20:43:24,447][main][INFO][org.hibernate.annotations.common.Version:56] HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+[2021-12-19 20:43:24,524][main][INFO][com.zaxxer.hikari.HikariDataSource:110] HikariPool-1 - Starting...
+[2021-12-19 20:43:24,620][main][INFO][com.zaxxer.hikari.HikariDataSource:123] HikariPool-1 - Start completed.
+[2021-12-19 20:43:24,631][main][INFO][org.hibernate.dialect.Dialect:175] HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+[2021-12-19 20:43:25,108][main][INFO][org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator:52] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[2021-12-19 20:43:25,116][main][INFO][org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean:437] Initialized JPA EntityManagerFactory for persistence unit 'default'
+[2021-12-19 20:43:26,097][main][INFO][org.apache.coyote.http11.Http11NioProtocol:173] Starting ProtocolHandler ["http-nio-8088"]
+[2021-12-19 20:43:26,128][main][INFO][org.springframework.boot.web.embedded.tomcat.TomcatWebServer:220] Tomcat started on port(s): 8088 (http) with context path ''
+[2021-12-19 20:43:26,136][main][INFO][com.wjl.lblog.BlogServerApplication:61] Started BlogServerApplication in 3.545 seconds (JVM running for 4.565)
+[2021-12-19 20:43:30,320][SpringApplicationShutdownHook][INFO][org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean:651] Closing JPA EntityManagerFactory for persistence unit 'default'
+[2021-12-19 20:43:30,322][SpringApplicationShutdownHook][INFO][com.zaxxer.hikari.HikariDataSource:350] HikariPool-1 - Shutdown initiated...
+[2021-12-19 20:43:30,326][SpringApplicationShutdownHook][INFO][com.zaxxer.hikari.HikariDataSource:352] HikariPool-1 - Shutdown completed.
+[2021-12-19 20:46:40,732][main][INFO][com.wjl.lblog.BlogServerApplication:55] Starting BlogServerApplication using Java 17 on lonestar with PID 35088 (D:\wjl\repository\blog\Lblog\blog-server\target\classes started by wjl in D:\wjl\repository\blog\Lblog\blog-server)
+[2021-12-19 20:46:40,739][main][INFO][com.wjl.lblog.BlogServerApplication:635] No active profile set, falling back to default profiles: default
+[2021-12-19 20:46:41,257][main][INFO][org.springframework.data.repository.config.RepositoryConfigurationDelegate:132] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[2021-12-19 20:46:41,333][main][INFO][org.springframework.data.repository.config.RepositoryConfigurationDelegate:201] Finished Spring Data repository scanning in 69 ms. Found 8 JPA repository interfaces.
+[2021-12-19 20:46:41,727][main][INFO][org.springframework.boot.web.embedded.tomcat.TomcatWebServer:108] Tomcat initialized with port(s): 8088 (http)
+[2021-12-19 20:46:41,733][main][INFO][org.apache.coyote.http11.Http11NioProtocol:173] Initializing ProtocolHandler ["http-nio-8088"]
+[2021-12-19 20:46:41,734][main][INFO][org.apache.catalina.core.StandardService:173] Starting service [Tomcat]
+[2021-12-19 20:46:41,734][main][INFO][org.apache.catalina.core.StandardEngine:173] Starting Servlet engine: [Apache Tomcat/9.0.55]
+[2021-12-19 20:46:41,735][main][INFO][org.apache.catalina.core.AprLifecycleListener:173] Loaded Apache Tomcat Native library [1.2.30] using APR version [1.7.0].
+[2021-12-19 20:46:41,735][main][INFO][org.apache.catalina.core.AprLifecycleListener:173] APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true], UDS [true].
+[2021-12-19 20:46:41,735][main][INFO][org.apache.catalina.core.AprLifecycleListener:173] APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+[2021-12-19 20:46:41,738][main][INFO][org.apache.catalina.core.AprLifecycleListener:173] OpenSSL successfully initialized [OpenSSL 1.1.1k  25 Mar 2021]
+[2021-12-19 20:46:41,832][main][INFO][org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]:173] Initializing Spring embedded WebApplicationContext
+[2021-12-19 20:46:41,832][main][INFO][org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext:290] Root WebApplicationContext: initialization completed in 1060 ms
+[2021-12-19 20:46:41,929][main][INFO][org.hibernate.jpa.internal.util.LogHelper:31] HHH000204: Processing PersistenceUnitInfo [name: default]
+[2021-12-19 20:46:41,960][main][INFO][org.hibernate.Version:44] HHH000412: Hibernate ORM core version 5.6.1.Final
+[2021-12-19 20:46:42,040][main][INFO][org.hibernate.annotations.common.Version:56] HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+[2021-12-19 20:46:42,096][main][INFO][com.zaxxer.hikari.HikariDataSource:110] HikariPool-1 - Starting...
+[2021-12-19 20:46:42,179][main][INFO][com.zaxxer.hikari.HikariDataSource:123] HikariPool-1 - Start completed.
+[2021-12-19 20:46:42,187][main][INFO][org.hibernate.dialect.Dialect:175] HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+[2021-12-19 20:46:42,551][main][INFO][org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator:52] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[2021-12-19 20:46:42,556][main][INFO][org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean:437] Initialized JPA EntityManagerFactory for persistence unit 'default'
+[2021-12-19 20:46:43,416][main][INFO][org.apache.coyote.http11.Http11NioProtocol:173] Starting ProtocolHandler ["http-nio-8088"]
+[2021-12-19 20:46:43,447][main][INFO][org.springframework.boot.web.embedded.tomcat.TomcatWebServer:220] Tomcat started on port(s): 8088 (http) with context path ''
+[2021-12-19 20:46:43,455][main][INFO][com.wjl.lblog.BlogServerApplication:61] Started BlogServerApplication in 3.02 seconds (JVM running for 3.799)
+[2021-12-19 20:50:06,746][SpringApplicationShutdownHook][INFO][org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean:651] Closing JPA EntityManagerFactory for persistence unit 'default'
+[2021-12-19 20:50:06,748][SpringApplicationShutdownHook][INFO][com.zaxxer.hikari.HikariDataSource:350] HikariPool-1 - Shutdown initiated...
+[2021-12-19 20:50:06,752][SpringApplicationShutdownHook][INFO][com.zaxxer.hikari.HikariDataSource:352] HikariPool-1 - Shutdown completed.
+20:50:09.337 [main] INFO  com.wjl.lblog.BlogServerApplication - Starting BlogServerApplication using Java 17 on lonestar with PID 26780 (D:\wjl\repository\blog\Lblog\blog-server\target\classes started by wjl in D:\wjl\repository\blog\Lblog\blog-server)
+20:50:09.343 [main] INFO  com.wjl.lblog.BlogServerApplication - No active profile set, falling back to default profiles: default
+20:50:10.368 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8088"]
+20:50:10.369 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+20:50:10.369 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.55]
+20:50:10.370 [main] WARN  org.apache.catalina.core.AprLifecycleListener - This listener must only be nested within Server elements, but is in [TomcatEmbeddedContext].
+20:50:10.377 [main] INFO  org.apache.catalina.core.AprLifecycleListener - Loaded Apache Tomcat Native library [1.2.30] using APR version [1.7.0].
+20:50:10.377 [main] INFO  org.apache.catalina.core.AprLifecycleListener - APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true], UDS [true].
+20:50:10.377 [main] INFO  org.apache.catalina.core.AprLifecycleListener - APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+20:50:10.380 [main] INFO  org.apache.catalina.core.AprLifecycleListener - OpenSSL successfully initialized [OpenSSL 1.1.1k  25 Mar 2021]
+20:50:10.469 [main] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+20:50:10.569 [main] INFO  org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+20:50:10.598 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.1.Final
+20:50:10.675 [main] INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+20:50:10.733 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+20:50:10.818 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+20:50:10.826 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+20:50:11.197 [main] INFO  org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+20:50:12.062 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8088"]
+20:50:12.103 [main] INFO  com.wjl.lblog.BlogServerApplication - Started BlogServerApplication in 3.061 seconds (JVM running for 3.921)
+20:50:17.759 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+20:50:17.763 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+20:50:47.214 [main] INFO  com.wjl.lblog.BlogServerApplication - Starting BlogServerApplication using Java 17 on lonestar with PID 34728 (D:\wjl\repository\blog\Lblog\blog-server\target\classes started by wjl in D:\wjl\repository\blog\Lblog\blog-server)
+20:50:47.221 [main] INFO  com.wjl.lblog.BlogServerApplication - No active profile set, falling back to default profiles: default
+20:50:48.186 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8088"]
+20:50:48.187 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+20:50:48.187 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.55]
+20:50:48.188 [main] WARN  org.apache.catalina.core.AprLifecycleListener - This listener must only be nested within Server elements, but is in [TomcatEmbeddedContext].
+20:50:48.188 [main] INFO  org.apache.catalina.core.AprLifecycleListener - Loaded Apache Tomcat Native library [1.2.30] using APR version [1.7.0].
+20:50:48.189 [main] INFO  org.apache.catalina.core.AprLifecycleListener - APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true], UDS [true].
+20:50:48.189 [main] INFO  org.apache.catalina.core.AprLifecycleListener - APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+20:50:48.192 [main] INFO  org.apache.catalina.core.AprLifecycleListener - OpenSSL successfully initialized [OpenSSL 1.1.1k  25 Mar 2021]
+20:50:48.277 [main] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+20:50:48.370 [main] INFO  org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+20:50:48.403 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.1.Final
+20:50:48.481 [main] INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+20:50:48.535 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+20:50:48.616 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+20:50:48.624 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+20:50:48.989 [main] INFO  org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+20:50:49.865 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8088"]
+20:50:49.906 [main] INFO  com.wjl.lblog.BlogServerApplication - Started BlogServerApplication in 2.989 seconds (JVM running for 3.777)
+20:51:20.524 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+20:51:20.528 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2021:12:19 20:51:23 [main] INFO  com.wjl.lblog.BlogServerApplication - Starting BlogServerApplication using Java 17 on lonestar with PID 33468 (D:\wjl\repository\blog\Lblog\blog-server\target\classes started by wjl in D:\wjl\repository\blog\Lblog\blog-server)
+2021:12:19 20:51:23 [main] INFO  com.wjl.lblog.BlogServerApplication - No active profile set, falling back to default profiles: default
+2021:12:19 20:51:24 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8088"]
+2021:12:19 20:51:24 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2021:12:19 20:51:24 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.55]
+2021:12:19 20:51:24 [main] WARN  org.apache.catalina.core.AprLifecycleListener - This listener must only be nested within Server elements, but is in [TomcatEmbeddedContext].
+2021:12:19 20:51:24 [main] INFO  org.apache.catalina.core.AprLifecycleListener - Loaded Apache Tomcat Native library [1.2.30] using APR version [1.7.0].
+2021:12:19 20:51:24 [main] INFO  org.apache.catalina.core.AprLifecycleListener - APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true], UDS [true].
+2021:12:19 20:51:24 [main] INFO  org.apache.catalina.core.AprLifecycleListener - APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2021:12:19 20:51:24 [main] INFO  org.apache.catalina.core.AprLifecycleListener - OpenSSL successfully initialized [OpenSSL 1.1.1k  25 Mar 2021]
+2021:12:19 20:51:24 [main] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2021:12:19 20:51:24 [main] INFO  org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2021:12:19 20:51:24 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.1.Final
+2021:12:19 20:51:24 [main] INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021:12:19 20:51:24 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2021:12:19 20:51:24 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2021:12:19 20:51:24 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2021:12:19 20:51:24 [main] INFO  org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021:12:19 20:51:25 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8088"]
+2021:12:19 20:51:25 [main] INFO  com.wjl.lblog.BlogServerApplication - Started BlogServerApplication in 2.968 seconds (JVM running for 3.767)
+2021:12:19 20:51:34 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2021:12:19 20:51:34 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2021-12-19 20:51:36 [main] INFO  com.wjl.lblog.BlogServerApplication - Starting BlogServerApplication using Java 17 on lonestar with PID 19296 (D:\wjl\repository\blog\Lblog\blog-server\target\classes started by wjl in D:\wjl\repository\blog\Lblog\blog-server)
+2021-12-19 20:51:36 [main] INFO  com.wjl.lblog.BlogServerApplication - No active profile set, falling back to default profiles: default
+2021-12-19 20:51:37 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8088"]
+2021-12-19 20:51:37 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2021-12-19 20:51:37 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.55]
+2021-12-19 20:51:37 [main] WARN  org.apache.catalina.core.AprLifecycleListener - This listener must only be nested within Server elements, but is in [TomcatEmbeddedContext].
+2021-12-19 20:51:37 [main] INFO  org.apache.catalina.core.AprLifecycleListener - Loaded Apache Tomcat Native library [1.2.30] using APR version [1.7.0].
+2021-12-19 20:51:37 [main] INFO  org.apache.catalina.core.AprLifecycleListener - APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true], UDS [true].
+2021-12-19 20:51:37 [main] INFO  org.apache.catalina.core.AprLifecycleListener - APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2021-12-19 20:51:37 [main] INFO  org.apache.catalina.core.AprLifecycleListener - OpenSSL successfully initialized [OpenSSL 1.1.1k  25 Mar 2021]
+2021-12-19 20:51:37 [main] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2021-12-19 20:51:37 [main] INFO  org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-12-19 20:51:37 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.1.Final
+2021-12-19 20:51:37 [main] INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-12-19 20:51:38 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2021-12-19 20:51:38 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2021-12-19 20:51:38 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2021-12-19 20:51:38 [main] INFO  org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-12-19 20:51:39 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8088"]
+2021-12-19 20:51:39 [main] INFO  com.wjl.lblog.BlogServerApplication - Started BlogServerApplication in 3.028 seconds (JVM running for 3.787)
+2021-12-19 20:52:38 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2021-12-19 20:52:38 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+[2021-12-19 20:52:40][main] INFO  com.wjl.lblog.BlogServerApplication - Starting BlogServerApplication using Java 17 on lonestar with PID 33472 (D:\wjl\repository\blog\Lblog\blog-server\target\classes started by wjl in D:\wjl\repository\blog\Lblog\blog-server)
+[2021-12-19 20:52:40][main] INFO  com.wjl.lblog.BlogServerApplication - No active profile set, falling back to default profiles: default
+[2021-12-19 20:52:41][main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8088"]
+[2021-12-19 20:52:41][main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+[2021-12-19 20:52:41][main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.55]
+[2021-12-19 20:52:41][main] WARN  org.apache.catalina.core.AprLifecycleListener - This listener must only be nested within Server elements, but is in [TomcatEmbeddedContext].
+[2021-12-19 20:52:41][main] INFO  org.apache.catalina.core.AprLifecycleListener - Loaded Apache Tomcat Native library [1.2.30] using APR version [1.7.0].
+[2021-12-19 20:52:41][main] INFO  org.apache.catalina.core.AprLifecycleListener - APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true], UDS [true].
+[2021-12-19 20:52:41][main] INFO  org.apache.catalina.core.AprLifecycleListener - APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+[2021-12-19 20:52:41][main] INFO  org.apache.catalina.core.AprLifecycleListener - OpenSSL successfully initialized [OpenSSL 1.1.1k  25 Mar 2021]
+[2021-12-19 20:52:41][main] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+[2021-12-19 20:52:42][main] INFO  org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+[2021-12-19 20:52:42][main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.1.Final
+[2021-12-19 20:52:42][main] INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+[2021-12-19 20:52:42][main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+[2021-12-19 20:52:42][main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+[2021-12-19 20:52:42][main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+[2021-12-19 20:52:42][main] INFO  org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[2021-12-19 20:52:43][main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8088"]
+[2021-12-19 20:52:43][main] INFO  com.wjl.lblog.BlogServerApplication - Started BlogServerApplication in 2.977 seconds (JVM running for 3.722)
+[2021-12-19 20:56:12][SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+[2021-12-19 20:56:12][SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+[2021-12-19 20:56:15][main] INFO com.wjl.lblog.BlogServerApplication - Starting BlogServerApplication using Java 17 on lonestar with PID 35772 (D:\wjl\repository\blog\Lblog\blog-server\target\classes started by wjl in D:\wjl\repository\blog\Lblog\blog-server)
+[2021-12-19 20:56:15][main] INFO com.wjl.lblog.BlogServerApplication - No active profile set, falling back to default profiles: default
+[2021-12-19 20:56:16][main] INFO org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8088"]
+[2021-12-19 20:56:16][main] INFO org.apache.catalina.core.StandardService - Starting service [Tomcat]
+[2021-12-19 20:56:16][main] INFO org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.55]
+[2021-12-19 20:56:16][main] WARN org.apache.catalina.core.AprLifecycleListener - This listener must only be nested within Server elements, but is in [TomcatEmbeddedContext].
+[2021-12-19 20:56:16][main] INFO org.apache.catalina.core.AprLifecycleListener - Loaded Apache Tomcat Native library [1.2.30] using APR version [1.7.0].
+[2021-12-19 20:56:16][main] INFO org.apache.catalina.core.AprLifecycleListener - APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true], UDS [true].
+[2021-12-19 20:56:16][main] INFO org.apache.catalina.core.AprLifecycleListener - APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+[2021-12-19 20:56:16][main] INFO org.apache.catalina.core.AprLifecycleListener - OpenSSL successfully initialized [OpenSSL 1.1.1k  25 Mar 2021]
+[2021-12-19 20:56:16][main] INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+[2021-12-19 20:56:16][main] INFO org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+[2021-12-19 20:56:16][main] INFO org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.1.Final
+[2021-12-19 20:56:16][main] INFO org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+[2021-12-19 20:56:16][main] INFO com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+[2021-12-19 20:56:16][main] INFO com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+[2021-12-19 20:56:16][main] INFO org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+[2021-12-19 20:56:16][main] INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[2021-12-19 20:56:17][main] INFO org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8088"]
+[2021-12-19 20:56:17][main] INFO com.wjl.lblog.BlogServerApplication - Started BlogServerApplication in 2.939 seconds (JVM running for 3.705)
+[2021-12-19 20:57:45][SpringApplicationShutdownHook] INFO com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+[2021-12-19 20:57:45][SpringApplicationShutdownHook] INFO com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+[2021-12-19 20:57:47][main] INFO  com.wjl.lblog.BlogServerApplication - Starting BlogServerApplication using Java 17 on lonestar with PID 36404 (D:\wjl\repository\blog\Lblog\blog-server\target\classes started by wjl in D:\wjl\repository\blog\Lblog\blog-server)
+[2021-12-19 20:57:47][main] INFO  com.wjl.lblog.BlogServerApplication - No active profile set, falling back to default profiles: default
+[2021-12-19 20:57:48][main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8088"]
+[2021-12-19 20:57:48][main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+[2021-12-19 20:57:48][main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.55]
+[2021-12-19 20:57:48][main] WARN  org.apache.catalina.core.AprLifecycleListener - This listener must only be nested within Server elements, but is in [TomcatEmbeddedContext].
+[2021-12-19 20:57:48][main] INFO  org.apache.catalina.core.AprLifecycleListener - Loaded Apache Tomcat Native library [1.2.30] using APR version [1.7.0].
+[2021-12-19 20:57:48][main] INFO  org.apache.catalina.core.AprLifecycleListener - APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true], UDS [true].
+[2021-12-19 20:57:48][main] INFO  org.apache.catalina.core.AprLifecycleListener - APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+[2021-12-19 20:57:48][main] INFO  org.apache.catalina.core.AprLifecycleListener - OpenSSL successfully initialized [OpenSSL 1.1.1k  25 Mar 2021]
+[2021-12-19 20:57:48][main] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+[2021-12-19 20:57:48][main] INFO  org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+[2021-12-19 20:57:48][main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.1.Final
+[2021-12-19 20:57:48][main] INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+[2021-12-19 20:57:49][main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+[2021-12-19 20:57:49][main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+[2021-12-19 20:57:49][main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+[2021-12-19 20:57:49][main] INFO  org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[2021-12-19 20:57:50][main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8088"]
+[2021-12-19 20:57:50][main] INFO  com.wjl.lblog.BlogServerApplication - Started BlogServerApplication in 2.987 seconds (JVM running for 3.742)
+[2021-12-19 20:57:57][SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+[2021-12-19 20:57:57][SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+[2021-12-19 20:57:59][main] INFO  com.wjl.lblog.BlogServerApplication - Starting BlogServerApplication using Java 17 on lonestar with PID 2304 (D:\wjl\repository\blog\Lblog\blog-server\target\classes started by wjl in D:\wjl\repository\blog\Lblog\blog-server)
+[2021-12-19 20:57:59][main] INFO  com.wjl.lblog.BlogServerApplication - No active profile set, falling back to default profiles: default
+[2021-12-19 20:58:00][main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8088"]
+[2021-12-19 20:58:00][main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+[2021-12-19 20:58:00][main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.55]
+[2021-12-19 20:58:00][main] WARN  org.apache.catalina.core.AprLifecycleListener - This listener must only be nested within Server elements, but is in [TomcatEmbeddedContext].
+[2021-12-19 20:58:00][main] INFO  org.apache.catalina.core.AprLifecycleListener - Loaded Apache Tomcat Native library [1.2.30] using APR version [1.7.0].
+[2021-12-19 20:58:00][main] INFO  org.apache.catalina.core.AprLifecycleListener - APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true], UDS [true].
+[2021-12-19 20:58:00][main] INFO  org.apache.catalina.core.AprLifecycleListener - APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+[2021-12-19 20:58:00][main] INFO  org.apache.catalina.core.AprLifecycleListener - OpenSSL successfully initialized [OpenSSL 1.1.1k  25 Mar 2021]
+[2021-12-19 20:58:01][main] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+[2021-12-19 20:58:01][main] INFO  org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+[2021-12-19 20:58:01][main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.1.Final
+[2021-12-19 20:58:01][main] INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+[2021-12-19 20:58:01][main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+[2021-12-19 20:58:01][main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+[2021-12-19 20:58:01][main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+[2021-12-19 20:58:01][main] INFO  org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[2021-12-19 20:58:02][main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8088"]
+[2021-12-19 20:58:02][main] INFO  com.wjl.lblog.BlogServerApplication - Started BlogServerApplication in 2.959 seconds (JVM running for 3.708)
+[2021-12-19 20:58:42][SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+[2021-12-19 20:58:42][SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+[2021-12-19 20:58:44][main] INFO  com.wjl.lblog.BlogServerApplication - Starting BlogServerApplication using Java 17 on lonestar with PID 1884 (D:\wjl\repository\blog\Lblog\blog-server\target\classes started by wjl in D:\wjl\repository\blog\Lblog\blog-server)
+[2021-12-19 20:58:44][main] INFO  com.wjl.lblog.BlogServerApplication - No active profile set, falling back to default profiles: default
+[2021-12-19 20:58:45][main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8088"]
+[2021-12-19 20:58:45][main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+[2021-12-19 20:58:45][main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.55]
+[2021-12-19 20:58:45][main] WARN  org.apache.catalina.core.AprLifecycleListener - This listener must only be nested within Server elements, but is in [TomcatEmbeddedContext].
+[2021-12-19 20:58:45][main] INFO  org.apache.catalina.core.AprLifecycleListener - Loaded Apache Tomcat Native library [1.2.30] using APR version [1.7.0].
+[2021-12-19 20:58:45][main] INFO  org.apache.catalina.core.AprLifecycleListener - APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true], UDS [true].
+[2021-12-19 20:58:45][main] INFO  org.apache.catalina.core.AprLifecycleListener - APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+[2021-12-19 20:58:45][main] INFO  org.apache.catalina.core.AprLifecycleListener - OpenSSL successfully initialized [OpenSSL 1.1.1k  25 Mar 2021]
+[2021-12-19 20:58:45][main] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+[2021-12-19 20:58:46][main] INFO  org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+[2021-12-19 20:58:46][main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.1.Final
+[2021-12-19 20:58:46][main] INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+[2021-12-19 20:58:46][main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+[2021-12-19 20:58:46][main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+[2021-12-19 20:58:46][main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+[2021-12-19 20:58:46][main] INFO  org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[2021-12-19 20:58:47][main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8088"]
+[2021-12-19 20:58:47][main] INFO  com.wjl.lblog.BlogServerApplication - Started BlogServerApplication in 2.962 seconds (JVM running for 3.733)
+[2021-12-19 20:58:58][SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+[2021-12-19 20:58:58][SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+[2021-12-19 20:59:00][main] INFO  com.wjl.lblog.BlogServerApplication - Starting BlogServerApplication using Java 17 on lonestar with PID 30172 (D:\wjl\repository\blog\Lblog\blog-server\target\classes started by wjl in D:\wjl\repository\blog\Lblog\blog-server)
+[2021-12-19 20:59:00][main] INFO  com.wjl.lblog.BlogServerApplication - No active profile set, falling back to default profiles: default
+[2021-12-19 20:59:01][main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8088"]
+[2021-12-19 20:59:01][main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+[2021-12-19 20:59:01][main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.55]
+[2021-12-19 20:59:01][main] WARN  org.apache.catalina.core.AprLifecycleListener - This listener must only be nested within Server elements, but is in [TomcatEmbeddedContext].
+[2021-12-19 20:59:01][main] INFO  org.apache.catalina.core.AprLifecycleListener - Loaded Apache Tomcat Native library [1.2.30] using APR version [1.7.0].
+[2021-12-19 20:59:01][main] INFO  org.apache.catalina.core.AprLifecycleListener - APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true], UDS [true].
+[2021-12-19 20:59:01][main] INFO  org.apache.catalina.core.AprLifecycleListener - APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+[2021-12-19 20:59:01][main] INFO  org.apache.catalina.core.AprLifecycleListener - OpenSSL successfully initialized [OpenSSL 1.1.1k  25 Mar 2021]
+[2021-12-19 20:59:01][main] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+[2021-12-19 20:59:01][main] INFO  org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+[2021-12-19 20:59:01][main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.1.Final
+[2021-12-19 20:59:02][main] INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+[2021-12-19 20:59:02][main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+[2021-12-19 20:59:02][main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+[2021-12-19 20:59:02][main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+[2021-12-19 20:59:02][main] INFO  org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[2021-12-19 20:59:03][main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8088"]
+[2021-12-19 20:59:03][main] INFO  com.wjl.lblog.BlogServerApplication - Started BlogServerApplication in 2.95 seconds (JVM running for 3.714)
+[2021-12-19 20:59:56][SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+[2021-12-19 20:59:56][SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+[2021-12-19 20:59:59][main] INFO  com.wjl.lblog.BlogServerApplication - Starting BlogServerApplication using Java 17 on lonestar with PID 22688 (D:\wjl\repository\blog\Lblog\blog-server\target\classes started by wjl in D:\wjl\repository\blog\Lblog\blog-server)
+[2021-12-19 20:59:59][main] INFO  com.wjl.lblog.BlogServerApplication - No active profile set, falling back to default profiles: default
+[2021-12-19 21:00:00][main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8088"]
+[2021-12-19 21:00:00][main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+[2021-12-19 21:00:00][main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.55]
+[2021-12-19 21:00:00][main] WARN  org.apache.catalina.core.AprLifecycleListener - This listener must only be nested within Server elements, but is in [TomcatEmbeddedContext].
+[2021-12-19 21:00:00][main] INFO  org.apache.catalina.core.AprLifecycleListener - Loaded Apache Tomcat Native library [1.2.30] using APR version [1.7.0].
+[2021-12-19 21:00:00][main] INFO  org.apache.catalina.core.AprLifecycleListener - APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true], UDS [true].
+[2021-12-19 21:00:00][main] INFO  org.apache.catalina.core.AprLifecycleListener - APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+[2021-12-19 21:00:00][main] INFO  org.apache.catalina.core.AprLifecycleListener - OpenSSL successfully initialized [OpenSSL 1.1.1k  25 Mar 2021]
+[2021-12-19 21:00:00][main] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+[2021-12-19 21:00:00][main] INFO  org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+[2021-12-19 21:00:00][main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.1.Final
+[2021-12-19 21:00:00][main] INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+[2021-12-19 21:00:00][main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+[2021-12-19 21:00:00][main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+[2021-12-19 21:00:00][main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+[2021-12-19 21:00:01][main] INFO  org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[2021-12-19 21:00:02][main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8088"]
+[2021-12-19 21:00:02][main] INFO  com.wjl.lblog.BlogServerApplication - Started BlogServerApplication in 3.323 seconds (JVM running for 4.238)
+[2021-12-19 21:00:33][SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+[2021-12-19 21:00:33][SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+[2021-12-19 21:00:36][main] INFO  com.wjl.lblog.BlogServerApplication - Starting BlogServerApplication using Java 17 on lonestar with PID 31736 (D:\wjl\repository\blog\Lblog\blog-server\target\classes started by wjl in D:\wjl\repository\blog\Lblog\blog-server)
+[2021-12-19 21:00:36][main] INFO  com.wjl.lblog.BlogServerApplication - No active profile set, falling back to default profiles: default
+[2021-12-19 21:00:37][main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8088"]
+[2021-12-19 21:00:37][main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+[2021-12-19 21:00:37][main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.55]
+[2021-12-19 21:00:37][main] WARN  org.apache.catalina.core.AprLifecycleListener - This listener must only be nested within Server elements, but is in [TomcatEmbeddedContext].
+[2021-12-19 21:00:37][main] INFO  org.apache.catalina.core.AprLifecycleListener - Loaded Apache Tomcat Native library [1.2.30] using APR version [1.7.0].
+[2021-12-19 21:00:37][main] INFO  org.apache.catalina.core.AprLifecycleListener - APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true], UDS [true].
+[2021-12-19 21:00:37][main] INFO  org.apache.catalina.core.AprLifecycleListener - APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+[2021-12-19 21:00:37][main] INFO  org.apache.catalina.core.AprLifecycleListener - OpenSSL successfully initialized [OpenSSL 1.1.1k  25 Mar 2021]
+[2021-12-19 21:00:37][main] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+[2021-12-19 21:00:37][main] INFO  org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+[2021-12-19 21:00:37][main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.1.Final
+[2021-12-19 21:00:37][main] INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+[2021-12-19 21:00:37][main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+[2021-12-19 21:00:37][main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+[2021-12-19 21:00:37][main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+[2021-12-19 21:00:38][main] INFO  org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[2021-12-19 21:00:38][main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8088"]
+[2021-12-19 21:00:39][main] INFO  com.wjl.lblog.BlogServerApplication - Started BlogServerApplication in 3.083 seconds (JVM running for 3.871)
+[2021-12-19 21:00:57][SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+[2021-12-19 21:00:57][SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+[2021-12-19 21:01:00][main] INFO  com.wjl.lblog.BlogServerApplication - Starting BlogServerApplication using Java 17 on lonestar with PID 31884 (D:\wjl\repository\blog\Lblog\blog-server\target\classes started by wjl in D:\wjl\repository\blog\Lblog\blog-server)
+[2021-12-19 21:01:00][main] INFO  com.wjl.lblog.BlogServerApplication - No active profile set, falling back to default profiles: default
+[2021-12-19 21:01:01][main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8088"]
+[2021-12-19 21:01:01][main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+[2021-12-19 21:01:01][main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.55]
+[2021-12-19 21:01:01][main] WARN  org.apache.catalina.core.AprLifecycleListener - This listener must only be nested within Server elements, but is in [TomcatEmbeddedContext].
+[2021-12-19 21:01:01][main] INFO  org.apache.catalina.core.AprLifecycleListener - Loaded Apache Tomcat Native library [1.2.30] using APR version [1.7.0].
+[2021-12-19 21:01:01][main] INFO  org.apache.catalina.core.AprLifecycleListener - APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true], UDS [true].
+[2021-12-19 21:01:01][main] INFO  org.apache.catalina.core.AprLifecycleListener - APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+[2021-12-19 21:01:01][main] INFO  org.apache.catalina.core.AprLifecycleListener - OpenSSL successfully initialized [OpenSSL 1.1.1k  25 Mar 2021]
+[2021-12-19 21:01:01][main] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+[2021-12-19 21:01:01][main] INFO  org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+[2021-12-19 21:01:01][main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.1.Final
+[2021-12-19 21:01:02][main] INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+[2021-12-19 21:01:02][main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+[2021-12-19 21:01:02][main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+[2021-12-19 21:01:02][main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+[2021-12-19 21:01:02][main] INFO  org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[2021-12-19 21:01:03][main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8088"]
+[2021-12-19 21:01:03][main] INFO  com.wjl.lblog.BlogServerApplication - Started BlogServerApplication in 3.381 seconds (JVM running for 4.374)
+[2021-12-19 21:01:27][SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+[2021-12-19 21:01:27][SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+[2021-12-19 21:01:29][main] INFO  com.wjl.lblog.BlogServerApplication - Starting BlogServerApplication using Java 17 on lonestar with PID 30336 (D:\wjl\repository\blog\Lblog\blog-server\target\classes started by wjl in D:\wjl\repository\blog\Lblog\blog-server)
+[2021-12-19 21:01:29][main] INFO  com.wjl.lblog.BlogServerApplication - No active profile set, falling back to default profiles: default
+[2021-12-19 21:01:30][main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8088"]
+[2021-12-19 21:01:30][main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+[2021-12-19 21:01:30][main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.55]
+[2021-12-19 21:01:30][main] WARN  org.apache.catalina.core.AprLifecycleListener - This listener must only be nested within Server elements, but is in [TomcatEmbeddedContext].
+[2021-12-19 21:01:30][main] INFO  org.apache.catalina.core.AprLifecycleListener - Loaded Apache Tomcat Native library [1.2.30] using APR version [1.7.0].
+[2021-12-19 21:01:30][main] INFO  org.apache.catalina.core.AprLifecycleListener - APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true], UDS [true].
+[2021-12-19 21:01:30][main] INFO  org.apache.catalina.core.AprLifecycleListener - APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+[2021-12-19 21:01:30][main] INFO  org.apache.catalina.core.AprLifecycleListener - OpenSSL successfully initialized [OpenSSL 1.1.1k  25 Mar 2021]
+[2021-12-19 21:01:31][main] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+[2021-12-19 21:01:31][main] INFO  org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+[2021-12-19 21:01:31][main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.1.Final
+[2021-12-19 21:01:31][main] INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+[2021-12-19 21:01:31][main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+[2021-12-19 21:01:31][main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+[2021-12-19 21:01:31][main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+[2021-12-19 21:01:31][main] INFO  org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[2021-12-19 21:01:32][main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8088"]
+[2021-12-19 21:01:32][main] INFO  com.wjl.lblog.BlogServerApplication - Started BlogServerApplication in 3.164 seconds (JVM running for 3.991)
+[2021-12-19 21:01:38][SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+[2021-12-19 21:01:38][SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+[2021-12-19 21:01:41][main] INFO  com.wjl.lblog.BlogServerApplication - Starting BlogServerApplication using Java 17 on lonestar with PID 13884 (D:\wjl\repository\blog\Lblog\blog-server\target\classes started by wjl in D:\wjl\repository\blog\Lblog\blog-server)
+[2021-12-19 21:01:41][main] INFO  com.wjl.lblog.BlogServerApplication - No active profile set, falling back to default profiles: default
+[2021-12-19 21:01:42][main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8088"]
+[2021-12-19 21:01:42][main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+[2021-12-19 21:01:42][main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.55]
+[2021-12-19 21:01:42][main] WARN  org.apache.catalina.core.AprLifecycleListener - This listener must only be nested within Server elements, but is in [TomcatEmbeddedContext].
+[2021-12-19 21:01:42][main] INFO  org.apache.catalina.core.AprLifecycleListener - Loaded Apache Tomcat Native library [1.2.30] using APR version [1.7.0].
+[2021-12-19 21:01:42][main] INFO  org.apache.catalina.core.AprLifecycleListener - APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true], UDS [true].
+[2021-12-19 21:01:42][main] INFO  org.apache.catalina.core.AprLifecycleListener - APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+[2021-12-19 21:01:42][main] INFO  org.apache.catalina.core.AprLifecycleListener - OpenSSL successfully initialized [OpenSSL 1.1.1k  25 Mar 2021]
+[2021-12-19 21:01:42][main] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+[2021-12-19 21:01:42][main] INFO  org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+[2021-12-19 21:01:42][main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.1.Final
+[2021-12-19 21:01:42][main] INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+[2021-12-19 21:01:42][main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+[2021-12-19 21:01:42][main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+[2021-12-19 21:01:42][main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+[2021-12-19 21:01:42][main] INFO  org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[2021-12-19 21:01:43][main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8088"]
+[2021-12-19 21:01:43][main] INFO  com.wjl.lblog.BlogServerApplication - Started BlogServerApplication in 3.017 seconds (JVM running for 3.768)
+[2021-12-19 21:01:58][SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+[2021-12-19 21:01:58][SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+[2021-12-19 21:02:01][main] INFO  com.wjl.lblog.BlogServerApplication - Starting BlogServerApplication using Java 17 on lonestar with PID 32436 (D:\wjl\repository\blog\Lblog\blog-server\target\classes started by wjl in D:\wjl\repository\blog\Lblog\blog-server)
+[2021-12-19 21:02:01][main] INFO  com.wjl.lblog.BlogServerApplication - No active profile set, falling back to default profiles: default
+[2021-12-19 21:02:02][main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8088"]
+[2021-12-19 21:02:02][main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+[2021-12-19 21:02:02][main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.55]
+[2021-12-19 21:02:02][main] WARN  org.apache.catalina.core.AprLifecycleListener - This listener must only be nested within Server elements, but is in [TomcatEmbeddedContext].
+[2021-12-19 21:02:02][main] INFO  org.apache.catalina.core.AprLifecycleListener - Loaded Apache Tomcat Native library [1.2.30] using APR version [1.7.0].
+[2021-12-19 21:02:02][main] INFO  org.apache.catalina.core.AprLifecycleListener - APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true], UDS [true].
+[2021-12-19 21:02:02][main] INFO  org.apache.catalina.core.AprLifecycleListener - APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+[2021-12-19 21:02:02][main] INFO  org.apache.catalina.core.AprLifecycleListener - OpenSSL successfully initialized [OpenSSL 1.1.1k  25 Mar 2021]
+[2021-12-19 21:02:02][main] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+[2021-12-19 21:02:02][main] INFO  org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+[2021-12-19 21:02:02][main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.1.Final
+[2021-12-19 21:02:02][main] INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+[2021-12-19 21:02:02][main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+[2021-12-19 21:02:02][main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+[2021-12-19 21:02:02][main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+[2021-12-19 21:02:03][main] INFO  org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[2021-12-19 21:02:03][main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8088"]
+[2021-12-19 21:02:03][main] INFO  com.wjl.lblog.BlogServerApplication - Started BlogServerApplication in 2.996 seconds (JVM running for 3.766)
+[2021-12-19 21:02:13][SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+[2021-12-19 21:02:13][SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+[2021-12-19 21:02:15][main] INFO  com.wjl.lblog.BlogServerApplication - Starting BlogServerApplication using Java 17 on lonestar with PID 34448 (D:\wjl\repository\blog\Lblog\blog-server\target\classes started by wjl in D:\wjl\repository\blog\Lblog\blog-server)
+[2021-12-19 21:02:15][main] INFO  com.wjl.lblog.BlogServerApplication - No active profile set, falling back to default profiles: default
+[2021-12-19 21:02:16][main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8088"]
+[2021-12-19 21:02:16][main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+[2021-12-19 21:02:16][main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.55]
+[2021-12-19 21:02:16][main] WARN  org.apache.catalina.core.AprLifecycleListener - This listener must only be nested within Server elements, but is in [TomcatEmbeddedContext].
+[2021-12-19 21:02:16][main] INFO  org.apache.catalina.core.AprLifecycleListener - Loaded Apache Tomcat Native library [1.2.30] using APR version [1.7.0].
+[2021-12-19 21:02:16][main] INFO  org.apache.catalina.core.AprLifecycleListener - APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true], UDS [true].
+[2021-12-19 21:02:16][main] INFO  org.apache.catalina.core.AprLifecycleListener - APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+[2021-12-19 21:02:16][main] INFO  org.apache.catalina.core.AprLifecycleListener - OpenSSL successfully initialized [OpenSSL 1.1.1k  25 Mar 2021]
+[2021-12-19 21:02:17][main] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+[2021-12-19 21:02:17][main] INFO  org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+[2021-12-19 21:02:17][main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.1.Final
+[2021-12-19 21:02:17][main] INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+[2021-12-19 21:02:17][main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+[2021-12-19 21:02:17][main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+[2021-12-19 21:02:17][main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+[2021-12-19 21:02:17][main] INFO  org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[2021-12-19 21:02:18][main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8088"]
+[2021-12-19 21:02:18][main] INFO  com.wjl.lblog.BlogServerApplication - Started BlogServerApplication in 2.978 seconds (JVM running for 3.697)
+[2021-12-19 21:04:02][main] ERROR com.wjl.lblog.LogTest - COLOR ERROR
+[2021-12-19 21:04:02][main] WARN  com.wjl.lblog.LogTest - COLOR WARN
+[2021-12-19 21:04:02][main] INFO  com.wjl.lblog.LogTest - COLOR INFO
+[2021-12-19 21:04:37][main] ERROR com.wjl.lblog.LogTest - COLOR ERROR
+[2021-12-19 21:04:37][main] WARN  com.wjl.lblog.LogTest - COLOR WARN
+[2021-12-19 21:04:37][main] INFO  com.wjl.lblog.LogTest - COLOR INFO
+[2021-12-19 21:04:47][SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+[2021-12-19 21:04:47][SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+[2021-12-19 21:04:49][main] INFO  com.wjl.lblog.BlogServerApplication - Starting BlogServerApplication using Java 17 on lonestar with PID 30308 (D:\wjl\repository\blog\Lblog\blog-server\target\classes started by wjl in D:\wjl\repository\blog\Lblog\blog-server)
+[2021-12-19 21:04:49][main] INFO  com.wjl.lblog.BlogServerApplication - No active profile set, falling back to default profiles: default
+[2021-12-19 21:04:50][main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8088"]
+[2021-12-19 21:04:50][main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+[2021-12-19 21:04:50][main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.55]
+[2021-12-19 21:04:50][main] WARN  org.apache.catalina.core.AprLifecycleListener - This listener must only be nested within Server elements, but is in [TomcatEmbeddedContext].
+[2021-12-19 21:04:50][main] INFO  org.apache.catalina.core.AprLifecycleListener - Loaded Apache Tomcat Native library [1.2.30] using APR version [1.7.0].
+[2021-12-19 21:04:50][main] INFO  org.apache.catalina.core.AprLifecycleListener - APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true], UDS [true].
+[2021-12-19 21:04:50][main] INFO  org.apache.catalina.core.AprLifecycleListener - APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+[2021-12-19 21:04:50][main] INFO  org.apache.catalina.core.AprLifecycleListener - OpenSSL successfully initialized [OpenSSL 1.1.1k  25 Mar 2021]
+[2021-12-19 21:04:51][main] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+[2021-12-19 21:04:51][main] INFO  org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+[2021-12-19 21:04:51][main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.1.Final
+[2021-12-19 21:04:51][main] INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+[2021-12-19 21:04:51][main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+[2021-12-19 21:04:51][main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+[2021-12-19 21:04:51][main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+[2021-12-19 21:04:51][main] INFO  org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[2021-12-19 21:04:52][main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8088"]
+[2021-12-19 21:04:52][main] INFO  com.wjl.lblog.BlogServerApplication - Started BlogServerApplication in 3.171 seconds (JVM running for 3.972)
+[2021-12-19 21:05:07][SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+[2021-12-19 21:05:07][SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+[2021-12-19 21:05:10][main] INFO  com.wjl.lblog.BlogServerApplication - Starting BlogServerApplication using Java 17 on lonestar with PID 15580 (D:\wjl\repository\blog\Lblog\blog-server\target\classes started by wjl in D:\wjl\repository\blog\Lblog\blog-server)
+[2021-12-19 21:05:10][main] INFO  com.wjl.lblog.BlogServerApplication - No active profile set, falling back to default profiles: default
+[2021-12-19 21:05:11][main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8088"]
+[2021-12-19 21:05:11][main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+[2021-12-19 21:05:11][main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.55]
+[2021-12-19 21:05:11][main] WARN  org.apache.catalina.core.AprLifecycleListener - This listener must only be nested within Server elements, but is in [TomcatEmbeddedContext].
+[2021-12-19 21:05:11][main] INFO  org.apache.catalina.core.AprLifecycleListener - Loaded Apache Tomcat Native library [1.2.30] using APR version [1.7.0].
+[2021-12-19 21:05:11][main] INFO  org.apache.catalina.core.AprLifecycleListener - APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true], UDS [true].
+[2021-12-19 21:05:11][main] INFO  org.apache.catalina.core.AprLifecycleListener - APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+[2021-12-19 21:05:11][main] INFO  org.apache.catalina.core.AprLifecycleListener - OpenSSL successfully initialized [OpenSSL 1.1.1k  25 Mar 2021]
+[2021-12-19 21:05:11][main] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+[2021-12-19 21:05:11][main] INFO  org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+[2021-12-19 21:05:11][main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.1.Final
+[2021-12-19 21:05:12][main] INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+[2021-12-19 21:05:12][main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+[2021-12-19 21:05:12][main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+[2021-12-19 21:05:12][main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+[2021-12-19 21:05:12][main] INFO  org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[2021-12-19 21:05:13][main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8088"]
+[2021-12-19 21:05:13][main] INFO  com.wjl.lblog.BlogServerApplication - Started BlogServerApplication in 3.119 seconds (JVM running for 3.946)
+[2021-12-19 21:05:41][SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+[2021-12-19 21:05:41][SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+[2021-12-19 21:05:44][main] INFO  com.wjl.lblog.BlogServerApplication - Starting BlogServerApplication using Java 17 on lonestar with PID 31768 (D:\wjl\repository\blog\Lblog\blog-server\target\classes started by wjl in D:\wjl\repository\blog\Lblog\blog-server)
+[2021-12-19 21:05:44][main] INFO  com.wjl.lblog.BlogServerApplication - No active profile set, falling back to default profiles: default
+[2021-12-19 21:05:45][main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8088"]
+[2021-12-19 21:05:45][main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+[2021-12-19 21:05:45][main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.55]
+[2021-12-19 21:05:45][main] WARN  org.apache.catalina.core.AprLifecycleListener - This listener must only be nested within Server elements, but is in [TomcatEmbeddedContext].
+[2021-12-19 21:05:45][main] INFO  org.apache.catalina.core.AprLifecycleListener - Loaded Apache Tomcat Native library [1.2.30] using APR version [1.7.0].
+[2021-12-19 21:05:45][main] INFO  org.apache.catalina.core.AprLifecycleListener - APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true], UDS [true].
+[2021-12-19 21:05:45][main] INFO  org.apache.catalina.core.AprLifecycleListener - APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+[2021-12-19 21:05:45][main] INFO  org.apache.catalina.core.AprLifecycleListener - OpenSSL successfully initialized [OpenSSL 1.1.1k  25 Mar 2021]
+[2021-12-19 21:05:45][main] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+[2021-12-19 21:05:45][main] INFO  org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+[2021-12-19 21:05:45][main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.1.Final
+[2021-12-19 21:05:45][main] INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+[2021-12-19 21:05:45][main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+[2021-12-19 21:05:45][main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+[2021-12-19 21:05:45][main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+[2021-12-19 21:05:45][main] INFO  org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[2021-12-19 21:05:46][main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8088"]
+[2021-12-19 21:05:46][main] INFO  com.wjl.lblog.BlogServerApplication - Started BlogServerApplication in 3.004 seconds (JVM running for 3.937)
+[2021-12-19 21:05:58][SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+[2021-12-19 21:05:58][SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+[2021-12-19 21:06:00][main] INFO  com.wjl.lblog.BlogServerApplication - Starting BlogServerApplication using Java 17 on lonestar with PID 12392 (D:\wjl\repository\blog\Lblog\blog-server\target\classes started by wjl in D:\wjl\repository\blog\Lblog\blog-server)
+[2021-12-19 21:06:00][main] INFO  com.wjl.lblog.BlogServerApplication - No active profile set, falling back to default profiles: default
+[2021-12-19 21:06:01][main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8088"]
+[2021-12-19 21:06:01][main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+[2021-12-19 21:06:01][main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.55]
+[2021-12-19 21:06:01][main] WARN  org.apache.catalina.core.AprLifecycleListener - This listener must only be nested within Server elements, but is in [TomcatEmbeddedContext].
+[2021-12-19 21:06:01][main] INFO  org.apache.catalina.core.AprLifecycleListener - Loaded Apache Tomcat Native library [1.2.30] using APR version [1.7.0].
+[2021-12-19 21:06:01][main] INFO  org.apache.catalina.core.AprLifecycleListener - APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true], UDS [true].
+[2021-12-19 21:06:01][main] INFO  org.apache.catalina.core.AprLifecycleListener - APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+[2021-12-19 21:06:01][main] INFO  org.apache.catalina.core.AprLifecycleListener - OpenSSL successfully initialized [OpenSSL 1.1.1k  25 Mar 2021]
+[2021-12-19 21:06:01][main] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+[2021-12-19 21:06:01][main] INFO  org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+[2021-12-19 21:06:01][main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.1.Final
+[2021-12-19 21:06:02][main] INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+[2021-12-19 21:06:02][main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+[2021-12-19 21:06:02][main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+[2021-12-19 21:06:02][main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+[2021-12-19 21:06:02][main] INFO  org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[2021-12-19 21:06:03][main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8088"]
+[2021-12-19 21:06:03][main] INFO  com.wjl.lblog.BlogServerApplication - Started BlogServerApplication in 2.97 seconds (JVM running for 3.707)
+[2021-12-19 21:06:39][SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+[2021-12-19 21:06:39][SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+[2021-12-19 21:06:42][main] INFO  com.wjl.lblog.BlogServerApplication - Starting BlogServerApplication using Java 17 on lonestar with PID 35716 (D:\wjl\repository\blog\Lblog\blog-server\target\classes started by wjl in D:\wjl\repository\blog\Lblog\blog-server)
+[2021-12-19 21:06:42][main] INFO  com.wjl.lblog.BlogServerApplication - No active profile set, falling back to default profiles: default
+[2021-12-19 21:06:43][main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8088"]
+[2021-12-19 21:06:43][main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+[2021-12-19 21:06:43][main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.55]
+[2021-12-19 21:06:43][main] WARN  org.apache.catalina.core.AprLifecycleListener - This listener must only be nested within Server elements, but is in [TomcatEmbeddedContext].
+[2021-12-19 21:06:43][main] INFO  org.apache.catalina.core.AprLifecycleListener - Loaded Apache Tomcat Native library [1.2.30] using APR version [1.7.0].
+[2021-12-19 21:06:43][main] INFO  org.apache.catalina.core.AprLifecycleListener - APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true], UDS [true].
+[2021-12-19 21:06:43][main] INFO  org.apache.catalina.core.AprLifecycleListener - APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+[2021-12-19 21:06:43][main] INFO  org.apache.catalina.core.AprLifecycleListener - OpenSSL successfully initialized [OpenSSL 1.1.1k  25 Mar 2021]
+[2021-12-19 21:06:43][main] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+[2021-12-19 21:06:43][main] INFO  org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+[2021-12-19 21:06:43][main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.1.Final
+[2021-12-19 21:06:43][main] INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+[2021-12-19 21:06:43][main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+[2021-12-19 21:06:43][main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+[2021-12-19 21:06:43][main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+[2021-12-19 21:06:44][main] INFO  org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[2021-12-19 21:06:45][main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8088"]
+[2021-12-19 21:06:45][main] INFO  com.wjl.lblog.BlogServerApplication - Started BlogServerApplication in 3.066 seconds (JVM running for 3.984)
+[2021-12-19 21:07:34][SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+[2021-12-19 21:07:34][SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+[2021-12-19 21:07:36][main] INFO  com.wjl.lblog.BlogServerApplication - Starting BlogServerApplication using Java 17 on lonestar with PID 29824 (D:\wjl\repository\blog\Lblog\blog-server\target\classes started by wjl in D:\wjl\repository\blog\Lblog\blog-server)
+[2021-12-19 21:07:36][main] INFO  com.wjl.lblog.BlogServerApplication - No active profile set, falling back to default profiles: default
+[2021-12-19 21:07:37][main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8088"]
+[2021-12-19 21:07:37][main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+[2021-12-19 21:07:37][main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.55]
+[2021-12-19 21:07:37][main] WARN  org.apache.catalina.core.AprLifecycleListener - This listener must only be nested within Server elements, but is in [TomcatEmbeddedContext].
+[2021-12-19 21:07:37][main] INFO  org.apache.catalina.core.AprLifecycleListener - Loaded Apache Tomcat Native library [1.2.30] using APR version [1.7.0].
+[2021-12-19 21:07:37][main] INFO  org.apache.catalina.core.AprLifecycleListener - APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true], UDS [true].
+[2021-12-19 21:07:37][main] INFO  org.apache.catalina.core.AprLifecycleListener - APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+[2021-12-19 21:07:37][main] INFO  org.apache.catalina.core.AprLifecycleListener - OpenSSL successfully initialized [OpenSSL 1.1.1k  25 Mar 2021]
+[2021-12-19 21:07:37][main] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+[2021-12-19 21:07:38][main] INFO  org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+[2021-12-19 21:07:38][main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.1.Final
+[2021-12-19 21:07:38][main] INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+[2021-12-19 21:07:38][main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+[2021-12-19 21:07:38][main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+[2021-12-19 21:07:38][main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+[2021-12-19 21:07:38][main] INFO  org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[2021-12-19 21:07:39][main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8088"]
+[2021-12-19 21:07:39][main] INFO  com.wjl.lblog.BlogServerApplication - Started BlogServerApplication in 2.992 seconds (JVM running for 3.863)
+[2021-12-19 21:09:35][SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+[2021-12-19 21:09:35][SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+[2021-12-19 21:09:38][main] INFO  com.wjl.lblog.BlogServerApplication - Starting BlogServerApplication using Java 17 on lonestar with PID 30748 (D:\wjl\repository\blog\Lblog\blog-server\target\classes started by wjl in D:\wjl\repository\blog\Lblog\blog-server)
+[2021-12-19 21:09:38][main] INFO  com.wjl.lblog.BlogServerApplication - No active profile set, falling back to default profiles: default
+[2021-12-19 21:09:39][main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8088"]
+[2021-12-19 21:09:39][main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+[2021-12-19 21:09:39][main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.55]
+[2021-12-19 21:09:39][main] WARN  org.apache.catalina.core.AprLifecycleListener - This listener must only be nested within Server elements, but is in [TomcatEmbeddedContext].
+[2021-12-19 21:09:39][main] INFO  org.apache.catalina.core.AprLifecycleListener - Loaded Apache Tomcat Native library [1.2.30] using APR version [1.7.0].
+[2021-12-19 21:09:39][main] INFO  org.apache.catalina.core.AprLifecycleListener - APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true], UDS [true].
+[2021-12-19 21:09:39][main] INFO  org.apache.catalina.core.AprLifecycleListener - APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+[2021-12-19 21:09:39][main] INFO  org.apache.catalina.core.AprLifecycleListener - OpenSSL successfully initialized [OpenSSL 1.1.1k  25 Mar 2021]
+[2021-12-19 21:09:39][main] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+[2021-12-19 21:09:39][main] INFO  org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+[2021-12-19 21:09:39][main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.1.Final
+[2021-12-19 21:09:39][main] INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+[2021-12-19 21:09:39][main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+[2021-12-19 21:09:39][main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+[2021-12-19 21:09:39][main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+[2021-12-19 21:09:40][main] INFO  org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[2021-12-19 21:09:41][main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8088"]
+[2021-12-19 21:09:41][main] INFO  com.wjl.lblog.BlogServerApplication - Started BlogServerApplication in 3.006 seconds (JVM running for 3.896)
+[2021-12-19 21:09:47][SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+[2021-12-19 21:09:47][SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+[2021-12-19 21:09:49][main] INFO  com.wjl.lblog.BlogServerApplication - Starting BlogServerApplication using Java 17 on lonestar with PID 12236 (D:\wjl\repository\blog\Lblog\blog-server\target\classes started by wjl in D:\wjl\repository\blog\Lblog\blog-server)
+[2021-12-19 21:09:49][main] INFO  com.wjl.lblog.BlogServerApplication - No active profile set, falling back to default profiles: default
+[2021-12-19 21:09:50][main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8088"]
+[2021-12-19 21:09:50][main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+[2021-12-19 21:09:50][main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.55]
+[2021-12-19 21:09:50][main] WARN  org.apache.catalina.core.AprLifecycleListener - This listener must only be nested within Server elements, but is in [TomcatEmbeddedContext].
+[2021-12-19 21:09:50][main] INFO  org.apache.catalina.core.AprLifecycleListener - Loaded Apache Tomcat Native library [1.2.30] using APR version [1.7.0].
+[2021-12-19 21:09:50][main] INFO  org.apache.catalina.core.AprLifecycleListener - APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true], UDS [true].
+[2021-12-19 21:09:50][main] INFO  org.apache.catalina.core.AprLifecycleListener - APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+[2021-12-19 21:09:50][main] INFO  org.apache.catalina.core.AprLifecycleListener - OpenSSL successfully initialized [OpenSSL 1.1.1k  25 Mar 2021]
+[2021-12-19 21:09:50][main] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+[2021-12-19 21:09:50][main] INFO  org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+[2021-12-19 21:09:50][main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.1.Final
+[2021-12-19 21:09:50][main] INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+[2021-12-19 21:09:50][main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+[2021-12-19 21:09:51][main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+[2021-12-19 21:09:51][main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+[2021-12-19 21:09:51][main] INFO  org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[2021-12-19 21:09:52][main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8088"]
+[2021-12-19 21:09:52][main] INFO  com.wjl.lblog.BlogServerApplication - Started BlogServerApplication in 3.031 seconds (JVM running for 3.771)
+[2021-12-19 21:09:56][SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+[2021-12-19 21:09:56][SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+[2021-12-19 21:09:57][main] INFO  com.wjl.lblog.BlogServerApplication - Starting BlogServerApplication using Java 17 on lonestar with PID 13084 (D:\wjl\repository\blog\Lblog\blog-server\target\classes started by wjl in D:\wjl\repository\blog\Lblog\blog-server)
+[2021-12-19 21:09:57][main] INFO  com.wjl.lblog.BlogServerApplication - No active profile set, falling back to default profiles: default
+[2021-12-19 21:09:58][main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8088"]
+[2021-12-19 21:09:58][main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+[2021-12-19 21:09:58][main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.55]
+[2021-12-19 21:09:58][main] WARN  org.apache.catalina.core.AprLifecycleListener - This listener must only be nested within Server elements, but is in [TomcatEmbeddedContext].
+[2021-12-19 21:09:58][main] INFO  org.apache.catalina.core.AprLifecycleListener - Loaded Apache Tomcat Native library [1.2.30] using APR version [1.7.0].
+[2021-12-19 21:09:58][main] INFO  org.apache.catalina.core.AprLifecycleListener - APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true], UDS [true].
+[2021-12-19 21:09:58][main] INFO  org.apache.catalina.core.AprLifecycleListener - APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+[2021-12-19 21:09:58][main] INFO  org.apache.catalina.core.AprLifecycleListener - OpenSSL successfully initialized [OpenSSL 1.1.1k  25 Mar 2021]
+[2021-12-19 21:09:59][main] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+[2021-12-19 21:09:59][main] INFO  org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+[2021-12-19 21:09:59][main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.1.Final
+[2021-12-19 21:09:59][main] INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+[2021-12-19 21:09:59][main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+[2021-12-19 21:09:59][main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+[2021-12-19 21:09:59][main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+[2021-12-19 21:09:59][main] INFO  org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[2021-12-19 21:10:00][main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8088"]
+[2021-12-19 21:10:00][main] INFO  com.wjl.lblog.BlogServerApplication - Started BlogServerApplication in 2.975 seconds (JVM running for 3.744)
+[2021-12-19 21:11:14][SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+[2021-12-19 21:11:14][SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+[2021-12-19 21:11:17][main] INFO  com.wjl.lblog.BlogServerApplication - Starting BlogServerApplication using Java 17 on lonestar with PID 36520 (D:\wjl\repository\blog\Lblog\blog-server\target\classes started by wjl in D:\wjl\repository\blog\Lblog\blog-server)
+[2021-12-19 21:11:17][main] INFO  com.wjl.lblog.BlogServerApplication - No active profile set, falling back to default profiles: default
+[2021-12-19 21:11:18][main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8088"]
+[2021-12-19 21:11:18][main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+[2021-12-19 21:11:18][main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.55]
+[2021-12-19 21:11:18][main] WARN  org.apache.catalina.core.AprLifecycleListener - This listener must only be nested within Server elements, but is in [TomcatEmbeddedContext].
+[2021-12-19 21:11:18][main] INFO  org.apache.catalina.core.AprLifecycleListener - Loaded Apache Tomcat Native library [1.2.30] using APR version [1.7.0].
+[2021-12-19 21:11:18][main] INFO  org.apache.catalina.core.AprLifecycleListener - APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true], UDS [true].
+[2021-12-19 21:11:18][main] INFO  org.apache.catalina.core.AprLifecycleListener - APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+[2021-12-19 21:11:18][main] INFO  org.apache.catalina.core.AprLifecycleListener - OpenSSL successfully initialized [OpenSSL 1.1.1k  25 Mar 2021]
+[2021-12-19 21:11:18][main] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+[2021-12-19 21:11:18][main] INFO  org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+[2021-12-19 21:11:18][main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.1.Final
+[2021-12-19 21:11:18][main] INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+[2021-12-19 21:11:18][main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+[2021-12-19 21:11:18][main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+[2021-12-19 21:11:18][main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+[2021-12-19 21:11:18][main] INFO  org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[2021-12-19 21:11:19][main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8088"]
+[2021-12-19 21:11:19][main] INFO  com.wjl.lblog.BlogServerApplication - Started BlogServerApplication in 2.97 seconds (JVM running for 3.675)
+[2021-12-19 21:16:13][SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+[2021-12-19 21:16:13][SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+[2021-12-19 21:16:15][main] INFO  com.wjl.lblog.BlogServerApplication - Starting BlogServerApplication using Java 17 on lonestar with PID 36672 (D:\wjl\repository\blog\Lblog\blog-server\target\classes started by wjl in D:\wjl\repository\blog\Lblog\blog-server)
+[2021-12-19 21:16:15][main] INFO  com.wjl.lblog.BlogServerApplication - No active profile set, falling back to default profiles: default
+[2021-12-19 21:16:16][main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8088"]
+[2021-12-19 21:16:16][main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+[2021-12-19 21:16:16][main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.55]
+[2021-12-19 21:16:16][main] WARN  org.apache.catalina.core.AprLifecycleListener - This listener must only be nested within Server elements, but is in [TomcatEmbeddedContext].
+[2021-12-19 21:16:16][main] INFO  org.apache.catalina.core.AprLifecycleListener - Loaded Apache Tomcat Native library [1.2.30] using APR version [1.7.0].
+[2021-12-19 21:16:16][main] INFO  org.apache.catalina.core.AprLifecycleListener - APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true], UDS [true].
+[2021-12-19 21:16:16][main] INFO  org.apache.catalina.core.AprLifecycleListener - APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+[2021-12-19 21:16:16][main] INFO  org.apache.catalina.core.AprLifecycleListener - OpenSSL successfully initialized [OpenSSL 1.1.1k  25 Mar 2021]
+[2021-12-19 21:16:17][main] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+[2021-12-19 21:16:17][main] INFO  org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+[2021-12-19 21:16:17][main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.1.Final
+[2021-12-19 21:16:17][main] INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+[2021-12-19 21:16:17][main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+[2021-12-19 21:16:17][main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+[2021-12-19 21:16:17][main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+[2021-12-19 21:16:17][main] INFO  org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[2021-12-19 21:16:18][main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8088"]
+[2021-12-19 21:16:18][main] INFO  com.wjl.lblog.BlogServerApplication - Started BlogServerApplication in 3.221 seconds (JVM running for 4.005)
+[2021-12-19 21:17:11][SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+[2021-12-19 21:17:11][SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+[2021-12-19 21:17:13][main] INFO  com.wjl.lblog.BlogServerApplication - Starting BlogServerApplication using Java 17 on lonestar with PID 31764 (D:\wjl\repository\blog\Lblog\blog-server\target\classes started by wjl in D:\wjl\repository\blog\Lblog\blog-server)
+[2021-12-19 21:17:13][main] INFO  com.wjl.lblog.BlogServerApplication - No active profile set, falling back to default profiles: default
+[2021-12-19 21:17:14][main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8088"]
+[2021-12-19 21:17:14][main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+[2021-12-19 21:17:14][main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.55]
+[2021-12-19 21:17:14][main] WARN  org.apache.catalina.core.AprLifecycleListener - This listener must only be nested within Server elements, but is in [TomcatEmbeddedContext].
+[2021-12-19 21:17:14][main] INFO  org.apache.catalina.core.AprLifecycleListener - Loaded Apache Tomcat Native library [1.2.30] using APR version [1.7.0].
+[2021-12-19 21:17:14][main] INFO  org.apache.catalina.core.AprLifecycleListener - APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true], UDS [true].
+[2021-12-19 21:17:14][main] INFO  org.apache.catalina.core.AprLifecycleListener - APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+[2021-12-19 21:17:14][main] INFO  org.apache.catalina.core.AprLifecycleListener - OpenSSL successfully initialized [OpenSSL 1.1.1k  25 Mar 2021]
+[2021-12-19 21:17:14][main] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+[2021-12-19 21:17:14][main] INFO  org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+[2021-12-19 21:17:14][main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.1.Final
+[2021-12-19 21:17:14][main] INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+[2021-12-19 21:17:14][main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+[2021-12-19 21:17:15][main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+[2021-12-19 21:17:15][main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+[2021-12-19 21:17:15][main] INFO  org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[2021-12-19 21:17:16][main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8088"]
+[2021-12-19 21:17:16][main] INFO  com.wjl.lblog.BlogServerApplication - Started BlogServerApplication in 3.04 seconds (JVM running for 3.75)
+[2021-12-19 21:21:43][SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+[2021-12-19 21:21:43][SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+[2021-12-19 21:21:46][main] INFO  com.wjl.lblog.BlogServerApplication - Starting BlogServerApplication using Java 17 on lonestar with PID 37492 (D:\wjl\repository\blog\Lblog\blog-server\target\classes started by wjl in D:\wjl\repository\blog\Lblog\blog-server)
+[2021-12-19 21:21:46][main] INFO  com.wjl.lblog.BlogServerApplication - No active profile set, falling back to default profiles: default
+[2021-12-19 21:21:47][main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8088"]
+[2021-12-19 21:21:47][main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+[2021-12-19 21:21:47][main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.55]
+[2021-12-19 21:21:47][main] WARN  org.apache.catalina.core.AprLifecycleListener - This listener must only be nested within Server elements, but is in [TomcatEmbeddedContext].
+[2021-12-19 21:21:47][main] INFO  org.apache.catalina.core.AprLifecycleListener - Loaded Apache Tomcat Native library [1.2.30] using APR version [1.7.0].
+[2021-12-19 21:21:47][main] INFO  org.apache.catalina.core.AprLifecycleListener - APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true], UDS [true].
+[2021-12-19 21:21:47][main] INFO  org.apache.catalina.core.AprLifecycleListener - APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+[2021-12-19 21:21:47][main] INFO  org.apache.catalina.core.AprLifecycleListener - OpenSSL successfully initialized [OpenSSL 1.1.1k  25 Mar 2021]
+[2021-12-19 21:21:47][main] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+[2021-12-19 21:21:47][main] INFO  org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+[2021-12-19 21:21:47][main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.1.Final
+[2021-12-19 21:21:47][main] INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+[2021-12-19 21:21:47][main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+[2021-12-19 21:21:47][main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+[2021-12-19 21:21:47][main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+[2021-12-19 21:21:47][main] INFO  org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[2021-12-19 21:21:48][main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8088"]
+[2021-12-19 21:21:48][main] INFO  com.wjl.lblog.BlogServerApplication - Started BlogServerApplication in 2.969 seconds (JVM running for 3.67)
+[2021-12-19 21:22:04][SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+[2021-12-19 21:22:04][SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+[2021-12-19 21:22:06][main] INFO  com.wjl.lblog.BlogServerApplication - Starting BlogServerApplication using Java 17 on lonestar with PID 34232 (D:\wjl\repository\blog\Lblog\blog-server\target\classes started by wjl in D:\wjl\repository\blog\Lblog\blog-server)
+[2021-12-19 21:22:06][main] INFO  com.wjl.lblog.BlogServerApplication - No active profile set, falling back to default profiles: default
+[2021-12-19 21:22:07][main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8088"]
+[2021-12-19 21:22:07][main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+[2021-12-19 21:22:07][main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.55]
+[2021-12-19 21:22:07][main] WARN  org.apache.catalina.core.AprLifecycleListener - This listener must only be nested within Server elements, but is in [TomcatEmbeddedContext].
+[2021-12-19 21:22:07][main] INFO  org.apache.catalina.core.AprLifecycleListener - Loaded Apache Tomcat Native library [1.2.30] using APR version [1.7.0].
+[2021-12-19 21:22:07][main] INFO  org.apache.catalina.core.AprLifecycleListener - APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true], UDS [true].
+[2021-12-19 21:22:07][main] INFO  org.apache.catalina.core.AprLifecycleListener - APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+[2021-12-19 21:22:07][main] INFO  org.apache.catalina.core.AprLifecycleListener - OpenSSL successfully initialized [OpenSSL 1.1.1k  25 Mar 2021]
+[2021-12-19 21:22:07][main] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+[2021-12-19 21:22:07][main] INFO  org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+[2021-12-19 21:22:07][main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.1.Final
+[2021-12-19 21:22:07][main] INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+[2021-12-19 21:22:07][main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+[2021-12-19 21:22:07][main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+[2021-12-19 21:22:07][main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+[2021-12-19 21:22:08][main] INFO  org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[2021-12-19 21:22:09][main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8088"]
+[2021-12-19 21:22:09][main] INFO  com.wjl.lblog.BlogServerApplication - Started BlogServerApplication in 3.035 seconds (JVM running for 3.746)
+[2021-12-19 21:23:05][SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+[2021-12-19 21:23:05][SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+[2021-12-19 21:23:08][main] INFO  com.wjl.lblog.BlogServerApplication - Starting BlogServerApplication using Java 17 on lonestar with PID 12212 (D:\wjl\repository\blog\Lblog\blog-server\target\classes started by wjl in D:\wjl\repository\blog\Lblog\blog-server)
+[2021-12-19 21:23:08][main] INFO  com.wjl.lblog.BlogServerApplication - No active profile set, falling back to default profiles: default
+[2021-12-19 21:23:09][main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8088"]
+[2021-12-19 21:23:09][main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+[2021-12-19 21:23:09][main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.55]
+[2021-12-19 21:23:09][main] WARN  org.apache.catalina.core.AprLifecycleListener - This listener must only be nested within Server elements, but is in [TomcatEmbeddedContext].
+[2021-12-19 21:23:09][main] INFO  org.apache.catalina.core.AprLifecycleListener - Loaded Apache Tomcat Native library [1.2.30] using APR version [1.7.0].
+[2021-12-19 21:23:09][main] INFO  org.apache.catalina.core.AprLifecycleListener - APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true], UDS [true].
+[2021-12-19 21:23:09][main] INFO  org.apache.catalina.core.AprLifecycleListener - APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+[2021-12-19 21:23:09][main] INFO  org.apache.catalina.core.AprLifecycleListener - OpenSSL successfully initialized [OpenSSL 1.1.1k  25 Mar 2021]
+[2021-12-19 21:23:09][main] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+[2021-12-19 21:23:09][main] INFO  org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+[2021-12-19 21:23:09][main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.1.Final
+[2021-12-19 21:23:09][main] INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+[2021-12-19 21:23:09][main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+[2021-12-19 21:23:09][main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+[2021-12-19 21:23:09][main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+[2021-12-19 21:23:09][main] INFO  org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[2021-12-19 21:23:10][main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8088"]
+[2021-12-19 21:23:10][main] INFO  com.wjl.lblog.BlogServerApplication - Started BlogServerApplication in 3.052 seconds (JVM running for 3.928)
+[2021-12-19 21:23:16][SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+[2021-12-19 21:23:16][SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+[2021-12-19 21:23:19][main] INFO  com.wjl.lblog.BlogServerApplication - Starting BlogServerApplication using Java 17 on lonestar with PID 37448 (D:\wjl\repository\blog\Lblog\blog-server\target\classes started by wjl in D:\wjl\repository\blog\Lblog\blog-server)
+[2021-12-19 21:23:19][main] INFO  com.wjl.lblog.BlogServerApplication - No active profile set, falling back to default profiles: default
+[2021-12-19 21:23:20][main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8088"]
+[2021-12-19 21:23:20][main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+[2021-12-19 21:23:20][main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.55]
+[2021-12-19 21:23:20][main] WARN  org.apache.catalina.core.AprLifecycleListener - This listener must only be nested within Server elements, but is in [TomcatEmbeddedContext].
+[2021-12-19 21:23:20][main] INFO  org.apache.catalina.core.AprLifecycleListener - Loaded Apache Tomcat Native library [1.2.30] using APR version [1.7.0].
+[2021-12-19 21:23:20][main] INFO  org.apache.catalina.core.AprLifecycleListener - APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true], UDS [true].
+[2021-12-19 21:23:20][main] INFO  org.apache.catalina.core.AprLifecycleListener - APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+[2021-12-19 21:23:20][main] INFO  org.apache.catalina.core.AprLifecycleListener - OpenSSL successfully initialized [OpenSSL 1.1.1k  25 Mar 2021]
+[2021-12-19 21:23:20][main] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+[2021-12-19 21:23:20][main] INFO  org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+[2021-12-19 21:23:20][main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.1.Final
+[2021-12-19 21:23:20][main] INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+[2021-12-19 21:23:20][main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+[2021-12-19 21:23:20][main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+[2021-12-19 21:23:20][main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+[2021-12-19 21:23:20][main] INFO  org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[2021-12-19 21:23:21][main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8088"]
+[2021-12-19 21:23:21][main] INFO  com.wjl.lblog.BlogServerApplication - Started BlogServerApplication in 3.032 seconds (JVM running for 3.731)
+[2021-12-19 21:24:36][SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+[2021-12-19 21:24:36][SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+[2021-12-19 21:24:38][main] INFO  com.wjl.lblog.BlogServerApplication - Starting BlogServerApplication using Java 17 on lonestar with PID 27076 (D:\wjl\repository\blog\Lblog\blog-server\target\classes started by wjl in D:\wjl\repository\blog\Lblog\blog-server)
+[2021-12-19 21:24:38][main] INFO  com.wjl.lblog.BlogServerApplication - No active profile set, falling back to default profiles: default
+[2021-12-19 21:24:39][main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8088"]
+[2021-12-19 21:24:39][main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+[2021-12-19 21:24:39][main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.55]
+[2021-12-19 21:24:39][main] WARN  org.apache.catalina.core.AprLifecycleListener - This listener must only be nested within Server elements, but is in [TomcatEmbeddedContext].
+[2021-12-19 21:24:39][main] INFO  org.apache.catalina.core.AprLifecycleListener - Loaded Apache Tomcat Native library [1.2.30] using APR version [1.7.0].
+[2021-12-19 21:24:39][main] INFO  org.apache.catalina.core.AprLifecycleListener - APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true], UDS [true].
+[2021-12-19 21:24:39][main] INFO  org.apache.catalina.core.AprLifecycleListener - APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+[2021-12-19 21:24:39][main] INFO  org.apache.catalina.core.AprLifecycleListener - OpenSSL successfully initialized [OpenSSL 1.1.1k  25 Mar 2021]
+[2021-12-19 21:24:39][main] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+[2021-12-19 21:24:39][main] INFO  org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+[2021-12-19 21:24:39][main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.1.Final
+[2021-12-19 21:24:39][main] INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+[2021-12-19 21:24:40][main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+[2021-12-19 21:24:40][main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+[2021-12-19 21:24:40][main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+[2021-12-19 21:24:40][main] INFO  org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[2021-12-19 21:24:41][main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8088"]
+[2021-12-19 21:24:41][main] INFO  com.wjl.lblog.BlogServerApplication - Started BlogServerApplication in 2.992 seconds (JVM running for 3.718)
+[2021-12-19 21:29:09][SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+[2021-12-19 21:29:09][SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+[2021-12-19 21:29:12][main] INFO  com.wjl.lblog.BlogServerApplication - Starting BlogServerApplication using Java 17 on lonestar with PID 36220 (D:\wjl\repository\blog\Lblog\blog-server\target\classes started by wjl in D:\wjl\repository\blog\Lblog\blog-server)
+[2021-12-19 21:29:12][main] INFO  com.wjl.lblog.BlogServerApplication - No active profile set, falling back to default profiles: default
+[2021-12-19 21:29:13][main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8088"]
+[2021-12-19 21:29:13][main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+[2021-12-19 21:29:13][main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.55]
+[2021-12-19 21:29:13][main] WARN  org.apache.catalina.core.AprLifecycleListener - This listener must only be nested within Server elements, but is in [TomcatEmbeddedContext].
+[2021-12-19 21:29:13][main] INFO  org.apache.catalina.core.AprLifecycleListener - Loaded Apache Tomcat Native library [1.2.30] using APR version [1.7.0].
+[2021-12-19 21:29:13][main] INFO  org.apache.catalina.core.AprLifecycleListener - APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true], UDS [true].
+[2021-12-19 21:29:13][main] INFO  org.apache.catalina.core.AprLifecycleListener - APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+[2021-12-19 21:29:13][main] INFO  org.apache.catalina.core.AprLifecycleListener - OpenSSL successfully initialized [OpenSSL 1.1.1k  25 Mar 2021]
+[2021-12-19 21:29:13][main] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+[2021-12-19 21:29:14][main] INFO  org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+[2021-12-19 21:29:14][main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.1.Final
+[2021-12-19 21:29:14][main] INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+[2021-12-19 21:29:14][main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+[2021-12-19 21:29:14][main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+[2021-12-19 21:29:14][main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+[2021-12-19 21:29:14][main] INFO  org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[2021-12-19 21:29:15][main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8088"]
+[2021-12-19 21:29:15][main] INFO  com.wjl.lblog.BlogServerApplication - Started BlogServerApplication in 3.036 seconds (JVM running for 3.774)
+[2021-12-19 21:29:36][SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+[2021-12-19 21:29:36][SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+[2021-12-19 21:29:39][main] INFO  com.wjl.lblog.BlogServerApplication - Starting BlogServerApplication using Java 17 on lonestar with PID 32520 (D:\wjl\repository\blog\Lblog\blog-server\target\classes started by wjl in D:\wjl\repository\blog\Lblog\blog-server)
+[2021-12-19 21:29:39][main] INFO  com.wjl.lblog.BlogServerApplication - No active profile set, falling back to default profiles: default
+[2021-12-19 21:29:40][main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8088"]
+[2021-12-19 21:29:40][main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+[2021-12-19 21:29:40][main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.55]
+[2021-12-19 21:29:40][main] WARN  org.apache.catalina.core.AprLifecycleListener - This listener must only be nested within Server elements, but is in [TomcatEmbeddedContext].
+[2021-12-19 21:29:40][main] INFO  org.apache.catalina.core.AprLifecycleListener - Loaded Apache Tomcat Native library [1.2.30] using APR version [1.7.0].
+[2021-12-19 21:29:40][main] INFO  org.apache.catalina.core.AprLifecycleListener - APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true], UDS [true].
+[2021-12-19 21:29:40][main] INFO  org.apache.catalina.core.AprLifecycleListener - APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+[2021-12-19 21:29:40][main] INFO  org.apache.catalina.core.AprLifecycleListener - OpenSSL successfully initialized [OpenSSL 1.1.1k  25 Mar 2021]
+[2021-12-19 21:29:40][main] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+[2021-12-19 21:29:40][main] INFO  org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+[2021-12-19 21:29:40][main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.1.Final
+[2021-12-19 21:29:40][main] INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+[2021-12-19 21:29:40][main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+[2021-12-19 21:29:41][main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+[2021-12-19 21:29:41][main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+[2021-12-19 21:29:41][main] INFO  org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[2021-12-19 21:29:42][main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8088"]
+[2021-12-19 21:29:42][main] INFO  com.wjl.lblog.BlogServerApplication - Started BlogServerApplication in 3.281 seconds (JVM running for 4.081)
+[2021-12-19 21:29:47][SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+[2021-12-19 21:29:47][SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+[2021-12-19 21:29:50][main] INFO  com.wjl.lblog.BlogServerApplication - Starting BlogServerApplication using Java 17 on lonestar with PID 33276 (D:\wjl\repository\blog\Lblog\blog-server\target\classes started by wjl in D:\wjl\repository\blog\Lblog\blog-server)
+[2021-12-19 21:29:50][main] INFO  com.wjl.lblog.BlogServerApplication - No active profile set, falling back to default profiles: default
+[2021-12-19 21:29:51][main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8088"]
+[2021-12-19 21:29:51][main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+[2021-12-19 21:29:51][main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.55]
+[2021-12-19 21:29:51][main] WARN  org.apache.catalina.core.AprLifecycleListener - This listener must only be nested within Server elements, but is in [TomcatEmbeddedContext].
+[2021-12-19 21:29:51][main] INFO  org.apache.catalina.core.AprLifecycleListener - Loaded Apache Tomcat Native library [1.2.30] using APR version [1.7.0].
+[2021-12-19 21:29:51][main] INFO  org.apache.catalina.core.AprLifecycleListener - APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true], UDS [true].
+[2021-12-19 21:29:51][main] INFO  org.apache.catalina.core.AprLifecycleListener - APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+[2021-12-19 21:29:51][main] INFO  org.apache.catalina.core.AprLifecycleListener - OpenSSL successfully initialized [OpenSSL 1.1.1k  25 Mar 2021]
+[2021-12-19 21:29:51][main] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+[2021-12-19 21:29:51][main] INFO  org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+[2021-12-19 21:29:51][main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.1.Final
+[2021-12-19 21:29:51][main] INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+[2021-12-19 21:29:51][main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+[2021-12-19 21:29:51][main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+[2021-12-19 21:29:51][main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+[2021-12-19 21:29:52][main] INFO  org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[2021-12-19 21:29:53][main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8088"]
+[2021-12-19 21:29:53][main] INFO  com.wjl.lblog.BlogServerApplication - Started BlogServerApplication in 3.275 seconds (JVM running for 4.05)
+[2021-12-19 21:31:00][SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+[2021-12-19 21:31:00][SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+[2021-12-19 21:31:03][main] INFO  com.wjl.lblog.BlogServerApplication - Starting BlogServerApplication using Java 17 on lonestar with PID 31552 (D:\wjl\repository\blog\Lblog\blog-server\target\classes started by wjl in D:\wjl\repository\blog\Lblog\blog-server)
+[2021-12-19 21:31:03][main] INFO  com.wjl.lblog.BlogServerApplication - No active profile set, falling back to default profiles: default
+[2021-12-19 21:31:04][main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8088"]
+[2021-12-19 21:31:04][main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+[2021-12-19 21:31:04][main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.55]
+[2021-12-19 21:31:04][main] WARN  org.apache.catalina.core.AprLifecycleListener - This listener must only be nested within Server elements, but is in [TomcatEmbeddedContext].
+[2021-12-19 21:31:04][main] INFO  org.apache.catalina.core.AprLifecycleListener - Loaded Apache Tomcat Native library [1.2.30] using APR version [1.7.0].
+[2021-12-19 21:31:04][main] INFO  org.apache.catalina.core.AprLifecycleListener - APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true], UDS [true].
+[2021-12-19 21:31:04][main] INFO  org.apache.catalina.core.AprLifecycleListener - APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+[2021-12-19 21:31:04][main] INFO  org.apache.catalina.core.AprLifecycleListener - OpenSSL successfully initialized [OpenSSL 1.1.1k  25 Mar 2021]
+[2021-12-19 21:31:04][main] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+[2021-12-19 21:31:04][main] INFO  org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+[2021-12-19 21:31:04][main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.1.Final
+[2021-12-19 21:31:04][main] INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+[2021-12-19 21:31:04][main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+[2021-12-19 21:31:04][main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+[2021-12-19 21:31:04][main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+[2021-12-19 21:31:04][main] INFO  org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[2021-12-19 21:31:05][main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8088"]
+[2021-12-19 21:31:05][main] INFO  com.wjl.lblog.BlogServerApplication - Started BlogServerApplication in 3.151 seconds (JVM running for 3.906)
+[2021-12-19 21:31:23][SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+[2021-12-19 21:31:23][SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+[2021-12-19 21:31:26][main] INFO  com.wjl.lblog.BlogServerApplication - Starting BlogServerApplication using Java 17 on lonestar with PID 23640 (D:\wjl\repository\blog\Lblog\blog-server\target\classes started by wjl in D:\wjl\repository\blog\Lblog\blog-server)
+[2021-12-19 21:31:26][main] INFO  com.wjl.lblog.BlogServerApplication - No active profile set, falling back to default profiles: default
+[2021-12-19 21:31:27][main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8088"]
+[2021-12-19 21:31:27][main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+[2021-12-19 21:31:27][main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.55]
+[2021-12-19 21:31:27][main] WARN  org.apache.catalina.core.AprLifecycleListener - This listener must only be nested within Server elements, but is in [TomcatEmbeddedContext].
+[2021-12-19 21:31:27][main] INFO  org.apache.catalina.core.AprLifecycleListener - Loaded Apache Tomcat Native library [1.2.30] using APR version [1.7.0].
+[2021-12-19 21:31:27][main] INFO  org.apache.catalina.core.AprLifecycleListener - APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true], UDS [true].
+[2021-12-19 21:31:27][main] INFO  org.apache.catalina.core.AprLifecycleListener - APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+[2021-12-19 21:31:27][main] INFO  org.apache.catalina.core.AprLifecycleListener - OpenSSL successfully initialized [OpenSSL 1.1.1k  25 Mar 2021]
+[2021-12-19 21:31:27][main] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+[2021-12-19 21:31:27][main] INFO  org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+[2021-12-19 21:31:27][main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.1.Final
+[2021-12-19 21:31:27][main] INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+[2021-12-19 21:31:27][main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+[2021-12-19 21:31:28][main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+[2021-12-19 21:31:28][main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+[2021-12-19 21:31:28][main] INFO  org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[2021-12-19 21:31:29][main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8088"]
+[2021-12-19 21:31:29][main] INFO  com.wjl.lblog.BlogServerApplication - Started BlogServerApplication in 3.173 seconds (JVM running for 3.927)
+[2021-12-19 21:32:17][SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+[2021-12-19 21:32:17][SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+[2021-12-19 21:32:19][main] INFO  com.wjl.lblog.BlogServerApplication - Starting BlogServerApplication using Java 17 on lonestar with PID 37788 (D:\wjl\repository\blog\Lblog\blog-server\target\classes started by wjl in D:\wjl\repository\blog\Lblog\blog-server)
+[2021-12-19 21:32:19][main] INFO  com.wjl.lblog.BlogServerApplication - No active profile set, falling back to default profiles: default
+[2021-12-19 21:32:20][main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8088"]
+[2021-12-19 21:32:20][main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+[2021-12-19 21:32:20][main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.55]
+[2021-12-19 21:32:20][main] WARN  org.apache.catalina.core.AprLifecycleListener - This listener must only be nested within Server elements, but is in [TomcatEmbeddedContext].
+[2021-12-19 21:32:20][main] INFO  org.apache.catalina.core.AprLifecycleListener - Loaded Apache Tomcat Native library [1.2.30] using APR version [1.7.0].
+[2021-12-19 21:32:20][main] INFO  org.apache.catalina.core.AprLifecycleListener - APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true], UDS [true].
+[2021-12-19 21:32:20][main] INFO  org.apache.catalina.core.AprLifecycleListener - APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+[2021-12-19 21:32:20][main] INFO  org.apache.catalina.core.AprLifecycleListener - OpenSSL successfully initialized [OpenSSL 1.1.1k  25 Mar 2021]
+[2021-12-19 21:32:20][main] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+[2021-12-19 21:32:20][main] INFO  org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+[2021-12-19 21:32:20][main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.1.Final
+[2021-12-19 21:32:21][main] INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+[2021-12-19 21:32:21][main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+[2021-12-19 21:32:21][main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+[2021-12-19 21:32:21][main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+[2021-12-19 21:32:21][main] INFO  org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[2021-12-19 21:32:22][main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8088"]
+[2021-12-19 21:32:22][main] INFO  com.wjl.lblog.BlogServerApplication - Started BlogServerApplication in 2.96 seconds (JVM running for 3.673)
+[2021-12-19 21:32:27][SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+[2021-12-19 21:32:27][SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+[2021-12-19 21:32:29][main] INFO  com.wjl.lblog.BlogServerApplication - Starting BlogServerApplication using Java 17 on lonestar with PID 34724 (D:\wjl\repository\blog\Lblog\blog-server\target\classes started by wjl in D:\wjl\repository\blog\Lblog\blog-server)
+[2021-12-19 21:32:29][main] INFO  com.wjl.lblog.BlogServerApplication - No active profile set, falling back to default profiles: default
+[2021-12-19 21:32:30][main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8088"]
+[2021-12-19 21:32:30][main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+[2021-12-19 21:32:30][main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.55]
+[2021-12-19 21:32:30][main] WARN  org.apache.catalina.core.AprLifecycleListener - This listener must only be nested within Server elements, but is in [TomcatEmbeddedContext].
+[2021-12-19 21:32:30][main] INFO  org.apache.catalina.core.AprLifecycleListener - Loaded Apache Tomcat Native library [1.2.30] using APR version [1.7.0].
+[2021-12-19 21:32:30][main] INFO  org.apache.catalina.core.AprLifecycleListener - APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true], UDS [true].
+[2021-12-19 21:32:30][main] INFO  org.apache.catalina.core.AprLifecycleListener - APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+[2021-12-19 21:32:30][main] INFO  org.apache.catalina.core.AprLifecycleListener - OpenSSL successfully initialized [OpenSSL 1.1.1k  25 Mar 2021]
+[2021-12-19 21:32:30][main] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+[2021-12-19 21:32:30][main] INFO  org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+[2021-12-19 21:32:30][main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.1.Final
+[2021-12-19 21:32:31][main] INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+[2021-12-19 21:32:31][main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+[2021-12-19 21:32:31][main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+[2021-12-19 21:32:31][main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+[2021-12-19 21:32:31][main] INFO  org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[2021-12-19 21:32:32][main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8088"]
+[2021-12-19 21:32:32][main] INFO  com.wjl.lblog.BlogServerApplication - Started BlogServerApplication in 2.965 seconds (JVM running for 3.692)
+[2021-12-19 21:32:48][SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+[2021-12-19 21:32:48][SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+[2021-12-19 21:32:51][main] INFO  com.wjl.lblog.BlogServerApplication - Starting BlogServerApplication using Java 17 on lonestar with PID 15660 (D:\wjl\repository\blog\Lblog\blog-server\target\classes started by wjl in D:\wjl\repository\blog\Lblog\blog-server)
+[2021-12-19 21:32:51][main] INFO  com.wjl.lblog.BlogServerApplication - No active profile set, falling back to default profiles: default
+[2021-12-19 21:32:52][main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8088"]
+[2021-12-19 21:32:52][main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+[2021-12-19 21:32:52][main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.55]
+[2021-12-19 21:32:52][main] WARN  org.apache.catalina.core.AprLifecycleListener - This listener must only be nested within Server elements, but is in [TomcatEmbeddedContext].
+[2021-12-19 21:32:52][main] INFO  org.apache.catalina.core.AprLifecycleListener - Loaded Apache Tomcat Native library [1.2.30] using APR version [1.7.0].
+[2021-12-19 21:32:52][main] INFO  org.apache.catalina.core.AprLifecycleListener - APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true], UDS [true].
+[2021-12-19 21:32:52][main] INFO  org.apache.catalina.core.AprLifecycleListener - APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+[2021-12-19 21:32:52][main] INFO  org.apache.catalina.core.AprLifecycleListener - OpenSSL successfully initialized [OpenSSL 1.1.1k  25 Mar 2021]
+[2021-12-19 21:32:52][main] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+[2021-12-19 21:32:52][main] INFO  org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+[2021-12-19 21:32:52][main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.1.Final
+[2021-12-19 21:32:52][main] INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+[2021-12-19 21:32:52][main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+[2021-12-19 21:32:52][main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+[2021-12-19 21:32:52][main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+[2021-12-19 21:32:53][main] INFO  org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[2021-12-19 21:32:53][main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8088"]
+[2021-12-19 21:32:53][main] INFO  com.wjl.lblog.BlogServerApplication - Started BlogServerApplication in 2.986 seconds (JVM running for 3.697)
+[2021-12-19 21:33:03][SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+[2021-12-19 21:33:03][SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+[2021-12-19 21:33:05][main] INFO  com.wjl.lblog.BlogServerApplication - Starting BlogServerApplication using Java 17 on lonestar with PID 28760 (D:\wjl\repository\blog\Lblog\blog-server\target\classes started by wjl in D:\wjl\repository\blog\Lblog\blog-server)
+[2021-12-19 21:33:05][main] INFO  com.wjl.lblog.BlogServerApplication - No active profile set, falling back to default profiles: default
+[2021-12-19 21:33:06][main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8088"]
+[2021-12-19 21:33:06][main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+[2021-12-19 21:33:06][main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.55]
+[2021-12-19 21:33:06][main] WARN  org.apache.catalina.core.AprLifecycleListener - This listener must only be nested within Server elements, but is in [TomcatEmbeddedContext].
+[2021-12-19 21:33:06][main] INFO  org.apache.catalina.core.AprLifecycleListener - Loaded Apache Tomcat Native library [1.2.30] using APR version [1.7.0].
+[2021-12-19 21:33:06][main] INFO  org.apache.catalina.core.AprLifecycleListener - APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true], UDS [true].
+[2021-12-19 21:33:06][main] INFO  org.apache.catalina.core.AprLifecycleListener - APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+[2021-12-19 21:33:06][main] INFO  org.apache.catalina.core.AprLifecycleListener - OpenSSL successfully initialized [OpenSSL 1.1.1k  25 Mar 2021]
+[2021-12-19 21:33:06][main] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+[2021-12-19 21:33:06][main] INFO  org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+[2021-12-19 21:33:07][main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.1.Final
+[2021-12-19 21:33:07][main] INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+[2021-12-19 21:33:07][main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+[2021-12-19 21:33:07][main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+[2021-12-19 21:33:07][main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+[2021-12-19 21:33:07][main] INFO  org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[2021-12-19 21:33:08][main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8088"]
+[2021-12-19 21:33:08][main] INFO  com.wjl.lblog.BlogServerApplication - Started BlogServerApplication in 2.97 seconds (JVM running for 3.667)
+[2021-12-19 21:33:18][SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+[2021-12-19 21:33:18][SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+[2021-12-19 21:33:21][main] INFO  com.wjl.lblog.BlogServerApplication - Starting BlogServerApplication using Java 17 on lonestar with PID 37704 (D:\wjl\repository\blog\Lblog\blog-server\target\classes started by wjl in D:\wjl\repository\blog\Lblog\blog-server)
+[2021-12-19 21:33:21][main] INFO  com.wjl.lblog.BlogServerApplication - No active profile set, falling back to default profiles: default
+[2021-12-19 21:33:22][main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8088"]
+[2021-12-19 21:33:22][main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+[2021-12-19 21:33:22][main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.55]
+[2021-12-19 21:33:22][main] WARN  org.apache.catalina.core.AprLifecycleListener - This listener must only be nested within Server elements, but is in [TomcatEmbeddedContext].
+[2021-12-19 21:33:22][main] INFO  org.apache.catalina.core.AprLifecycleListener - Loaded Apache Tomcat Native library [1.2.30] using APR version [1.7.0].
+[2021-12-19 21:33:22][main] INFO  org.apache.catalina.core.AprLifecycleListener - APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true], UDS [true].
+[2021-12-19 21:33:22][main] INFO  org.apache.catalina.core.AprLifecycleListener - APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+[2021-12-19 21:33:22][main] INFO  org.apache.catalina.core.AprLifecycleListener - OpenSSL successfully initialized [OpenSSL 1.1.1k  25 Mar 2021]
+[2021-12-19 21:33:22][main] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+[2021-12-19 21:33:22][main] INFO  org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+[2021-12-19 21:33:22][main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.1.Final
+[2021-12-19 21:33:22][main] INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+[2021-12-19 21:33:22][main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+[2021-12-19 21:33:22][main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+[2021-12-19 21:33:22][main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+[2021-12-19 21:33:23][main] INFO  org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[2021-12-19 21:33:24][main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8088"]
+[2021-12-19 21:33:24][main] INFO  com.wjl.lblog.BlogServerApplication - Started BlogServerApplication in 2.965 seconds (JVM running for 3.658)
+[2021-12-19 21:33:29][SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+[2021-12-19 21:33:29][SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+[2021-12-19 21:33:32][main] INFO  com.wjl.lblog.BlogServerApplication - Starting BlogServerApplication using Java 17 on lonestar with PID 23660 (D:\wjl\repository\blog\Lblog\blog-server\target\classes started by wjl in D:\wjl\repository\blog\Lblog\blog-server)
+[2021-12-19 21:33:32][main] INFO  com.wjl.lblog.BlogServerApplication - No active profile set, falling back to default profiles: default
+[2021-12-19 21:33:33][main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8088"]
+[2021-12-19 21:33:33][main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+[2021-12-19 21:33:33][main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.55]
+[2021-12-19 21:33:33][main] WARN  org.apache.catalina.core.AprLifecycleListener - This listener must only be nested within Server elements, but is in [TomcatEmbeddedContext].
+[2021-12-19 21:33:33][main] INFO  org.apache.catalina.core.AprLifecycleListener - Loaded Apache Tomcat Native library [1.2.30] using APR version [1.7.0].
+[2021-12-19 21:33:33][main] INFO  org.apache.catalina.core.AprLifecycleListener - APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true], UDS [true].
+[2021-12-19 21:33:33][main] INFO  org.apache.catalina.core.AprLifecycleListener - APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+[2021-12-19 21:33:33][main] INFO  org.apache.catalina.core.AprLifecycleListener - OpenSSL successfully initialized [OpenSSL 1.1.1k  25 Mar 2021]
+[2021-12-19 21:33:33][main] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+[2021-12-19 21:33:33][main] INFO  org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+[2021-12-19 21:33:34][main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.1.Final
+[2021-12-19 21:33:34][main] INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+[2021-12-19 21:33:34][main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+[2021-12-19 21:33:34][main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+[2021-12-19 21:33:34][main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+[2021-12-19 21:33:34][main] INFO  org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[2021-12-19 21:33:35][main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8088"]
+[2021-12-19 21:33:35][main] INFO  com.wjl.lblog.BlogServerApplication - Started BlogServerApplication in 3.001 seconds (JVM running for 3.704)
+[2021-12-19 21:36:45][SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+[2021-12-19 21:36:45][SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+[2021-12-19 21:36:49][main] INFO  com.wjl.lblog.BlogServerApplication - Starting BlogServerApplication using Java 17 on lonestar with PID 2976 (D:\wjl\repository\blog\Lblog\blog-server\target\classes started by wjl in D:\wjl\repository\blog\Lblog\blog-server)
+[2021-12-19 21:36:49][main] INFO  com.wjl.lblog.BlogServerApplication - No active profile set, falling back to default profiles: default
+[2021-12-19 21:36:50][main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8088"]
+[2021-12-19 21:36:50][main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+[2021-12-19 21:36:50][main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.55]
+[2021-12-19 21:36:50][main] WARN  org.apache.catalina.core.AprLifecycleListener - This listener must only be nested within Server elements, but is in [TomcatEmbeddedContext].
+[2021-12-19 21:36:50][main] INFO  org.apache.catalina.core.AprLifecycleListener - Loaded Apache Tomcat Native library [1.2.30] using APR version [1.7.0].
+[2021-12-19 21:36:50][main] INFO  org.apache.catalina.core.AprLifecycleListener - APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true], UDS [true].
+[2021-12-19 21:36:50][main] INFO  org.apache.catalina.core.AprLifecycleListener - APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+[2021-12-19 21:36:50][main] INFO  org.apache.catalina.core.AprLifecycleListener - OpenSSL successfully initialized [OpenSSL 1.1.1k  25 Mar 2021]
+[2021-12-19 21:36:50][main] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+[2021-12-19 21:36:50][main] INFO  org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+[2021-12-19 21:36:50][main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.1.Final
+[2021-12-19 21:36:50][main] INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+[2021-12-19 21:36:50][main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+[2021-12-19 21:36:50][main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+[2021-12-19 21:36:50][main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+[2021-12-19 21:36:51][main] INFO  org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[2021-12-19 21:36:52][main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8088"]
+[2021-12-19 21:36:52][main] INFO  com.wjl.lblog.BlogServerApplication - Started BlogServerApplication in 2.958 seconds (JVM running for 3.672)
+[2021-12-19 21:40:49][SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+[2021-12-19 21:40:49][SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+[2021-12-19 21:40:52][main] INFO  com.wjl.lblog.BlogServerApplication - Starting BlogServerApplication using Java 17 on lonestar with PID 32080 (D:\wjl\repository\blog\Lblog\blog-server\target\classes started by wjl in D:\wjl\repository\blog\Lblog\blog-server)
+[2021-12-19 21:40:52][main] INFO  com.wjl.lblog.BlogServerApplication - No active profile set, falling back to default profiles: default
+[2021-12-19 21:40:53][main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8088"]
+[2021-12-19 21:40:53][main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+[2021-12-19 21:40:53][main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.55]
+[2021-12-19 21:40:53][main] WARN  org.apache.catalina.core.AprLifecycleListener - This listener must only be nested within Server elements, but is in [TomcatEmbeddedContext].
+[2021-12-19 21:40:53][main] INFO  org.apache.catalina.core.AprLifecycleListener - Loaded Apache Tomcat Native library [1.2.30] using APR version [1.7.0].
+[2021-12-19 21:40:53][main] INFO  org.apache.catalina.core.AprLifecycleListener - APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true], UDS [true].
+[2021-12-19 21:40:53][main] INFO  org.apache.catalina.core.AprLifecycleListener - APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+[2021-12-19 21:40:53][main] INFO  org.apache.catalina.core.AprLifecycleListener - OpenSSL successfully initialized [OpenSSL 1.1.1k  25 Mar 2021]
+[2021-12-19 21:40:53][main] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+[2021-12-19 21:40:53][main] INFO  org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+[2021-12-19 21:40:53][main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.1.Final
+[2021-12-19 21:40:53][main] INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+[2021-12-19 21:40:53][main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+[2021-12-19 21:40:53][main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+[2021-12-19 21:40:53][main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+[2021-12-19 21:40:53][main] INFO  org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[2021-12-19 21:40:54][main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8088"]
+[2021-12-19 21:40:54][main] INFO  com.wjl.lblog.BlogServerApplication - Started BlogServerApplication in 3.117 seconds (JVM running for 3.855)
+[2021-12-19 21:42:31][SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+[2021-12-19 21:42:31][SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+[2021-12-19 21:42:35][main] INFO  com.wjl.lblog.BlogServerApplication - Starting BlogServerApplication using Java 17 on lonestar with PID 7280 (D:\wjl\repository\blog\Lblog\blog-server\target\classes started by wjl in D:\wjl\repository\blog\Lblog\blog-server)
+[2021-12-19 21:42:35][main] INFO  com.wjl.lblog.BlogServerApplication - No active profile set, falling back to default profiles: default
+[2021-12-19 21:42:36][main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8088"]
+[2021-12-19 21:42:36][main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+[2021-12-19 21:42:36][main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.55]
+[2021-12-19 21:42:36][main] WARN  org.apache.catalina.core.AprLifecycleListener - This listener must only be nested within Server elements, but is in [TomcatEmbeddedContext].
+[2021-12-19 21:42:36][main] INFO  org.apache.catalina.core.AprLifecycleListener - Loaded Apache Tomcat Native library [1.2.30] using APR version [1.7.0].
+[2021-12-19 21:42:36][main] INFO  org.apache.catalina.core.AprLifecycleListener - APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true], UDS [true].
+[2021-12-19 21:42:36][main] INFO  org.apache.catalina.core.AprLifecycleListener - APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+[2021-12-19 21:42:36][main] INFO  org.apache.catalina.core.AprLifecycleListener - OpenSSL successfully initialized [OpenSSL 1.1.1k  25 Mar 2021]
+[2021-12-19 21:42:36][main] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+[2021-12-19 21:42:36][main] INFO  org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+[2021-12-19 21:42:36][main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.1.Final
+[2021-12-19 21:42:36][main] INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+[2021-12-19 21:42:36][main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+[2021-12-19 21:42:36][main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+[2021-12-19 21:42:36][main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+[2021-12-19 21:42:37][main] INFO  org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[2021-12-19 21:42:38][main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8088"]
+[2021-12-19 21:42:38][main] INFO  com.wjl.lblog.BlogServerApplication - Started BlogServerApplication in 3.104 seconds (JVM running for 3.824)
+[2021-12-19 21:50:39][SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+[2021-12-19 21:50:39][SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.

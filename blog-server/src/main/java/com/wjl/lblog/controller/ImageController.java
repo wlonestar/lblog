@@ -5,13 +5,13 @@ import com.wjl.lblog.common.enums.HttpStatus;
 import com.wjl.lblog.model.entity.Image;
 import com.wjl.lblog.service.intf.FileService;
 import com.wjl.lblog.service.intf.ImageService;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Sort;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
+import javax.annotation.Resource;
 import java.util.List;
 import java.util.Objects;
 
@@ -26,10 +26,10 @@ import java.util.Objects;
 @RequestMapping("/files")
 public class ImageController {
 
-    @Autowired
+    @Resource
     private ImageService imageService;
 
-    @Autowired
+    @Resource
     private FileService fileService;
 
     /**

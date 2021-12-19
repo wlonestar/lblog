@@ -3,8 +3,6 @@ package com.wjl.lblog.model.dto;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 
-import java.util.Date;
-
 /**
  * @author: wjl
  * @date: 2021/12/9 9:51

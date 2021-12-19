@@ -2,12 +2,12 @@ package com.wjl.lblog.controller;
 
 import com.wjl.lblog.model.entity.Comment;
 import com.wjl.lblog.service.intf.CommentService;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Sort;
 import org.springframework.web.bind.annotation.*;
 
+import javax.annotation.Resource;
 import java.util.List;
 
 /**
@@ -21,7 +21,7 @@ import java.util.List;
 @RequestMapping("/comment")
 public class CommentController {
 
-    @Autowired
+    @Resource
     private CommentService commentService;
 
     /**

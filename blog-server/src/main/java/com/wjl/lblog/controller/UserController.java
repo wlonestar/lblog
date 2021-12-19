@@ -4,8 +4,9 @@ import com.wjl.lblog.common.constants.Result;
 import com.wjl.lblog.common.enums.HttpStatus;
 import com.wjl.lblog.model.entity.User;
 import com.wjl.lblog.service.intf.UserService;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
+
+import javax.annotation.Resource;
 
 /**
  * 用户接口
@@ -18,7 +19,7 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping("/user")
 public class UserController {
 
-    @Autowired
+    @Resource
     private UserService userService;
 
     /**

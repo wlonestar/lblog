@@ -3,9 +3,9 @@ package com.wjl.lblog.component;
 import cn.dev33.satoken.stp.StpInterface;
 import com.wjl.lblog.model.entity.*;
 import com.wjl.lblog.service.intf.*;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
+import javax.annotation.Resource;
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
@@ -19,19 +19,19 @@ import java.util.Set;
 @Component
 public class StpInterfaceImpl implements StpInterface {
 
-    @Autowired
+    @Resource
     private UserService userService;
 
-    @Autowired
+    @Resource
     private RoleService roleService;
 
-    @Autowired
+    @Resource
     private PermissionService permissionService;
 
-    @Autowired
+    @Resource
     private UserRoleService userRoleService;
 
-    @Autowired
+    @Resource
     private RolePermissionService rolePermissionService;
 
     /**

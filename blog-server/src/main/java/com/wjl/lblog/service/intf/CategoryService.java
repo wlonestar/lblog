@@ -7,11 +7,6 @@ import com.wjl.lblog.model.dto.CategoryDto;
 import com.wjl.lblog.model.entity.Category;
 import com.wjl.lblog.model.vo.ArticleTitleVo;
 import com.wjl.lblog.model.vo.CategoryArticleVo;
-import org.apache.ibatis.annotations.Param;
-import org.apache.ibatis.annotations.ResultType;
-import org.apache.ibatis.annotations.Select;
-import org.apache.ibatis.annotations.Update;
-import org.springframework.data.domain.Pageable;
 
 import java.util.List;
 

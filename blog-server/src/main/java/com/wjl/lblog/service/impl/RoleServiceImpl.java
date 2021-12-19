@@ -7,9 +7,9 @@ import com.wjl.lblog.repository.PermissionRepository;
 import com.wjl.lblog.repository.RolePermissionRepository;
 import com.wjl.lblog.repository.RoleRepository;
 import com.wjl.lblog.service.intf.RoleService;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import javax.annotation.Resource;
 import java.util.List;
 import java.util.Objects;
 
@@ -21,13 +21,13 @@ import java.util.Objects;
 @Service
 public class RoleServiceImpl implements RoleService {
 
-    @Autowired
+    @Resource
     private RoleRepository roleRepository;
 
-    @Autowired
+    @Resource
     private PermissionRepository permissionRepository;
 
-    @Autowired
+    @Resource
     private RolePermissionRepository rolePermissionRepository;
 
     @Override

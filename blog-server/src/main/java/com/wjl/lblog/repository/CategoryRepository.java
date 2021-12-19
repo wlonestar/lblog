@@ -3,7 +3,6 @@ package com.wjl.lblog.repository;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
-import com.wjl.lblog.model.dto.CategoryDto;
 import com.wjl.lblog.model.entity.Category;
 import org.apache.ibatis.annotations.*;
 import org.springframework.stereotype.Repository;

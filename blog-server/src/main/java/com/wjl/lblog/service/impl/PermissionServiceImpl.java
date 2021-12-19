@@ -3,9 +3,9 @@ package com.wjl.lblog.service.impl;
 import com.wjl.lblog.model.entity.Permission;
 import com.wjl.lblog.repository.PermissionRepository;
 import com.wjl.lblog.service.intf.PermissionService;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import javax.annotation.Resource;
 import java.util.List;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ import java.util.Objects;
 @Service
 public class PermissionServiceImpl implements PermissionService {
 
-    @Autowired
+    @Resource
     private PermissionRepository permissionRepository;
 
     @Override

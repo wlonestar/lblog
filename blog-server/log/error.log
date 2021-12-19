@@ -996,3 +996,5 @@ Caused by: com.fasterxml.jackson.databind.exc.InvalidFormatException: Cannot des
 	at com.fasterxml.jackson.databind.ObjectMapper.readValue(ObjectMapper.java:3683) ~[jackson-databind-2.13.0.jar:2.13.0]
 	at org.springframework.http.converter.json.AbstractJackson2HttpMessageConverter.readJavaType(AbstractJackson2HttpMessageConverter.java:378) ~[spring-web-5.3.13.jar:5.3.13]
 	... 51 more
+[2021-12-19 21:04:02][main] ERROR com.wjl.lblog.LogTest - COLOR ERROR
+[2021-12-19 21:04:37][main] ERROR com.wjl.lblog.LogTest - COLOR ERROR

@@ -16,6 +16,6 @@ public interface ImageRepository extends JpaRepository<Image, Long> {
 
     Page<Image> findAll(Pageable pageable);
 
-    Image findImageByName(String name);
+//    Image findImageByName(String name);
 
 }

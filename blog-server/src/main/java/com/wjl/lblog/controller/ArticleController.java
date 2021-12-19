@@ -10,9 +10,9 @@ import com.wjl.lblog.model.vo.ArticleDetailVo;
 import com.wjl.lblog.model.vo.ArticleSummaryVo;
 import com.wjl.lblog.model.vo.ArticleTitleVo;
 import com.wjl.lblog.service.intf.ArticleService;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import javax.annotation.Resource;
 import java.util.List;
 import java.util.Objects;
 
@@ -27,7 +27,7 @@ import java.util.Objects;
 @RequestMapping(value = "/article")
 public class ArticleController {
 
-    @Autowired
+    @Resource
     private ArticleService articleService;
 
 

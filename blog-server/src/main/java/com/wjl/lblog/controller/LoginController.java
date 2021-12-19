@@ -12,9 +12,9 @@ import com.wjl.lblog.service.intf.RoleService;
 import com.wjl.lblog.service.intf.UserRoleService;
 import com.wjl.lblog.service.intf.UserService;
 import com.wjl.lblog.common.constants.Result;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import javax.annotation.Resource;
 import java.util.List;
 import java.util.Objects;
 
@@ -29,13 +29,13 @@ import java.util.Objects;
 @RequestMapping("/admin")
 public class LoginController {
 
-    @Autowired
+    @Resource
     private UserService userService;
 
-    @Autowired
+    @Resource
     private RoleService roleService;
 
-    @Autowired
+    @Resource
     private UserRoleService userRoleService;
 
     /**

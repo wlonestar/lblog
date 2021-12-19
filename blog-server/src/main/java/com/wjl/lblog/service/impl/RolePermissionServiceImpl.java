@@ -4,9 +4,9 @@ import com.wjl.lblog.model.entity.Role;
 import com.wjl.lblog.model.entity.RolePermission;
 import com.wjl.lblog.repository.RolePermissionRepository;
 import com.wjl.lblog.service.intf.RolePermissionService;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import javax.annotation.Resource;
 import java.util.List;
 
 /**
@@ -17,7 +17,7 @@ import java.util.List;
 @Service
 public class RolePermissionServiceImpl implements RolePermissionService {
 
-    @Autowired
+    @Resource
     private RolePermissionRepository rolePermissionRepository;
 
     @Override

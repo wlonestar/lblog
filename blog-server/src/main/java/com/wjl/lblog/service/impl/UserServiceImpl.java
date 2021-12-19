@@ -1,13 +1,12 @@
 package com.wjl.lblog.service.impl;
 
-import cn.dev33.satoken.secure.SaBase64Util;
 import com.wjl.lblog.model.entity.User;
 import com.wjl.lblog.repository.UserRepository;
 import com.wjl.lblog.service.intf.UserService;
 import org.springframework.beans.BeanUtils;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import javax.annotation.Resource;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
@@ -20,7 +19,7 @@ import java.util.Objects;
 @Service
 public class UserServiceImpl implements UserService {
 
-    @Autowired
+    @Resource
     private UserRepository userRepository;
 
     @Override

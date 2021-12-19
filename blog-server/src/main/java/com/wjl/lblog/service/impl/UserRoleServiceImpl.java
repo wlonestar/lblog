@@ -4,9 +4,9 @@ import com.wjl.lblog.model.entity.User;
 import com.wjl.lblog.model.entity.UserRole;
 import com.wjl.lblog.repository.UserRoleRepository;
 import com.wjl.lblog.service.intf.UserRoleService;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import javax.annotation.Resource;
 import java.util.List;
 
 /**
@@ -17,7 +17,7 @@ import java.util.List;
 @Service
 public class UserRoleServiceImpl implements UserRoleService {
 
-    @Autowired
+    @Resource
     private UserRoleRepository userRoleRepository;
 
     @Override

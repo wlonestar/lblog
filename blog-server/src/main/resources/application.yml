@@ -1,7 +1,10 @@
+# server port
 server:
   port: 8088
 
+# spring configuration
 spring:
+  # datasource config
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
     url: jdbc:mysql://localhost:3306/lblog?useSSL=false&serverTimezone=UTC
@@ -11,15 +14,17 @@ spring:
       minimum-idle: 1
       maximum-pool-size: 20
       initialization-fail-timeout: 60000
+  # jpa config
   jpa:
     show-sql: false
+    database-platform: org.hibernate.dialect.MySQL8Dialect
     hibernate:
       ddl-auto: update
     properties:
       hibernate:
         format_sql: true
-    database-platform: org.hibernate.dialect.MySQL8Dialect
 
+# sa-token configuration
 sa-token:
   token-name: satoken
   timeout: 86400

@@ -122,3 +122,75 @@ com.wjl.lblog.controller.CategoryController#findOneCategoryAndArticleById(Long, 
 [2021-12-19 10:07:12,143][main][WARN][org.mybatis.spring.mapper.ClassPathMapperScanner:44] Skipping MapperFactoryBean with name 'userRoleRepository' and 'com.wjl.lblog.repository.UserRoleRepository' mapperInterface. Bean already defined with the same name!
 [2021-12-19 10:07:12,425][main][WARN][org.apache.catalina.core.AprLifecycleListener:173] This listener must only be nested within Server elements, but is in [TomcatEmbeddedContext].
 [2021-12-19 10:07:13,865][main][WARN][org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration:219] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+[2021-12-19 20:43:23,723][main][WARN][org.mybatis.spring.mapper.ClassPathMapperScanner:44] Skipping MapperFactoryBean with name 'commentRepository' and 'com.wjl.lblog.repository.CommentRepository' mapperInterface. Bean already defined with the same name!
+[2021-12-19 20:43:23,724][main][WARN][org.mybatis.spring.mapper.ClassPathMapperScanner:44] Skipping MapperFactoryBean with name 'imageRepository' and 'com.wjl.lblog.repository.ImageRepository' mapperInterface. Bean already defined with the same name!
+[2021-12-19 20:43:23,724][main][WARN][org.mybatis.spring.mapper.ClassPathMapperScanner:44] Skipping MapperFactoryBean with name 'permissionRepository' and 'com.wjl.lblog.repository.PermissionRepository' mapperInterface. Bean already defined with the same name!
+[2021-12-19 20:43:23,725][main][WARN][org.mybatis.spring.mapper.ClassPathMapperScanner:44] Skipping MapperFactoryBean with name 'rolePermissionRepository' and 'com.wjl.lblog.repository.RolePermissionRepository' mapperInterface. Bean already defined with the same name!
+[2021-12-19 20:43:23,725][main][WARN][org.mybatis.spring.mapper.ClassPathMapperScanner:44] Skipping MapperFactoryBean with name 'roleRepository' and 'com.wjl.lblog.repository.RoleRepository' mapperInterface. Bean already defined with the same name!
+[2021-12-19 20:43:23,725][main][WARN][org.mybatis.spring.mapper.ClassPathMapperScanner:44] Skipping MapperFactoryBean with name 'timelineRepository' and 'com.wjl.lblog.repository.TimelineRepository' mapperInterface. Bean already defined with the same name!
+[2021-12-19 20:43:23,725][main][WARN][org.mybatis.spring.mapper.ClassPathMapperScanner:44] Skipping MapperFactoryBean with name 'userRepository' and 'com.wjl.lblog.repository.UserRepository' mapperInterface. Bean already defined with the same name!
+[2021-12-19 20:43:23,725][main][WARN][org.mybatis.spring.mapper.ClassPathMapperScanner:44] Skipping MapperFactoryBean with name 'userRoleRepository' and 'com.wjl.lblog.repository.UserRoleRepository' mapperInterface. Bean already defined with the same name!
+[2021-12-19 20:43:24,074][main][WARN][org.apache.catalina.core.AprLifecycleListener:173] This listener must only be nested within Server elements, but is in [TomcatEmbeddedContext].
+[2021-12-19 20:43:25,828][main][WARN][org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration:219] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+[2021-12-19 20:46:41,421][main][WARN][org.mybatis.spring.mapper.ClassPathMapperScanner:44] Skipping MapperFactoryBean with name 'commentRepository' and 'com.wjl.lblog.repository.CommentRepository' mapperInterface. Bean already defined with the same name!
+[2021-12-19 20:46:41,421][main][WARN][org.mybatis.spring.mapper.ClassPathMapperScanner:44] Skipping MapperFactoryBean with name 'imageRepository' and 'com.wjl.lblog.repository.ImageRepository' mapperInterface. Bean already defined with the same name!
+[2021-12-19 20:46:41,421][main][WARN][org.mybatis.spring.mapper.ClassPathMapperScanner:44] Skipping MapperFactoryBean with name 'permissionRepository' and 'com.wjl.lblog.repository.PermissionRepository' mapperInterface. Bean already defined with the same name!
+[2021-12-19 20:46:41,421][main][WARN][org.mybatis.spring.mapper.ClassPathMapperScanner:44] Skipping MapperFactoryBean with name 'rolePermissionRepository' and 'com.wjl.lblog.repository.RolePermissionRepository' mapperInterface. Bean already defined with the same name!
+[2021-12-19 20:46:41,421][main][WARN][org.mybatis.spring.mapper.ClassPathMapperScanner:44] Skipping MapperFactoryBean with name 'roleRepository' and 'com.wjl.lblog.repository.RoleRepository' mapperInterface. Bean already defined with the same name!
+[2021-12-19 20:46:41,421][main][WARN][org.mybatis.spring.mapper.ClassPathMapperScanner:44] Skipping MapperFactoryBean with name 'timelineRepository' and 'com.wjl.lblog.repository.TimelineRepository' mapperInterface. Bean already defined with the same name!
+[2021-12-19 20:46:41,421][main][WARN][org.mybatis.spring.mapper.ClassPathMapperScanner:44] Skipping MapperFactoryBean with name 'userRepository' and 'com.wjl.lblog.repository.UserRepository' mapperInterface. Bean already defined with the same name!
+[2021-12-19 20:46:41,421][main][WARN][org.mybatis.spring.mapper.ClassPathMapperScanner:44] Skipping MapperFactoryBean with name 'userRoleRepository' and 'com.wjl.lblog.repository.UserRoleRepository' mapperInterface. Bean already defined with the same name!
+[2021-12-19 20:46:41,735][main][WARN][org.apache.catalina.core.AprLifecycleListener:173] This listener must only be nested within Server elements, but is in [TomcatEmbeddedContext].
+[2021-12-19 20:46:43,177][main][WARN][org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration:219] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+20:50:10.370 [main] WARN  org.apache.catalina.core.AprLifecycleListener - This listener must only be nested within Server elements, but is in [TomcatEmbeddedContext].
+20:50:48.188 [main] WARN  org.apache.catalina.core.AprLifecycleListener - This listener must only be nested within Server elements, but is in [TomcatEmbeddedContext].
+2021:12:19 20:51:24 [main] WARN  org.apache.catalina.core.AprLifecycleListener - This listener must only be nested within Server elements, but is in [TomcatEmbeddedContext].
+2021-12-19 20:51:37 [main] WARN  org.apache.catalina.core.AprLifecycleListener - This listener must only be nested within Server elements, but is in [TomcatEmbeddedContext].
+[2021-12-19 20:52:41][main] WARN  org.apache.catalina.core.AprLifecycleListener - This listener must only be nested within Server elements, but is in [TomcatEmbeddedContext].
+[2021-12-19 20:56:16][main] WARN org.apache.catalina.core.AprLifecycleListener - This listener must only be nested within Server elements, but is in [TomcatEmbeddedContext].
+[2021-12-19 20:57:48][main] WARN  org.apache.catalina.core.AprLifecycleListener - This listener must only be nested within Server elements, but is in [TomcatEmbeddedContext].
+[2021-12-19 20:58:00][main] WARN  org.apache.catalina.core.AprLifecycleListener - This listener must only be nested within Server elements, but is in [TomcatEmbeddedContext].
+[2021-12-19 20:58:45][main] WARN  org.apache.catalina.core.AprLifecycleListener - This listener must only be nested within Server elements, but is in [TomcatEmbeddedContext].
+[2021-12-19 20:59:01][main] WARN  org.apache.catalina.core.AprLifecycleListener - This listener must only be nested within Server elements, but is in [TomcatEmbeddedContext].
+[2021-12-19 21:00:00][main] WARN  org.apache.catalina.core.AprLifecycleListener - This listener must only be nested within Server elements, but is in [TomcatEmbeddedContext].
+[2021-12-19 21:00:37][main] WARN  org.apache.catalina.core.AprLifecycleListener - This listener must only be nested within Server elements, but is in [TomcatEmbeddedContext].
+[2021-12-19 21:01:01][main] WARN  org.apache.catalina.core.AprLifecycleListener - This listener must only be nested within Server elements, but is in [TomcatEmbeddedContext].
+[2021-12-19 21:01:30][main] WARN  org.apache.catalina.core.AprLifecycleListener - This listener must only be nested within Server elements, but is in [TomcatEmbeddedContext].
+[2021-12-19 21:01:42][main] WARN  org.apache.catalina.core.AprLifecycleListener - This listener must only be nested within Server elements, but is in [TomcatEmbeddedContext].
+[2021-12-19 21:02:02][main] WARN  org.apache.catalina.core.AprLifecycleListener - This listener must only be nested within Server elements, but is in [TomcatEmbeddedContext].
+[2021-12-19 21:02:16][main] WARN  org.apache.catalina.core.AprLifecycleListener - This listener must only be nested within Server elements, but is in [TomcatEmbeddedContext].
+[2021-12-19 21:04:02][main] ERROR com.wjl.lblog.LogTest - COLOR ERROR
+[2021-12-19 21:04:02][main] WARN  com.wjl.lblog.LogTest - COLOR WARN
+[2021-12-19 21:04:37][main] ERROR com.wjl.lblog.LogTest - COLOR ERROR
+[2021-12-19 21:04:37][main] WARN  com.wjl.lblog.LogTest - COLOR WARN
+[2021-12-19 21:04:50][main] WARN  org.apache.catalina.core.AprLifecycleListener - This listener must only be nested within Server elements, but is in [TomcatEmbeddedContext].
+[2021-12-19 21:05:11][main] WARN  org.apache.catalina.core.AprLifecycleListener - This listener must only be nested within Server elements, but is in [TomcatEmbeddedContext].
+[2021-12-19 21:05:45][main] WARN  org.apache.catalina.core.AprLifecycleListener - This listener must only be nested within Server elements, but is in [TomcatEmbeddedContext].
+[2021-12-19 21:06:01][main] WARN  org.apache.catalina.core.AprLifecycleListener - This listener must only be nested within Server elements, but is in [TomcatEmbeddedContext].
+[2021-12-19 21:06:43][main] WARN  org.apache.catalina.core.AprLifecycleListener - This listener must only be nested within Server elements, but is in [TomcatEmbeddedContext].
+[2021-12-19 21:07:37][main] WARN  org.apache.catalina.core.AprLifecycleListener - This listener must only be nested within Server elements, but is in [TomcatEmbeddedContext].
+[2021-12-19 21:09:39][main] WARN  org.apache.catalina.core.AprLifecycleListener - This listener must only be nested within Server elements, but is in [TomcatEmbeddedContext].
+[2021-12-19 21:09:50][main] WARN  org.apache.catalina.core.AprLifecycleListener - This listener must only be nested within Server elements, but is in [TomcatEmbeddedContext].
+[2021-12-19 21:09:58][main] WARN  org.apache.catalina.core.AprLifecycleListener - This listener must only be nested within Server elements, but is in [TomcatEmbeddedContext].
+[2021-12-19 21:11:18][main] WARN  org.apache.catalina.core.AprLifecycleListener - This listener must only be nested within Server elements, but is in [TomcatEmbeddedContext].
+[2021-12-19 21:16:16][main] WARN  org.apache.catalina.core.AprLifecycleListener - This listener must only be nested within Server elements, but is in [TomcatEmbeddedContext].
+[2021-12-19 21:17:14][main] WARN  org.apache.catalina.core.AprLifecycleListener - This listener must only be nested within Server elements, but is in [TomcatEmbeddedContext].
+[2021-12-19 21:21:47][main] WARN  org.apache.catalina.core.AprLifecycleListener - This listener must only be nested within Server elements, but is in [TomcatEmbeddedContext].
+[2021-12-19 21:22:07][main] WARN  org.apache.catalina.core.AprLifecycleListener - This listener must only be nested within Server elements, but is in [TomcatEmbeddedContext].
+[2021-12-19 21:23:09][main] WARN  org.apache.catalina.core.AprLifecycleListener - This listener must only be nested within Server elements, but is in [TomcatEmbeddedContext].
+[2021-12-19 21:23:20][main] WARN  org.apache.catalina.core.AprLifecycleListener - This listener must only be nested within Server elements, but is in [TomcatEmbeddedContext].
+[2021-12-19 21:24:39][main] WARN  org.apache.catalina.core.AprLifecycleListener - This listener must only be nested within Server elements, but is in [TomcatEmbeddedContext].
+[2021-12-19 21:29:13][main] WARN  org.apache.catalina.core.AprLifecycleListener - This listener must only be nested within Server elements, but is in [TomcatEmbeddedContext].
+[2021-12-19 21:29:40][main] WARN  org.apache.catalina.core.AprLifecycleListener - This listener must only be nested within Server elements, but is in [TomcatEmbeddedContext].
+[2021-12-19 21:29:51][main] WARN  org.apache.catalina.core.AprLifecycleListener - This listener must only be nested within Server elements, but is in [TomcatEmbeddedContext].
+[2021-12-19 21:31:04][main] WARN  org.apache.catalina.core.AprLifecycleListener - This listener must only be nested within Server elements, but is in [TomcatEmbeddedContext].
+[2021-12-19 21:31:27][main] WARN  org.apache.catalina.core.AprLifecycleListener - This listener must only be nested within Server elements, but is in [TomcatEmbeddedContext].
+[2021-12-19 21:32:20][main] WARN  org.apache.catalina.core.AprLifecycleListener - This listener must only be nested within Server elements, but is in [TomcatEmbeddedContext].
+[2021-12-19 21:32:30][main] WARN  org.apache.catalina.core.AprLifecycleListener - This listener must only be nested within Server elements, but is in [TomcatEmbeddedContext].
+[2021-12-19 21:32:52][main] WARN  org.apache.catalina.core.AprLifecycleListener - This listener must only be nested within Server elements, but is in [TomcatEmbeddedContext].
+[2021-12-19 21:33:06][main] WARN  org.apache.catalina.core.AprLifecycleListener - This listener must only be nested within Server elements, but is in [TomcatEmbeddedContext].
+[2021-12-19 21:33:22][main] WARN  org.apache.catalina.core.AprLifecycleListener - This listener must only be nested within Server elements, but is in [TomcatEmbeddedContext].
+[2021-12-19 21:33:33][main] WARN  org.apache.catalina.core.AprLifecycleListener - This listener must only be nested within Server elements, but is in [TomcatEmbeddedContext].
+[2021-12-19 21:36:50][main] WARN  org.apache.catalina.core.AprLifecycleListener - This listener must only be nested within Server elements, but is in [TomcatEmbeddedContext].
+[2021-12-19 21:40:53][main] WARN  org.apache.catalina.core.AprLifecycleListener - This listener must only be nested within Server elements, but is in [TomcatEmbeddedContext].
+[2021-12-19 21:42:36][main] WARN  org.apache.catalina.core.AprLifecycleListener - This listener must only be nested within Server elements, but is in [TomcatEmbeddedContext].
