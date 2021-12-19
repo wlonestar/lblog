@@ -17,6 +17,5 @@ public class ArticleDto {
     private String cover;
     private String content;
     private String category;
-    private List<String> tags;
 
 }

@@ -70,7 +70,7 @@ public class ImageController {
             imageService.add(image);
             return Result.success(object);
         } else {
-            return Result.fail(HttpStatus.FAILED.getCode(), "upload failed");
+            return Result.fail(HttpStatus.BAD_REQUEST.getCode(), "upload failed");
         }
     }
 

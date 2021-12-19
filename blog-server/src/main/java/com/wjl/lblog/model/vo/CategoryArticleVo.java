@@ -1,7 +1,7 @@
 package com.wjl.lblog.model.vo;
 
+import com.baomidou.mybatisplus.core.metadata.IPage;
 import lombok.Data;
-import org.springframework.data.domain.Page;
 
 import java.util.Date;
 
@@ -19,6 +19,6 @@ public class CategoryArticleVo {
     private String name;
     private String description;
     private Integer number = 0;
-    Page<ArticleTitleVo> articles;
+    IPage<ArticleTitleVo> articles;
 
 }

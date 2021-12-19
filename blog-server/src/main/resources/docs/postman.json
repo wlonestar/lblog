@@ -1,39 +1,168 @@
 {
   "info": {
     "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-    "_postman_id": "70da61f4-e036-4d19-8c13-599b05997926",
+    "_postman_id": "b7487db6-7cae-485e-b641-1f478f5d386a",
     "name": "lblog"
   },
   "item": [
     {
-      "name": "文章",
+      "name": "文章接口",
       "item": [
         {
-          "name": "查询所有文章摘要",
+          "name": "分页查询文章详情",
           "request": {
             "method": "GET",
             "body": {
-              "mode": "formdata"
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "page",
+                  "type": "text",
+                  "description": "page",
+                  "value": "1"
+                },
+                {
+                  "key": "size",
+                  "type": "text",
+                  "description": "size",
+                  "value": "5"
+                }
+              ]
             },
             "url": {
-              "raw": "http://localhost:8088/article/all/summary",
+              "raw": "http://localhost:8088/article/page/detail?size\u003d5\u0026page\u003d1",
               "protocol": "http",
               "path": [
                 "article",
-                "all",
+                "page",
+                "detail"
+              ],
+              "host": [
+                "localhost"
+              ],
+              "port": "8088",
+              "query": [
+                {
+                  "key": "page",
+                  "value": "1",
+                  "description": "page"
+                },
+                {
+                  "key": "size",
+                  "value": "5",
+                  "description": "size"
+                }
+              ],
+              "variable": []
+            },
+            "description": "分页查询文章详情",
+            "header": []
+          },
+          "description": "分页查询文章详情"
+        },
+        {
+          "name": "分页查询文章摘要",
+          "request": {
+            "method": "GET",
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "page",
+                  "type": "text",
+                  "description": "page",
+                  "value": "1"
+                },
+                {
+                  "key": "size",
+                  "type": "text",
+                  "description": "size",
+                  "value": "5"
+                }
+              ]
+            },
+            "url": {
+              "raw": "http://localhost:8088/article/page/summary?page\u003d1\u0026size\u003d5",
+              "protocol": "http",
+              "path": [
+                "article",
+                "page",
                 "summary"
               ],
               "host": [
                 "localhost"
               ],
               "port": "8088",
-              "query": [],
+              "query": [
+                {
+                  "key": "page",
+                  "value": "1",
+                  "description": "page"
+                },
+                {
+                  "key": "size",
+                  "value": "5",
+                  "description": "size"
+                }
+              ],
               "variable": []
             },
-            "description": "查询所有文章摘要",
+            "description": "分页查询文章摘要",
             "header": []
           },
-          "description": "查询所有文章摘要"
+          "description": "分页查询文章摘要"
+        },
+        {
+          "name": "分页查询文章标题",
+          "request": {
+            "method": "GET",
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "page",
+                  "type": "text",
+                  "description": "page",
+                  "value": "1"
+                },
+                {
+                  "key": "size",
+                  "type": "text",
+                  "description": "size",
+                  "value": "5"
+                }
+              ]
+            },
+            "url": {
+              "raw": "http://localhost:8088/article/page/title?size\u003d5\u0026page\u003d1",
+              "protocol": "http",
+              "path": [
+                "article",
+                "page",
+                "title"
+              ],
+              "host": [
+                "localhost"
+              ],
+              "port": "8088",
+              "query": [
+                {
+                  "key": "page",
+                  "value": "1",
+                  "description": "page"
+                },
+                {
+                  "key": "size",
+                  "value": "5",
+                  "description": "size"
+                }
+              ],
+              "variable": []
+            },
+            "description": "分页查询文章标题",
+            "header": []
+          },
+          "description": "分页查询文章标题"
         },
         {
           "name": "查询所有文章详情",
@@ -63,7 +192,34 @@
           "description": "查询所有文章详情"
         },
         {
-          "name": "查询所有文章",
+          "name": "查询所有文章摘要",
+          "request": {
+            "method": "GET",
+            "body": {
+              "mode": "formdata"
+            },
+            "url": {
+              "raw": "http://localhost:8088/article/all/summary",
+              "protocol": "http",
+              "path": [
+                "article",
+                "all",
+                "summary"
+              ],
+              "host": [
+                "localhost"
+              ],
+              "port": "8088",
+              "query": [],
+              "variable": []
+            },
+            "description": "查询所有文章摘要",
+            "header": []
+          },
+          "description": "查询所有文章摘要"
+        },
+        {
+          "name": "查询所有文章标题",
           "request": {
             "method": "GET",
             "body": {
@@ -84,62 +240,10 @@
               "query": [],
               "variable": []
             },
-            "description": "查询所有文章",
+            "description": "查询所有文章标题",
             "header": []
           },
-          "description": "查询所有文章"
-        },
-        {
-          "name": "分页查询文章摘要",
-          "request": {
-            "method": "GET",
-            "body": {
-              "mode": "formdata",
-              "formdata": [
-                {
-                  "key": "page",
-                  "type": "text",
-                  "description": "page",
-                  "value": "1"
-                },
-                {
-                  "key": "size",
-                  "type": "text",
-                  "description": "size",
-                  "value": "5"
-                }
-              ]
-            },
-            "url": {
-              "raw": "http://localhost:8088/article/all/page?size\u003d5\u0026page\u003d1",
-              "protocol": "http",
-              "path": [
-                "article",
-                "all",
-                "page"
-              ],
-              "host": [
-                "localhost"
-              ],
-              "port": "8088",
-              "query": [
-                {
-                  "key": "page",
-                  "value": "1",
-                  "description": "page"
-                },
-                {
-                  "key": "size",
-                  "value": "5",
-                  "description": "size"
-                }
-              ],
-              "variable": []
-            },
-            "description": "分页查询文章摘要",
-            "header": []
-          },
-          "description": "分页查询文章摘要"
+          "description": "查询所有文章标题"
         },
         {
           "name": "根据 id 查询文章",
@@ -152,16 +256,16 @@
                   "key": "id",
                   "type": "text",
                   "description": "id",
-                  "value": "846"
+                  "value": "614"
                 }
               ]
             },
             "url": {
-              "raw": "http://localhost:8088/article/single/id?id\u003d846",
+              "raw": "http://localhost:8088/article/detail/id?id\u003d614",
               "protocol": "http",
               "path": [
                 "article",
-                "single",
+                "detail",
                 "id"
               ],
               "host": [
@@ -171,7 +275,89 @@
               "query": [
                 {
                   "key": "id",
-                  "value": "779",
+                  "value": "999",
+                  "description": "id"
+                }
+              ],
+              "variable": []
+            },
+            "description": "根据 id 查询文章",
+            "header": []
+          },
+          "description": "根据 id 查询文章"
+        },
+        {
+          "name": "根据 id 查询文章",
+          "request": {
+            "method": "GET",
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "id",
+                  "type": "text",
+                  "description": "id",
+                  "value": "901"
+                }
+              ]
+            },
+            "url": {
+              "raw": "http://localhost:8088/article/summary/id?id\u003d901",
+              "protocol": "http",
+              "path": [
+                "article",
+                "summary",
+                "id"
+              ],
+              "host": [
+                "localhost"
+              ],
+              "port": "8088",
+              "query": [
+                {
+                  "key": "id",
+                  "value": "42",
+                  "description": "id"
+                }
+              ],
+              "variable": []
+            },
+            "description": "根据 id 查询文章",
+            "header": []
+          },
+          "description": "根据 id 查询文章"
+        },
+        {
+          "name": "根据 id 查询文章",
+          "request": {
+            "method": "GET",
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "id",
+                  "type": "text",
+                  "description": "id",
+                  "value": "23"
+                }
+              ]
+            },
+            "url": {
+              "raw": "http://localhost:8088/article/title/id?id\u003d23",
+              "protocol": "http",
+              "path": [
+                "article",
+                "title",
+                "id"
+              ],
+              "host": [
+                "localhost"
+              ],
+              "port": "8088",
+              "query": [
+                {
+                  "key": "id",
+                  "value": "206",
                   "description": "id"
                 }
               ],
@@ -193,16 +379,16 @@
                   "key": "title",
                   "type": "text",
                   "description": "title",
-                  "value": "41hu0a"
+                  "value": "zdhv8g"
                 }
               ]
             },
             "url": {
-              "raw": "http://localhost:8088/article/single/title?title\u003d41hu0a",
+              "raw": "http://localhost:8088/article/detail/title?title\u003dzdhv8g",
               "protocol": "http",
               "path": [
                 "article",
-                "single",
+                "detail",
                 "title"
               ],
               "host": [
@@ -212,7 +398,7 @@
               "query": [
                 {
                   "key": "title",
-                  "value": "3gf8jl",
+                  "value": "7slccs",
                   "description": "title"
                 }
               ],
@@ -224,12 +410,94 @@
           "description": "根据标题查询文章"
         },
         {
-          "name": "增加文章",
+          "name": "根据标题查询文章",
+          "request": {
+            "method": "GET",
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "title",
+                  "type": "text",
+                  "description": "title",
+                  "value": "6b1j88"
+                }
+              ]
+            },
+            "url": {
+              "raw": "http://localhost:8088/article/summary/title?title\u003d6b1j88",
+              "protocol": "http",
+              "path": [
+                "article",
+                "summary",
+                "title"
+              ],
+              "host": [
+                "localhost"
+              ],
+              "port": "8088",
+              "query": [
+                {
+                  "key": "title",
+                  "value": "5uu9zr",
+                  "description": "title"
+                }
+              ],
+              "variable": []
+            },
+            "description": "根据标题查询文章",
+            "header": []
+          },
+          "description": "根据标题查询文章"
+        },
+        {
+          "name": "根据标题查询文章",
+          "request": {
+            "method": "GET",
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "title",
+                  "type": "text",
+                  "description": "title",
+                  "value": "vt8v1t"
+                }
+              ]
+            },
+            "url": {
+              "raw": "http://localhost:8088/article/title/title?title\u003dvt8v1t",
+              "protocol": "http",
+              "path": [
+                "article",
+                "title",
+                "title"
+              ],
+              "host": [
+                "localhost"
+              ],
+              "port": "8088",
+              "query": [
+                {
+                  "key": "title",
+                  "value": "jm3nmi",
+                  "description": "title"
+                }
+              ],
+              "variable": []
+            },
+            "description": "根据标题查询文章",
+            "header": []
+          },
+          "description": "根据标题查询文章"
+        },
+        {
+          "name": "TODO增加文章",
           "request": {
             "method": "POST",
             "body": {
               "mode": "raw",
-              "raw": "{\n  \"title\": \"i0uklq\",\n  \"summary\": \"tlju1n\",\n  \"cover\": \"rislc7\",\n  \"content\": \"ojiz14\",\n  \"category\": \"mcz0zu\",\n  \"tags\": [\n    \"qz3vn1\"\n  ]\n}",
+              "raw": "{\n  \"title\": \"cp1ifc\",\n  \"summary\": \"qusiuq\",\n  \"cover\": \"hl085f\",\n  \"content\": \"kee48e\",\n  \"category\": \"46mfu5\"\n}",
               "options": {
                 "raw": {
                   "language": "json"
@@ -250,10 +518,10 @@
               "query": [],
               "variable": []
             },
-            "description": "增加文章",
+            "description": "TODO增加文章",
             "header": []
           },
-          "description": "增加文章"
+          "description": "TODO\r\n增加文章"
         },
         {
           "name": "根据 id 更新文章",
@@ -261,7 +529,7 @@
             "method": "PUT",
             "body": {
               "mode": "raw",
-              "raw": "{\n  \"title\": \"mbraup\",\n  \"summary\": \"x9sl25\",\n  \"cover\": \"bo5lnt\",\n  \"content\": \"c2amtm\",\n  \"category\": \"npyka8\",\n  \"tags\": [\n    \"pfnfnn\"\n  ]\n}",
+              "raw": "{\n  \"title\": \"f65bdu\",\n  \"summary\": \"mfqhql\",\n  \"cover\": \"p00fa5\",\n  \"content\": \"uky7ry\",\n  \"category\": \"ddixwv\"\n}",
               "options": {
                 "raw": {
                   "language": "json"
@@ -269,7 +537,7 @@
               }
             },
             "url": {
-              "raw": "http://localhost:8088/article/?id\u003d361",
+              "raw": "http://localhost:8088/article/?id\u003d335",
               "protocol": "http",
               "path": [
                 "article",
@@ -282,7 +550,7 @@
               "query": [
                 {
                   "key": "id",
-                  "value": "868",
+                  "value": "657",
                   "description": "id"
                 }
               ],
@@ -302,7 +570,7 @@
               "formdata": []
             },
             "url": {
-              "raw": "http://localhost:8088/article/708",
+              "raw": "http://localhost:8088/article/842",
               "protocol": "http",
               "path": [
                 "article",
@@ -316,7 +584,7 @@
               "variable": [
                 {
                   "key": "id",
-                  "value": "754",
+                  "value": "501",
                   "description": "id"
                 }
               ]
@@ -329,7 +597,7 @@
       ]
     },
     {
-      "name": "分类",
+      "name": "分类接口",
       "item": [
         {
           "name": "分页查询分类实体",
@@ -353,7 +621,7 @@
               ]
             },
             "url": {
-              "raw": "http://localhost:8088/category/page?size\u003d5\u0026page\u003d1",
+              "raw": "http://localhost:8088/category/page?page\u003d1\u0026size\u003d5",
               "protocol": "http",
               "path": [
                 "category",
@@ -419,7 +687,7 @@
                   "key": "id",
                   "type": "text",
                   "description": "id",
-                  "value": "4"
+                  "value": "537"
                 },
                 {
                   "key": "page",
@@ -436,11 +704,12 @@
               ]
             },
             "url": {
-              "raw": "http://localhost:8088/category/article?id\u003d4\u0026page\u003d1\u0026size\u003d7",
+              "raw": "http://localhost:8088/category/article/id?page\u003d1\u0026size\u003d7\u0026id\u003d537",
               "protocol": "http",
               "path": [
                 "category",
-                "article"
+                "article",
+                "id"
               ],
               "host": [
                 "localhost"
@@ -449,8 +718,71 @@
               "query": [
                 {
                   "key": "id",
-                  "value": "166",
+                  "value": "30",
                   "description": "id"
+                },
+                {
+                  "key": "page",
+                  "value": "1",
+                  "description": "page"
+                },
+                {
+                  "key": "size",
+                  "value": "7",
+                  "description": "size"
+                }
+              ],
+              "variable": []
+            },
+            "description": "分页查询某分类下文章",
+            "header": []
+          },
+          "description": "分页查询某分类下文章"
+        },
+        {
+          "name": "分页查询某分类下文章",
+          "request": {
+            "method": "GET",
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "name",
+                  "type": "text",
+                  "description": "name",
+                  "value": "yolanda.gerhold"
+                },
+                {
+                  "key": "page",
+                  "type": "text",
+                  "description": "page",
+                  "value": "1"
+                },
+                {
+                  "key": "size",
+                  "type": "text",
+                  "description": "size",
+                  "value": "7"
+                }
+              ]
+            },
+            "url": {
+              "raw": "http://localhost:8088/category/article/name?page\u003d1\u0026size\u003d7\u0026name\u003dyolanda.gerhold",
+              "protocol": "http",
+              "path": [
+                "category",
+                "article",
+                "name"
+              ],
+              "host": [
+                "localhost"
+              ],
+              "port": "8088",
+              "query": [
+                {
+                  "key": "name",
+                  "value": "yolanda.gerhold",
+                  "description": "name"
                 },
                 {
                   "key": "page",
@@ -481,12 +813,12 @@
                   "key": "id",
                   "type": "text",
                   "description": "id",
-                  "value": "342"
+                  "value": "352"
                 }
               ]
             },
             "url": {
-              "raw": "http://localhost:8088/category/id?id\u003d342",
+              "raw": "http://localhost:8088/category/id?id\u003d352",
               "protocol": "http",
               "path": [
                 "category",
@@ -499,7 +831,7 @@
               "query": [
                 {
                   "key": "id",
-                  "value": "403",
+                  "value": "471",
                   "description": "id"
                 }
               ],
@@ -521,12 +853,12 @@
                   "key": "name",
                   "type": "text",
                   "description": "name",
-                  "value": "sallie.dicki"
+                  "value": "yolanda.gerhold"
                 }
               ]
             },
             "url": {
-              "raw": "http://localhost:8088/category/name?name\u003dsallie.dicki",
+              "raw": "http://localhost:8088/category/name?name\u003dyolanda.gerhold",
               "protocol": "http",
               "path": [
                 "category",
@@ -539,7 +871,7 @@
               "query": [
                 {
                   "key": "name",
-                  "value": "sallie.dicki",
+                  "value": "yolanda.gerhold",
                   "description": "name"
                 }
               ],
@@ -556,7 +888,7 @@
             "method": "POST",
             "body": {
               "mode": "raw",
-              "raw": "{\n  \"id\": 626,\n  \"createTime\": \"2021-12-09 16:49:56\",\n  \"updateTime\": \"2021-12-09 16:49:56\",\n  \"name\": \"sallie.dicki\",\n  \"description\": \"5rn5cr\",\n  \"number\": 257\n}",
+              "raw": "{\n  \"id\": 152,\n  \"createTime\": \"2021-12-19 09:34:49\",\n  \"updateTime\": \"2021-12-19 09:34:49\",\n  \"name\": \"yolanda.gerhold\",\n  \"description\": \"ezgrh5\",\n  \"number\": 960\n}",
               "options": {
                 "raw": {
                   "language": "json"
@@ -588,7 +920,7 @@
             "method": "PUT",
             "body": {
               "mode": "raw",
-              "raw": "{\n  \"id\": 770,\n  \"createTime\": \"2021-12-09 16:49:56\",\n  \"updateTime\": \"2021-12-09 16:49:56\",\n  \"name\": \"sallie.dicki\",\n  \"description\": \"0gjbnd\",\n  \"number\": 97\n}",
+              "raw": "{\n  \"id\": 871,\n  \"createTime\": \"2021-12-19 09:34:49\",\n  \"updateTime\": \"2021-12-19 09:34:49\",\n  \"name\": \"yolanda.gerhold\",\n  \"description\": \"0b1m17\",\n  \"number\": 215\n}",
               "options": {
                 "raw": {
                   "language": "json"
@@ -596,7 +928,7 @@
               }
             },
             "url": {
-              "raw": "http://localhost:8088/category/?id\u003d303",
+              "raw": "http://localhost:8088/category/?id\u003d623",
               "protocol": "http",
               "path": [
                 "category",
@@ -609,7 +941,7 @@
               "query": [
                 {
                   "key": "id",
-                  "value": "349",
+                  "value": "787",
                   "description": "id"
                 }
               ],
@@ -631,12 +963,12 @@
                   "key": "id",
                   "type": "text",
                   "description": "id",
-                  "value": "236"
+                  "value": "743"
                 }
               ]
             },
             "url": {
-              "raw": "http://localhost:8088/category/?id\u003d236",
+              "raw": "http://localhost:8088/category/?id\u003d743",
               "protocol": "http",
               "path": [
                 "category",
@@ -649,7 +981,7 @@
               "query": [
                 {
                   "key": "id",
-                  "value": "673",
+                  "value": "225",
                   "description": "id"
                 }
               ],
@@ -663,7 +995,7 @@
       ]
     },
     {
-      "name": "留言",
+      "name": "留言接口",
       "item": [
         {
           "name": "分页查询留言",
@@ -751,7 +1083,7 @@
               "formdata": []
             },
             "url": {
-              "raw": "http://localhost:8088/comment/595",
+              "raw": "http://localhost:8088/comment/294",
               "protocol": "http",
               "path": [
                 "comment",
@@ -765,7 +1097,7 @@
               "variable": [
                 {
                   "key": "id",
-                  "value": "820",
+                  "value": "488",
                   "description": "id"
                 }
               ]
@@ -781,7 +1113,7 @@
             "method": "POST",
             "body": {
               "mode": "raw",
-              "raw": "{\n  \"id\": 773,\n  \"createTime\": \"2021-12-09 16:49:57\",\n  \"updateTime\": \"2021-12-09 16:49:57\",\n  \"content\": \"acfjaz\",\n  \"username\": \"sallie.dicki\",\n  \"avatar\": \"slhi46\",\n  \"site\": \"im8s0b\",\n  \"email\": \"hollis.gusikowski@hotmail.com\"\n}",
+              "raw": "{\n  \"id\": 268,\n  \"createTime\": \"2021-12-19 09:34:49\",\n  \"updateTime\": \"2021-12-19 09:34:49\",\n  \"content\": \"ekfjyb\",\n  \"username\": \"yolanda.gerhold\",\n  \"avatar\": \"7ysztu\",\n  \"site\": \"4xfa69\",\n  \"email\": \"devin.prosacco@gmail.com\"\n}",
               "options": {
                 "raw": {
                   "language": "json"
@@ -813,7 +1145,7 @@
             "method": "PUT",
             "body": {
               "mode": "raw",
-              "raw": "{\n  \"id\": 418,\n  \"createTime\": \"2021-12-09 16:49:57\",\n  \"updateTime\": \"2021-12-09 16:49:57\",\n  \"content\": \"qud27m\",\n  \"username\": \"sallie.dicki\",\n  \"avatar\": \"pf7ovf\",\n  \"site\": \"g4kkfy\",\n  \"email\": \"hollis.gusikowski@hotmail.com\"\n}",
+              "raw": "{\n  \"id\": 751,\n  \"createTime\": \"2021-12-19 09:34:49\",\n  \"updateTime\": \"2021-12-19 09:34:49\",\n  \"content\": \"lte178\",\n  \"username\": \"yolanda.gerhold\",\n  \"avatar\": \"cg0j8q\",\n  \"site\": \"6v2a7f\",\n  \"email\": \"devin.prosacco@gmail.com\"\n}",
               "options": {
                 "raw": {
                   "language": "json"
@@ -821,7 +1153,7 @@
               }
             },
             "url": {
-              "raw": "http://localhost:8088/comment/?id\u003d609",
+              "raw": "http://localhost:8088/comment/?id\u003d93",
               "protocol": "http",
               "path": [
                 "comment",
@@ -834,7 +1166,7 @@
               "query": [
                 {
                   "key": "id",
-                  "value": "252",
+                  "value": "727",
                   "description": "id"
                 }
               ],
@@ -856,12 +1188,12 @@
                   "key": "id",
                   "type": "text",
                   "description": "id",
-                  "value": "192"
+                  "value": "411"
                 }
               ]
             },
             "url": {
-              "raw": "http://localhost:8088/comment/?id\u003d192",
+              "raw": "http://localhost:8088/comment/?id\u003d411",
               "protocol": "http",
               "path": [
                 "comment",
@@ -874,7 +1206,7 @@
               "query": [
                 {
                   "key": "id",
-                  "value": "42",
+                  "value": "738",
                   "description": "id"
                 }
               ],
@@ -914,7 +1246,7 @@
       ]
     },
     {
-      "name": "图片",
+      "name": "图片接口",
       "item": [
         {
           "name": "获取已上传的图片列表",
@@ -964,11 +1296,11 @@
               ]
             },
             "url": {
-              "raw": "http://localhost:8088/files/?page\u003d1\u0026size\u003d10",
+              "raw": "http://localhost:8088/files/page?size\u003d10\u0026page\u003d1",
               "protocol": "http",
               "path": [
                 "files",
-                ""
+                "page"
               ],
               "host": [
                 "localhost"
@@ -1036,38 +1368,7 @@
       ]
     },
     {
-      "name": "友链",
-      "item": [
-        {
-          "name": "获取所有友链",
-          "request": {
-            "method": "GET",
-            "body": {
-              "mode": "formdata"
-            },
-            "url": {
-              "raw": "http://localhost:8088/link/",
-              "protocol": "http",
-              "path": [
-                "link",
-                ""
-              ],
-              "host": [
-                "localhost"
-              ],
-              "port": "8088",
-              "query": [],
-              "variable": []
-            },
-            "description": "获取所有友链",
-            "header": []
-          },
-          "description": "获取所有友链"
-        }
-      ]
-    },
-    {
-      "name": "登录",
+      "name": "登录接口",
       "item": [
         {
           "name": "登录",
@@ -1075,7 +1376,7 @@
             "method": "POST",
             "body": {
               "mode": "raw",
-              "raw": "{\n  \"id\": 428,\n  \"username\": \"sallie.dicki\",\n  \"password\": \"v0sh8p\",\n  \"token\": \"wf07s9\",\n  \"avatar\": \"b8m5jc\",\n  \"age\": 3,\n  \"gender\": true,\n  \"location\": \"1x8jm3\",\n  \"signature\": \"krqjj5\",\n  \"profile\": \"fdldfd\"\n}",
+              "raw": "{\n  \"username\": \"yolanda.gerhold\",\n  \"password\": \"fnbnhm\"\n}",
               "options": {
                 "raw": {
                   "language": "json"
@@ -1083,9 +1384,10 @@
               }
             },
             "url": {
-              "raw": "http://localhost:8088/login",
+              "raw": "http://localhost:8088/admin/login",
               "protocol": "http",
               "path": [
+                "admin",
                 "login"
               ],
               "host": [
@@ -1101,278 +1403,103 @@
           "description": "登录"
         },
         {
+          "name": "验证是否登录",
+          "request": {
+            "method": "GET",
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "username",
+                  "type": "text",
+                  "description": "username",
+                  "value": "yolanda.gerhold"
+                },
+                {
+                  "key": "tokenValue",
+                  "type": "text",
+                  "description": "token",
+                  "value": "3o1dxz"
+                }
+              ]
+            },
+            "url": {
+              "raw": "http://localhost:8088/admin/check?tokenValue\u003d3o1dxz\u0026username\u003dyolanda.gerhold",
+              "protocol": "http",
+              "path": [
+                "admin",
+                "check"
+              ],
+              "host": [
+                "localhost"
+              ],
+              "port": "8088",
+              "query": [
+                {
+                  "key": "username",
+                  "value": "yolanda.gerhold",
+                  "description": "username"
+                },
+                {
+                  "key": "tokenValue",
+                  "value": "8frmvl",
+                  "description": "token"
+                }
+              ],
+              "variable": []
+            },
+            "description": "验证是否登录",
+            "header": []
+          },
+          "description": "验证是否登录"
+        },
+        {
           "name": "注销",
           "request": {
             "method": "POST",
             "body": {
               "mode": "formdata",
-              "formdata": []
+              "formdata": [
+                {
+                  "key": "tokenValue",
+                  "type": "text",
+                  "description": "token",
+                  "value": "ys1cbe"
+                }
+              ]
             },
             "url": {
-              "raw": "http://localhost:8088/logout",
+              "raw": "http://localhost:8088/admin/logout",
               "protocol": "http",
               "path": [
+                "admin",
                 "logout"
               ],
               "host": [
                 "localhost"
               ],
               "port": "8088",
-              "query": [],
+              "query": [
+                {
+                  "key": "tokenValue",
+                  "value": "tjfg2k",
+                  "description": "token"
+                }
+              ],
               "variable": []
             },
             "description": "注销",
-            "header": [
-              {
-                "key": "tokenValue",
-                "type": "text",
-                "disabled": false,
-                "name": "tokenValue",
-                "description": "null"
-              }
-            ]
+            "header": []
           },
           "description": "注销"
-        }
-      ]
-    },
-    {
-      "name": "权限",
-      "item": []
-    },
-    {
-      "name": "角色",
-      "item": []
-    },
-    {
-      "name": "标签",
-      "item": [
-        {
-          "name": "查询所有标签",
-          "request": {
-            "method": "GET",
-            "body": {
-              "mode": "formdata"
-            },
-            "url": {
-              "raw": "http://localhost:8088/tag/all",
-              "protocol": "http",
-              "path": [
-                "tag",
-                "all"
-              ],
-              "host": [
-                "localhost"
-              ],
-              "port": "8088",
-              "query": [],
-              "variable": []
-            },
-            "description": "查询所有标签",
-            "header": []
-          },
-          "description": "查询所有标签"
         },
         {
-          "name": "分页查询所有标签",
-          "request": {
-            "method": "GET",
-            "body": {
-              "mode": "formdata",
-              "formdata": [
-                {
-                  "key": "page",
-                  "type": "text",
-                  "description": "page",
-                  "value": "1"
-                },
-                {
-                  "key": "size",
-                  "type": "text",
-                  "description": "size",
-                  "value": "5"
-                }
-              ]
-            },
-            "url": {
-              "raw": "http://localhost:8088/tag/page?page\u003d1\u0026size\u003d5",
-              "protocol": "http",
-              "path": [
-                "tag",
-                "page"
-              ],
-              "host": [
-                "localhost"
-              ],
-              "port": "8088",
-              "query": [
-                {
-                  "key": "page",
-                  "value": "1",
-                  "description": "page"
-                },
-                {
-                  "key": "size",
-                  "value": "5",
-                  "description": "size"
-                }
-              ],
-              "variable": []
-            },
-            "description": "分页查询所有标签",
-            "header": []
-          },
-          "description": "分页查询所有标签"
-        },
-        {
-          "name": "分页查询标签下所有文章",
-          "request": {
-            "method": "GET",
-            "body": {
-              "mode": "formdata",
-              "formdata": [
-                {
-                  "key": "id",
-                  "type": "text",
-                  "description": "id",
-                  "value": "269"
-                },
-                {
-                  "key": "page",
-                  "type": "text",
-                  "description": "page",
-                  "value": "1"
-                },
-                {
-                  "key": "size",
-                  "type": "text",
-                  "description": "size",
-                  "value": "5"
-                }
-              ]
-            },
-            "url": {
-              "raw": "http://localhost:8088/tag/article?page\u003d1\u0026id\u003d269\u0026size\u003d5",
-              "protocol": "http",
-              "path": [
-                "tag",
-                "article"
-              ],
-              "host": [
-                "localhost"
-              ],
-              "port": "8088",
-              "query": [
-                {
-                  "key": "id",
-                  "value": "22",
-                  "description": "id"
-                },
-                {
-                  "key": "page",
-                  "value": "1",
-                  "description": "page"
-                },
-                {
-                  "key": "size",
-                  "value": "5",
-                  "description": "size"
-                }
-              ],
-              "variable": []
-            },
-            "description": "分页查询标签下所有文章",
-            "header": []
-          },
-          "description": "分页查询标签下所有文章"
-        },
-        {
-          "name": "根据 id 查询标签",
-          "request": {
-            "method": "GET",
-            "body": {
-              "mode": "formdata",
-              "formdata": [
-                {
-                  "key": "id",
-                  "type": "text",
-                  "description": "id",
-                  "value": "354"
-                }
-              ]
-            },
-            "url": {
-              "raw": "http://localhost:8088/tag/id?id\u003d354",
-              "protocol": "http",
-              "path": [
-                "tag",
-                "id"
-              ],
-              "host": [
-                "localhost"
-              ],
-              "port": "8088",
-              "query": [
-                {
-                  "key": "id",
-                  "value": "997",
-                  "description": "id"
-                }
-              ],
-              "variable": []
-            },
-            "description": "根据 id 查询标签",
-            "header": []
-          },
-          "description": "根据 id 查询标签"
-        },
-        {
-          "name": "根据标签名查询标签",
-          "request": {
-            "method": "GET",
-            "body": {
-              "mode": "formdata",
-              "formdata": [
-                {
-                  "key": "name",
-                  "type": "text",
-                  "description": "name",
-                  "value": "sallie.dicki"
-                }
-              ]
-            },
-            "url": {
-              "raw": "http://localhost:8088/tag/name?name\u003dsallie.dicki",
-              "protocol": "http",
-              "path": [
-                "tag",
-                "name"
-              ],
-              "host": [
-                "localhost"
-              ],
-              "port": "8088",
-              "query": [
-                {
-                  "key": "name",
-                  "value": "sallie.dicki",
-                  "description": "name"
-                }
-              ],
-              "variable": []
-            },
-            "description": "根据标签名查询标签",
-            "header": []
-          },
-          "description": "根据标签名查询标签"
-        },
-        {
-          "name": "添加标签",
+          "name": "注册",
           "request": {
             "method": "POST",
             "body": {
               "mode": "raw",
-              "raw": "{\n  \"id\": 950,\n  \"createTime\": \"2021-12-09 16:49:57\",\n  \"updateTime\": \"2021-12-09 16:49:57\",\n  \"name\": \"sallie.dicki\",\n  \"number\": 487\n}",
+              "raw": "{\n  \"username\": \"yolanda.gerhold\",\n  \"password\": \"7knqln\",\n  \"passwordRepeat\": \"xac5id\"\n}",
               "options": {
                 "raw": {
                   "language": "json"
@@ -1380,11 +1507,11 @@
               }
             },
             "url": {
-              "raw": "http://localhost:8088/tag/",
+              "raw": "http://localhost:8088/admin/register",
               "protocol": "http",
               "path": [
-                "tag",
-                ""
+                "admin",
+                "register"
               ],
               "host": [
                 "localhost"
@@ -1393,89 +1520,26 @@
               "query": [],
               "variable": []
             },
-            "description": "添加标签",
+            "description": "注册",
             "header": []
           },
-          "description": "添加标签"
-        },
-        {
-          "name": "根据 id 更新标签",
-          "request": {
-            "method": "PUT",
-            "body": {
-              "mode": "raw",
-              "raw": "{\n  \"id\": 40,\n  \"createTime\": \"2021-12-09 16:49:57\",\n  \"updateTime\": \"2021-12-09 16:49:57\",\n  \"name\": \"sallie.dicki\",\n  \"number\": 675\n}",
-              "options": {
-                "raw": {
-                  "language": "json"
-                }
-              }
-            },
-            "url": {
-              "raw": "http://localhost:8088/tag/?id\u003d697",
-              "protocol": "http",
-              "path": [
-                "tag",
-                ""
-              ],
-              "host": [
-                "localhost"
-              ],
-              "port": "8088",
-              "query": [
-                {
-                  "key": "id",
-                  "value": "815",
-                  "description": "id"
-                }
-              ],
-              "variable": []
-            },
-            "description": "根据 id 更新标签",
-            "header": []
-          },
-          "description": "根据 id 更新标签"
-        },
-        {
-          "name": "根据 id 删除标签",
-          "request": {
-            "method": "DELETE",
-            "body": {
-              "mode": "formdata",
-              "formdata": []
-            },
-            "url": {
-              "raw": "http://localhost:8088/tag/378",
-              "protocol": "http",
-              "path": [
-                "tag",
-                ":id"
-              ],
-              "host": [
-                "localhost"
-              ],
-              "port": "8088",
-              "query": [],
-              "variable": [
-                {
-                  "key": "id",
-                  "value": "939",
-                  "description": "id"
-                }
-              ]
-            },
-            "description": "根据 id 删除标签",
-            "header": []
-          },
-          "description": "根据 id 删除标签"
+          "description": "注册"
         }
       ]
     },
     {
-      "name": "时间线",
+      "name": "权限接口",
+      "item": []
+    },
+    {
+      "name": "角色接口",
+      "item": []
+    },
+    {
+      "name": "时间线接口",
       "item": [
         {
-          "name": "分页查询动态",
+          "name": "分页查询时间线",
           "request": {
             "method": "GET",
             "body": {
@@ -1496,11 +1560,11 @@
               ]
             },
             "url": {
-              "raw": "http://localhost:8088/idea/?page\u003d1\u0026size\u003d10",
+              "raw": "http://localhost:8088/idea/page?page\u003d1\u0026size\u003d10",
               "protocol": "http",
               "path": [
                 "idea",
-                ""
+                "page"
               ],
               "host": [
                 "localhost"
@@ -1520,13 +1584,13 @@
               ],
               "variable": []
             },
-            "description": "分页查询动态",
+            "description": "分页查询时间线",
             "header": []
           },
-          "description": "分页查询动态"
+          "description": "分页查询时间线"
         },
         {
-          "name": "查询所有动态",
+          "name": "查询所有时间线",
           "request": {
             "method": "GET",
             "body": {
@@ -1546,13 +1610,13 @@
               "query": [],
               "variable": []
             },
-            "description": "查询所有动态",
+            "description": "查询所有时间线",
             "header": []
           },
-          "description": "查询所有动态"
+          "description": "查询所有时间线"
         },
         {
-          "name": "根据 id 查询动态",
+          "name": "根据 id 查询时间线",
           "request": {
             "method": "GET",
             "body": {
@@ -1560,7 +1624,7 @@
               "formdata": []
             },
             "url": {
-              "raw": "http://localhost:8088/idea/53",
+              "raw": "http://localhost:8088/idea/996",
               "protocol": "http",
               "path": [
                 "idea",
@@ -1574,23 +1638,23 @@
               "variable": [
                 {
                   "key": "id",
-                  "value": "783",
+                  "value": "50",
                   "description": "id"
                 }
               ]
             },
-            "description": "根据 id 查询动态",
+            "description": "根据 id 查询时间线",
             "header": []
           },
-          "description": "根据 id 查询动态"
+          "description": "根据 id 查询时间线"
         },
         {
-          "name": "增加动态",
+          "name": "增加时间线",
           "request": {
             "method": "POST",
             "body": {
               "mode": "raw",
-              "raw": "{\n  \"id\": 12,\n  \"createTime\": \"2021-12-09 16:49:57\",\n  \"updateTime\": \"2021-12-09 16:49:57\",\n  \"title\": \"uvkei4\",\n  \"content\": \"q9ur7x\"\n}",
+              "raw": "{\n  \"id\": 271,\n  \"createTime\": \"2021-12-19 09:34:49\",\n  \"updateTime\": \"2021-12-19 09:34:49\",\n  \"title\": \"99kiax\",\n  \"content\": \"g5ou5c\"\n}",
               "options": {
                 "raw": {
                   "language": "json"
@@ -1611,18 +1675,18 @@
               "query": [],
               "variable": []
             },
-            "description": "增加动态",
+            "description": "增加时间线",
             "header": []
           },
-          "description": "增加动态"
+          "description": "增加时间线"
         },
         {
-          "name": "更新动态",
+          "name": "更新时间线",
           "request": {
             "method": "PUT",
             "body": {
               "mode": "raw",
-              "raw": "{\n  \"id\": 912,\n  \"createTime\": \"2021-12-09 16:49:57\",\n  \"updateTime\": \"2021-12-09 16:49:57\",\n  \"title\": \"164hzp\",\n  \"content\": \"hrmfei\"\n}",
+              "raw": "{\n  \"id\": 629,\n  \"createTime\": \"2021-12-19 09:34:49\",\n  \"updateTime\": \"2021-12-19 09:34:49\",\n  \"title\": \"0da9vi\",\n  \"content\": \"g1yuuy\"\n}",
               "options": {
                 "raw": {
                   "language": "json"
@@ -1630,7 +1694,7 @@
               }
             },
             "url": {
-              "raw": "http://localhost:8088/idea/?id\u003d780",
+              "raw": "http://localhost:8088/idea/?id\u003d688",
               "protocol": "http",
               "path": [
                 "idea",
@@ -1643,70 +1707,63 @@
               "query": [
                 {
                   "key": "id",
-                  "value": "905",
+                  "value": "57",
                   "description": "id"
                 }
               ],
               "variable": []
             },
-            "description": "更新动态",
+            "description": "更新时间线",
             "header": []
           },
-          "description": "更新动态"
+          "description": "更新时间线"
         },
         {
-          "name": "根据 id 删除动态",
+          "name": "根据 id 删除时间线",
           "request": {
             "method": "DELETE",
             "body": {
               "mode": "formdata",
-              "formdata": [
-                {
-                  "key": "id",
-                  "type": "text",
-                  "description": "id",
-                  "value": "31"
-                }
-              ]
+              "formdata": []
             },
             "url": {
-              "raw": "http://localhost:8088/idea/?id\u003d31",
+              "raw": "http://localhost:8088/idea/114",
               "protocol": "http",
               "path": [
                 "idea",
-                ""
+                ":id"
               ],
               "host": [
                 "localhost"
               ],
               "port": "8088",
-              "query": [
+              "query": [],
+              "variable": [
                 {
                   "key": "id",
-                  "value": "14",
+                  "value": "747",
                   "description": "id"
                 }
-              ],
-              "variable": []
+              ]
             },
-            "description": "根据 id 删除动态",
+            "description": "根据 id 删除时间线",
             "header": []
           },
-          "description": "根据 id 删除动态"
+          "description": "根据 id 删除时间线"
         },
         {
-          "name": "删除所有动态",
+          "name": "删除所有时间线",
           "request": {
             "method": "DELETE",
             "body": {
               "mode": "formdata"
             },
             "url": {
-              "raw": "http://localhost:8088/idea/delete",
+              "raw": "http://localhost:8088/idea/",
               "protocol": "http",
               "path": [
                 "idea",
-                "delete"
+                ""
               ],
               "host": [
                 "localhost"
@@ -1715,15 +1772,15 @@
               "query": [],
               "variable": []
             },
-            "description": "删除所有动态",
+            "description": "删除所有时间线",
             "header": []
           },
-          "description": "删除所有动态"
+          "description": "删除所有时间线"
         }
       ]
     },
     {
-      "name": "用户",
+      "name": "用户接口",
       "item": [
         {
           "name": "添加用户",
@@ -1731,7 +1788,7 @@
             "method": "POST",
             "body": {
               "mode": "raw",
-              "raw": "{\n  \"id\": 63,\n  \"username\": \"sallie.dicki\",\n  \"password\": \"yxhh0k\",\n  \"token\": \"lrylxo\",\n  \"avatar\": \"ixjc80\",\n  \"age\": 3,\n  \"gender\": true,\n  \"location\": \"jiqhny\",\n  \"signature\": \"ztemk8\",\n  \"profile\": \"xbnye1\"\n}",
+              "raw": "{\n  \"id\": 409,\n  \"username\": \"yolanda.gerhold\",\n  \"password\": \"hyl3eo\",\n  \"token\": \"ith6l0\",\n  \"avatar\": \"kxsl76\",\n  \"age\": 20,\n  \"gender\": true,\n  \"location\": \"drgrij\",\n  \"signature\": \"ejerfn\",\n  \"profile\": \"dn02zs\"\n}",
               "options": {
                 "raw": {
                   "language": "json"
@@ -1768,16 +1825,16 @@
                   "key": "id",
                   "type": "text",
                   "description": "No comments found.",
-                  "value": "27"
+                  "value": "179"
                 }
               ]
             },
             "url": {
-              "raw": "http://localhost:8088/user/u?id\u003d27",
+              "raw": "http://localhost:8088/user/user?id\u003d179",
               "protocol": "http",
               "path": [
                 "user",
-                "u"
+                "user"
               ],
               "host": [
                 "localhost"
@@ -1786,7 +1843,7 @@
               "query": [
                 {
                   "key": "id",
-                  "value": "757",
+                  "value": "363",
                   "description": "No comments found."
                 }
               ],
@@ -1808,16 +1865,16 @@
                   "key": "username",
                   "type": "text",
                   "description": "No comments found.",
-                  "value": "sallie.dicki"
+                  "value": "yolanda.gerhold"
                 }
               ]
             },
             "url": {
-              "raw": "http://localhost:8088/user/?username\u003dsallie.dicki",
+              "raw": "http://localhost:8088/user/name?username\u003dyolanda.gerhold",
               "protocol": "http",
               "path": [
                 "user",
-                ""
+                "name"
               ],
               "host": [
                 "localhost"
@@ -1826,7 +1883,7 @@
               "query": [
                 {
                   "key": "username",
-                  "value": "sallie.dicki",
+                  "value": "yolanda.gerhold",
                   "description": "No comments found."
                 }
               ],
@@ -1843,7 +1900,7 @@
             "method": "PUT",
             "body": {
               "mode": "raw",
-              "raw": "{\n  \"id\": 130,\n  \"username\": \"sallie.dicki\",\n  \"password\": \"lr34in\",\n  \"token\": \"hgiw9a\",\n  \"avatar\": \"8qcj6m\",\n  \"age\": 3,\n  \"gender\": true,\n  \"location\": \"f91bmj\",\n  \"signature\": \"uhzk6j\",\n  \"profile\": \"uh26jh\"\n}",
+              "raw": "{\n  \"id\": 308,\n  \"username\": \"yolanda.gerhold\",\n  \"password\": \"pf13p1\",\n  \"token\": \"a0u3y1\",\n  \"avatar\": \"fo4fy5\",\n  \"age\": 20,\n  \"gender\": true,\n  \"location\": \"6m6jhp\",\n  \"signature\": \"eoq3ue\",\n  \"profile\": \"me8wij\"\n}",
               "options": {
                 "raw": {
                   "language": "json"
@@ -1851,11 +1908,11 @@
               }
             },
             "url": {
-              "raw": "http://localhost:8088/user/?id\u003d466",
+              "raw": "http://localhost:8088/user/password?id\u003d156",
               "protocol": "http",
               "path": [
                 "user",
-                ""
+                "password"
               ],
               "host": [
                 "localhost"
@@ -1864,7 +1921,7 @@
               "query": [
                 {
                   "key": "id",
-                  "value": "554",
+                  "value": "137",
                   "description": "No comments found."
                 }
               ],

@@ -22,7 +22,7 @@ public class RestExceptionHandler {
     @ResponseStatus(org.springframework.http.HttpStatus.INTERNAL_SERVER_ERROR)
     public Result<String> exception(Exception e) {
         log.error("全局异常信息 ex={}", e.getMessage(), e);
-        return Result.fail(HttpStatus.FAILED.getCode(), e.getMessage());
+        return Result.fail(HttpStatus.INTERNAL_SERVER_ERROR.getCode(), e.getMessage());
     }
 
 }

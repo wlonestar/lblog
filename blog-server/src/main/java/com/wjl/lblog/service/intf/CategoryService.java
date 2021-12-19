@@ -1,9 +1,16 @@
 package com.wjl.lblog.service.intf;
 
+import com.baomidou.mybatisplus.core.metadata.IPage;
+import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
+import com.baomidou.mybatisplus.extension.service.IService;
 import com.wjl.lblog.model.dto.CategoryDto;
 import com.wjl.lblog.model.entity.Category;
+import com.wjl.lblog.model.vo.ArticleTitleVo;
 import com.wjl.lblog.model.vo.CategoryArticleVo;
-import org.springframework.data.domain.Page;
+import org.apache.ibatis.annotations.Param;
+import org.apache.ibatis.annotations.ResultType;
+import org.apache.ibatis.annotations.Select;
+import org.apache.ibatis.annotations.Update;
 import org.springframework.data.domain.Pageable;
 
 import java.util.List;
@@ -13,27 +20,22 @@ import java.util.List;
  * @date: 2021/9/14 15:12
  * @version: v1.0
  */
-public interface CategoryService {
+public interface CategoryService extends IService<Category> {
 
-    List<Category> findAll();
+    IPage<Category> selectCategoryByPage(Page<Category> page);
 
-    Page<Category> findByPage(Pageable pageable);
+    List<Category> selectCategoryAll();
 
+    Category selectCategoryById(Long id);
 
-    CategoryArticleVo findCategoryById(Long id, Pageable pageable);
+    Category selectCategoryByName(String name);
 
-    CategoryDto findCategoryDtoById(Long id);
+    CategoryArticleVo selectArticleByCategoryId(Long id, Page<ArticleTitleVo> page);
 
-    Category findById(Long id);
+    CategoryArticleVo selectArticleByCategoryName(String name, Page<ArticleTitleVo> page);
 
-    Category findByName(String name);
+    boolean addCategory(CategoryDto category);
 
-
-    boolean add(Category category);
-
-    boolean update(Long id, Category category);
-
-
-    boolean deleteById(Long id);
+    boolean updateCategory(Long id, CategoryDto category);
 
 }

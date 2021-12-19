@@ -1,11 +1,8 @@
 package com.wjl.lblog.model.vo;
 
-import com.wjl.lblog.model.dto.CategoryDto;
-import com.wjl.lblog.model.dto.TagDto;
 import lombok.Data;
 
 import java.util.Date;
-import java.util.List;
 
 /**
  * @author: wjl

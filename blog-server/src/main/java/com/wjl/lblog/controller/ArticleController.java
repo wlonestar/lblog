@@ -1,14 +1,16 @@
 package com.wjl.lblog.controller;
 
+import com.baomidou.mybatisplus.core.metadata.IPage;
+import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.wjl.lblog.common.constants.Result;
 import com.wjl.lblog.common.enums.HttpStatus;
 import com.wjl.lblog.model.dto.ArticleDto;
+import com.wjl.lblog.model.entity.Article;
 import com.wjl.lblog.model.vo.ArticleDetailVo;
 import com.wjl.lblog.model.vo.ArticleSummaryVo;
 import com.wjl.lblog.model.vo.ArticleTitleVo;
 import com.wjl.lblog.service.intf.ArticleService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.domain.*;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -22,34 +24,24 @@ import java.util.Objects;
  * @version: v1.0
  */
 @RestController
-@RequestMapping("/article")
+@RequestMapping(value = "/article")
 public class ArticleController {
 
     @Autowired
     private ArticleService articleService;
 
-    /**
-     * 查询所有文章摘要
-     */
-    @RequestMapping(value = "/all/summary", method = RequestMethod.GET)
-    public List<ArticleSummaryVo> getAllSummary() {
-        return articleService.findAllSummary();
-    }
 
     /**
-     * 查询所有文章详情
+     * 分页查询文章详情
+     *
+     * @param page page
+     * @param size size
      */
-    @RequestMapping(value = "/all/detail", method = RequestMethod.GET)
-    public List<ArticleDetailVo> getAllDetail() {
-        return articleService.findAllDetail();
-    }
-
-    /**
-     * 查询所有文章
-     */
-    @RequestMapping(value = "/all/title", method = RequestMethod.GET)
-    public List<ArticleTitleVo> getAllTitle() {
-        return articleService.findAllTitle();
+    @RequestMapping(value = "/page/detail", method = RequestMethod.GET)
+    public IPage<ArticleDetailVo> findAllDetail(
+            @RequestParam(name = "page", defaultValue = "1") int page,
+            @RequestParam(name = "size", defaultValue = "5") int size) {
+        return articleService.selectDetailByPage(new Page<>(page, size));
     }
 
     /**
@@ -58,11 +50,64 @@ public class ArticleController {
      * @param page page
      * @param size size
      */
-    @RequestMapping(value = "/all/page", method = RequestMethod.GET)
-    public Page<ArticleSummaryVo> findAllByPage(
+    @RequestMapping(value = "/page/summary", method = RequestMethod.GET)
+    public IPage<ArticleSummaryVo> findAllByPage(
             @RequestParam(name = "page", defaultValue = "1") int page,
             @RequestParam(name = "size", defaultValue = "5") int size) {
-        return articleService.findSummaryByPage(PageRequest.of(page - 1, size));
+        return articleService.selectSummaryByPage(new Page<>(page, size));
+    }
+
+    /**
+     * 分页查询文章标题
+     *
+     * @param page page
+     * @param size size
+     */
+    @RequestMapping(value = "/page/title", method = RequestMethod.GET)
+    public IPage<ArticleTitleVo> findAllByTitle(
+            @RequestParam(name = "page", defaultValue = "1") int page,
+            @RequestParam(name = "size", defaultValue = "5") int size) {
+        return articleService.selectTitleByPage(new Page<>(page, size));
+    }
+
+
+    /**
+     * 查询所有文章详情
+     */
+    @RequestMapping(value = "/all/detail", method = RequestMethod.GET)
+    public List<ArticleDetailVo> getAllDetail() {
+        return articleService.selectDetailAll();
+    }
+
+    /**
+     * 查询所有文章摘要
+     */
+    @RequestMapping(value = "/all/summary", method = RequestMethod.GET)
+    public List<ArticleSummaryVo> getAllSummary() {
+        return articleService.selectSummaryAll();
+    }
+
+    /**
+     * 查询所有文章标题
+     */
+    @RequestMapping(value = "/all/title", method = RequestMethod.GET)
+    public List<ArticleTitleVo> getAllTitle() {
+        return articleService.selectTitleAll();
+    }
+
+
+    /**
+     * 根据 id 查询文章
+     *
+     * @param id id
+     */
+    @RequestMapping(value = "/detail/id", method = RequestMethod.GET)
+    public Object getDetailById(@RequestParam(name = "id") Long id) {
+        ArticleDetailVo articleDetailVo = articleService.selectDetailById(id);
+        if (!Objects.isNull(articleDetailVo)) {
+            return articleDetailVo;
+        }
+        return Result.fail(HttpStatus.BAD_REQUEST.getCode(), "can't find article by param");
     }
 
     /**
@@ -70,14 +115,42 @@ public class ArticleController {
      *
      * @param id id
      */
-    @RequestMapping(value = "/single/id", method = RequestMethod.GET)
-    public Object getById(@RequestParam(name = "id") Long id) {
-        ArticleDetailVo articleDetailVo = articleService.getById(id);
+    @RequestMapping(value = "/summary/id", method = RequestMethod.GET)
+    public Object getSummaryById(@RequestParam(name = "id") Long id) {
+        ArticleSummaryVo articleSummaryVo = articleService.selectSummaryById(id);
+        if (!Objects.isNull(articleSummaryVo)) {
+            return articleSummaryVo;
+        }
+        return Result.fail(HttpStatus.BAD_REQUEST.getCode(), "can't find article by param");
+    }
+
+    /**
+     * 根据 id 查询文章
+     *
+     * @param id id
+     */
+    @RequestMapping(value = "/title/id", method = RequestMethod.GET)
+    public Object getTitleById(@RequestParam(name = "id") Long id) {
+        ArticleTitleVo articleTitleVo = articleService.selectTitleById(id);
+        if (!Objects.isNull(articleTitleVo)) {
+            return articleTitleVo;
+        }
+        return Result.fail(HttpStatus.BAD_REQUEST.getCode(), "can't find article by param");
+    }
+
+
+    /**
+     * 根据标题查询文章
+     *
+     * @param title title
+     */
+    @RequestMapping(value = "/detail/title", method = RequestMethod.GET)
+    public Object getByDetail(@RequestParam(name = "title") String title) {
+        ArticleDetailVo articleDetailVo = articleService.selectDetailByTitle(title);
         if (!Objects.isNull(articleDetailVo)) {
             return articleDetailVo;
-        } else {
-            return Result.fail(HttpStatus.FAILED.getCode(), "can't find article by param");
         }
+        return Result.fail(HttpStatus.BAD_REQUEST.getCode(), "can't find article by param");
     }
 
     /**
@@ -85,15 +158,29 @@ public class ArticleController {
      *
      * @param title title
      */
-    @RequestMapping(value = "/single/title", method = RequestMethod.GET)
-    public Object getByTitle(@RequestParam(name = "title") String title) {
-        ArticleDetailVo articleDetailVo = articleService.getByTitle(title);
-        if (!Objects.isNull(articleDetailVo)) {
-            return articleDetailVo;
-        } else {
-            return Result.fail(HttpStatus.FAILED.getCode(), "can't find article by param");
+    @RequestMapping(value = "/summary/title", method = RequestMethod.GET)
+    public Object getBySummary(@RequestParam(name = "title") String title) {
+        ArticleSummaryVo articleSummaryVo = articleService.selectSummaryByTitle(title);
+        if (!Objects.isNull(articleSummaryVo)) {
+            return articleSummaryVo;
         }
+        return Result.fail(HttpStatus.BAD_REQUEST.getCode(), "can't find article by param");
     }
+
+    /**
+     * 根据标题查询文章
+     *
+     * @param title title
+     */
+    @RequestMapping(value = "/title/title", method = RequestMethod.GET)
+    public Object getByTitle(@RequestParam(name = "title") String title) {
+        ArticleTitleVo articleTitleVo = articleService.selectTitleByTitle(title);
+        if (!Objects.isNull(articleTitleVo)) {
+            return articleTitleVo;
+        }
+        return Result.fail(HttpStatus.BAD_REQUEST.getCode(), "can't find article by param");
+    }
+
 
     /**
      * 增加文章
@@ -102,17 +189,10 @@ public class ArticleController {
      */
     @RequestMapping(value = "/", method = RequestMethod.POST)
     public Object add(@RequestBody ArticleDto articleDto) {
-        if (Objects.isNull(articleDto)) {
-            return Result.fail(HttpStatus.FAILED.getCode(), "the input is null");
+        if (!Objects.isNull(articleDto)) {
+            return articleService.addArticle(articleDto);
         }
-        if (!Objects.isNull(articleService.findByTitle(articleDto.getTitle()))) {
-            return Result.fail(HttpStatus.FAILED.getCode(), "the article title is same");
-        }
-        if (articleService.add(articleDto)) {
-            return articleDto;
-        } else {
-            return Result.fail(HttpStatus.FAILED.getCode(), "can't add article");
-        }
+        return Result.fail(HttpStatus.BAD_REQUEST.getCode(), "the input is null");
     }
 
     /**
@@ -122,8 +202,12 @@ public class ArticleController {
      * @param articleDto article
      */
     @RequestMapping(value = "/", method = RequestMethod.PUT)
-    public ArticleDetailVo update(@RequestParam(name = "id") Long id, @RequestBody ArticleDto articleDto) {
-        return null;
+    public Object update(@RequestParam(name = "id") Long id, @RequestBody ArticleDto articleDto) {
+        Article article = articleService.getById(id);
+        if (!Objects.isNull(article)) {
+            return articleService.updateArticle(id, articleDto);
+        }
+        return Result.fail(HttpStatus.BAD_REQUEST.getCode(), "the input is null");
     }
 
     /**
@@ -133,11 +217,10 @@ public class ArticleController {
      */
     @RequestMapping(value = "/{id}", method = RequestMethod.DELETE)
     public Object deleteById(@PathVariable(name = "id") Long id) {
-        if (articleService.deleteById(id)) {
+        if (articleService.removeById(id)) {
             return id;
-        } else {
-            return Result.fail(HttpStatus.FAILED.getCode(), "delete failed");
         }
+        return Result.fail(HttpStatus.BAD_REQUEST.getCode(), "delete failed");
     }
 
 }

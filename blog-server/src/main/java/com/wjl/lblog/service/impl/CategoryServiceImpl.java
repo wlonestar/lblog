@@ -1,24 +1,19 @@
 package com.wjl.lblog.service.impl;
 
-import com.querydsl.core.QueryResults;
-import com.querydsl.core.Tuple;
-import com.wjl.lblog.component.QueryComponent;
+import com.baomidou.mybatisplus.core.metadata.IPage;
+import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
+import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.wjl.lblog.model.dto.CategoryDto;
-import com.wjl.lblog.model.vo.ArticleTitleVo;
 import com.wjl.lblog.model.entity.Category;
-import com.wjl.lblog.model.entity.QArticle;
-import com.wjl.lblog.model.entity.QCategory;
+import com.wjl.lblog.model.vo.ArticleTitleVo;
 import com.wjl.lblog.model.vo.CategoryArticleVo;
+import com.wjl.lblog.repository.ArticleRepository;
 import com.wjl.lblog.repository.CategoryRepository;
 import com.wjl.lblog.service.intf.CategoryService;
 import org.springframework.beans.BeanUtils;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.domain.Page;
-import org.springframework.data.domain.PageImpl;
-import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
-import java.util.ArrayList;
+import javax.annotation.Resource;
 import java.util.List;
 import java.util.Objects;
 
@@ -28,71 +23,29 @@ import java.util.Objects;
  * @version: v1.0
  */
 @Service
-public class CategoryServiceImpl implements CategoryService {
+public class CategoryServiceImpl
+        extends ServiceImpl<CategoryRepository, Category>
+        implements CategoryService {
 
-    @Autowired
-    private QueryComponent queryComponent;
-
-    @Autowired
+    @Resource
     private CategoryRepository categoryRepository;
 
-    QArticle qArticle = QArticle.article;
+    @Resource
+    private ArticleRepository articleRepository;
 
     @Override
-    public List<Category> findAll() {
-        return categoryRepository.findAll();
+    public IPage<Category> selectCategoryByPage(Page<Category> page) {
+        return categoryRepository.selectCategoryByPage(page);
     }
 
     @Override
-    public Page<Category> findByPage(Pageable pageable) {
-        return categoryRepository.findAll(pageable);
+    public List<Category> selectCategoryAll() {
+        return categoryRepository.selectCategoryAll();
     }
 
     @Override
-    public CategoryArticleVo findCategoryById(Long id, Pageable pageable) {
-        Category category = categoryRepository.findCategoryById(id);
-        if (!Objects.isNull(category)) {
-            CategoryArticleVo categoryArticleVo = new CategoryArticleVo();
-            BeanUtils.copyProperties(category, categoryArticleVo);
-            QueryResults<Tuple> queryResults = queryComponent.queryFactory()
-                    .select(
-                            qArticle.id,
-                            qArticle.createTime,
-                            qArticle.title
-                    )
-                    .from(qArticle)
-                    .where(qArticle.categoryId.eq(id))
-                    .orderBy(qArticle.createTime.desc())
-                    .offset(pageable.getOffset())
-                    .limit(pageable.getPageSize())
-                    .fetchResults();
-            List<Tuple> tuples = queryResults.getResults();
-            List<ArticleTitleVo> articleTitleVos = new ArrayList<>();
-            for (Tuple tuple : tuples) {
-                ArticleTitleVo articleTitleVo = new ArticleTitleVo();
-                articleTitleVo.setId(tuple.get(qArticle.id));
-                articleTitleVo.setArticleTime(tuple.get(qArticle.createTime));
-                articleTitleVo.setTitle(tuple.get(qArticle.title));
-                articleTitleVos.add(articleTitleVo);
-            }
-            categoryArticleVo.setArticles(new PageImpl<>(articleTitleVos, pageable, queryResults.getTotal()));
-            return categoryArticleVo;
-        }
-        return null;
-    }
-
-    @Override
-    public CategoryDto findCategoryDtoById(Long id) {
-        Category category = categoryRepository.findCategoryById(id);
-        if (!Objects.isNull(category)) {
-            return new CategoryDto(category.getId(), category.getName());
-        }
-        return null;
-    }
-
-    @Override
-    public Category findById(Long id) {
-        Category category = categoryRepository.findCategoryById(id);
+    public Category selectCategoryById(Long id) {
+        Category category = categoryRepository.selectCategoryById(id);
         if (!Objects.isNull(category)) {
             return category;
         }
@@ -100,8 +53,8 @@ public class CategoryServiceImpl implements CategoryService {
     }
 
     @Override
-    public Category findByName(String name) {
-        Category category = categoryRepository.findCategoryByName(name);
+    public Category selectCategoryByName(String name) {
+        Category category = categoryRepository.selectCategoryByName(name);
         if (!Objects.isNull(category)) {
             return category;
         }
@@ -109,37 +62,53 @@ public class CategoryServiceImpl implements CategoryService {
     }
 
     @Override
-    public boolean add(Category category) {
+    public CategoryArticleVo selectArticleByCategoryId(Long id, Page<ArticleTitleVo> page) {
+        Category category = categoryRepository.selectCategoryById(id);
         if (!Objects.isNull(category)) {
-            Category category1 = new Category();
-            BeanUtils.copyProperties(category, category1,
-                    "id", "createTime", "updateTime", "number");
-            categoryRepository.save(category);
-            return true;
+            return getByCategory(category, page);
+        }
+        return null;
+    }
+
+    @Override
+    public CategoryArticleVo selectArticleByCategoryName(String name, Page<ArticleTitleVo> page) {
+        Category category = categoryRepository.selectCategoryByName(name);
+        if (!Objects.isNull(category)) {
+            return getByCategory(category, page);
+        }
+        return null;
+    }
+
+    @Override
+    public boolean addCategory(CategoryDto categoryDto) {
+        if (!Objects.isNull(categoryDto)) {
+            Category category = new Category();
+            BeanUtils.copyProperties(categoryDto, category);
+            return categoryRepository.addCategory(category);
         }
         return false;
     }
 
     @Override
-    public boolean update(Long id, Category category) {
-        Category category1 = categoryRepository.findCategoryById(id);
-        if (!Objects.isNull(category1) && !Objects.isNull(category)) {
-            BeanUtils.copyProperties(category, category1,
-                    "id", "createTime", "updateTime", "number");
-            categoryRepository.save(category1);
-            return true;
+    public boolean updateCategory(Long id, CategoryDto categoryDto) {
+        if (!Objects.isNull(categoryDto)) {
+            Category category = new Category();
+            BeanUtils.copyProperties(categoryDto, category);
+            return categoryRepository.updateCategory(id, category);
         }
         return false;
     }
 
-    @Override
-    public boolean deleteById(Long id) {
-        Category category = categoryRepository.findCategoryById(id);
-        if (!Objects.isNull(category)) {
-            categoryRepository.deleteById(id);
-            return true;
-        }
-        return false;
+
+    private CategoryArticleVo getByCategory(Category category, Page<ArticleTitleVo> page) {
+        CategoryArticleVo categoryArticleVo = new CategoryArticleVo();
+        BeanUtils.copyProperties(category, categoryArticleVo);
+        categoryArticleVo.setArticles(articleRepository.selectTitleByPage(page));
+        return categoryArticleVo;
     }
+
+
+
+
 
 }

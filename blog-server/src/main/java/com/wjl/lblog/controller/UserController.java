@@ -31,7 +31,7 @@ public class UserController {
         if (userService.addUser(user)) {
             return user;
         }
-        return Result.fail(HttpStatus.FAILED.getCode(), "failed");
+        return Result.fail(HttpStatus.BAD_REQUEST.getCode(), "failed");
     }
 
     /**
@@ -65,7 +65,7 @@ public class UserController {
         if (userService.updateUser(id, user)) {
             return user;
         } else {
-            return Result.fail(HttpStatus.FAILED.getCode(), "failed");
+            return Result.fail(HttpStatus.BAD_REQUEST.getCode(), "failed");
         }
     }
 

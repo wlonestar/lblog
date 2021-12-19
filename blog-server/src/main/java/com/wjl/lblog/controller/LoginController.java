@@ -54,10 +54,10 @@ public class LoginController {
             if (userService.updateUser(username, user)) {
                 return StpUtil.getTokenInfo();
             } else {
-                return Result.fail(HttpStatus.FAILED.getCode(), "登录失败");
+                return Result.fail(HttpStatus.BAD_REQUEST.getCode(), "登录失败");
             }
         }
-        return Result.fail(HttpStatus.FAILED.getCode(), "登录失败");
+        return Result.fail(HttpStatus.BAD_REQUEST.getCode(), "登录失败");
     }
 
     /**
@@ -76,13 +76,13 @@ public class LoginController {
                 if (user.getUsername().equals(username) && user.getToken().equals(tokenValue)) {
                     return Result.success("已登录");
                 } else {
-                    return Result.fail(HttpStatus.FAILED.getCode(), "token 已过期，请重新登录");
+                    return Result.fail(HttpStatus.BAD_REQUEST.getCode(), "token 已过期，请重新登录");
                 }
             } else {
-                return Result.fail(HttpStatus.FAILED.getCode(), "尚未登录");
+                return Result.fail(HttpStatus.BAD_REQUEST.getCode(), "尚未登录");
             }
         } else {
-            return Result.fail(HttpStatus.FAILED.getCode(), "发生异常");
+            return Result.fail(HttpStatus.BAD_REQUEST.getCode(), "发生异常");
         }
     }
 
@@ -98,7 +98,7 @@ public class LoginController {
             StpUtil.logoutByTokenValue(tokenValue);
             return Result.success("logout success");
         }
-        return Result.fail(HttpStatus.FAILED.getCode(), "logout failed");
+        return Result.fail(HttpStatus.BAD_REQUEST.getCode(), "logout BAD_REQUEST");
     }
 
     /**
@@ -128,10 +128,10 @@ public class LoginController {
                 userRoleService.addUserRole(userRole);
                 return Result.success("register success");
             } else {
-                return Result.fail(HttpStatus.FAILED.getCode(), "The two passwords entered are inconsistent");
+                return Result.fail(HttpStatus.BAD_REQUEST.getCode(), "The two passwords entered are inconsistent");
             }
         } else {
-            return Result.fail(HttpStatus.FAILED.getCode(), "username exists");
+            return Result.fail(HttpStatus.BAD_REQUEST.getCode(), "username exists");
         }
     }
 

@@ -1,12 +1,13 @@
 package com.wjl.lblog.service.intf;
 
+import com.baomidou.mybatisplus.core.metadata.IPage;
+import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
+import com.baomidou.mybatisplus.extension.service.IService;
 import com.wjl.lblog.model.dto.ArticleDto;
 import com.wjl.lblog.model.vo.ArticleDetailVo;
 import com.wjl.lblog.model.vo.ArticleSummaryVo;
 import com.wjl.lblog.model.entity.Article;
 import com.wjl.lblog.model.vo.ArticleTitleVo;
-import org.springframework.data.domain.Page;
-import org.springframework.data.domain.Pageable;
 
 import java.util.List;
 
@@ -15,31 +16,43 @@ import java.util.List;
  * @date: 2021/9/13 21:55
  * @version: v1.0
  */
-public interface ArticleService {
+public interface ArticleService extends IService<Article> {
 
-    List<ArticleSummaryVo> findAllSummary();
+    IPage<ArticleDetailVo> selectDetailByPage(Page<ArticleDetailVo> page);
 
-    List<ArticleDetailVo> findAllDetail();
+    IPage<ArticleSummaryVo> selectSummaryByPage(Page<ArticleSummaryVo> page);
 
-    List<ArticleTitleVo> findAllTitle();
-
-    Page<ArticleSummaryVo> findSummaryByPage(Pageable pageable);
+    IPage<ArticleTitleVo> selectTitleByPage(Page<ArticleTitleVo> page);
 
 
-    ArticleDetailVo getById(Long id);
+    List<ArticleDetailVo> selectDetailAll();
 
-    ArticleDetailVo getByTitle(String title);
+    List<ArticleSummaryVo> selectSummaryAll();
 
-    Article findById(Long id);
-
-    Article findByTitle(String title);
+    List<ArticleTitleVo> selectTitleAll();
 
 
-    boolean add(ArticleDto articleDto);
+    ArticleDetailVo selectDetailById(Long id);
 
-    boolean update(Long id, ArticleDto articleDto);
+    ArticleSummaryVo selectSummaryById(Long id);
+
+    ArticleTitleVo selectTitleById(Long id);
 
 
-    boolean deleteById(Long id);
+    ArticleDetailVo selectDetailByTitle(String title);
+
+    ArticleSummaryVo selectSummaryByTitle(String title);
+
+    ArticleTitleVo selectTitleByTitle(String title);
+
+
+
+    boolean addArticle(Article article);
+
+    boolean updateArticle(Long id, Article article);
+
+    boolean addArticle(ArticleDto articleDto);
+
+    boolean updateArticle(Long id, ArticleDto articleDto);
 
 }

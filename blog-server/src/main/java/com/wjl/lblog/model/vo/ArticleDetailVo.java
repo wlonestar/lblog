@@ -1,7 +1,6 @@
 package com.wjl.lblog.model.vo;
 
 import com.wjl.lblog.model.dto.CategoryDto;
-import com.wjl.lblog.model.dto.TagDto;
 import lombok.Data;
 
 import java.util.Date;
@@ -22,7 +21,7 @@ public class ArticleDetailVo {
     private String summary;
     private String cover;
     private String content;
-    private CategoryDto category;
-    private List<TagDto> tags;
+    private Long categoryId;
+    private String category;
 
 }

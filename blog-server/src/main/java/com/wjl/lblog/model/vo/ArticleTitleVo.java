@@ -17,7 +17,7 @@ import java.util.Date;
 public class ArticleTitleVo {
 
     private Long id;
-    private Date articleTime;
+    private Date createTime;
     private String title;
 
 }
