@@ -1,6 +1,10 @@
 package com.wjl.lblog.model.entity;
 
+import com.baomidou.mybatisplus.annotation.FieldFill;
+import com.baomidou.mybatisplus.annotation.TableField;
+import com.baomidou.mybatisplus.annotation.TableName;
 import lombok.Data;
+import lombok.ToString;
 
 import java.util.Date;
 
@@ -11,7 +15,9 @@ import java.util.Date;
  * @date: 2021/9/13 20:46
  * @version: v1.0
  */
+@ToString
 @Data
+@TableName(value = "article")
 public class Article {
 
     private Long id;
@@ -19,11 +25,13 @@ public class Article {
     /**
      * 创建时间
      */
+    @TableField(fill = FieldFill.INSERT)
     private Date createTime;
 
     /**
      * 更新时间
      */
+    @TableField(fill = FieldFill.INSERT_UPDATE)
     private Date updateTime;
 
     /**

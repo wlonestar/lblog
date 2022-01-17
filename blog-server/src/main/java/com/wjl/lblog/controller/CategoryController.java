@@ -136,8 +136,9 @@ public class CategoryController {
      */
     @RequestMapping(value = "/", method = RequestMethod.PUT)
     public Object update(@RequestParam(name = "id") Long id, @RequestBody CategoryDto categoryDto) {
-        if (categoryService.updateCategory(id, categoryDto)) {
-            return categoryDto;
+        Category category = categoryService.selectCategoryById(id);
+        if (!Objects.isNull(category)) {
+            return categoryService.updateCategory(id, categoryDto);
         }
         return Result.fail(HttpStatus.BAD_REQUEST.getCode(), "can't update category");
     }

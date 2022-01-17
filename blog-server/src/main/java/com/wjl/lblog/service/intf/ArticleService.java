@@ -46,11 +46,6 @@ public interface ArticleService extends IService<Article> {
     ArticleTitleVo selectTitleByTitle(String title);
 
 
-
-    boolean addArticle(Article article);
-
-    boolean updateArticle(Long id, Article article);
-
     boolean addArticle(ArticleDto articleDto);
 
     boolean updateArticle(Long id, ArticleDto articleDto);

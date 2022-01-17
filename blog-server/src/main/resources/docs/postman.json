@@ -1,7 +1,7 @@
 {
   "info": {
     "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-    "_postman_id": "b7487db6-7cae-485e-b641-1f478f5d386a",
+    "_postman_id": "a1db0ff8-56b9-4825-a7c0-209fc34a141f",
     "name": "lblog"
   },
   "item": [
@@ -82,7 +82,7 @@
               ]
             },
             "url": {
-              "raw": "http://localhost:8088/article/page/summary?page\u003d1\u0026size\u003d5",
+              "raw": "http://localhost:8088/article/page/summary?size\u003d5\u0026page\u003d1",
               "protocol": "http",
               "path": [
                 "article",
@@ -256,12 +256,12 @@
                   "key": "id",
                   "type": "text",
                   "description": "id",
-                  "value": "614"
+                  "value": "374"
                 }
               ]
             },
             "url": {
-              "raw": "http://localhost:8088/article/detail/id?id\u003d614",
+              "raw": "http://localhost:8088/article/detail/id?id\u003d374",
               "protocol": "http",
               "path": [
                 "article",
@@ -275,7 +275,7 @@
               "query": [
                 {
                   "key": "id",
-                  "value": "999",
+                  "value": "677",
                   "description": "id"
                 }
               ],
@@ -297,12 +297,12 @@
                   "key": "id",
                   "type": "text",
                   "description": "id",
-                  "value": "901"
+                  "value": "603"
                 }
               ]
             },
             "url": {
-              "raw": "http://localhost:8088/article/summary/id?id\u003d901",
+              "raw": "http://localhost:8088/article/summary/id?id\u003d603",
               "protocol": "http",
               "path": [
                 "article",
@@ -316,7 +316,7 @@
               "query": [
                 {
                   "key": "id",
-                  "value": "42",
+                  "value": "838",
                   "description": "id"
                 }
               ],
@@ -338,12 +338,12 @@
                   "key": "id",
                   "type": "text",
                   "description": "id",
-                  "value": "23"
+                  "value": "490"
                 }
               ]
             },
             "url": {
-              "raw": "http://localhost:8088/article/title/id?id\u003d23",
+              "raw": "http://localhost:8088/article/title/id?id\u003d490",
               "protocol": "http",
               "path": [
                 "article",
@@ -357,7 +357,7 @@
               "query": [
                 {
                   "key": "id",
-                  "value": "206",
+                  "value": "789",
                   "description": "id"
                 }
               ],
@@ -379,12 +379,12 @@
                   "key": "title",
                   "type": "text",
                   "description": "title",
-                  "value": "zdhv8g"
+                  "value": "mthuxg"
                 }
               ]
             },
             "url": {
-              "raw": "http://localhost:8088/article/detail/title?title\u003dzdhv8g",
+              "raw": "http://localhost:8088/article/detail/title?title\u003dmthuxg",
               "protocol": "http",
               "path": [
                 "article",
@@ -398,7 +398,7 @@
               "query": [
                 {
                   "key": "title",
-                  "value": "7slccs",
+                  "value": "viowu3",
                   "description": "title"
                 }
               ],
@@ -420,12 +420,12 @@
                   "key": "title",
                   "type": "text",
                   "description": "title",
-                  "value": "6b1j88"
+                  "value": "6obdm2"
                 }
               ]
             },
             "url": {
-              "raw": "http://localhost:8088/article/summary/title?title\u003d6b1j88",
+              "raw": "http://localhost:8088/article/summary/title?title\u003d6obdm2",
               "protocol": "http",
               "path": [
                 "article",
@@ -439,7 +439,7 @@
               "query": [
                 {
                   "key": "title",
-                  "value": "5uu9zr",
+                  "value": "6dtenf",
                   "description": "title"
                 }
               ],
@@ -461,12 +461,12 @@
                   "key": "title",
                   "type": "text",
                   "description": "title",
-                  "value": "vt8v1t"
+                  "value": "9kk7h4"
                 }
               ]
             },
             "url": {
-              "raw": "http://localhost:8088/article/title/title?title\u003dvt8v1t",
+              "raw": "http://localhost:8088/article/title/title?title\u003d9kk7h4",
               "protocol": "http",
               "path": [
                 "article",
@@ -480,7 +480,7 @@
               "query": [
                 {
                   "key": "title",
-                  "value": "jm3nmi",
+                  "value": "ze814p",
                   "description": "title"
                 }
               ],
@@ -492,12 +492,12 @@
           "description": "根据标题查询文章"
         },
         {
-          "name": "TODO增加文章",
+          "name": "增加文章",
           "request": {
             "method": "POST",
             "body": {
               "mode": "raw",
-              "raw": "{\n  \"title\": \"cp1ifc\",\n  \"summary\": \"qusiuq\",\n  \"cover\": \"hl085f\",\n  \"content\": \"kee48e\",\n  \"category\": \"46mfu5\"\n}",
+              "raw": "{\n  \"title\": \"2un961\",\n  \"summary\": \"2x5twm\",\n  \"cover\": \"8mnpry\",\n  \"content\": \"ddeisf\",\n  \"category\": \"m3ppnq\"\n}",
               "options": {
                 "raw": {
                   "language": "json"
@@ -518,10 +518,10 @@
               "query": [],
               "variable": []
             },
-            "description": "TODO增加文章",
+            "description": "增加文章",
             "header": []
           },
-          "description": "TODO\r\n增加文章"
+          "description": "增加文章"
         },
         {
           "name": "根据 id 更新文章",
@@ -529,7 +529,7 @@
             "method": "PUT",
             "body": {
               "mode": "raw",
-              "raw": "{\n  \"title\": \"f65bdu\",\n  \"summary\": \"mfqhql\",\n  \"cover\": \"p00fa5\",\n  \"content\": \"uky7ry\",\n  \"category\": \"ddixwv\"\n}",
+              "raw": "{\n  \"title\": \"3k4eli\",\n  \"summary\": \"yb357z\",\n  \"cover\": \"9hmxvz\",\n  \"content\": \"2ub3xx\",\n  \"category\": \"ucxa6e\"\n}",
               "options": {
                 "raw": {
                   "language": "json"
@@ -537,7 +537,7 @@
               }
             },
             "url": {
-              "raw": "http://localhost:8088/article/?id\u003d335",
+              "raw": "http://localhost:8088/article/?id\u003d716",
               "protocol": "http",
               "path": [
                 "article",
@@ -550,7 +550,7 @@
               "query": [
                 {
                   "key": "id",
-                  "value": "657",
+                  "value": "223",
                   "description": "id"
                 }
               ],
@@ -570,7 +570,7 @@
               "formdata": []
             },
             "url": {
-              "raw": "http://localhost:8088/article/842",
+              "raw": "http://localhost:8088/article/928",
               "protocol": "http",
               "path": [
                 "article",
@@ -584,7 +584,7 @@
               "variable": [
                 {
                   "key": "id",
-                  "value": "501",
+                  "value": "395",
                   "description": "id"
                 }
               ]
@@ -687,7 +687,7 @@
                   "key": "id",
                   "type": "text",
                   "description": "id",
-                  "value": "537"
+                  "value": "174"
                 },
                 {
                   "key": "page",
@@ -704,7 +704,7 @@
               ]
             },
             "url": {
-              "raw": "http://localhost:8088/category/article/id?page\u003d1\u0026size\u003d7\u0026id\u003d537",
+              "raw": "http://localhost:8088/category/article/id?size\u003d7\u0026id\u003d174\u0026page\u003d1",
               "protocol": "http",
               "path": [
                 "category",
@@ -718,7 +718,7 @@
               "query": [
                 {
                   "key": "id",
-                  "value": "30",
+                  "value": "22",
                   "description": "id"
                 },
                 {
@@ -750,7 +750,7 @@
                   "key": "name",
                   "type": "text",
                   "description": "name",
-                  "value": "yolanda.gerhold"
+                  "value": "cindi.rowe"
                 },
                 {
                   "key": "page",
@@ -767,7 +767,7 @@
               ]
             },
             "url": {
-              "raw": "http://localhost:8088/category/article/name?page\u003d1\u0026size\u003d7\u0026name\u003dyolanda.gerhold",
+              "raw": "http://localhost:8088/category/article/name?name\u003dcindi.rowe\u0026size\u003d7\u0026page\u003d1",
               "protocol": "http",
               "path": [
                 "category",
@@ -781,7 +781,7 @@
               "query": [
                 {
                   "key": "name",
-                  "value": "yolanda.gerhold",
+                  "value": "cindi.rowe",
                   "description": "name"
                 },
                 {
@@ -813,12 +813,12 @@
                   "key": "id",
                   "type": "text",
                   "description": "id",
-                  "value": "352"
+                  "value": "383"
                 }
               ]
             },
             "url": {
-              "raw": "http://localhost:8088/category/id?id\u003d352",
+              "raw": "http://localhost:8088/category/id?id\u003d383",
               "protocol": "http",
               "path": [
                 "category",
@@ -831,7 +831,7 @@
               "query": [
                 {
                   "key": "id",
-                  "value": "471",
+                  "value": "776",
                   "description": "id"
                 }
               ],
@@ -853,12 +853,12 @@
                   "key": "name",
                   "type": "text",
                   "description": "name",
-                  "value": "yolanda.gerhold"
+                  "value": "cindi.rowe"
                 }
               ]
             },
             "url": {
-              "raw": "http://localhost:8088/category/name?name\u003dyolanda.gerhold",
+              "raw": "http://localhost:8088/category/name?name\u003dcindi.rowe",
               "protocol": "http",
               "path": [
                 "category",
@@ -871,7 +871,7 @@
               "query": [
                 {
                   "key": "name",
-                  "value": "yolanda.gerhold",
+                  "value": "cindi.rowe",
                   "description": "name"
                 }
               ],
@@ -888,7 +888,7 @@
             "method": "POST",
             "body": {
               "mode": "raw",
-              "raw": "{\n  \"id\": 152,\n  \"createTime\": \"2021-12-19 09:34:49\",\n  \"updateTime\": \"2021-12-19 09:34:49\",\n  \"name\": \"yolanda.gerhold\",\n  \"description\": \"ezgrh5\",\n  \"number\": 960\n}",
+              "raw": "{\n  \"name\": \"cindi.rowe\",\n  \"description\": \"fjznct\",\n  \"number\": 172\n}",
               "options": {
                 "raw": {
                   "language": "json"
@@ -920,7 +920,7 @@
             "method": "PUT",
             "body": {
               "mode": "raw",
-              "raw": "{\n  \"id\": 871,\n  \"createTime\": \"2021-12-19 09:34:49\",\n  \"updateTime\": \"2021-12-19 09:34:49\",\n  \"name\": \"yolanda.gerhold\",\n  \"description\": \"0b1m17\",\n  \"number\": 215\n}",
+              "raw": "{\n  \"name\": \"cindi.rowe\",\n  \"description\": \"akmtwf\",\n  \"number\": 97\n}",
               "options": {
                 "raw": {
                   "language": "json"
@@ -928,7 +928,7 @@
               }
             },
             "url": {
-              "raw": "http://localhost:8088/category/?id\u003d623",
+              "raw": "http://localhost:8088/category/?id\u003d280",
               "protocol": "http",
               "path": [
                 "category",
@@ -941,7 +941,7 @@
               "query": [
                 {
                   "key": "id",
-                  "value": "787",
+                  "value": "556",
                   "description": "id"
                 }
               ],
@@ -963,12 +963,12 @@
                   "key": "id",
                   "type": "text",
                   "description": "id",
-                  "value": "743"
+                  "value": "835"
                 }
               ]
             },
             "url": {
-              "raw": "http://localhost:8088/category/?id\u003d743",
+              "raw": "http://localhost:8088/category/?id\u003d835",
               "protocol": "http",
               "path": [
                 "category",
@@ -981,7 +981,7 @@
               "query": [
                 {
                   "key": "id",
-                  "value": "225",
+                  "value": "81",
                   "description": "id"
                 }
               ],
@@ -1083,7 +1083,7 @@
               "formdata": []
             },
             "url": {
-              "raw": "http://localhost:8088/comment/294",
+              "raw": "http://localhost:8088/comment/451",
               "protocol": "http",
               "path": [
                 "comment",
@@ -1097,7 +1097,7 @@
               "variable": [
                 {
                   "key": "id",
-                  "value": "488",
+                  "value": "522",
                   "description": "id"
                 }
               ]
@@ -1113,7 +1113,7 @@
             "method": "POST",
             "body": {
               "mode": "raw",
-              "raw": "{\n  \"id\": 268,\n  \"createTime\": \"2021-12-19 09:34:49\",\n  \"updateTime\": \"2021-12-19 09:34:49\",\n  \"content\": \"ekfjyb\",\n  \"username\": \"yolanda.gerhold\",\n  \"avatar\": \"7ysztu\",\n  \"site\": \"4xfa69\",\n  \"email\": \"devin.prosacco@gmail.com\"\n}",
+              "raw": "{\n  \"id\": 807,\n  \"createTime\": \"2022-01-17 19:05:27\",\n  \"updateTime\": \"2022-01-17 19:05:27\",\n  \"content\": \"xi1aal\",\n  \"username\": \"cindi.rowe\",\n  \"avatar\": \"66az0y\",\n  \"site\": \"23ey1a\",\n  \"email\": \"shameka.hand@yahoo.com\"\n}",
               "options": {
                 "raw": {
                   "language": "json"
@@ -1145,7 +1145,7 @@
             "method": "PUT",
             "body": {
               "mode": "raw",
-              "raw": "{\n  \"id\": 751,\n  \"createTime\": \"2021-12-19 09:34:49\",\n  \"updateTime\": \"2021-12-19 09:34:49\",\n  \"content\": \"lte178\",\n  \"username\": \"yolanda.gerhold\",\n  \"avatar\": \"cg0j8q\",\n  \"site\": \"6v2a7f\",\n  \"email\": \"devin.prosacco@gmail.com\"\n}",
+              "raw": "{\n  \"id\": 985,\n  \"createTime\": \"2022-01-17 19:05:27\",\n  \"updateTime\": \"2022-01-17 19:05:27\",\n  \"content\": \"pa7cte\",\n  \"username\": \"cindi.rowe\",\n  \"avatar\": \"8lndyj\",\n  \"site\": \"6fry47\",\n  \"email\": \"shameka.hand@yahoo.com\"\n}",
               "options": {
                 "raw": {
                   "language": "json"
@@ -1153,7 +1153,7 @@
               }
             },
             "url": {
-              "raw": "http://localhost:8088/comment/?id\u003d93",
+              "raw": "http://localhost:8088/comment/?id\u003d686",
               "protocol": "http",
               "path": [
                 "comment",
@@ -1166,7 +1166,7 @@
               "query": [
                 {
                   "key": "id",
-                  "value": "727",
+                  "value": "842",
                   "description": "id"
                 }
               ],
@@ -1188,12 +1188,12 @@
                   "key": "id",
                   "type": "text",
                   "description": "id",
-                  "value": "411"
+                  "value": "130"
                 }
               ]
             },
             "url": {
-              "raw": "http://localhost:8088/comment/?id\u003d411",
+              "raw": "http://localhost:8088/comment/?id\u003d130",
               "protocol": "http",
               "path": [
                 "comment",
@@ -1206,7 +1206,7 @@
               "query": [
                 {
                   "key": "id",
-                  "value": "738",
+                  "value": "562",
                   "description": "id"
                 }
               ],
@@ -1376,7 +1376,7 @@
             "method": "POST",
             "body": {
               "mode": "raw",
-              "raw": "{\n  \"username\": \"yolanda.gerhold\",\n  \"password\": \"fnbnhm\"\n}",
+              "raw": "{\n  \"username\": \"cindi.rowe\",\n  \"password\": \"58izjj\"\n}",
               "options": {
                 "raw": {
                   "language": "json"
@@ -1413,18 +1413,18 @@
                   "key": "username",
                   "type": "text",
                   "description": "username",
-                  "value": "yolanda.gerhold"
+                  "value": "cindi.rowe"
                 },
                 {
                   "key": "tokenValue",
                   "type": "text",
                   "description": "token",
-                  "value": "3o1dxz"
+                  "value": "s3091n"
                 }
               ]
             },
             "url": {
-              "raw": "http://localhost:8088/admin/check?tokenValue\u003d3o1dxz\u0026username\u003dyolanda.gerhold",
+              "raw": "http://localhost:8088/admin/check?tokenValue\u003ds3091n\u0026username\u003dcindi.rowe",
               "protocol": "http",
               "path": [
                 "admin",
@@ -1437,12 +1437,12 @@
               "query": [
                 {
                   "key": "username",
-                  "value": "yolanda.gerhold",
+                  "value": "cindi.rowe",
                   "description": "username"
                 },
                 {
                   "key": "tokenValue",
-                  "value": "8frmvl",
+                  "value": "4f2qxn",
                   "description": "token"
                 }
               ],
@@ -1464,7 +1464,7 @@
                   "key": "tokenValue",
                   "type": "text",
                   "description": "token",
-                  "value": "ys1cbe"
+                  "value": "iztddo"
                 }
               ]
             },
@@ -1482,7 +1482,7 @@
               "query": [
                 {
                   "key": "tokenValue",
-                  "value": "tjfg2k",
+                  "value": "56den4",
                   "description": "token"
                 }
               ],
@@ -1499,7 +1499,7 @@
             "method": "POST",
             "body": {
               "mode": "raw",
-              "raw": "{\n  \"username\": \"yolanda.gerhold\",\n  \"password\": \"7knqln\",\n  \"passwordRepeat\": \"xac5id\"\n}",
+              "raw": "{\n  \"username\": \"cindi.rowe\",\n  \"password\": \"ol26it\",\n  \"passwordRepeat\": \"ldxa8e\"\n}",
               "options": {
                 "raw": {
                   "language": "json"
@@ -1624,7 +1624,7 @@
               "formdata": []
             },
             "url": {
-              "raw": "http://localhost:8088/idea/996",
+              "raw": "http://localhost:8088/idea/526",
               "protocol": "http",
               "path": [
                 "idea",
@@ -1638,7 +1638,7 @@
               "variable": [
                 {
                   "key": "id",
-                  "value": "50",
+                  "value": "944",
                   "description": "id"
                 }
               ]
@@ -1654,7 +1654,7 @@
             "method": "POST",
             "body": {
               "mode": "raw",
-              "raw": "{\n  \"id\": 271,\n  \"createTime\": \"2021-12-19 09:34:49\",\n  \"updateTime\": \"2021-12-19 09:34:49\",\n  \"title\": \"99kiax\",\n  \"content\": \"g5ou5c\"\n}",
+              "raw": "{\n  \"id\": 245,\n  \"createTime\": \"2022-01-17 19:05:27\",\n  \"updateTime\": \"2022-01-17 19:05:27\",\n  \"title\": \"2ckgv0\",\n  \"content\": \"2ckt2j\"\n}",
               "options": {
                 "raw": {
                   "language": "json"
@@ -1686,7 +1686,7 @@
             "method": "PUT",
             "body": {
               "mode": "raw",
-              "raw": "{\n  \"id\": 629,\n  \"createTime\": \"2021-12-19 09:34:49\",\n  \"updateTime\": \"2021-12-19 09:34:49\",\n  \"title\": \"0da9vi\",\n  \"content\": \"g1yuuy\"\n}",
+              "raw": "{\n  \"id\": 106,\n  \"createTime\": \"2022-01-17 19:05:27\",\n  \"updateTime\": \"2022-01-17 19:05:27\",\n  \"title\": \"94c8ug\",\n  \"content\": \"l7ld1e\"\n}",
               "options": {
                 "raw": {
                   "language": "json"
@@ -1694,7 +1694,7 @@
               }
             },
             "url": {
-              "raw": "http://localhost:8088/idea/?id\u003d688",
+              "raw": "http://localhost:8088/idea/?id\u003d129",
               "protocol": "http",
               "path": [
                 "idea",
@@ -1707,7 +1707,7 @@
               "query": [
                 {
                   "key": "id",
-                  "value": "57",
+                  "value": "923",
                   "description": "id"
                 }
               ],
@@ -1727,7 +1727,7 @@
               "formdata": []
             },
             "url": {
-              "raw": "http://localhost:8088/idea/114",
+              "raw": "http://localhost:8088/idea/984",
               "protocol": "http",
               "path": [
                 "idea",
@@ -1741,7 +1741,7 @@
               "variable": [
                 {
                   "key": "id",
-                  "value": "747",
+                  "value": "389",
                   "description": "id"
                 }
               ]
@@ -1788,7 +1788,7 @@
             "method": "POST",
             "body": {
               "mode": "raw",
-              "raw": "{\n  \"id\": 409,\n  \"username\": \"yolanda.gerhold\",\n  \"password\": \"hyl3eo\",\n  \"token\": \"ith6l0\",\n  \"avatar\": \"kxsl76\",\n  \"age\": 20,\n  \"gender\": true,\n  \"location\": \"drgrij\",\n  \"signature\": \"ejerfn\",\n  \"profile\": \"dn02zs\"\n}",
+              "raw": "{\n  \"id\": 554,\n  \"username\": \"cindi.rowe\",\n  \"password\": \"blp9t7\",\n  \"token\": \"psxfjl\",\n  \"avatar\": \"logn2b\",\n  \"age\": 22,\n  \"gender\": true,\n  \"location\": \"esv8p2\",\n  \"signature\": \"o2bzjq\",\n  \"profile\": \"f1hcbq\"\n}",
               "options": {
                 "raw": {
                   "language": "json"
@@ -1825,12 +1825,12 @@
                   "key": "id",
                   "type": "text",
                   "description": "No comments found.",
-                  "value": "179"
+                  "value": "318"
                 }
               ]
             },
             "url": {
-              "raw": "http://localhost:8088/user/user?id\u003d179",
+              "raw": "http://localhost:8088/user/user?id\u003d318",
               "protocol": "http",
               "path": [
                 "user",
@@ -1843,7 +1843,7 @@
               "query": [
                 {
                   "key": "id",
-                  "value": "363",
+                  "value": "129",
                   "description": "No comments found."
                 }
               ],
@@ -1865,12 +1865,12 @@
                   "key": "username",
                   "type": "text",
                   "description": "No comments found.",
-                  "value": "yolanda.gerhold"
+                  "value": "cindi.rowe"
                 }
               ]
             },
             "url": {
-              "raw": "http://localhost:8088/user/name?username\u003dyolanda.gerhold",
+              "raw": "http://localhost:8088/user/name?username\u003dcindi.rowe",
               "protocol": "http",
               "path": [
                 "user",
@@ -1883,7 +1883,7 @@
               "query": [
                 {
                   "key": "username",
-                  "value": "yolanda.gerhold",
+                  "value": "cindi.rowe",
                   "description": "No comments found."
                 }
               ],
@@ -1900,7 +1900,7 @@
             "method": "PUT",
             "body": {
               "mode": "raw",
-              "raw": "{\n  \"id\": 308,\n  \"username\": \"yolanda.gerhold\",\n  \"password\": \"pf13p1\",\n  \"token\": \"a0u3y1\",\n  \"avatar\": \"fo4fy5\",\n  \"age\": 20,\n  \"gender\": true,\n  \"location\": \"6m6jhp\",\n  \"signature\": \"eoq3ue\",\n  \"profile\": \"me8wij\"\n}",
+              "raw": "{\n  \"id\": 684,\n  \"username\": \"cindi.rowe\",\n  \"password\": \"d3iptj\",\n  \"token\": \"ttr2zl\",\n  \"avatar\": \"8qfhgj\",\n  \"age\": 22,\n  \"gender\": true,\n  \"location\": \"nikvd4\",\n  \"signature\": \"iocz8e\",\n  \"profile\": \"0xxks5\"\n}",
               "options": {
                 "raw": {
                   "language": "json"
@@ -1908,7 +1908,7 @@
               }
             },
             "url": {
-              "raw": "http://localhost:8088/user/password?id\u003d156",
+              "raw": "http://localhost:8088/user/password?id\u003d286",
               "protocol": "http",
               "path": [
                 "user",
@@ -1921,7 +1921,7 @@
               "query": [
                 {
                   "key": "id",
-                  "value": "137",
+                  "value": "355",
                   "description": "No comments found."
                 }
               ],

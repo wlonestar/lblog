@@ -5,14 +5,14 @@
 
     <groupId>com.wjl</groupId>
     <artifactId>lblog</artifactId>
-    <version>1.1.0</version>
+    <version>1.2.0</version>
     <name>lblog</name>
     <description>blog-server</description>
 
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>2.6.1</version>
+        <version>2.6.2</version>
         <relativePath/>
     </parent>
 
@@ -45,6 +45,10 @@
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
         </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-jdbc</artifactId>
+        </dependency>
         <!-- spring data jpa -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -54,7 +58,7 @@
         <dependency>
             <groupId>com.baomidou</groupId>
             <artifactId>mybatis-plus-boot-starter</artifactId>
-            <version>3.4.3.4</version>
+            <version>3.5.0</version>
         </dependency>
         <!-- sa-token -->
         <dependency>
@@ -66,7 +70,7 @@
         <dependency>
             <groupId>com.qcloud</groupId>
             <artifactId>cos_api</artifactId>
-            <version>5.6.61</version>
+            <version>5.6.66</version>
         </dependency>
         <!-- lombok 插件-->
         <dependency>

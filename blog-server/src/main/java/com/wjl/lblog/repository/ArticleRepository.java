@@ -87,16 +87,4 @@ public interface ArticleRepository extends BaseMapper<Article> {
     @Select("select id, create_time, title from article where title = #{title}")
     ArticleTitleVo selectTitleByTitle(@Param("title") String title);
 
-
-    @Insert("insert into article(title, cover, content, summary, category_id)" +
-            "values(#{title}, #{cover}, #{content}, #{summary}, #{categoryId})")
-    boolean addArticle(Article article);
-
-    @ResultType(Article.class)
-    @Update("update article" +
-            "set title=#{article.title}, cover=#{article.cover}, content=#{article.content}, " +
-            "summary=#{article.summary}, category_id=#{article.categoryId}" +
-            "where id=#{id}")
-    boolean updateArticle(@Param("id") Long id, @Param("article") Article article);
-
 }

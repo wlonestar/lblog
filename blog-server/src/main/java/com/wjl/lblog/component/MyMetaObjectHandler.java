@@ -18,15 +18,15 @@ public class MyMetaObjectHandler implements MetaObjectHandler {
 
     @Override
     public void insertFill(MetaObject metaObject) {
-        log.info("start auto insert createTime and updateTime");
-        this.setFieldValByName("createTime", new Date(), metaObject);
-        this.setFieldValByName("updateTime", new Date(), metaObject);
+        log.info("start auto insert article time");
+        this.strictInsertFill(metaObject, "createTime", Date::new, Date.class);
+        this.strictInsertFill(metaObject, "updateTime", Date::new, Date.class);
     }
 
     @Override
     public void updateFill(MetaObject metaObject) {
-        log.info("start auto insert createTime and updateTime");
-        this.setFieldValByName("updateTime", new Date(), metaObject);
+        log.info("start auto update article time");
+        this.strictUpdateFill(metaObject, "updateTime", Date::new, Date.class);
     }
 
 }

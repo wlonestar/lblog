@@ -33,14 +33,4 @@ public interface CategoryRepository extends BaseMapper<Category> {
     @Select("select * from category where name=#{name}")
     Category selectCategoryByName(@Param("name") String name);
 
-    @Insert("insert into category(name, description, number) " +
-            "values(#{name}, #{description}, #{number})")
-    boolean addCategory(Category category);
-
-    @ResultType(Category.class)
-    @Update("update category " +
-            "set name=#{category.name}, description=#{category.description}, number=#{category.number} " +
-            "where id=#{id}")
-    boolean updateCategory(@Param("id") Long id, @Param("category") Category category);
-
 }

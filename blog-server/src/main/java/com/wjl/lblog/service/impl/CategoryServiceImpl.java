@@ -10,10 +10,12 @@ import com.wjl.lblog.model.vo.CategoryArticleVo;
 import com.wjl.lblog.repository.ArticleRepository;
 import com.wjl.lblog.repository.CategoryRepository;
 import com.wjl.lblog.service.intf.CategoryService;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.BeanUtils;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
+import java.util.Date;
 import java.util.List;
 import java.util.Objects;
 
@@ -22,6 +24,7 @@ import java.util.Objects;
  * @date: 2021/9/14 15:12
  * @version: v1.0
  */
+@Slf4j
 @Service
 public class CategoryServiceImpl
         extends ServiceImpl<CategoryRepository, Category>
@@ -84,7 +87,8 @@ public class CategoryServiceImpl
         if (!Objects.isNull(categoryDto)) {
             Category category = new Category();
             BeanUtils.copyProperties(categoryDto, category);
-            return categoryRepository.addCategory(category);
+            int i = categoryRepository.insert(category);
+            return i == 1;
         }
         return false;
     }
@@ -92,9 +96,11 @@ public class CategoryServiceImpl
     @Override
     public boolean updateCategory(Long id, CategoryDto categoryDto) {
         if (!Objects.isNull(categoryDto)) {
-            Category category = new Category();
+            Category category = categoryRepository.selectCategoryById(id);
             BeanUtils.copyProperties(categoryDto, category);
-            return categoryRepository.updateCategory(id, category);
+            category.setUpdateTime(new Date());
+            int i = categoryRepository.updateById(category);
+            return i == 1;
         }
         return false;
     }
@@ -106,9 +112,5 @@ public class CategoryServiceImpl
         categoryArticleVo.setArticles(articleRepository.selectTitleByPage(page));
         return categoryArticleVo;
     }
-
-
-
-
 
 }

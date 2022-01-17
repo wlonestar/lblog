@@ -25,15 +25,18 @@ public class ResponseAdvice implements ResponseBodyAdvice<Object> {
     private ObjectMapper objectMapper;
 
     @Override
-    public boolean supports(MethodParameter methodParameter, Class<? extends HttpMessageConverter<?>> aClass) {
+    public boolean supports(MethodParameter parameter,
+                            Class<? extends HttpMessageConverter<?>> aClass) {
         return true;
     }
 
     @SneakyThrows
     @Override
-    public Object beforeBodyWrite(Object o, MethodParameter methodParameter, MediaType mediaType,
+    public Object beforeBodyWrite(Object o, MethodParameter parameter,
+                                  MediaType mediaType,
                                   Class<? extends HttpMessageConverter<?>> aClass,
-                                  ServerHttpRequest serverHttpRequest, ServerHttpResponse serverHttpResponse) {
+                                  ServerHttpRequest request,
+                                  ServerHttpResponse response) {
         if (o instanceof String) {
             return objectMapper.writeValueAsString(Result.success(o));
         }

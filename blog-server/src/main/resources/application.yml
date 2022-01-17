@@ -1,20 +1,21 @@
-# server port
 server:
   port: 8088
 
-# spring configuration
 spring:
-  # datasource config
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/lblog?useSSL=false&serverTimezone=UTC
+    type: com.zaxxer.hikari.HikariDataSource
+    url: jdbc:mysql://127.0.0.1:3306/lblog?useSSL=false&serverTimezone=Asia/Shanghai
     username: root
     password: 123456
     hikari:
-      minimum-idle: 1
-      maximum-pool-size: 20
+      minimum-idle: 5
+      maximum-pool-size: 12
       initialization-fail-timeout: 60000
-  # jpa config
+      connection-timeout: 20000
+      idle-timeout: 300000
+      max-lifetime: 1200000
+
   jpa:
     show-sql: false
     database-platform: org.hibernate.dialect.MySQL8Dialect
@@ -24,7 +25,6 @@ spring:
       hibernate:
         format_sql: true
 
-# sa-token configuration
 sa-token:
   token-name: satoken
   timeout: 86400
@@ -32,3 +32,7 @@ sa-token:
   is-share: false
   token-style: uuid
   is-log: true
+
+mybatis-plus:
+  global-config:
+    banner: false

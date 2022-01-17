@@ -2,6 +2,7 @@ package com.wjl.lblog.model.entity;
 
 import com.baomidou.mybatisplus.annotation.FieldFill;
 import com.baomidou.mybatisplus.annotation.TableField;
+import com.baomidou.mybatisplus.annotation.TableName;
 import lombok.Data;
 
 import java.util.Date;
@@ -14,6 +15,7 @@ import java.util.Date;
  * @version: v1.0
  */
 @Data
+@TableName(value = "category")
 public class Category {
 
     private Long id;

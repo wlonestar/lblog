@@ -1,6 +1,10 @@
 package com.wjl.lblog.service.impl;
 
+import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
+import com.baomidou.mybatisplus.core.conditions.update.LambdaUpdateWrapper;
+import com.baomidou.mybatisplus.core.conditions.update.UpdateWrapper;
 import com.baomidou.mybatisplus.core.metadata.IPage;
+import com.baomidou.mybatisplus.extension.conditions.update.LambdaUpdateChainWrapper;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.wjl.lblog.model.dto.ArticleDto;
@@ -16,6 +20,7 @@ import org.springframework.beans.BeanUtils;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
+import java.util.Date;
 import java.util.List;
 import java.util.Objects;
 
@@ -126,27 +131,11 @@ public class ArticleServiceImpl
 
 
     @Override
-    public boolean addArticle(Article article) {
-        if (!Objects.isNull(article)) {
-            return articleRepository.addArticle(article);
-        }
-        return false;
-    }
-
-    @Override
-    public boolean updateArticle(Long id, Article article) {
-        if (!Objects.isNull(article)) {
-            return articleRepository.updateArticle(id, article);
-        }
-        return false;
-    }
-
-    @Override
     public boolean addArticle(ArticleDto articleDto) {
         Article article = new Article();
         if (!Objects.isNull(articleDto)) {
             processCategory(article, articleDto);
-            articleRepository.addArticle(article);
+            articleRepository.insert(article);
             return true;
         }
         return false;
@@ -157,7 +146,8 @@ public class ArticleServiceImpl
         Article article = articleRepository.selectById(id);
         if (!Objects.isNull(article)) {
             processCategory(article, articleDto);
-            articleRepository.addArticle(article);
+            article.setUpdateTime(new Date());
+            articleRepository.updateById(article);
             return true;
         }
         return false;
@@ -170,13 +160,13 @@ public class ArticleServiceImpl
             Category category1 = new Category();
             category1.setName(articleDto.getCategory());
             category1.setNumber(1);
-            categoryRepository.addCategory(category1);
+            categoryRepository.insert(category1);
+            article.setCategoryId(categoryRepository.selectCategoryByName(category1.getName()).getId());
         } else {
             category.setNumber(category.getNumber() + 1);
-            categoryRepository.updateCategory(category.getId(), category);
+            categoryRepository.updateById(category);
             article.setCategoryId(category.getId());
         }
     }
-
 
 }
