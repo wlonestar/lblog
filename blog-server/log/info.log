@@ -2232,3 +2232,18 @@ Caused by: org.apache.ibatis.exceptions.TooManyResultsException: Expected one re
 [2022-01-17 20:54:22][main] INFO  com.wjl.lblog.BlogServerApplication - Started BlogServerApplication in 3.232 seconds (JVM running for 3.976)
 [2022-01-17 20:55:16][SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
 [2022-01-17 20:55:16][SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+[2022-01-17 20:55:21][main] INFO  com.wjl.lblog.BlogServerApplication - Starting BlogServerApplication using Java 17 on lonestar with PID 20056 (D:\wjl\repository\blog\Lblog\blog-server\target\classes started by wjl in D:\wjl\repository\blog\Lblog\blog-server)
+[2022-01-17 20:55:21][main] INFO  com.wjl.lblog.BlogServerApplication - No active profile set, falling back to default profiles: default
+[2022-01-17 20:55:22][main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8088"]
+[2022-01-17 20:55:22][main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+[2022-01-17 20:55:22][main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.56]
+[2022-01-17 20:55:22][main] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+[2022-01-17 20:55:22][main] INFO  org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+[2022-01-17 20:55:22][main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.3.Final
+[2022-01-17 20:55:22][main] INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+[2022-01-17 20:55:22][main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+[2022-01-17 20:55:22][main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+[2022-01-17 20:55:22][main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+[2022-01-17 20:55:23][main] INFO  org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[2022-01-17 20:55:24][main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8088"]
+[2022-01-17 20:55:24][main] INFO  com.wjl.lblog.BlogServerApplication - Started BlogServerApplication in 3.146 seconds (JVM running for 3.9)
