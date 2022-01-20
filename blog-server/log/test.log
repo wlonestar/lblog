@@ -13,3 +13,5 @@
 [2022-01-17 20:55:23][main] INFO  org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
 [2022-01-17 20:55:24][main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8088"]
 [2022-01-17 20:55:24][main] INFO  com.wjl.lblog.BlogServerApplication - Started BlogServerApplication in 3.146 seconds (JVM running for 3.9)
+[2022-01-17 21:49:49][SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+[2022-01-17 21:49:49][SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
