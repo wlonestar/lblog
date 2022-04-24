@@ -1,10 +1,11 @@
 package com.wjl.lblog.service.impl;
 
+import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
+import com.baomidou.mybatisplus.core.metadata.IPage;
+import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.wjl.lblog.model.entity.Image;
-import com.wjl.lblog.repository.ImageRepository;
+import com.wjl.lblog.repository.ImageMapper;
 import com.wjl.lblog.service.intf.ImageService;
-import org.springframework.data.domain.Page;
-import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
@@ -19,21 +20,24 @@ import java.util.List;
 public class ImageServiceImpl implements ImageService {
 
     @Resource
-    private ImageRepository imageRepository;
+    private ImageMapper imageMapper;
 
     @Override
     public List<Image> findAll() {
-        return imageRepository.findAll();
+        var wrapper = new LambdaQueryWrapper<Image>();
+        return imageMapper.selectList(wrapper);
     }
 
     @Override
-    public Page<Image> findAllByPage(Pageable pageable) {
-        return imageRepository.findAll(pageable);
+    public IPage<Image> findAllByPage(Page<Image> page) {
+        var wrapper = new LambdaQueryWrapper<Image>();
+        return imageMapper.selectPage(page, wrapper);
     }
 
     @Override
-    public Image add(Image image) {
-        return imageRepository.save(image);
+    public boolean add(Image image) {
+        var res = imageMapper.insert(image);
+        return res == 1;
     }
 
 }

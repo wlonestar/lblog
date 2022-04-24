@@ -13,7 +13,9 @@ public interface PermissionService {
 
     List<Permission> findAllPermission();
 
-    Permission fnidPermissionById(Long pid);
+    Permission findPermissionById(Long pid);
+
+    Permission findPermissionByPermission(String permission);
 
     String addPermission(Permission permission);
 

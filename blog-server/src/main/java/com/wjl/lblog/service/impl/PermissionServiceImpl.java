@@ -1,7 +1,8 @@
 package com.wjl.lblog.service.impl;
 
+import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import com.wjl.lblog.model.entity.Permission;
-import com.wjl.lblog.repository.PermissionRepository;
+import com.wjl.lblog.repository.PermissionMapper;
 import com.wjl.lblog.service.intf.PermissionService;
 import org.springframework.stereotype.Service;
 
@@ -18,22 +19,32 @@ import java.util.Objects;
 public class PermissionServiceImpl implements PermissionService {
 
     @Resource
-    private PermissionRepository permissionRepository;
+    private PermissionMapper permissionMapper;
 
     @Override
     public List<Permission> findAllPermission() {
-        return permissionRepository.findAll();
+        var wrapper = new LambdaQueryWrapper<Permission>();
+        return permissionMapper.selectList(wrapper);
     }
 
     @Override
-    public Permission fnidPermissionById(Long pid) {
-        return permissionRepository.findPermissionById(pid);
+    public Permission findPermissionById(Long pid) {
+        var wrapper = new LambdaQueryWrapper<Permission>();
+        wrapper.eq(Permission::getId, pid);
+        return permissionMapper.selectOne(wrapper);
+    }
+
+    @Override
+    public Permission findPermissionByPermission(String permission) {
+        var wrapper = new LambdaQueryWrapper<Permission>();
+        wrapper.eq(Permission::getPermission, permission);
+        return permissionMapper.selectOne(wrapper);
     }
 
     @Override
     public String addPermission(Permission permission) {
         if (!Objects.isNull(permission)) {
-            permissionRepository.save(permission);
+            permissionMapper.insert(permission);
             return permission.getPermission();
         }
         return null;

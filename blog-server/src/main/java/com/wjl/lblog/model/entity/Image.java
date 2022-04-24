@@ -1,11 +1,8 @@
 package com.wjl.lblog.model.entity;
 
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-import lombok.Getter;
-import lombok.Setter;
-import org.hibernate.annotations.CreationTimestamp;
+import com.baomidou.mybatisplus.annotation.*;
+import lombok.Data;
 
-import javax.persistence.*;
 import java.util.Date;
 
 /**
@@ -15,36 +12,27 @@ import java.util.Date;
  * @date: 2021/9/18 22:28
  * @version: v1.0
  */
-@Getter
-@Setter
-@Entity
-@Table(name = "image")
-@JsonIgnoreProperties({"handler", "hibernateLazyInitializer"})
+@Data
+@TableName(value = "image")
 public class Image {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id")
+    @TableId(type = IdType.AUTO)
     private Long id;
 
     /**
      * 上传时间
      */
-    @Column(name = "create_time")
-    @Temporal(TemporalType.TIMESTAMP)
-    @CreationTimestamp
+    @TableField(fill = FieldFill.INSERT)
     private Date createTime;
 
     /**
      * 名称
      */
-    @Column(name = "name")
     private String name;
 
     /**
      * 路径
      */
-    @Column(name = "url")
     private String url;
 
 }

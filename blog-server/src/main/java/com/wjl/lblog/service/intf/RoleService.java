@@ -18,7 +18,7 @@ public interface RoleService {
 
     Role findRoleByRoleName(String role);
 
-    String addRole(Role role);
+    boolean addRole(Role role);
 
     boolean addRolePermission(RolePermissionDto rolePermissionDto);
 

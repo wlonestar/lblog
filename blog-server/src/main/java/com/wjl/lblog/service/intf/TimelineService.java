@@ -1,8 +1,8 @@
 package com.wjl.lblog.service.intf;
 
+import com.baomidou.mybatisplus.core.metadata.IPage;
+import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.wjl.lblog.model.entity.Timeline;
-import org.springframework.data.domain.Page;
-import org.springframework.data.domain.Pageable;
 
 import java.util.List;
 
@@ -13,18 +13,16 @@ import java.util.List;
  */
 public interface TimelineService {
 
-    Page<Timeline> findAllByPage(Pageable pageable);
+    IPage<Timeline> findAllByPage(Page<Timeline> page);
 
     List<Timeline> findAll();
 
     Timeline findById(Long id);
 
-    Timeline add(Timeline idea);
+    boolean add(Timeline idea);
 
-    Timeline update(Long id, Timeline idea);
+    boolean update(Long id, Timeline idea);
 
-    Long deleteById(Long id);
-
-    void deleteAll();
+    boolean deleteById(Long id);
 
 }

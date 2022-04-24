@@ -2,7 +2,7 @@ package com.wjl.lblog.controller;
 
 import cn.dev33.satoken.secure.SaBase64Util;
 import cn.dev33.satoken.stp.StpUtil;
-import com.wjl.lblog.common.enums.HttpStatus;
+import com.wjl.lblog.common.enums.MyHttpStatus;
 import com.wjl.lblog.model.dto.UserLoginDto;
 import com.wjl.lblog.model.dto.UserRegisterDto;
 import com.wjl.lblog.model.entity.Role;
@@ -11,7 +11,7 @@ import com.wjl.lblog.model.entity.UserRole;
 import com.wjl.lblog.service.intf.RoleService;
 import com.wjl.lblog.service.intf.UserRoleService;
 import com.wjl.lblog.service.intf.UserService;
-import com.wjl.lblog.common.constants.Result;
+import com.wjl.lblog.common.constants.MyResult;
 import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
@@ -44,7 +44,7 @@ public class LoginController {
      * @param userLoginDto 用户信息
      */
     @RequestMapping(value = "/login", method = RequestMethod.POST)
-    public Object login(@RequestBody UserLoginDto userLoginDto) {
+    public MyResult<?> login(@RequestBody UserLoginDto userLoginDto) {
         String username = userLoginDto.getUsername();
         String password = SaBase64Util.encode(userLoginDto.getPassword());
         if (!Objects.isNull(userService.findByUsernameAndPassword(username, password))) {
@@ -52,12 +52,12 @@ public class LoginController {
             User user = userService.findByUsername(username);
             user.setToken(StpUtil.getTokenValue());
             if (userService.updateUser(username, user)) {
-                return StpUtil.getTokenInfo();
+                return MyResult.success(StpUtil.getTokenInfo());
             } else {
-                return Result.fail(HttpStatus.BAD_REQUEST.getCode(), "登录失败");
+                return MyResult.fail(MyHttpStatus.BAD_REQUEST.getCode(), "登录失败");
             }
         }
-        return Result.fail(HttpStatus.BAD_REQUEST.getCode(), "登录失败");
+        return MyResult.fail(MyHttpStatus.BAD_REQUEST.getCode(), "登录失败");
     }
 
     /**
@@ -67,22 +67,22 @@ public class LoginController {
      * @param tokenValue token
      */
     @RequestMapping(value = "/check", method = RequestMethod.GET)
-    public Object checkLogin(@RequestParam(name = "username") String username,
+    public MyResult<?> checkLogin(@RequestParam(name = "username") String username,
                              @RequestParam(name = "tokenValue") String tokenValue) {
         if (!Objects.isNull(username) && !Objects.isNull(tokenValue)) {
             if (StpUtil.isLogin()) {
                 String loginId = StpUtil.getLoginIdAsString();
                 User user = userService.findByUsername(loginId);
                 if (user.getUsername().equals(username) && user.getToken().equals(tokenValue)) {
-                    return Result.success("已登录");
+                    return MyResult.success("已登录");
                 } else {
-                    return Result.fail(HttpStatus.BAD_REQUEST.getCode(), "token 已过期，请重新登录");
+                    return MyResult.fail(MyHttpStatus.BAD_REQUEST.getCode(), "token 已过期，请重新登录");
                 }
             } else {
-                return Result.fail(HttpStatus.BAD_REQUEST.getCode(), "尚未登录");
+                return MyResult.fail(MyHttpStatus.BAD_REQUEST.getCode(), "尚未登录");
             }
         } else {
-            return Result.fail(HttpStatus.BAD_REQUEST.getCode(), "发生异常");
+            return MyResult.fail(MyHttpStatus.BAD_REQUEST.getCode(), "发生异常");
         }
     }
 
@@ -92,13 +92,13 @@ public class LoginController {
      * @param tokenValue token
      */
     @RequestMapping(value = "/logout", method = RequestMethod.POST)
-    public Result<User> logout(@RequestParam(name = "tokenValue") String tokenValue) {
+    public MyResult<?> logout(@RequestParam(name = "tokenValue") String tokenValue) {
         if (!Objects.isNull(tokenValue)) {
             StpUtil.checkLogin();
             StpUtil.logoutByTokenValue(tokenValue);
-            return Result.success("logout success");
+            return MyResult.success("logout success");
         }
-        return Result.fail(HttpStatus.BAD_REQUEST.getCode(), "logout BAD_REQUEST");
+        return MyResult.fail(MyHttpStatus.BAD_REQUEST.getCode(), "logout BAD_REQUEST");
     }
 
     /**
@@ -107,7 +107,7 @@ public class LoginController {
      * @param userRegisterDto user
      */
     @RequestMapping(value = "/register", method = RequestMethod.POST)
-    public Object register(@RequestBody UserRegisterDto userRegisterDto) {
+    public MyResult<?> register(@RequestBody UserRegisterDto userRegisterDto) {
         String username = userRegisterDto.getUsername();
         String password = userRegisterDto.getPassword();
         String passwordRepeat = userRegisterDto.getPasswordRepeat();
@@ -126,12 +126,12 @@ public class LoginController {
                 userRole.setUid(uid);
                 userRole.setRid(rid);
                 userRoleService.addUserRole(userRole);
-                return Result.success("register success");
+                return MyResult.success("register success");
             } else {
-                return Result.fail(HttpStatus.BAD_REQUEST.getCode(), "The two passwords entered are inconsistent");
+                return MyResult.fail(MyHttpStatus.BAD_REQUEST.getCode(), "The two passwords entered are inconsistent");
             }
         } else {
-            return Result.fail(HttpStatus.BAD_REQUEST.getCode(), "username exists");
+            return MyResult.fail(MyHttpStatus.BAD_REQUEST.getCode(), "username exists");
         }
     }
 

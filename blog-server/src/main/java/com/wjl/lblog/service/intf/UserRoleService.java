@@ -16,6 +16,6 @@ public interface UserRoleService {
 
     List<UserRole> findRolesByUser(User user);
 
-    UserRole addUserRole(UserRole userRole);
+    boolean addUserRole(UserRole userRole);
 
 }

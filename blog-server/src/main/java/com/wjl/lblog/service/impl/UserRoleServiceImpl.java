@@ -1,8 +1,9 @@
 package com.wjl.lblog.service.impl;
 
+import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import com.wjl.lblog.model.entity.User;
 import com.wjl.lblog.model.entity.UserRole;
-import com.wjl.lblog.repository.UserRoleRepository;
+import com.wjl.lblog.repository.UserRoleMapper;
 import com.wjl.lblog.service.intf.UserRoleService;
 import org.springframework.stereotype.Service;
 
@@ -18,21 +19,25 @@ import java.util.List;
 public class UserRoleServiceImpl implements UserRoleService {
 
     @Resource
-    private UserRoleRepository userRoleRepository;
+    private UserRoleMapper userRoleMapper;
 
     @Override
     public List<UserRole> findAll() {
-        return userRoleRepository.findAll();
+        var wrapper = new LambdaQueryWrapper<UserRole>();
+        return userRoleMapper.selectList(wrapper);
     }
 
     @Override
     public List<UserRole> findRolesByUser(User user) {
-        return userRoleRepository.findAllByUid(user.getId());
+        var wrapper = new LambdaQueryWrapper<UserRole>();
+        wrapper.eq(UserRole::getUid, user.getId());
+        return userRoleMapper.selectList(wrapper);
     }
 
     @Override
-    public UserRole addUserRole(UserRole userRole) {
-        return userRoleRepository.save(userRole);
+    public boolean addUserRole(UserRole userRole) {
+        var res = userRoleMapper.insert(userRole);
+        return res == 1;
     }
 
 }

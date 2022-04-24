@@ -15,13 +15,11 @@ public interface UserService {
 
     List<String> findAllUsername();
 
-
     User findById(Long id);
 
     User findByUsername(String username);
 
     User findByUsernameAndPassword(String username, String password);
-
 
     boolean addUser(User user);
 

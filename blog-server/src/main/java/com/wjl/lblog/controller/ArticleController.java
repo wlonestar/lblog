@@ -1,9 +1,8 @@
 package com.wjl.lblog.controller;
 
-import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
-import com.wjl.lblog.common.constants.Result;
-import com.wjl.lblog.common.enums.HttpStatus;
+import com.wjl.lblog.common.constants.MyResult;
+import com.wjl.lblog.common.enums.MyHttpStatus;
 import com.wjl.lblog.model.dto.ArticleDto;
 import com.wjl.lblog.model.entity.Article;
 import com.wjl.lblog.model.vo.ArticleDetailVo;
@@ -13,7 +12,6 @@ import com.wjl.lblog.service.intf.ArticleService;
 import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
-import java.util.List;
 import java.util.Objects;
 
 /**
@@ -30,7 +28,6 @@ public class ArticleController {
     @Resource
     private ArticleService articleService;
 
-
     /**
      * 分页查询文章详情
      *
@@ -38,10 +35,11 @@ public class ArticleController {
      * @param size size
      */
     @RequestMapping(value = "/page/detail", method = RequestMethod.GET)
-    public IPage<ArticleDetailVo> findAllDetail(
+    public MyResult<?> findAllDetail(
             @RequestParam(name = "page", defaultValue = "1") int page,
             @RequestParam(name = "size", defaultValue = "5") int size) {
-        return articleService.selectDetailByPage(new Page<>(page, size));
+        var res = articleService.selectDetailByPage(new Page<>(page, size));
+        return MyResult.success(res);
     }
 
     /**
@@ -51,10 +49,11 @@ public class ArticleController {
      * @param size size
      */
     @RequestMapping(value = "/page/summary", method = RequestMethod.GET)
-    public IPage<ArticleSummaryVo> findAllByPage(
+    public MyResult<?> findAllByPage(
             @RequestParam(name = "page", defaultValue = "1") int page,
             @RequestParam(name = "size", defaultValue = "5") int size) {
-        return articleService.selectSummaryByPage(new Page<>(page, size));
+        var res = articleService.selectSummaryByPage(new Page<>(page, size));
+        return MyResult.success(res);
     }
 
     /**
@@ -64,37 +63,39 @@ public class ArticleController {
      * @param size size
      */
     @RequestMapping(value = "/page/title", method = RequestMethod.GET)
-    public IPage<ArticleTitleVo> findAllByTitle(
+    public MyResult<?> findAllByTitle(
             @RequestParam(name = "page", defaultValue = "1") int page,
             @RequestParam(name = "size", defaultValue = "5") int size) {
-        return articleService.selectTitleByPage(new Page<>(page, size));
+        var res = articleService.selectTitleByPage(new Page<>(page, size));
+        return MyResult.success(res);
     }
-
 
     /**
      * 查询所有文章详情
      */
     @RequestMapping(value = "/all/detail", method = RequestMethod.GET)
-    public List<ArticleDetailVo> getAllDetail() {
-        return articleService.selectDetailAll();
+    public MyResult<?> getAllDetail() {
+        var res = articleService.selectDetailAll();
+        return MyResult.success(res);
     }
 
     /**
      * 查询所有文章摘要
      */
     @RequestMapping(value = "/all/summary", method = RequestMethod.GET)
-    public List<ArticleSummaryVo> getAllSummary() {
-        return articleService.selectSummaryAll();
+    public MyResult<?> getAllSummary() {
+        var res = articleService.selectSummaryAll();
+        return MyResult.success(res);
     }
 
     /**
      * 查询所有文章标题
      */
     @RequestMapping(value = "/all/title", method = RequestMethod.GET)
-    public List<ArticleTitleVo> getAllTitle() {
-        return articleService.selectTitleAll();
+    public MyResult<?> getAllTitle() {
+        var res = articleService.selectTitleAll();
+        return MyResult.success(res);
     }
-
 
     /**
      * 根据 id 查询文章
@@ -102,12 +103,12 @@ public class ArticleController {
      * @param id id
      */
     @RequestMapping(value = "/detail/id", method = RequestMethod.GET)
-    public Object getDetailById(@RequestParam(name = "id") Long id) {
+    public MyResult<?> getDetailById(@RequestParam(name = "id") Long id) {
         ArticleDetailVo articleDetailVo = articleService.selectDetailById(id);
         if (!Objects.isNull(articleDetailVo)) {
-            return articleDetailVo;
+            return MyResult.success(articleDetailVo);
         }
-        return Result.fail(HttpStatus.BAD_REQUEST.getCode(), "can't find article by param");
+        return MyResult.fail(MyHttpStatus.BAD_REQUEST.getCode(), "can't find article by param");
     }
 
     /**
@@ -116,12 +117,12 @@ public class ArticleController {
      * @param id id
      */
     @RequestMapping(value = "/summary/id", method = RequestMethod.GET)
-    public Object getSummaryById(@RequestParam(name = "id") Long id) {
+    public MyResult<?> getSummaryById(@RequestParam(name = "id") Long id) {
         ArticleSummaryVo articleSummaryVo = articleService.selectSummaryById(id);
         if (!Objects.isNull(articleSummaryVo)) {
-            return articleSummaryVo;
+            return MyResult.success(articleSummaryVo);
         }
-        return Result.fail(HttpStatus.BAD_REQUEST.getCode(), "can't find article by param");
+        return MyResult.fail(MyHttpStatus.BAD_REQUEST.getCode(), "can't find article by param");
     }
 
     /**
@@ -130,14 +131,13 @@ public class ArticleController {
      * @param id id
      */
     @RequestMapping(value = "/title/id", method = RequestMethod.GET)
-    public Object getTitleById(@RequestParam(name = "id") Long id) {
+    public MyResult<?> getTitleById(@RequestParam(name = "id") Long id) {
         ArticleTitleVo articleTitleVo = articleService.selectTitleById(id);
         if (!Objects.isNull(articleTitleVo)) {
-            return articleTitleVo;
+            return MyResult.success(articleTitleVo);
         }
-        return Result.fail(HttpStatus.BAD_REQUEST.getCode(), "can't find article by param");
+        return MyResult.fail(MyHttpStatus.BAD_REQUEST.getCode(), "can't find article by param");
     }
-
 
     /**
      * 根据标题查询文章
@@ -145,12 +145,12 @@ public class ArticleController {
      * @param title title
      */
     @RequestMapping(value = "/detail/title", method = RequestMethod.GET)
-    public Object getByDetail(@RequestParam(name = "title") String title) {
+    public MyResult<?> getByDetail(@RequestParam(name = "title") String title) {
         ArticleDetailVo articleDetailVo = articleService.selectDetailByTitle(title);
         if (!Objects.isNull(articleDetailVo)) {
-            return articleDetailVo;
+            return MyResult.success(articleDetailVo);
         }
-        return Result.fail(HttpStatus.BAD_REQUEST.getCode(), "can't find article by param");
+        return MyResult.fail(MyHttpStatus.BAD_REQUEST.getCode(), "can't find article by param");
     }
 
     /**
@@ -159,12 +159,12 @@ public class ArticleController {
      * @param title title
      */
     @RequestMapping(value = "/summary/title", method = RequestMethod.GET)
-    public Object getBySummary(@RequestParam(name = "title") String title) {
+    public MyResult<?> getBySummary(@RequestParam(name = "title") String title) {
         ArticleSummaryVo articleSummaryVo = articleService.selectSummaryByTitle(title);
         if (!Objects.isNull(articleSummaryVo)) {
-            return articleSummaryVo;
+            return MyResult.success(articleSummaryVo);
         }
-        return Result.fail(HttpStatus.BAD_REQUEST.getCode(), "can't find article by param");
+        return MyResult.fail(MyHttpStatus.BAD_REQUEST.getCode(), "can't find article by param");
     }
 
     /**
@@ -173,14 +173,13 @@ public class ArticleController {
      * @param title title
      */
     @RequestMapping(value = "/title/title", method = RequestMethod.GET)
-    public Object getByTitle(@RequestParam(name = "title") String title) {
+    public MyResult<?> getByTitle(@RequestParam(name = "title") String title) {
         ArticleTitleVo articleTitleVo = articleService.selectTitleByTitle(title);
         if (!Objects.isNull(articleTitleVo)) {
-            return articleTitleVo;
+            return MyResult.success(articleTitleVo);
         }
-        return Result.fail(HttpStatus.BAD_REQUEST.getCode(), "can't find article by param");
+        return MyResult.fail(MyHttpStatus.BAD_REQUEST.getCode(), "can't find article by param");
     }
-
 
     /**
      * 增加文章
@@ -188,11 +187,16 @@ public class ArticleController {
      * @param articleDto arrticle
      */
     @RequestMapping(value = "/", method = RequestMethod.POST)
-    public Object add(@RequestBody ArticleDto articleDto) {
+    public MyResult<?> add(@RequestBody ArticleDto articleDto) {
         if (!Objects.isNull(articleDto)) {
-            return articleService.addArticle(articleDto);
+            var res = articleService.addArticle(articleDto);
+            if (res) {
+                return MyResult.success();
+            } else {
+                return MyResult.fail(MyHttpStatus.BAD_REQUEST.getCode(), "");
+            }
         }
-        return Result.fail(HttpStatus.BAD_REQUEST.getCode(), "the input is null");
+        return MyResult.fail(MyHttpStatus.BAD_REQUEST.getCode(), "the input is null");
     }
 
     /**
@@ -202,12 +206,17 @@ public class ArticleController {
      * @param articleDto article
      */
     @RequestMapping(value = "/", method = RequestMethod.PUT)
-    public Object update(@RequestParam(name = "id") Long id, @RequestBody ArticleDto articleDto) {
+    public MyResult<?> update(@RequestParam(name = "id") Long id, @RequestBody ArticleDto articleDto) {
         Article article = articleService.getById(id);
         if (!Objects.isNull(article)) {
-            return articleService.updateArticle(id, articleDto);
+            var res = articleService.updateArticle(id, articleDto);
+            if (res) {
+                return MyResult.success();
+            } else {
+                return MyResult.fail(MyHttpStatus.BAD_REQUEST.getCode(), "");
+            }
         }
-        return Result.fail(HttpStatus.BAD_REQUEST.getCode(), "the input is null");
+        return MyResult.fail(MyHttpStatus.BAD_REQUEST.getCode(), "the input is null");
     }
 
     /**
@@ -216,11 +225,13 @@ public class ArticleController {
      * @param id id
      */
     @RequestMapping(value = "/{id}", method = RequestMethod.DELETE)
-    public Object deleteById(@PathVariable(name = "id") Long id) {
-        if (articleService.removeById(id)) {
-            return id;
+    public MyResult<?> deleteById(@PathVariable(name = "id") Long id) {
+        var res = articleService.removeById(id);
+        if (res) {
+            return MyResult.success();
+        } else {
+            return MyResult.fail(MyHttpStatus.BAD_REQUEST.getCode(), "delete failed");
         }
-        return Result.fail(HttpStatus.BAD_REQUEST.getCode(), "delete failed");
     }
 
 }

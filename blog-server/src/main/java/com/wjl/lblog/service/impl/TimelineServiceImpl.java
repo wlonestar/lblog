@@ -1,10 +1,11 @@
 package com.wjl.lblog.service.impl;
 
+import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
+import com.baomidou.mybatisplus.core.metadata.IPage;
+import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.wjl.lblog.model.entity.Timeline;
-import com.wjl.lblog.repository.TimelineRepository;
+import com.wjl.lblog.repository.TimelineMapper;
 import com.wjl.lblog.service.intf.TimelineService;
-import org.springframework.data.domain.Page;
-import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
@@ -20,59 +21,57 @@ import java.util.Objects;
 public class TimelineServiceImpl implements TimelineService {
 
     @Resource
-    private TimelineRepository timelineRepository;
+    private TimelineMapper timelineMapper;
 
     @Override
-    public Page<Timeline> findAllByPage(Pageable pageable) {
-        return timelineRepository.findAll(pageable);
+    public IPage<Timeline> findAllByPage(Page<Timeline> page) {
+        var wrapper = new LambdaQueryWrapper<Timeline>();
+        return timelineMapper.selectPage(page, wrapper);
     }
 
     @Override
     public List<Timeline> findAll() {
-        return timelineRepository.findAll();
+        var wrapper = new LambdaQueryWrapper<Timeline>();
+        return timelineMapper.selectList(wrapper);
     }
 
     @Override
     public Timeline findById(Long id) {
-        Timeline idea = timelineRepository.findTimelineById(id);
-        if (!Objects.isNull(idea)) {
-            return idea;
+        Timeline timeline = timelineMapper.selectById(id);
+        if (!Objects.isNull(timeline)) {
+            return timeline;
         } else {
             return null;
         }
     }
 
     @Override
-    public Timeline add(Timeline idea) {
-        return timelineRepository.save(idea);
+    public boolean add(Timeline timeline) {
+        var res = timelineMapper.insert(timeline);
+        return res == 1;
     }
 
     @Override
-    public Timeline update(Long id, Timeline idea) {
-        Timeline idea1 = timelineRepository.findTimelineById(id);
+    public boolean update(Long id, Timeline idea) {
+        Timeline idea1 = timelineMapper.selectById(id);
         if (!Objects.isNull(idea1)) {
             idea1.setContent(idea.getContent());
-            timelineRepository.save(idea1);
-            return idea1;
+            var res = timelineMapper.insert(idea1);
+            return res == 1;
         } else {
-            return null;
+            return false;
         }
     }
 
     @Override
-    public Long deleteById(Long id) {
-        Timeline idea = timelineRepository.findTimelineById(id);
+    public boolean deleteById(Long id) {
+        Timeline idea = timelineMapper.selectById(id);
         if (!Objects.isNull(idea)) {
-            timelineRepository.deleteById(id);
-            return id;
+            var res = timelineMapper.deleteById(id);
+            return res == 1;
         } else {
-            return null;
+            return false;
         }
-    }
-
-    @Override
-    public void deleteAll() {
-        timelineRepository.deleteAll();
     }
 
 }

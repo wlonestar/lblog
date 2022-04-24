@@ -1,10 +1,6 @@
 package com.wjl.lblog.service.impl;
 
-import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
-import com.baomidou.mybatisplus.core.conditions.update.LambdaUpdateWrapper;
-import com.baomidou.mybatisplus.core.conditions.update.UpdateWrapper;
 import com.baomidou.mybatisplus.core.metadata.IPage;
-import com.baomidou.mybatisplus.extension.conditions.update.LambdaUpdateChainWrapper;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.wjl.lblog.model.dto.ArticleDto;
@@ -13,8 +9,8 @@ import com.wjl.lblog.model.entity.Category;
 import com.wjl.lblog.model.vo.ArticleDetailVo;
 import com.wjl.lblog.model.vo.ArticleSummaryVo;
 import com.wjl.lblog.model.vo.ArticleTitleVo;
-import com.wjl.lblog.repository.ArticleRepository;
-import com.wjl.lblog.repository.CategoryRepository;
+import com.wjl.lblog.repository.ArticleMapper;
+import com.wjl.lblog.repository.CategoryMapper;
 import com.wjl.lblog.service.intf.ArticleService;
 import org.springframework.beans.BeanUtils;
 import org.springframework.stereotype.Service;
@@ -31,51 +27,48 @@ import java.util.Objects;
  */
 @Service
 public class ArticleServiceImpl
-        extends ServiceImpl<ArticleRepository, Article>
+        extends ServiceImpl<ArticleMapper, Article>
         implements ArticleService {
 
     @Resource
-    private ArticleRepository articleRepository;
+    private ArticleMapper articleMapper;
 
     @Resource
-    private CategoryRepository categoryRepository;
-
+    private CategoryMapper categoryMapper;
 
     @Override
     public IPage<ArticleDetailVo> selectDetailByPage(Page<ArticleDetailVo> page) {
-        return articleRepository.selectDetailByPage(page);
+        return articleMapper.selectDetailByPage(page);
     }
 
     @Override
     public IPage<ArticleSummaryVo> selectSummaryByPage(Page<ArticleSummaryVo> page) {
-        return articleRepository.selectSummaryByPage(page);
+        return articleMapper.selectSummaryByPage(page);
     }
 
     @Override
     public IPage<ArticleTitleVo> selectTitleByPage(Page<ArticleTitleVo> page) {
-        return articleRepository.selectTitleByPage(page);
+        return articleMapper.selectTitleByPage(page);
     }
-
 
     @Override
     public List<ArticleDetailVo> selectDetailAll() {
-        return articleRepository.selectDetailAll();
+        return articleMapper.selectDetailAll();
     }
 
     @Override
     public List<ArticleSummaryVo> selectSummaryAll() {
-        return articleRepository.selectSummaryAll();
+        return articleMapper.selectSummaryAll();
     }
 
     @Override
     public List<ArticleTitleVo> selectTitleAll() {
-        return articleRepository.selectTitleByAll();
+        return articleMapper.selectTitleByAll();
     }
-
 
     @Override
     public ArticleDetailVo selectDetailById(Long id) {
-        ArticleDetailVo articleDetailVo = articleRepository.selectDetailById(id);
+        ArticleDetailVo articleDetailVo = articleMapper.selectDetailById(id);
         if (!Objects.isNull(articleDetailVo)) {
             return articleDetailVo;
         }
@@ -84,7 +77,7 @@ public class ArticleServiceImpl
 
     @Override
     public ArticleSummaryVo selectSummaryById(Long id) {
-        ArticleSummaryVo articleSummaryVo = articleRepository.selectSummaryById(id);
+        ArticleSummaryVo articleSummaryVo = articleMapper.selectSummaryById(id);
         if (!Objects.isNull(articleSummaryVo)) {
             return articleSummaryVo;
         }
@@ -93,17 +86,16 @@ public class ArticleServiceImpl
 
     @Override
     public ArticleTitleVo selectTitleById(Long id) {
-        ArticleTitleVo articleTitleVo = articleRepository.selectTitleById(id);
+        ArticleTitleVo articleTitleVo = articleMapper.selectTitleById(id);
         if (!Objects.isNull(articleTitleVo)) {
             return articleTitleVo;
         }
         return null;
     }
 
-
     @Override
     public ArticleDetailVo selectDetailByTitle(String title) {
-        ArticleDetailVo articleDetailVo = articleRepository.selectDetailByTitle(title);
+        ArticleDetailVo articleDetailVo = articleMapper.selectDetailByTitle(title);
         if (!Objects.isNull(articleDetailVo)) {
             return articleDetailVo;
         }
@@ -112,7 +104,7 @@ public class ArticleServiceImpl
 
     @Override
     public ArticleSummaryVo selectSummaryByTitle(String title) {
-        ArticleSummaryVo articleSummaryVo = articleRepository.selectSummaryByTitle(title);
+        ArticleSummaryVo articleSummaryVo = articleMapper.selectSummaryByTitle(title);
         if (!Objects.isNull(articleSummaryVo)) {
             return articleSummaryVo;
         }
@@ -121,21 +113,19 @@ public class ArticleServiceImpl
 
     @Override
     public ArticleTitleVo selectTitleByTitle(String title) {
-        ArticleTitleVo articleTitleVo = articleRepository.selectTitleByTitle(title);
+        ArticleTitleVo articleTitleVo = articleMapper.selectTitleByTitle(title);
         if (!Objects.isNull(articleTitleVo)) {
             return articleTitleVo;
         }
         return null;
     }
 
-
-
     @Override
     public boolean addArticle(ArticleDto articleDto) {
         Article article = new Article();
         if (!Objects.isNull(articleDto)) {
             processCategory(article, articleDto);
-            articleRepository.insert(article);
+            articleMapper.insert(article);
             return true;
         }
         return false;
@@ -143,11 +133,11 @@ public class ArticleServiceImpl
 
     @Override
     public boolean updateArticle(Long id, ArticleDto articleDto) {
-        Article article = articleRepository.selectById(id);
+        Article article = articleMapper.selectById(id);
         if (!Objects.isNull(article)) {
             processCategory(article, articleDto);
             article.setUpdateTime(new Date());
-            articleRepository.updateById(article);
+            articleMapper.updateById(article);
             return true;
         }
         return false;
@@ -155,16 +145,16 @@ public class ArticleServiceImpl
 
     private void processCategory(Article article, ArticleDto articleDto) {
         BeanUtils.copyProperties(articleDto, article, "category");
-        Category category = categoryRepository.selectCategoryByName(articleDto.getCategory());
+        Category category = categoryMapper.selectCategoryByName(articleDto.getCategory());
         if (Objects.isNull(category)) {
             Category category1 = new Category();
             category1.setName(articleDto.getCategory());
             category1.setNumber(1);
-            categoryRepository.insert(category1);
-            article.setCategoryId(categoryRepository.selectCategoryByName(category1.getName()).getId());
+            categoryMapper.insert(category1);
+            article.setCategoryId(categoryMapper.selectCategoryByName(category1.getName()).getId());
         } else {
             category.setNumber(category.getNumber() + 1);
-            categoryRepository.updateById(category);
+            categoryMapper.updateById(category);
             article.setCategoryId(category.getId());
         }
     }

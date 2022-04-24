@@ -1,12 +1,8 @@
 package com.wjl.lblog.model.entity;
 
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-import lombok.Getter;
-import lombok.Setter;
-import org.hibernate.annotations.CreationTimestamp;
-import org.hibernate.annotations.UpdateTimestamp;
+import com.baomidou.mybatisplus.annotation.*;
+import lombok.Data;
 
-import javax.persistence.*;
 import java.util.Date;
 
 /**
@@ -16,44 +12,33 @@ import java.util.Date;
  * @date: 2021/9/16 14:55
  * @version: v1.0
  */
-@Getter
-@Setter
-@Entity
-@Table(name = "timeline")
-@JsonIgnoreProperties({"handler", "hibernateLazyInitializer"})
+@Data
+@TableName(value = "timeline")
 public class Timeline {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id")
+    @TableId(type = IdType.AUTO)
     private Long id;
 
     /**
      * 创建时间
      */
-    @Column(name = "create_time")
-    @Temporal(TemporalType.TIMESTAMP)
-    @CreationTimestamp
+    @TableField(fill = FieldFill.INSERT)
     private Date createTime;
 
     /**
      * 更新时间
      */
-    @Column(name = "update_time")
-    @Temporal(TemporalType.TIMESTAMP)
-    @UpdateTimestamp
+    @TableField(fill = FieldFill.INSERT_UPDATE)
     private Date updateTime;
 
     /**
      * 标题
      */
-    @Column(name = "title")
     private String title;
 
     /**
      * 正文
      */
-    @Column(name = "content")
     private String content;
 
 }
