@@ -1,10 +1,12 @@
 package com.wjl.lblog.service.impl;
 
+import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
+import com.baomidou.mybatisplus.core.metadata.IPage;
+import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
+import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.wjl.lblog.model.entity.Comment;
-import com.wjl.lblog.repository.CommentRepository;
+import com.wjl.lblog.repository.CommentMapper;
 import com.wjl.lblog.service.intf.CommentService;
-import org.springframework.data.domain.Page;
-import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
@@ -17,24 +19,28 @@ import java.util.Objects;
  * @version: v1.0
  */
 @Service
-public class CommentServiceImpl implements CommentService {
+public class CommentServiceImpl
+        extends ServiceImpl<CommentMapper, Comment>
+        implements CommentService {
 
     @Resource
-    private CommentRepository commentRepository;
+    private CommentMapper commentMapper;
 
     @Override
-    public Page<Comment> findAllByPage(Pageable pageable) {
-        return commentRepository.findAll(pageable);
+    public IPage<Comment> findAllByPage(Page<Comment> page) {
+        var wrapper = new LambdaQueryWrapper<Comment>();
+        return commentMapper.selectPage(page, wrapper);
     }
 
     @Override
     public List<Comment> findAll() {
-        return commentRepository.findAll();
+        var wrapper = new LambdaQueryWrapper<Comment>();
+        return commentMapper.selectList(wrapper);
     }
 
     @Override
     public Comment findById(Long id) {
-        Comment comment = commentRepository.findCommentById(id);
+        Comment comment = commentMapper.selectById(id);
         if (!Objects.isNull(comment)) {
             return comment;
         }
@@ -42,39 +48,35 @@ public class CommentServiceImpl implements CommentService {
     }
 
     @Override
-    public Comment add(Comment comment) {
-        return commentRepository.save(comment);
+    public boolean add(Comment comment) {
+        var res = commentMapper.insert(comment);
+        return res == 1;
     }
 
     @Override
-    public Comment update(Long id, Comment comment) {
-        Comment comment1 = commentRepository.findCommentById(id);
+    public boolean update(Long id, Comment comment) {
+        Comment comment1 = commentMapper.selectById(id);
         if (!Objects.isNull(comment1)) {
             comment1.setAvatar(comment.getAvatar());
             comment1.setContent(comment.getContent());
             comment1.setEmail(comment.getEmail());
             comment1.setSite(comment.getSite());
-            commentRepository.save(comment1);
-            return comment1;
+            var res = commentMapper.insert(comment1);
+            return res == 1;
         } else {
-            return null;
+            return false;
         }
     }
 
     @Override
-    public Long deleteById(Long id) {
-        Comment comment = commentRepository.findCommentById(id);
+    public boolean deleteById(Long id) {
+        Comment comment = commentMapper.selectById(id);
         if (!Objects.isNull(comment)) {
-            commentRepository.deleteById(id);
-            return id;
+            var res = commentMapper.deleteById(id);
+            return res == 1;
         } else {
-            return null;
+            return false;
         }
-    }
-
-    @Override
-    public void deleteAll() {
-        commentRepository.deleteAll();
     }
 
 }

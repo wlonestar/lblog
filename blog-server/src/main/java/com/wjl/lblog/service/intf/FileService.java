@@ -2,6 +2,8 @@ package com.wjl.lblog.service.intf;
 
 import org.springframework.web.multipart.MultipartFile;
 
+import java.io.File;
+
 /**
  * @author: wjl
  * @date: 2021/12/8 20:38
@@ -10,5 +12,11 @@ import org.springframework.web.multipart.MultipartFile;
 public interface FileService {
 
     String fileUpload(MultipartFile file);
+
+    String upload(MultipartFile file);
+
+    String upload(File file);
+
+    String upload(File file, String filename);
 
 }

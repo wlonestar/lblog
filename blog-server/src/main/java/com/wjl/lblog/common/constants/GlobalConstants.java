@@ -19,6 +19,6 @@ public class GlobalConstants {
 
     public static final String BUCKET = "";
 
-    public static final String FOLDER = "";
+    public static final String PREFIX = "";
 
 }

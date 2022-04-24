@@ -1,7 +1,7 @@
 # lblog
 Version |  Update Time  | Status | Author |  Description
 ---|---|---|---|---
-v2022-01-20 23:05:08|2022-01-20 23:05:08|auto|@wjl|Created by smart-doc
+v2022-04-24 16:43:42|2022-04-24 16:43:42|auto|@wjl15|Created by smart-doc
 
 
 
@@ -25,47 +25,22 @@ size|int32|size|true|-
 
 **Request-example:**
 ```
-curl -X GET -i http://localhost:8088/article/page/detail?size=5&page=1
+curl -X GET -i http://localhost:8088/article/page/detail?page=1&size=5 --data '"5"'
 ```
 **Response-fields:**
 
 Field | Type|Description|Since
 ---|---|---|---
-pages|int64|当前分页总页数|-
-records|array|分页记录列表|-
-└─id|int64|No comments found.|-
-└─createTime|string|No comments found.|-
-└─updateTime|string|No comments found.|-
-└─title|string|No comments found.|-
-└─summary|string|No comments found.|-
-└─cover|string|No comments found.|-
-└─content|string|No comments found.|-
-└─categoryId|int64|No comments found.|-
-└─category|string|No comments found.|-
-total|int64|当前满足条件总行数|-
-size|int64|获取每页显示条数|-
-current|int64|当前页|-
+status|int32|No comments found.|-
+msg|string|No comments found.|-
+data|object|No comments found.|-
 
 **Response-example:**
 ```
 {
-  "pages": 108,
-  "records": [
-    {
-      "id": 784,
-      "createTime": "2022-01-20 23:05:09",
-      "updateTime": "2022-01-20 23:05:09",
-      "title": "rfeacf",
-      "summary": "7aafsg",
-      "cover": "81vjkp",
-      "content": "0mj6yx",
-      "categoryId": 299,
-      "category": "871xdh"
-    }
-  ],
-  "total": 638,
-  "size": 171,
-  "current": 329
+  "status": 605,
+  "msg": "9gw0ij",
+  "data": {}
 }
 ```
 
@@ -88,45 +63,22 @@ size|int32|size|true|-
 
 **Request-example:**
 ```
-curl -X GET -i http://localhost:8088/article/page/summary?page=1&size=5
+curl -X GET -i http://localhost:8088/article/page/summary?page=1&size=5 --data '"5"'
 ```
 **Response-fields:**
 
 Field | Type|Description|Since
 ---|---|---|---
-pages|int64|当前分页总页数|-
-records|array|分页记录列表|-
-└─id|int64|No comments found.|-
-└─createTime|string|No comments found.|-
-└─updateTime|string|No comments found.|-
-└─title|string|No comments found.|-
-└─summary|string|No comments found.|-
-└─cover|string|No comments found.|-
-└─categoryId|int64|No comments found.|-
-└─category|string|No comments found.|-
-total|int64|当前满足条件总行数|-
-size|int64|获取每页显示条数|-
-current|int64|当前页|-
+status|int32|No comments found.|-
+msg|string|No comments found.|-
+data|object|No comments found.|-
 
 **Response-example:**
 ```
 {
-  "pages": 71,
-  "records": [
-    {
-      "id": 991,
-      "createTime": "2022-01-20 23:05:09",
-      "updateTime": "2022-01-20 23:05:09",
-      "title": "g1hwnx",
-      "summary": "jrdbbw",
-      "cover": "gt7tsl",
-      "categoryId": 196,
-      "category": "ywk1l5"
-    }
-  ],
-  "total": 493,
-  "size": 711,
-  "current": 686
+  "status": 891,
+  "msg": "empur4",
+  "data": {}
 }
 ```
 
@@ -149,35 +101,22 @@ size|int32|size|true|-
 
 **Request-example:**
 ```
-curl -X GET -i http://localhost:8088/article/page/title?page=1&size=5
+curl -X GET -i http://localhost:8088/article/page/title?page=1&size=5 --data '"5"'
 ```
 **Response-fields:**
 
 Field | Type|Description|Since
 ---|---|---|---
-pages|int64|当前分页总页数|-
-records|array|分页记录列表|-
-└─id|int64|No comments found.|-
-└─createTime|string|No comments found.|-
-└─title|string|No comments found.|-
-total|int64|当前满足条件总行数|-
-size|int64|获取每页显示条数|-
-current|int64|当前页|-
+status|int32|No comments found.|-
+msg|string|No comments found.|-
+data|object|No comments found.|-
 
 **Response-example:**
 ```
 {
-  "pages": 907,
-  "records": [
-    {
-      "id": 953,
-      "createTime": "2022-01-20 23:05:09",
-      "title": "y9r37w"
-    }
-  ],
-  "total": 527,
-  "size": 755,
-  "current": 112
+  "status": 699,
+  "msg": "2euqgr",
+  "data": {}
 }
 ```
 
@@ -199,31 +138,17 @@ curl -X GET -i http://localhost:8088/article/all/detail
 
 Field | Type|Description|Since
 ---|---|---|---
-id|int64|No comments found.|-
-createTime|string|No comments found.|-
-updateTime|string|No comments found.|-
-title|string|No comments found.|-
-summary|string|No comments found.|-
-cover|string|No comments found.|-
-content|string|No comments found.|-
-categoryId|int64|No comments found.|-
-category|string|No comments found.|-
+status|int32|No comments found.|-
+msg|string|No comments found.|-
+data|object|No comments found.|-
 
 **Response-example:**
 ```
-[
-  {
-    "id": 434,
-    "createTime": "2022-01-20 23:05:09",
-    "updateTime": "2022-01-20 23:05:09",
-    "title": "uvlu5o",
-    "summary": "dtskhm",
-    "cover": "muw8l9",
-    "content": "il2915",
-    "categoryId": 698,
-    "category": "2kjfq0"
-  }
-]
+{
+  "status": 377,
+  "msg": "90160n",
+  "data": {}
+}
 ```
 
 ### 查询所有文章摘要
@@ -244,29 +169,17 @@ curl -X GET -i http://localhost:8088/article/all/summary
 
 Field | Type|Description|Since
 ---|---|---|---
-id|int64|No comments found.|-
-createTime|string|No comments found.|-
-updateTime|string|No comments found.|-
-title|string|No comments found.|-
-summary|string|No comments found.|-
-cover|string|No comments found.|-
-categoryId|int64|No comments found.|-
-category|string|No comments found.|-
+status|int32|No comments found.|-
+msg|string|No comments found.|-
+data|object|No comments found.|-
 
 **Response-example:**
 ```
-[
-  {
-    "id": 626,
-    "createTime": "2022-01-20 23:05:09",
-    "updateTime": "2022-01-20 23:05:09",
-    "title": "qtwbsb",
-    "summary": "01hx0w",
-    "cover": "df9gin",
-    "categoryId": 886,
-    "category": "btyk2p"
-  }
-]
+{
+  "status": 787,
+  "msg": "uktv3a",
+  "data": {}
+}
 ```
 
 ### 查询所有文章标题
@@ -287,19 +200,17 @@ curl -X GET -i http://localhost:8088/article/all/title
 
 Field | Type|Description|Since
 ---|---|---|---
-id|int64|No comments found.|-
-createTime|string|No comments found.|-
-title|string|No comments found.|-
+status|int32|No comments found.|-
+msg|string|No comments found.|-
+data|object|No comments found.|-
 
 **Response-example:**
 ```
-[
-  {
-    "id": 164,
-    "createTime": "2022-01-20 23:05:09",
-    "title": "npf0re"
-  }
-]
+{
+  "status": 259,
+  "msg": "l3sozr",
+  "data": {}
+}
 ```
 
 ### 根据 id 查询文章
@@ -320,17 +231,23 @@ id|int64|id|true|-
 
 **Request-example:**
 ```
-curl -X GET -i http://localhost:8088/article/detail/id?id=555
+curl -X GET -i http://localhost:8088/article/detail/id?id=688 --data '688'
 ```
 **Response-fields:**
 
 Field | Type|Description|Since
 ---|---|---|---
-any object|object|any object.|-
+status|int32|No comments found.|-
+msg|string|No comments found.|-
+data|object|No comments found.|-
 
 **Response-example:**
 ```
-{}
+{
+  "status": 414,
+  "msg": "v69k6n",
+  "data": {}
+}
 ```
 
 ### 根据 id 查询文章
@@ -351,17 +268,23 @@ id|int64|id|true|-
 
 **Request-example:**
 ```
-curl -X GET -i http://localhost:8088/article/summary/id?id=951
+curl -X GET -i http://localhost:8088/article/summary/id?id=123 --data '123'
 ```
 **Response-fields:**
 
 Field | Type|Description|Since
 ---|---|---|---
-any object|object|any object.|-
+status|int32|No comments found.|-
+msg|string|No comments found.|-
+data|object|No comments found.|-
 
 **Response-example:**
 ```
-{}
+{
+  "status": 594,
+  "msg": "yjpjo1",
+  "data": {}
+}
 ```
 
 ### 根据 id 查询文章
@@ -382,17 +305,23 @@ id|int64|id|true|-
 
 **Request-example:**
 ```
-curl -X GET -i http://localhost:8088/article/title/id?id=484
+curl -X GET -i http://localhost:8088/article/title/id?id=373 --data '373'
 ```
 **Response-fields:**
 
 Field | Type|Description|Since
 ---|---|---|---
-any object|object|any object.|-
+status|int32|No comments found.|-
+msg|string|No comments found.|-
+data|object|No comments found.|-
 
 **Response-example:**
 ```
-{}
+{
+  "status": 789,
+  "msg": "0mcdf1",
+  "data": {}
+}
 ```
 
 ### 根据标题查询文章
@@ -413,17 +342,23 @@ title|string|title|true|-
 
 **Request-example:**
 ```
-curl -X GET -i http://localhost:8088/article/detail/title?title=0os7as
+curl -X GET -i http://localhost:8088/article/detail/title?title=bjw4l0 --data 'bjw4l0'
 ```
 **Response-fields:**
 
 Field | Type|Description|Since
 ---|---|---|---
-any object|object|any object.|-
+status|int32|No comments found.|-
+msg|string|No comments found.|-
+data|object|No comments found.|-
 
 **Response-example:**
 ```
-{}
+{
+  "status": 881,
+  "msg": "5cshk0",
+  "data": {}
+}
 ```
 
 ### 根据标题查询文章
@@ -444,17 +379,23 @@ title|string|title|true|-
 
 **Request-example:**
 ```
-curl -X GET -i http://localhost:8088/article/summary/title?title=2vwvxy
+curl -X GET -i http://localhost:8088/article/summary/title?title=bkwuzx --data 'bkwuzx'
 ```
 **Response-fields:**
 
 Field | Type|Description|Since
 ---|---|---|---
-any object|object|any object.|-
+status|int32|No comments found.|-
+msg|string|No comments found.|-
+data|object|No comments found.|-
 
 **Response-example:**
 ```
-{}
+{
+  "status": 728,
+  "msg": "pezmyt",
+  "data": {}
+}
 ```
 
 ### 根据标题查询文章
@@ -475,17 +416,23 @@ title|string|title|true|-
 
 **Request-example:**
 ```
-curl -X GET -i http://localhost:8088/article/title/title?title=l2mu0z
+curl -X GET -i http://localhost:8088/article/title/title?title=gjygsf --data 'gjygsf'
 ```
 **Response-fields:**
 
 Field | Type|Description|Since
 ---|---|---|---
-any object|object|any object.|-
+status|int32|No comments found.|-
+msg|string|No comments found.|-
+data|object|No comments found.|-
 
 **Response-example:**
 ```
-{}
+{
+  "status": 147,
+  "msg": "km17eh",
+  "data": {}
+}
 ```
 
 ### 增加文章
@@ -511,22 +458,28 @@ category|string|No comments found.|false|-
 **Request-example:**
 ```
 curl -X POST -H 'Content-Type: application/json; charset=utf-8' -i http://localhost:8088/article/ --data '{
-  "title": "8tlyw3",
-  "summary": "owz943",
-  "cover": "rzqpyw",
-  "content": "6sw62v",
-  "category": "zr2wx9"
+  "title": "12vrqn",
+  "summary": "5ege2z",
+  "cover": "0qc4ta",
+  "content": "0lkbu5",
+  "category": "8y2qog"
 }'
 ```
 **Response-fields:**
 
 Field | Type|Description|Since
 ---|---|---|---
-any object|object|any object.|-
+status|int32|No comments found.|-
+msg|string|No comments found.|-
+data|object|No comments found.|-
 
 **Response-example:**
 ```
-{}
+{
+  "status": 245,
+  "msg": "76a9to",
+  "data": {}
+}
 ```
 
 ### 根据 id 更新文章
@@ -557,23 +510,29 @@ category|string|No comments found.|false|-
 
 **Request-example:**
 ```
-curl -X PUT -H 'Content-Type: application/json; charset=utf-8' -i http://localhost:8088/article/?id=666 --data '{
-  "title": "f31of0",
-  "summary": "gy9p2r",
-  "cover": "qdnvov",
-  "content": "0bq3jl",
-  "category": "5bregs"
+curl -X PUT -H 'Content-Type: application/json; charset=utf-8' -i http://localhost:8088/article/?id=453 --data '{
+  "title": "lklea1",
+  "summary": "ncvtaq",
+  "cover": "uzdg0b",
+  "content": "t61e4r",
+  "category": "vy6bid"
 }'
 ```
 **Response-fields:**
 
 Field | Type|Description|Since
 ---|---|---|---
-any object|object|any object.|-
+status|int32|No comments found.|-
+msg|string|No comments found.|-
+data|object|No comments found.|-
 
 **Response-example:**
 ```
-{}
+{
+  "status": 414,
+  "msg": "lkrq6l",
+  "data": {}
+}
 ```
 
 ### 根据 id 删除文章
@@ -594,17 +553,23 @@ id|int64|id|true|-
 
 **Request-example:**
 ```
-curl -X DELETE -i http://localhost:8088/article/641
+curl -X DELETE -i http://localhost:8088/article/840
 ```
 **Response-fields:**
 
 Field | Type|Description|Since
 ---|---|---|---
-any object|object|any object.|-
+status|int32|No comments found.|-
+msg|string|No comments found.|-
+data|object|No comments found.|-
 
 **Response-example:**
 ```
-{}
+{
+  "status": 400,
+  "msg": "5u93vl",
+  "data": {}
+}
 ```
 
 ## 分类接口
@@ -627,41 +592,22 @@ size|int32|数量|true|-
 
 **Request-example:**
 ```
-curl -X GET -i http://localhost:8088/category/page?page=1&size=5
+curl -X GET -i http://localhost:8088/category/page?page=1&size=5 --data '"5"'
 ```
 **Response-fields:**
 
 Field | Type|Description|Since
 ---|---|---|---
-pages|int64|当前分页总页数|-
-records|array|分页记录列表|-
-└─id|int64|No comments found.|-
-└─createTime|string|创建时间|-
-└─updateTime|string|更新时间|-
-└─name|string|分类名称|-
-└─description|string|分类说明|-
-└─number|int32|分类下文章数量|-
-total|int64|当前满足条件总行数|-
-size|int64|获取每页显示条数|-
-current|int64|当前页|-
+status|int32|No comments found.|-
+msg|string|No comments found.|-
+data|object|No comments found.|-
 
 **Response-example:**
 ```
 {
-  "pages": 377,
-  "records": [
-    {
-      "id": 6,
-      "createTime": "2022-01-20 23:05:10",
-      "updateTime": "2022-01-20 23:05:10",
-      "name": "luella.gerhold",
-      "description": "zomx1w",
-      "number": 606
-    }
-  ],
-  "total": 737,
-  "size": 764,
-  "current": 445
+  "status": 508,
+  "msg": "mm2l9b",
+  "data": {}
 }
 ```
 
@@ -683,25 +629,17 @@ curl -X GET -i http://localhost:8088/category/all
 
 Field | Type|Description|Since
 ---|---|---|---
-id|int64|No comments found.|-
-createTime|string|创建时间|-
-updateTime|string|更新时间|-
-name|string|分类名称|-
-description|string|分类说明|-
-number|int32|分类下文章数量|-
+status|int32|No comments found.|-
+msg|string|No comments found.|-
+data|object|No comments found.|-
 
 **Response-example:**
 ```
-[
-  {
-    "id": 521,
-    "createTime": "2022-01-20 23:05:10",
-    "updateTime": "2022-01-20 23:05:10",
-    "name": "luella.gerhold",
-    "description": "fnd0i9",
-    "number": 258
-  }
-]
+{
+  "status": 893,
+  "msg": "quefxk",
+  "data": {}
+}
 ```
 
 ### 分页查询某分类下文章
@@ -724,17 +662,23 @@ size|int32|size|true|-
 
 **Request-example:**
 ```
-curl -X GET -i http://localhost:8088/category/article/id?page=1&size=7&id=448
+curl -X GET -i http://localhost:8088/category/article/id?id=199&page=1&size=7 --data '"7"'
 ```
 **Response-fields:**
 
 Field | Type|Description|Since
 ---|---|---|---
-any object|object|any object.|-
+status|int32|No comments found.|-
+msg|string|No comments found.|-
+data|object|No comments found.|-
 
 **Response-example:**
 ```
-{}
+{
+  "status": 714,
+  "msg": "rw2yho",
+  "data": {}
+}
 ```
 
 ### 分页查询某分类下文章
@@ -757,17 +701,23 @@ size|int32|size|true|-
 
 **Request-example:**
 ```
-curl -X GET -i http://localhost:8088/category/article/name?name=luella.gerhold&size=7&page=1
+curl -X GET -i http://localhost:8088/category/article/name?name=fawn.kautzer&page=1&size=7 --data '"7"'
 ```
 **Response-fields:**
 
 Field | Type|Description|Since
 ---|---|---|---
-any object|object|any object.|-
+status|int32|No comments found.|-
+msg|string|No comments found.|-
+data|object|No comments found.|-
 
 **Response-example:**
 ```
-{}
+{
+  "status": 530,
+  "msg": "8x78vf",
+  "data": {}
+}
 ```
 
 ### 根据 id 查询分类实体
@@ -788,17 +738,23 @@ id|int64|id|true|-
 
 **Request-example:**
 ```
-curl -X GET -i http://localhost:8088/category/id?id=909
+curl -X GET -i http://localhost:8088/category/id?id=896 --data '896'
 ```
 **Response-fields:**
 
 Field | Type|Description|Since
 ---|---|---|---
-any object|object|any object.|-
+status|int32|No comments found.|-
+msg|string|No comments found.|-
+data|object|No comments found.|-
 
 **Response-example:**
 ```
-{}
+{
+  "status": 906,
+  "msg": "7zduxw",
+  "data": {}
+}
 ```
 
 ### 根据名称查询分类实体
@@ -819,17 +775,23 @@ name|string|name|true|-
 
 **Request-example:**
 ```
-curl -X GET -i http://localhost:8088/category/name?name=luella.gerhold
+curl -X GET -i http://localhost:8088/category/name?name=fawn.kautzer --data 'fawn.kautzer'
 ```
 **Response-fields:**
 
 Field | Type|Description|Since
 ---|---|---|---
-any object|object|any object.|-
+status|int32|No comments found.|-
+msg|string|No comments found.|-
+data|object|No comments found.|-
 
 **Response-example:**
 ```
-{}
+{
+  "status": 334,
+  "msg": "14rkb7",
+  "data": {}
+}
 ```
 
 ### 增加分类
@@ -853,20 +815,26 @@ number|int32|No comments found.|false|-
 **Request-example:**
 ```
 curl -X POST -H 'Content-Type: application/json; charset=utf-8' -i http://localhost:8088/category/ --data '{
-  "name": "luella.gerhold",
-  "description": "vysl70",
-  "number": 924
+  "name": "fawn.kautzer",
+  "description": "2w43rg",
+  "number": 621
 }'
 ```
 **Response-fields:**
 
 Field | Type|Description|Since
 ---|---|---|---
-any object|object|any object.|-
+status|int32|No comments found.|-
+msg|string|No comments found.|-
+data|object|No comments found.|-
 
 **Response-example:**
 ```
-{}
+{
+  "status": 696,
+  "msg": "yh9sjs",
+  "data": {}
+}
 ```
 
 ### 根据 id 更新分类
@@ -895,21 +863,27 @@ number|int32|No comments found.|false|-
 
 **Request-example:**
 ```
-curl -X PUT -H 'Content-Type: application/json; charset=utf-8' -i http://localhost:8088/category/?id=587 --data '{
-  "name": "luella.gerhold",
-  "description": "aymgp3",
-  "number": 793
+curl -X PUT -H 'Content-Type: application/json; charset=utf-8' -i http://localhost:8088/category/?id=926 --data '{
+  "name": "fawn.kautzer",
+  "description": "zd81xl",
+  "number": 261
 }'
 ```
 **Response-fields:**
 
 Field | Type|Description|Since
 ---|---|---|---
-any object|object|any object.|-
+status|int32|No comments found.|-
+msg|string|No comments found.|-
+data|object|No comments found.|-
 
 **Response-example:**
 ```
-{}
+{
+  "status": 675,
+  "msg": "hkbiof",
+  "data": {}
+}
 ```
 
 ### 根据 id 删除分类
@@ -930,17 +904,23 @@ id|int64|id|true|-
 
 **Request-example:**
 ```
-curl -X DELETE -i http://localhost:8088/category/?id=865
+curl -X DELETE -i http://localhost:8088/category/?id=306 --data '306'
 ```
 **Response-fields:**
 
 Field | Type|Description|Since
 ---|---|---|---
-any object|object|any object.|-
+status|int32|No comments found.|-
+msg|string|No comments found.|-
+data|object|No comments found.|-
 
 **Response-example:**
 ```
-{}
+{
+  "status": 351,
+  "msg": "q3uhuq",
+  "data": {}
+}
 ```
 
 ## 留言接口
@@ -963,102 +943,22 @@ size|int32|size|true|-
 
 **Request-example:**
 ```
-curl -X GET -i http://localhost:8088/comment/page?size=5&page=1
+curl -X GET -i http://localhost:8088/comment/page?page=1&size=5 --data '"5"'
 ```
 **Response-fields:**
 
 Field | Type|Description|Since
 ---|---|---|---
-totalPages|int32|Returns the number of total pages.|-
-totalElements|int64|Returns the total amount of elements.|-
-number|int32|Returns the number of the current {@link Slice}. Is always non-negative.|-
-size|int32|Returns the size of the {@link Slice}.|-
-numberOfElements|int32|Returns the number of elements currently on this {@link Slice}.|-
-content|array|Returns the page content as {@link List}.|-
-└─id|int64|No comments found.|-
-└─createTime|string|创建时间|-
-└─updateTime|string|更新时间|-
-└─content|string|留言正文|-
-└─username|string|昵称|-
-└─avatar|string|头像|-
-└─site|string|个人网站|-
-└─email|string|邮箱|-
-sort|object|Returns the sorting parameters for the {@link Slice}.|-
-└─empty|boolean|Returns whether the current {@link Streamable} is empty.|-
-└─orders|array|No comments found.|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─direction|enum|null(See: Enumeration for sort directions.)|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─property|string|No comments found.|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─ignoreCase|boolean|No comments found.|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─nullHandling|enum|null(See: Enumeration for null handling hints that can be used in {@link Order} expressions.)|-
-first|boolean|Returns whether the current {@link Slice} is the first one.|-
-last|boolean|Returns whether the current {@link Slice} is the last one.|-
-pageable|object|Returns the {@link Pageable} that's been used to request the current {@link Slice}.|2.0
-└─paged|boolean|Returns whether the current {@link Pageable} contains pagination information.|-
-└─unpaged|boolean|Returns whether the current {@link Pageable} does not contain pagination information.|-
-└─pageNumber|int32|Returns the page to be returned.|-
-└─pageSize|int32|Returns the number of items to be returned.|-
-└─offset|int64|Returns the offset to be taken according to the underlying page and page size.|-
-└─sort|object|Returns the sorting parameters.|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─empty|boolean|Returns whether the current {@link Streamable} is empty.|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─orders|array|No comments found.|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─direction|enum|null(See: Enumeration for sort directions.)|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─property|string|No comments found.|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─ignoreCase|boolean|No comments found.|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─nullHandling|enum|null(See: Enumeration for null handling hints that can be used in {@link Order} expressions.)|-
-empty|boolean|Returns whether the current {@link Streamable} is empty.|-
+status|int32|No comments found.|-
+msg|string|No comments found.|-
+data|object|No comments found.|-
 
 **Response-example:**
 ```
 {
-  "totalPages": 941,
-  "totalElements": 210,
-  "number": 43,
-  "size": 10,
-  "numberOfElements": 638,
-  "content": [
-    {
-      "id": 353,
-      "createTime": "2022-01-20 23:05:10",
-      "updateTime": "2022-01-20 23:05:10",
-      "content": "nas7d2",
-      "username": "luella.gerhold",
-      "avatar": "me8yv1",
-      "site": "oenux9",
-      "email": "lloyd.jacobi@gmail.com"
-    }
-  ],
-  "sort": {
-    "empty": true,
-    "orders": [
-      {
-        "direction": "ASC",
-        "property": "b3t23q",
-        "ignoreCase": true,
-        "nullHandling": "NATIVE"
-      }
-    ]
-  },
-  "first": true,
-  "last": true,
-  "pageable": {
-    "paged": true,
-    "unpaged": true,
-    "pageNumber": 30,
-    "pageSize": 10,
-    "offset": 1,
-    "sort": {
-      "empty": true,
-      "orders": [
-        {
-          "direction": "ASC",
-          "property": "or2ki1",
-          "ignoreCase": true,
-          "nullHandling": "NATIVE"
-        }
-      ]
-    }
-  },
-  "empty": true
+  "status": 445,
+  "msg": "30a1un",
+  "data": {}
 }
 ```
 
@@ -1080,29 +980,17 @@ curl -X GET -i http://localhost:8088/comment/all
 
 Field | Type|Description|Since
 ---|---|---|---
-id|int64|No comments found.|-
-createTime|string|创建时间|-
-updateTime|string|更新时间|-
-content|string|留言正文|-
-username|string|昵称|-
-avatar|string|头像|-
-site|string|个人网站|-
-email|string|邮箱|-
+status|int32|No comments found.|-
+msg|string|No comments found.|-
+data|object|No comments found.|-
 
 **Response-example:**
 ```
-[
-  {
-    "id": 54,
-    "createTime": "2022-01-20 23:05:10",
-    "updateTime": "2022-01-20 23:05:10",
-    "content": "hobiqi",
-    "username": "luella.gerhold",
-    "avatar": "1y070u",
-    "site": "z4dppl",
-    "email": "lloyd.jacobi@gmail.com"
-  }
-]
+{
+  "status": 284,
+  "msg": "ouszya",
+  "data": {}
+}
 ```
 
 ### 根据 id 查询留言
@@ -1123,32 +1011,22 @@ id|int64|id|true|-
 
 **Request-example:**
 ```
-curl -X GET -i http://localhost:8088/comment/17
+curl -X GET -i http://localhost:8088/comment/562
 ```
 **Response-fields:**
 
 Field | Type|Description|Since
 ---|---|---|---
-id|int64|No comments found.|-
-createTime|string|创建时间|-
-updateTime|string|更新时间|-
-content|string|留言正文|-
-username|string|昵称|-
-avatar|string|头像|-
-site|string|个人网站|-
-email|string|邮箱|-
+status|int32|No comments found.|-
+msg|string|No comments found.|-
+data|object|No comments found.|-
 
 **Response-example:**
 ```
 {
-  "id": 879,
-  "createTime": "2022-01-20 23:05:10",
-  "updateTime": "2022-01-20 23:05:10",
-  "content": "nv01sy",
-  "username": "luella.gerhold",
-  "avatar": "5y6dod",
-  "site": "eqe3sz",
-  "email": "lloyd.jacobi@gmail.com"
+  "status": 903,
+  "msg": "3skk7f",
+  "data": {}
 }
 ```
 
@@ -1167,8 +1045,8 @@ email|string|邮箱|-
 Parameter | Type|Description|Required|Since
 ---|---|---|---|---
 id|int64|No comments found.|false|-
-createTime|string|创建时间|false|-
-updateTime|string|更新时间|false|-
+createTime|object|创建时间|false|-
+updateTime|object|更新时间|false|-
 content|string|留言正文|false|-
 username|string|昵称|false|-
 avatar|string|头像|false|-
@@ -1178,40 +1056,30 @@ email|string|邮箱|false|-
 **Request-example:**
 ```
 curl -X POST -H 'Content-Type: application/json; charset=utf-8' -i http://localhost:8088/comment/ --data '{
-  "id": 751,
-  "createTime": "2022-01-20 23:05:10",
-  "updateTime": "2022-01-20 23:05:10",
-  "content": "mshhcb",
-  "username": "luella.gerhold",
-  "avatar": "1cd289",
-  "site": "xmmtk2",
-  "email": "lloyd.jacobi@gmail.com"
+  "id": 833,
+  "createTime": "2022-04-24 16:43:44",
+  "updateTime": "2022-04-24 16:43:44",
+  "content": "eajsda",
+  "username": "fawn.kautzer",
+  "avatar": "bgznjf",
+  "site": "e2xlf8",
+  "email": "christene.fritsch@gmail.com"
 }'
 ```
 **Response-fields:**
 
 Field | Type|Description|Since
 ---|---|---|---
-id|int64|No comments found.|-
-createTime|string|创建时间|-
-updateTime|string|更新时间|-
-content|string|留言正文|-
-username|string|昵称|-
-avatar|string|头像|-
-site|string|个人网站|-
-email|string|邮箱|-
+status|int32|No comments found.|-
+msg|string|No comments found.|-
+data|object|No comments found.|-
 
 **Response-example:**
 ```
 {
-  "id": 259,
-  "createTime": "2022-01-20 23:05:10",
-  "updateTime": "2022-01-20 23:05:10",
-  "content": "yw59ub",
-  "username": "luella.gerhold",
-  "avatar": "xzbb27",
-  "site": "8au4y7",
-  "email": "lloyd.jacobi@gmail.com"
+  "status": 7,
+  "msg": "d7rdkd",
+  "data": {}
 }
 ```
 
@@ -1236,8 +1104,8 @@ id|int64|id|true|-
 Parameter | Type|Description|Required|Since
 ---|---|---|---|---
 id|int64|No comments found.|false|-
-createTime|string|创建时间|false|-
-updateTime|string|更新时间|false|-
+createTime|object|创建时间|false|-
+updateTime|object|更新时间|false|-
 content|string|留言正文|false|-
 username|string|昵称|false|-
 avatar|string|头像|false|-
@@ -1246,41 +1114,31 @@ email|string|邮箱|false|-
 
 **Request-example:**
 ```
-curl -X PUT -H 'Content-Type: application/json; charset=utf-8' -i http://localhost:8088/comment/?id=372 --data '{
-  "id": 835,
-  "createTime": "2022-01-20 23:05:10",
-  "updateTime": "2022-01-20 23:05:10",
-  "content": "ca50ye",
-  "username": "luella.gerhold",
-  "avatar": "z5xu73",
-  "site": "j504w7",
-  "email": "lloyd.jacobi@gmail.com"
+curl -X PUT -H 'Content-Type: application/json; charset=utf-8' -i http://localhost:8088/comment/?id=522 --data '{
+  "id": 72,
+  "createTime": "2022-04-24 16:43:44",
+  "updateTime": "2022-04-24 16:43:44",
+  "content": "n1nw04",
+  "username": "fawn.kautzer",
+  "avatar": "f6dwnm",
+  "site": "q1pm51",
+  "email": "christene.fritsch@gmail.com"
 }'
 ```
 **Response-fields:**
 
 Field | Type|Description|Since
 ---|---|---|---
-id|int64|No comments found.|-
-createTime|string|创建时间|-
-updateTime|string|更新时间|-
-content|string|留言正文|-
-username|string|昵称|-
-avatar|string|头像|-
-site|string|个人网站|-
-email|string|邮箱|-
+status|int32|No comments found.|-
+msg|string|No comments found.|-
+data|object|No comments found.|-
 
 **Response-example:**
 ```
 {
-  "id": 921,
-  "createTime": "2022-01-20 23:05:10",
-  "updateTime": "2022-01-20 23:05:10",
-  "content": "8mooyu",
-  "username": "luella.gerhold",
-  "avatar": "c05bc9",
-  "site": "p2iroe",
-  "email": "lloyd.jacobi@gmail.com"
+  "status": 718,
+  "msg": "8aqwf6",
+  "data": {}
 }
 ```
 
@@ -1302,32 +1160,23 @@ id|int64|id|true|-
 
 **Request-example:**
 ```
-curl -X DELETE -i http://localhost:8088/comment/?id=930
+curl -X DELETE -i http://localhost:8088/comment/?id=293 --data '293'
 ```
+**Response-fields:**
+
+Field | Type|Description|Since
+---|---|---|---
+status|int32|No comments found.|-
+msg|string|No comments found.|-
+data|object|No comments found.|-
 
 **Response-example:**
 ```
-955
-```
-
-### 删除所有留言
-**URL:** http://localhost:8088/comment/delete
-
-**Type:** DELETE
-
-
-**Content-Type:** application/x-www-form-urlencoded;charset=utf-8
-
-**Description:** 删除所有留言
-
-**Request-example:**
-```
-curl -X DELETE -i http://localhost:8088/comment/delete
-```
-
-**Response-example:**
-```
-Return void.
+{
+  "status": 47,
+  "msg": "w6sycf",
+  "data": {}
+}
 ```
 
 ## 图片接口
@@ -1349,21 +1198,17 @@ curl -X GET -i http://localhost:8088/files/all
 
 Field | Type|Description|Since
 ---|---|---|---
-id|int64|No comments found.|-
-createTime|string|上传时间|-
-name|string|名称|-
-url|string|路径|-
+status|int32|No comments found.|-
+msg|string|No comments found.|-
+data|object|No comments found.|-
 
 **Response-example:**
 ```
-[
-  {
-    "id": 71,
-    "createTime": "2022-01-20 23:05:10",
-    "name": "luella.gerhold",
-    "url": "www.david-bogan.us"
-  }
-]
+{
+  "status": 994,
+  "msg": "2yxybc",
+  "data": {}
+}
 ```
 
 ### 分页查询
@@ -1385,94 +1230,22 @@ size|int32|size|true|-
 
 **Request-example:**
 ```
-curl -X GET -i http://localhost:8088/files/page?size=10&page=1
+curl -X GET -i http://localhost:8088/files/page?page=1&size=10 --data '"10"'
 ```
 **Response-fields:**
 
 Field | Type|Description|Since
 ---|---|---|---
-totalPages|int32|Returns the number of total pages.|-
-totalElements|int64|Returns the total amount of elements.|-
-number|int32|Returns the number of the current {@link Slice}. Is always non-negative.|-
-size|int32|Returns the size of the {@link Slice}.|-
-numberOfElements|int32|Returns the number of elements currently on this {@link Slice}.|-
-content|array|Returns the page content as {@link List}.|-
-└─id|int64|No comments found.|-
-└─createTime|string|上传时间|-
-└─name|string|名称|-
-└─url|string|路径|-
-sort|object|Returns the sorting parameters for the {@link Slice}.|-
-└─empty|boolean|Returns whether the current {@link Streamable} is empty.|-
-└─orders|array|No comments found.|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─direction|enum|null(See: Enumeration for sort directions.)|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─property|string|No comments found.|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─ignoreCase|boolean|No comments found.|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─nullHandling|enum|null(See: Enumeration for null handling hints that can be used in {@link Order} expressions.)|-
-first|boolean|Returns whether the current {@link Slice} is the first one.|-
-last|boolean|Returns whether the current {@link Slice} is the last one.|-
-pageable|object|Returns the {@link Pageable} that's been used to request the current {@link Slice}.|2.0
-└─paged|boolean|Returns whether the current {@link Pageable} contains pagination information.|-
-└─unpaged|boolean|Returns whether the current {@link Pageable} does not contain pagination information.|-
-└─pageNumber|int32|Returns the page to be returned.|-
-└─pageSize|int32|Returns the number of items to be returned.|-
-└─offset|int64|Returns the offset to be taken according to the underlying page and page size.|-
-└─sort|object|Returns the sorting parameters.|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─empty|boolean|Returns whether the current {@link Streamable} is empty.|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─orders|array|No comments found.|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─direction|enum|null(See: Enumeration for sort directions.)|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─property|string|No comments found.|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─ignoreCase|boolean|No comments found.|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─nullHandling|enum|null(See: Enumeration for null handling hints that can be used in {@link Order} expressions.)|-
-empty|boolean|Returns whether the current {@link Streamable} is empty.|-
+status|int32|No comments found.|-
+msg|string|No comments found.|-
+data|object|No comments found.|-
 
 **Response-example:**
 ```
 {
-  "totalPages": 719,
-  "totalElements": 574,
-  "number": 14,
-  "size": 10,
-  "numberOfElements": 387,
-  "content": [
-    {
-      "id": 715,
-      "createTime": "2022-01-20 23:05:10",
-      "name": "luella.gerhold",
-      "url": "www.david-bogan.us"
-    }
-  ],
-  "sort": {
-    "empty": true,
-    "orders": [
-      {
-        "direction": "ASC",
-        "property": "b0rq5n",
-        "ignoreCase": true,
-        "nullHandling": "NATIVE"
-      }
-    ]
-  },
-  "first": true,
-  "last": true,
-  "pageable": {
-    "paged": true,
-    "unpaged": true,
-    "pageNumber": 411,
-    "pageSize": 10,
-    "offset": 1,
-    "sort": {
-      "empty": true,
-      "orders": [
-        {
-          "direction": "ASC",
-          "property": "ojv4kf",
-          "ignoreCase": true,
-          "nullHandling": "NATIVE"
-        }
-      ]
-    }
-  },
-  "empty": true
+  "status": 476,
+  "msg": "qzbhvx",
+  "data": {}
 }
 ```
 
@@ -1482,7 +1255,7 @@ empty|boolean|Returns whether the current {@link Streamable} is empty.|-
 **Type:** POST
 
 
-**Content-Type:** multipart/form-data
+**Content-Type:** application/x-www-form-urlencoded;charset=utf-8
 
 **Description:** 图片上传
 
@@ -1494,17 +1267,23 @@ file|file|file|true|-
 
 **Request-example:**
 ```
-curl -X POST -H 'Content-Type: multipart/form-data' -i http://localhost:8088/files/upload
+curl -X POST -i http://localhost:8088/files/upload --data 'file='
 ```
 **Response-fields:**
 
 Field | Type|Description|Since
 ---|---|---|---
-any object|object|any object.|-
+status|int32|No comments found.|-
+msg|string|No comments found.|-
+data|object|No comments found.|-
 
 **Response-example:**
 ```
-{}
+{
+  "status": 302,
+  "msg": "p6bcvz",
+  "data": {}
+}
 ```
 
 ## 登录接口
@@ -1528,19 +1307,25 @@ password|string|No comments found.|false|-
 **Request-example:**
 ```
 curl -X POST -H 'Content-Type: application/json; charset=utf-8' -i http://localhost:8088/admin/login --data '{
-  "username": "luella.gerhold",
-  "password": "2q3p58"
+  "username": "fawn.kautzer",
+  "password": "ha961d"
 }'
 ```
 **Response-fields:**
 
 Field | Type|Description|Since
 ---|---|---|---
-any object|object|any object.|-
+status|int32|No comments found.|-
+msg|string|No comments found.|-
+data|object|No comments found.|-
 
 **Response-example:**
 ```
-{}
+{
+  "status": 760,
+  "msg": "0o2p9s",
+  "data": {}
+}
 ```
 
 ### 验证是否登录
@@ -1562,17 +1347,23 @@ tokenValue|string|token|true|-
 
 **Request-example:**
 ```
-curl -X GET -i http://localhost:8088/admin/check?username=luella.gerhold&tokenValue=5bhxmm
+curl -X GET -i http://localhost:8088/admin/check?username=fawn.kautzer&tokenValue=19shon --data '19shon'
 ```
 **Response-fields:**
 
 Field | Type|Description|Since
 ---|---|---|---
-any object|object|any object.|-
+status|int32|No comments found.|-
+msg|string|No comments found.|-
+data|object|No comments found.|-
 
 **Response-example:**
 ```
-{}
+{
+  "status": 535,
+  "msg": "kmkxx7",
+  "data": {}
+}
 ```
 
 ### 注销
@@ -1593,7 +1384,7 @@ tokenValue|string|token|true|-
 
 **Request-example:**
 ```
-curl -X POST -i http://localhost:8088/admin/logout --data 'tokenValue=dh3449'
+curl -X POST -i http://localhost:8088/admin/logout --data 'tokenValue=vuh15d'
 ```
 **Response-fields:**
 
@@ -1602,34 +1393,13 @@ Field | Type|Description|Since
 status|int32|No comments found.|-
 msg|string|No comments found.|-
 data|object|No comments found.|-
-└─id|int64|No comments found.|-
-└─username|string|用户名|-
-└─password|string|密码|-
-└─token|string|token|-
-└─avatar|string|头像|-
-└─age|int32|年龄|-
-└─gender|boolean|性别|-
-└─location|string|地址|-
-└─signature|string|个性签名|-
-└─profile|string|简介|-
 
 **Response-example:**
 ```
 {
-  "status": 620,
-  "msg": "n5icib",
-  "data": {
-    "id": 531,
-    "username": "luella.gerhold",
-    "password": "v716nb",
-    "token": "i8sndf",
-    "avatar": "7rh9v5",
-    "age": 32,
-    "gender": true,
-    "location": "qqwxre",
-    "signature": "olh9ua",
-    "profile": "qo04cr"
-  }
+  "status": 320,
+  "msg": "dds5av",
+  "data": {}
 }
 ```
 
@@ -1654,20 +1424,26 @@ passwordRepeat|string|No comments found.|false|-
 **Request-example:**
 ```
 curl -X POST -H 'Content-Type: application/json; charset=utf-8' -i http://localhost:8088/admin/register --data '{
-  "username": "luella.gerhold",
-  "password": "vv24ng",
-  "passwordRepeat": "4jufoj"
+  "username": "fawn.kautzer",
+  "password": "7y2de2",
+  "passwordRepeat": "m899r4"
 }'
 ```
 **Response-fields:**
 
 Field | Type|Description|Since
 ---|---|---|---
-any object|object|any object.|-
+status|int32|No comments found.|-
+msg|string|No comments found.|-
+data|object|No comments found.|-
 
 **Response-example:**
 ```
-{}
+{
+  "status": 22,
+  "msg": "9lrhaj",
+  "data": {}
+}
 ```
 
 ## 权限接口
@@ -1692,96 +1468,22 @@ size|int32|数量|true|-
 
 **Request-example:**
 ```
-curl -X GET -i http://localhost:8088/idea/page?size=10&page=1
+curl -X GET -i http://localhost:8088/idea/page?page=1&size=10 --data '"10"'
 ```
 **Response-fields:**
 
 Field | Type|Description|Since
 ---|---|---|---
-totalPages|int32|Returns the number of total pages.|-
-totalElements|int64|Returns the total amount of elements.|-
-number|int32|Returns the number of the current {@link Slice}. Is always non-negative.|-
-size|int32|Returns the size of the {@link Slice}.|-
-numberOfElements|int32|Returns the number of elements currently on this {@link Slice}.|-
-content|array|Returns the page content as {@link List}.|-
-└─id|int64|No comments found.|-
-└─createTime|string|创建时间|-
-└─updateTime|string|更新时间|-
-└─title|string|标题|-
-└─content|string|正文|-
-sort|object|Returns the sorting parameters for the {@link Slice}.|-
-└─empty|boolean|Returns whether the current {@link Streamable} is empty.|-
-└─orders|array|No comments found.|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─direction|enum|null(See: Enumeration for sort directions.)|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─property|string|No comments found.|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─ignoreCase|boolean|No comments found.|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─nullHandling|enum|null(See: Enumeration for null handling hints that can be used in {@link Order} expressions.)|-
-first|boolean|Returns whether the current {@link Slice} is the first one.|-
-last|boolean|Returns whether the current {@link Slice} is the last one.|-
-pageable|object|Returns the {@link Pageable} that's been used to request the current {@link Slice}.|2.0
-└─paged|boolean|Returns whether the current {@link Pageable} contains pagination information.|-
-└─unpaged|boolean|Returns whether the current {@link Pageable} does not contain pagination information.|-
-└─pageNumber|int32|Returns the page to be returned.|-
-└─pageSize|int32|Returns the number of items to be returned.|-
-└─offset|int64|Returns the offset to be taken according to the underlying page and page size.|-
-└─sort|object|Returns the sorting parameters.|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─empty|boolean|Returns whether the current {@link Streamable} is empty.|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─orders|array|No comments found.|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─direction|enum|null(See: Enumeration for sort directions.)|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─property|string|No comments found.|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─ignoreCase|boolean|No comments found.|-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─nullHandling|enum|null(See: Enumeration for null handling hints that can be used in {@link Order} expressions.)|-
-empty|boolean|Returns whether the current {@link Streamable} is empty.|-
+status|int32|No comments found.|-
+msg|string|No comments found.|-
+data|object|No comments found.|-
 
 **Response-example:**
 ```
 {
-  "totalPages": 452,
-  "totalElements": 603,
-  "number": 666,
-  "size": 10,
-  "numberOfElements": 208,
-  "content": [
-    {
-      "id": 451,
-      "createTime": "2022-01-20 23:05:10",
-      "updateTime": "2022-01-20 23:05:10",
-      "title": "4yqf56",
-      "content": "1klkbf"
-    }
-  ],
-  "sort": {
-    "empty": true,
-    "orders": [
-      {
-        "direction": "ASC",
-        "property": "2yum4g",
-        "ignoreCase": true,
-        "nullHandling": "NATIVE"
-      }
-    ]
-  },
-  "first": true,
-  "last": true,
-  "pageable": {
-    "paged": true,
-    "unpaged": true,
-    "pageNumber": 44,
-    "pageSize": 10,
-    "offset": 1,
-    "sort": {
-      "empty": true,
-      "orders": [
-        {
-          "direction": "ASC",
-          "property": "ppfnfu",
-          "ignoreCase": true,
-          "nullHandling": "NATIVE"
-        }
-      ]
-    }
-  },
-  "empty": true
+  "status": 924,
+  "msg": "k3nr49",
+  "data": {}
 }
 ```
 
@@ -1803,23 +1505,17 @@ curl -X GET -i http://localhost:8088/idea/all
 
 Field | Type|Description|Since
 ---|---|---|---
-id|int64|No comments found.|-
-createTime|string|创建时间|-
-updateTime|string|更新时间|-
-title|string|标题|-
-content|string|正文|-
+status|int32|No comments found.|-
+msg|string|No comments found.|-
+data|object|No comments found.|-
 
 **Response-example:**
 ```
-[
-  {
-    "id": 857,
-    "createTime": "2022-01-20 23:05:10",
-    "updateTime": "2022-01-20 23:05:10",
-    "title": "mqru1i",
-    "content": "m7sn91"
-  }
-]
+{
+  "status": 204,
+  "msg": "0co3h0",
+  "data": {}
+}
 ```
 
 ### 根据 id 查询时间线
@@ -1840,26 +1536,22 @@ id|int64|id|true|-
 
 **Request-example:**
 ```
-curl -X GET -i http://localhost:8088/idea/911
+curl -X GET -i http://localhost:8088/idea/389
 ```
 **Response-fields:**
 
 Field | Type|Description|Since
 ---|---|---|---
-id|int64|No comments found.|-
-createTime|string|创建时间|-
-updateTime|string|更新时间|-
-title|string|标题|-
-content|string|正文|-
+status|int32|No comments found.|-
+msg|string|No comments found.|-
+data|object|No comments found.|-
 
 **Response-example:**
 ```
 {
-  "id": 795,
-  "createTime": "2022-01-20 23:05:10",
-  "updateTime": "2022-01-20 23:05:10",
-  "title": "2vd155",
-  "content": "h3lr3f"
+  "status": 626,
+  "msg": "2tmhyp",
+  "data": {}
 }
 ```
 
@@ -1878,39 +1570,35 @@ content|string|正文|-
 Parameter | Type|Description|Required|Since
 ---|---|---|---|---
 id|int64|No comments found.|false|-
-createTime|string|创建时间|false|-
-updateTime|string|更新时间|false|-
+createTime|object|创建时间|false|-
+updateTime|object|更新时间|false|-
 title|string|标题|false|-
 content|string|正文|false|-
 
 **Request-example:**
 ```
 curl -X POST -H 'Content-Type: application/json; charset=utf-8' -i http://localhost:8088/idea/ --data '{
-  "id": 783,
-  "createTime": "2022-01-20 23:05:10",
-  "updateTime": "2022-01-20 23:05:10",
-  "title": "3jqdz4",
-  "content": "00b0nq"
+  "id": 417,
+  "createTime": "2022-04-24 16:43:44",
+  "updateTime": "2022-04-24 16:43:44",
+  "title": "ckxy1x",
+  "content": "c98pa2"
 }'
 ```
 **Response-fields:**
 
 Field | Type|Description|Since
 ---|---|---|---
-id|int64|No comments found.|-
-createTime|string|创建时间|-
-updateTime|string|更新时间|-
-title|string|标题|-
-content|string|正文|-
+status|int32|No comments found.|-
+msg|string|No comments found.|-
+data|object|No comments found.|-
 
 **Response-example:**
 ```
 {
-  "id": 336,
-  "createTime": "2022-01-20 23:05:10",
-  "updateTime": "2022-01-20 23:05:10",
-  "title": "ctv0zb",
-  "content": "gt359w"
+  "status": 465,
+  "msg": "zwcn7n",
+  "data": {}
 }
 ```
 
@@ -1935,39 +1623,35 @@ id|int64|id|true|-
 Parameter | Type|Description|Required|Since
 ---|---|---|---|---
 id|int64|No comments found.|false|-
-createTime|string|创建时间|false|-
-updateTime|string|更新时间|false|-
+createTime|object|创建时间|false|-
+updateTime|object|更新时间|false|-
 title|string|标题|false|-
 content|string|正文|false|-
 
 **Request-example:**
 ```
-curl -X PUT -H 'Content-Type: application/json; charset=utf-8' -i http://localhost:8088/idea/?id=686 --data '{
-  "id": 209,
-  "createTime": "2022-01-20 23:05:10",
-  "updateTime": "2022-01-20 23:05:10",
-  "title": "68xgx8",
-  "content": "ein3s7"
+curl -X PUT -H 'Content-Type: application/json; charset=utf-8' -i http://localhost:8088/idea/?id=772 --data '{
+  "id": 718,
+  "createTime": "2022-04-24 16:43:44",
+  "updateTime": "2022-04-24 16:43:44",
+  "title": "2feyic",
+  "content": "12q1uu"
 }'
 ```
 **Response-fields:**
 
 Field | Type|Description|Since
 ---|---|---|---
-id|int64|No comments found.|-
-createTime|string|创建时间|-
-updateTime|string|更新时间|-
-title|string|标题|-
-content|string|正文|-
+status|int32|No comments found.|-
+msg|string|No comments found.|-
+data|object|No comments found.|-
 
 **Response-example:**
 ```
 {
-  "id": 861,
-  "createTime": "2022-01-20 23:05:10",
-  "updateTime": "2022-01-20 23:05:10",
-  "title": "6107di",
-  "content": "8pnqfk"
+  "status": 601,
+  "msg": "9zv3zw",
+  "data": {}
 }
 ```
 
@@ -1989,32 +1673,23 @@ id|int64|id|true|-
 
 **Request-example:**
 ```
-curl -X DELETE -i http://localhost:8088/idea/375
+curl -X DELETE -i http://localhost:8088/idea/972
 ```
+**Response-fields:**
+
+Field | Type|Description|Since
+---|---|---|---
+status|int32|No comments found.|-
+msg|string|No comments found.|-
+data|object|No comments found.|-
 
 **Response-example:**
 ```
-200
-```
-
-### 删除所有时间线
-**URL:** http://localhost:8088/idea/
-
-**Type:** DELETE
-
-
-**Content-Type:** application/x-www-form-urlencoded;charset=utf-8
-
-**Description:** 删除所有时间线
-
-**Request-example:**
-```
-curl -X DELETE -i http://localhost:8088/idea/
-```
-
-**Response-example:**
-```
-Return void.
+{
+  "status": 570,
+  "msg": "x9o59g",
+  "data": {}
+}
 ```
 
 ## 用户接口
@@ -2046,27 +1721,33 @@ profile|string|简介|false|-
 **Request-example:**
 ```
 curl -X POST -H 'Content-Type: application/json; charset=utf-8' -i http://localhost:8088/user/ --data '{
-  "id": 279,
-  "username": "luella.gerhold",
-  "password": "bimdth",
-  "token": "f9qvq2",
-  "avatar": "iss8mn",
-  "age": 32,
+  "id": 301,
+  "username": "fawn.kautzer",
+  "password": "7cbjoh",
+  "token": "jr0iz2",
+  "avatar": "wqtgu3",
+  "age": 45,
   "gender": true,
-  "location": "msvbfq",
-  "signature": "rp84yw",
-  "profile": "nnqnzm"
+  "location": "t4qzj7",
+  "signature": "c8xg6x",
+  "profile": "8hty00"
 }'
 ```
 **Response-fields:**
 
 Field | Type|Description|Since
 ---|---|---|---
-any object|object|any object.|-
+status|int32|No comments found.|-
+msg|string|No comments found.|-
+data|object|No comments found.|-
 
 **Response-example:**
 ```
-{}
+{
+  "status": 632,
+  "msg": "jugz42",
+  "data": {}
+}
 ```
 
 ### 根据 id 获取用户信息
@@ -2087,36 +1768,22 @@ id|int64|No comments found.|true|-
 
 **Request-example:**
 ```
-curl -X GET -i http://localhost:8088/user/user?id=167
+curl -X GET -i http://localhost:8088/user/user?id=428 --data '428'
 ```
 **Response-fields:**
 
 Field | Type|Description|Since
 ---|---|---|---
-id|int64|No comments found.|-
-username|string|用户名|-
-password|string|密码|-
-token|string|token|-
-avatar|string|头像|-
-age|int32|年龄|-
-gender|boolean|性别|-
-location|string|地址|-
-signature|string|个性签名|-
-profile|string|简介|-
+status|int32|No comments found.|-
+msg|string|No comments found.|-
+data|object|No comments found.|-
 
 **Response-example:**
 ```
 {
-  "id": 17,
-  "username": "luella.gerhold",
-  "password": "oaghs1",
-  "token": "jbhdbq",
-  "avatar": "4o1s12",
-  "age": 32,
-  "gender": true,
-  "location": "q8irwk",
-  "signature": "wlo3zl",
-  "profile": "dx50gs"
+  "status": 811,
+  "msg": "bmnhzx",
+  "data": {}
 }
 ```
 
@@ -2138,36 +1805,22 @@ username|string|No comments found.|true|-
 
 **Request-example:**
 ```
-curl -X GET -i http://localhost:8088/user/name?username=luella.gerhold
+curl -X GET -i http://localhost:8088/user/name?username=fawn.kautzer --data 'fawn.kautzer'
 ```
 **Response-fields:**
 
 Field | Type|Description|Since
 ---|---|---|---
-id|int64|No comments found.|-
-username|string|用户名|-
-password|string|密码|-
-token|string|token|-
-avatar|string|头像|-
-age|int32|年龄|-
-gender|boolean|性别|-
-location|string|地址|-
-signature|string|个性签名|-
-profile|string|简介|-
+status|int32|No comments found.|-
+msg|string|No comments found.|-
+data|object|No comments found.|-
 
 **Response-example:**
 ```
 {
-  "id": 233,
-  "username": "luella.gerhold",
-  "password": "2akfo4",
-  "token": "gjfovj",
-  "avatar": "l1gkdt",
-  "age": 32,
-  "gender": true,
-  "location": "6p7afi",
-  "signature": "dnwcyj",
-  "profile": "crdabs"
+  "status": 448,
+  "msg": "ga1f00",
+  "data": {}
 }
 ```
 
@@ -2204,28 +1857,34 @@ profile|string|简介|false|-
 
 **Request-example:**
 ```
-curl -X PUT -H 'Content-Type: application/json; charset=utf-8' -i http://localhost:8088/user/password?id=588 --data '{
-  "id": 797,
-  "username": "luella.gerhold",
-  "password": "c7m23j",
-  "token": "gk3x3g",
-  "avatar": "w93ac0",
-  "age": 32,
+curl -X PUT -H 'Content-Type: application/json; charset=utf-8' -i http://localhost:8088/user/password?id=852 --data '{
+  "id": 469,
+  "username": "fawn.kautzer",
+  "password": "e1cvc8",
+  "token": "c0hpgt",
+  "avatar": "1eheiz",
+  "age": 45,
   "gender": true,
-  "location": "wqwlo0",
-  "signature": "a65lws",
-  "profile": "fozc4m"
+  "location": "b7alor",
+  "signature": "rl9pjn",
+  "profile": "hjn8zn"
 }'
 ```
 **Response-fields:**
 
 Field | Type|Description|Since
 ---|---|---|---
-any object|object|any object.|-
+status|int32|No comments found.|-
+msg|string|No comments found.|-
+data|object|No comments found.|-
 
 **Response-example:**
 ```
-{}
+{
+  "status": 96,
+  "msg": "4vryx8",
+  "data": {}
+}
 ```
 
 

@@ -1,7 +1,7 @@
 package com.wjl.lblog.component;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.wjl.lblog.common.constants.Result;
+import com.wjl.lblog.common.constants.MyResult;
 import lombok.SneakyThrows;
 import org.springframework.core.MethodParameter;
 import org.springframework.http.MediaType;
@@ -25,25 +25,25 @@ public class ResponseAdvice implements ResponseBodyAdvice<Object> {
     private ObjectMapper objectMapper;
 
     @Override
-    public boolean supports(MethodParameter parameter,
-                            Class<? extends HttpMessageConverter<?>> aClass) {
+    public boolean supports(
+            MethodParameter returnType,
+            Class<? extends HttpMessageConverter<?>> converterType) {
         return true;
     }
 
     @SneakyThrows
     @Override
-    public Object beforeBodyWrite(Object o, MethodParameter parameter,
-                                  MediaType mediaType,
-                                  Class<? extends HttpMessageConverter<?>> aClass,
-                                  ServerHttpRequest request,
-                                  ServerHttpResponse response) {
-        if (o instanceof String) {
-            return objectMapper.writeValueAsString(Result.success(o));
+    public Object beforeBodyWrite(
+            Object body, MethodParameter returnType, MediaType selectedContentType,
+            Class<? extends HttpMessageConverter<?>> selectedConverterType,
+            ServerHttpRequest request, ServerHttpResponse response) {
+        if (body instanceof String) {
+            return objectMapper.writeValueAsString(MyResult.success(body));
         }
-        if (o instanceof Result) {
-            return o;
+        if (body instanceof MyResult) {
+            return body;
         }
-        return Result.success(o);
+        return MyResult.success(body);
     }
 
 }

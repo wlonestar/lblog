@@ -1,18 +1,15 @@
 package com.wjl.lblog.controller;
 
-import com.wjl.lblog.common.constants.Result;
-import com.wjl.lblog.common.enums.HttpStatus;
+import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
+import com.wjl.lblog.common.constants.MyResult;
+import com.wjl.lblog.common.enums.MyHttpStatus;
 import com.wjl.lblog.model.entity.Image;
 import com.wjl.lblog.service.intf.FileService;
 import com.wjl.lblog.service.intf.ImageService;
-import org.springframework.data.domain.Page;
-import org.springframework.data.domain.PageRequest;
-import org.springframework.data.domain.Sort;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
 import javax.annotation.Resource;
-import java.util.List;
 import java.util.Objects;
 
 /**
@@ -36,8 +33,9 @@ public class ImageController {
      * 获取已上传的图片列表
      */
     @RequestMapping(value = "/all", method = RequestMethod.GET)
-    public List<Image> getAll() {
-        return imageService.findAll();
+    public MyResult<?> getAll() {
+        var res = imageService.findAll();
+        return MyResult.success(res);
     }
 
     /**
@@ -47,11 +45,11 @@ public class ImageController {
      * @param size size
      */
     @RequestMapping(value = "/page", method = RequestMethod.GET)
-    public Page<Image> findAllByPage(
+    public MyResult<?> findAllByPage(
             @RequestParam(name = "page", defaultValue = "1") int page,
             @RequestParam(name = "size", defaultValue = "10") int size) {
-        return imageService.findAllByPage(
-                PageRequest.of(page - 1, size, Sort.Direction.DESC, "createTime"));
+        var res = imageService.findAllByPage(new Page<>(page, size));
+        return MyResult.success(res);
     }
 
     /**
@@ -61,16 +59,16 @@ public class ImageController {
      */
     @RequestMapping(value = "/upload", method = RequestMethod.POST)
     @ResponseBody
-    public Object upload(@RequestParam(name = "file") MultipartFile file) {
+    public MyResult<?> upload(@RequestParam(name = "file") MultipartFile file) {
         if (!Objects.isNull(file)) {
             Object object = fileService.fileUpload(file);
             Image image = new Image();
             image.setName(file.getOriginalFilename());
             image.setUrl(object.toString());
             imageService.add(image);
-            return Result.success(object);
+            return MyResult.success(object);
         } else {
-            return Result.fail(HttpStatus.BAD_REQUEST.getCode(), "upload failed");
+            return MyResult.fail(MyHttpStatus.BAD_REQUEST.getCode(), "upload failed");
         }
     }
 

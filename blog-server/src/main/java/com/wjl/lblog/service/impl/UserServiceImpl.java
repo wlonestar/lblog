@@ -1,7 +1,9 @@
 package com.wjl.lblog.service.impl;
 
+import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
+import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.wjl.lblog.model.entity.User;
-import com.wjl.lblog.repository.UserRepository;
+import com.wjl.lblog.repository.UserMapper;
 import com.wjl.lblog.service.intf.UserService;
 import org.springframework.beans.BeanUtils;
 import org.springframework.stereotype.Service;
@@ -17,14 +19,16 @@ import java.util.Objects;
  * @version: v1.0
  */
 @Service
-public class UserServiceImpl implements UserService {
+public class UserServiceImpl extends ServiceImpl<UserMapper, User>
+        implements UserService {
 
     @Resource
-    private UserRepository userRepository;
+    private UserMapper userMapper;
 
     @Override
     public List<User> findAll() {
-        return userRepository.findAll();
+        var wrapper = new LambdaQueryWrapper<User>();
+        return userMapper.selectList(wrapper);
     }
 
     @Override
@@ -40,7 +44,7 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public User findById(Long id) {
-        User user = userRepository.findUserById(id);
+        User user = userMapper.selectById(id);
         if (!Objects.isNull(user)) {
             return user;
         }
@@ -49,7 +53,9 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public User findByUsername(String username) {
-        User user = userRepository.findUserByUsername(username);
+        var wrapper = new LambdaQueryWrapper<User>();
+        wrapper.eq(User::getUsername, username);
+        User user = userMapper.selectOne(wrapper);
         if (!Objects.isNull(user)) {
             return user;
         }
@@ -58,7 +64,9 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public User findByUsernameAndPassword(String username, String password) {
-        User user = userRepository.findUserByUsernameAndPassword(username, password);
+        var wrapper = new LambdaQueryWrapper<User>();
+        wrapper.eq(User::getUsername, username).eq(User::getPassword, password);
+        User user = userMapper.selectOne(wrapper);
         if (!Objects.isNull(user)) {
             return user;
         }
@@ -70,8 +78,8 @@ public class UserServiceImpl implements UserService {
         if (!Objects.isNull(user)) {
             User user1 = new User();
             BeanUtils.copyProperties(user, user1, "id", "token");
-            userRepository.save(user1);
-            return true;
+            var res = userMapper.insert(user1);
+            return res == 1;
         }
         return false;
     }
@@ -79,11 +87,11 @@ public class UserServiceImpl implements UserService {
     @Override
     public boolean updateUser(Long id, User user) {
         if (!Objects.isNull(user)) {
-            User user1 = userRepository.findUserById(id);
+            User user1 = userMapper.selectById(id);
             if (!Objects.isNull(user1)) {
                 BeanUtils.copyProperties(user, user1, "id");
-                userRepository.save(user1);
-                return true;
+                var res = userMapper.insert(user1);
+                return res == 1;
             }
         }
         return false;
@@ -95,8 +103,8 @@ public class UserServiceImpl implements UserService {
             User user1 = findByUsername(username);
             if (!Objects.isNull(user1)) {
                 BeanUtils.copyProperties(user, user1, "id", "token", "password");
-                userRepository.save(user1);
-                return true;
+                var res = userMapper.insert(user1);
+                return res == 1;
             }
         }
         return false;
@@ -104,9 +112,9 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public boolean deleteById(Long id) {
-        if (!Objects.isNull(userRepository.findUserById(id))) {
-            userRepository.deleteById(id);
-            return true;
+        if (!Objects.isNull(userMapper.selectById(id))) {
+            var res = userMapper.deleteById(id);
+            return res == 1;
         }
         return false;
     }

@@ -7,8 +7,8 @@ import com.wjl.lblog.model.dto.CategoryDto;
 import com.wjl.lblog.model.entity.Category;
 import com.wjl.lblog.model.vo.ArticleTitleVo;
 import com.wjl.lblog.model.vo.CategoryArticleVo;
-import com.wjl.lblog.repository.ArticleRepository;
-import com.wjl.lblog.repository.CategoryRepository;
+import com.wjl.lblog.repository.ArticleMapper;
+import com.wjl.lblog.repository.CategoryMapper;
 import com.wjl.lblog.service.intf.CategoryService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.BeanUtils;
@@ -27,28 +27,28 @@ import java.util.Objects;
 @Slf4j
 @Service
 public class CategoryServiceImpl
-        extends ServiceImpl<CategoryRepository, Category>
+        extends ServiceImpl<CategoryMapper, Category>
         implements CategoryService {
 
     @Resource
-    private CategoryRepository categoryRepository;
+    private CategoryMapper categoryMapper;
 
     @Resource
-    private ArticleRepository articleRepository;
+    private ArticleMapper articleMapper;
 
     @Override
     public IPage<Category> selectCategoryByPage(Page<Category> page) {
-        return categoryRepository.selectCategoryByPage(page);
+        return categoryMapper.selectCategoryByPage(page);
     }
 
     @Override
     public List<Category> selectCategoryAll() {
-        return categoryRepository.selectCategoryAll();
+        return categoryMapper.selectCategoryAll();
     }
 
     @Override
     public Category selectCategoryById(Long id) {
-        Category category = categoryRepository.selectCategoryById(id);
+        Category category = categoryMapper.selectCategoryById(id);
         if (!Objects.isNull(category)) {
             return category;
         }
@@ -57,7 +57,7 @@ public class CategoryServiceImpl
 
     @Override
     public Category selectCategoryByName(String name) {
-        Category category = categoryRepository.selectCategoryByName(name);
+        Category category = categoryMapper.selectCategoryByName(name);
         if (!Objects.isNull(category)) {
             return category;
         }
@@ -66,7 +66,7 @@ public class CategoryServiceImpl
 
     @Override
     public CategoryArticleVo selectArticleByCategoryId(Long id, Page<ArticleTitleVo> page) {
-        Category category = categoryRepository.selectCategoryById(id);
+        Category category = categoryMapper.selectCategoryById(id);
         if (!Objects.isNull(category)) {
             return getByCategory(category, page);
         }
@@ -75,7 +75,7 @@ public class CategoryServiceImpl
 
     @Override
     public CategoryArticleVo selectArticleByCategoryName(String name, Page<ArticleTitleVo> page) {
-        Category category = categoryRepository.selectCategoryByName(name);
+        Category category = categoryMapper.selectCategoryByName(name);
         if (!Objects.isNull(category)) {
             return getByCategory(category, page);
         }
@@ -87,7 +87,7 @@ public class CategoryServiceImpl
         if (!Objects.isNull(categoryDto)) {
             Category category = new Category();
             BeanUtils.copyProperties(categoryDto, category);
-            int i = categoryRepository.insert(category);
+            int i = categoryMapper.insert(category);
             return i == 1;
         }
         return false;
@@ -96,10 +96,10 @@ public class CategoryServiceImpl
     @Override
     public boolean updateCategory(Long id, CategoryDto categoryDto) {
         if (!Objects.isNull(categoryDto)) {
-            Category category = categoryRepository.selectCategoryById(id);
+            Category category = categoryMapper.selectCategoryById(id);
             BeanUtils.copyProperties(categoryDto, category);
             category.setUpdateTime(new Date());
-            int i = categoryRepository.updateById(category);
+            int i = categoryMapper.updateById(category);
             return i == 1;
         }
         return false;
@@ -109,7 +109,7 @@ public class CategoryServiceImpl
     private CategoryArticleVo getByCategory(Category category, Page<ArticleTitleVo> page) {
         CategoryArticleVo categoryArticleVo = new CategoryArticleVo();
         BeanUtils.copyProperties(category, categoryArticleVo);
-        categoryArticleVo.setArticles(articleRepository.selectTitleByPage(page));
+        categoryArticleVo.setArticles(articleMapper.selectTitleByPage(page));
         return categoryArticleVo;
     }
 

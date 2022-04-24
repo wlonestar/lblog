@@ -1,5 +1,6 @@
 package com.wjl.lblog.service.intf;
 
+import com.baomidou.mybatisplus.extension.service.IService;
 import com.wjl.lblog.model.entity.User;
 
 import java.util.List;
@@ -9,19 +10,17 @@ import java.util.List;
  * @date: 2021/9/15 16:34
  * @version: v1.0
  */
-public interface UserService {
+public interface UserService extends IService<User> {
 
     List<User> findAll();
 
     List<String> findAllUsername();
-
 
     User findById(Long id);
 
     User findByUsername(String username);
 
     User findByUsernameAndPassword(String username, String password);
-
 
     boolean addUser(User user);
 

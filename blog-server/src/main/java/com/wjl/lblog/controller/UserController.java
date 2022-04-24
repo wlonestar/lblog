@@ -1,7 +1,7 @@
 package com.wjl.lblog.controller;
 
-import com.wjl.lblog.common.constants.Result;
-import com.wjl.lblog.common.enums.HttpStatus;
+import com.wjl.lblog.common.constants.MyResult;
+import com.wjl.lblog.common.enums.MyHttpStatus;
 import com.wjl.lblog.model.entity.User;
 import com.wjl.lblog.service.intf.UserService;
 import org.springframework.web.bind.annotation.*;
@@ -28,32 +28,33 @@ public class UserController {
      * @param user 用户
      */
     @RequestMapping(value = "/", method = RequestMethod.POST)
-    public Object add(@RequestBody User user) {
-        if (userService.addUser(user)) {
-            return user;
+    public MyResult<?> add(@RequestBody User user) {
+        var res = userService.addUser(user);
+        if (res) {
+            return MyResult.success();
         }
-        return Result.fail(HttpStatus.BAD_REQUEST.getCode(), "failed");
+        return MyResult.fail(MyHttpStatus.BAD_REQUEST.getCode(), "failed");
     }
 
     /**
      * 根据 id 获取用户信息
      */
     @RequestMapping(value = "/user", method = RequestMethod.GET)
-    public User getUserById(@RequestParam(name = "id") Long id) {
+    public MyResult<?> getUserById(@RequestParam(name = "id") Long id) {
         User user = userService.findById(id);
         user.setPassword(null);
-        return user;
+        return MyResult.success(user);
     }
 
     /**
      * 根据用户名获取用户信息
      */
     @RequestMapping(value = "/name", method = RequestMethod.GET)
-    public User getUserInfo(@RequestParam(name = "username") String username) {
+    public MyResult<?> getUserInfo(@RequestParam(name = "username") String username) {
         User user = userService.findByUsername(username);
         user.setId(null);
         user.setPassword(null);
-        return user;
+        return MyResult.success(user);
     }
 
     /**
@@ -62,11 +63,12 @@ public class UserController {
      * @param user 用户信息
      */
     @RequestMapping(value = "/password", method = RequestMethod.PUT)
-    public Object update(@RequestParam(name = "id") Long id, @RequestBody User user) {
-        if (userService.updateUser(id, user)) {
-            return user;
+    public MyResult<?> update(@RequestParam(name = "id") Long id, @RequestBody User user) {
+        var res = userService.updateUser(id, user);
+        if (res) {
+            return MyResult.success();
         } else {
-            return Result.fail(HttpStatus.BAD_REQUEST.getCode(), "failed");
+            return MyResult.fail(MyHttpStatus.BAD_REQUEST.getCode(), "failed");
         }
     }
 

@@ -1,14 +1,13 @@
 package com.wjl.lblog.controller;
 
+import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
+import com.wjl.lblog.common.constants.MyResult;
+import com.wjl.lblog.common.enums.MyHttpStatus;
 import com.wjl.lblog.model.entity.Comment;
 import com.wjl.lblog.service.intf.CommentService;
-import org.springframework.data.domain.Page;
-import org.springframework.data.domain.PageRequest;
-import org.springframework.data.domain.Sort;
 import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
-import java.util.List;
 
 /**
  * 留言接口
@@ -31,19 +30,20 @@ public class CommentController {
      * @param size size
      */
     @RequestMapping(value = "/page", method = RequestMethod.GET)
-    public Page<Comment> findAllByPage(
+    public MyResult<?> findAllByPage(
             @RequestParam(name = "page", defaultValue = "1") int page,
             @RequestParam(name = "size", defaultValue = "5") int size) {
-        return commentService.findAllByPage(
-                PageRequest.of(page - 1, size, Sort.Direction.DESC, "createTime"));
+        var res = commentService.findAllByPage(new Page<>(page, size));
+        return MyResult.success(res);
     }
 
     /**
      * 查询所有留言
      */
     @RequestMapping(value = "/all", method = RequestMethod.GET)
-    public List<Comment> findAll() {
-        return commentService.findAll();
+    public MyResult<?> findAll() {
+        var res = commentService.findAll();
+        return MyResult.success(res);
     }
 
     /**
@@ -52,8 +52,9 @@ public class CommentController {
      * @param id id
      */
     @RequestMapping(value = "/{id}", method = RequestMethod.GET)
-    public Comment findById(@PathVariable(name = "id") Long id) {
-        return commentService.findById(id);
+    public MyResult<?> findById(@PathVariable(name = "id") Long id) {
+        var res = commentService.findById(id);
+        return MyResult.success(res);
     }
 
     /**
@@ -62,8 +63,13 @@ public class CommentController {
      * @param comment comment
      */
     @RequestMapping(value = "/", method = RequestMethod.POST)
-    public Comment add(@RequestBody Comment comment) {
-        return commentService.add(comment);
+    public MyResult<?> add(@RequestBody Comment comment) {
+        var res = commentService.add(comment);
+        if (res) {
+            return MyResult.success();
+        } else {
+            return MyResult.fail(MyHttpStatus.BAD_REQUEST.getCode(), "增加留言失败");
+        }
     }
 
     /**
@@ -73,8 +79,13 @@ public class CommentController {
      * @param comment comment
      */
     @RequestMapping(value = "/", method = RequestMethod.PUT)
-    public Comment update(@RequestParam("id") Long id, @RequestBody Comment comment) {
-        return commentService.update(id, comment);
+    public MyResult<?> update(@RequestParam("id") Long id, @RequestBody Comment comment) {
+        var res = commentService.update(id, comment);
+        if (res) {
+            return MyResult.success();
+        } else {
+            return MyResult.fail(MyHttpStatus.BAD_REQUEST.getCode(), "更新留言失败");
+        }
     }
 
     /**
@@ -83,16 +94,13 @@ public class CommentController {
      * @param id id
      */
     @RequestMapping(value = "/", method = RequestMethod.DELETE)
-    public Long deleteById(@RequestParam("id") Long id) {
-        return commentService.deleteById(id);
-    }
-
-    /**
-     * 删除所有留言
-     */
-    @RequestMapping(value = "/delete", method = RequestMethod.DELETE)
-    public void deleteAll() {
-        commentService.deleteAll();
+    public MyResult<?> deleteById(@RequestParam("id") Long id) {
+        var res = commentService.deleteById(id);
+        if (res) {
+            return MyResult.success();
+        } else {
+            return MyResult.fail(MyHttpStatus.BAD_REQUEST.getCode(), "删除留言失败");
+        }
     }
 
 }

@@ -1,10 +1,10 @@
 package com.wjl.lblog.controller;
 
+import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
+import com.wjl.lblog.common.constants.MyResult;
+import com.wjl.lblog.common.enums.MyHttpStatus;
 import com.wjl.lblog.model.entity.Timeline;
 import com.wjl.lblog.service.intf.TimelineService;
-import org.springframework.data.domain.Page;
-import org.springframework.data.domain.PageRequest;
-import org.springframework.data.domain.Sort;
 import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
@@ -31,19 +31,20 @@ public class TimelineController {
      * @param size 数量
      */
     @RequestMapping(value = "/page", method = RequestMethod.GET)
-    public Page<Timeline> findAllByPage(
+    public MyResult<?> findAllByPage(
             @RequestParam(name = "page", defaultValue = "1") int page,
             @RequestParam(name = "size", defaultValue = "10") int size) {
-        return TimelineService.findAllByPage(
-                PageRequest.of(page - 1, size, Sort.Direction.DESC, "createTime"));
+        var res = TimelineService.findAllByPage(new Page<>(page, size));
+        return MyResult.success(res);
     }
 
     /**
      * 查询所有时间线
      */
     @RequestMapping(value = "/all", method = RequestMethod.GET)
-    public List<Timeline> findAll() {
-        return TimelineService.findAll();
+    public MyResult<?> findAll() {
+        var res = TimelineService.findAll();
+        return MyResult.success(res);
     }
 
     /**
@@ -52,8 +53,9 @@ public class TimelineController {
      * @param id id
      */
     @RequestMapping(value = "/{id}", method = RequestMethod.GET)
-    public Timeline findById(@PathVariable(name = "id") Long id) {
-        return TimelineService.findById(id);
+    public MyResult<?> findById(@PathVariable(name = "id") Long id) {
+        var res = TimelineService.findById(id);
+        return MyResult.success(res);
     }
 
     /**
@@ -62,8 +64,13 @@ public class TimelineController {
      * @param idea 时间线
      */
     @RequestMapping(value = "/", method = RequestMethod.POST)
-    public Timeline add(@RequestBody Timeline idea) {
-        return TimelineService.add(idea);
+    public MyResult<?> add(@RequestBody Timeline idea) {
+        var res = TimelineService.add(idea);
+        if (res) {
+            return MyResult.success();
+        } else {
+            return MyResult.fail(MyHttpStatus.BAD_REQUEST.getCode(), "增加失败");
+        }
     }
 
     /**
@@ -73,8 +80,13 @@ public class TimelineController {
      * @param idea 时间线
      */
     @RequestMapping(value = "/", method = RequestMethod.PUT)
-    public Timeline update(@RequestParam(name = "id") Long id, @RequestBody Timeline idea) {
-        return TimelineService.update(id, idea);
+    public MyResult<?> update(@RequestParam(name = "id") Long id, @RequestBody Timeline idea) {
+        var res = TimelineService.update(id, idea);
+        if (res) {
+            return MyResult.success();
+        } else {
+            return MyResult.fail(MyHttpStatus.BAD_REQUEST.getCode(), "更新失败");
+        }
     }
 
     /**
@@ -83,16 +95,13 @@ public class TimelineController {
      * @param id id
      */
     @RequestMapping(value = "/{id}", method = RequestMethod.DELETE)
-    public Long deleteById(@PathVariable(name = "id") Long id) {
-        return TimelineService.deleteById(id);
-    }
-
-    /**
-     * 删除所有时间线
-     */
-    @RequestMapping(value = "/", method = RequestMethod.DELETE)
-    public void deleteAll() {
-        TimelineService.deleteAll();
+    public MyResult<?> deleteById(@PathVariable(name = "id") Long id) {
+        var res = TimelineService.deleteById(id);
+        if (res) {
+            return MyResult.success();
+        } else {
+            return MyResult.fail(MyHttpStatus.BAD_REQUEST.getCode(), "删除失败");
+        }
     }
 
 }

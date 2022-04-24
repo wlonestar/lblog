@@ -24,13 +24,11 @@ public interface ArticleService extends IService<Article> {
 
     IPage<ArticleTitleVo> selectTitleByPage(Page<ArticleTitleVo> page);
 
-
     List<ArticleDetailVo> selectDetailAll();
 
     List<ArticleSummaryVo> selectSummaryAll();
 
     List<ArticleTitleVo> selectTitleAll();
-
 
     ArticleDetailVo selectDetailById(Long id);
 
@@ -38,13 +36,11 @@ public interface ArticleService extends IService<Article> {
 
     ArticleTitleVo selectTitleById(Long id);
 
-
     ArticleDetailVo selectDetailByTitle(String title);
 
     ArticleSummaryVo selectSummaryByTitle(String title);
 
     ArticleTitleVo selectTitleByTitle(String title);
-
 
     boolean addArticle(ArticleDto articleDto);
 

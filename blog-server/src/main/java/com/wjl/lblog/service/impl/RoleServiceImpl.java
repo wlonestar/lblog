@@ -1,11 +1,13 @@
 package com.wjl.lblog.service.impl;
 
+import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
+import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.wjl.lblog.model.dto.RolePermissionDto;
 import com.wjl.lblog.model.entity.Role;
 import com.wjl.lblog.model.entity.RolePermission;
-import com.wjl.lblog.repository.PermissionRepository;
-import com.wjl.lblog.repository.RolePermissionRepository;
-import com.wjl.lblog.repository.RoleRepository;
+import com.wjl.lblog.repository.RolePermissionMapper;
+import com.wjl.lblog.repository.RoleMapper;
+import com.wjl.lblog.service.intf.PermissionService;
 import com.wjl.lblog.service.intf.RoleService;
 import org.springframework.stereotype.Service;
 
@@ -19,39 +21,45 @@ import java.util.Objects;
  * @version: v1.0
  */
 @Service
-public class RoleServiceImpl implements RoleService {
+public class RoleServiceImpl extends ServiceImpl<RoleMapper, Role>
+        implements RoleService {
 
     @Resource
-    private RoleRepository roleRepository;
+    private RoleMapper roleMapper;
 
     @Resource
-    private PermissionRepository permissionRepository;
+    private PermissionService permissionService;
 
     @Resource
-    private RolePermissionRepository rolePermissionRepository;
+    private RolePermissionMapper rolePermissionMapper;
 
     @Override
     public List<Role> findAllRoles() {
-        return roleRepository.findAll();
+        var wrapper = new LambdaQueryWrapper<Role>();
+        return roleMapper.selectList(wrapper);
     }
 
     @Override
     public Role findRoleById(Long rid) {
-        return roleRepository.findRoleById(rid);
+        var wrapper = new LambdaQueryWrapper<Role>();
+        wrapper.eq(Role::getId, rid);
+        return roleMapper.selectOne(wrapper);
     }
 
     @Override
     public Role findRoleByRoleName(String role) {
-        return roleRepository.findRoleByRole(role);
+        var wrapper = new LambdaQueryWrapper<Role>();
+        wrapper.eq(Role::getRole, role);
+        return roleMapper.selectOne(wrapper);
     }
 
     @Override
-    public String addRole(Role role) {
+    public boolean addRole(Role role) {
         if (!Objects.isNull(role)) {
-            roleRepository.save(role);
-            return role.getRole();
+            var res = roleMapper.insert(role);
+            return res == 1;
         }
-        return null;
+        return false;
     }
 
     @Override
@@ -59,10 +67,10 @@ public class RoleServiceImpl implements RoleService {
         if (!Objects.isNull(rolePermissionDto)) {
             RolePermission rolePermission = new RolePermission();
             String role = rolePermissionDto.getRole();
-            rolePermission.setRid(roleRepository.findRoleByRole(role).getId());
+            rolePermission.setRid(findRoleByRoleName(role).getId());
             String permission = rolePermissionDto.getPermission();
-            rolePermission.setPid(permissionRepository.findPermissionByPermission(permission).getId());
-            rolePermissionRepository.save(rolePermission);
+            rolePermission.setPid(permissionService.findPermissionByPermission(permission).getId());
+            rolePermissionMapper.insert(rolePermission);
             return true;
         }
         return false;

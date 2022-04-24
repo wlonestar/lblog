@@ -50,7 +50,7 @@ public class StpInterfaceImpl implements StpInterface {
             Role role = roleService.findRoleById(userRole.getRid());
             List<RolePermission> rolePermissions = rolePermissionService.findAllByRole(role);
             for (RolePermission rolePermission : rolePermissions) {
-                Permission permission = permissionService.fnidPermissionById(rolePermission.getPid());
+                Permission permission = permissionService.findPermissionById(rolePermission.getPid());
                 permissions.add(permission.getPermission());
             }
         }

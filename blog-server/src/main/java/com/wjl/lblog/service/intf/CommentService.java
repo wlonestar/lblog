@@ -1,8 +1,9 @@
 package com.wjl.lblog.service.intf;
 
+import com.baomidou.mybatisplus.core.metadata.IPage;
+import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
+import com.baomidou.mybatisplus.extension.service.IService;
 import com.wjl.lblog.model.entity.Comment;
-import org.springframework.data.domain.Page;
-import org.springframework.data.domain.Pageable;
 
 import java.util.List;
 
@@ -11,20 +12,18 @@ import java.util.List;
  * @date: 2021/9/13 22:51
  * @version: v1.0
  */
-public interface CommentService {
+public interface CommentService extends IService<Comment> {
 
-    Page<Comment> findAllByPage(Pageable pageable);
+    IPage<Comment> findAllByPage(Page<Comment> page);
 
     List<Comment> findAll();
 
     Comment findById(Long id);
 
-    Comment add(Comment comment);
+    boolean add(Comment comment);
 
-    Comment update(Long id, Comment comment);
+    boolean update(Long id, Comment comment);
 
-    Long deleteById(Long id);
-
-    void deleteAll();
+    boolean deleteById(Long id);
 
 }

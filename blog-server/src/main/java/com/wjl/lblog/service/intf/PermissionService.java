@@ -1,5 +1,6 @@
 package com.wjl.lblog.service.intf;
 
+import com.baomidou.mybatisplus.extension.service.IService;
 import com.wjl.lblog.model.entity.Permission;
 
 import java.util.List;
@@ -9,11 +10,13 @@ import java.util.List;
  * @date: 2021/12/8 20:37
  * @version: v1.0
  */
-public interface PermissionService {
+public interface PermissionService extends IService<Permission> {
 
     List<Permission> findAllPermission();
 
-    Permission fnidPermissionById(Long pid);
+    Permission findPermissionById(Long pid);
+
+    Permission findPermissionByPermission(String permission);
 
     String addPermission(Permission permission);
 

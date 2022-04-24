@@ -1,8 +1,9 @@
 package com.wjl.lblog.service.intf;
 
+import com.baomidou.mybatisplus.core.metadata.IPage;
+import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
+import com.baomidou.mybatisplus.extension.service.IService;
 import com.wjl.lblog.model.entity.Image;
-import org.springframework.data.domain.Page;
-import org.springframework.data.domain.Pageable;
 
 import java.util.List;
 
@@ -11,12 +12,12 @@ import java.util.List;
  * @date: 2021/9/18 22:32
  * @version: v1.0
  */
-public interface ImageService {
+public interface ImageService extends IService<Image> {
 
     List<Image> findAll();
 
-    Page<Image> findAllByPage(Pageable pageable);
+    IPage<Image> findAllByPage(Page<Image> page);
 
-    Image add(Image image);
+    boolean add(Image image);
 
 }
