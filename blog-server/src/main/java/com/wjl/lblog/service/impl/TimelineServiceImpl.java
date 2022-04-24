@@ -3,6 +3,7 @@ package com.wjl.lblog.service.impl;
 import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
+import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.wjl.lblog.model.entity.Timeline;
 import com.wjl.lblog.repository.TimelineMapper;
 import com.wjl.lblog.service.intf.TimelineService;
@@ -18,7 +19,8 @@ import java.util.Objects;
  * @version: v1.0
  */
 @Service
-public class TimelineServiceImpl implements TimelineService {
+public class TimelineServiceImpl extends ServiceImpl<TimelineMapper, Timeline>
+        implements TimelineService {
 
     @Resource
     private TimelineMapper timelineMapper;

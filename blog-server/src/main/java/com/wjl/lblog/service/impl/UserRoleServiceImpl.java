@@ -1,6 +1,7 @@
 package com.wjl.lblog.service.impl;
 
 import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
+import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.wjl.lblog.model.entity.User;
 import com.wjl.lblog.model.entity.UserRole;
 import com.wjl.lblog.repository.UserRoleMapper;
@@ -16,7 +17,8 @@ import java.util.List;
  * @version: v1.0
  */
 @Service
-public class UserRoleServiceImpl implements UserRoleService {
+public class UserRoleServiceImpl extends ServiceImpl<UserRoleMapper, UserRole>
+        implements UserRoleService {
 
     @Resource
     private UserRoleMapper userRoleMapper;

@@ -3,6 +3,7 @@ package com.wjl.lblog.service.impl;
 import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
+import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.wjl.lblog.model.entity.Image;
 import com.wjl.lblog.repository.ImageMapper;
 import com.wjl.lblog.service.intf.ImageService;
@@ -17,7 +18,8 @@ import java.util.List;
  * @version: v1.0
  */
 @Service
-public class ImageServiceImpl implements ImageService {
+public class ImageServiceImpl extends ServiceImpl<ImageMapper, Image>
+        implements ImageService {
 
     @Resource
     private ImageMapper imageMapper;

@@ -26,8 +26,7 @@ import java.util.Objects;
  * @version: v1.0
  */
 @Service
-public class ArticleServiceImpl
-        extends ServiceImpl<ArticleMapper, Article>
+public class ArticleServiceImpl extends ServiceImpl<ArticleMapper, Article>
         implements ArticleService {
 
     @Resource

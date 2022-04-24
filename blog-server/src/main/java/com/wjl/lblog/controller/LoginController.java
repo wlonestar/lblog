@@ -125,7 +125,7 @@ public class LoginController {
                 UserRole userRole = new UserRole();
                 userRole.setUid(uid);
                 userRole.setRid(rid);
-                userRoleService.addUserRole(userRole);
+                var res = userRoleService.addUserRole(userRole);
                 return MyResult.success("register success");
             } else {
                 return MyResult.fail(MyHttpStatus.BAD_REQUEST.getCode(), "The two passwords entered are inconsistent");

@@ -3,6 +3,7 @@ package com.wjl.lblog.service.impl;
 import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
+import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.wjl.lblog.model.entity.Comment;
 import com.wjl.lblog.repository.CommentMapper;
 import com.wjl.lblog.service.intf.CommentService;
@@ -18,7 +19,9 @@ import java.util.Objects;
  * @version: v1.0
  */
 @Service
-public class CommentServiceImpl implements CommentService {
+public class CommentServiceImpl
+        extends ServiceImpl<CommentMapper, Comment>
+        implements CommentService {
 
     @Resource
     private CommentMapper commentMapper;

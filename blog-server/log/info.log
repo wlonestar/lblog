@@ -37,3 +37,16 @@
 [2022-04-24 16:22:39][RMI TCP Connection(3)-172.30.32.1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
 [2022-04-24 16:22:44][SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
 [2022-04-24 16:22:44][SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+[2022-04-24 19:01:08][restartedMain] INFO  com.wjl.lblog.BlogServerApplication - Starting BlogServerApplication using Java 17.0.2 on lonestar with PID 34884 (D:\wjl\workspace\repository\lblog\blog-server\build\classes\java\main started by wjl15 in D:\wjl\workspace\repository\lblog\blog-server)
+[2022-04-24 19:01:08][restartedMain] INFO  com.wjl.lblog.BlogServerApplication - No active profile set, falling back to 1 default profile: "default"
+[2022-04-24 19:01:09][restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8088"]
+[2022-04-24 19:01:09][restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+[2022-04-24 19:01:09][restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.60]
+[2022-04-24 19:01:09][restartedMain] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+[2022-04-24 19:01:11][restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+[2022-04-24 19:01:11][restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+[2022-04-24 19:01:11][restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8088"]
+[2022-04-24 19:01:11][restartedMain] INFO  com.wjl.lblog.BlogServerApplication - Started BlogServerApplication in 4.038 seconds (JVM running for 4.978)
+[2022-04-24 19:01:11][RMI TCP Connection(3)-172.30.32.1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+[2022-04-24 19:01:15][SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+[2022-04-24 19:01:15][SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.

@@ -1,6 +1,7 @@
 package com.wjl.lblog.service.impl;
 
 import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
+import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.wjl.lblog.model.entity.Permission;
 import com.wjl.lblog.repository.PermissionMapper;
 import com.wjl.lblog.service.intf.PermissionService;
@@ -16,7 +17,8 @@ import java.util.Objects;
  * @version: v1.0
  */
 @Service
-public class PermissionServiceImpl implements PermissionService {
+public class PermissionServiceImpl extends ServiceImpl<PermissionMapper, Permission>
+        implements PermissionService {
 
     @Resource
     private PermissionMapper permissionMapper;

@@ -1,6 +1,7 @@
 package com.wjl.lblog.service.impl;
 
 import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
+import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.wjl.lblog.model.entity.User;
 import com.wjl.lblog.repository.UserMapper;
 import com.wjl.lblog.service.intf.UserService;
@@ -18,7 +19,8 @@ import java.util.Objects;
  * @version: v1.0
  */
 @Service
-public class UserServiceImpl implements UserService {
+public class UserServiceImpl extends ServiceImpl<UserMapper, User>
+        implements UserService {
 
     @Resource
     private UserMapper userMapper;
