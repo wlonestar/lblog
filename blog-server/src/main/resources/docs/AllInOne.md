@@ -1,7 +1,7 @@
 # lblog
 Version |  Update Time  | Status | Author |  Description
 ---|---|---|---|---
-v2022-04-25 15:21:59|2022-04-25 15:21:59|auto|@wjl15|Created by smart-doc
+v2022-04-25 21:13:49|2022-04-25 21:13:49|auto|@wjl15|Created by smart-doc
 
 
 
@@ -38,8 +38,8 @@ data|object|No comments found.|-
 **Response-example:**
 ```
 {
-  "status": 602,
-  "msg": "zna1x9",
+  "status": 359,
+  "msg": "g45fat",
   "data": {}
 }
 ```
@@ -76,8 +76,8 @@ data|object|No comments found.|-
 **Response-example:**
 ```
 {
-  "status": 866,
-  "msg": "qn8d6g",
+  "status": 620,
+  "msg": "f3m5hk",
   "data": {}
 }
 ```
@@ -107,8 +107,8 @@ data|object|No comments found.|-
 **Response-example:**
 ```
 {
-  "status": 650,
-  "msg": "4tc25t",
+  "status": 724,
+  "msg": "ogdfc1",
   "data": {}
 }
 ```
@@ -138,8 +138,8 @@ data|object|No comments found.|-
 **Response-example:**
 ```
 {
-  "status": 925,
-  "msg": "o7f43v",
+  "status": 511,
+  "msg": "m5s6ua",
   "data": {}
 }
 ```
@@ -162,7 +162,7 @@ id|int64|id|true|-
 
 **Request-example:**
 ```
-curl -X GET -i http://localhost:8088/article/detail/id?id=667 --data '667'
+curl -X GET -i http://localhost:8088/article/detail/id?id=923 --data '923'
 ```
 **Response-fields:**
 
@@ -175,8 +175,8 @@ data|object|No comments found.|-
 **Response-example:**
 ```
 {
-  "status": 722,
-  "msg": "5l7v6w",
+  "status": 674,
+  "msg": "qz0308",
   "data": {}
 }
 ```
@@ -199,7 +199,7 @@ id|int64|id|true|-
 
 **Request-example:**
 ```
-curl -X GET -i http://localhost:8088/article/summary/id?id=439 --data '439'
+curl -X GET -i http://localhost:8088/article/summary/id?id=886 --data '886'
 ```
 **Response-fields:**
 
@@ -212,8 +212,8 @@ data|object|No comments found.|-
 **Response-example:**
 ```
 {
-  "status": 389,
-  "msg": "2909n9",
+  "status": 631,
+  "msg": "8ey7av",
   "data": {}
 }
 ```
@@ -242,13 +242,13 @@ tags|array|No comments found.|false|-
 **Request-example:**
 ```
 curl -X POST -H 'Content-Type: application/json; charset=utf-8' -i http://localhost:8088/article/ --data '{
-  "title": "myxbc3",
-  "summary": "elo4gf",
-  "image": "o8c4bv",
-  "content": "w8t1qd",
-  "category": "kz0dnu",
+  "title": "8xhdan",
+  "summary": "rjocyg",
+  "image": "yojjvd",
+  "content": "xot5dg",
+  "category": "setm1h",
   "tags": [
-    "a4ub39"
+    "4rxffg"
   ]
 }'
 ```
@@ -263,8 +263,8 @@ data|object|No comments found.|-
 **Response-example:**
 ```
 {
-  "status": 342,
-  "msg": "7vfeoh",
+  "status": 873,
+  "msg": "oa2yqt",
   "data": {}
 }
 ```
@@ -298,14 +298,14 @@ tags|array|No comments found.|false|-
 
 **Request-example:**
 ```
-curl -X PUT -H 'Content-Type: application/json; charset=utf-8' -i http://localhost:8088/article/?id=937 --data '{
-  "title": "abrgzt",
-  "summary": "sxrudq",
-  "image": "88j5zx",
-  "content": "3bu8yz",
-  "category": "aj89g4",
+curl -X PUT -H 'Content-Type: application/json; charset=utf-8' -i http://localhost:8088/article/?id=32 --data '{
+  "title": "yh6vly",
+  "summary": "at3mvq",
+  "image": "ippyc9",
+  "content": "dtkdd6",
+  "category": "rq2xht",
   "tags": [
-    "08jbcm"
+    "vsnpq6"
   ]
 }'
 ```
@@ -320,8 +320,8 @@ data|object|No comments found.|-
 **Response-example:**
 ```
 {
-  "status": 755,
-  "msg": "qfnd8n",
+  "status": 324,
+  "msg": "xpsx2z",
   "data": {}
 }
 ```
@@ -344,7 +344,7 @@ id|int64|id|true|-
 
 **Request-example:**
 ```
-curl -X DELETE -i http://localhost:8088/article/58
+curl -X DELETE -i http://localhost:8088/article/839
 ```
 **Response-fields:**
 
@@ -357,8 +357,8 @@ data|object|No comments found.|-
 **Response-example:**
 ```
 {
-  "status": 202,
-  "msg": "vs3ed4",
+  "status": 906,
+  "msg": "q0v7mz",
   "data": {}
 }
 ```
@@ -384,8 +384,8 @@ password|string|No comments found.|false|-
 **Request-example:**
 ```
 curl -X POST -H 'Content-Type: application/json; charset=utf-8' -i http://localhost:8088/admin/login --data '{
-  "username": "tora.aufderhar",
-  "password": "0jjte5"
+  "username": "roscoe.tromp",
+  "password": "s4ly4b"
 }'
 ```
 **Response-fields:**
@@ -399,8 +399,8 @@ data|object|No comments found.|-
 **Response-example:**
 ```
 {
-  "status": 877,
-  "msg": "hmby02",
+  "status": 943,
+  "msg": "g2yme0",
   "data": {}
 }
 ```
@@ -424,7 +424,7 @@ tokenValue|string|token|true|-
 
 **Request-example:**
 ```
-curl -X GET -i http://localhost:8088/admin/check?username=tora.aufderhar&tokenValue=knayhu --data 'knayhu'
+curl -X GET -i http://localhost:8088/admin/check?username=roscoe.tromp&tokenValue=ooug0i --data 'ooug0i'
 ```
 **Response-fields:**
 
@@ -437,8 +437,8 @@ data|object|No comments found.|-
 **Response-example:**
 ```
 {
-  "status": 539,
-  "msg": "38uyku",
+  "status": 670,
+  "msg": "i7w4fb",
   "data": {}
 }
 ```
@@ -461,7 +461,7 @@ tokenValue|string|token|true|-
 
 **Request-example:**
 ```
-curl -X POST -i http://localhost:8088/admin/logout --data 'tokenValue=22uqnd'
+curl -X POST -i http://localhost:8088/admin/logout --data 'tokenValue=17aqhf'
 ```
 **Response-fields:**
 
@@ -474,8 +474,8 @@ data|object|No comments found.|-
 **Response-example:**
 ```
 {
-  "status": 555,
-  "msg": "ex5o6f",
+  "status": 916,
+  "msg": "8eht84",
   "data": {}
 }
 ```
@@ -501,9 +501,9 @@ passwordRepeat|string|No comments found.|false|-
 **Request-example:**
 ```
 curl -X POST -H 'Content-Type: application/json; charset=utf-8' -i http://localhost:8088/admin/register --data '{
-  "username": "tora.aufderhar",
-  "password": "ynubmq",
-  "passwordRepeat": "0r7h0c"
+  "username": "roscoe.tromp",
+  "password": "gbuqlu",
+  "passwordRepeat": "jb15am"
 }'
 ```
 **Response-fields:**
@@ -517,8 +517,8 @@ data|object|No comments found.|-
 **Response-example:**
 ```
 {
-  "status": 309,
-  "msg": "k4t0sy",
+  "status": 388,
+  "msg": "9ggfl5",
   "data": {}
 }
 ```
@@ -556,8 +556,8 @@ data|object|No comments found.|-
 **Response-example:**
 ```
 {
-  "status": 587,
-  "msg": "i19ji8",
+  "status": 714,
+  "msg": "e8t93w",
   "data": {}
 }
 ```
@@ -587,8 +587,8 @@ data|object|No comments found.|-
 **Response-example:**
 ```
 {
-  "status": 597,
-  "msg": "utcwwj",
+  "status": 59,
+  "msg": "fsf0fb",
   "data": {}
 }
 ```
@@ -613,7 +613,7 @@ size|int32|size|true|-
 
 **Request-example:**
 ```
-curl -X GET -i http://localhost:8088/category/article/id?id=178&page=1&size=7 --data '"7"'
+curl -X GET -i http://localhost:8088/category/article/id?id=681&page=1&size=7 --data '"7"'
 ```
 **Response-fields:**
 
@@ -626,8 +626,8 @@ data|object|No comments found.|-
 **Response-example:**
 ```
 {
-  "status": 637,
-  "msg": "muzuk4",
+  "status": 425,
+  "msg": "bgeauj",
   "data": {}
 }
 ```
@@ -652,7 +652,7 @@ size|int32|size|true|-
 
 **Request-example:**
 ```
-curl -X GET -i http://localhost:8088/category/article/name?name=tora.aufderhar&page=1&size=7 --data '"7"'
+curl -X GET -i http://localhost:8088/category/article/name?name=roscoe.tromp&page=1&size=7 --data '"7"'
 ```
 **Response-fields:**
 
@@ -665,8 +665,8 @@ data|object|No comments found.|-
 **Response-example:**
 ```
 {
-  "status": 467,
-  "msg": "wfbvj2",
+  "status": 808,
+  "msg": "l9nj0g",
   "data": {}
 }
 ```
@@ -689,7 +689,7 @@ id|int64|id|true|-
 
 **Request-example:**
 ```
-curl -X GET -i http://localhost:8088/category/id?id=301 --data '301'
+curl -X GET -i http://localhost:8088/category/id?id=756 --data '756'
 ```
 **Response-fields:**
 
@@ -702,8 +702,8 @@ data|object|No comments found.|-
 **Response-example:**
 ```
 {
-  "status": 487,
-  "msg": "q6mbcb",
+  "status": 175,
+  "msg": "1xy30s",
   "data": {}
 }
 ```
@@ -726,7 +726,7 @@ name|string|name|true|-
 
 **Request-example:**
 ```
-curl -X GET -i http://localhost:8088/category/name?name=tora.aufderhar --data 'tora.aufderhar'
+curl -X GET -i http://localhost:8088/category/name?name=roscoe.tromp --data 'roscoe.tromp'
 ```
 **Response-fields:**
 
@@ -739,8 +739,8 @@ data|object|No comments found.|-
 **Response-example:**
 ```
 {
-  "status": 573,
-  "msg": "0kexyf",
+  "status": 676,
+  "msg": "2l1e1a",
   "data": {}
 }
 ```
@@ -763,7 +763,7 @@ category|string|category|false|-
 
 **Request-example:**
 ```
-curl -X POST -H 'Content-Type: application/json; charset=utf-8' -i http://localhost:8088/category/ --data 'twahj2'
+curl -X POST -H 'Content-Type: application/json; charset=utf-8' -i http://localhost:8088/category/ --data 'vt0kkq'
 ```
 **Response-fields:**
 
@@ -776,8 +776,8 @@ data|object|No comments found.|-
 **Response-example:**
 ```
 {
-  "status": 240,
-  "msg": "9qb3ir",
+  "status": 97,
+  "msg": "2pu0li",
   "data": {}
 }
 ```
@@ -800,7 +800,7 @@ id|int64|id|true|-
 
 **Request-example:**
 ```
-curl -X DELETE -i http://localhost:8088/category/?id=342 --data '342'
+curl -X DELETE -i http://localhost:8088/category/?id=219 --data '219'
 ```
 **Response-fields:**
 
@@ -813,8 +813,8 @@ data|object|No comments found.|-
 **Response-example:**
 ```
 {
-  "status": 533,
-  "msg": "4y5tqq",
+  "status": 362,
+  "msg": "lll0on",
   "data": {}
 }
 ```
@@ -852,8 +852,8 @@ data|object|No comments found.|-
 **Response-example:**
 ```
 {
-  "status": 864,
-  "msg": "qgxsfk",
+  "status": 453,
+  "msg": "xlif9y",
   "data": {}
 }
 ```
@@ -883,8 +883,8 @@ data|object|No comments found.|-
 **Response-example:**
 ```
 {
-  "status": 215,
-  "msg": "auxasm",
+  "status": 533,
+  "msg": "bfqwoy",
   "data": {}
 }
 ```
@@ -907,7 +907,7 @@ id|int64|id|true|-
 
 **Request-example:**
 ```
-curl -X GET -i http://localhost:8088/comment/919
+curl -X GET -i http://localhost:8088/comment/149
 ```
 **Response-fields:**
 
@@ -920,8 +920,8 @@ data|object|No comments found.|-
 **Response-example:**
 ```
 {
-  "status": 449,
-  "msg": "mxaz53",
+  "status": 572,
+  "msg": "wtl08n",
   "data": {}
 }
 ```
@@ -951,13 +951,13 @@ email|string|邮箱|false|-
 **Request-example:**
 ```
 curl -X POST -H 'Content-Type: application/json; charset=utf-8' -i http://localhost:8088/comment/ --data '{
-  "id": 737,
-  "createTime": "2022-04-25 15:58:19",
-  "content": "r4099v",
-  "username": "tora.aufderhar",
-  "avatar": "9y2u7t",
-  "site": "l34tw8",
-  "email": "wayne.schimmel@gmail.com"
+  "id": 426,
+  "createTime": "2022-04-25 21:13:52",
+  "content": "u5scbn",
+  "username": "roscoe.tromp",
+  "avatar": "y4edqv",
+  "site": "g1m1uw",
+  "email": "asa.sipes@hotmail.com"
 }'
 ```
 **Response-fields:**
@@ -971,8 +971,8 @@ data|object|No comments found.|-
 **Response-example:**
 ```
 {
-  "status": 951,
-  "msg": "xu6a8n",
+  "status": 263,
+  "msg": "s4cnix",
   "data": {}
 }
 ```
@@ -1007,14 +1007,14 @@ email|string|邮箱|false|-
 
 **Request-example:**
 ```
-curl -X PUT -H 'Content-Type: application/json; charset=utf-8' -i http://localhost:8088/comment/?id=200 --data '{
-  "id": 77,
-  "createTime": "2022-04-25 15:58:19",
-  "content": "jzpz9f",
-  "username": "tora.aufderhar",
-  "avatar": "ghz1q4",
-  "site": "70yyrk",
-  "email": "wayne.schimmel@gmail.com"
+curl -X PUT -H 'Content-Type: application/json; charset=utf-8' -i http://localhost:8088/comment/?id=880 --data '{
+  "id": 19,
+  "createTime": "2022-04-25 21:13:52",
+  "content": "l7kjox",
+  "username": "roscoe.tromp",
+  "avatar": "dkxhcd",
+  "site": "8dtit0",
+  "email": "asa.sipes@hotmail.com"
 }'
 ```
 **Response-fields:**
@@ -1028,8 +1028,8 @@ data|object|No comments found.|-
 **Response-example:**
 ```
 {
-  "status": 487,
-  "msg": "668ao0",
+  "status": 287,
+  "msg": "drs6nc",
   "data": {}
 }
 ```
@@ -1052,7 +1052,7 @@ id|int64|id|true|-
 
 **Request-example:**
 ```
-curl -X DELETE -i http://localhost:8088/comment/?id=570 --data '570'
+curl -X DELETE -i http://localhost:8088/comment/?id=811 --data '811'
 ```
 **Response-fields:**
 
@@ -1065,8 +1065,8 @@ data|object|No comments found.|-
 **Response-example:**
 ```
 {
-  "status": 570,
-  "msg": "l3adou",
+  "status": 119,
+  "msg": "tkf5gi",
   "data": {}
 }
 ```
@@ -1097,8 +1097,8 @@ data|object|No comments found.|-
 **Response-example:**
 ```
 {
-  "status": 619,
-  "msg": "38y0kp",
+  "status": 680,
+  "msg": "e4utx0",
   "data": {}
 }
 ```
@@ -1135,8 +1135,8 @@ data|object|No comments found.|-
 **Response-example:**
 ```
 {
-  "status": 3,
-  "msg": "mvt6si",
+  "status": 247,
+  "msg": "4s0o65",
   "data": {}
 }
 ```
@@ -1172,8 +1172,8 @@ data|object|No comments found.|-
 **Response-example:**
 ```
 {
-  "status": 675,
-  "msg": "l28qjj",
+  "status": 578,
+  "msg": "34iz68",
   "data": {}
 }
 ```
@@ -1211,8 +1211,8 @@ data|object|No comments found.|-
 **Response-example:**
 ```
 {
-  "status": 633,
-  "msg": "0vcxpi",
+  "status": 717,
+  "msg": "m9yyr0",
   "data": {}
 }
 ```
@@ -1242,8 +1242,8 @@ data|object|No comments found.|-
 **Response-example:**
 ```
 {
-  "status": 630,
-  "msg": "4qrq8l",
+  "status": 639,
+  "msg": "kmwmd8",
   "data": {}
 }
 ```
@@ -1268,7 +1268,7 @@ size|int32|size|true|-
 
 **Request-example:**
 ```
-curl -X GET -i http://localhost:8088/tag/article/id?id=588&page=1&size=5 --data '"5"'
+curl -X GET -i http://localhost:8088/tag/article/id?id=750&page=1&size=5 --data '"5"'
 ```
 **Response-fields:**
 
@@ -1281,8 +1281,8 @@ data|object|No comments found.|-
 **Response-example:**
 ```
 {
-  "status": 828,
-  "msg": "d8iah5",
+  "status": 572,
+  "msg": "urvj1m",
   "data": {}
 }
 ```
@@ -1307,7 +1307,7 @@ size|int32|size|true|-
 
 **Request-example:**
 ```
-curl -X GET -i http://localhost:8088/tag/article/name?name=tora.aufderhar&page=1&size=5 --data '"5"'
+curl -X GET -i http://localhost:8088/tag/article/name?name=roscoe.tromp&page=1&size=5 --data '"5"'
 ```
 **Response-fields:**
 
@@ -1320,8 +1320,8 @@ data|object|No comments found.|-
 **Response-example:**
 ```
 {
-  "status": 751,
-  "msg": "94m4ul",
+  "status": 64,
+  "msg": "ce9t2p",
   "data": {}
 }
 ```
@@ -1344,7 +1344,7 @@ id|int64|id|true|-
 
 **Request-example:**
 ```
-curl -X GET -i http://localhost:8088/tag/id?id=411 --data '411'
+curl -X GET -i http://localhost:8088/tag/id?id=725 --data '725'
 ```
 **Response-fields:**
 
@@ -1357,8 +1357,8 @@ data|object|No comments found.|-
 **Response-example:**
 ```
 {
-  "status": 281,
-  "msg": "oxmqaa",
+  "status": 848,
+  "msg": "2z192t",
   "data": {}
 }
 ```
@@ -1381,7 +1381,7 @@ name|string|name|true|-
 
 **Request-example:**
 ```
-curl -X GET -i http://localhost:8088/tag/name?name=tora.aufderhar --data 'tora.aufderhar'
+curl -X GET -i http://localhost:8088/tag/name?name=roscoe.tromp --data 'roscoe.tromp'
 ```
 **Response-fields:**
 
@@ -1394,8 +1394,8 @@ data|object|No comments found.|-
 **Response-example:**
 ```
 {
-  "status": 55,
-  "msg": "fejrne",
+  "status": 858,
+  "msg": "xkqdc2",
   "data": {}
 }
 ```
@@ -1418,7 +1418,7 @@ name|string|name|false|-
 
 **Request-example:**
 ```
-curl -X POST -H 'Content-Type: application/json; charset=utf-8' -i http://localhost:8088/tag/ --data 'tora.aufderhar'
+curl -X POST -H 'Content-Type: application/json; charset=utf-8' -i http://localhost:8088/tag/ --data 'roscoe.tromp'
 ```
 **Response-fields:**
 
@@ -1431,8 +1431,8 @@ data|object|No comments found.|-
 **Response-example:**
 ```
 {
-  "status": 143,
-  "msg": "wkbtvt",
+  "status": 79,
+  "msg": "br0ihe",
   "data": {}
 }
 ```
@@ -1455,7 +1455,7 @@ id|int64|id|true|-
 
 **Request-example:**
 ```
-curl -X DELETE -i http://localhost:8088/tag/?id=68 --data '68'
+curl -X DELETE -i http://localhost:8088/tag/?id=745 --data '745'
 ```
 **Response-fields:**
 
@@ -1469,7 +1469,7 @@ data|object|No comments found.|-
 ```
 {
   "status": 505,
-  "msg": "im8bs1",
+  "msg": "cdf38g",
   "data": {}
 }
 ```
@@ -1507,8 +1507,8 @@ data|object|No comments found.|-
 **Response-example:**
 ```
 {
-  "status": 340,
-  "msg": "4iafi3",
+  "status": 35,
+  "msg": "h0d8gl",
   "data": {}
 }
 ```
@@ -1538,8 +1538,8 @@ data|object|No comments found.|-
 **Response-example:**
 ```
 {
-  "status": 513,
-  "msg": "0se1hb",
+  "status": 952,
+  "msg": "3k0wle",
   "data": {}
 }
 ```
@@ -1562,7 +1562,7 @@ id|int64|id|true|-
 
 **Request-example:**
 ```
-curl -X GET -i http://localhost:8088/idea/896
+curl -X GET -i http://localhost:8088/idea/848
 ```
 **Response-fields:**
 
@@ -1575,8 +1575,8 @@ data|object|No comments found.|-
 **Response-example:**
 ```
 {
-  "status": 319,
-  "msg": "wstjrl",
+  "status": 655,
+  "msg": "iga783",
   "data": {}
 }
 ```
@@ -1604,11 +1604,11 @@ content|string|正文|false|-
 **Request-example:**
 ```
 curl -X POST -H 'Content-Type: application/json; charset=utf-8' -i http://localhost:8088/idea/ --data '{
-  "id": 144,
-  "createTime": "2022-04-25 15:58:19",
-  "modifyTime": "2022-04-25 15:58:19",
-  "title": "1g2fp6",
-  "content": "7bwpl6"
+  "id": 839,
+  "createTime": "2022-04-25 21:13:52",
+  "modifyTime": "2022-04-25 21:13:52",
+  "title": "f316g4",
+  "content": "zpqm82"
 }'
 ```
 **Response-fields:**
@@ -1622,8 +1622,8 @@ data|object|No comments found.|-
 **Response-example:**
 ```
 {
-  "status": 204,
-  "msg": "9ot7l7",
+  "status": 551,
+  "msg": "devru1",
   "data": {}
 }
 ```
@@ -1656,12 +1656,12 @@ content|string|正文|false|-
 
 **Request-example:**
 ```
-curl -X PUT -H 'Content-Type: application/json; charset=utf-8' -i http://localhost:8088/idea/?id=356 --data '{
-  "id": 66,
-  "createTime": "2022-04-25 15:58:19",
-  "modifyTime": "2022-04-25 15:58:19",
-  "title": "kykbhs",
-  "content": "s75fgz"
+curl -X PUT -H 'Content-Type: application/json; charset=utf-8' -i http://localhost:8088/idea/?id=547 --data '{
+  "id": 455,
+  "createTime": "2022-04-25 21:13:52",
+  "modifyTime": "2022-04-25 21:13:52",
+  "title": "rn2lv8",
+  "content": "pzl9ti"
 }'
 ```
 **Response-fields:**
@@ -1675,8 +1675,8 @@ data|object|No comments found.|-
 **Response-example:**
 ```
 {
-  "status": 874,
-  "msg": "4ecoc2",
+  "status": 615,
+  "msg": "nl87b6",
   "data": {}
 }
 ```
@@ -1699,7 +1699,7 @@ id|int64|id|true|-
 
 **Request-example:**
 ```
-curl -X DELETE -i http://localhost:8088/idea/223
+curl -X DELETE -i http://localhost:8088/idea/27
 ```
 **Response-fields:**
 
@@ -1712,8 +1712,8 @@ data|object|No comments found.|-
 **Response-example:**
 ```
 {
-  "status": 550,
-  "msg": "xsatot",
+  "status": 357,
+  "msg": "s4l8zi",
   "data": {}
 }
 ```
@@ -1747,16 +1747,16 @@ profile|string|简介|false|-
 **Request-example:**
 ```
 curl -X POST -H 'Content-Type: application/json; charset=utf-8' -i http://localhost:8088/user/ --data '{
-  "id": 496,
-  "username": "tora.aufderhar",
-  "password": "df7bx0",
-  "token": "k3pgb7",
-  "avatar": "iglg47",
-  "age": 58,
-  "gender": 1,
-  "location": "kdn0rc",
-  "signature": "or4f0t",
-  "profile": "9zbwr0"
+  "id": 876,
+  "username": "roscoe.tromp",
+  "password": "vq8uej",
+  "token": "gkv31a",
+  "avatar": "1wlkid",
+  "age": 56,
+  "gender": 0,
+  "location": "adqdcj",
+  "signature": "bxefiu",
+  "profile": "3st4t2"
 }'
 ```
 **Response-fields:**
@@ -1770,8 +1770,8 @@ data|object|No comments found.|-
 **Response-example:**
 ```
 {
-  "status": 987,
-  "msg": "hyvj4l",
+  "status": 189,
+  "msg": "a9oohr",
   "data": {}
 }
 ```
@@ -1794,7 +1794,7 @@ id|int64|No comments found.|true|-
 
 **Request-example:**
 ```
-curl -X GET -i http://localhost:8088/user/user?id=13 --data '13'
+curl -X GET -i http://localhost:8088/user/user?id=472 --data '472'
 ```
 **Response-fields:**
 
@@ -1807,8 +1807,8 @@ data|object|No comments found.|-
 **Response-example:**
 ```
 {
-  "status": 10,
-  "msg": "byvwdf",
+  "status": 460,
+  "msg": "t18pwk",
   "data": {}
 }
 ```
@@ -1831,7 +1831,7 @@ username|string|No comments found.|true|-
 
 **Request-example:**
 ```
-curl -X GET -i http://localhost:8088/user/name?username=tora.aufderhar --data 'tora.aufderhar'
+curl -X GET -i http://localhost:8088/user/name?username=roscoe.tromp --data 'roscoe.tromp'
 ```
 **Response-fields:**
 
@@ -1844,8 +1844,8 @@ data|object|No comments found.|-
 **Response-example:**
 ```
 {
-  "status": 366,
-  "msg": "bhzmm2",
+  "status": 769,
+  "msg": "mayoaj",
   "data": {}
 }
 ```
@@ -1883,17 +1883,17 @@ profile|string|简介|false|-
 
 **Request-example:**
 ```
-curl -X PUT -H 'Content-Type: application/json; charset=utf-8' -i http://localhost:8088/user/password?id=937 --data '{
-  "id": 67,
-  "username": "tora.aufderhar",
-  "password": "z50mn9",
-  "token": "lf4s8l",
-  "avatar": "pum26h",
-  "age": 58,
-  "gender": 1,
-  "location": "n8s31f",
-  "signature": "ydg374",
-  "profile": "asufa1"
+curl -X PUT -H 'Content-Type: application/json; charset=utf-8' -i http://localhost:8088/user/password?id=921 --data '{
+  "id": 886,
+  "username": "roscoe.tromp",
+  "password": "t23q1u",
+  "token": "q3peh4",
+  "avatar": "xg8qsw",
+  "age": 56,
+  "gender": 0,
+  "location": "5luge4",
+  "signature": "6plx1k",
+  "profile": "vtchji"
 }'
 ```
 **Response-fields:**
@@ -1907,8 +1907,8 @@ data|object|No comments found.|-
 **Response-example:**
 ```
 {
-  "status": 562,
-  "msg": "3blszf",
+  "status": 530,
+  "msg": "xypc0g",
   "data": {}
 }
 ```
