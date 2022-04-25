@@ -1,15 +1,12 @@
 package com.wjl.lblog.controller;
 
-import com.wjl.lblog.annotation.TimeLog;
 import com.wjl.lblog.common.constants.MyResult;
 import com.wjl.lblog.common.enums.MyHttpStatus;
-import com.wjl.lblog.model.dto.UserDto;
+import com.wjl.lblog.model.entity.User;
 import com.wjl.lblog.service.intf.UserService;
-import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
-import java.util.Objects;
 
 /**
  * 用户接口
@@ -18,8 +15,6 @@ import java.util.Objects;
  * @date: 2021/9/15 16:56
  * @version: v1.0
  */
-@Slf4j
-@TimeLog
 @RestController
 @RequestMapping("/user")
 public class UserController {
@@ -28,48 +23,53 @@ public class UserController {
     private UserService userService;
 
     /**
-     * 根据 id 获取用户信息
+     * 添加用户
      *
-     * @param id id
+     * @param user 用户
+     */
+    @RequestMapping(value = "/", method = RequestMethod.POST)
+    public MyResult<?> add(@RequestBody User user) {
+        var res = userService.addUser(user);
+        if (res) {
+            return MyResult.success();
+        }
+        return MyResult.fail(MyHttpStatus.BAD_REQUEST.getCode(), "failed");
+    }
+
+    /**
+     * 根据 id 获取用户信息
      */
     @RequestMapping(value = "/user", method = RequestMethod.GET)
     public MyResult<?> getUserById(@RequestParam(name = "id") Long id) {
-        var user = userService.selectVoById(id);
-        if (!Objects.isNull(user)) {
-            return MyResult.success(user);
-        } else {
-            return MyResult.fail(MyHttpStatus.QUERY_ERROR);
-        }
+        User user = userService.findById(id);
+        user.setPassword(null);
+        return MyResult.success(user);
     }
 
     /**
-     * 添加用户
-     *
-     * @param userDto user
+     * 根据用户名获取用户信息
      */
-    @RequestMapping(value = "/", method = RequestMethod.POST)
-    public MyResult<?> add(@RequestBody UserDto userDto) {
-        var res = userService.add(userDto);
-        if (res) {
-            return MyResult.success();
-        } else {
-            return MyResult.fail(MyHttpStatus.INSERT_ERROR);
-        }
+    @RequestMapping(value = "/name", method = RequestMethod.GET)
+    public MyResult<?> getUserInfo(@RequestParam(name = "username") String username) {
+        User user = userService.findByUsername(username);
+        user.setId(null);
+        user.setPassword(null);
+        return MyResult.success(user);
     }
 
     /**
-     * 更新用户信息
+     * 更新密码
      *
-     * @param userDto 用户信息
+     * @param user 用户信息
      */
-    @RequestMapping(value = "/", method = RequestMethod.PUT)
+    @RequestMapping(value = "/password", method = RequestMethod.PUT)
     public MyResult<?> update(@RequestParam(name = "id") Long id,
-                              @RequestBody UserDto userDto) {
-        var res = userService.updateById(id, userDto);
+                              @RequestBody User user) {
+        var res = userService.updateUser(id, user);
         if (res) {
             return MyResult.success();
         } else {
-            return MyResult.fail(MyHttpStatus.UPDATE_ERROR);
+            return MyResult.fail(MyHttpStatus.BAD_REQUEST.getCode(), "failed");
         }
     }
 

@@ -4,7 +4,6 @@ import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
-import com.wjl.lblog.model.entity.ArticleTag;
 import com.wjl.lblog.model.entity.Category;
 import com.wjl.lblog.model.vo.ArticleSummaryVo;
 import com.wjl.lblog.model.vo.CategoryArticleVo;
@@ -15,7 +14,6 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
-import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 import java.util.Objects;
@@ -27,7 +25,8 @@ import java.util.Objects;
  */
 @Slf4j
 @Service
-public class CategoryServiceImpl extends ServiceImpl<CategoryMapper, Category>
+public class CategoryServiceImpl
+        extends ServiceImpl<CategoryMapper, Category>
         implements CategoryService {
 
     @Resource
@@ -38,26 +37,12 @@ public class CategoryServiceImpl extends ServiceImpl<CategoryMapper, Category>
 
     @Override
     public IPage<Category> selectByPage(Page<Category> page) {
-        var wrapper = new LambdaQueryWrapper<Category>();
-        wrapper.orderByDesc(Category::getCreateTime);
-        return categoryMapper.selectPage(page, wrapper);
+        return categoryMapper.selectPage(page, null);
     }
 
     @Override
     public List<Category> selectAll() {
-        var wrapper = new LambdaQueryWrapper<Category>();
-        wrapper.orderByDesc(Category::getCreateTime);
-        return categoryMapper.selectList(wrapper);
-    }
-
-    @Override
-    public List<String> selectAllName() {
-        var list = selectAll();
-        var res = new ArrayList<String>();
-        for (var l : list) {
-            res.add(l.getName());
-        }
-        return res;
+        return categoryMapper.selectList(null);
     }
 
     @Override
@@ -106,12 +91,25 @@ public class CategoryServiceImpl extends ServiceImpl<CategoryMapper, Category>
     public boolean add(String category) {
         if (!Objects.isNull(category)) {
             var newCategory = new Category();
-            if (selectAllName().contains(category)) {
-                return false;
-            } else {
+            newCategory.setName(category);
+            var res = categoryMapper.insert(newCategory);
+            return res == 1;
+        } else {
+            return false;
+        }
+    }
+
+    @Override
+    public boolean updateById(Long id, String category) {
+        var newCategory = selectById(id);
+        if (!Objects.isNull(newCategory)) {
+            if (!Objects.isNull(category)) {
                 newCategory.setName(category);
-                var res = categoryMapper.insert(newCategory);
+                newCategory.setModifyTime(new Date());
+                var res = categoryMapper.updateById(newCategory);
                 return res == 1;
+            } else {
+                return false;
             }
         } else {
             return false;

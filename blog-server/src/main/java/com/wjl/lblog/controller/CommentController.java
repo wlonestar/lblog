@@ -1,16 +1,13 @@
 package com.wjl.lblog.controller;
 
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
-import com.wjl.lblog.annotation.TimeLog;
 import com.wjl.lblog.common.constants.MyResult;
 import com.wjl.lblog.common.enums.MyHttpStatus;
-import com.wjl.lblog.model.dto.CommentDto;
+import com.wjl.lblog.model.entity.Comment;
 import com.wjl.lblog.service.intf.CommentService;
-import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
-import java.util.Objects;
 
 /**
  * 留言接口
@@ -19,8 +16,6 @@ import java.util.Objects;
  * @date: 2021/9/13 22:53
  * @version: v1.0
  */
-@Slf4j
-@TimeLog
 @RestController
 @RequestMapping("/comment")
 public class CommentController {
@@ -35,9 +30,10 @@ public class CommentController {
      * @param size size
      */
     @RequestMapping(value = "/page", method = RequestMethod.GET)
-    public MyResult<?> findAllByPage(@RequestParam(name = "page", defaultValue = "1") int page,
-                                     @RequestParam(name = "size", defaultValue = "5") int size) {
-        var res = commentService.selectAllByPage(new Page<>(page, size));
+    public MyResult<?> findAllByPage(
+            @RequestParam(name = "page", defaultValue = "1") int page,
+            @RequestParam(name = "size", defaultValue = "5") int size) {
+        var res = commentService.findAllByPage(new Page<>(page, size));
         return MyResult.success(res);
     }
 
@@ -46,7 +42,7 @@ public class CommentController {
      */
     @RequestMapping(value = "/all", method = RequestMethod.GET)
     public MyResult<?> findAll() {
-        var res = commentService.selectAll();
+        var res = commentService.findAll();
         return MyResult.success(res);
     }
 
@@ -55,28 +51,41 @@ public class CommentController {
      *
      * @param id id
      */
-    @RequestMapping(value = "/", method = RequestMethod.GET)
-    public MyResult<?> findById(@RequestParam(name = "id") Long id) {
-        var res = commentService.selectById(id);
+    @RequestMapping(value = "/{id}", method = RequestMethod.GET)
+    public MyResult<?> findById(@PathVariable(name = "id") Long id) {
+        var res = commentService.findById(id);
         return MyResult.success(res);
     }
 
     /**
      * 增加留言
      *
-     * @param commentDto comment
+     * @param comment comment
      */
     @RequestMapping(value = "/", method = RequestMethod.POST)
-    public MyResult<?> add(@RequestBody CommentDto commentDto) {
-        if (!Objects.isNull(commentDto)) {
-            var res = commentService.add(commentDto);
-            if (res) {
-                return MyResult.success();
-            } else {
-                return MyResult.fail(MyHttpStatus.INSERT_ERROR);
-            }
+    public MyResult<?> add(@RequestBody Comment comment) {
+        var res = commentService.add(comment);
+        if (res) {
+            return MyResult.success();
         } else {
-            return MyResult.fail(MyHttpStatus.BAD_REQUEST);
+            return MyResult.fail(MyHttpStatus.BAD_REQUEST.getCode(), "增加留言失败");
+        }
+    }
+
+    /**
+     * 更新留言
+     *
+     * @param id id
+     * @param comment comment
+     */
+    @RequestMapping(value = "/", method = RequestMethod.PUT)
+    public MyResult<?> update(@RequestParam("id") Long id,
+                              @RequestBody Comment comment) {
+        var res = commentService.update(id, comment);
+        if (res) {
+            return MyResult.success();
+        } else {
+            return MyResult.fail(MyHttpStatus.BAD_REQUEST.getCode(), "更新留言失败");
         }
     }
 
@@ -85,13 +94,13 @@ public class CommentController {
      *
      * @param id id
      */
-    @RequestMapping(value = "/{id}", method = RequestMethod.DELETE)
-    public MyResult<?> deleteById(@PathVariable("id") Long id) {
+    @RequestMapping(value = "/", method = RequestMethod.DELETE)
+    public MyResult<?> deleteById(@RequestParam("id") Long id) {
         var res = commentService.deleteById(id);
         if (res) {
             return MyResult.success();
         } else {
-            return MyResult.fail(MyHttpStatus.DELETE_ERROR);
+            return MyResult.fail(MyHttpStatus.BAD_REQUEST.getCode(), "删除留言失败");
         }
     }
 

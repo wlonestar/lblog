@@ -18,7 +18,7 @@ public interface ArticleTagService extends IService<ArticleTag> {
 
     boolean checkExistByAidAndTid(Long aid, Long tid);
 
-    void deleteByAid(Long aid);
+    boolean deleteByAid(Long aid);
 
     boolean deleteByTid(Long tid);
 

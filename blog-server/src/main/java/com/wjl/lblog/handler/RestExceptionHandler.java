@@ -8,7 +8,6 @@ import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
-import org.springframework.web.multipart.MaxUploadSizeExceededException;
 
 /**
  * 全局异常处理
@@ -26,16 +25,7 @@ public class RestExceptionHandler {
             code = HttpStatus.INTERNAL_SERVER_ERROR)
     public MyResult<String> exception(Exception e) {
         log.error("全局异常 {}", e.getMessage(), e);
-        return MyResult.fail(MyHttpStatus.SERVER_ERROR.getCode(),
-                e.getMessage());
-    }
-
-    @ExceptionHandler(value = {MaxUploadSizeExceededException.class})
-    @ResponseStatus(value = HttpStatus.INTERNAL_SERVER_ERROR,
-            code = HttpStatus.INTERNAL_SERVER_ERROR)
-    public MyResult<String> maxUploadSizeExceededexception(Exception e) {
-        log.error("上传异常 {}", e.getMessage(), e);
-        return MyResult.fail(MyHttpStatus.UPLOAD_ERROR.getCode(),
+        return MyResult.fail(MyHttpStatus.INTERNAL_SERVER_ERROR.getCode(),
                 e.getMessage());
     }
 
@@ -48,3 +38,4 @@ public class RestExceptionHandler {
     }
 
 }
+

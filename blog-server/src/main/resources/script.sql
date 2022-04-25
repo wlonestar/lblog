@@ -50,6 +50,32 @@ create table image
     url         varchar(1000) null
 );
 
+create table permission
+(
+    id          bigint auto_increment
+        primary key,
+    create_time datetime     null,
+    modify_time datetime     null,
+    permission  varchar(255) null
+);
+
+create table role
+(
+    id          bigint auto_increment
+        primary key,
+    create_time datetime     null,
+    modify_time datetime     null,
+    role        varchar(255) null
+);
+
+create table role_permission
+(
+    id  bigint auto_increment
+        primary key,
+    rid bigint null,
+    pid bigint null
+);
+
 create table tag
 (
     id          bigint auto_increment
@@ -84,3 +110,13 @@ create table user
     signature varchar(255)  null,
     profile   longtext      null
 );
+
+create table user_role
+(
+    id  bigint auto_increment
+        primary key,
+    uid bigint null,
+    rid bigint null
+);
+
+

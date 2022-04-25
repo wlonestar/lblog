@@ -20,8 +20,6 @@ public interface CategoryService extends IService<Category> {
 
     List<Category> selectAll();
 
-    List<String> selectAllName();
-
     Category selectById(Long id);
 
     Category selectByName(String name);
@@ -31,5 +29,7 @@ public interface CategoryService extends IService<Category> {
     CategoryArticleVo selectByCategoryName(String name, Page<ArticleSummaryVo> page);
 
     boolean add(String category);
+
+    boolean updateById(Long id, String category);
 
 }

@@ -68,10 +68,7 @@ public class ArticleServiceImpl extends ServiceImpl<ArticleMapper, Article>
     @Override
     public ArticleDetailVo selectDetailById(Long id) {
         var res = articleMapper.selectDetailById(id);
-        if (!Objects.isNull(res)) {
-            res.setId(id);
-            processTag(res);
-        }
+        processTag(res);
         return res;
     }
 
@@ -87,7 +84,11 @@ public class ArticleServiceImpl extends ServiceImpl<ArticleMapper, Article>
 
     @Override
     public ArticleSummaryVo selectSummaryById(Long id) {
-        return articleMapper.selectSummaryById(id);
+        ArticleSummaryVo articleSummaryVo = articleMapper.selectSummaryById(id);
+        if (!Objects.isNull(articleSummaryVo)) {
+            return articleSummaryVo;
+        }
+        return null;
     }
 
     @Override
@@ -124,7 +125,7 @@ public class ArticleServiceImpl extends ServiceImpl<ArticleMapper, Article>
 
     @Override
     public boolean deleteById(Long id) {
-        var article = articleMapper.selectById(id);
+        Article article = articleMapper.selectById(id);
         if (!Objects.isNull(article)) {
             var res = articleMapper.deleteById(id);
             articleTagService.deleteByAid(id);
