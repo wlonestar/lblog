@@ -38,8 +38,8 @@ data|object|No comments found.|-
 **Response-example:**
 ```
 {
-  "status": 103,
-  "msg": "t0q5z2",
+  "status": 602,
+  "msg": "zna1x9",
   "data": {}
 }
 ```
@@ -76,8 +76,8 @@ data|object|No comments found.|-
 **Response-example:**
 ```
 {
-  "status": 222,
-  "msg": "0s8hzp",
+  "status": 866,
+  "msg": "qn8d6g",
   "data": {}
 }
 ```
@@ -107,8 +107,8 @@ data|object|No comments found.|-
 **Response-example:**
 ```
 {
-  "status": 376,
-  "msg": "n0oazu",
+  "status": 650,
+  "msg": "4tc25t",
   "data": {}
 }
 ```
@@ -138,8 +138,8 @@ data|object|No comments found.|-
 **Response-example:**
 ```
 {
-  "status": 384,
-  "msg": "zvd6aq",
+  "status": 925,
+  "msg": "o7f43v",
   "data": {}
 }
 ```
@@ -162,7 +162,7 @@ id|int64|id|true|-
 
 **Request-example:**
 ```
-curl -X GET -i http://localhost:8088/article/detail/id?id=410 --data '410'
+curl -X GET -i http://localhost:8088/article/detail/id?id=667 --data '667'
 ```
 **Response-fields:**
 
@@ -175,8 +175,8 @@ data|object|No comments found.|-
 **Response-example:**
 ```
 {
-  "status": 742,
-  "msg": "ccvxj7",
+  "status": 722,
+  "msg": "5l7v6w",
   "data": {}
 }
 ```
@@ -199,7 +199,7 @@ id|int64|id|true|-
 
 **Request-example:**
 ```
-curl -X GET -i http://localhost:8088/article/summary/id?id=20 --data '20'
+curl -X GET -i http://localhost:8088/article/summary/id?id=439 --data '439'
 ```
 **Response-fields:**
 
@@ -212,8 +212,8 @@ data|object|No comments found.|-
 **Response-example:**
 ```
 {
-  "status": 716,
-  "msg": "tcm917",
+  "status": 389,
+  "msg": "2909n9",
   "data": {}
 }
 ```
@@ -242,13 +242,13 @@ tags|array|No comments found.|false|-
 **Request-example:**
 ```
 curl -X POST -H 'Content-Type: application/json; charset=utf-8' -i http://localhost:8088/article/ --data '{
-  "title": "gm4xyc",
-  "summary": "3iu95j",
-  "image": "45p9ro",
-  "content": "0k4tp1",
-  "category": "dp4hcd",
+  "title": "myxbc3",
+  "summary": "elo4gf",
+  "image": "o8c4bv",
+  "content": "w8t1qd",
+  "category": "kz0dnu",
   "tags": [
-    "19i6oq"
+    "a4ub39"
   ]
 }'
 ```
@@ -263,8 +263,8 @@ data|object|No comments found.|-
 **Response-example:**
 ```
 {
-  "status": 920,
-  "msg": "6wn3s5",
+  "status": 342,
+  "msg": "7vfeoh",
   "data": {}
 }
 ```
@@ -298,14 +298,14 @@ tags|array|No comments found.|false|-
 
 **Request-example:**
 ```
-curl -X PUT -H 'Content-Type: application/json; charset=utf-8' -i http://localhost:8088/article/?id=818 --data '{
-  "title": "2dt3bs",
-  "summary": "6xwfvc",
-  "image": "2zh9h7",
-  "content": "cff6gu",
-  "category": "41kola",
+curl -X PUT -H 'Content-Type: application/json; charset=utf-8' -i http://localhost:8088/article/?id=937 --data '{
+  "title": "abrgzt",
+  "summary": "sxrudq",
+  "image": "88j5zx",
+  "content": "3bu8yz",
+  "category": "aj89g4",
   "tags": [
-    "kmazyw"
+    "08jbcm"
   ]
 }'
 ```
@@ -320,8 +320,8 @@ data|object|No comments found.|-
 **Response-example:**
 ```
 {
-  "status": 676,
-  "msg": "c0uro9",
+  "status": 755,
+  "msg": "qfnd8n",
   "data": {}
 }
 ```
@@ -344,7 +344,7 @@ id|int64|id|true|-
 
 **Request-example:**
 ```
-curl -X DELETE -i http://localhost:8088/article/527
+curl -X DELETE -i http://localhost:8088/article/58
 ```
 **Response-fields:**
 
@@ -357,8 +357,168 @@ data|object|No comments found.|-
 **Response-example:**
 ```
 {
-  "status": 307,
-  "msg": "5uw5eg",
+  "status": 202,
+  "msg": "vs3ed4",
+  "data": {}
+}
+```
+
+## 登录接口
+### 登录
+**URL:** http://localhost:8088/admin/login
+
+**Type:** POST
+
+
+**Content-Type:** application/json; charset=utf-8
+
+**Description:** 登录
+
+**Body-parameters:**
+
+Parameter | Type|Description|Required|Since
+---|---|---|---|---
+username|string|No comments found.|false|-
+password|string|No comments found.|false|-
+
+**Request-example:**
+```
+curl -X POST -H 'Content-Type: application/json; charset=utf-8' -i http://localhost:8088/admin/login --data '{
+  "username": "tora.aufderhar",
+  "password": "0jjte5"
+}'
+```
+**Response-fields:**
+
+Field | Type|Description|Since
+---|---|---|---
+status|int32|No comments found.|-
+msg|string|No comments found.|-
+data|object|No comments found.|-
+
+**Response-example:**
+```
+{
+  "status": 877,
+  "msg": "hmby02",
+  "data": {}
+}
+```
+
+### 验证是否登录
+**URL:** http://localhost:8088/admin/check
+
+**Type:** GET
+
+
+**Content-Type:** application/x-www-form-urlencoded;charset=utf-8
+
+**Description:** 验证是否登录
+
+**Query-parameters:**
+
+Parameter | Type|Description|Required|Since
+---|---|---|---|---
+username|string|username|true|-
+tokenValue|string|token|true|-
+
+**Request-example:**
+```
+curl -X GET -i http://localhost:8088/admin/check?username=tora.aufderhar&tokenValue=knayhu --data 'knayhu'
+```
+**Response-fields:**
+
+Field | Type|Description|Since
+---|---|---|---
+status|int32|No comments found.|-
+msg|string|No comments found.|-
+data|object|No comments found.|-
+
+**Response-example:**
+```
+{
+  "status": 539,
+  "msg": "38uyku",
+  "data": {}
+}
+```
+
+### 注销
+**URL:** http://localhost:8088/admin/logout
+
+**Type:** POST
+
+
+**Content-Type:** application/x-www-form-urlencoded;charset=utf-8
+
+**Description:** 注销
+
+**Query-parameters:**
+
+Parameter | Type|Description|Required|Since
+---|---|---|---|---
+tokenValue|string|token|true|-
+
+**Request-example:**
+```
+curl -X POST -i http://localhost:8088/admin/logout --data 'tokenValue=22uqnd'
+```
+**Response-fields:**
+
+Field | Type|Description|Since
+---|---|---|---
+status|int32|No comments found.|-
+msg|string|No comments found.|-
+data|object|No comments found.|-
+
+**Response-example:**
+```
+{
+  "status": 555,
+  "msg": "ex5o6f",
+  "data": {}
+}
+```
+
+### 注册
+**URL:** http://localhost:8088/admin/register
+
+**Type:** POST
+
+
+**Content-Type:** application/json; charset=utf-8
+
+**Description:** 注册
+
+**Body-parameters:**
+
+Parameter | Type|Description|Required|Since
+---|---|---|---|---
+username|string|No comments found.|false|-
+password|string|No comments found.|false|-
+passwordRepeat|string|No comments found.|false|-
+
+**Request-example:**
+```
+curl -X POST -H 'Content-Type: application/json; charset=utf-8' -i http://localhost:8088/admin/register --data '{
+  "username": "tora.aufderhar",
+  "password": "ynubmq",
+  "passwordRepeat": "0r7h0c"
+}'
+```
+**Response-fields:**
+
+Field | Type|Description|Since
+---|---|---|---
+status|int32|No comments found.|-
+msg|string|No comments found.|-
+data|object|No comments found.|-
+
+**Response-example:**
+```
+{
+  "status": 309,
+  "msg": "k4t0sy",
   "data": {}
 }
 ```
@@ -396,8 +556,8 @@ data|object|No comments found.|-
 **Response-example:**
 ```
 {
-  "status": 995,
-  "msg": "30yceb",
+  "status": 587,
+  "msg": "i19ji8",
   "data": {}
 }
 ```
@@ -427,8 +587,8 @@ data|object|No comments found.|-
 **Response-example:**
 ```
 {
-  "status": 924,
-  "msg": "p647gj",
+  "status": 597,
+  "msg": "utcwwj",
   "data": {}
 }
 ```
@@ -453,7 +613,7 @@ size|int32|size|true|-
 
 **Request-example:**
 ```
-curl -X GET -i http://localhost:8088/category/article/id?id=786&page=1&size=7 --data '"7"'
+curl -X GET -i http://localhost:8088/category/article/id?id=178&page=1&size=7 --data '"7"'
 ```
 **Response-fields:**
 
@@ -466,8 +626,8 @@ data|object|No comments found.|-
 **Response-example:**
 ```
 {
-  "status": 164,
-  "msg": "yiyw2g",
+  "status": 637,
+  "msg": "muzuk4",
   "data": {}
 }
 ```
@@ -505,8 +665,8 @@ data|object|No comments found.|-
 **Response-example:**
 ```
 {
-  "status": 434,
-  "msg": "t5jak2",
+  "status": 467,
+  "msg": "wfbvj2",
   "data": {}
 }
 ```
@@ -529,7 +689,7 @@ id|int64|id|true|-
 
 **Request-example:**
 ```
-curl -X GET -i http://localhost:8088/category/id?id=449 --data '449'
+curl -X GET -i http://localhost:8088/category/id?id=301 --data '301'
 ```
 **Response-fields:**
 
@@ -542,8 +702,8 @@ data|object|No comments found.|-
 **Response-example:**
 ```
 {
-  "status": 171,
-  "msg": "1u69w2",
+  "status": 487,
+  "msg": "q6mbcb",
   "data": {}
 }
 ```
@@ -579,8 +739,8 @@ data|object|No comments found.|-
 **Response-example:**
 ```
 {
-  "status": 756,
-  "msg": "kq5712",
+  "status": 573,
+  "msg": "0kexyf",
   "data": {}
 }
 ```
@@ -603,7 +763,7 @@ category|string|category|false|-
 
 **Request-example:**
 ```
-curl -X POST -H 'Content-Type: application/json; charset=utf-8' -i http://localhost:8088/category/ --data 'ebixrn'
+curl -X POST -H 'Content-Type: application/json; charset=utf-8' -i http://localhost:8088/category/ --data 'twahj2'
 ```
 **Response-fields:**
 
@@ -616,51 +776,8 @@ data|object|No comments found.|-
 **Response-example:**
 ```
 {
-  "status": 676,
-  "msg": "k2euf2",
-  "data": {}
-}
-```
-
-### 更新分类
-**URL:** http://localhost:8088/category/
-
-**Type:** PUT
-
-
-**Content-Type:** application/json; charset=utf-8
-
-**Description:** 更新分类
-
-**Query-parameters:**
-
-Parameter | Type|Description|Required|Since
----|---|---|---|---
-id|int64|No comments found.|true|-
-
-**Body-parameters:**
-
-Parameter | Type|Description|Required|Since
----|---|---|---|---
-category|string|category|false|-
-
-**Request-example:**
-```
-curl -X PUT -H 'Content-Type: application/json; charset=utf-8' -i http://localhost:8088/category/?id=257 --data 'ephju7'
-```
-**Response-fields:**
-
-Field | Type|Description|Since
----|---|---|---
-status|int32|No comments found.|-
-msg|string|No comments found.|-
-data|object|No comments found.|-
-
-**Response-example:**
-```
-{
-  "status": 236,
-  "msg": "teu8q2",
+  "status": 240,
+  "msg": "9qb3ir",
   "data": {}
 }
 ```
@@ -683,7 +800,7 @@ id|int64|id|true|-
 
 **Request-example:**
 ```
-curl -X DELETE -i http://localhost:8088/category/?id=535 --data '535'
+curl -X DELETE -i http://localhost:8088/category/?id=342 --data '342'
 ```
 **Response-fields:**
 
@@ -696,8 +813,8 @@ data|object|No comments found.|-
 **Response-example:**
 ```
 {
-  "status": 960,
-  "msg": "qs27p7",
+  "status": 533,
+  "msg": "4y5tqq",
   "data": {}
 }
 ```
@@ -735,8 +852,8 @@ data|object|No comments found.|-
 **Response-example:**
 ```
 {
-  "status": 452,
-  "msg": "8gk8s2",
+  "status": 864,
+  "msg": "qgxsfk",
   "data": {}
 }
 ```
@@ -766,8 +883,8 @@ data|object|No comments found.|-
 **Response-example:**
 ```
 {
-  "status": 268,
-  "msg": "cjjaew",
+  "status": 215,
+  "msg": "auxasm",
   "data": {}
 }
 ```
@@ -790,7 +907,7 @@ id|int64|id|true|-
 
 **Request-example:**
 ```
-curl -X GET -i http://localhost:8088/comment/938
+curl -X GET -i http://localhost:8088/comment/919
 ```
 **Response-fields:**
 
@@ -803,8 +920,8 @@ data|object|No comments found.|-
 **Response-example:**
 ```
 {
-  "status": 698,
-  "msg": "nx3w2s",
+  "status": 449,
+  "msg": "mxaz53",
   "data": {}
 }
 ```
@@ -834,12 +951,12 @@ email|string|邮箱|false|-
 **Request-example:**
 ```
 curl -X POST -H 'Content-Type: application/json; charset=utf-8' -i http://localhost:8088/comment/ --data '{
-  "id": 571,
-  "createTime": "2022-04-25 15:24:46",
-  "content": "58pb6a",
+  "id": 737,
+  "createTime": "2022-04-25 15:58:19",
+  "content": "r4099v",
   "username": "tora.aufderhar",
-  "avatar": "93r9y9",
-  "site": "ek5kn5",
+  "avatar": "9y2u7t",
+  "site": "l34tw8",
   "email": "wayne.schimmel@gmail.com"
 }'
 ```
@@ -854,8 +971,8 @@ data|object|No comments found.|-
 **Response-example:**
 ```
 {
-  "status": 729,
-  "msg": "lucang",
+  "status": 951,
+  "msg": "xu6a8n",
   "data": {}
 }
 ```
@@ -890,13 +1007,13 @@ email|string|邮箱|false|-
 
 **Request-example:**
 ```
-curl -X PUT -H 'Content-Type: application/json; charset=utf-8' -i http://localhost:8088/comment/?id=346 --data '{
-  "id": 967,
-  "createTime": "2022-04-25 15:24:46",
-  "content": "4307rt",
+curl -X PUT -H 'Content-Type: application/json; charset=utf-8' -i http://localhost:8088/comment/?id=200 --data '{
+  "id": 77,
+  "createTime": "2022-04-25 15:58:19",
+  "content": "jzpz9f",
   "username": "tora.aufderhar",
-  "avatar": "zktwff",
-  "site": "0vidrf",
+  "avatar": "ghz1q4",
+  "site": "70yyrk",
   "email": "wayne.schimmel@gmail.com"
 }'
 ```
@@ -911,8 +1028,8 @@ data|object|No comments found.|-
 **Response-example:**
 ```
 {
-  "status": 889,
-  "msg": "jneb16",
+  "status": 487,
+  "msg": "668ao0",
   "data": {}
 }
 ```
@@ -935,7 +1052,7 @@ id|int64|id|true|-
 
 **Request-example:**
 ```
-curl -X DELETE -i http://localhost:8088/comment/?id=339 --data '339'
+curl -X DELETE -i http://localhost:8088/comment/?id=570 --data '570'
 ```
 **Response-fields:**
 
@@ -948,8 +1065,8 @@ data|object|No comments found.|-
 **Response-example:**
 ```
 {
-  "status": 352,
-  "msg": "4utk55",
+  "status": 570,
+  "msg": "l3adou",
   "data": {}
 }
 ```
@@ -980,8 +1097,8 @@ data|object|No comments found.|-
 **Response-example:**
 ```
 {
-  "status": 899,
-  "msg": "jgqoxm",
+  "status": 619,
+  "msg": "38y0kp",
   "data": {}
 }
 ```
@@ -1018,8 +1135,8 @@ data|object|No comments found.|-
 **Response-example:**
 ```
 {
-  "status": 706,
-  "msg": "dpf3e6",
+  "status": 3,
+  "msg": "mvt6si",
   "data": {}
 }
 ```
@@ -1055,174 +1172,12 @@ data|object|No comments found.|-
 **Response-example:**
 ```
 {
-  "status": 845,
-  "msg": "24uw6m",
+  "status": 675,
+  "msg": "l28qjj",
   "data": {}
 }
 ```
 
-## 登录接口
-### 登录
-**URL:** http://localhost:8088/admin/login
-
-**Type:** POST
-
-
-**Content-Type:** application/json; charset=utf-8
-
-**Description:** 登录
-
-**Body-parameters:**
-
-Parameter | Type|Description|Required|Since
----|---|---|---|---
-username|string|No comments found.|false|-
-password|string|No comments found.|false|-
-
-**Request-example:**
-```
-curl -X POST -H 'Content-Type: application/json; charset=utf-8' -i http://localhost:8088/admin/login --data '{
-  "username": "tora.aufderhar",
-  "password": "z079wf"
-}'
-```
-**Response-fields:**
-
-Field | Type|Description|Since
----|---|---|---
-status|int32|No comments found.|-
-msg|string|No comments found.|-
-data|object|No comments found.|-
-
-**Response-example:**
-```
-{
-  "status": 509,
-  "msg": "ncfhi8",
-  "data": {}
-}
-```
-
-### 验证是否登录
-**URL:** http://localhost:8088/admin/check
-
-**Type:** GET
-
-
-**Content-Type:** application/x-www-form-urlencoded;charset=utf-8
-
-**Description:** 验证是否登录
-
-**Query-parameters:**
-
-Parameter | Type|Description|Required|Since
----|---|---|---|---
-username|string|username|true|-
-tokenValue|string|token|true|-
-
-**Request-example:**
-```
-curl -X GET -i http://localhost:8088/admin/check?username=tora.aufderhar&tokenValue=ag4765 --data 'ag4765'
-```
-**Response-fields:**
-
-Field | Type|Description|Since
----|---|---|---
-status|int32|No comments found.|-
-msg|string|No comments found.|-
-data|object|No comments found.|-
-
-**Response-example:**
-```
-{
-  "status": 530,
-  "msg": "aqx6hs",
-  "data": {}
-}
-```
-
-### 注销
-**URL:** http://localhost:8088/admin/logout
-
-**Type:** POST
-
-
-**Content-Type:** application/x-www-form-urlencoded;charset=utf-8
-
-**Description:** 注销
-
-**Query-parameters:**
-
-Parameter | Type|Description|Required|Since
----|---|---|---|---
-tokenValue|string|token|true|-
-
-**Request-example:**
-```
-curl -X POST -i http://localhost:8088/admin/logout --data 'tokenValue=uh4alq'
-```
-**Response-fields:**
-
-Field | Type|Description|Since
----|---|---|---
-status|int32|No comments found.|-
-msg|string|No comments found.|-
-data|object|No comments found.|-
-
-**Response-example:**
-```
-{
-  "status": 290,
-  "msg": "sa7dgo",
-  "data": {}
-}
-```
-
-### 注册
-**URL:** http://localhost:8088/admin/register
-
-**Type:** POST
-
-
-**Content-Type:** application/json; charset=utf-8
-
-**Description:** 注册
-
-**Body-parameters:**
-
-Parameter | Type|Description|Required|Since
----|---|---|---|---
-username|string|No comments found.|false|-
-password|string|No comments found.|false|-
-passwordRepeat|string|No comments found.|false|-
-
-**Request-example:**
-```
-curl -X POST -H 'Content-Type: application/json; charset=utf-8' -i http://localhost:8088/admin/register --data '{
-  "username": "tora.aufderhar",
-  "password": "gfhtzd",
-  "passwordRepeat": "1gf19z"
-}'
-```
-**Response-fields:**
-
-Field | Type|Description|Since
----|---|---|---
-status|int32|No comments found.|-
-msg|string|No comments found.|-
-data|object|No comments found.|-
-
-**Response-example:**
-```
-{
-  "status": 608,
-  "msg": "itymrv",
-  "data": {}
-}
-```
-
-## 权限接口
-## 角色接口
 ## 标签接口
 ### 分页查询标签实体
 **URL:** http://localhost:8088/tag/page
@@ -1256,8 +1211,8 @@ data|object|No comments found.|-
 **Response-example:**
 ```
 {
-  "status": 102,
-  "msg": "m428w9",
+  "status": 633,
+  "msg": "0vcxpi",
   "data": {}
 }
 ```
@@ -1287,8 +1242,8 @@ data|object|No comments found.|-
 **Response-example:**
 ```
 {
-  "status": 307,
-  "msg": "feq3xl",
+  "status": 630,
+  "msg": "4qrq8l",
   "data": {}
 }
 ```
@@ -1313,7 +1268,7 @@ size|int32|size|true|-
 
 **Request-example:**
 ```
-curl -X GET -i http://localhost:8088/tag/article/id?id=569&page=1&size=5 --data '"5"'
+curl -X GET -i http://localhost:8088/tag/article/id?id=588&page=1&size=5 --data '"5"'
 ```
 **Response-fields:**
 
@@ -1326,8 +1281,8 @@ data|object|No comments found.|-
 **Response-example:**
 ```
 {
-  "status": 326,
-  "msg": "asp6vr",
+  "status": 828,
+  "msg": "d8iah5",
   "data": {}
 }
 ```
@@ -1365,8 +1320,8 @@ data|object|No comments found.|-
 **Response-example:**
 ```
 {
-  "status": 625,
-  "msg": "af6qtv",
+  "status": 751,
+  "msg": "94m4ul",
   "data": {}
 }
 ```
@@ -1389,7 +1344,7 @@ id|int64|id|true|-
 
 **Request-example:**
 ```
-curl -X GET -i http://localhost:8088/tag/id?id=387 --data '387'
+curl -X GET -i http://localhost:8088/tag/id?id=411 --data '411'
 ```
 **Response-fields:**
 
@@ -1402,8 +1357,8 @@ data|object|No comments found.|-
 **Response-example:**
 ```
 {
-  "status": 921,
-  "msg": "h01bax",
+  "status": 281,
+  "msg": "oxmqaa",
   "data": {}
 }
 ```
@@ -1439,8 +1394,8 @@ data|object|No comments found.|-
 **Response-example:**
 ```
 {
-  "status": 672,
-  "msg": "vx9lbg",
+  "status": 55,
+  "msg": "fejrne",
   "data": {}
 }
 ```
@@ -1476,8 +1431,8 @@ data|object|No comments found.|-
 **Response-example:**
 ```
 {
-  "status": 102,
-  "msg": "con5qa",
+  "status": 143,
+  "msg": "wkbtvt",
   "data": {}
 }
 ```
@@ -1500,7 +1455,7 @@ id|int64|id|true|-
 
 **Request-example:**
 ```
-curl -X DELETE -i http://localhost:8088/tag/?id=176 --data '176'
+curl -X DELETE -i http://localhost:8088/tag/?id=68 --data '68'
 ```
 **Response-fields:**
 
@@ -1513,8 +1468,8 @@ data|object|No comments found.|-
 **Response-example:**
 ```
 {
-  "status": 933,
-  "msg": "fm314g",
+  "status": 505,
+  "msg": "im8bs1",
   "data": {}
 }
 ```
@@ -1552,8 +1507,8 @@ data|object|No comments found.|-
 **Response-example:**
 ```
 {
-  "status": 499,
-  "msg": "06doz4",
+  "status": 340,
+  "msg": "4iafi3",
   "data": {}
 }
 ```
@@ -1583,8 +1538,8 @@ data|object|No comments found.|-
 **Response-example:**
 ```
 {
-  "status": 275,
-  "msg": "g4txi8",
+  "status": 513,
+  "msg": "0se1hb",
   "data": {}
 }
 ```
@@ -1607,7 +1562,7 @@ id|int64|id|true|-
 
 **Request-example:**
 ```
-curl -X GET -i http://localhost:8088/idea/772
+curl -X GET -i http://localhost:8088/idea/896
 ```
 **Response-fields:**
 
@@ -1620,8 +1575,8 @@ data|object|No comments found.|-
 **Response-example:**
 ```
 {
-  "status": 932,
-  "msg": "s4dhj5",
+  "status": 319,
+  "msg": "wstjrl",
   "data": {}
 }
 ```
@@ -1649,11 +1604,11 @@ content|string|正文|false|-
 **Request-example:**
 ```
 curl -X POST -H 'Content-Type: application/json; charset=utf-8' -i http://localhost:8088/idea/ --data '{
-  "id": 516,
-  "createTime": "2022-04-25 15:24:46",
-  "modifyTime": "2022-04-25 15:24:46",
-  "title": "m6w00i",
-  "content": "8fhut7"
+  "id": 144,
+  "createTime": "2022-04-25 15:58:19",
+  "modifyTime": "2022-04-25 15:58:19",
+  "title": "1g2fp6",
+  "content": "7bwpl6"
 }'
 ```
 **Response-fields:**
@@ -1667,8 +1622,8 @@ data|object|No comments found.|-
 **Response-example:**
 ```
 {
-  "status": 618,
-  "msg": "2s5l65",
+  "status": 204,
+  "msg": "9ot7l7",
   "data": {}
 }
 ```
@@ -1701,12 +1656,12 @@ content|string|正文|false|-
 
 **Request-example:**
 ```
-curl -X PUT -H 'Content-Type: application/json; charset=utf-8' -i http://localhost:8088/idea/?id=222 --data '{
-  "id": 433,
-  "createTime": "2022-04-25 15:24:46",
-  "modifyTime": "2022-04-25 15:24:46",
-  "title": "pruhu0",
-  "content": "7qz2vi"
+curl -X PUT -H 'Content-Type: application/json; charset=utf-8' -i http://localhost:8088/idea/?id=356 --data '{
+  "id": 66,
+  "createTime": "2022-04-25 15:58:19",
+  "modifyTime": "2022-04-25 15:58:19",
+  "title": "kykbhs",
+  "content": "s75fgz"
 }'
 ```
 **Response-fields:**
@@ -1720,8 +1675,8 @@ data|object|No comments found.|-
 **Response-example:**
 ```
 {
-  "status": 625,
-  "msg": "6gmdis",
+  "status": 874,
+  "msg": "4ecoc2",
   "data": {}
 }
 ```
@@ -1744,7 +1699,7 @@ id|int64|id|true|-
 
 **Request-example:**
 ```
-curl -X DELETE -i http://localhost:8088/idea/586
+curl -X DELETE -i http://localhost:8088/idea/223
 ```
 **Response-fields:**
 
@@ -1757,8 +1712,8 @@ data|object|No comments found.|-
 **Response-example:**
 ```
 {
-  "status": 117,
-  "msg": "an1shc",
+  "status": 550,
+  "msg": "xsatot",
   "data": {}
 }
 ```
@@ -1792,16 +1747,16 @@ profile|string|简介|false|-
 **Request-example:**
 ```
 curl -X POST -H 'Content-Type: application/json; charset=utf-8' -i http://localhost:8088/user/ --data '{
-  "id": 668,
+  "id": 496,
   "username": "tora.aufderhar",
-  "password": "ocxkk2",
-  "token": "7r0oah",
-  "avatar": "u16oqh",
+  "password": "df7bx0",
+  "token": "k3pgb7",
+  "avatar": "iglg47",
   "age": 58,
   "gender": 1,
-  "location": "ciexpl",
-  "signature": "s5porv",
-  "profile": "5wocal"
+  "location": "kdn0rc",
+  "signature": "or4f0t",
+  "profile": "9zbwr0"
 }'
 ```
 **Response-fields:**
@@ -1815,8 +1770,8 @@ data|object|No comments found.|-
 **Response-example:**
 ```
 {
-  "status": 782,
-  "msg": "fstrij",
+  "status": 987,
+  "msg": "hyvj4l",
   "data": {}
 }
 ```
@@ -1839,7 +1794,7 @@ id|int64|No comments found.|true|-
 
 **Request-example:**
 ```
-curl -X GET -i http://localhost:8088/user/user?id=867 --data '867'
+curl -X GET -i http://localhost:8088/user/user?id=13 --data '13'
 ```
 **Response-fields:**
 
@@ -1852,8 +1807,8 @@ data|object|No comments found.|-
 **Response-example:**
 ```
 {
-  "status": 667,
-  "msg": "0pzkp8",
+  "status": 10,
+  "msg": "byvwdf",
   "data": {}
 }
 ```
@@ -1889,8 +1844,8 @@ data|object|No comments found.|-
 **Response-example:**
 ```
 {
-  "status": 983,
-  "msg": "6fd43i",
+  "status": 366,
+  "msg": "bhzmm2",
   "data": {}
 }
 ```
@@ -1928,17 +1883,17 @@ profile|string|简介|false|-
 
 **Request-example:**
 ```
-curl -X PUT -H 'Content-Type: application/json; charset=utf-8' -i http://localhost:8088/user/password?id=963 --data '{
-  "id": 551,
+curl -X PUT -H 'Content-Type: application/json; charset=utf-8' -i http://localhost:8088/user/password?id=937 --data '{
+  "id": 67,
   "username": "tora.aufderhar",
-  "password": "jszzjw",
-  "token": "1cmgpk",
-  "avatar": "73v9qx",
+  "password": "z50mn9",
+  "token": "lf4s8l",
+  "avatar": "pum26h",
   "age": 58,
   "gender": 1,
-  "location": "7lbcx3",
-  "signature": "dbqwni",
-  "profile": "c2lq5b"
+  "location": "n8s31f",
+  "signature": "ydg374",
+  "profile": "asufa1"
 }'
 ```
 **Response-fields:**
@@ -1952,8 +1907,8 @@ data|object|No comments found.|-
 **Response-example:**
 ```
 {
-  "status": 999,
-  "msg": "f9rs6i",
+  "status": 562,
+  "msg": "3blszf",
   "data": {}
 }
 ```
