@@ -59,14 +59,13 @@ public class ArticleTagServiceImpl extends ServiceImpl<ArticleTagMapper, Article
     }
 
     @Override
-    public boolean deleteByAid(Long aid) {
+    public void deleteByAid(Long aid) {
         var tids = selectByAid(aid);
         for (var tid : tids) {
             var wrapper = new LambdaQueryWrapper<ArticleTag>();
             wrapper.eq(ArticleTag::getTid, tid).eq(ArticleTag::getAid, aid);
             articleTagMapper.delete(wrapper);
         }
-        return true;
     }
 
     @Override

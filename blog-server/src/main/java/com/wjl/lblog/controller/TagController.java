@@ -1,12 +1,15 @@
 package com.wjl.lblog.controller;
 
+import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.wjl.lblog.annotation.TimeLog;
 import com.wjl.lblog.common.constants.MyResult;
+import com.wjl.lblog.common.enums.MyHttpStatus;
 import com.wjl.lblog.service.intf.TagService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
+import java.util.Objects;
 
 /**
  * 标签接口
@@ -34,7 +37,7 @@ public class TagController {
     @RequestMapping(value = "/page", method = RequestMethod.GET)
     public MyResult<?> findAllByPage(@RequestParam(name = "page", defaultValue = "1") int page,
                                      @RequestParam(name = "size", defaultValue = "5") int size) {
-        var res = "";
+        var res = tagService.selectByPage(new Page<>(page, size));
         return MyResult.success(res);
     }
 
@@ -45,7 +48,7 @@ public class TagController {
      */
     @RequestMapping(value = "/all", method = RequestMethod.GET)
     public MyResult<?> findAll() {
-        var res = "";
+        var res = tagService.selectAll();
         return MyResult.success(res);
     }
 
@@ -61,8 +64,13 @@ public class TagController {
     public MyResult<?> findTagById(@RequestParam(name = "id") Long id,
                                    @RequestParam(name = "page", defaultValue = "1") int page,
                                    @RequestParam(name = "size", defaultValue = "5") int size) {
-        var res = "";
-        return MyResult.success(res);
+        var tag = tagService.selectById(id);
+        if (!Objects.isNull(tag)) {
+            var res = tagService.selectByTagId(id, new Page<>(page, size));
+            return MyResult.success(res);
+        } else {
+            return MyResult.fail(MyHttpStatus.BAD_REQUEST.getCode(), "can't get the category");
+        }
     }
 
     /**
@@ -77,8 +85,13 @@ public class TagController {
     public MyResult<?> findTagByName(@RequestParam(name = "name") String name,
                                      @RequestParam(name = "page", defaultValue = "1") int page,
                                      @RequestParam(name = "size", defaultValue = "5") int size) {
-        var res = "";
-        return MyResult.success(res);
+        var tag = tagService.selectByName(name);
+        if (!Objects.isNull(tag)) {
+            var res = tagService.selectByTagName(name, new Page<>(page, size));
+            return MyResult.success(res);
+        } else {
+            return MyResult.fail(MyHttpStatus.BAD_REQUEST.getCode(), "can't get the category");
+        }
     }
 
     /**
@@ -89,8 +102,12 @@ public class TagController {
      */
     @RequestMapping(value = "/id", method = RequestMethod.GET)
     public MyResult<?> getById(@RequestParam(name = "id") Long id) {
-        var res = "";
-        return MyResult.success(res);
+        var res = tagService.selectById(id);
+        if (!Objects.isNull(res)) {
+            return MyResult.success(res);
+        } else {
+            return MyResult.fail(MyHttpStatus.BAD_REQUEST.getCode(), "can't get the category");
+        }
     }
 
     /**
@@ -101,8 +118,12 @@ public class TagController {
      */
     @RequestMapping(value = "/name", method = RequestMethod.GET)
     public MyResult<?> getByName(@RequestParam(name = "name") String name) {
-        var res = "";
-        return MyResult.success(res);
+        var res = tagService.selectByName(name);
+        if (!Objects.isNull(res)) {
+            return MyResult.success(res);
+        } else {
+            return MyResult.fail(MyHttpStatus.BAD_REQUEST.getCode(), "can't get the category");
+        }
     }
 
     /**
@@ -113,8 +134,12 @@ public class TagController {
      */
     @RequestMapping(value = "/", method = RequestMethod.POST)
     public MyResult<?> add(@RequestBody String name) {
-        var res = "";
-        return MyResult.success(res);
+        var res = tagService.add(name);
+        if (res) {
+            return MyResult.success();
+        } else {
+            return MyResult.fail(MyHttpStatus.BAD_REQUEST.getCode(), "can't get the category");
+        }
     }
 
     /**
@@ -124,8 +149,12 @@ public class TagController {
      */
     @RequestMapping(value = "/", method = RequestMethod.DELETE)
     public MyResult<?> deleteById(@RequestParam(name = "id") Long id) {
-        var res = "";
-        return MyResult.success(res);
+        var res = tagService.removeById(id);
+        if (res) {
+            return MyResult.success();
+        } else {
+            return MyResult.fail(MyHttpStatus.BAD_REQUEST.getCode(), "can't get the category");
+        }
     }
 
 }

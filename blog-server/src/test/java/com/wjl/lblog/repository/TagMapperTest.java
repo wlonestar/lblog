@@ -17,26 +17,26 @@ class TagMapperTest {
     @Resource
     private TagMapper tagMapper;
 
-    @Test
-    void insertTest() {
-        for (int i = 0; i < 10; i++) {
-            var tag = Tag.builder().name("tag" + i).build();
-            var res = tagMapper.insert(tag);
-            System.out.println(res);
-        }
-    }
-
-    @Test
-    void updateTest() throws InterruptedException {
-        var tag = tagMapper.selectById(4L);
-        var res = tagMapper.updateById(tag);
-        System.out.println(res);
-        System.out.println(tag);
-        Thread.sleep(1000);
-        tag.setModifyTime(new Date());
-        res = tagMapper.updateById(tag);
-        System.out.println(res);
-        System.out.println(tag);
-    }
+//    @Test
+//    void insertTest() {
+//        for (int i = 0; i < 10; i++) {
+//            var tag = Tag.builder().name("tag" + i).build();
+//            var res = tagMapper.insert(tag);
+//            System.out.println(res);
+//        }
+//    }
+//
+//    @Test
+//    void updateTest() throws InterruptedException {
+//        var tag = tagMapper.selectById(4L);
+//        var res = tagMapper.updateById(tag);
+//        System.out.println(res);
+//        System.out.println(tag);
+//        Thread.sleep(1000);
+//        tag.setModifyTime(new Date());
+//        res = tagMapper.updateById(tag);
+//        System.out.println(res);
+//        System.out.println(tag);
+//    }
 
 }
