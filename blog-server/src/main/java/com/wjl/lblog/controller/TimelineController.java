@@ -31,9 +31,8 @@ public class TimelineController {
      * @param size 数量
      */
     @RequestMapping(value = "/page", method = RequestMethod.GET)
-    public MyResult<?> findAllByPage(
-            @RequestParam(name = "page", defaultValue = "1") int page,
-            @RequestParam(name = "size", defaultValue = "10") int size) {
+    public MyResult<?> findAllByPage(@RequestParam(name = "page", defaultValue = "1") int page,
+                                     @RequestParam(name = "size", defaultValue = "10") int size) {
         var res = TimelineService.findAllByPage(new Page<>(page, size));
         return MyResult.success(res);
     }
@@ -80,7 +79,8 @@ public class TimelineController {
      * @param idea 时间线
      */
     @RequestMapping(value = "/", method = RequestMethod.PUT)
-    public MyResult<?> update(@RequestParam(name = "id") Long id, @RequestBody Timeline idea) {
+    public MyResult<?> update(@RequestParam(name = "id") Long id,
+                              @RequestBody Timeline idea) {
         var res = TimelineService.update(id, idea);
         if (res) {
             return MyResult.success();

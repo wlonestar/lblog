@@ -4,7 +4,7 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 
 /**
- * 返回码
+ * 状态码
  *
  * @author: wjl
  * @date: 2021/9/13 20:40

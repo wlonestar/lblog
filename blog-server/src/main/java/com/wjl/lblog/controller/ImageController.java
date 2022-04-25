@@ -45,9 +45,8 @@ public class ImageController {
      * @param size size
      */
     @RequestMapping(value = "/page", method = RequestMethod.GET)
-    public MyResult<?> findAllByPage(
-            @RequestParam(name = "page", defaultValue = "1") int page,
-            @RequestParam(name = "size", defaultValue = "10") int size) {
+    public MyResult<?> findAllByPage(@RequestParam(name = "page", defaultValue = "1") int page,
+                                     @RequestParam(name = "size", defaultValue = "10") int size) {
         var res = imageService.findAllByPage(new Page<>(page, size));
         return MyResult.success(res);
     }

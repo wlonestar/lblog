@@ -1,6 +1,8 @@
 package com.wjl.lblog.model.dto;
 
-import lombok.Data;
+import lombok.*;
+
+import java.util.List;
 
 /**
  * @author: wjl
@@ -8,12 +10,17 @@ import lombok.Data;
  * @version: v1.0
  */
 @Data
+@Builder
+@ToString
+@NoArgsConstructor
+@AllArgsConstructor
 public class ArticleDto {
 
     private String title;
     private String summary;
-    private String cover;
+    private String image;
     private String content;
     private String category;
+    private List<String> tags;
 
 }

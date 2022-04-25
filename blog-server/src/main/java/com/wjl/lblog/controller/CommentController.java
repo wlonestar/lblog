@@ -79,7 +79,8 @@ public class CommentController {
      * @param comment comment
      */
     @RequestMapping(value = "/", method = RequestMethod.PUT)
-    public MyResult<?> update(@RequestParam("id") Long id, @RequestBody Comment comment) {
+    public MyResult<?> update(@RequestParam("id") Long id,
+                              @RequestBody Comment comment) {
         var res = commentService.update(id, comment);
         if (res) {
             return MyResult.success();

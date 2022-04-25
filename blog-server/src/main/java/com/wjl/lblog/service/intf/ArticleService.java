@@ -7,7 +7,6 @@ import com.wjl.lblog.model.dto.ArticleDto;
 import com.wjl.lblog.model.vo.ArticleDetailVo;
 import com.wjl.lblog.model.vo.ArticleSummaryVo;
 import com.wjl.lblog.model.entity.Article;
-import com.wjl.lblog.model.vo.ArticleTitleVo;
 
 import java.util.List;
 
@@ -20,30 +19,20 @@ public interface ArticleService extends IService<Article> {
 
     IPage<ArticleDetailVo> selectDetailByPage(Page<ArticleDetailVo> page);
 
-    IPage<ArticleSummaryVo> selectSummaryByPage(Page<ArticleSummaryVo> page);
-
-    IPage<ArticleTitleVo> selectTitleByPage(Page<ArticleTitleVo> page);
-
     List<ArticleDetailVo> selectDetailAll();
-
-    List<ArticleSummaryVo> selectSummaryAll();
-
-    List<ArticleTitleVo> selectTitleAll();
 
     ArticleDetailVo selectDetailById(Long id);
 
+    IPage<ArticleSummaryVo> selectSummaryByPage(Page<ArticleSummaryVo> page);
+
+    List<ArticleSummaryVo> selectSummaryAll();
+
     ArticleSummaryVo selectSummaryById(Long id);
 
-    ArticleTitleVo selectTitleById(Long id);
+    boolean add(ArticleDto articleDto);
 
-    ArticleDetailVo selectDetailByTitle(String title);
+    boolean updateById(Long id, ArticleDto articleDto);
 
-    ArticleSummaryVo selectSummaryByTitle(String title);
-
-    ArticleTitleVo selectTitleByTitle(String title);
-
-    boolean addArticle(ArticleDto articleDto);
-
-    boolean updateArticle(Long id, ArticleDto articleDto);
+    boolean deleteById(Long id);
 
 }

@@ -2,7 +2,7 @@ package com.wjl.lblog.model.entity;
 
 import com.baomidou.mybatisplus.annotation.*;
 import com.wjl.lblog.common.constants.GlobalConstants;
-import lombok.Data;
+import lombok.*;
 
 /**
  * 用户
@@ -12,6 +12,10 @@ import lombok.Data;
  * @version: v1.0
  */
 @Data
+@Builder
+@ToString
+@NoArgsConstructor
+@AllArgsConstructor
 @TableName(value = "user")
 public class User {
 
@@ -46,7 +50,7 @@ public class User {
     /**
      * 性别
      */
-    private Boolean gender;
+    private Integer gender;
 
     /**
      * 地址

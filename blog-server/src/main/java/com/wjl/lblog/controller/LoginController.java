@@ -68,7 +68,7 @@ public class LoginController {
      */
     @RequestMapping(value = "/check", method = RequestMethod.GET)
     public MyResult<?> checkLogin(@RequestParam(name = "username") String username,
-                             @RequestParam(name = "tokenValue") String tokenValue) {
+                                  @RequestParam(name = "tokenValue") String tokenValue) {
         if (!Objects.isNull(username) && !Objects.isNull(tokenValue)) {
             if (StpUtil.isLogin()) {
                 String loginId = StpUtil.getLoginIdAsString();

@@ -33,19 +33,19 @@ public class TimeLogger {
     @Before("(logClass() || logMethod()) && !notLogMethod()")
     public void adviceBefore(JoinPoint joinPoint) {
         begin = new Date();
-        log.info("--- begin --- {}", begin.getTime());
+        log.info("[{}()] --- begin --- {}", joinPoint.getSignature().getName(), begin.getTime());
     }
 
     @After("(logClass() || logMethod()) && !notLogMethod()")
     public void adviceAfter(JoinPoint joinPoint) {
         Date end = new Date();
         var res = (end.getTime() - begin.getTime()) / 1000.0;
-        log.info("--- end --- {}, cost {} s", end.getTime(), res);
+        log.info("[{}()] --- end --- {}, cost {} s", joinPoint.getSignature().getName(), end.getTime(), res);
     }
 
     @AfterThrowing("(logClass() || logMethod()) && !notLogMethod()")
     public void adviceAfterThrowing(JoinPoint joinPoint) {
-        log.error("error");
+        log.error("[{}()] method run error", joinPoint.getSignature().getName());
     }
 
 }
