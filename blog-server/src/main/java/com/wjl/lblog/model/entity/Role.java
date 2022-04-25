@@ -1,7 +1,7 @@
 package com.wjl.lblog.model.entity;
 
 import com.baomidou.mybatisplus.annotation.*;
-import lombok.Data;
+import lombok.*;
 
 import java.util.Date;
 
@@ -11,6 +11,10 @@ import java.util.Date;
  * @version: v1.0
  */
 @Data
+@Builder
+@ToString
+@NoArgsConstructor
+@AllArgsConstructor
 @TableName(value = "role")
 public class Role {
 
@@ -27,7 +31,7 @@ public class Role {
      * 更新时间
      */
     @TableField(fill = FieldFill.INSERT_UPDATE)
-    private Date updateTime;
+    private Date modifyTime;
 
     /**
      * 角色

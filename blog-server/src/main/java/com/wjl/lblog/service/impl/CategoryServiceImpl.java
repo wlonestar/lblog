@@ -1,17 +1,16 @@
 package com.wjl.lblog.service.impl;
 
+import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
-import com.wjl.lblog.model.dto.CategoryDto;
 import com.wjl.lblog.model.entity.Category;
-import com.wjl.lblog.model.vo.ArticleTitleVo;
+import com.wjl.lblog.model.vo.ArticleSummaryVo;
 import com.wjl.lblog.model.vo.CategoryArticleVo;
 import com.wjl.lblog.repository.ArticleMapper;
 import com.wjl.lblog.repository.CategoryMapper;
 import com.wjl.lblog.service.intf.CategoryService;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.beans.BeanUtils;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
@@ -37,80 +36,93 @@ public class CategoryServiceImpl
     private ArticleMapper articleMapper;
 
     @Override
-    public IPage<Category> selectCategoryByPage(Page<Category> page) {
-        return categoryMapper.selectCategoryByPage(page);
+    public IPage<Category> selectByPage(Page<Category> page) {
+        return categoryMapper.selectPage(page, null);
     }
 
     @Override
-    public List<Category> selectCategoryAll() {
-        return categoryMapper.selectCategoryAll();
+    public List<Category> selectAll() {
+        return categoryMapper.selectList(null);
     }
 
     @Override
-    public Category selectCategoryById(Long id) {
-        Category category = categoryMapper.selectCategoryById(id);
+    public Category selectById(Long id) {
+        var category = categoryMapper.selectById(id);
         if (!Objects.isNull(category)) {
             return category;
+        } else {
+            return null;
         }
-        return null;
     }
 
     @Override
-    public Category selectCategoryByName(String name) {
-        Category category = categoryMapper.selectCategoryByName(name);
+    public Category selectByName(String name) {
+        var wrapper = new LambdaQueryWrapper<Category>();
+        wrapper.eq(Category::getName, name);
+        var category = categoryMapper.selectOne(wrapper);
         if (!Objects.isNull(category)) {
             return category;
+        } else {
+            return null;
         }
-        return null;
     }
 
     @Override
-    public CategoryArticleVo selectArticleByCategoryId(Long id, Page<ArticleTitleVo> page) {
-        Category category = categoryMapper.selectCategoryById(id);
+    public CategoryArticleVo selectByCategoryId(Long id, Page<ArticleSummaryVo> page) {
+        var category = categoryMapper.selectById(id);
         if (!Objects.isNull(category)) {
             return getByCategory(category, page);
+        } else {
+            return null;
         }
-        return null;
     }
 
     @Override
-    public CategoryArticleVo selectArticleByCategoryName(String name, Page<ArticleTitleVo> page) {
-        Category category = categoryMapper.selectCategoryByName(name);
+    public CategoryArticleVo selectByCategoryName(String name, Page<ArticleSummaryVo> page) {
+        var category = selectByName(name);
         if (!Objects.isNull(category)) {
             return getByCategory(category, page);
+        } else {
+            return null;
         }
-        return null;
     }
 
     @Override
-    public boolean addCategory(CategoryDto categoryDto) {
-        if (!Objects.isNull(categoryDto)) {
-            Category category = new Category();
-            BeanUtils.copyProperties(categoryDto, category);
-            int i = categoryMapper.insert(category);
-            return i == 1;
+    public boolean add(String category) {
+        if (!Objects.isNull(category)) {
+            var newCategory = new Category();
+            newCategory.setName(category);
+            var res = categoryMapper.insert(newCategory);
+            return res == 1;
+        } else {
+            return false;
         }
-        return false;
     }
 
     @Override
-    public boolean updateCategory(Long id, CategoryDto categoryDto) {
-        if (!Objects.isNull(categoryDto)) {
-            Category category = categoryMapper.selectCategoryById(id);
-            BeanUtils.copyProperties(categoryDto, category);
-            category.setUpdateTime(new Date());
-            int i = categoryMapper.updateById(category);
-            return i == 1;
+    public boolean updateById(Long id, String category) {
+        var newCategory = selectById(id);
+        if (!Objects.isNull(newCategory)) {
+            if (!Objects.isNull(category)) {
+                newCategory.setName(category);
+                newCategory.setModifyTime(new Date());
+                var res = categoryMapper.updateById(newCategory);
+                return res == 1;
+            } else {
+                return false;
+            }
+        } else {
+            return false;
         }
-        return false;
     }
 
-
-    private CategoryArticleVo getByCategory(Category category, Page<ArticleTitleVo> page) {
-        CategoryArticleVo categoryArticleVo = new CategoryArticleVo();
-        BeanUtils.copyProperties(category, categoryArticleVo);
-        categoryArticleVo.setArticles(articleMapper.selectTitleByPage(page));
-        return categoryArticleVo;
+    private CategoryArticleVo getByCategory(Category category, Page<ArticleSummaryVo> page) {
+        var pages = articleMapper.selectSummaryByPageAndCid(category.getId(), page);
+        return CategoryArticleVo.builder()
+                .id(category.getId())
+                .createTime(category.getCreateTime())
+                .name(category.getName())
+                .articles(pages).build();
     }
 
 }

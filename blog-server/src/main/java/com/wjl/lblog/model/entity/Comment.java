@@ -2,7 +2,7 @@ package com.wjl.lblog.model.entity;
 
 import com.baomidou.mybatisplus.annotation.*;
 import com.wjl.lblog.common.constants.GlobalConstants;
-import lombok.Data;
+import lombok.*;
 
 import java.util.Date;
 
@@ -14,6 +14,10 @@ import java.util.Date;
  * @version: v1.0
  */
 @Data
+@Builder
+@ToString
+@NoArgsConstructor
+@AllArgsConstructor
 @TableName(value = "comment")
 public class Comment {
 
@@ -25,12 +29,6 @@ public class Comment {
      */
     @TableField(fill = FieldFill.INSERT)
     private Date createTime;
-
-    /**
-     * 更新时间
-     */
-    @TableField(fill = FieldFill.INSERT_UPDATE)
-    private Date updateTime;
 
     /**
      * 留言正文

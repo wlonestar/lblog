@@ -1,11 +1,12 @@
 package com.wjl.lblog.controller;
 
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
+import com.wjl.lblog.annotation.TimeLog;
 import com.wjl.lblog.common.constants.MyResult;
 import com.wjl.lblog.common.enums.MyHttpStatus;
-import com.wjl.lblog.model.dto.CategoryDto;
 import com.wjl.lblog.model.entity.Category;
 import com.wjl.lblog.service.intf.CategoryService;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
@@ -18,6 +19,8 @@ import java.util.Objects;
  * @date: 2021/9/14 15:30
  * @version: v1.0
  */
+@Slf4j
+@TimeLog
 @RestController
 @RequestMapping(value = "/category")
 public class CategoryController {
@@ -35,7 +38,7 @@ public class CategoryController {
     public MyResult<?> findAllByPage(
             @RequestParam(name = "page", defaultValue = "1") int page,
             @RequestParam(name = "size", defaultValue = "5") int size) {
-        var res = categoryService.selectCategoryByPage(new Page<>(page, size));
+        var res = categoryService.selectByPage(new Page<>(page, size));
         return MyResult.success(res);
     }
 
@@ -44,7 +47,7 @@ public class CategoryController {
      */
     @RequestMapping(value = "/all", method = RequestMethod.GET)
     public MyResult<?> getAll() {
-        var res = categoryService.selectCategoryAll();
+        var res = categoryService.selectAll();
         return MyResult.success(res);
     }
 
@@ -56,13 +59,12 @@ public class CategoryController {
      * @param size size
      */
     @RequestMapping(value = "/article/id", method = RequestMethod.GET)
-    public MyResult<?> findOneCategoryAndArticleById(
-            @RequestParam(name = "id") Long id,
-            @RequestParam(name = "page", defaultValue = "1") int page,
-            @RequestParam(name = "size", defaultValue = "7") int size) {
-        Category category = categoryService.selectCategoryById(id);
+    public MyResult<?> findCategoryById(@RequestParam(name = "id") Long id,
+                                        @RequestParam(name = "page", defaultValue = "1") int page,
+                                        @RequestParam(name = "size", defaultValue = "7") int size) {
+        Category category = categoryService.selectById(id);
         if (!Objects.isNull(category)) {
-            var res = categoryService.selectArticleByCategoryId(id, new Page<>(page, size));
+            var res = categoryService.selectByCategoryId(id, new Page<>(page, size));
             return MyResult.success(res);
         }
         return MyResult.fail(MyHttpStatus.BAD_REQUEST.getCode(), "can't get the category");
@@ -76,13 +78,12 @@ public class CategoryController {
      * @param size size
      */
     @RequestMapping(value = "/article/name", method = RequestMethod.GET)
-    public MyResult<?> findOneCategoryAndArticleByName(
-            @RequestParam(name = "name") String name,
-            @RequestParam(name = "page", defaultValue = "1") int page,
-            @RequestParam(name = "size", defaultValue = "7") int size) {
-        Category category = categoryService.selectCategoryByName(name);
+    public MyResult<?> findCategoryByName(@RequestParam(name = "name") String name,
+                                          @RequestParam(name = "page", defaultValue = "1") int page,
+                                          @RequestParam(name = "size", defaultValue = "7") int size) {
+        Category category = categoryService.selectByName(name);
         if (!Objects.isNull(category)) {
-            var res = categoryService.selectArticleByCategoryName(name, new Page<>(page, size));
+            var res = categoryService.selectByCategoryName(name, new Page<>(page, size));
             return MyResult.success(res);
         }
         return MyResult.fail(MyHttpStatus.BAD_REQUEST.getCode(), "can't get the category");
@@ -95,7 +96,7 @@ public class CategoryController {
      */
     @RequestMapping(value = "/id", method = RequestMethod.GET)
     public MyResult<?> getById(@RequestParam(name = "id") Long id) {
-        Category category = categoryService.selectCategoryById(id);
+        Category category = categoryService.selectById(id);
         if (!Objects.isNull(category)) {
             return MyResult.success(category);
         }
@@ -109,7 +110,7 @@ public class CategoryController {
      */
     @RequestMapping(value = "/name", method = RequestMethod.GET)
     public MyResult<?> getByName(@RequestParam(name = "name") String name) {
-        Category category = categoryService.selectCategoryByName(name);
+        Category category = categoryService.selectByName(name);
         if (!Objects.isNull(category)) {
             return MyResult.success(category);
         }
@@ -119,34 +120,37 @@ public class CategoryController {
     /**
      * 增加分类
      *
-     * @param categoryDto category
+     * @param category category
      */
     @RequestMapping(value = "/", method = RequestMethod.POST)
-    public MyResult<?> add(@RequestBody CategoryDto categoryDto) {
-        if (categoryService.addCategory(categoryDto)) {
-            return MyResult.success(categoryDto);
+    public MyResult<?> add(@RequestBody String category) {
+        var res = categoryService.add(category);
+        if (res) {
+            return MyResult.success();
+        } else {
+            return MyResult.fail(MyHttpStatus.BAD_REQUEST.getCode(), "can't add category");
         }
-        return MyResult.fail(MyHttpStatus.BAD_REQUEST.getCode(), "can't add category");
     }
 
     /**
-     * 根据 id 更新分类
+     * 更新分类
      *
-     * @param id id
-     * @param categoryDto category
+     * @param category category
      */
     @RequestMapping(value = "/", method = RequestMethod.PUT)
-    public MyResult<?> update(@RequestParam(name = "id") Long id, @RequestBody CategoryDto categoryDto) {
-        Category category = categoryService.selectCategoryById(id);
-        if (!Objects.isNull(category)) {
-            var res = categoryService.updateCategory(id, categoryDto);
+    public MyResult<?> update(@RequestParam(name = "id") Long id,
+                              @RequestBody String category) {
+        var cate = categoryService.selectById(id);
+        if (!Objects.isNull(cate)) {
+            var res = categoryService.updateById(id, category);
             if (res) {
                 return MyResult.success();
             } else {
-                return MyResult.fail(MyHttpStatus.BAD_REQUEST.getCode(), "");
+                return MyResult.fail(MyHttpStatus.BAD_REQUEST.getCode(), "can't add category");
             }
+        } else {
+            return MyResult.fail(MyHttpStatus.BAD_REQUEST.getCode(), "can't add category");
         }
-        return MyResult.fail(MyHttpStatus.BAD_REQUEST.getCode(), "can't update category");
     }
 
     /**

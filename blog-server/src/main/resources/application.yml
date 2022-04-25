@@ -16,15 +16,6 @@ spring:
       idle-timeout: 300000
       max-lifetime: 1200000
 
-  jpa:
-    show-sql: false
-    database-platform: org.hibernate.dialect.MySQL8Dialect
-    hibernate:
-      ddl-auto: update
-    properties:
-      hibernate:
-        format_sql: true
-
 sa-token:
   token-name: satoken
   timeout: 86400

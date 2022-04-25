@@ -1,7 +1,7 @@
 package com.wjl.lblog.model.entity;
 
 import com.baomidou.mybatisplus.annotation.*;
-import lombok.Data;
+import lombok.*;
 
 /**
  * @author: wjl
@@ -9,6 +9,10 @@ import lombok.Data;
  * @version: v1.0
  */
 @Data
+@Builder
+@ToString
+@NoArgsConstructor
+@AllArgsConstructor
 @TableName(value = "user_role")
 public class UserRole {
 

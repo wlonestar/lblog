@@ -63,7 +63,8 @@ public class UserController {
      * @param user 用户信息
      */
     @RequestMapping(value = "/password", method = RequestMethod.PUT)
-    public MyResult<?> update(@RequestParam(name = "id") Long id, @RequestBody User user) {
+    public MyResult<?> update(@RequestParam(name = "id") Long id,
+                              @RequestBody User user) {
         var res = userService.updateUser(id, user);
         if (res) {
             return MyResult.success();

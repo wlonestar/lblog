@@ -3,9 +3,8 @@ package com.wjl.lblog.service.intf;
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.baomidou.mybatisplus.extension.service.IService;
-import com.wjl.lblog.model.dto.CategoryDto;
 import com.wjl.lblog.model.entity.Category;
-import com.wjl.lblog.model.vo.ArticleTitleVo;
+import com.wjl.lblog.model.vo.ArticleSummaryVo;
 import com.wjl.lblog.model.vo.CategoryArticleVo;
 
 import java.util.List;
@@ -17,20 +16,20 @@ import java.util.List;
  */
 public interface CategoryService extends IService<Category> {
 
-    IPage<Category> selectCategoryByPage(Page<Category> page);
+    IPage<Category> selectByPage(Page<Category> page);
 
-    List<Category> selectCategoryAll();
+    List<Category> selectAll();
 
-    Category selectCategoryById(Long id);
+    Category selectById(Long id);
 
-    Category selectCategoryByName(String name);
+    Category selectByName(String name);
 
-    CategoryArticleVo selectArticleByCategoryId(Long id, Page<ArticleTitleVo> page);
+    CategoryArticleVo selectByCategoryId(Long id, Page<ArticleSummaryVo> page);
 
-    CategoryArticleVo selectArticleByCategoryName(String name, Page<ArticleTitleVo> page);
+    CategoryArticleVo selectByCategoryName(String name, Page<ArticleSummaryVo> page);
 
-    boolean addCategory(CategoryDto category);
+    boolean add(String category);
 
-    boolean updateCategory(Long id, CategoryDto category);
+    boolean updateById(Long id, String category);
 
 }
