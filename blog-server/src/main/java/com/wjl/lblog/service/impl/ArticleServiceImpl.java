@@ -68,6 +68,7 @@ public class ArticleServiceImpl extends ServiceImpl<ArticleMapper, Article>
     @Override
     public ArticleDetailVo selectDetailById(Long id) {
         var res = articleMapper.selectDetailById(id);
+        res.setId(id);
         processTag(res);
         return res;
     }
