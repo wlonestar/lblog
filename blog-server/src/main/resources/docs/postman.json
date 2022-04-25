@@ -1,7 +1,7 @@
 {
   "info": {
     "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-    "_postman_id": "65c9fed6-1d8a-4cf9-9a95-96493f25c8ba",
+    "_postman_id": "16ec5fba-6a04-4102-861c-e8e733728d22",
     "name": "lblog"
   },
   "item": [
@@ -166,7 +166,7 @@
               }
             },
             "url": {
-              "raw": "http://localhost:8088/article/detail/id?id\u003d759",
+              "raw": "http://localhost:8088/article/detail/id?id\u003d466",
               "protocol": "http",
               "path": [
                 "article",
@@ -180,7 +180,7 @@
               "query": [
                 {
                   "key": "id",
-                  "value": "307",
+                  "value": "916",
                   "description": "id"
                 }
               ],
@@ -203,7 +203,7 @@
               }
             },
             "url": {
-              "raw": "http://localhost:8088/article/summary/id?id\u003d84",
+              "raw": "http://localhost:8088/article/summary/id?id\u003d648",
               "protocol": "http",
               "path": [
                 "article",
@@ -217,7 +217,7 @@
               "query": [
                 {
                   "key": "id",
-                  "value": "338",
+                  "value": "484",
                   "description": "id"
                 }
               ],
@@ -234,7 +234,7 @@
             "method": "POST",
             "body": {
               "mode": "raw",
-              "raw": "{\n  \"title\": \"s7nyge\",\n  \"summary\": \"27yc8n\",\n  \"image\": \"mchjq9\",\n  \"content\": \"5vga6e\",\n  \"category\": \"8mqiuz\",\n  \"tags\": [\n    \"2p64ee\"\n  ]\n}",
+              "raw": "{\n  \"title\": \"mb1aed\",\n  \"summary\": \"0uaz16\",\n  \"image\": \"bdst5k\",\n  \"content\": \"gjqlzj\",\n  \"category\": \"l86wvz\",\n  \"tags\": [\n    \"a3myiv\"\n  ]\n}",
               "options": {
                 "raw": {
                   "language": "json"
@@ -266,7 +266,7 @@
             "method": "PUT",
             "body": {
               "mode": "raw",
-              "raw": "{\n  \"title\": \"r5npa2\",\n  \"summary\": \"objqkn\",\n  \"image\": \"vdbinw\",\n  \"content\": \"q6dvcj\",\n  \"category\": \"2c79yg\",\n  \"tags\": [\n    \"vlrd2a\"\n  ]\n}",
+              "raw": "{\n  \"title\": \"dvhivp\",\n  \"summary\": \"zmyzsy\",\n  \"image\": \"dnkfeo\",\n  \"content\": \"vi83d3\",\n  \"category\": \"yjps0n\",\n  \"tags\": [\n    \"lzsisv\"\n  ]\n}",
               "options": {
                 "raw": {
                   "language": "json"
@@ -274,7 +274,7 @@
               }
             },
             "url": {
-              "raw": "http://localhost:8088/article/?id\u003d60",
+              "raw": "http://localhost:8088/article/?id\u003d25",
               "protocol": "http",
               "path": [
                 "article",
@@ -287,7 +287,7 @@
               "query": [
                 {
                   "key": "id",
-                  "value": "751",
+                  "value": "255",
                   "description": "id"
                 }
               ],
@@ -310,7 +310,7 @@
               }
             },
             "url": {
-              "raw": "http://localhost:8088/article/989",
+              "raw": "http://localhost:8088/article/183",
               "protocol": "http",
               "path": [
                 "article",
@@ -324,7 +324,7 @@
               "variable": [
                 {
                   "key": "id",
-                  "value": "71",
+                  "value": "118",
                   "description": "id"
                 }
               ]
@@ -333,6 +333,150 @@
             "header": []
           },
           "description": "根据 id 删除文章"
+        }
+      ]
+    },
+    {
+      "name": "登录接口",
+      "item": [
+        {
+          "name": "登录",
+          "request": {
+            "method": "POST",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"username\": \"tora.aufderhar\",\n  \"password\": \"whz3qg\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8088/admin/login",
+              "protocol": "http",
+              "path": [
+                "admin",
+                "login"
+              ],
+              "host": [
+                "localhost"
+              ],
+              "port": "8088",
+              "query": [],
+              "variable": []
+            },
+            "description": "登录",
+            "header": []
+          },
+          "description": "登录"
+        },
+        {
+          "name": "验证是否登录",
+          "request": {
+            "method": "GET",
+            "body": {
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8088/admin/check?username\u003dtora.aufderhar\u0026tokenValue\u003dbngcha",
+              "protocol": "http",
+              "path": [
+                "admin",
+                "check"
+              ],
+              "host": [
+                "localhost"
+              ],
+              "port": "8088",
+              "query": [
+                {
+                  "key": "username",
+                  "value": "tora.aufderhar",
+                  "description": "username"
+                },
+                {
+                  "key": "tokenValue",
+                  "value": "ozg8pz",
+                  "description": "token"
+                }
+              ],
+              "variable": []
+            },
+            "description": "验证是否登录",
+            "header": []
+          },
+          "description": "验证是否登录"
+        },
+        {
+          "name": "注销",
+          "request": {
+            "method": "POST",
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "tokenValue",
+                  "type": "string",
+                  "description": "token",
+                  "value": "qpqutd"
+                }
+              ]
+            },
+            "url": {
+              "raw": "http://localhost:8088/admin/logout",
+              "protocol": "http",
+              "path": [
+                "admin",
+                "logout"
+              ],
+              "host": [
+                "localhost"
+              ],
+              "port": "8088",
+              "query": [],
+              "variable": []
+            },
+            "description": "注销",
+            "header": []
+          },
+          "description": "注销"
+        },
+        {
+          "name": "注册",
+          "request": {
+            "method": "POST",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"username\": \"tora.aufderhar\",\n  \"password\": \"231kpi\",\n  \"passwordRepeat\": \"e7vnz8\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8088/admin/register",
+              "protocol": "http",
+              "path": [
+                "admin",
+                "register"
+              ],
+              "host": [
+                "localhost"
+              ],
+              "port": "8088",
+              "query": [],
+              "variable": []
+            },
+            "description": "注册",
+            "header": []
+          },
+          "description": "注册"
         }
       ]
     },
@@ -422,7 +566,7 @@
               }
             },
             "url": {
-              "raw": "http://localhost:8088/category/article/id?id\u003d280\u0026page\u003d1\u0026size\u003d7",
+              "raw": "http://localhost:8088/category/article/id?id\u003d373\u0026page\u003d1\u0026size\u003d7",
               "protocol": "http",
               "path": [
                 "category",
@@ -436,7 +580,7 @@
               "query": [
                 {
                   "key": "id",
-                  "value": "93",
+                  "value": "697",
                   "description": "id"
                 },
                 {
@@ -516,7 +660,7 @@
               }
             },
             "url": {
-              "raw": "http://localhost:8088/category/id?id\u003d585",
+              "raw": "http://localhost:8088/category/id?id\u003d740",
               "protocol": "http",
               "path": [
                 "category",
@@ -529,7 +673,7 @@
               "query": [
                 {
                   "key": "id",
-                  "value": "887",
+                  "value": "734",
                   "description": "id"
                 }
               ],
@@ -582,7 +726,7 @@
             "method": "POST",
             "body": {
               "mode": "raw",
-              "raw": "tmbvtu",
+              "raw": "ls0tc4",
               "options": {
                 "raw": {
                   "language": "json"
@@ -609,44 +753,6 @@
           "description": "增加分类"
         },
         {
-          "name": "更新分类",
-          "request": {
-            "method": "PUT",
-            "body": {
-              "mode": "raw",
-              "raw": "hauh9o",
-              "options": {
-                "raw": {
-                  "language": "json"
-                }
-              }
-            },
-            "url": {
-              "raw": "http://localhost:8088/category/?id\u003d577",
-              "protocol": "http",
-              "path": [
-                "category",
-                ""
-              ],
-              "host": [
-                "localhost"
-              ],
-              "port": "8088",
-              "query": [
-                {
-                  "key": "id",
-                  "value": "538",
-                  "description": "No comments found."
-                }
-              ],
-              "variable": []
-            },
-            "description": "更新分类",
-            "header": []
-          },
-          "description": "更新分类"
-        },
-        {
           "name": "根据 id 删除分类",
           "request": {
             "method": "DELETE",
@@ -658,7 +764,7 @@
               }
             },
             "url": {
-              "raw": "http://localhost:8088/category/?id\u003d583",
+              "raw": "http://localhost:8088/category/?id\u003d510",
               "protocol": "http",
               "path": [
                 "category",
@@ -671,7 +777,7 @@
               "query": [
                 {
                   "key": "id",
-                  "value": "780",
+                  "value": "231",
                   "description": "id"
                 }
               ],
@@ -770,7 +876,7 @@
               }
             },
             "url": {
-              "raw": "http://localhost:8088/comment/712",
+              "raw": "http://localhost:8088/comment/968",
               "protocol": "http",
               "path": [
                 "comment",
@@ -784,7 +890,7 @@
               "variable": [
                 {
                   "key": "id",
-                  "value": "369",
+                  "value": "759",
                   "description": "id"
                 }
               ]
@@ -800,7 +906,7 @@
             "method": "POST",
             "body": {
               "mode": "raw",
-              "raw": "{\n  \"id\": 198,\n  \"createTime\": \"2022-04-25 15:22:01\",\n  \"content\": \"cuq4e8\",\n  \"username\": \"tora.aufderhar\",\n  \"avatar\": \"mo491r\",\n  \"site\": \"k44qj7\",\n  \"email\": \"wayne.schimmel@gmail.com\"\n}",
+              "raw": "{\n  \"id\": 159,\n  \"createTime\": \"2022-04-25 15:58:17\",\n  \"content\": \"m55fmp\",\n  \"username\": \"tora.aufderhar\",\n  \"avatar\": \"2rasm3\",\n  \"site\": \"uujg0d\",\n  \"email\": \"wayne.schimmel@gmail.com\"\n}",
               "options": {
                 "raw": {
                   "language": "json"
@@ -832,7 +938,7 @@
             "method": "PUT",
             "body": {
               "mode": "raw",
-              "raw": "{\n  \"id\": 391,\n  \"createTime\": \"2022-04-25 15:22:01\",\n  \"content\": \"4aox8i\",\n  \"username\": \"tora.aufderhar\",\n  \"avatar\": \"4tqy54\",\n  \"site\": \"x6t1bh\",\n  \"email\": \"wayne.schimmel@gmail.com\"\n}",
+              "raw": "{\n  \"id\": 389,\n  \"createTime\": \"2022-04-25 15:58:17\",\n  \"content\": \"a3sj0p\",\n  \"username\": \"tora.aufderhar\",\n  \"avatar\": \"d2y7u1\",\n  \"site\": \"3naqrm\",\n  \"email\": \"wayne.schimmel@gmail.com\"\n}",
               "options": {
                 "raw": {
                   "language": "json"
@@ -840,7 +946,7 @@
               }
             },
             "url": {
-              "raw": "http://localhost:8088/comment/?id\u003d285",
+              "raw": "http://localhost:8088/comment/?id\u003d888",
               "protocol": "http",
               "path": [
                 "comment",
@@ -853,7 +959,7 @@
               "query": [
                 {
                   "key": "id",
-                  "value": "810",
+                  "value": "943",
                   "description": "id"
                 }
               ],
@@ -876,7 +982,7 @@
               }
             },
             "url": {
-              "raw": "http://localhost:8088/comment/?id\u003d663",
+              "raw": "http://localhost:8088/comment/?id\u003d609",
               "protocol": "http",
               "path": [
                 "comment",
@@ -889,7 +995,7 @@
               "query": [
                 {
                   "key": "id",
-                  "value": "163",
+                  "value": "117",
                   "description": "id"
                 }
               ],
@@ -1013,158 +1119,6 @@
       ]
     },
     {
-      "name": "登录接口",
-      "item": [
-        {
-          "name": "登录",
-          "request": {
-            "method": "POST",
-            "body": {
-              "mode": "raw",
-              "raw": "{\n  \"username\": \"tora.aufderhar\",\n  \"password\": \"u1dws7\"\n}",
-              "options": {
-                "raw": {
-                  "language": "json"
-                }
-              }
-            },
-            "url": {
-              "raw": "http://localhost:8088/admin/login",
-              "protocol": "http",
-              "path": [
-                "admin",
-                "login"
-              ],
-              "host": [
-                "localhost"
-              ],
-              "port": "8088",
-              "query": [],
-              "variable": []
-            },
-            "description": "登录",
-            "header": []
-          },
-          "description": "登录"
-        },
-        {
-          "name": "验证是否登录",
-          "request": {
-            "method": "GET",
-            "body": {
-              "options": {
-                "raw": {
-                  "language": "json"
-                }
-              }
-            },
-            "url": {
-              "raw": "http://localhost:8088/admin/check?username\u003dtora.aufderhar\u0026tokenValue\u003dvlxa9h",
-              "protocol": "http",
-              "path": [
-                "admin",
-                "check"
-              ],
-              "host": [
-                "localhost"
-              ],
-              "port": "8088",
-              "query": [
-                {
-                  "key": "username",
-                  "value": "tora.aufderhar",
-                  "description": "username"
-                },
-                {
-                  "key": "tokenValue",
-                  "value": "csky19",
-                  "description": "token"
-                }
-              ],
-              "variable": []
-            },
-            "description": "验证是否登录",
-            "header": []
-          },
-          "description": "验证是否登录"
-        },
-        {
-          "name": "注销",
-          "request": {
-            "method": "POST",
-            "body": {
-              "mode": "formdata",
-              "formdata": [
-                {
-                  "key": "tokenValue",
-                  "type": "string",
-                  "description": "token",
-                  "value": "rajqvj"
-                }
-              ]
-            },
-            "url": {
-              "raw": "http://localhost:8088/admin/logout",
-              "protocol": "http",
-              "path": [
-                "admin",
-                "logout"
-              ],
-              "host": [
-                "localhost"
-              ],
-              "port": "8088",
-              "query": [],
-              "variable": []
-            },
-            "description": "注销",
-            "header": []
-          },
-          "description": "注销"
-        },
-        {
-          "name": "注册",
-          "request": {
-            "method": "POST",
-            "body": {
-              "mode": "raw",
-              "raw": "{\n  \"username\": \"tora.aufderhar\",\n  \"password\": \"79oici\",\n  \"passwordRepeat\": \"neby23\"\n}",
-              "options": {
-                "raw": {
-                  "language": "json"
-                }
-              }
-            },
-            "url": {
-              "raw": "http://localhost:8088/admin/register",
-              "protocol": "http",
-              "path": [
-                "admin",
-                "register"
-              ],
-              "host": [
-                "localhost"
-              ],
-              "port": "8088",
-              "query": [],
-              "variable": []
-            },
-            "description": "注册",
-            "header": []
-          },
-          "description": "注册"
-        }
-      ]
-    },
-    {
-      "name": "权限接口",
-      "item": []
-    },
-    {
-      "name": "角色接口",
-      "item": []
-    },
-    {
       "name": "标签接口",
       "item": [
         {
@@ -1250,7 +1204,7 @@
               }
             },
             "url": {
-              "raw": "http://localhost:8088/tag/article/id?id\u003d443\u0026page\u003d1\u0026size\u003d5",
+              "raw": "http://localhost:8088/tag/article/id?id\u003d815\u0026page\u003d1\u0026size\u003d5",
               "protocol": "http",
               "path": [
                 "tag",
@@ -1264,7 +1218,7 @@
               "query": [
                 {
                   "key": "id",
-                  "value": "732",
+                  "value": "909",
                   "description": "id"
                 },
                 {
@@ -1344,7 +1298,7 @@
               }
             },
             "url": {
-              "raw": "http://localhost:8088/tag/id?id\u003d265",
+              "raw": "http://localhost:8088/tag/id?id\u003d167",
               "protocol": "http",
               "path": [
                 "tag",
@@ -1357,7 +1311,7 @@
               "query": [
                 {
                   "key": "id",
-                  "value": "836",
+                  "value": "169",
                   "description": "id"
                 }
               ],
@@ -1448,7 +1402,7 @@
               }
             },
             "url": {
-              "raw": "http://localhost:8088/tag/?id\u003d958",
+              "raw": "http://localhost:8088/tag/?id\u003d300",
               "protocol": "http",
               "path": [
                 "tag",
@@ -1461,7 +1415,7 @@
               "query": [
                 {
                   "key": "id",
-                  "value": "868",
+                  "value": "467",
                   "description": "id"
                 }
               ],
@@ -1560,7 +1514,7 @@
               }
             },
             "url": {
-              "raw": "http://localhost:8088/idea/624",
+              "raw": "http://localhost:8088/idea/279",
               "protocol": "http",
               "path": [
                 "idea",
@@ -1574,7 +1528,7 @@
               "variable": [
                 {
                   "key": "id",
-                  "value": "168",
+                  "value": "244",
                   "description": "id"
                 }
               ]
@@ -1590,7 +1544,7 @@
             "method": "POST",
             "body": {
               "mode": "raw",
-              "raw": "{\n  \"id\": 809,\n  \"createTime\": \"2022-04-25 15:22:01\",\n  \"modifyTime\": \"2022-04-25 15:22:01\",\n  \"title\": \"vw0cpi\",\n  \"content\": \"zi4dpt\"\n}",
+              "raw": "{\n  \"id\": 331,\n  \"createTime\": \"2022-04-25 15:58:17\",\n  \"modifyTime\": \"2022-04-25 15:58:17\",\n  \"title\": \"if302x\",\n  \"content\": \"v6bhv3\"\n}",
               "options": {
                 "raw": {
                   "language": "json"
@@ -1622,7 +1576,7 @@
             "method": "PUT",
             "body": {
               "mode": "raw",
-              "raw": "{\n  \"id\": 815,\n  \"createTime\": \"2022-04-25 15:22:01\",\n  \"modifyTime\": \"2022-04-25 15:22:01\",\n  \"title\": \"ll6oxm\",\n  \"content\": \"nalve9\"\n}",
+              "raw": "{\n  \"id\": 588,\n  \"createTime\": \"2022-04-25 15:58:17\",\n  \"modifyTime\": \"2022-04-25 15:58:17\",\n  \"title\": \"k1y2jn\",\n  \"content\": \"524bd0\"\n}",
               "options": {
                 "raw": {
                   "language": "json"
@@ -1630,7 +1584,7 @@
               }
             },
             "url": {
-              "raw": "http://localhost:8088/idea/?id\u003d907",
+              "raw": "http://localhost:8088/idea/?id\u003d812",
               "protocol": "http",
               "path": [
                 "idea",
@@ -1643,7 +1597,7 @@
               "query": [
                 {
                   "key": "id",
-                  "value": "715",
+                  "value": "67",
                   "description": "id"
                 }
               ],
@@ -1666,7 +1620,7 @@
               }
             },
             "url": {
-              "raw": "http://localhost:8088/idea/498",
+              "raw": "http://localhost:8088/idea/330",
               "protocol": "http",
               "path": [
                 "idea",
@@ -1680,7 +1634,7 @@
               "variable": [
                 {
                   "key": "id",
-                  "value": "978",
+                  "value": "0",
                   "description": "id"
                 }
               ]
@@ -1701,7 +1655,7 @@
             "method": "POST",
             "body": {
               "mode": "raw",
-              "raw": "{\n  \"id\": 403,\n  \"username\": \"tora.aufderhar\",\n  \"password\": \"p7jc4k\",\n  \"token\": \"lm20n5\",\n  \"avatar\": \"tlx9x7\",\n  \"age\": 58,\n  \"gender\": 1,\n  \"location\": \"2xg42s\",\n  \"signature\": \"abhn09\",\n  \"profile\": \"w4dt2g\"\n}",
+              "raw": "{\n  \"id\": 863,\n  \"username\": \"tora.aufderhar\",\n  \"password\": \"jlut0c\",\n  \"token\": \"95b951\",\n  \"avatar\": \"2yj72m\",\n  \"age\": 58,\n  \"gender\": 1,\n  \"location\": \"5h1msq\",\n  \"signature\": \"iy2n0b\",\n  \"profile\": \"rwbayk\"\n}",
               "options": {
                 "raw": {
                   "language": "json"
@@ -1739,7 +1693,7 @@
               }
             },
             "url": {
-              "raw": "http://localhost:8088/user/user?id\u003d906",
+              "raw": "http://localhost:8088/user/user?id\u003d250",
               "protocol": "http",
               "path": [
                 "user",
@@ -1752,7 +1706,7 @@
               "query": [
                 {
                   "key": "id",
-                  "value": "453",
+                  "value": "356",
                   "description": "No comments found."
                 }
               ],
@@ -1805,7 +1759,7 @@
             "method": "PUT",
             "body": {
               "mode": "raw",
-              "raw": "{\n  \"id\": 162,\n  \"username\": \"tora.aufderhar\",\n  \"password\": \"f0dv9l\",\n  \"token\": \"onlpqq\",\n  \"avatar\": \"59oc7b\",\n  \"age\": 58,\n  \"gender\": 1,\n  \"location\": \"k5pp5x\",\n  \"signature\": \"0uhvhn\",\n  \"profile\": \"urxajs\"\n}",
+              "raw": "{\n  \"id\": 985,\n  \"username\": \"tora.aufderhar\",\n  \"password\": \"f933io\",\n  \"token\": \"l84aqe\",\n  \"avatar\": \"6lwot7\",\n  \"age\": 58,\n  \"gender\": 1,\n  \"location\": \"3xgkyi\",\n  \"signature\": \"ml6ige\",\n  \"profile\": \"oy2gma\"\n}",
               "options": {
                 "raw": {
                   "language": "json"
@@ -1813,7 +1767,7 @@
               }
             },
             "url": {
-              "raw": "http://localhost:8088/user/password?id\u003d245",
+              "raw": "http://localhost:8088/user/password?id\u003d64",
               "protocol": "http",
               "path": [
                 "user",
@@ -1826,7 +1780,7 @@
               "query": [
                 {
                   "key": "id",
-                  "value": "45",
+                  "value": "872",
                   "description": "No comments found."
                 }
               ],
