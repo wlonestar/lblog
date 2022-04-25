@@ -5,9 +5,6 @@ import com.wjl.lblog.annotation.TimeLog;
 import com.wjl.lblog.common.constants.MyResult;
 import com.wjl.lblog.common.enums.MyHttpStatus;
 import com.wjl.lblog.model.dto.ArticleDto;
-import com.wjl.lblog.model.entity.Article;
-import com.wjl.lblog.model.vo.ArticleDetailVo;
-import com.wjl.lblog.model.vo.ArticleSummaryVo;
 import com.wjl.lblog.service.intf.ArticleService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.*;
@@ -82,9 +79,9 @@ public class ArticleController {
      */
     @RequestMapping(value = "/detail/id", method = RequestMethod.GET)
     public MyResult<?> getDetailById(@RequestParam(name = "id") Long id) {
-        ArticleDetailVo articleDetailVo = articleService.selectDetailById(id);
-        if (!Objects.isNull(articleDetailVo)) {
-            return MyResult.success(articleDetailVo);
+        var res = articleService.selectDetailById(id);
+        if (!Objects.isNull(res)) {
+            return MyResult.success(res);
         }
         return MyResult.fail(MyHttpStatus.BAD_REQUEST.getCode(), "can't find article by param");
     }
@@ -96,9 +93,9 @@ public class ArticleController {
      */
     @RequestMapping(value = "/summary/id", method = RequestMethod.GET)
     public MyResult<?> getSummaryById(@RequestParam(name = "id") Long id) {
-        ArticleSummaryVo articleSummaryVo = articleService.selectSummaryById(id);
-        if (!Objects.isNull(articleSummaryVo)) {
-            return MyResult.success(articleSummaryVo);
+        var res = articleService.selectSummaryById(id);
+        if (!Objects.isNull(res)) {
+            return MyResult.success(res);
         }
         return MyResult.fail(MyHttpStatus.BAD_REQUEST.getCode(), "can't find article by param");
     }
@@ -130,7 +127,7 @@ public class ArticleController {
     @RequestMapping(value = "/", method = RequestMethod.PUT)
     public MyResult<?> update(@RequestParam(name = "id") Long id,
                               @RequestBody ArticleDto articleDto) {
-        Article article = articleService.getById(id);
+        var article = articleService.getById(id);
         if (!Objects.isNull(article)) {
             var res = articleService.updateById(id, articleDto);
             if (res) {

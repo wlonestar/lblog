@@ -41,7 +41,7 @@ public class UserController {
      */
     @RequestMapping(value = "/user", method = RequestMethod.GET)
     public MyResult<?> getUserById(@RequestParam(name = "id") Long id) {
-        User user = userService.findById(id);
+        var user = userService.findById(id);
         user.setPassword(null);
         return MyResult.success(user);
     }
@@ -51,7 +51,7 @@ public class UserController {
      */
     @RequestMapping(value = "/name", method = RequestMethod.GET)
     public MyResult<?> getUserInfo(@RequestParam(name = "username") String username) {
-        User user = userService.findByUsername(username);
+        var user = userService.findByUsername(username);
         user.setId(null);
         user.setPassword(null);
         return MyResult.success(user);

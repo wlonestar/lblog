@@ -1150,3 +1150,432 @@ Caused by: java.sql.SQLSyntaxErrorException: Unknown column 'a.update_time' in '
 [2022-04-25 15:17:30][Test worker] WARN  com.baomidou.mybatisplus.core.toolkit.support.ReflectLambdaMeta - Unable to make field private final java.lang.Class java.lang.invoke.SerializedLambda.capturingClass accessible: module java.base does not "opens java.lang.invoke" to unnamed module @be35cd9
 [2022-04-25 15:17:30][SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
 [2022-04-25 15:17:30][SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+[2022-04-25 15:23:54][restartedMain] INFO  com.wjl.lblog.BlogServerApplication - Starting BlogServerApplication using Java 17.0.2 on lonestar with PID 42196 (D:\wjl\workspace\repository\lblog\blog-server\build\classes\java\main started by wjl15 in D:\wjl\workspace\repository\lblog\blog-server)
+[2022-04-25 15:23:54][restartedMain] INFO  com.wjl.lblog.BlogServerApplication - No active profile set, falling back to 1 default profile: "default"
+[2022-04-25 15:23:56][restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8088"]
+[2022-04-25 15:23:56][restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+[2022-04-25 15:23:56][restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.60]
+[2022-04-25 15:23:56][restartedMain] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+[2022-04-25 15:23:58][restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+[2022-04-25 15:23:58][restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+[2022-04-25 15:23:58][restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8088"]
+[2022-04-25 15:23:58][restartedMain] INFO  com.wjl.lblog.BlogServerApplication - Started BlogServerApplication in 4.205 seconds (JVM running for 5.004)
+[2022-04-25 15:23:59][RMI TCP Connection(3)-172.30.32.1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+[2022-04-25 15:25:26][SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+[2022-04-25 15:25:26][SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+[2022-04-25 15:25:35][Test worker] INFO  com.wjl.lblog.BlogServerApplicationTests - Starting BlogServerApplicationTests using Java 17.0.2 on lonestar with PID 53564 (started by wjl15 in D:\wjl\workspace\repository\lblog\blog-server)
+[2022-04-25 15:25:35][Test worker] INFO  com.wjl.lblog.BlogServerApplicationTests - No active profile set, falling back to 1 default profile: "default"
+[2022-04-25 15:25:41][Test worker] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+[2022-04-25 15:25:42][Test worker] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+[2022-04-25 15:25:42][Test worker] INFO  com.wjl.lblog.BlogServerApplicationTests - Started BlogServerApplicationTests in 7.087 seconds (JVM running for 8.81)
+[2022-04-25 15:25:44][Test worker] WARN  com.baomidou.mybatisplus.core.toolkit.support.ReflectLambdaMeta - Unable to make field private final java.lang.Class java.lang.invoke.SerializedLambda.capturingClass accessible: module java.base does not "opens java.lang.invoke" to unnamed module @747edf66
+[2022-04-25 15:25:44][SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+[2022-04-25 15:25:44][SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+[2022-04-25 15:28:51][Test worker] INFO  com.wjl.lblog.BlogServerApplicationTests - Starting BlogServerApplicationTests using Java 17.0.2 on lonestar with PID 54668 (started by wjl15 in D:\wjl\workspace\repository\lblog\blog-server)
+[2022-04-25 15:28:51][Test worker] INFO  com.wjl.lblog.BlogServerApplicationTests - No active profile set, falling back to 1 default profile: "default"
+[2022-04-25 15:28:57][Test worker] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+[2022-04-25 15:28:57][Test worker] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+[2022-04-25 15:28:57][Test worker] INFO  com.wjl.lblog.BlogServerApplicationTests - Started BlogServerApplicationTests in 6.797 seconds (JVM running for 8.771)
+[2022-04-25 15:28:59][Test worker] WARN  com.baomidou.mybatisplus.core.toolkit.support.ReflectLambdaMeta - Unable to make field private final java.lang.Class java.lang.invoke.SerializedLambda.capturingClass accessible: module java.base does not "opens java.lang.invoke" to unnamed module @747edf66
+[2022-04-25 15:28:59][SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+[2022-04-25 15:28:59][SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+[2022-04-25 15:29:15][Test worker] INFO  com.wjl.lblog.BlogServerApplicationTests - Starting BlogServerApplicationTests using Java 17.0.2 on lonestar with PID 54592 (started by wjl15 in D:\wjl\workspace\repository\lblog\blog-server)
+[2022-04-25 15:29:15][Test worker] INFO  com.wjl.lblog.BlogServerApplicationTests - No active profile set, falling back to 1 default profile: "default"
+[2022-04-25 15:29:20][Test worker] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+[2022-04-25 15:29:20][Test worker] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+[2022-04-25 15:29:21][Test worker] INFO  com.wjl.lblog.BlogServerApplicationTests - Started BlogServerApplicationTests in 5.963 seconds (JVM running for 7.626)
+[2022-04-25 15:29:22][Test worker] WARN  com.baomidou.mybatisplus.core.toolkit.support.ReflectLambdaMeta - Unable to make field private final java.lang.Class java.lang.invoke.SerializedLambda.capturingClass accessible: module java.base does not "opens java.lang.invoke" to unnamed module @747edf66
+[2022-04-25 15:29:22][SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+[2022-04-25 15:29:22][SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+[2022-04-25 15:31:04][restartedMain] INFO  com.wjl.lblog.BlogServerApplication - Starting BlogServerApplication using Java 17.0.2 on lonestar with PID 51420 (D:\wjl\workspace\repository\lblog\blog-server\build\classes\java\main started by wjl15 in D:\wjl\workspace\repository\lblog\blog-server)
+[2022-04-25 15:31:04][restartedMain] INFO  com.wjl.lblog.BlogServerApplication - No active profile set, falling back to 1 default profile: "default"
+[2022-04-25 15:31:06][restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8088"]
+[2022-04-25 15:31:06][restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+[2022-04-25 15:31:06][restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.60]
+[2022-04-25 15:31:06][restartedMain] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+[2022-04-25 15:31:08][restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+[2022-04-25 15:31:08][restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+[2022-04-25 15:31:08][restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8088"]
+[2022-04-25 15:31:08][restartedMain] INFO  com.wjl.lblog.BlogServerApplication - Started BlogServerApplication in 4.229 seconds (JVM running for 5.191)
+[2022-04-25 15:31:09][RMI TCP Connection(1)-172.30.32.1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+[2022-04-25 15:31:11][http-nio-8088-exec-9] INFO  com.wjl.lblog.interceptor.RequestInterceptor - [0:0:0:0:0:0:0:1][GET][/article/page/detail]
+[2022-04-25 15:31:11][http-nio-8088-exec-9] INFO  com.wjl.lblog.annotation.TimeLogger - [findAllDetail()] --- begin --- 1650871871258
+[2022-04-25 15:31:11][http-nio-8088-exec-9] WARN  com.baomidou.mybatisplus.core.toolkit.support.ReflectLambdaMeta - Unable to make field private final java.lang.Class java.lang.invoke.SerializedLambda.capturingClass accessible: module java.base does not "opens java.lang.invoke" to unnamed module @7a8c8dcf
+[2022-04-25 15:31:11][http-nio-8088-exec-9] INFO  com.wjl.lblog.annotation.TimeLogger - [findAllDetail()] --- end --- 1650871871421, cost 0.163 s
+[2022-04-25 15:31:19][http-nio-8088-exec-7] INFO  com.wjl.lblog.interceptor.RequestInterceptor - [0:0:0:0:0:0:0:1][GET][/article/page/summary]
+[2022-04-25 15:31:19][http-nio-8088-exec-7] INFO  com.wjl.lblog.annotation.TimeLogger - [findAllByPage()] --- begin --- 1650871879157
+[2022-04-25 15:31:19][http-nio-8088-exec-7] INFO  com.wjl.lblog.annotation.TimeLogger - [findAllByPage()] --- end --- 1650871879163, cost 0.006 s
+[2022-04-25 15:31:21][http-nio-8088-exec-4] INFO  com.wjl.lblog.interceptor.RequestInterceptor - [0:0:0:0:0:0:0:1][GET][/article/page/title]
+[2022-04-25 15:31:21][http-nio-8088-exec-4] INFO  com.wjl.lblog.interceptor.RequestInterceptor - [0:0:0:0:0:0:0:1][GET][/error]
+[2022-04-25 15:31:44][http-nio-8088-exec-5] INFO  com.wjl.lblog.interceptor.RequestInterceptor - [0:0:0:0:0:0:0:1][GET][/article/page/detail]
+[2022-04-25 15:31:44][http-nio-8088-exec-5] INFO  com.wjl.lblog.annotation.TimeLogger - [findAllDetail()] --- begin --- 1650871904804
+[2022-04-25 15:31:44][http-nio-8088-exec-5] INFO  com.wjl.lblog.annotation.TimeLogger - [findAllDetail()] --- end --- 1650871904842, cost 0.038 s
+[2022-04-25 15:31:46][http-nio-8088-exec-3] INFO  com.wjl.lblog.interceptor.RequestInterceptor - [0:0:0:0:0:0:0:1][GET][/article/page/summary]
+[2022-04-25 15:31:46][http-nio-8088-exec-3] INFO  com.wjl.lblog.annotation.TimeLogger - [findAllByPage()] --- begin --- 1650871906974
+[2022-04-25 15:31:46][http-nio-8088-exec-3] INFO  com.wjl.lblog.annotation.TimeLogger - [findAllByPage()] --- end --- 1650871906979, cost 0.005 s
+[2022-04-25 15:31:49][http-nio-8088-exec-10] INFO  com.wjl.lblog.interceptor.RequestInterceptor - [0:0:0:0:0:0:0:1][GET][/article/all/detail]
+[2022-04-25 15:31:49][http-nio-8088-exec-10] INFO  com.wjl.lblog.annotation.TimeLogger - [getAllDetail()] --- begin --- 1650871909961
+[2022-04-25 15:31:50][http-nio-8088-exec-10] INFO  com.wjl.lblog.annotation.TimeLogger - [getAllDetail()] --- end --- 1650871910019, cost 0.058 s
+[2022-04-25 15:31:52][http-nio-8088-exec-2] INFO  com.wjl.lblog.interceptor.RequestInterceptor - [0:0:0:0:0:0:0:1][GET][/article/all/summary]
+[2022-04-25 15:31:52][http-nio-8088-exec-2] INFO  com.wjl.lblog.annotation.TimeLogger - [getAllSummary()] --- begin --- 1650871912587
+[2022-04-25 15:31:52][http-nio-8088-exec-2] INFO  com.wjl.lblog.annotation.TimeLogger - [getAllSummary()] --- end --- 1650871912590, cost 0.003 s
+[2022-04-25 15:31:55][http-nio-8088-exec-6] INFO  com.wjl.lblog.interceptor.RequestInterceptor - [0:0:0:0:0:0:0:1][GET][/article/detail/id]
+[2022-04-25 15:31:55][http-nio-8088-exec-6] INFO  com.wjl.lblog.annotation.TimeLogger - [getDetailById()] --- begin --- 1650871915021
+[2022-04-25 15:31:55][http-nio-8088-exec-6] ERROR com.wjl.lblog.annotation.TimeLogger - [getDetailById()] method run error
+[2022-04-25 15:31:55][http-nio-8088-exec-6] INFO  com.wjl.lblog.annotation.TimeLogger - [getDetailById()] --- end --- 1650871915024, cost 0.003 s
+[2022-04-25 15:31:55][http-nio-8088-exec-6] ERROR com.wjl.lblog.handler.RestExceptionHandler - 全局异常 Cannot invoke "com.wjl.lblog.model.vo.ArticleDetailVo.getId()" because "detailVo" is null
+java.lang.NullPointerException: Cannot invoke "com.wjl.lblog.model.vo.ArticleDetailVo.getId()" because "detailVo" is null
+	at com.wjl.lblog.service.impl.ArticleServiceImpl.processTag(ArticleServiceImpl.java:169) ~[main/:?]
+	at com.wjl.lblog.service.impl.ArticleServiceImpl.selectDetailById(ArticleServiceImpl.java:71) ~[main/:?]
+	at com.wjl.lblog.service.impl.ArticleServiceImpl$$FastClassBySpringCGLIB$$39367fd2.invoke(<generated>) ~[main/:?]
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218) ~[spring-core-5.3.18.jar:5.3.18]
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:689) ~[spring-aop-5.3.18.jar:5.3.18]
+	at com.wjl.lblog.service.impl.ArticleServiceImpl$$EnhancerBySpringCGLIB$$b5b92920.selectDetailById(<generated>) ~[main/:?]
+	at com.wjl.lblog.controller.ArticleController.getDetailById(ArticleController.java:85) ~[main/:?]
+	at com.wjl.lblog.controller.ArticleController$$FastClassBySpringCGLIB$$ab974a42.invoke(<generated>) ~[main/:?]
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218) ~[spring-core-5.3.18.jar:5.3.18]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:783) ~[spring-aop-5.3.18.jar:5.3.18]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163) ~[spring-aop-5.3.18.jar:5.3.18]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:753) ~[spring-aop-5.3.18.jar:5.3.18]
+	at org.springframework.aop.aspectj.AspectJAfterThrowingAdvice.invoke(AspectJAfterThrowingAdvice.java:64) ~[spring-aop-5.3.18.jar:5.3.18]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:175) ~[spring-aop-5.3.18.jar:5.3.18]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:753) ~[spring-aop-5.3.18.jar:5.3.18]
+	at org.springframework.aop.aspectj.AspectJAfterAdvice.invoke(AspectJAfterAdvice.java:49) ~[spring-aop-5.3.18.jar:5.3.18]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:175) ~[spring-aop-5.3.18.jar:5.3.18]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:753) ~[spring-aop-5.3.18.jar:5.3.18]
+	at org.springframework.aop.framework.adapter.MethodBeforeAdviceInterceptor.invoke(MethodBeforeAdviceInterceptor.java:58) ~[spring-aop-5.3.18.jar:5.3.18]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:175) ~[spring-aop-5.3.18.jar:5.3.18]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:753) ~[spring-aop-5.3.18.jar:5.3.18]
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97) ~[spring-aop-5.3.18.jar:5.3.18]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.18.jar:5.3.18]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:753) ~[spring-aop-5.3.18.jar:5.3.18]
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:698) ~[spring-aop-5.3.18.jar:5.3.18]
+	at com.wjl.lblog.controller.ArticleController$$EnhancerBySpringCGLIB$$4603ec36.getDetailById(<generated>) ~[main/:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[?:?]
+	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:568) ~[?:?]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205) ~[spring-web-5.3.18.jar:5.3.18]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150) ~[spring-web-5.3.18.jar:5.3.18]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117) ~[spring-webmvc-5.3.18.jar:5.3.18]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895) ~[spring-webmvc-5.3.18.jar:5.3.18]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808) ~[spring-webmvc-5.3.18.jar:5.3.18]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-5.3.18.jar:5.3.18]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1067) ~[spring-webmvc-5.3.18.jar:5.3.18]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963) ~[spring-webmvc-5.3.18.jar:5.3.18]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) ~[spring-webmvc-5.3.18.jar:5.3.18]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898) ~[spring-webmvc-5.3.18.jar:5.3.18]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:655) ~[tomcat-embed-core-9.0.60.jar:4.0.FR]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) ~[spring-webmvc-5.3.18.jar:5.3.18]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764) ~[tomcat-embed-core-9.0.60.jar:4.0.FR]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227) ~[tomcat-embed-core-9.0.60.jar:9.0.60]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.60.jar:9.0.60]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-9.0.60.jar:9.0.60]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.60.jar:9.0.60]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.60.jar:9.0.60]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-5.3.18.jar:5.3.18]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.18.jar:5.3.18]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.60.jar:9.0.60]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.60.jar:9.0.60]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-5.3.18.jar:5.3.18]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.18.jar:5.3.18]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.60.jar:9.0.60]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.60.jar:9.0.60]
+	at org.springframework.boot.actuate.metrics.web.servlet.WebMvcMetricsFilter.doFilterInternal(WebMvcMetricsFilter.java:96) ~[spring-boot-actuator-2.6.6.jar:2.6.6]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.18.jar:5.3.18]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.60.jar:9.0.60]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.60.jar:9.0.60]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-5.3.18.jar:5.3.18]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.18.jar:5.3.18]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.60.jar:9.0.60]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.60.jar:9.0.60]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197) ~[tomcat-embed-core-9.0.60.jar:9.0.60]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97) ~[tomcat-embed-core-9.0.60.jar:9.0.60]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541) ~[tomcat-embed-core-9.0.60.jar:9.0.60]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135) ~[tomcat-embed-core-9.0.60.jar:9.0.60]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) ~[tomcat-embed-core-9.0.60.jar:9.0.60]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78) ~[tomcat-embed-core-9.0.60.jar:9.0.60]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:360) ~[tomcat-embed-core-9.0.60.jar:9.0.60]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399) ~[tomcat-embed-core-9.0.60.jar:9.0.60]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) ~[tomcat-embed-core-9.0.60.jar:9.0.60]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:889) ~[tomcat-embed-core-9.0.60.jar:9.0.60]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1743) ~[tomcat-embed-core-9.0.60.jar:9.0.60]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) ~[tomcat-embed-core-9.0.60.jar:9.0.60]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-9.0.60.jar:9.0.60]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-9.0.60.jar:9.0.60]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-9.0.60.jar:9.0.60]
+	at java.lang.Thread.run(Thread.java:833) ~[?:?]
+[2022-04-25 15:34:21][SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+[2022-04-25 15:34:21][SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+[2022-04-25 15:34:25][restartedMain] INFO  com.wjl.lblog.BlogServerApplication - Starting BlogServerApplication using Java 17.0.2 on lonestar with PID 47744 (D:\wjl\workspace\repository\lblog\blog-server\build\classes\java\main started by wjl15 in D:\wjl\workspace\repository\lblog\blog-server)
+[2022-04-25 15:34:25][restartedMain] INFO  com.wjl.lblog.BlogServerApplication - No active profile set, falling back to 1 default profile: "default"
+[2022-04-25 15:34:27][restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8088"]
+[2022-04-25 15:34:27][restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+[2022-04-25 15:34:27][restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.60]
+[2022-04-25 15:34:27][restartedMain] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+[2022-04-25 15:34:29][restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+[2022-04-25 15:34:29][restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+[2022-04-25 15:34:29][restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8088"]
+[2022-04-25 15:34:29][restartedMain] INFO  com.wjl.lblog.BlogServerApplication - Started BlogServerApplication in 4.233 seconds (JVM running for 5.101)
+[2022-04-25 15:34:29][RMI TCP Connection(2)-172.30.32.1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+[2022-04-25 15:34:32][http-nio-8088-exec-3] INFO  com.wjl.lblog.interceptor.RequestInterceptor - [0:0:0:0:0:0:0:1][GET][/article/detail/id]
+[2022-04-25 15:34:32][http-nio-8088-exec-3] INFO  com.wjl.lblog.annotation.TimeLogger - [getDetailById()] --- begin --- 1650872072672
+[2022-04-25 15:34:32][http-nio-8088-exec-3] ERROR com.wjl.lblog.annotation.TimeLogger - [getDetailById()] method run error
+[2022-04-25 15:34:32][http-nio-8088-exec-3] INFO  com.wjl.lblog.annotation.TimeLogger - [getDetailById()] --- end --- 1650872072723, cost 0.051 s
+[2022-04-25 15:34:32][http-nio-8088-exec-3] ERROR com.wjl.lblog.handler.RestExceptionHandler - 全局异常 Cannot invoke "com.wjl.lblog.model.vo.ArticleDetailVo.setId(java.lang.Long)" because "res" is null
+java.lang.NullPointerException: Cannot invoke "com.wjl.lblog.model.vo.ArticleDetailVo.setId(java.lang.Long)" because "res" is null
+	at com.wjl.lblog.service.impl.ArticleServiceImpl.selectDetailById(ArticleServiceImpl.java:71) ~[main/:?]
+	at com.wjl.lblog.service.impl.ArticleServiceImpl$$FastClassBySpringCGLIB$$39367fd2.invoke(<generated>) ~[main/:?]
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218) ~[spring-core-5.3.18.jar:5.3.18]
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:689) ~[spring-aop-5.3.18.jar:5.3.18]
+	at com.wjl.lblog.service.impl.ArticleServiceImpl$$EnhancerBySpringCGLIB$$724844ec.selectDetailById(<generated>) ~[main/:?]
+	at com.wjl.lblog.controller.ArticleController.getDetailById(ArticleController.java:85) ~[main/:?]
+	at com.wjl.lblog.controller.ArticleController$$FastClassBySpringCGLIB$$ab974a42.invoke(<generated>) ~[main/:?]
+	at org.springframework.cglib.proxy.MethodProxy.invoke(MethodProxy.java:218) ~[spring-core-5.3.18.jar:5.3.18]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.invokeJoinpoint(CglibAopProxy.java:783) ~[spring-aop-5.3.18.jar:5.3.18]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163) ~[spring-aop-5.3.18.jar:5.3.18]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:753) ~[spring-aop-5.3.18.jar:5.3.18]
+	at org.springframework.aop.aspectj.AspectJAfterThrowingAdvice.invoke(AspectJAfterThrowingAdvice.java:64) ~[spring-aop-5.3.18.jar:5.3.18]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:175) ~[spring-aop-5.3.18.jar:5.3.18]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:753) ~[spring-aop-5.3.18.jar:5.3.18]
+	at org.springframework.aop.aspectj.AspectJAfterAdvice.invoke(AspectJAfterAdvice.java:49) ~[spring-aop-5.3.18.jar:5.3.18]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:175) ~[spring-aop-5.3.18.jar:5.3.18]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:753) ~[spring-aop-5.3.18.jar:5.3.18]
+	at org.springframework.aop.framework.adapter.MethodBeforeAdviceInterceptor.invoke(MethodBeforeAdviceInterceptor.java:58) ~[spring-aop-5.3.18.jar:5.3.18]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:175) ~[spring-aop-5.3.18.jar:5.3.18]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:753) ~[spring-aop-5.3.18.jar:5.3.18]
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97) ~[spring-aop-5.3.18.jar:5.3.18]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.18.jar:5.3.18]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:753) ~[spring-aop-5.3.18.jar:5.3.18]
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:698) ~[spring-aop-5.3.18.jar:5.3.18]
+	at com.wjl.lblog.controller.ArticleController$$EnhancerBySpringCGLIB$$2a32bea0.getDetailById(<generated>) ~[main/:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[?:?]
+	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:568) ~[?:?]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205) ~[spring-web-5.3.18.jar:5.3.18]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150) ~[spring-web-5.3.18.jar:5.3.18]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117) ~[spring-webmvc-5.3.18.jar:5.3.18]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895) ~[spring-webmvc-5.3.18.jar:5.3.18]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808) ~[spring-webmvc-5.3.18.jar:5.3.18]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-5.3.18.jar:5.3.18]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1067) ~[spring-webmvc-5.3.18.jar:5.3.18]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963) ~[spring-webmvc-5.3.18.jar:5.3.18]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) ~[spring-webmvc-5.3.18.jar:5.3.18]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898) ~[spring-webmvc-5.3.18.jar:5.3.18]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:655) ~[tomcat-embed-core-9.0.60.jar:4.0.FR]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) ~[spring-webmvc-5.3.18.jar:5.3.18]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764) ~[tomcat-embed-core-9.0.60.jar:4.0.FR]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227) ~[tomcat-embed-core-9.0.60.jar:9.0.60]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.60.jar:9.0.60]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-9.0.60.jar:9.0.60]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.60.jar:9.0.60]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.60.jar:9.0.60]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-5.3.18.jar:5.3.18]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.18.jar:5.3.18]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.60.jar:9.0.60]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.60.jar:9.0.60]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-5.3.18.jar:5.3.18]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.18.jar:5.3.18]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.60.jar:9.0.60]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.60.jar:9.0.60]
+	at org.springframework.boot.actuate.metrics.web.servlet.WebMvcMetricsFilter.doFilterInternal(WebMvcMetricsFilter.java:96) ~[spring-boot-actuator-2.6.6.jar:2.6.6]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.18.jar:5.3.18]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.60.jar:9.0.60]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.60.jar:9.0.60]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-5.3.18.jar:5.3.18]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.18.jar:5.3.18]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.60.jar:9.0.60]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.60.jar:9.0.60]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197) ~[tomcat-embed-core-9.0.60.jar:9.0.60]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97) ~[tomcat-embed-core-9.0.60.jar:9.0.60]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541) ~[tomcat-embed-core-9.0.60.jar:9.0.60]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135) ~[tomcat-embed-core-9.0.60.jar:9.0.60]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) ~[tomcat-embed-core-9.0.60.jar:9.0.60]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78) ~[tomcat-embed-core-9.0.60.jar:9.0.60]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:360) ~[tomcat-embed-core-9.0.60.jar:9.0.60]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399) ~[tomcat-embed-core-9.0.60.jar:9.0.60]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) ~[tomcat-embed-core-9.0.60.jar:9.0.60]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:889) ~[tomcat-embed-core-9.0.60.jar:9.0.60]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1743) ~[tomcat-embed-core-9.0.60.jar:9.0.60]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) ~[tomcat-embed-core-9.0.60.jar:9.0.60]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-9.0.60.jar:9.0.60]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-9.0.60.jar:9.0.60]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-9.0.60.jar:9.0.60]
+	at java.lang.Thread.run(Thread.java:833) ~[?:?]
+[2022-04-25 15:34:37][http-nio-8088-exec-8] INFO  com.wjl.lblog.interceptor.RequestInterceptor - [0:0:0:0:0:0:0:1][GET][/article/detail/id]
+[2022-04-25 15:34:37][http-nio-8088-exec-8] INFO  com.wjl.lblog.annotation.TimeLogger - [getDetailById()] --- begin --- 1650872077537
+[2022-04-25 15:34:37][http-nio-8088-exec-8] WARN  com.baomidou.mybatisplus.core.toolkit.support.ReflectLambdaMeta - Unable to make field private final java.lang.Class java.lang.invoke.SerializedLambda.capturingClass accessible: module java.base does not "opens java.lang.invoke" to unnamed module @7a8c8dcf
+[2022-04-25 15:34:37][http-nio-8088-exec-8] INFO  com.wjl.lblog.annotation.TimeLogger - [getDetailById()] --- end --- 1650872077588, cost 0.051 s
+[2022-04-25 15:34:40][http-nio-8088-exec-5] INFO  com.wjl.lblog.interceptor.RequestInterceptor - [0:0:0:0:0:0:0:1][GET][/article/detail/id]
+[2022-04-25 15:34:40][http-nio-8088-exec-5] INFO  com.wjl.lblog.annotation.TimeLogger - [getDetailById()] --- begin --- 1650872080124
+[2022-04-25 15:34:40][http-nio-8088-exec-5] INFO  com.wjl.lblog.annotation.TimeLogger - [getDetailById()] --- end --- 1650872080135, cost 0.011 s
+[2022-04-25 15:34:40][http-nio-8088-exec-6] INFO  com.wjl.lblog.interceptor.RequestInterceptor - [0:0:0:0:0:0:0:1][GET][/article/detail/id]
+[2022-04-25 15:34:40][http-nio-8088-exec-6] INFO  com.wjl.lblog.annotation.TimeLogger - [getDetailById()] --- begin --- 1650872080631
+[2022-04-25 15:34:40][http-nio-8088-exec-6] INFO  com.wjl.lblog.annotation.TimeLogger - [getDetailById()] --- end --- 1650872080644, cost 0.013 s
+[2022-04-25 15:34:42][http-nio-8088-exec-7] INFO  com.wjl.lblog.interceptor.RequestInterceptor - [0:0:0:0:0:0:0:1][GET][/article/detail/id]
+[2022-04-25 15:34:42][http-nio-8088-exec-7] INFO  com.wjl.lblog.annotation.TimeLogger - [getDetailById()] --- begin --- 1650872082506
+[2022-04-25 15:34:42][http-nio-8088-exec-7] INFO  com.wjl.lblog.annotation.TimeLogger - [getDetailById()] --- end --- 1650872082518, cost 0.012 s
+[2022-04-25 15:34:43][http-nio-8088-exec-4] INFO  com.wjl.lblog.interceptor.RequestInterceptor - [0:0:0:0:0:0:0:1][GET][/article/detail/id]
+[2022-04-25 15:34:43][http-nio-8088-exec-4] INFO  com.wjl.lblog.annotation.TimeLogger - [getDetailById()] --- begin --- 1650872083083
+[2022-04-25 15:34:43][http-nio-8088-exec-4] INFO  com.wjl.lblog.annotation.TimeLogger - [getDetailById()] --- end --- 1650872083096, cost 0.013 s
+[2022-04-25 15:34:43][http-nio-8088-exec-9] INFO  com.wjl.lblog.interceptor.RequestInterceptor - [0:0:0:0:0:0:0:1][GET][/article/detail/id]
+[2022-04-25 15:34:43][http-nio-8088-exec-9] INFO  com.wjl.lblog.annotation.TimeLogger - [getDetailById()] --- begin --- 1650872083624
+[2022-04-25 15:34:43][http-nio-8088-exec-9] INFO  com.wjl.lblog.annotation.TimeLogger - [getDetailById()] --- end --- 1650872083635, cost 0.011 s
+[2022-04-25 15:34:44][http-nio-8088-exec-10] INFO  com.wjl.lblog.interceptor.RequestInterceptor - [0:0:0:0:0:0:0:1][GET][/article/detail/id]
+[2022-04-25 15:34:44][http-nio-8088-exec-10] INFO  com.wjl.lblog.annotation.TimeLogger - [getDetailById()] --- begin --- 1650872084063
+[2022-04-25 15:34:44][http-nio-8088-exec-10] INFO  com.wjl.lblog.annotation.TimeLogger - [getDetailById()] --- end --- 1650872084073, cost 0.01 s
+[2022-04-25 15:34:44][http-nio-8088-exec-1] INFO  com.wjl.lblog.interceptor.RequestInterceptor - [0:0:0:0:0:0:0:1][GET][/article/detail/id]
+[2022-04-25 15:34:44][http-nio-8088-exec-1] INFO  com.wjl.lblog.annotation.TimeLogger - [getDetailById()] --- begin --- 1650872084678
+[2022-04-25 15:34:44][http-nio-8088-exec-1] INFO  com.wjl.lblog.annotation.TimeLogger - [getDetailById()] --- end --- 1650872084690, cost 0.012 s
+[2022-04-25 15:35:09][http-nio-8088-exec-3] INFO  com.wjl.lblog.interceptor.RequestInterceptor - [0:0:0:0:0:0:0:1][GET][/article/detail/id]
+[2022-04-25 15:35:09][http-nio-8088-exec-3] INFO  com.wjl.lblog.annotation.TimeLogger - [getDetailById()] --- begin --- 1650872109220
+[2022-04-25 15:35:09][http-nio-8088-exec-3] INFO  com.wjl.lblog.annotation.TimeLogger - [getDetailById()] --- end --- 1650872109232, cost 0.012 s
+[2022-04-25 15:35:36][http-nio-8088-exec-2] INFO  com.wjl.lblog.interceptor.RequestInterceptor - [0:0:0:0:0:0:0:1][GET][/article/summary/id]
+[2022-04-25 15:35:36][http-nio-8088-exec-2] INFO  com.wjl.lblog.annotation.TimeLogger - [getSummaryById()] --- begin --- 1650872136254
+[2022-04-25 15:35:36][http-nio-8088-exec-2] INFO  com.wjl.lblog.annotation.TimeLogger - [getSummaryById()] --- end --- 1650872136256, cost 0.002 s
+[2022-04-25 15:35:41][http-nio-8088-exec-8] INFO  com.wjl.lblog.interceptor.RequestInterceptor - [0:0:0:0:0:0:0:1][GET][/article/summary/id]
+[2022-04-25 15:35:41][http-nio-8088-exec-8] INFO  com.wjl.lblog.annotation.TimeLogger - [getSummaryById()] --- begin --- 1650872141261
+[2022-04-25 15:35:41][http-nio-8088-exec-8] INFO  com.wjl.lblog.annotation.TimeLogger - [getSummaryById()] --- end --- 1650872141263, cost 0.002 s
+[2022-04-25 15:35:54][http-nio-8088-exec-5] INFO  com.wjl.lblog.interceptor.RequestInterceptor - [0:0:0:0:0:0:0:1][POST][/article/]
+[2022-04-25 15:35:54][http-nio-8088-exec-5] INFO  com.wjl.lblog.annotation.TimeLogger - [add()] --- begin --- 1650872154864
+[2022-04-25 15:35:54][http-nio-8088-exec-5] INFO  com.wjl.lblog.annotation.TimeLogger - [add()] --- end --- 1650872154904, cost 0.04 s
+[2022-04-25 15:36:42][http-nio-8088-exec-6] INFO  com.wjl.lblog.interceptor.RequestInterceptor - [0:0:0:0:0:0:0:1][PUT][/article/]
+[2022-04-25 15:36:42][http-nio-8088-exec-6] INFO  com.wjl.lblog.annotation.TimeLogger - [update()] --- begin --- 1650872202154
+[2022-04-25 15:36:42][http-nio-8088-exec-6] INFO  com.wjl.lblog.annotation.TimeLogger - [update()] --- end --- 1650872202191, cost 0.037 s
+[2022-04-25 15:37:10][http-nio-8088-exec-7] INFO  com.wjl.lblog.interceptor.RequestInterceptor - [0:0:0:0:0:0:0:1][DELETE][/article/71]
+[2022-04-25 15:37:10][http-nio-8088-exec-7] INFO  com.wjl.lblog.annotation.TimeLogger - [deleteById()] --- begin --- 1650872230959
+[2022-04-25 15:37:10][http-nio-8088-exec-7] INFO  com.wjl.lblog.annotation.TimeLogger - [deleteById()] --- end --- 1650872230963, cost 0.004 s
+[2022-04-25 15:37:17][http-nio-8088-exec-4] INFO  com.wjl.lblog.interceptor.RequestInterceptor - [0:0:0:0:0:0:0:1][DELETE][/article/7]
+[2022-04-25 15:37:17][http-nio-8088-exec-4] INFO  com.wjl.lblog.annotation.TimeLogger - [deleteById()] --- begin --- 1650872237459
+[2022-04-25 15:37:17][http-nio-8088-exec-4] INFO  com.wjl.lblog.annotation.TimeLogger - [deleteById()] --- end --- 1650872237469, cost 0.01 s
+[2022-04-25 15:37:32][http-nio-8088-exec-9] INFO  com.wjl.lblog.interceptor.RequestInterceptor - [0:0:0:0:0:0:0:1][GET][/category/page]
+[2022-04-25 15:37:32][http-nio-8088-exec-9] INFO  com.wjl.lblog.annotation.TimeLogger - [findAllByPage()] --- begin --- 1650872252133
+[2022-04-25 15:37:32][http-nio-8088-exec-9] INFO  com.wjl.lblog.annotation.TimeLogger - [findAllByPage()] --- end --- 1650872252168, cost 0.035 s
+[2022-04-25 15:37:35][http-nio-8088-exec-10] INFO  com.wjl.lblog.interceptor.RequestInterceptor - [0:0:0:0:0:0:0:1][GET][/category/all]
+[2022-04-25 15:37:35][http-nio-8088-exec-10] INFO  com.wjl.lblog.annotation.TimeLogger - [getAll()] --- begin --- 1650872255179
+[2022-04-25 15:37:35][http-nio-8088-exec-10] INFO  com.wjl.lblog.annotation.TimeLogger - [getAll()] --- end --- 1650872255183, cost 0.004 s
+[2022-04-25 15:37:37][http-nio-8088-exec-1] INFO  com.wjl.lblog.interceptor.RequestInterceptor - [0:0:0:0:0:0:0:1][GET][/category/article/id]
+[2022-04-25 15:37:37][http-nio-8088-exec-1] INFO  com.wjl.lblog.annotation.TimeLogger - [findCategoryById()] --- begin --- 1650872257704
+[2022-04-25 15:37:37][http-nio-8088-exec-1] INFO  com.wjl.lblog.annotation.TimeLogger - [findCategoryById()] --- end --- 1650872257706, cost 0.002 s
+[2022-04-25 15:37:44][http-nio-8088-exec-3] INFO  com.wjl.lblog.interceptor.RequestInterceptor - [0:0:0:0:0:0:0:1][GET][/category/article/id]
+[2022-04-25 15:37:44][http-nio-8088-exec-3] INFO  com.wjl.lblog.annotation.TimeLogger - [findCategoryById()] --- begin --- 1650872264919
+[2022-04-25 15:37:44][http-nio-8088-exec-3] INFO  com.wjl.lblog.annotation.TimeLogger - [findCategoryById()] --- end --- 1650872264928, cost 0.009 s
+[2022-04-25 15:37:57][http-nio-8088-exec-2] INFO  com.wjl.lblog.interceptor.RequestInterceptor - [0:0:0:0:0:0:0:1][GET][/category/article/id]
+[2022-04-25 15:37:57][http-nio-8088-exec-2] INFO  com.wjl.lblog.annotation.TimeLogger - [findCategoryById()] --- begin --- 1650872277015
+[2022-04-25 15:37:57][http-nio-8088-exec-2] INFO  com.wjl.lblog.annotation.TimeLogger - [findCategoryById()] --- end --- 1650872277022, cost 0.007 s
+[2022-04-25 15:38:04][http-nio-8088-exec-8] INFO  com.wjl.lblog.interceptor.RequestInterceptor - [0:0:0:0:0:0:0:1][GET][/category/article/name]
+[2022-04-25 15:38:04][http-nio-8088-exec-8] INFO  com.wjl.lblog.annotation.TimeLogger - [findCategoryByName()] --- begin --- 1650872284634
+[2022-04-25 15:38:04][http-nio-8088-exec-8] INFO  com.wjl.lblog.annotation.TimeLogger - [findCategoryByName()] --- end --- 1650872284637, cost 0.003 s
+[2022-04-25 15:38:25][http-nio-8088-exec-5] INFO  com.wjl.lblog.interceptor.RequestInterceptor - [0:0:0:0:0:0:0:1][GET][/category/article/name]
+[2022-04-25 15:38:25][http-nio-8088-exec-5] INFO  com.wjl.lblog.annotation.TimeLogger - [findCategoryByName()] --- begin --- 1650872305767
+[2022-04-25 15:38:25][http-nio-8088-exec-5] INFO  com.wjl.lblog.annotation.TimeLogger - [findCategoryByName()] --- end --- 1650872305776, cost 0.009 s
+[2022-04-25 15:38:28][http-nio-8088-exec-6] INFO  com.wjl.lblog.interceptor.RequestInterceptor - [0:0:0:0:0:0:0:1][GET][/category/id]
+[2022-04-25 15:38:28][http-nio-8088-exec-6] INFO  com.wjl.lblog.annotation.TimeLogger - [getById()] --- begin --- 1650872308436
+[2022-04-25 15:38:28][http-nio-8088-exec-6] INFO  com.wjl.lblog.annotation.TimeLogger - [getById()] --- end --- 1650872308437, cost 0.001 s
+[2022-04-25 15:38:33][http-nio-8088-exec-7] INFO  com.wjl.lblog.interceptor.RequestInterceptor - [0:0:0:0:0:0:0:1][GET][/category/id]
+[2022-04-25 15:38:33][http-nio-8088-exec-7] INFO  com.wjl.lblog.annotation.TimeLogger - [getById()] --- begin --- 1650872313155
+[2022-04-25 15:38:33][http-nio-8088-exec-7] INFO  com.wjl.lblog.annotation.TimeLogger - [getById()] --- end --- 1650872313157, cost 0.002 s
+[2022-04-25 15:38:39][http-nio-8088-exec-4] INFO  com.wjl.lblog.interceptor.RequestInterceptor - [0:0:0:0:0:0:0:1][GET][/category/name]
+[2022-04-25 15:38:39][http-nio-8088-exec-4] INFO  com.wjl.lblog.annotation.TimeLogger - [getByName()] --- begin --- 1650872319984
+[2022-04-25 15:38:39][http-nio-8088-exec-4] INFO  com.wjl.lblog.annotation.TimeLogger - [getByName()] --- end --- 1650872319987, cost 0.003 s
+[2022-04-25 15:38:46][http-nio-8088-exec-9] INFO  com.wjl.lblog.interceptor.RequestInterceptor - [0:0:0:0:0:0:0:1][GET][/category/name]
+[2022-04-25 15:38:46][http-nio-8088-exec-9] INFO  com.wjl.lblog.annotation.TimeLogger - [getByName()] --- begin --- 1650872326460
+[2022-04-25 15:38:46][http-nio-8088-exec-9] INFO  com.wjl.lblog.annotation.TimeLogger - [getByName()] --- end --- 1650872326463, cost 0.003 s
+[2022-04-25 15:38:51][http-nio-8088-exec-10] INFO  com.wjl.lblog.interceptor.RequestInterceptor - [0:0:0:0:0:0:0:1][POST][/category/]
+[2022-04-25 15:38:51][http-nio-8088-exec-10] INFO  com.wjl.lblog.annotation.TimeLogger - [add()] --- begin --- 1650872331101
+[2022-04-25 15:38:51][http-nio-8088-exec-10] INFO  com.wjl.lblog.annotation.TimeLogger - [add()] --- end --- 1650872331112, cost 0.011 s
+[2022-04-25 15:39:10][http-nio-8088-exec-1] INFO  com.wjl.lblog.interceptor.RequestInterceptor - [0:0:0:0:0:0:0:1][PUT][/category/]
+[2022-04-25 15:39:10][http-nio-8088-exec-1] INFO  com.wjl.lblog.annotation.TimeLogger - [update()] --- begin --- 1650872350173
+[2022-04-25 15:39:10][http-nio-8088-exec-1] INFO  com.wjl.lblog.annotation.TimeLogger - [update()] --- end --- 1650872350187, cost 0.014 s
+[2022-04-25 15:39:28][http-nio-8088-exec-3] INFO  com.wjl.lblog.interceptor.RequestInterceptor - [0:0:0:0:0:0:0:1][DELETE][/category/]
+[2022-04-25 15:39:28][http-nio-8088-exec-3] INFO  com.wjl.lblog.annotation.TimeLogger - [deleteById()] --- begin --- 1650872368352
+[2022-04-25 15:39:28][http-nio-8088-exec-3] INFO  com.wjl.lblog.annotation.TimeLogger - [deleteById()] --- end --- 1650872368356, cost 0.004 s
+[2022-04-25 15:40:34][http-nio-8088-exec-5] INFO  com.wjl.lblog.interceptor.RequestInterceptor - [0:0:0:0:0:0:0:1][GET][/comment/page]
+[2022-04-25 15:40:44][http-nio-8088-exec-6] INFO  com.wjl.lblog.interceptor.RequestInterceptor - [0:0:0:0:0:0:0:1][GET][/tag/page]
+[2022-04-25 15:40:44][http-nio-8088-exec-6] INFO  com.wjl.lblog.annotation.TimeLogger - [findAllByPage()] --- begin --- 1650872444110
+[2022-04-25 15:40:44][http-nio-8088-exec-6] INFO  com.wjl.lblog.annotation.TimeLogger - [findAllByPage()] --- end --- 1650872444112, cost 0.002 s
+[2022-04-25 15:40:46][http-nio-8088-exec-7] INFO  com.wjl.lblog.interceptor.RequestInterceptor - [0:0:0:0:0:0:0:1][GET][/tag/all]
+[2022-04-25 15:40:46][http-nio-8088-exec-7] INFO  com.wjl.lblog.annotation.TimeLogger - [findAll()] --- begin --- 1650872446631
+[2022-04-25 15:40:46][http-nio-8088-exec-7] INFO  com.wjl.lblog.annotation.TimeLogger - [findAll()] --- end --- 1650872446631, cost 0.0 s
+[2022-04-25 15:41:03][SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+[2022-04-25 15:41:03][SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+[2022-04-25 15:48:10][restartedMain] INFO  com.wjl.lblog.BlogServerApplication - Starting BlogServerApplication using Java 17.0.2 on lonestar with PID 37828 (D:\wjl\workspace\repository\lblog\blog-server\build\classes\java\main started by wjl15 in D:\wjl\workspace\repository\lblog\blog-server)
+[2022-04-25 15:48:10][restartedMain] INFO  com.wjl.lblog.BlogServerApplication - No active profile set, falling back to 1 default profile: "default"
+[2022-04-25 15:48:12][restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8088"]
+[2022-04-25 15:48:12][restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+[2022-04-25 15:48:12][restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.60]
+[2022-04-25 15:48:12][restartedMain] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+[2022-04-25 15:48:14][restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+[2022-04-25 15:48:14][restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+[2022-04-25 15:48:14][restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8088"]
+[2022-04-25 15:48:14][restartedMain] INFO  com.wjl.lblog.BlogServerApplication - Started BlogServerApplication in 4.197 seconds (JVM running for 5.086)
+[2022-04-25 15:48:14][RMI TCP Connection(2)-172.30.32.1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+[2022-04-25 15:48:18][http-nio-8088-exec-2] INFO  com.wjl.lblog.interceptor.RequestInterceptor - [0:0:0:0:0:0:0:1][GET][/tag/page]
+[2022-04-25 15:48:18][http-nio-8088-exec-2] INFO  com.wjl.lblog.annotation.TimeLogger - [findAllByPage()] --- begin --- 1650872898776
+[2022-04-25 15:48:18][http-nio-8088-exec-2] INFO  com.wjl.lblog.annotation.TimeLogger - [findAllByPage()] --- end --- 1650872898857, cost 0.081 s
+[2022-04-25 15:48:21][http-nio-8088-exec-3] INFO  com.wjl.lblog.interceptor.RequestInterceptor - [0:0:0:0:0:0:0:1][GET][/tag/all]
+[2022-04-25 15:48:21][http-nio-8088-exec-3] INFO  com.wjl.lblog.annotation.TimeLogger - [findAll()] --- begin --- 1650872901803
+[2022-04-25 15:48:21][http-nio-8088-exec-3] INFO  com.wjl.lblog.annotation.TimeLogger - [findAll()] --- end --- 1650872901807, cost 0.004 s
+[2022-04-25 15:48:23][http-nio-8088-exec-4] INFO  com.wjl.lblog.interceptor.RequestInterceptor - [0:0:0:0:0:0:0:1][GET][/tag/article/id]
+[2022-04-25 15:48:23][http-nio-8088-exec-4] INFO  com.wjl.lblog.annotation.TimeLogger - [findTagById()] --- begin --- 1650872903640
+[2022-04-25 15:48:23][http-nio-8088-exec-4] INFO  com.wjl.lblog.annotation.TimeLogger - [findTagById()] --- end --- 1650872903643, cost 0.003 s
+[2022-04-25 15:48:28][http-nio-8088-exec-5] INFO  com.wjl.lblog.interceptor.RequestInterceptor - [0:0:0:0:0:0:0:1][GET][/tag/article/id]
+[2022-04-25 15:48:28][http-nio-8088-exec-5] INFO  com.wjl.lblog.annotation.TimeLogger - [findTagById()] --- begin --- 1650872908543
+[2022-04-25 15:48:28][http-nio-8088-exec-5] INFO  com.wjl.lblog.annotation.TimeLogger - [findTagById()] --- end --- 1650872908555, cost 0.012 s
+[2022-04-25 15:48:43][http-nio-8088-exec-7] INFO  com.wjl.lblog.interceptor.RequestInterceptor - [0:0:0:0:0:0:0:1][GET][/tag/article/name]
+[2022-04-25 15:48:43][http-nio-8088-exec-7] INFO  com.wjl.lblog.annotation.TimeLogger - [findTagByName()] --- begin --- 1650872923332
+[2022-04-25 15:48:43][http-nio-8088-exec-7] WARN  com.baomidou.mybatisplus.core.toolkit.support.ReflectLambdaMeta - Unable to make field private final java.lang.Class java.lang.invoke.SerializedLambda.capturingClass accessible: module java.base does not "opens java.lang.invoke" to unnamed module @7a8c8dcf
+[2022-04-25 15:48:43][http-nio-8088-exec-7] INFO  com.wjl.lblog.annotation.TimeLogger - [findTagByName()] --- end --- 1650872923363, cost 0.031 s
+[2022-04-25 15:48:50][http-nio-8088-exec-6] INFO  com.wjl.lblog.interceptor.RequestInterceptor - [0:0:0:0:0:0:0:1][GET][/tag/article/name]
+[2022-04-25 15:48:50][http-nio-8088-exec-6] INFO  com.wjl.lblog.annotation.TimeLogger - [findTagByName()] --- begin --- 1650872930049
+[2022-04-25 15:48:50][http-nio-8088-exec-6] INFO  com.wjl.lblog.annotation.TimeLogger - [findTagByName()] --- end --- 1650872930052, cost 0.003 s
+[2022-04-25 15:48:53][http-nio-8088-exec-8] INFO  com.wjl.lblog.interceptor.RequestInterceptor - [0:0:0:0:0:0:0:1][GET][/tag/article/name]
+[2022-04-25 15:48:53][http-nio-8088-exec-8] INFO  com.wjl.lblog.annotation.TimeLogger - [findTagByName()] --- begin --- 1650872933625
+[2022-04-25 15:48:53][http-nio-8088-exec-8] INFO  com.wjl.lblog.annotation.TimeLogger - [findTagByName()] --- end --- 1650872933635, cost 0.01 s
+[2022-04-25 15:49:05][http-nio-8088-exec-9] INFO  com.wjl.lblog.interceptor.RequestInterceptor - [0:0:0:0:0:0:0:1][GET][/tag/id]
+[2022-04-25 15:49:05][http-nio-8088-exec-9] INFO  com.wjl.lblog.annotation.TimeLogger - [getById()] --- begin --- 1650872945583
+[2022-04-25 15:49:05][http-nio-8088-exec-9] INFO  com.wjl.lblog.annotation.TimeLogger - [getById()] --- end --- 1650872945585, cost 0.002 s
+[2022-04-25 15:49:10][http-nio-8088-exec-10] INFO  com.wjl.lblog.interceptor.RequestInterceptor - [0:0:0:0:0:0:0:1][GET][/tag/id]
+[2022-04-25 15:49:10][http-nio-8088-exec-10] INFO  com.wjl.lblog.annotation.TimeLogger - [getById()] --- begin --- 1650872950174
+[2022-04-25 15:49:10][http-nio-8088-exec-10] INFO  com.wjl.lblog.annotation.TimeLogger - [getById()] --- end --- 1650872950177, cost 0.003 s
+[2022-04-25 15:49:16][http-nio-8088-exec-1] INFO  com.wjl.lblog.interceptor.RequestInterceptor - [0:0:0:0:0:0:0:1][GET][/tag/name]
+[2022-04-25 15:49:16][http-nio-8088-exec-1] INFO  com.wjl.lblog.annotation.TimeLogger - [getByName()] --- begin --- 1650872956040
+[2022-04-25 15:49:16][http-nio-8088-exec-1] INFO  com.wjl.lblog.annotation.TimeLogger - [getByName()] --- end --- 1650872956043, cost 0.003 s
+[2022-04-25 15:49:20][http-nio-8088-exec-2] INFO  com.wjl.lblog.interceptor.RequestInterceptor - [0:0:0:0:0:0:0:1][POST][/tag/]
+[2022-04-25 15:49:20][http-nio-8088-exec-2] INFO  com.wjl.lblog.annotation.TimeLogger - [add()] --- begin --- 1650872960165
+[2022-04-25 15:49:20][http-nio-8088-exec-2] INFO  com.wjl.lblog.annotation.TimeLogger - [add()] --- end --- 1650872960181, cost 0.016 s
+[2022-04-25 15:49:30][http-nio-8088-exec-3] INFO  com.wjl.lblog.interceptor.RequestInterceptor - [0:0:0:0:0:0:0:1][DELETE][/tag/]
+[2022-04-25 15:49:30][http-nio-8088-exec-3] INFO  com.wjl.lblog.annotation.TimeLogger - [deleteById()] --- begin --- 1650872970093
+[2022-04-25 15:49:30][http-nio-8088-exec-3] INFO  com.wjl.lblog.annotation.TimeLogger - [deleteById()] --- end --- 1650872970097, cost 0.004 s
+[2022-04-25 15:49:33][http-nio-8088-exec-4] INFO  com.wjl.lblog.interceptor.RequestInterceptor - [0:0:0:0:0:0:0:1][DELETE][/tag/]
+[2022-04-25 15:49:33][http-nio-8088-exec-4] INFO  com.wjl.lblog.annotation.TimeLogger - [deleteById()] --- begin --- 1650872973639
+[2022-04-25 15:49:33][http-nio-8088-exec-4] INFO  com.wjl.lblog.annotation.TimeLogger - [deleteById()] --- end --- 1650872973649, cost 0.01 s
+[2022-04-25 15:50:49][SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+[2022-04-25 15:50:49][SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+[2022-04-25 15:53:19][restartedMain] INFO  com.wjl.lblog.BlogServerApplication - Starting BlogServerApplication using Java 17.0.2 on lonestar with PID 46308 (D:\wjl\workspace\repository\lblog\blog-server\build\classes\java\main started by wjl15 in D:\wjl\workspace\repository\lblog\blog-server)
+[2022-04-25 15:53:19][restartedMain] INFO  com.wjl.lblog.BlogServerApplication - No active profile set, falling back to 1 default profile: "default"
+[2022-04-25 15:53:21][restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8088"]
+[2022-04-25 15:53:21][restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+[2022-04-25 15:53:21][restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.60]
+[2022-04-25 15:53:21][restartedMain] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+[2022-04-25 15:53:22][restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+[2022-04-25 15:53:22][restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+[2022-04-25 15:53:23][restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8088"]
+[2022-04-25 15:53:23][restartedMain] INFO  com.wjl.lblog.BlogServerApplication - Started BlogServerApplication in 3.771 seconds (JVM running for 4.77)
+[2022-04-25 15:53:23][RMI TCP Connection(1)-172.30.32.1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+[2022-04-25 15:54:19][SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+[2022-04-25 15:54:19][SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+[2022-04-25 15:54:21][restartedMain] INFO  com.wjl.lblog.BlogServerApplication - Starting BlogServerApplication using Java 17.0.2 on lonestar with PID 55084 (D:\wjl\workspace\repository\lblog\blog-server\build\classes\java\main started by wjl15 in D:\wjl\workspace\repository\lblog\blog-server)
+[2022-04-25 15:54:21][restartedMain] INFO  com.wjl.lblog.BlogServerApplication - No active profile set, falling back to 1 default profile: "default"
+[2022-04-25 15:54:23][restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8088"]
+[2022-04-25 15:54:23][restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+[2022-04-25 15:54:23][restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.60]
+[2022-04-25 15:54:23][restartedMain] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+[2022-04-25 15:54:25][restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+[2022-04-25 15:54:25][restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+[2022-04-25 15:54:25][restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8088"]
+[2022-04-25 15:54:25][restartedMain] INFO  com.wjl.lblog.BlogServerApplication - Started BlogServerApplication in 4.388 seconds (JVM running for 5.233)
+[2022-04-25 15:54:26][RMI TCP Connection(3)-172.30.32.1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+[2022-04-25 15:54:52][SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+[2022-04-25 15:54:52][SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.

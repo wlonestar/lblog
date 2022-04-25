@@ -1,8 +1,13 @@
-[2022-04-25 15:17:24][Test worker] INFO  com.wjl.lblog.service.impl.ArticleServiceImplTest - Starting ArticleServiceImplTest using Java 17.0.2 on lonestar with PID 53576 (started by wjl15 in D:\wjl\workspace\repository\lblog\blog-server)
-[2022-04-25 15:17:24][Test worker] INFO  com.wjl.lblog.service.impl.ArticleServiceImplTest - No active profile set, falling back to 1 default profile: "default"
-[2022-04-25 15:17:29][Test worker] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
-[2022-04-25 15:17:29][Test worker] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
-[2022-04-25 15:17:30][Test worker] INFO  com.wjl.lblog.service.impl.ArticleServiceImplTest - Started ArticleServiceImplTest in 5.64 seconds (JVM running for 7.18)
-[2022-04-25 15:17:30][Test worker] WARN  com.baomidou.mybatisplus.core.toolkit.support.ReflectLambdaMeta - Unable to make field private final java.lang.Class java.lang.invoke.SerializedLambda.capturingClass accessible: module java.base does not "opens java.lang.invoke" to unnamed module @be35cd9
-[2022-04-25 15:17:30][SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
-[2022-04-25 15:17:30][SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+[2022-04-25 15:54:21][restartedMain] INFO  com.wjl.lblog.BlogServerApplication - Starting BlogServerApplication using Java 17.0.2 on lonestar with PID 55084 (D:\wjl\workspace\repository\lblog\blog-server\build\classes\java\main started by wjl15 in D:\wjl\workspace\repository\lblog\blog-server)
+[2022-04-25 15:54:21][restartedMain] INFO  com.wjl.lblog.BlogServerApplication - No active profile set, falling back to 1 default profile: "default"
+[2022-04-25 15:54:23][restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8088"]
+[2022-04-25 15:54:23][restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+[2022-04-25 15:54:23][restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.60]
+[2022-04-25 15:54:23][restartedMain] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+[2022-04-25 15:54:25][restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+[2022-04-25 15:54:25][restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+[2022-04-25 15:54:25][restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8088"]
+[2022-04-25 15:54:25][restartedMain] INFO  com.wjl.lblog.BlogServerApplication - Started BlogServerApplication in 4.388 seconds (JVM running for 5.233)
+[2022-04-25 15:54:26][RMI TCP Connection(3)-172.30.32.1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+[2022-04-25 15:54:52][SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+[2022-04-25 15:54:52][SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.

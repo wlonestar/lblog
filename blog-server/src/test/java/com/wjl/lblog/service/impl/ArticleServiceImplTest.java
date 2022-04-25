@@ -71,39 +71,39 @@ class ArticleServiceImplTest {
         System.out.println(res);
     }
 
-    @Test
-    void addTest() {
-        var articleDto = ArticleDto.builder()
-                .title("article101210")
-                .summary("summsdary222222")
-                .image("imafbsdegee")
-                .content("conegnreedsufwfwe")
-                .category("category121")
-                .tags(List.of("tag0", "tag3", "tagg5"))
-                .build();
-        var res = articleService.add(articleDto);
-        System.out.println(res);
-    }
-
-    @Test
-    void updateTest() {
-        var articleDto = ArticleDto.builder()
-                .title("article1wrw0")
-                .summary("summsdary2r2")
-                .image("imafbsd")
-                .content("conegnreedsu")
-                .category("category12")
-                .tags(List.of("tag23", "tag38", "tag5", "tags232"))
-                .build();
-        var res = articleService.updateById(6L, articleDto);
-        System.out.println(res);
-    }
-
-    @Test
-    void deleteByIdTest() {
-        var id = 12L;
-        var res = articleService.deleteById(id);
-        System.out.println(res);
-    }
+//    @Test
+//    void addTest() {
+//        var articleDto = ArticleDto.builder()
+//                .title("article101210")
+//                .summary("summsdary222222")
+//                .image("imafbsdegee")
+//                .content("conegnreedsufwfwe")
+//                .category("category121")
+//                .tags(List.of("tag0", "tag3", "tagg5"))
+//                .build();
+//        var res = articleService.add(articleDto);
+//        System.out.println(res);
+//    }
+//
+//    @Test
+//    void updateTest() {
+//        var articleDto = ArticleDto.builder()
+//                .title("article1wrw0")
+//                .summary("summsdary2r2")
+//                .image("imafbsd")
+//                .content("conegnreedsu")
+//                .category("category12")
+//                .tags(List.of("tag23", "tag38", "tag5", "tags232"))
+//                .build();
+//        var res = articleService.updateById(6L, articleDto);
+//        System.out.println(res);
+//    }
+//
+//    @Test
+//    void deleteByIdTest() {
+//        var id = 12L;
+//        var res = articleService.deleteById(id);
+//        System.out.println(res);
+//    }
 
 }
