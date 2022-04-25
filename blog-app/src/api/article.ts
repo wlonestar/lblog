@@ -1,11 +1,11 @@
 import request from '@/util/request'
 import type { AxiosResponse } from 'axios'
 
-const articlePrefix = '/article'
+const articleBase = '/article'
 
 export function getDetailByPage (page: number, size: number) : Promise<AxiosResponse> {
   return request({
-    url: articlePrefix + '/page/detail',
+    url: articleBase + '/page/detail',
     method: 'GET',
     params: {
       page,
@@ -16,7 +16,7 @@ export function getDetailByPage (page: number, size: number) : Promise<AxiosResp
 
 export function getSummaryByPage (page: number, size: number) : Promise<AxiosResponse> {
   return request({
-    url: articlePrefix + '/page/summary',
+    url: articleBase + '/page/summary',
     method: 'GET',
     params: {
       page,
@@ -27,21 +27,21 @@ export function getSummaryByPage (page: number, size: number) : Promise<AxiosRes
 
 export function getAllDetail () : Promise<AxiosResponse> {
   return request({
-    url: articlePrefix + '/all/detail',
+    url: articleBase + '/all/detail',
     method: 'GET'
   })
 }
 
 export function getAllSummary () : Promise<AxiosResponse> {
   return request({
-    url: articlePrefix + '/all/summary',
+    url: articleBase + '/all/summary',
     method: 'GET'
   })
 }
 
 export function getDetailById (id: number) : Promise<AxiosResponse> {
   return request({
-    url: articlePrefix + '/detail',
+    url: articleBase + '/detail/id',
     method: 'GET',
     params: {
       id
@@ -51,7 +51,7 @@ export function getDetailById (id: number) : Promise<AxiosResponse> {
 
 export function getSummaryById (id: number) : Promise<AxiosResponse> {
   return request({
-    url: articlePrefix + '/summary',
+    url: articleBase + '/summary/id',
     method: 'GET',
     params: {
       id
@@ -61,7 +61,7 @@ export function getSummaryById (id: number) : Promise<AxiosResponse> {
 
 export function add (article: object) : Promise<AxiosResponse> {
   return request({
-    url: article + '/',
+    url: articleBase + '/',
     method: 'POST',
     data: article
   })
@@ -69,7 +69,7 @@ export function add (article: object) : Promise<AxiosResponse> {
 
 export function updateById (id: number, article: object) : Promise<AxiosResponse> {
   return request({
-    url: article + '/',
+    url: articleBase + '/',
     method: 'PUT',
     params: {
       id
@@ -80,7 +80,7 @@ export function updateById (id: number, article: object) : Promise<AxiosResponse
 
 export function deleteById (id: number) : Promise<AxiosResponse> {
   return request({
-    url: articlePrefix + `/${id}`,
+    url: `/${id}`,
     method: 'DELETE'
   })
 }
