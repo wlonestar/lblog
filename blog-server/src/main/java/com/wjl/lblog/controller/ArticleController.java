@@ -77,13 +77,14 @@ public class ArticleController {
      *
      * @param id id
      */
-    @RequestMapping(value = "/detail/id", method = RequestMethod.GET)
+    @RequestMapping(value = "/detail", method = RequestMethod.GET)
     public MyResult<?> getDetailById(@RequestParam(name = "id") Long id) {
         var res = articleService.selectDetailById(id);
         if (!Objects.isNull(res)) {
             return MyResult.success(res);
+        } else {
+            return MyResult.fail(MyHttpStatus.QUERY_ERROR);
         }
-        return MyResult.fail(MyHttpStatus.BAD_REQUEST.getCode(), "can't find article by param");
     }
 
     /**
@@ -91,13 +92,13 @@ public class ArticleController {
      *
      * @param id id
      */
-    @RequestMapping(value = "/summary/id", method = RequestMethod.GET)
+    @RequestMapping(value = "/summary", method = RequestMethod.GET)
     public MyResult<?> getSummaryById(@RequestParam(name = "id") Long id) {
         var res = articleService.selectSummaryById(id);
         if (!Objects.isNull(res)) {
             return MyResult.success(res);
         }
-        return MyResult.fail(MyHttpStatus.BAD_REQUEST.getCode(), "can't find article by param");
+        return MyResult.fail(MyHttpStatus.QUERY_ERROR);
     }
 
     /**
@@ -112,7 +113,7 @@ public class ArticleController {
             if (res) {
                 return MyResult.success();
             } else {
-                return MyResult.fail(MyHttpStatus.BAD_REQUEST.getCode(), "");
+                return MyResult.fail(MyHttpStatus.INSERT_ERROR);
             }
         }
         return MyResult.fail(MyHttpStatus.BAD_REQUEST.getCode(), "the input is null");
@@ -133,7 +134,7 @@ public class ArticleController {
             if (res) {
                 return MyResult.success();
             } else {
-                return MyResult.fail(MyHttpStatus.BAD_REQUEST.getCode(), "");
+                return MyResult.fail(MyHttpStatus.UPDATE_ERROR);
             }
         }
         return MyResult.fail(MyHttpStatus.BAD_REQUEST.getCode(), "the input is null");
@@ -150,7 +151,7 @@ public class ArticleController {
         if (res) {
             return MyResult.success();
         } else {
-            return MyResult.fail(MyHttpStatus.BAD_REQUEST.getCode(), "delete failed");
+            return MyResult.fail(MyHttpStatus.DELETE_ERROR);
         }
     }
 

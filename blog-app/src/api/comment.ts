@@ -23,8 +23,11 @@ export function getAll () : Promise<AxiosResponse> {
 
 export function getById (id: number) : Promise<AxiosResponse> {
   return request({
-    url: commentPrefix + `/${id}`,
-    method: 'GET'
+    url: commentPrefix + '/',
+    method: 'GET',
+    params: {
+      id
+    }
   })
 }
 
@@ -38,10 +41,7 @@ export function add (comment: object) : Promise<AxiosResponse> {
 
 export function deleteById (id: number) : Promise<AxiosResponse> {
   return request({
-    url: commentPrefix + '/',
-    method: 'DELETE',
-    params: {
-      id
-    }
+    url: commentPrefix + `/${id}`,
+    method: 'DELETE'
   })
 }

@@ -4,6 +4,7 @@ import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
+import com.wjl.lblog.model.entity.Image;
 import com.wjl.lblog.model.entity.Tag;
 import com.wjl.lblog.model.vo.ArticleSummaryVo;
 import com.wjl.lblog.model.vo.TagArticleVo;
@@ -13,6 +14,7 @@ import com.wjl.lblog.service.intf.TagService;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 import java.util.Objects;
@@ -34,12 +36,26 @@ public class TagServiceImpl extends ServiceImpl<TagMapper, Tag>
 
     @Override
     public IPage<Tag> selectByPage(Page<Tag> page) {
-        return tagMapper.selectPage(page, null);
+        var wrapper = new LambdaQueryWrapper<Tag>();
+        wrapper.orderByDesc(Tag::getCreateTime);
+        return tagMapper.selectPage(page, wrapper);
     }
 
     @Override
     public List<Tag> selectAll() {
-        return tagMapper.selectList(null);
+        var wrapper = new LambdaQueryWrapper<Tag>();
+        wrapper.orderByDesc(Tag::getCreateTime);
+        return tagMapper.selectList(wrapper);
+    }
+
+    @Override
+    public List<String> selectAllName() {
+        var list = selectAll();
+        var res = new ArrayList<String>();
+        for (var l : list) {
+            res.add(l.getName());
+        }
+        return res;
     }
 
     @Override
@@ -88,25 +104,12 @@ public class TagServiceImpl extends ServiceImpl<TagMapper, Tag>
     public boolean add(String tag) {
         if (!Objects.isNull(tag)) {
             var newTag = new Tag();
-            newTag.setName(tag);
-            var res = tagMapper.insert(newTag);
-            return res == 1;
-        } else {
-            return false;
-        }
-    }
-
-    @Override
-    public boolean updateById(Long id, String tag) {
-        var newTag = selectById(id);
-        if (!Objects.isNull(newTag)) {
-            if (!Objects.isNull(tag)) {
-                newTag.setName(tag);
-                newTag.setModifyTime(new Date());
-                var res = tagMapper.updateById(newTag);
-                return res == 1;
-            } else {
+            if (selectAllName().contains(tag)) {
                 return false;
+            } else {
+                newTag.setName(tag);
+                var res = tagMapper.insert(newTag);
+                return res == 1;
             }
         } else {
             return false;

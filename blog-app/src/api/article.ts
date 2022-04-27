@@ -41,7 +41,7 @@ export function getAllSummary () : Promise<AxiosResponse> {
 
 export function getDetailById (id: number) : Promise<AxiosResponse> {
   return request({
-    url: articlePrefix + '/detail/id',
+    url: articlePrefix + '/detail',
     method: 'GET',
     params: {
       id
@@ -51,7 +51,7 @@ export function getDetailById (id: number) : Promise<AxiosResponse> {
 
 export function getSummaryById (id: number) : Promise<AxiosResponse> {
   return request({
-    url: articlePrefix + '/summary/id',
+    url: articlePrefix + '/summary',
     method: 'GET',
     params: {
       id
