@@ -1,12 +1,48 @@
 <script setup lang="ts">
-
 import { onMounted, ref } from 'vue'
 import { getSummaryByPage } from '@/api/article'
+import { useRouter } from 'vue-router'
+import { getArticlesByCategoryPage } from '@/api/category'
+import { getArticlesByNamePage } from '@/api/tag'
+
+const props = defineProps(['type', 'attr'])
+const router = useRouter()
 
 const total = ref()
 const currentPage = ref(1)
 const pageSize = ref(7)
 const articles = ref()
+
+function loadArticles () {
+  console.log(props.type)
+  console.log(props.attr)
+  if (props.type === 'posts') {
+    getSummaryByPage(currentPage.value, pageSize.value).then(res => {
+      total.value = res.data.total
+      articles.value = res.data.records
+      console.log(res.data)
+    })
+  } else if (props.type === 'category') {
+    const name = props.attr
+    getArticlesByCategoryPage(name, currentPage.value, pageSize.value).then(res => {
+      total.value = res.data.total
+      articles.value = res.data.articles.records
+      console.log(res.data)
+    })
+  } else if (props.type === 'tag') {
+    const name = props.attr
+    getArticlesByNamePage(name, currentPage.value, pageSize.value).then(res => {
+      total.value = res.data.total
+      articles.value = res.data.articles.records
+      console.log(res.data)
+    })
+  }
+}
+
+function redirectToArticle (id: number) {
+  console.log(id)
+  router.push(`/posts/${id}`)
+}
 
 const handleCurrentChange = (val: number) => {
   currentPage.value = val
@@ -16,14 +52,6 @@ const handleCurrentChange = (val: number) => {
 const handleSizeChange = (val: number) => {
   pageSize.value = val
   loadArticles()
-}
-
-function loadArticles () {
-  getSummaryByPage(currentPage.value, pageSize.value).then(res => {
-    total.value = res.data.total
-    articles.value = res.data.records
-    console.log(res.data)
-  })
 }
 
 onMounted(() => {
@@ -39,7 +67,7 @@ onMounted(() => {
         <div class="flex flex-col-reverse lg:flex-row justify-between">
           <div class="w-full lg:w-2/3">
             <div class="mb-4">
-              <a href="#" class="font-bold text-xl hover:text-eureka">{{ article.title }}</a>
+              <a @click="redirectToArticle(article.id)" class="font-bold text-xl hover:text-eureka">{{ article.title }}</a>
             </div>
             <div class="content">
               {{ article.summary }}
@@ -78,5 +106,8 @@ onMounted(() => {
 <style scoped>
 .my-page-item {
   padding-top: 20px;
+}
+a:hover {
+  cursor: pointer;
 }
 </style>

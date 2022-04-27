@@ -27,5 +27,7 @@ const title = '标签'
 </template>
 
 <style scoped>
-
+a:hover {
+  cursor: pointer;
+}
 </style>

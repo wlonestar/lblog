@@ -2,8 +2,16 @@
 import HeaderItem from '@/components/header/HeaderItem.vue'
 import FooterItem from '@/components/footer/FooterItem.vue'
 import ArticleList from '@/components/list/ArticleList.vue'
+import { onMounted, ref } from 'vue'
 
-const title = '标签名'
+const props = defineProps(['name'])
+const title = ref()
+
+onMounted(() => {
+  const name = props.name
+  title.value = name
+  console.log(name)
+})
 
 </script>
 
@@ -18,7 +26,7 @@ const title = '标签名'
             <div class="content">
             </div>
           </article>
-          <ArticleList />
+          <ArticleList type="tag" :attr="props.name" />
         </div>
       </div>
     </main>
@@ -27,5 +35,7 @@ const title = '标签名'
 </template>
 
 <style scoped>
-
+a:hover {
+  cursor: pointer;
+}
 </style>

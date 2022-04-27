@@ -15,8 +15,9 @@ const router = createRouter({
       component: () => import('../views/PostsView.vue')
     },
     {
-      path: '/post',
+      path: '/posts/:id',
       name: 'post',
+      props: true,
       component: () => import('../views/PostView.vue')
     },
     {
@@ -25,8 +26,9 @@ const router = createRouter({
       component: () => import('../views/CategoriesView.vue')
     },
     {
-      path: '/category',
+      path: '/categories/:name',
       name: 'category',
+      props: true,
       component: () => import('../views/CategoryView.vue')
     },
     {
@@ -35,8 +37,9 @@ const router = createRouter({
       component: () => import('../views/TagsView.vue')
     },
     {
-      path: '/tag',
+      path: '/tags/:name',
       name: 'tag',
+      props: true,
       component: () => import('../views/TagView.vue')
     },
     {
