@@ -19,7 +19,7 @@ public class ArticleDetailVo {
     private Date createTime;
     private String title;
     private String summary;
-    private String cover;
+    private String image;
     private String content;
     private String category;
     private List<String> tags;
