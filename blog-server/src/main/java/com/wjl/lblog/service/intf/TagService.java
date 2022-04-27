@@ -21,6 +21,8 @@ public interface TagService extends IService<Tag> {
 
     List<Tag> selectAll();
 
+    List<String> selectAllName();
+
     Tag selectById(Long id);
 
     Tag selectByName(String name);
@@ -30,7 +32,5 @@ public interface TagService extends IService<Tag> {
     TagArticleVo selectByTagName(String name, Page<ArticleSummaryVo> page);
 
     boolean add(String tag);
-
-    boolean updateById(Long id, String tag);
 
 }

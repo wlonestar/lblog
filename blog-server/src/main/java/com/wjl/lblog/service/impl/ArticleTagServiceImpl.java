@@ -27,7 +27,7 @@ public class ArticleTagServiceImpl extends ServiceImpl<ArticleTagMapper, Article
     @Override
     public List<Long> selectByAid(Long aid) {
         var wrapper = new LambdaQueryWrapper<ArticleTag>();
-        wrapper.eq(ArticleTag::getAid, aid);
+        wrapper.eq(ArticleTag::getAid, aid).orderByDesc(ArticleTag::getId);
         var res = articleTagMapper.selectList(wrapper);
         var list = new ArrayList<Long>();
         for (var r : res) {
@@ -40,7 +40,7 @@ public class ArticleTagServiceImpl extends ServiceImpl<ArticleTagMapper, Article
     @Override
     public List<Long> selectByTid(Long tid) {
         var wrapper = new LambdaQueryWrapper<ArticleTag>();
-        wrapper.eq(ArticleTag::getTid, tid);
+        wrapper.eq(ArticleTag::getTid, tid).orderByDesc(ArticleTag::getId);
         var res = articleTagMapper.selectList(wrapper);
         var list = new ArrayList<Long>();
         for (var r : res) {

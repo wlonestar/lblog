@@ -1,14 +1,15 @@
 package com.wjl.lblog.controller;
 
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
+import com.wjl.lblog.annotation.TimeLog;
 import com.wjl.lblog.common.constants.MyResult;
 import com.wjl.lblog.common.enums.MyHttpStatus;
-import com.wjl.lblog.model.entity.Timeline;
+import com.wjl.lblog.model.dto.TimelineDto;
 import com.wjl.lblog.service.intf.TimelineService;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
-import java.util.List;
 
 /**
  * 时间线接口
@@ -17,6 +18,8 @@ import java.util.List;
  * @date: 2021/9/16 15:00
  * @version: v1.0
  */
+@Slf4j
+@TimeLog
 @RestController
 @RequestMapping("/idea")
 public class TimelineController {
@@ -33,7 +36,7 @@ public class TimelineController {
     @RequestMapping(value = "/page", method = RequestMethod.GET)
     public MyResult<?> findAllByPage(@RequestParam(name = "page", defaultValue = "1") int page,
                                      @RequestParam(name = "size", defaultValue = "10") int size) {
-        var res = TimelineService.findAllByPage(new Page<>(page, size));
+        var res = TimelineService.selectAllByPage(new Page<>(page, size));
         return MyResult.success(res);
     }
 
@@ -42,7 +45,7 @@ public class TimelineController {
      */
     @RequestMapping(value = "/all", method = RequestMethod.GET)
     public MyResult<?> findAll() {
-        var res = TimelineService.findAll();
+        var res = TimelineService.selectAll();
         return MyResult.success(res);
     }
 
@@ -51,24 +54,24 @@ public class TimelineController {
      *
      * @param id id
      */
-    @RequestMapping(value = "/{id}", method = RequestMethod.GET)
-    public MyResult<?> findById(@PathVariable(name = "id") Long id) {
-        var res = TimelineService.findById(id);
+    @RequestMapping(value = "/", method = RequestMethod.GET)
+    public MyResult<?> findById(@RequestParam(name = "id") Long id) {
+        var res = TimelineService.selectById(id);
         return MyResult.success(res);
     }
 
     /**
      * 增加时间线
      *
-     * @param idea 时间线
+     * @param timelineDto 时间线
      */
     @RequestMapping(value = "/", method = RequestMethod.POST)
-    public MyResult<?> add(@RequestBody Timeline idea) {
-        var res = TimelineService.add(idea);
+    public MyResult<?> add(@RequestBody TimelineDto timelineDto) {
+        var res = TimelineService.add(timelineDto);
         if (res) {
             return MyResult.success();
         } else {
-            return MyResult.fail(MyHttpStatus.BAD_REQUEST.getCode(), "增加失败");
+            return MyResult.fail(MyHttpStatus.INSERT_ERROR);
         }
     }
 
@@ -76,16 +79,16 @@ public class TimelineController {
      * 更新时间线
      *
      * @param id id
-     * @param idea 时间线
+     * @param timelineDto 时间线
      */
     @RequestMapping(value = "/", method = RequestMethod.PUT)
     public MyResult<?> update(@RequestParam(name = "id") Long id,
-                              @RequestBody Timeline idea) {
-        var res = TimelineService.update(id, idea);
+                              @RequestBody TimelineDto timelineDto) {
+        var res = TimelineService.updateById(id, timelineDto);
         if (res) {
             return MyResult.success();
         } else {
-            return MyResult.fail(MyHttpStatus.BAD_REQUEST.getCode(), "更新失败");
+            return MyResult.fail(MyHttpStatus.UPDATE_ERROR);
         }
     }
 
@@ -100,7 +103,7 @@ public class TimelineController {
         if (res) {
             return MyResult.success();
         } else {
-            return MyResult.fail(MyHttpStatus.BAD_REQUEST.getCode(), "删除失败");
+            return MyResult.fail(MyHttpStatus.DELETE_ERROR);
         }
     }
 

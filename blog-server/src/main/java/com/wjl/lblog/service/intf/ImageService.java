@@ -14,9 +14,9 @@ import java.util.List;
  */
 public interface ImageService extends IService<Image> {
 
-    List<Image> findAll();
+    IPage<Image> selectAllByPage(Page<Image> page);
 
-    IPage<Image> findAllByPage(Page<Image> page);
+    List<Image> selectAll();
 
     boolean add(Image image);
 

@@ -11,8 +11,6 @@ import java.io.File;
  */
 public interface FileService {
 
-    String fileUpload(MultipartFile file);
-
     String upload(MultipartFile file);
 
     String upload(File file);

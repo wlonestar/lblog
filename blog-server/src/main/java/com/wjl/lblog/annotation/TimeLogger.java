@@ -4,6 +4,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.annotation.*;
 import org.springframework.stereotype.Component;
+
 import java.util.Date;
 
 /**
@@ -31,16 +32,16 @@ public class TimeLogger {
     }
 
     @Before("(logClass() || logMethod()) && !notLogMethod()")
-    public void adviceBefore(JoinPoint joinPoint) {
+    public void before(JoinPoint joinPoint) {
         begin = new Date();
-        log.info("[{}()] --- begin --- {}", joinPoint.getSignature().getName(), begin.getTime());
+        log.info("[{}()] --- start --- {}", joinPoint.getSignature().getName(), begin);
     }
 
     @After("(logClass() || logMethod()) && !notLogMethod()")
-    public void adviceAfter(JoinPoint joinPoint) {
-        Date end = new Date();
+    public void after(JoinPoint joinPoint) {
+        var end = new Date();
         var res = (end.getTime() - begin.getTime()) / 1000.0;
-        log.info("[{}()] --- end --- {}, cost {} s", joinPoint.getSignature().getName(), end.getTime(), res);
+        log.info("[{}()] --- finish --- {}, cost {} s", joinPoint.getSignature().getName(), end, res);
     }
 
     @AfterThrowing("(logClass() || logMethod()) && !notLogMethod()")

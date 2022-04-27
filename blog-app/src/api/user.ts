@@ -3,14 +3,6 @@ import type { AxiosResponse } from 'axios'
 
 const userPrefix = '/user'
 
-export function add (user: object) : Promise<AxiosResponse> {
-  return request({
-    url: userPrefix + '/',
-    method: 'POST',
-    data: user
-  })
-}
-
 export function getById (id: number) : Promise<AxiosResponse> {
   return request({
     url: userPrefix + '/user',
@@ -21,17 +13,15 @@ export function getById (id: number) : Promise<AxiosResponse> {
   })
 }
 
-export function getByName (username: string) : Promise<AxiosResponse> {
+export function add (user: object) : Promise<AxiosResponse> {
   return request({
-    url: userPrefix + '/name',
-    method: 'GET',
-    params: {
-      username
-    }
+    url: userPrefix + '/',
+    method: 'POST',
+    data: user
   })
 }
 
-export function updatePassword (id: number, user: object) : Promise<AxiosResponse> {
+export function update (id: number, user: object) : Promise<AxiosResponse> {
   return request({
     url: userPrefix + '/password',
     method: 'PUT',
