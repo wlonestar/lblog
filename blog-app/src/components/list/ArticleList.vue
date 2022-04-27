@@ -1,113 +1,67 @@
 <script setup lang="ts">
-import { onMounted, ref } from 'vue'
-import { getSummaryByPage } from '@/api/article'
-import { useRouter } from 'vue-router'
-import { getArticlesByCategoryPage } from '@/api/category'
-import { getArticlesByNamePage } from '@/api/tag'
 
-const props = defineProps(['type', 'attr'])
-const router = useRouter()
-
-const total = ref()
-const currentPage = ref(1)
-const pageSize = ref(7)
-const articles = ref()
-
-function loadArticles () {
-  console.log(props.type)
-  console.log(props.attr)
-  if (props.type === 'posts') {
-    getSummaryByPage(currentPage.value, pageSize.value).then(res => {
-      total.value = res.data.total
-      articles.value = res.data.records
-      console.log(res.data)
-    })
-  } else if (props.type === 'category') {
-    const name = props.attr
-    getArticlesByCategoryPage(name, currentPage.value, pageSize.value).then(res => {
-      total.value = res.data.total
-      articles.value = res.data.articles.records
-      console.log(res.data)
-    })
-  } else if (props.type === 'tag') {
-    const name = props.attr
-    getArticlesByNamePage(name, currentPage.value, pageSize.value).then(res => {
-      total.value = res.data.total
-      articles.value = res.data.articles.records
-      console.log(res.data)
-    })
-  }
-}
-
-function redirectToArticle (id: number) {
-  console.log(id)
-  router.push(`/posts/${id}`)
-}
-
-const handleCurrentChange = (val: number) => {
-  currentPage.value = val
-  loadArticles()
-}
-
-const handleSizeChange = (val: number) => {
-  pageSize.value = val
-  loadArticles()
-}
-
-onMounted(() => {
-  loadArticles()
-})
+const LinkTitle = 'fsdufb'
+const Summary = 'fehufnerifnwifw'
+const Time = '2022-04-26'
+const category = 'catebdfi'
 
 </script>
 
 <template>
   <div class="bg-secondary-bg rounded px-6">
     <div class="overflow-hidden divide-y">
-      <div class="py-6" v-for="article in articles" :key="article">
+      <div class="py-6" v-for="i in 10" :key="i">
         <div class="flex flex-col-reverse lg:flex-row justify-between">
           <div class="w-full lg:w-2/3">
             <div class="mb-4">
-              <a @click="redirectToArticle(article.id)" class="font-bold text-xl hover:text-eureka">{{ article.title }}</a>
+              <a href="#" class="font-bold text-xl hover:text-eureka">{{ LinkTitle }}</a>
             </div>
             <div class="content">
-              {{ article.summary }}
+              {{ Summary }}
             </div>
             <div class="flex flex-wrap flex-row items-center mt-2 text-tertiary-text">
               <div class="mr-6 my-2">
                 <font-awesome-icon icon="calendar" class="mr-1"/>
-                <span>{{ new Date(article.createTime).toLocaleString() }}</span>
+                <span>{{ Time }}</span>
               </div>
               <div class="mr-6 my-2">
                 <font-awesome-icon icon="folder" class="mr-1" />
-                <a href="#" class="hover:text-eureka">{{ article.category }}</a>
+                <a href="#" class="hover:text-eureka">{{ category }}</a>
               </div>
             </div>
           </div>
           <div class="w-full lg:w-1/3 mb-4 lg:mb-0 lg:ml-8">
-            <img :src="article.image" loading="lazy" class="w-full" alt="Featured Image">
+            <img src="https://mypic-1305118058.cos.ap-hongkong.myqcloud.com/img/Snipaste_2022-04-09_21-28-25.png" class="w-full" alt="Featured Image">
           </div>
         </div>
       </div>
     </div>
   </div>
-  <div class="pagination pagination-default my-page-item">
-    <el-pagination
-      v-model:current-page="currentPage"
-      v-model:page-size="pageSize"
-      :total="total"
-      background
-      layout="prev, pager, next"
-      @current-change="handleCurrentChange"
-      @size-change="handleSizeChange"
-    />
-  </div>
+  <ul class="pagination pagination-default">
+    <li class="page-item disabled">
+      <a aria-disabled="true" aria-label="First" class="page-link" role="button" tabindex="-1"><span aria-hidden="true">««</span></a>
+    </li>
+    <li class="page-item disabled">
+      <a aria-disabled="true" aria-label="Previous" class="page-link" role="button" tabindex="-1"><span aria-hidden="true">«</span></a>
+    </li>
+    <li class="page-item active">
+      <a aria-current="page" aria-label="Page 1" class="page-link" role="button">1</a>
+    </li>
+    <li class="page-item">
+      <a href="/posts/page/2/" aria-label="Page 2" class="page-link" role="button">2</a>
+    </li>
+    <li class="page-item">
+      <a href="/posts/page/3/" aria-label="Page 3" class="page-link" role="button">3</a>
+    </li>
+    <li class="page-item">
+      <a href="/posts/page/2/" aria-label="Next" class="page-link" role="button"><span aria-hidden="true">»</span></a>
+    </li>
+    <li class="page-item">
+      <a href="/posts/page/8/" aria-label="Last" class="page-link" role="button"><span aria-hidden="true">»»</span></a>
+    </li>
+  </ul>
 </template>
 
 <style scoped>
-.my-page-item {
-  padding-top: 20px;
-}
-a:hover {
-  cursor: pointer;
-}
+
 </style>

@@ -1,11 +1,9 @@
 <script setup lang="ts">
 import { ref } from 'vue'
 
-const stored = localStorage.getItem('menuSelected')
-
-let selected = ref(-1)
-
 const SiteTitle: string = 'LoneStar\'s blog'
+let selected = ref(-1)
+const stored = localStorage.getItem('menuSelected')
 
 if (stored) {
   selected = ref(parseInt(stored))

@@ -27,7 +27,5 @@ const title = '分类'
 </template>
 
 <style scoped>
-a:hover {
-  cursor: pointer;
-}
+
 </style>

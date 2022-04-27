@@ -1,11 +1,11 @@
 import request from '@/util/request'
 import type { AxiosResponse } from 'axios'
 
-const categoryBase = '/category'
+const categoryPrefix = '/category'
 
 export function getByPage (page: number, size: number) : Promise<AxiosResponse> {
   return request({
-    url: categoryBase + '/page',
+    url: categoryPrefix + '/page',
     method: 'GET',
     params: {
       page,
@@ -16,14 +16,14 @@ export function getByPage (page: number, size: number) : Promise<AxiosResponse> 
 
 export function getAll () : Promise<AxiosResponse> {
   return request({
-    url: categoryBase + '/all',
+    url: categoryPrefix + '/all',
     method: 'GET'
   })
 }
 
 export function getArticlesByCidPage (id: number, page: number, size: number) : Promise<AxiosResponse> {
   return request({
-    url: categoryBase + '/article/id',
+    url: categoryPrefix + '/article/id',
     method: 'GET',
     params: {
       id,
@@ -35,7 +35,7 @@ export function getArticlesByCidPage (id: number, page: number, size: number) : 
 
 export function getArticlesByNamePage (name: string, page: number, size: number) : Promise<AxiosResponse> {
   return request({
-    url: categoryBase + '/article/name',
+    url: categoryPrefix + '/article/name',
     method: 'GET',
     params: {
       name,
@@ -47,7 +47,7 @@ export function getArticlesByNamePage (name: string, page: number, size: number)
 
 export function getById (id: number) : Promise<AxiosResponse> {
   return request({
-    url: categoryBase + '/id',
+    url: categoryPrefix + '/id',
     method: 'GET',
     params: {
       id
@@ -57,7 +57,7 @@ export function getById (id: number) : Promise<AxiosResponse> {
 
 export function getByName (name: string) : Promise<AxiosResponse> {
   return request({
-    url: categoryBase + '/name',
+    url: categoryPrefix + '/name',
     method: 'GET',
     params: {
       name
@@ -67,7 +67,7 @@ export function getByName (name: string) : Promise<AxiosResponse> {
 
 export function add (category: object) : Promise<AxiosResponse> {
   return request({
-    url: categoryBase + '/',
+    url: categoryPrefix + '/',
     method: 'POST',
     data: category
   })
@@ -75,7 +75,7 @@ export function add (category: object) : Promise<AxiosResponse> {
 
 export function deleteById (id: number) : Promise<AxiosResponse> {
   return request({
-    url: categoryBase + '/',
+    url: categoryPrefix + '/',
     method: 'DELETE',
     params: {
       id

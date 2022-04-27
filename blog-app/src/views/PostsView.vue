@@ -15,8 +15,10 @@ const title = '文章'
         <div class="w-full max-w-screen-xl lg:px-4 xl:px-8 mx-auto">
           <article class="mx-6 my-8">
             <h1 class="font-bold text-3xl text-primary-text">{{ title }}</h1>
+<!--            <div class="content">-->
+<!--            </div>-->
           </article>
-          <ArticleList type="posts" />
+          <ArticleList />
         </div>
       </div>
     </main>

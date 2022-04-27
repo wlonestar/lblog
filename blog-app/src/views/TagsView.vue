@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import HeaderItem from '@/components/header/HeaderItem.vue'
 import FooterItem from '@/components/footer/FooterItem.vue'
-import TagsList from '@/components/list/TagsList.vue'
+import CategoriesList from '@/components/list/CategoriesList.vue'
 
 const title = '标签'
 
@@ -18,7 +18,7 @@ const title = '标签'
             <div class="content">
             </div>
           </article>
-          <TagsList />
+          <CategoriesList />
         </div>
       </div>
     </main>
@@ -27,7 +27,5 @@ const title = '标签'
 </template>
 
 <style scoped>
-a:hover {
-  cursor: pointer;
-}
+
 </style>

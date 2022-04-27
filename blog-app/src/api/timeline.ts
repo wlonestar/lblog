@@ -23,11 +23,8 @@ export function getAll () : Promise<AxiosResponse> {
 
 export function getById (id: number) : Promise<AxiosResponse> {
   return request({
-    url: timePrefix + '/',
-    method: 'GET',
-    params: {
-      id
-    }
+    url: timePrefix + `/${id}`,
+    method: 'GET'
   })
 }
 
@@ -50,7 +47,7 @@ export function updateById (id: number, timeline: object) : Promise<AxiosRespons
   })
 }
 
-export function deleteById (id: number) : Promise<AxiosResponse> {
+export function deleteById (id: number, timeline: object) : Promise<AxiosResponse> {
   return request({
     url: timePrefix + `/${id}`,
     method: 'DELETE'
