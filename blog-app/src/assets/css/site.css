@@ -1,0 +1,57 @@
+.sticky-toc {
+  @apply sticky top-32 z-0 ease-in-out duration-300;
+}
+
+.sticky-toc a {
+  @apply text-primary-text ease-in-out duration-200;
+}
+
+.sticky-toc a:hover {
+  @apply text-eureka;
+}
+
+.sticky-toc ul {
+  @apply text-base pl-8 list-disc;
+}
+
+.sticky-toc ol {
+  @apply text-base pl-8 list-decimal;
+}
+
+.sticky-toc li + li {
+  @apply mt-1;
+}
+
+.sticky-toc li > p + p {
+  @apply mt-6;
+}
+
+.object-contain {
+    object-fit: contain !important;
+}
+
+.pagination {
+  @apply flex justify-center;
+}
+
+.pagination .page-item {
+  @apply flex items-center;
+}
+
+.pagination .page-item .page-link{
+  @apply p-2 m-2;
+}
+
+.pagination .active {
+  @apply text-eureka;
+}
+
+.pagination .page-item:not(.disabled):hover {
+  @apply text-eureka;
+}
+
+.selected-menu-item {
+  @apply text-eureka;
+  border-top-color: var(--color-eureka);
+  border-bottom-color: transparent;
+}

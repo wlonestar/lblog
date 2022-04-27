@@ -1,0 +1,50 @@
+module.exports = {
+  important: true,
+  content: [
+    './index.html',
+    './src/**/*.{vue,js,ts,jsx,tsx}'
+  ],
+  theme: {
+    fontFamily: {
+      serif: ['Lora', 'Noto Serif SC', 'serif'],
+      mono: ['SFMono-Regular', 'Menlo', 'monospace']
+    },
+    extend: {
+      height: {
+        '(screen-16)': 'calc(100vh - 4rem)',
+        '(16-4px)': 'calc(4rem - 4px)',
+        96: '24rem',
+        128: '32rem',
+        160: '40rem'
+      },
+      minHeight: {
+        16: '4rem'
+      },
+      maxHeight: {
+        'doc-sidebar': 'calc(100vh - 4rem - var(--height-doc-title, 4rem))'
+      },
+      lineHeight: {
+        '(16-4px)': 'calc(4rem - 4px)'
+      },
+      inset: {
+        16: '4rem',
+        32: '8rem',
+        48: '12rem'
+      },
+      padding: {
+        scrollbar: 'calc(100vw - 100%)'
+      },
+      colors: {
+        eureka: 'var(--color-eureka)',
+        'primary-bg': 'var(--color-primary-bg)',
+        'secondary-bg': 'var(--color-secondary-bg)',
+        'tertiary-bg': 'var(--color-tertiary-bg)',
+        'primary-text': 'var(--color-primary-text)',
+        'secondary-text': 'var(--color-secondary-text)',
+        'tertiary-text': 'var(--color-tertiary-text)'
+      }
+    }
+  },
+  variants: {},
+  plugins: []
+}
