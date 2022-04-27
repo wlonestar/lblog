@@ -4,6 +4,7 @@ import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
+import com.wjl.lblog.model.entity.Comment;
 import com.wjl.lblog.model.entity.Image;
 import com.wjl.lblog.repository.ImageMapper;
 import com.wjl.lblog.service.intf.ImageService;
@@ -25,14 +26,16 @@ public class ImageServiceImpl extends ServiceImpl<ImageMapper, Image>
     private ImageMapper imageMapper;
 
     @Override
-    public List<Image> findAll() {
+    public List<Image> selectAll() {
         var wrapper = new LambdaQueryWrapper<Image>();
+        wrapper.orderByDesc(Image::getCreateTime);
         return imageMapper.selectList(wrapper);
     }
 
     @Override
-    public IPage<Image> findAllByPage(Page<Image> page) {
+    public IPage<Image> selectAllByPage(Page<Image> page) {
         var wrapper = new LambdaQueryWrapper<Image>();
+        wrapper.orderByDesc(Image::getCreateTime);
         return imageMapper.selectPage(page, wrapper);
     }
 

@@ -75,10 +75,7 @@ export function add (category: object) : Promise<AxiosResponse> {
 
 export function deleteById (id: number) : Promise<AxiosResponse> {
   return request({
-    url: tagPrefix + '/',
-    method: 'DELETE',
-    params: {
-      id
-    }
+    url: tagPrefix + `/${id}`,
+    method: 'DELETE'
   })
 }

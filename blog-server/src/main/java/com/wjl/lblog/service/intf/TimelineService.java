@@ -3,6 +3,7 @@ package com.wjl.lblog.service.intf;
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.baomidou.mybatisplus.extension.service.IService;
+import com.wjl.lblog.model.dto.TimelineDto;
 import com.wjl.lblog.model.entity.Timeline;
 
 import java.util.List;
@@ -14,15 +15,15 @@ import java.util.List;
  */
 public interface TimelineService extends IService<Timeline> {
 
-    IPage<Timeline> findAllByPage(Page<Timeline> page);
+    IPage<Timeline> selectAllByPage(Page<Timeline> page);
 
-    List<Timeline> findAll();
+    List<Timeline> selectAll();
 
-    Timeline findById(Long id);
+    Timeline selectById(Long id);
 
-    boolean add(Timeline idea);
+    boolean add(TimelineDto timelineDto);
 
-    boolean update(Long id, Timeline idea);
+    boolean updateById(Long id, TimelineDto timelineDto);
 
     boolean deleteById(Long id);
 

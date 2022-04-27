@@ -1,7 +1,7 @@
 # lblog
 Version |  Update Time  | Status | Author |  Description
 ---|---|---|---|---
-v2022-04-25 21:13:49|2022-04-25 21:13:49|auto|@wjl15|Created by smart-doc
+v2022-04-27 11:18:07|2022-04-27 11:18:07|auto|@wjl15|Created by smart-doc
 
 
 
@@ -38,8 +38,8 @@ data|object|No comments found.|-
 **Response-example:**
 ```
 {
-  "status": 359,
-  "msg": "g45fat",
+  "status": 464,
+  "msg": "mfx1y5",
   "data": {}
 }
 ```
@@ -76,8 +76,8 @@ data|object|No comments found.|-
 **Response-example:**
 ```
 {
-  "status": 620,
-  "msg": "f3m5hk",
+  "status": 983,
+  "msg": "ygzffd",
   "data": {}
 }
 ```
@@ -107,8 +107,8 @@ data|object|No comments found.|-
 **Response-example:**
 ```
 {
-  "status": 724,
-  "msg": "ogdfc1",
+  "status": 358,
+  "msg": "ku5xvk",
   "data": {}
 }
 ```
@@ -138,14 +138,14 @@ data|object|No comments found.|-
 **Response-example:**
 ```
 {
-  "status": 511,
-  "msg": "m5s6ua",
+  "status": 215,
+  "msg": "8weutt",
   "data": {}
 }
 ```
 
 ### 根据 id 查询文章详情
-**URL:** http://localhost:8088/article/detail/id
+**URL:** http://localhost:8088/article/detail
 
 **Type:** GET
 
@@ -162,7 +162,7 @@ id|int64|id|true|-
 
 **Request-example:**
 ```
-curl -X GET -i http://localhost:8088/article/detail/id?id=923 --data '923'
+curl -X GET -i http://localhost:8088/article/detail?id=577 --data '577'
 ```
 **Response-fields:**
 
@@ -175,14 +175,14 @@ data|object|No comments found.|-
 **Response-example:**
 ```
 {
-  "status": 674,
-  "msg": "qz0308",
+  "status": 312,
+  "msg": "qjr5ad",
   "data": {}
 }
 ```
 
 ### 根据 id 查询文章摘要
-**URL:** http://localhost:8088/article/summary/id
+**URL:** http://localhost:8088/article/summary
 
 **Type:** GET
 
@@ -199,7 +199,7 @@ id|int64|id|true|-
 
 **Request-example:**
 ```
-curl -X GET -i http://localhost:8088/article/summary/id?id=886 --data '886'
+curl -X GET -i http://localhost:8088/article/summary?id=727 --data '727'
 ```
 **Response-fields:**
 
@@ -212,8 +212,8 @@ data|object|No comments found.|-
 **Response-example:**
 ```
 {
-  "status": 631,
-  "msg": "8ey7av",
+  "status": 204,
+  "msg": "1m6ctd",
   "data": {}
 }
 ```
@@ -242,13 +242,13 @@ tags|array|No comments found.|false|-
 **Request-example:**
 ```
 curl -X POST -H 'Content-Type: application/json; charset=utf-8' -i http://localhost:8088/article/ --data '{
-  "title": "8xhdan",
-  "summary": "rjocyg",
-  "image": "yojjvd",
-  "content": "xot5dg",
-  "category": "setm1h",
+  "title": "uardfc",
+  "summary": "zxhy2c",
+  "image": "56t1iv",
+  "content": "7p3rcj",
+  "category": "dvmdt4",
   "tags": [
-    "4rxffg"
+    "qi3jjz"
   ]
 }'
 ```
@@ -263,8 +263,8 @@ data|object|No comments found.|-
 **Response-example:**
 ```
 {
-  "status": 873,
-  "msg": "oa2yqt",
+  "status": 183,
+  "msg": "ahfbzg",
   "data": {}
 }
 ```
@@ -298,14 +298,14 @@ tags|array|No comments found.|false|-
 
 **Request-example:**
 ```
-curl -X PUT -H 'Content-Type: application/json; charset=utf-8' -i http://localhost:8088/article/?id=32 --data '{
-  "title": "yh6vly",
-  "summary": "at3mvq",
-  "image": "ippyc9",
-  "content": "dtkdd6",
-  "category": "rq2xht",
+curl -X PUT -H 'Content-Type: application/json; charset=utf-8' -i http://localhost:8088/article/?id=509 --data '{
+  "title": "odbmpo",
+  "summary": "sl4m63",
+  "image": "97rhgn",
+  "content": "xhg7j5",
+  "category": "52b8v6",
   "tags": [
-    "vsnpq6"
+    "62g4vf"
   ]
 }'
 ```
@@ -320,8 +320,8 @@ data|object|No comments found.|-
 **Response-example:**
 ```
 {
-  "status": 324,
-  "msg": "xpsx2z",
+  "status": 533,
+  "msg": "qg5rya",
   "data": {}
 }
 ```
@@ -344,7 +344,7 @@ id|int64|id|true|-
 
 **Request-example:**
 ```
-curl -X DELETE -i http://localhost:8088/article/839
+curl -X DELETE -i http://localhost:8088/article/638
 ```
 **Response-fields:**
 
@@ -357,15 +357,15 @@ data|object|No comments found.|-
 **Response-example:**
 ```
 {
-  "status": 906,
-  "msg": "q0v7mz",
+  "status": 333,
+  "msg": "vpgl34",
   "data": {}
 }
 ```
 
-## 登录接口
+## 认证接口
 ### 登录
-**URL:** http://localhost:8088/admin/login
+**URL:** http://localhost:8088/auth/login
 
 **Type:** POST
 
@@ -383,9 +383,9 @@ password|string|No comments found.|false|-
 
 **Request-example:**
 ```
-curl -X POST -H 'Content-Type: application/json; charset=utf-8' -i http://localhost:8088/admin/login --data '{
-  "username": "roscoe.tromp",
-  "password": "s4ly4b"
+curl -X POST -H 'Content-Type: application/json; charset=utf-8' -i http://localhost:8088/auth/login --data '{
+  "username": "lavon.oreilly",
+  "password": "zb0nfs"
 }'
 ```
 **Response-fields:**
@@ -399,89 +399,14 @@ data|object|No comments found.|-
 **Response-example:**
 ```
 {
-  "status": 943,
-  "msg": "g2yme0",
-  "data": {}
-}
-```
-
-### 验证是否登录
-**URL:** http://localhost:8088/admin/check
-
-**Type:** GET
-
-
-**Content-Type:** application/x-www-form-urlencoded;charset=utf-8
-
-**Description:** 验证是否登录
-
-**Query-parameters:**
-
-Parameter | Type|Description|Required|Since
----|---|---|---|---
-username|string|username|true|-
-tokenValue|string|token|true|-
-
-**Request-example:**
-```
-curl -X GET -i http://localhost:8088/admin/check?username=roscoe.tromp&tokenValue=ooug0i --data 'ooug0i'
-```
-**Response-fields:**
-
-Field | Type|Description|Since
----|---|---|---
-status|int32|No comments found.|-
-msg|string|No comments found.|-
-data|object|No comments found.|-
-
-**Response-example:**
-```
-{
-  "status": 670,
-  "msg": "i7w4fb",
-  "data": {}
-}
-```
-
-### 注销
-**URL:** http://localhost:8088/admin/logout
-
-**Type:** POST
-
-
-**Content-Type:** application/x-www-form-urlencoded;charset=utf-8
-
-**Description:** 注销
-
-**Query-parameters:**
-
-Parameter | Type|Description|Required|Since
----|---|---|---|---
-tokenValue|string|token|true|-
-
-**Request-example:**
-```
-curl -X POST -i http://localhost:8088/admin/logout --data 'tokenValue=17aqhf'
-```
-**Response-fields:**
-
-Field | Type|Description|Since
----|---|---|---
-status|int32|No comments found.|-
-msg|string|No comments found.|-
-data|object|No comments found.|-
-
-**Response-example:**
-```
-{
-  "status": 916,
-  "msg": "8eht84",
+  "status": 318,
+  "msg": "0f44zf",
   "data": {}
 }
 ```
 
 ### 注册
-**URL:** http://localhost:8088/admin/register
+**URL:** http://localhost:8088/auth/register
 
 **Type:** POST
 
@@ -496,14 +421,12 @@ Parameter | Type|Description|Required|Since
 ---|---|---|---|---
 username|string|No comments found.|false|-
 password|string|No comments found.|false|-
-passwordRepeat|string|No comments found.|false|-
 
 **Request-example:**
 ```
-curl -X POST -H 'Content-Type: application/json; charset=utf-8' -i http://localhost:8088/admin/register --data '{
-  "username": "roscoe.tromp",
-  "password": "gbuqlu",
-  "passwordRepeat": "jb15am"
+curl -X POST -H 'Content-Type: application/json; charset=utf-8' -i http://localhost:8088/auth/register --data '{
+  "username": "lavon.oreilly",
+  "password": "x3gyrv"
 }'
 ```
 **Response-fields:**
@@ -517,8 +440,90 @@ data|object|No comments found.|-
 **Response-example:**
 ```
 {
-  "status": 388,
-  "msg": "9ggfl5",
+  "status": 514,
+  "msg": "wkimr1",
+  "data": {}
+}
+```
+
+### 验证是否登录
+**URL:** http://localhost:8088/auth/check
+
+**Type:** GET
+
+
+**Content-Type:** application/x-www-form-urlencoded;charset=utf-8
+
+**Description:** 验证是否登录
+
+**Request-headers:**
+
+Header | Type|Description|Required|Since
+---|---|---|---|----
+satoken|string|token|true|-
+
+
+**Query-parameters:**
+
+Parameter | Type|Description|Required|Since
+---|---|---|---|---
+uid|int64|username|true|-
+
+**Request-example:**
+```
+curl -X GET -H 'satoken' -i http://localhost:8088/auth/check?uid=974 --data '974'
+```
+**Response-fields:**
+
+Field | Type|Description|Since
+---|---|---|---
+status|int32|No comments found.|-
+msg|string|No comments found.|-
+data|object|No comments found.|-
+
+**Response-example:**
+```
+{
+  "status": 5,
+  "msg": "khdg2i",
+  "data": {}
+}
+```
+
+### 注销
+**URL:** http://localhost:8088/auth/logout
+
+**Type:** POST
+
+
+**Content-Type:** application/x-www-form-urlencoded;charset=utf-8
+
+**Description:** 注销
+
+**Request-headers:**
+
+Header | Type|Description|Required|Since
+---|---|---|---|----
+satoken|string|token|true|-
+
+
+**Request-example:**
+```
+curl -X POST -H 'satoken' -i http://localhost:8088/auth/logout
+```
+**Response-fields:**
+
+Field | Type|Description|Since
+---|---|---|---
+status|int32|No comments found.|-
+msg|string|No comments found.|-
+data|object|No comments found.|-
+
+**Response-example:**
+```
+{
+  "status": 258,
+  "msg": "ce5btl",
   "data": {}
 }
 ```
@@ -556,8 +561,8 @@ data|object|No comments found.|-
 **Response-example:**
 ```
 {
-  "status": 714,
-  "msg": "e8t93w",
+  "status": 302,
+  "msg": "aojay3",
   "data": {}
 }
 ```
@@ -587,8 +592,8 @@ data|object|No comments found.|-
 **Response-example:**
 ```
 {
-  "status": 59,
-  "msg": "fsf0fb",
+  "status": 623,
+  "msg": "cczuai",
   "data": {}
 }
 ```
@@ -613,7 +618,7 @@ size|int32|size|true|-
 
 **Request-example:**
 ```
-curl -X GET -i http://localhost:8088/category/article/id?id=681&page=1&size=7 --data '"7"'
+curl -X GET -i http://localhost:8088/category/article/id?id=197&page=1&size=7 --data '"7"'
 ```
 **Response-fields:**
 
@@ -626,8 +631,8 @@ data|object|No comments found.|-
 **Response-example:**
 ```
 {
-  "status": 425,
-  "msg": "bgeauj",
+  "status": 333,
+  "msg": "n8p7q3",
   "data": {}
 }
 ```
@@ -652,7 +657,7 @@ size|int32|size|true|-
 
 **Request-example:**
 ```
-curl -X GET -i http://localhost:8088/category/article/name?name=roscoe.tromp&page=1&size=7 --data '"7"'
+curl -X GET -i http://localhost:8088/category/article/name?name=lavon.oreilly&page=1&size=7 --data '"7"'
 ```
 **Response-fields:**
 
@@ -665,8 +670,8 @@ data|object|No comments found.|-
 **Response-example:**
 ```
 {
-  "status": 808,
-  "msg": "l9nj0g",
+  "status": 465,
+  "msg": "7t2h6a",
   "data": {}
 }
 ```
@@ -689,7 +694,7 @@ id|int64|id|true|-
 
 **Request-example:**
 ```
-curl -X GET -i http://localhost:8088/category/id?id=756 --data '756'
+curl -X GET -i http://localhost:8088/category/id?id=928 --data '928'
 ```
 **Response-fields:**
 
@@ -702,8 +707,8 @@ data|object|No comments found.|-
 **Response-example:**
 ```
 {
-  "status": 175,
-  "msg": "1xy30s",
+  "status": 121,
+  "msg": "izxvt5",
   "data": {}
 }
 ```
@@ -726,7 +731,7 @@ name|string|name|true|-
 
 **Request-example:**
 ```
-curl -X GET -i http://localhost:8088/category/name?name=roscoe.tromp --data 'roscoe.tromp'
+curl -X GET -i http://localhost:8088/category/name?name=lavon.oreilly --data 'lavon.oreilly'
 ```
 **Response-fields:**
 
@@ -739,8 +744,8 @@ data|object|No comments found.|-
 **Response-example:**
 ```
 {
-  "status": 676,
-  "msg": "2l1e1a",
+  "status": 477,
+  "msg": "vi4ly5",
   "data": {}
 }
 ```
@@ -763,7 +768,7 @@ category|string|category|false|-
 
 **Request-example:**
 ```
-curl -X POST -H 'Content-Type: application/json; charset=utf-8' -i http://localhost:8088/category/ --data 'vt0kkq'
+curl -X POST -H 'Content-Type: application/json; charset=utf-8' -i http://localhost:8088/category/ --data '8jvikt'
 ```
 **Response-fields:**
 
@@ -776,14 +781,14 @@ data|object|No comments found.|-
 **Response-example:**
 ```
 {
-  "status": 97,
-  "msg": "2pu0li",
+  "status": 124,
+  "msg": "poynda",
   "data": {}
 }
 ```
 
 ### 根据 id 删除分类
-**URL:** http://localhost:8088/category/
+**URL:** http://localhost:8088/category/{id}
 
 **Type:** DELETE
 
@@ -792,7 +797,7 @@ data|object|No comments found.|-
 
 **Description:** 根据 id 删除分类
 
-**Query-parameters:**
+**Path-parameters:**
 
 Parameter | Type|Description|Required|Since
 ---|---|---|---|---
@@ -800,7 +805,7 @@ id|int64|id|true|-
 
 **Request-example:**
 ```
-curl -X DELETE -i http://localhost:8088/category/?id=219 --data '219'
+curl -X DELETE -i http://localhost:8088/category/53
 ```
 **Response-fields:**
 
@@ -813,8 +818,8 @@ data|object|No comments found.|-
 **Response-example:**
 ```
 {
-  "status": 362,
-  "msg": "lll0on",
+  "status": 518,
+  "msg": "c63jc1",
   "data": {}
 }
 ```
@@ -852,8 +857,8 @@ data|object|No comments found.|-
 **Response-example:**
 ```
 {
-  "status": 453,
-  "msg": "xlif9y",
+  "status": 454,
+  "msg": "tfxt3j",
   "data": {}
 }
 ```
@@ -883,14 +888,14 @@ data|object|No comments found.|-
 **Response-example:**
 ```
 {
-  "status": 533,
-  "msg": "bfqwoy",
+  "status": 323,
+  "msg": "5gni6e",
   "data": {}
 }
 ```
 
 ### 根据 id 查询留言
-**URL:** http://localhost:8088/comment/{id}
+**URL:** http://localhost:8088/comment/
 
 **Type:** GET
 
@@ -899,7 +904,7 @@ data|object|No comments found.|-
 
 **Description:** 根据 id 查询留言
 
-**Path-parameters:**
+**Query-parameters:**
 
 Parameter | Type|Description|Required|Since
 ---|---|---|---|---
@@ -907,7 +912,7 @@ id|int64|id|true|-
 
 **Request-example:**
 ```
-curl -X GET -i http://localhost:8088/comment/149
+curl -X GET -i http://localhost:8088/comment/?id=85 --data '85'
 ```
 **Response-fields:**
 
@@ -920,8 +925,8 @@ data|object|No comments found.|-
 **Response-example:**
 ```
 {
-  "status": 572,
-  "msg": "wtl08n",
+  "status": 449,
+  "msg": "fkp2zd",
   "data": {}
 }
 ```
@@ -940,24 +945,20 @@ data|object|No comments found.|-
 
 Parameter | Type|Description|Required|Since
 ---|---|---|---|---
-id|int64|No comments found.|false|-
-createTime|object|创建时间|false|-
-content|string|留言正文|false|-
-username|string|昵称|false|-
-avatar|string|头像|false|-
-site|string|个人网站|false|-
-email|string|邮箱|false|-
+content|string|No comments found.|false|-
+username|string|No comments found.|false|-
+avatar|string|No comments found.|false|-
+site|string|No comments found.|false|-
+email|string|No comments found.|false|-
 
 **Request-example:**
 ```
 curl -X POST -H 'Content-Type: application/json; charset=utf-8' -i http://localhost:8088/comment/ --data '{
-  "id": 426,
-  "createTime": "2022-04-25 21:13:52",
-  "content": "u5scbn",
-  "username": "roscoe.tromp",
-  "avatar": "y4edqv",
-  "site": "g1m1uw",
-  "email": "asa.sipes@hotmail.com"
+  "content": "nnwht6",
+  "username": "lavon.oreilly",
+  "avatar": "oan7xn",
+  "site": "1egzbe",
+  "email": "leola.abernathy@gmail.com"
 }'
 ```
 **Response-fields:**
@@ -971,71 +972,14 @@ data|object|No comments found.|-
 **Response-example:**
 ```
 {
-  "status": 263,
-  "msg": "s4cnix",
-  "data": {}
-}
-```
-
-### 更新留言
-**URL:** http://localhost:8088/comment/
-
-**Type:** PUT
-
-
-**Content-Type:** application/json; charset=utf-8
-
-**Description:** 更新留言
-
-**Query-parameters:**
-
-Parameter | Type|Description|Required|Since
----|---|---|---|---
-id|int64|id|true|-
-
-**Body-parameters:**
-
-Parameter | Type|Description|Required|Since
----|---|---|---|---
-id|int64|No comments found.|false|-
-createTime|object|创建时间|false|-
-content|string|留言正文|false|-
-username|string|昵称|false|-
-avatar|string|头像|false|-
-site|string|个人网站|false|-
-email|string|邮箱|false|-
-
-**Request-example:**
-```
-curl -X PUT -H 'Content-Type: application/json; charset=utf-8' -i http://localhost:8088/comment/?id=880 --data '{
-  "id": 19,
-  "createTime": "2022-04-25 21:13:52",
-  "content": "l7kjox",
-  "username": "roscoe.tromp",
-  "avatar": "dkxhcd",
-  "site": "8dtit0",
-  "email": "asa.sipes@hotmail.com"
-}'
-```
-**Response-fields:**
-
-Field | Type|Description|Since
----|---|---|---
-status|int32|No comments found.|-
-msg|string|No comments found.|-
-data|object|No comments found.|-
-
-**Response-example:**
-```
-{
-  "status": 287,
-  "msg": "drs6nc",
+  "status": 668,
+  "msg": "ojakjr",
   "data": {}
 }
 ```
 
 ### 根据 id 删除留言
-**URL:** http://localhost:8088/comment/
+**URL:** http://localhost:8088/comment/{id}
 
 **Type:** DELETE
 
@@ -1044,7 +988,7 @@ data|object|No comments found.|-
 
 **Description:** 根据 id 删除留言
 
-**Query-parameters:**
+**Path-parameters:**
 
 Parameter | Type|Description|Required|Since
 ---|---|---|---|---
@@ -1052,7 +996,7 @@ id|int64|id|true|-
 
 **Request-example:**
 ```
-curl -X DELETE -i http://localhost:8088/comment/?id=811 --data '811'
+curl -X DELETE -i http://localhost:8088/comment/966
 ```
 **Response-fields:**
 
@@ -1065,8 +1009,8 @@ data|object|No comments found.|-
 **Response-example:**
 ```
 {
-  "status": 119,
-  "msg": "tkf5gi",
+  "status": 319,
+  "msg": "uqz2pv",
   "data": {}
 }
 ```
@@ -1097,8 +1041,8 @@ data|object|No comments found.|-
 **Response-example:**
 ```
 {
-  "status": 680,
-  "msg": "e4utx0",
+  "status": 451,
+  "msg": "bkrf7v",
   "data": {}
 }
 ```
@@ -1135,8 +1079,8 @@ data|object|No comments found.|-
 **Response-example:**
 ```
 {
-  "status": 247,
-  "msg": "4s0o65",
+  "status": 926,
+  "msg": "joiqjy",
   "data": {}
 }
 ```
@@ -1172,8 +1116,8 @@ data|object|No comments found.|-
 **Response-example:**
 ```
 {
-  "status": 578,
-  "msg": "34iz68",
+  "status": 852,
+  "msg": "0z69fh",
   "data": {}
 }
 ```
@@ -1211,8 +1155,8 @@ data|object|No comments found.|-
 **Response-example:**
 ```
 {
-  "status": 717,
-  "msg": "m9yyr0",
+  "status": 527,
+  "msg": "xcs5s9",
   "data": {}
 }
 ```
@@ -1242,8 +1186,8 @@ data|object|No comments found.|-
 **Response-example:**
 ```
 {
-  "status": 639,
-  "msg": "kmwmd8",
+  "status": 167,
+  "msg": "v03mvj",
   "data": {}
 }
 ```
@@ -1268,7 +1212,7 @@ size|int32|size|true|-
 
 **Request-example:**
 ```
-curl -X GET -i http://localhost:8088/tag/article/id?id=750&page=1&size=5 --data '"5"'
+curl -X GET -i http://localhost:8088/tag/article/id?id=662&page=1&size=5 --data '"5"'
 ```
 **Response-fields:**
 
@@ -1281,8 +1225,8 @@ data|object|No comments found.|-
 **Response-example:**
 ```
 {
-  "status": 572,
-  "msg": "urvj1m",
+  "status": 745,
+  "msg": "axvh8f",
   "data": {}
 }
 ```
@@ -1307,7 +1251,7 @@ size|int32|size|true|-
 
 **Request-example:**
 ```
-curl -X GET -i http://localhost:8088/tag/article/name?name=roscoe.tromp&page=1&size=5 --data '"5"'
+curl -X GET -i http://localhost:8088/tag/article/name?name=lavon.oreilly&page=1&size=5 --data '"5"'
 ```
 **Response-fields:**
 
@@ -1320,8 +1264,8 @@ data|object|No comments found.|-
 **Response-example:**
 ```
 {
-  "status": 64,
-  "msg": "ce9t2p",
+  "status": 602,
+  "msg": "j4f5om",
   "data": {}
 }
 ```
@@ -1344,7 +1288,7 @@ id|int64|id|true|-
 
 **Request-example:**
 ```
-curl -X GET -i http://localhost:8088/tag/id?id=725 --data '725'
+curl -X GET -i http://localhost:8088/tag/id?id=49 --data '49'
 ```
 **Response-fields:**
 
@@ -1357,8 +1301,8 @@ data|object|No comments found.|-
 **Response-example:**
 ```
 {
-  "status": 848,
-  "msg": "2z192t",
+  "status": 994,
+  "msg": "309tkk",
   "data": {}
 }
 ```
@@ -1381,7 +1325,7 @@ name|string|name|true|-
 
 **Request-example:**
 ```
-curl -X GET -i http://localhost:8088/tag/name?name=roscoe.tromp --data 'roscoe.tromp'
+curl -X GET -i http://localhost:8088/tag/name?name=lavon.oreilly --data 'lavon.oreilly'
 ```
 **Response-fields:**
 
@@ -1394,8 +1338,8 @@ data|object|No comments found.|-
 **Response-example:**
 ```
 {
-  "status": 858,
-  "msg": "xkqdc2",
+  "status": 103,
+  "msg": "1tt9t7",
   "data": {}
 }
 ```
@@ -1418,7 +1362,7 @@ name|string|name|false|-
 
 **Request-example:**
 ```
-curl -X POST -H 'Content-Type: application/json; charset=utf-8' -i http://localhost:8088/tag/ --data 'roscoe.tromp'
+curl -X POST -H 'Content-Type: application/json; charset=utf-8' -i http://localhost:8088/tag/ --data 'lavon.oreilly'
 ```
 **Response-fields:**
 
@@ -1431,14 +1375,14 @@ data|object|No comments found.|-
 **Response-example:**
 ```
 {
-  "status": 79,
-  "msg": "br0ihe",
+  "status": 900,
+  "msg": "zlemx8",
   "data": {}
 }
 ```
 
 ### 根据 id 删除标签
-**URL:** http://localhost:8088/tag/
+**URL:** http://localhost:8088/tag/{id}
 
 **Type:** DELETE
 
@@ -1447,7 +1391,7 @@ data|object|No comments found.|-
 
 **Description:** 根据 id 删除标签
 
-**Query-parameters:**
+**Path-parameters:**
 
 Parameter | Type|Description|Required|Since
 ---|---|---|---|---
@@ -1455,7 +1399,7 @@ id|int64|id|true|-
 
 **Request-example:**
 ```
-curl -X DELETE -i http://localhost:8088/tag/?id=745 --data '745'
+curl -X DELETE -i http://localhost:8088/tag/547
 ```
 **Response-fields:**
 
@@ -1468,8 +1412,8 @@ data|object|No comments found.|-
 **Response-example:**
 ```
 {
-  "status": 505,
-  "msg": "cdf38g",
+  "status": 256,
+  "msg": "5feas2",
   "data": {}
 }
 ```
@@ -1507,8 +1451,8 @@ data|object|No comments found.|-
 **Response-example:**
 ```
 {
-  "status": 35,
-  "msg": "h0d8gl",
+  "status": 773,
+  "msg": "ekgxdd",
   "data": {}
 }
 ```
@@ -1538,14 +1482,14 @@ data|object|No comments found.|-
 **Response-example:**
 ```
 {
-  "status": 952,
-  "msg": "3k0wle",
+  "status": 69,
+  "msg": "2qsq80",
   "data": {}
 }
 ```
 
 ### 根据 id 查询时间线
-**URL:** http://localhost:8088/idea/{id}
+**URL:** http://localhost:8088/idea/
 
 **Type:** GET
 
@@ -1554,7 +1498,7 @@ data|object|No comments found.|-
 
 **Description:** 根据 id 查询时间线
 
-**Path-parameters:**
+**Query-parameters:**
 
 Parameter | Type|Description|Required|Since
 ---|---|---|---|---
@@ -1562,7 +1506,7 @@ id|int64|id|true|-
 
 **Request-example:**
 ```
-curl -X GET -i http://localhost:8088/idea/848
+curl -X GET -i http://localhost:8088/idea/?id=645 --data '645'
 ```
 **Response-fields:**
 
@@ -1575,8 +1519,8 @@ data|object|No comments found.|-
 **Response-example:**
 ```
 {
-  "status": 655,
-  "msg": "iga783",
+  "status": 57,
+  "msg": "6etd45",
   "data": {}
 }
 ```
@@ -1595,20 +1539,14 @@ data|object|No comments found.|-
 
 Parameter | Type|Description|Required|Since
 ---|---|---|---|---
-id|int64|No comments found.|false|-
-createTime|object|创建时间|false|-
-modifyTime|object|更新时间|false|-
-title|string|标题|false|-
-content|string|正文|false|-
+title|string|No comments found.|false|-
+content|string|No comments found.|false|-
 
 **Request-example:**
 ```
 curl -X POST -H 'Content-Type: application/json; charset=utf-8' -i http://localhost:8088/idea/ --data '{
-  "id": 839,
-  "createTime": "2022-04-25 21:13:52",
-  "modifyTime": "2022-04-25 21:13:52",
-  "title": "f316g4",
-  "content": "zpqm82"
+  "title": "07f2aj",
+  "content": "uzzv4u"
 }'
 ```
 **Response-fields:**
@@ -1622,8 +1560,8 @@ data|object|No comments found.|-
 **Response-example:**
 ```
 {
-  "status": 551,
-  "msg": "devru1",
+  "status": 471,
+  "msg": "hm08ko",
   "data": {}
 }
 ```
@@ -1648,20 +1586,14 @@ id|int64|id|true|-
 
 Parameter | Type|Description|Required|Since
 ---|---|---|---|---
-id|int64|No comments found.|false|-
-createTime|object|创建时间|false|-
-modifyTime|object|更新时间|false|-
-title|string|标题|false|-
-content|string|正文|false|-
+title|string|No comments found.|false|-
+content|string|No comments found.|false|-
 
 **Request-example:**
 ```
-curl -X PUT -H 'Content-Type: application/json; charset=utf-8' -i http://localhost:8088/idea/?id=547 --data '{
-  "id": 455,
-  "createTime": "2022-04-25 21:13:52",
-  "modifyTime": "2022-04-25 21:13:52",
-  "title": "rn2lv8",
-  "content": "pzl9ti"
+curl -X PUT -H 'Content-Type: application/json; charset=utf-8' -i http://localhost:8088/idea/?id=796 --data '{
+  "title": "61q7am",
+  "content": "81xysc"
 }'
 ```
 **Response-fields:**
@@ -1675,8 +1607,8 @@ data|object|No comments found.|-
 **Response-example:**
 ```
 {
-  "status": 615,
-  "msg": "nl87b6",
+  "status": 895,
+  "msg": "cwlbk1",
   "data": {}
 }
 ```
@@ -1699,7 +1631,7 @@ id|int64|id|true|-
 
 **Request-example:**
 ```
-curl -X DELETE -i http://localhost:8088/idea/27
+curl -X DELETE -i http://localhost:8088/idea/120
 ```
 **Response-fields:**
 
@@ -1712,70 +1644,13 @@ data|object|No comments found.|-
 **Response-example:**
 ```
 {
-  "status": 357,
-  "msg": "s4l8zi",
+  "status": 796,
+  "msg": "pnvs12",
   "data": {}
 }
 ```
 
 ## 用户接口
-### 添加用户
-**URL:** http://localhost:8088/user/
-
-**Type:** POST
-
-
-**Content-Type:** application/json; charset=utf-8
-
-**Description:** 添加用户
-
-**Body-parameters:**
-
-Parameter | Type|Description|Required|Since
----|---|---|---|---
-id|int64|No comments found.|false|-
-username|string|用户名|false|-
-password|string|密码|false|-
-token|string|token|false|-
-avatar|string|头像|false|-
-age|int32|年龄|false|-
-gender|int32|性别|false|-
-location|string|地址|false|-
-signature|string|个性签名|false|-
-profile|string|简介|false|-
-
-**Request-example:**
-```
-curl -X POST -H 'Content-Type: application/json; charset=utf-8' -i http://localhost:8088/user/ --data '{
-  "id": 876,
-  "username": "roscoe.tromp",
-  "password": "vq8uej",
-  "token": "gkv31a",
-  "avatar": "1wlkid",
-  "age": 56,
-  "gender": 0,
-  "location": "adqdcj",
-  "signature": "bxefiu",
-  "profile": "3st4t2"
-}'
-```
-**Response-fields:**
-
-Field | Type|Description|Since
----|---|---|---
-status|int32|No comments found.|-
-msg|string|No comments found.|-
-data|object|No comments found.|-
-
-**Response-example:**
-```
-{
-  "status": 189,
-  "msg": "a9oohr",
-  "data": {}
-}
-```
-
 ### 根据 id 获取用户信息
 **URL:** http://localhost:8088/user/user
 
@@ -1790,11 +1665,11 @@ data|object|No comments found.|-
 
 Parameter | Type|Description|Required|Since
 ---|---|---|---|---
-id|int64|No comments found.|true|-
+id|int64|id|true|-
 
 **Request-example:**
 ```
-curl -X GET -i http://localhost:8088/user/user?id=472 --data '472'
+curl -X GET -i http://localhost:8088/user/user?id=635 --data '635'
 ```
 **Response-fields:**
 
@@ -1807,93 +1682,46 @@ data|object|No comments found.|-
 **Response-example:**
 ```
 {
-  "status": 460,
-  "msg": "t18pwk",
+  "status": 952,
+  "msg": "0ogd8a",
   "data": {}
 }
 ```
 
-### 根据用户名获取用户信息
-**URL:** http://localhost:8088/user/name
+### 添加用户
+**URL:** http://localhost:8088/user/
 
-**Type:** GET
-
-
-**Content-Type:** application/x-www-form-urlencoded;charset=utf-8
-
-**Description:** 根据用户名获取用户信息
-
-**Query-parameters:**
-
-Parameter | Type|Description|Required|Since
----|---|---|---|---
-username|string|No comments found.|true|-
-
-**Request-example:**
-```
-curl -X GET -i http://localhost:8088/user/name?username=roscoe.tromp --data 'roscoe.tromp'
-```
-**Response-fields:**
-
-Field | Type|Description|Since
----|---|---|---
-status|int32|No comments found.|-
-msg|string|No comments found.|-
-data|object|No comments found.|-
-
-**Response-example:**
-```
-{
-  "status": 769,
-  "msg": "mayoaj",
-  "data": {}
-}
-```
-
-### 更新密码
-**URL:** http://localhost:8088/user/password
-
-**Type:** PUT
+**Type:** POST
 
 
 **Content-Type:** application/json; charset=utf-8
 
-**Description:** 更新密码
-
-**Query-parameters:**
-
-Parameter | Type|Description|Required|Since
----|---|---|---|---
-id|int64|No comments found.|true|-
+**Description:** 添加用户
 
 **Body-parameters:**
 
 Parameter | Type|Description|Required|Since
 ---|---|---|---|---
-id|int64|No comments found.|false|-
-username|string|用户名|false|-
-password|string|密码|false|-
-token|string|token|false|-
-avatar|string|头像|false|-
-age|int32|年龄|false|-
-gender|int32|性别|false|-
-location|string|地址|false|-
-signature|string|个性签名|false|-
-profile|string|简介|false|-
+username|string|No comments found.|false|-
+password|string|No comments found.|false|-
+avatar|string|No comments found.|false|-
+age|int32|No comments found.|false|-
+gender|int32|No comments found.|false|-
+location|string|No comments found.|false|-
+signature|string|No comments found.|false|-
+profile|string|No comments found.|false|-
 
 **Request-example:**
 ```
-curl -X PUT -H 'Content-Type: application/json; charset=utf-8' -i http://localhost:8088/user/password?id=921 --data '{
-  "id": 886,
-  "username": "roscoe.tromp",
-  "password": "t23q1u",
-  "token": "q3peh4",
-  "avatar": "xg8qsw",
-  "age": 56,
-  "gender": 0,
-  "location": "5luge4",
-  "signature": "6plx1k",
-  "profile": "vtchji"
+curl -X POST -H 'Content-Type: application/json; charset=utf-8' -i http://localhost:8088/user/ --data '{
+  "username": "lavon.oreilly",
+  "password": "eod01q",
+  "avatar": "gidf52",
+  "age": 29,
+  "gender": 1,
+  "location": "u37ljn",
+  "signature": "ih98mq",
+  "profile": "911gqf"
 }'
 ```
 **Response-fields:**
@@ -1907,8 +1735,67 @@ data|object|No comments found.|-
 **Response-example:**
 ```
 {
-  "status": 530,
-  "msg": "xypc0g",
+  "status": 510,
+  "msg": "m0vut5",
+  "data": {}
+}
+```
+
+### 更新用户信息
+**URL:** http://localhost:8088/user/
+
+**Type:** PUT
+
+
+**Content-Type:** application/json; charset=utf-8
+
+**Description:** 更新用户信息
+
+**Query-parameters:**
+
+Parameter | Type|Description|Required|Since
+---|---|---|---|---
+id|int64|No comments found.|true|-
+
+**Body-parameters:**
+
+Parameter | Type|Description|Required|Since
+---|---|---|---|---
+username|string|No comments found.|false|-
+password|string|No comments found.|false|-
+avatar|string|No comments found.|false|-
+age|int32|No comments found.|false|-
+gender|int32|No comments found.|false|-
+location|string|No comments found.|false|-
+signature|string|No comments found.|false|-
+profile|string|No comments found.|false|-
+
+**Request-example:**
+```
+curl -X PUT -H 'Content-Type: application/json; charset=utf-8' -i http://localhost:8088/user/?id=378 --data '{
+  "username": "lavon.oreilly",
+  "password": "e5vg5c",
+  "avatar": "p6z607",
+  "age": 29,
+  "gender": 1,
+  "location": "2bt8wu",
+  "signature": "q9aumq",
+  "profile": "mqfeb8"
+}'
+```
+**Response-fields:**
+
+Field | Type|Description|Since
+---|---|---|---
+status|int32|No comments found.|-
+msg|string|No comments found.|-
+data|object|No comments found.|-
+
+**Response-example:**
+```
+{
+  "status": 436,
+  "msg": "iv77u9",
   "data": {}
 }
 ```

@@ -3,6 +3,7 @@ package com.wjl.lblog.service.intf;
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.baomidou.mybatisplus.extension.service.IService;
+import com.wjl.lblog.model.dto.CommentDto;
 import com.wjl.lblog.model.entity.Comment;
 
 import java.util.List;
@@ -14,15 +15,13 @@ import java.util.List;
  */
 public interface CommentService extends IService<Comment> {
 
-    IPage<Comment> findAllByPage(Page<Comment> page);
+    IPage<Comment> selectAllByPage(Page<Comment> page);
 
-    List<Comment> findAll();
+    List<Comment> selectAll();
 
-    Comment findById(Long id);
+    Comment selectById(Long id);
 
-    boolean add(Comment comment);
-
-    boolean update(Long id, Comment comment);
+    boolean add(CommentDto commentDto);
 
     boolean deleteById(Long id);
 

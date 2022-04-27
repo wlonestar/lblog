@@ -1,11 +1,13 @@
 package com.wjl.lblog.service.impl;
 
+import cn.dev33.satoken.secure.SaBase64Util;
 import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
+import com.wjl.lblog.model.dto.UserDto;
 import com.wjl.lblog.model.entity.User;
+import com.wjl.lblog.model.vo.UserVo;
 import com.wjl.lblog.repository.UserMapper;
 import com.wjl.lblog.service.intf.UserService;
-import org.springframework.beans.BeanUtils;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
@@ -26,15 +28,15 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User>
     private UserMapper userMapper;
 
     @Override
-    public List<User> findAll() {
+    public List<User> selectAll() {
         var wrapper = new LambdaQueryWrapper<User>();
         return userMapper.selectList(wrapper);
     }
 
     @Override
-    public List<String> findAllUsername() {
-        List<User> users = findAll();
-        List<String> usernames = new ArrayList<>();
+    public List<String> selectAllUsername() {
+        var users = selectAll();
+        var usernames = new ArrayList<String>();
         for (User user : users) {
             String username = user.getUsername();
             usernames.add(username);
@@ -43,69 +45,115 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User>
     }
 
     @Override
-    public User findById(Long id) {
-        User user = userMapper.selectById(id);
+    public User selectById(Long id) {
+        var user = userMapper.selectById(id);
         if (!Objects.isNull(user)) {
             return user;
+        } else {
+            return null;
         }
-        return null;
     }
 
     @Override
-    public User findByUsername(String username) {
+    public UserVo selectVoById(Long id) {
+        var user = selectById(id);
+        if (!Objects.isNull(user)) {
+            return UserVo.builder()
+                    .username(user.getUsername())
+                    .avatar(user.getAvatar())
+                    .age(user.getAge())
+                    .gender(user.getGender())
+                    .location(user.getLocation())
+                    .signature(user.getSignature())
+                    .profile(user.getProfile())
+                    .build();
+        } else {
+            return null;
+        }
+    }
+
+    @Override
+    public User selectByUsername(String username) {
         var wrapper = new LambdaQueryWrapper<User>();
         wrapper.eq(User::getUsername, username);
-        User user = userMapper.selectOne(wrapper);
+        var user = userMapper.selectOne(wrapper);
         if (!Objects.isNull(user)) {
             return user;
+        } else {
+            return null;
         }
-        return null;
     }
 
     @Override
-    public User findByUsernameAndPassword(String username, String password) {
+    public User selectByUsernameAndPassword(String username, String password) {
         var wrapper = new LambdaQueryWrapper<User>();
         wrapper.eq(User::getUsername, username).eq(User::getPassword, password);
-        User user = userMapper.selectOne(wrapper);
+        var user = userMapper.selectOne(wrapper);
         if (!Objects.isNull(user)) {
             return user;
+        } else {
+            return null;
         }
-        return null;
     }
 
     @Override
-    public boolean addUser(User user) {
+    public boolean add(UserDto userDto) {
+        if (!Objects.isNull(userDto)) {
+            if (selectAllUsername().contains(userDto.getUsername())) {
+                return false;
+            } else {
+                var user = User.builder()
+                        .username(userDto.getUsername())
+                        .password(SaBase64Util.encode(userDto.getPassword()))
+                        .avatar(userDto.getAvatar())
+                        .age(userDto.getAge())
+                        .gender(userDto.getGender())
+                        .location(userDto.getLocation())
+                        .signature(userDto.getSignature())
+                        .profile(userDto.getProfile())
+                        .build();
+                var res = userMapper.insert(user);
+                return res == 1;
+            }
+        }
+        return false;
+    }
+
+    @Override
+    public boolean updateById(Long id, UserDto userDto) {
+        var user = selectById(id);
         if (!Objects.isNull(user)) {
-            User user1 = new User();
-            BeanUtils.copyProperties(user, user1, "id", "token");
-            var res = userMapper.insert(user1);
+            if (!Objects.isNull(userDto)) {
+                var token = user.getToken();
+                user = User.builder()
+                        .id(id)
+                        .username(userDto.getUsername())
+                        .password(SaBase64Util.encode(userDto.getPassword()))
+                        .token(token)
+                        .avatar(userDto.getAvatar())
+                        .age(userDto.getAge())
+                        .gender(userDto.getGender())
+                        .location(userDto.getLocation())
+                        .signature(userDto.getSignature())
+                        .profile(userDto.getProfile())
+                        .build();
+                var res = userMapper.updateById(user);
+                return res == 1;
+            } else {
+                return false;
+            }
+        } else {
+            return false;
+        }
+    }
+
+    @Override
+    public boolean updateById(Long id, User user) {
+        var newUser = selectById(id);
+        if (!Objects.isNull(newUser)) {
+            newUser = user;
+            var res = userMapper.updateById(newUser);
             return res == 1;
-        }
-        return false;
-    }
-
-    @Override
-    public boolean updateUser(Long id, User user) {
-        if (!Objects.isNull(user)) {
-            User user1 = userMapper.selectById(id);
-            if (!Objects.isNull(user1)) {
-                BeanUtils.copyProperties(user, user1, "id");
-                var res = userMapper.insert(user1);
-                return res == 1;
-            }
-        }
-        return false;
-    }
-
-    @Override
-    public boolean updateUser(String username, User user) {
-        if (!Objects.isNull(user)) {
-            User user1 = findByUsername(username);
-            if (!Objects.isNull(user1)) {
-                BeanUtils.copyProperties(user, user1, "id", "token", "password");
-                var res = userMapper.insert(user1);
-                return res == 1;
-            }
         }
         return false;
     }
@@ -115,8 +163,9 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User>
         if (!Objects.isNull(userMapper.selectById(id))) {
             var res = userMapper.deleteById(id);
             return res == 1;
+        } else {
+            return false;
         }
-        return false;
     }
 
 }

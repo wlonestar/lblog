@@ -1,7 +1,9 @@
 package com.wjl.lblog.service.intf;
 
 import com.baomidou.mybatisplus.extension.service.IService;
+import com.wjl.lblog.model.dto.UserDto;
 import com.wjl.lblog.model.entity.User;
+import com.wjl.lblog.model.vo.UserVo;
 
 import java.util.List;
 
@@ -12,21 +14,23 @@ import java.util.List;
  */
 public interface UserService extends IService<User> {
 
-    List<User> findAll();
+    List<User> selectAll();
 
-    List<String> findAllUsername();
+    List<String> selectAllUsername();
 
-    User findById(Long id);
+    User selectById(Long id);
 
-    User findByUsername(String username);
+    UserVo selectVoById(Long id);
 
-    User findByUsernameAndPassword(String username, String password);
+    User selectByUsername(String username);
 
-    boolean addUser(User user);
+    User selectByUsernameAndPassword(String username, String password);
 
-    boolean updateUser(Long id, User user);
+    boolean add(UserDto userDto);
 
-    boolean updateUser(String username, User user);
+    boolean updateById(Long id, UserDto userDto);
+
+    boolean updateById(Long id, User user);
 
     boolean deleteById(Long id);
 

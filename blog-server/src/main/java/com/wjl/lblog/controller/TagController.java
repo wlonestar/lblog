@@ -69,7 +69,7 @@ public class TagController {
             var res = tagService.selectByTagId(id, new Page<>(page, size));
             return MyResult.success(res);
         } else {
-            return MyResult.fail(MyHttpStatus.BAD_REQUEST.getCode(), "can't get the category");
+            return MyResult.fail(MyHttpStatus.QUERY_ERROR);
         }
     }
 
@@ -90,7 +90,7 @@ public class TagController {
             var res = tagService.selectByTagName(name, new Page<>(page, size));
             return MyResult.success(res);
         } else {
-            return MyResult.fail(MyHttpStatus.BAD_REQUEST.getCode(), "can't get the category");
+            return MyResult.fail(MyHttpStatus.QUERY_ERROR);
         }
     }
 
@@ -106,7 +106,7 @@ public class TagController {
         if (!Objects.isNull(res)) {
             return MyResult.success(res);
         } else {
-            return MyResult.fail(MyHttpStatus.BAD_REQUEST.getCode(), "can't get the category");
+            return MyResult.fail(MyHttpStatus.QUERY_ERROR);
         }
     }
 
@@ -122,7 +122,7 @@ public class TagController {
         if (!Objects.isNull(res)) {
             return MyResult.success(res);
         } else {
-            return MyResult.fail(MyHttpStatus.BAD_REQUEST.getCode(), "can't get the category");
+            return MyResult.fail(MyHttpStatus.QUERY_ERROR);
         }
     }
 
@@ -138,7 +138,7 @@ public class TagController {
         if (res) {
             return MyResult.success();
         } else {
-            return MyResult.fail(MyHttpStatus.BAD_REQUEST.getCode(), "can't get the category");
+            return MyResult.fail(MyHttpStatus.INSERT_ERROR);
         }
     }
 
@@ -147,13 +147,13 @@ public class TagController {
      * @param id id
      * @return res
      */
-    @RequestMapping(value = "/", method = RequestMethod.DELETE)
-    public MyResult<?> deleteById(@RequestParam(name = "id") Long id) {
+    @RequestMapping(value = "/{id}", method = RequestMethod.DELETE)
+    public MyResult<?> deleteById(@PathVariable(name = "id") Long id) {
         var res = tagService.removeById(id);
         if (res) {
             return MyResult.success();
         } else {
-            return MyResult.fail(MyHttpStatus.BAD_REQUEST.getCode(), "can't get the category");
+            return MyResult.fail(MyHttpStatus.DELETE_ERROR);
         }
     }
 

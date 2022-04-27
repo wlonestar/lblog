@@ -1,7 +1,7 @@
 import request from '@/util/request'
 import type { AxiosResponse } from 'axios'
 
-const authPrefix = '/admin'
+const authPrefix = '/auth'
 
 export function login (user: object) : Promise<AxiosResponse> {
   return request({
@@ -11,29 +11,33 @@ export function login (user: object) : Promise<AxiosResponse> {
   })
 }
 
-export function checkLogin (username: string, tokenValue: string) : Promise<AxiosResponse> {
-  return request({
-    url: authPrefix + '/check',
-    method: 'GET',
-    params: {
-      username,
-      tokenValue
-    }
-  })
-}
-
-export function logout (tokenValue: string) : Promise<AxiosResponse> {
-  return request({
-    url: authPrefix + '/logout',
-    method: 'POST',
-    data: tokenValue
-  })
-}
-
 export function register (user: object) : Promise<AxiosResponse> {
   return request({
     url: authPrefix + '/register',
     method: 'POST',
     data: user
+  })
+}
+
+export function checkLogin (username: string, satoken: string) : Promise<AxiosResponse> {
+  return request({
+    url: authPrefix + '/check',
+    method: 'GET',
+    headers: {
+      satoken: satoken
+    },
+    params: {
+      username
+    }
+  })
+}
+
+export function logout (satoken: string) : Promise<AxiosResponse> {
+  return request({
+    url: authPrefix + '/logout',
+    method: 'POST',
+    headers: {
+      satoken: satoken
+    }
   })
 }

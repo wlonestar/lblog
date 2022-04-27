@@ -1,11 +1,13 @@
 package com.wjl.lblog.controller;
 
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
+import com.wjl.lblog.annotation.TimeLog;
 import com.wjl.lblog.common.constants.MyResult;
 import com.wjl.lblog.common.enums.MyHttpStatus;
 import com.wjl.lblog.model.entity.Image;
 import com.wjl.lblog.service.intf.FileService;
 import com.wjl.lblog.service.intf.ImageService;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
@@ -19,6 +21,8 @@ import java.util.Objects;
  * @date: 2021/9/16 14:23
  * @version: v1.0
  */
+@Slf4j
+@TimeLog
 @RestController
 @RequestMapping("/files")
 public class ImageController {
@@ -34,7 +38,7 @@ public class ImageController {
      */
     @RequestMapping(value = "/all", method = RequestMethod.GET)
     public MyResult<?> getAll() {
-        var res = imageService.findAll();
+        var res = imageService.selectAll();
         return MyResult.success(res);
     }
 
@@ -47,7 +51,7 @@ public class ImageController {
     @RequestMapping(value = "/page", method = RequestMethod.GET)
     public MyResult<?> findAllByPage(@RequestParam(name = "page", defaultValue = "1") int page,
                                      @RequestParam(name = "size", defaultValue = "10") int size) {
-        var res = imageService.findAllByPage(new Page<>(page, size));
+        var res = imageService.selectAllByPage(new Page<>(page, size));
         return MyResult.success(res);
     }
 
@@ -60,12 +64,12 @@ public class ImageController {
     @ResponseBody
     public MyResult<?> upload(@RequestParam(name = "file") MultipartFile file) {
         if (!Objects.isNull(file)) {
-            Object object = fileService.fileUpload(file);
+            var url = fileService.upload(file);
             Image image = new Image();
             image.setName(file.getOriginalFilename());
-            image.setUrl(object.toString());
+            image.setUrl(url);
             imageService.add(image);
-            return MyResult.success(object);
+            return MyResult.success(url);
         } else {
             return MyResult.fail(MyHttpStatus.BAD_REQUEST.getCode(), "upload failed");
         }

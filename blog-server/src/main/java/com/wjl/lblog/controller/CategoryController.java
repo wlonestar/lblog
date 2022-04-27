@@ -65,7 +65,7 @@ public class CategoryController {
             var res = categoryService.selectByCategoryId(id, new Page<>(page, size));
             return MyResult.success(res);
         } else {
-            return MyResult.fail(MyHttpStatus.BAD_REQUEST.getCode(), "can't get the category");
+            return MyResult.fail(MyHttpStatus.QUERY_ERROR);
         }
     }
 
@@ -85,7 +85,7 @@ public class CategoryController {
             var res = categoryService.selectByCategoryName(name, new Page<>(page, size));
             return MyResult.success(res);
         } else {
-            return MyResult.fail(MyHttpStatus.BAD_REQUEST.getCode(), "can't get the category");
+            return MyResult.fail(MyHttpStatus.QUERY_ERROR);
         }
     }
 
@@ -100,7 +100,7 @@ public class CategoryController {
         if (!Objects.isNull(res)) {
             return MyResult.success(res);
         } else {
-            return MyResult.fail(MyHttpStatus.BAD_REQUEST.getCode(), "can't get the category");
+            return MyResult.fail(MyHttpStatus.QUERY_ERROR);
         }
     }
 
@@ -115,7 +115,7 @@ public class CategoryController {
         if (!Objects.isNull(res)) {
             return MyResult.success(res);
         } else {
-            return MyResult.fail(MyHttpStatus.BAD_REQUEST.getCode(), "can't get the category");
+            return MyResult.fail(MyHttpStatus.QUERY_ERROR);
         }
     }
 
@@ -130,7 +130,7 @@ public class CategoryController {
         if (res) {
             return MyResult.success();
         } else {
-            return MyResult.fail(MyHttpStatus.BAD_REQUEST.getCode(), "can't add category");
+            return MyResult.fail(MyHttpStatus.INSERT_ERROR);
         }
     }
 
@@ -139,13 +139,13 @@ public class CategoryController {
      *
      * @param id id
      */
-    @RequestMapping(value = "/", method = RequestMethod.DELETE)
-    public MyResult<?> deleteById(@RequestParam(name = "id") Long id) {
+    @RequestMapping(value = "/{id}", method = RequestMethod.DELETE)
+    public MyResult<?> deleteById(@PathVariable(name = "id") Long id) {
         var res = categoryService.removeById(id);
         if (res) {
             return MyResult.success();
         } else {
-            return MyResult.fail(MyHttpStatus.BAD_REQUEST.getCode(), "can't delete category");
+            return MyResult.fail(MyHttpStatus.DELETE_ERROR);
         }
     }
 
