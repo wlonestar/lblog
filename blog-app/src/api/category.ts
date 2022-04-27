@@ -33,7 +33,7 @@ export function getArticlesByCidPage (id: number, page: number, size: number) : 
   })
 }
 
-export function getArticlesByNamePage (name: string, page: number, size: number) : Promise<AxiosResponse> {
+export function getArticlesByCategoryPage (name: string, page: number, size: number) : Promise<AxiosResponse> {
   return request({
     url: categoryPrefix + '/article/name',
     method: 'GET',
