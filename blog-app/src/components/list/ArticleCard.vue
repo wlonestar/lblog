@@ -1,9 +1,17 @@
 <script setup lang="ts">
 import { onMounted, ref } from 'vue'
+import { useRouter } from 'vue-router'
 import { getAllSummary } from '@/api/article'
+
+const router = useRouter()
 
 const title = '文章'
 const articles = ref()
+
+function redirectToArticle (id: number) {
+  console.log(id)
+  router.push(`/posts/${id}`)
+}
 
 onMounted(() => {
   getAllSummary().then(res => {
@@ -25,7 +33,7 @@ onMounted(() => {
               <div class="flex flex-col-reverse lg:flex-row justify-between">
                 <div class="w-full lg:w-2/3">
                   <div class="mb-4">
-                    <a href="#" class="font-bold text-xl hover:text-eureka">{{ article.title }}</a>
+                    <a @click="redirectToArticle(article.id)" class="font-bold text-xl hover:text-eureka">{{ article.title }}</a>
                   </div>
                   <div class="content">
                     {{ article.summary }}
@@ -58,5 +66,7 @@ onMounted(() => {
 </template>
 
 <style scoped>
-
+a:hover {
+  cursor: pointer;
+}
 </style>
