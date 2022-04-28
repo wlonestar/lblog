@@ -3,7 +3,7 @@ import HeaderItem from '@/components/header/HeaderItem.vue'
 import FooterItem from '@/components/footer/FooterItem.vue'
 import AboutView from '@/components/about/AboutItem.vue'
 import ArticleCard from '@/components/list/ArticleCard.vue'
-import BannerItem from '@/components/footer/BannerItem.vue'
+import BannerItem from '@/components/about/BannerItem.vue'
 
 </script>
 

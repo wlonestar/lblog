@@ -10,9 +10,5 @@ import org.springframework.stereotype.Repository;
  * @version: 1.0
  */
 @Repository
-<<<<<<<< HEAD:blog-server/src/main/java/com/wjl/lblog/repository/TagMapper.java
 public interface TagMapper extends BaseMapper<Tag> {
-========
-public interface RoleMapper extends BaseMapper<Role> {
->>>>>>>> 1a74263 (fix: add tag entity, remove number field):blog-server/src/main/java/com/wjl/lblog/repository/RoleMapper.java
 }

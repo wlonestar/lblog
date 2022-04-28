@@ -12,14 +12,35 @@ const props = defineProps(['id'])
 const Title = 'fwenifw'
 const article = ref()
 
+function loadArticle (id: number) {
+  // console.log(1)
+  // getDetailById(id).then(res => {
+  //   console.log(article)
+  //   article.value = res.data
+  //   console.log(article)
+  //   // const md = MarkdownIt({
+  //   //   highlight: function (str, lang) {
+  //   //     if (lang && hljs.getLanguage(lang)) {
+  //   //       try {
+  //   //         return hljs.highlight(str, { language: lang }).value
+  //   //       } catch (__) {}
+  //   //     }
+  //   //     return ''
+  //   //   }
+  //   // })
+  //   // article.value.content = md.render(article.value.content)
+  // })
+}
+
 onMounted(() => {
   const id = parseInt(props.id)
-  loadArticle(id)
-})
-
-function loadArticle (id: number) {
+  console.log(id)
+  // loadArticle(id)
+  // console.log(1)
   getDetailById(id).then(res => {
+    console.log(article)
     article.value = res.data
+    console.log(article)
     // const md = MarkdownIt({
     //   highlight: function (str, lang) {
     //     if (lang && hljs.getLanguage(lang)) {
@@ -32,7 +53,7 @@ function loadArticle (id: number) {
     // })
     // article.value.content = md.render(article.value.content)
   })
-}
+})
 
 </script>
 

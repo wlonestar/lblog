@@ -40,6 +40,8 @@ public class User {
     /**
      * 头像
      */
+    @NonNull
+    @Builder.Default
     private String avatar = GlobalConstants.AVATAR;
 
     /**
