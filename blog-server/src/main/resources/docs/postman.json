@@ -1,7 +1,7 @@
 {
   "info": {
     "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-    "_postman_id": "d0722b0d-2265-4e8a-8a30-e610900a4287",
+    "_postman_id": "e8b168fa-2531-4fb0-a769-4d67938fb50f",
     "name": "lblog"
   },
   "item": [
@@ -166,11 +166,12 @@
               }
             },
             "url": {
-              "raw": "http://localhost:8088/article/detail?id\u003d414",
+              "raw": "http://localhost:8088/article/detail/id?id\u003d879",
               "protocol": "http",
               "path": [
                 "article",
-                "detail"
+                "detail",
+                "id"
               ],
               "host": [
                 "localhost"
@@ -179,7 +180,7 @@
               "query": [
                 {
                   "key": "id",
-                  "value": "784",
+                  "value": "254",
                   "description": "id"
                 }
               ],
@@ -189,6 +190,43 @@
             "header": []
           },
           "description": "根据 id 查询文章详情"
+        },
+        {
+          "name": "根据标题查询文章详情",
+          "request": {
+            "method": "GET",
+            "body": {
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:8088/article/detail/title?title\u003d4emd5p",
+              "protocol": "http",
+              "path": [
+                "article",
+                "detail",
+                "title"
+              ],
+              "host": [
+                "localhost"
+              ],
+              "port": "8088",
+              "query": [
+                {
+                  "key": "title",
+                  "value": "v4k0o5",
+                  "description": "title"
+                }
+              ],
+              "variable": []
+            },
+            "description": "根据标题查询文章详情",
+            "header": []
+          },
+          "description": "根据标题查询文章详情"
         },
         {
           "name": "根据 id 查询文章摘要",
@@ -202,7 +240,7 @@
               }
             },
             "url": {
-              "raw": "http://localhost:8088/article/summary?id\u003d287",
+              "raw": "http://localhost:8088/article/summary?id\u003d444",
               "protocol": "http",
               "path": [
                 "article",
@@ -215,7 +253,7 @@
               "query": [
                 {
                   "key": "id",
-                  "value": "847",
+                  "value": "71",
                   "description": "id"
                 }
               ],
@@ -232,7 +270,7 @@
             "method": "POST",
             "body": {
               "mode": "raw",
-              "raw": "{\n  \"title\": \"6ztdhm\",\n  \"summary\": \"r1bjkq\",\n  \"image\": \"eaq0ln\",\n  \"content\": \"jqjh0g\",\n  \"category\": \"kx98mf\",\n  \"tags\": [\n    \"w2el37\"\n  ]\n}",
+              "raw": "{\n  \"title\": \"vfrm2f\",\n  \"summary\": \"yq503j\",\n  \"image\": \"jlktzz\",\n  \"content\": \"2w9v70\",\n  \"category\": \"wo4vgp\",\n  \"tags\": [\n    \"8zwrjs\"\n  ]\n}",
               "options": {
                 "raw": {
                   "language": "json"
@@ -264,7 +302,7 @@
             "method": "PUT",
             "body": {
               "mode": "raw",
-              "raw": "{\n  \"title\": \"dd2m1m\",\n  \"summary\": \"dgvk05\",\n  \"image\": \"dpcy37\",\n  \"content\": \"m9b1dc\",\n  \"category\": \"judfpe\",\n  \"tags\": [\n    \"1e3l61\"\n  ]\n}",
+              "raw": "{\n  \"title\": \"ndvzrk\",\n  \"summary\": \"hlkp80\",\n  \"image\": \"yp61zk\",\n  \"content\": \"bjjlhx\",\n  \"category\": \"mvabgt\",\n  \"tags\": [\n    \"hxkrgv\"\n  ]\n}",
               "options": {
                 "raw": {
                   "language": "json"
@@ -272,7 +310,7 @@
               }
             },
             "url": {
-              "raw": "http://localhost:8088/article/?id\u003d605",
+              "raw": "http://localhost:8088/article/?id\u003d6",
               "protocol": "http",
               "path": [
                 "article",
@@ -285,7 +323,7 @@
               "query": [
                 {
                   "key": "id",
-                  "value": "10",
+                  "value": "221",
                   "description": "id"
                 }
               ],
@@ -308,7 +346,7 @@
               }
             },
             "url": {
-              "raw": "http://localhost:8088/article/480",
+              "raw": "http://localhost:8088/article/313",
               "protocol": "http",
               "path": [
                 "article",
@@ -322,7 +360,7 @@
               "variable": [
                 {
                   "key": "id",
-                  "value": "188",
+                  "value": "654",
                   "description": "id"
                 }
               ]
@@ -343,7 +381,7 @@
             "method": "POST",
             "body": {
               "mode": "raw",
-              "raw": "{\n  \"username\": \"lavon.oreilly\",\n  \"password\": \"qzimhd\"\n}",
+              "raw": "{\n  \"username\": \"rhett.schneider\",\n  \"password\": \"ub6fg8\"\n}",
               "options": {
                 "raw": {
                   "language": "json"
@@ -375,7 +413,7 @@
             "method": "POST",
             "body": {
               "mode": "raw",
-              "raw": "{\n  \"username\": \"lavon.oreilly\",\n  \"password\": \"ntahl2\"\n}",
+              "raw": "{\n  \"username\": \"rhett.schneider\",\n  \"password\": \"4gb62t\"\n}",
               "options": {
                 "raw": {
                   "language": "json"
@@ -413,7 +451,7 @@
               }
             },
             "url": {
-              "raw": "http://localhost:8088/auth/check?uid\u003d894",
+              "raw": "http://localhost:8088/auth/check?uid\u003d63",
               "protocol": "http",
               "path": [
                 "auth",
@@ -426,7 +464,7 @@
               "query": [
                 {
                   "key": "uid",
-                  "value": "676",
+                  "value": "890",
                   "description": "username"
                 }
               ],
@@ -568,7 +606,7 @@
               }
             },
             "url": {
-              "raw": "http://localhost:8088/category/article/id?id\u003d114\u0026page\u003d1\u0026size\u003d7",
+              "raw": "http://localhost:8088/category/article/id?id\u003d19\u0026page\u003d1\u0026size\u003d7",
               "protocol": "http",
               "path": [
                 "category",
@@ -582,7 +620,7 @@
               "query": [
                 {
                   "key": "id",
-                  "value": "922",
+                  "value": "947",
                   "description": "id"
                 },
                 {
@@ -615,7 +653,7 @@
               }
             },
             "url": {
-              "raw": "http://localhost:8088/category/article/name?name\u003dlavon.oreilly\u0026page\u003d1\u0026size\u003d7",
+              "raw": "http://localhost:8088/category/article/name?name\u003drhett.schneider\u0026page\u003d1\u0026size\u003d7",
               "protocol": "http",
               "path": [
                 "category",
@@ -629,7 +667,7 @@
               "query": [
                 {
                   "key": "name",
-                  "value": "lavon.oreilly",
+                  "value": "rhett.schneider",
                   "description": "name"
                 },
                 {
@@ -662,7 +700,7 @@
               }
             },
             "url": {
-              "raw": "http://localhost:8088/category/id?id\u003d68",
+              "raw": "http://localhost:8088/category/id?id\u003d448",
               "protocol": "http",
               "path": [
                 "category",
@@ -675,7 +713,7 @@
               "query": [
                 {
                   "key": "id",
-                  "value": "392",
+                  "value": "280",
                   "description": "id"
                 }
               ],
@@ -698,7 +736,7 @@
               }
             },
             "url": {
-              "raw": "http://localhost:8088/category/name?name\u003dlavon.oreilly",
+              "raw": "http://localhost:8088/category/name?name\u003drhett.schneider",
               "protocol": "http",
               "path": [
                 "category",
@@ -711,7 +749,7 @@
               "query": [
                 {
                   "key": "name",
-                  "value": "lavon.oreilly",
+                  "value": "rhett.schneider",
                   "description": "name"
                 }
               ],
@@ -728,7 +766,7 @@
             "method": "POST",
             "body": {
               "mode": "raw",
-              "raw": "pstcw8",
+              "raw": "tbtojv",
               "options": {
                 "raw": {
                   "language": "json"
@@ -766,7 +804,7 @@
               }
             },
             "url": {
-              "raw": "http://localhost:8088/category/376",
+              "raw": "http://localhost:8088/category/55",
               "protocol": "http",
               "path": [
                 "category",
@@ -780,7 +818,7 @@
               "variable": [
                 {
                   "key": "id",
-                  "value": "236",
+                  "value": "593",
                   "description": "id"
                 }
               ]
@@ -878,7 +916,7 @@
               }
             },
             "url": {
-              "raw": "http://localhost:8088/comment/?id\u003d699",
+              "raw": "http://localhost:8088/comment/?id\u003d596",
               "protocol": "http",
               "path": [
                 "comment",
@@ -891,7 +929,7 @@
               "query": [
                 {
                   "key": "id",
-                  "value": "823",
+                  "value": "236",
                   "description": "id"
                 }
               ],
@@ -908,7 +946,7 @@
             "method": "POST",
             "body": {
               "mode": "raw",
-              "raw": "{\n  \"content\": \"030rn8\",\n  \"username\": \"lavon.oreilly\",\n  \"avatar\": \"q489uv\",\n  \"site\": \"34ur9w\",\n  \"email\": \"leola.abernathy@gmail.com\"\n}",
+              "raw": "{\n  \"content\": \"i4k85c\",\n  \"username\": \"rhett.schneider\",\n  \"avatar\": \"plrf25\",\n  \"site\": \"nfuh73\",\n  \"email\": \"cordell.ziemann@gmail.com\"\n}",
               "options": {
                 "raw": {
                   "language": "json"
@@ -946,7 +984,7 @@
               }
             },
             "url": {
-              "raw": "http://localhost:8088/comment/867",
+              "raw": "http://localhost:8088/comment/80",
               "protocol": "http",
               "path": [
                 "comment",
@@ -960,7 +998,7 @@
               "variable": [
                 {
                   "key": "id",
-                  "value": "435",
+                  "value": "477",
                   "description": "id"
                 }
               ]
@@ -1168,7 +1206,7 @@
               }
             },
             "url": {
-              "raw": "http://localhost:8088/tag/article/id?id\u003d51\u0026page\u003d1\u0026size\u003d5",
+              "raw": "http://localhost:8088/tag/article/id?id\u003d105\u0026page\u003d1\u0026size\u003d5",
               "protocol": "http",
               "path": [
                 "tag",
@@ -1182,7 +1220,7 @@
               "query": [
                 {
                   "key": "id",
-                  "value": "515",
+                  "value": "674",
                   "description": "id"
                 },
                 {
@@ -1215,7 +1253,7 @@
               }
             },
             "url": {
-              "raw": "http://localhost:8088/tag/article/name?name\u003dlavon.oreilly\u0026page\u003d1\u0026size\u003d5",
+              "raw": "http://localhost:8088/tag/article/name?name\u003drhett.schneider\u0026page\u003d1\u0026size\u003d5",
               "protocol": "http",
               "path": [
                 "tag",
@@ -1229,7 +1267,7 @@
               "query": [
                 {
                   "key": "name",
-                  "value": "lavon.oreilly",
+                  "value": "rhett.schneider",
                   "description": "name"
                 },
                 {
@@ -1262,7 +1300,7 @@
               }
             },
             "url": {
-              "raw": "http://localhost:8088/tag/id?id\u003d283",
+              "raw": "http://localhost:8088/tag/id?id\u003d953",
               "protocol": "http",
               "path": [
                 "tag",
@@ -1275,7 +1313,7 @@
               "query": [
                 {
                   "key": "id",
-                  "value": "984",
+                  "value": "599",
                   "description": "id"
                 }
               ],
@@ -1298,7 +1336,7 @@
               }
             },
             "url": {
-              "raw": "http://localhost:8088/tag/name?name\u003dlavon.oreilly",
+              "raw": "http://localhost:8088/tag/name?name\u003drhett.schneider",
               "protocol": "http",
               "path": [
                 "tag",
@@ -1311,7 +1349,7 @@
               "query": [
                 {
                   "key": "name",
-                  "value": "lavon.oreilly",
+                  "value": "rhett.schneider",
                   "description": "name"
                 }
               ],
@@ -1328,7 +1366,7 @@
             "method": "POST",
             "body": {
               "mode": "raw",
-              "raw": "lavon.oreilly",
+              "raw": "rhett.schneider",
               "options": {
                 "raw": {
                   "language": "json"
@@ -1366,7 +1404,7 @@
               }
             },
             "url": {
-              "raw": "http://localhost:8088/tag/899",
+              "raw": "http://localhost:8088/tag/670",
               "protocol": "http",
               "path": [
                 "tag",
@@ -1380,7 +1418,7 @@
               "variable": [
                 {
                   "key": "id",
-                  "value": "769",
+                  "value": "390",
                   "description": "id"
                 }
               ]
@@ -1478,7 +1516,7 @@
               }
             },
             "url": {
-              "raw": "http://localhost:8088/idea/?id\u003d222",
+              "raw": "http://localhost:8088/idea/?id\u003d272",
               "protocol": "http",
               "path": [
                 "idea",
@@ -1491,7 +1529,7 @@
               "query": [
                 {
                   "key": "id",
-                  "value": "414",
+                  "value": "277",
                   "description": "id"
                 }
               ],
@@ -1508,7 +1546,7 @@
             "method": "POST",
             "body": {
               "mode": "raw",
-              "raw": "{\n  \"title\": \"woho4t\",\n  \"content\": \"o7lth0\"\n}",
+              "raw": "{\n  \"title\": \"t0k2i0\",\n  \"content\": \"6wdppy\"\n}",
               "options": {
                 "raw": {
                   "language": "json"
@@ -1540,7 +1578,7 @@
             "method": "PUT",
             "body": {
               "mode": "raw",
-              "raw": "{\n  \"title\": \"l1jimu\",\n  \"content\": \"6qj1qq\"\n}",
+              "raw": "{\n  \"title\": \"u1pgb0\",\n  \"content\": \"fcpz1y\"\n}",
               "options": {
                 "raw": {
                   "language": "json"
@@ -1548,7 +1586,7 @@
               }
             },
             "url": {
-              "raw": "http://localhost:8088/idea/?id\u003d574",
+              "raw": "http://localhost:8088/idea/?id\u003d606",
               "protocol": "http",
               "path": [
                 "idea",
@@ -1561,7 +1599,7 @@
               "query": [
                 {
                   "key": "id",
-                  "value": "644",
+                  "value": "230",
                   "description": "id"
                 }
               ],
@@ -1584,7 +1622,7 @@
               }
             },
             "url": {
-              "raw": "http://localhost:8088/idea/956",
+              "raw": "http://localhost:8088/idea/959",
               "protocol": "http",
               "path": [
                 "idea",
@@ -1598,7 +1636,7 @@
               "variable": [
                 {
                   "key": "id",
-                  "value": "316",
+                  "value": "783",
                   "description": "id"
                 }
               ]
@@ -1625,7 +1663,7 @@
               }
             },
             "url": {
-              "raw": "http://localhost:8088/user/user?id\u003d936",
+              "raw": "http://localhost:8088/user/user?id\u003d976",
               "protocol": "http",
               "path": [
                 "user",
@@ -1638,7 +1676,7 @@
               "query": [
                 {
                   "key": "id",
-                  "value": "114",
+                  "value": "486",
                   "description": "id"
                 }
               ],
@@ -1655,7 +1693,7 @@
             "method": "POST",
             "body": {
               "mode": "raw",
-              "raw": "{\n  \"username\": \"lavon.oreilly\",\n  \"password\": \"svvny4\",\n  \"avatar\": \"7e5p3n\",\n  \"age\": 29,\n  \"gender\": 1,\n  \"location\": \"hucufg\",\n  \"signature\": \"ngdl9b\",\n  \"profile\": \"nlw8po\"\n}",
+              "raw": "{\n  \"username\": \"rhett.schneider\",\n  \"password\": \"shb9nt\",\n  \"avatar\": \"senw7j\",\n  \"age\": 61,\n  \"gender\": 1,\n  \"location\": \"prx18w\",\n  \"signature\": \"pcp8m6\",\n  \"profile\": \"y0m29x\"\n}",
               "options": {
                 "raw": {
                   "language": "json"
@@ -1687,7 +1725,7 @@
             "method": "PUT",
             "body": {
               "mode": "raw",
-              "raw": "{\n  \"username\": \"lavon.oreilly\",\n  \"password\": \"fedhfy\",\n  \"avatar\": \"eds0je\",\n  \"age\": 29,\n  \"gender\": 1,\n  \"location\": \"nb2mw0\",\n  \"signature\": \"0ah0ip\",\n  \"profile\": \"pq8yp3\"\n}",
+              "raw": "{\n  \"username\": \"rhett.schneider\",\n  \"password\": \"el6ex1\",\n  \"avatar\": \"342vfj\",\n  \"age\": 61,\n  \"gender\": 1,\n  \"location\": \"38ngkn\",\n  \"signature\": \"fnj05n\",\n  \"profile\": \"z0fjgr\"\n}",
               "options": {
                 "raw": {
                   "language": "json"
@@ -1695,7 +1733,7 @@
               }
             },
             "url": {
-              "raw": "http://localhost:8088/user/?id\u003d865",
+              "raw": "http://localhost:8088/user/?id\u003d995",
               "protocol": "http",
               "path": [
                 "user",
@@ -1708,7 +1746,7 @@
               "query": [
                 {
                   "key": "id",
-                  "value": "521",
+                  "value": "467",
                   "description": "No comments found."
                 }
               ],

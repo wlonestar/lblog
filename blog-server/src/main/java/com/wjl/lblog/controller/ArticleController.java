@@ -77,9 +77,24 @@ public class ArticleController {
      *
      * @param id id
      */
-    @RequestMapping(value = "/detail", method = RequestMethod.GET)
+    @RequestMapping(value = "/detail/id", method = RequestMethod.GET)
     public MyResult<?> getDetailById(@RequestParam(name = "id") Long id) {
         var res = articleService.selectDetailById(id);
+        if (!Objects.isNull(res)) {
+            return MyResult.success(res);
+        } else {
+            return MyResult.fail(MyHttpStatus.QUERY_ERROR);
+        }
+    }
+
+    /**
+     * 根据标题查询文章详情
+     *
+     * @param title title
+     */
+    @RequestMapping(value = "/detail/title", method = RequestMethod.GET)
+    public MyResult<?> getDetailByTitle(@RequestParam(name = "title") String title) {
+        var res = articleService.selectDetailByTitle(title);
         if (!Objects.isNull(res)) {
             return MyResult.success(res);
         } else {

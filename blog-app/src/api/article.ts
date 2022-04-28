@@ -41,10 +41,20 @@ export function getAllSummary () : Promise<AxiosResponse> {
 
 export function getDetailById (id: number) : Promise<AxiosResponse> {
   return request({
-    url: articlePrefix + '/detail',
+    url: articlePrefix + '/detail/id',
     method: 'GET',
     params: {
       id
+    }
+  })
+}
+
+export function getDetailByTitle (title: string) : Promise<AxiosResponse> {
+  return request({
+    url: articlePrefix + '/detail/title',
+    method: 'GET',
+    params: {
+      title
     }
   })
 }

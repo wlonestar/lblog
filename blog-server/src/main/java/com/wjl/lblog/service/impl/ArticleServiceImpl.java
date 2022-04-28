@@ -69,7 +69,18 @@ public class ArticleServiceImpl extends ServiceImpl<ArticleMapper, Article>
     public ArticleDetailVo selectDetailById(Long id) {
         var res = articleMapper.selectDetailById(id);
         if (!Objects.isNull(res)) {
-            res.setId(id);
+//            res.setId(id);
+            processTag(res);
+        }
+        return res;
+    }
+
+    @Override
+    public ArticleDetailVo selectDetailByTitle(String title) {
+        var res = articleMapper.selectDetailByTitle(title);
+        if (!Objects.isNull(res)) {
+//            var id = res.getId();
+//            res.setId(id);
             processTag(res);
         }
         return res;

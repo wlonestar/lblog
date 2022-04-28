@@ -23,6 +23,8 @@ public interface ArticleService extends IService<Article> {
 
     ArticleDetailVo selectDetailById(Long id);
 
+    ArticleDetailVo selectDetailByTitle(String title);
+
     IPage<ArticleSummaryVo> selectSummaryByPage(Page<ArticleSummaryVo> page);
 
     List<ArticleSummaryVo> selectSummaryAll();

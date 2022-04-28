@@ -67,6 +67,20 @@ public interface ArticleMapper extends BaseMapper<Article> {
             @Result(property = "title", column = "title"),
             @Result(property = "summary", column = "summary"),
             @Result(property = "image", column = "image"),
+            @Result(property = "content", column = "content"),
+            @Result(property = "category", column = "name"),
+    })
+    @Select("select a.id, a.create_time, a.title, a.summary, a.image, a.content, c.name " +
+            "from article as a, category as c " +
+            "where a.category_id = c.id and a.title = #{title}")
+    ArticleDetailVo selectDetailByTitle(@Param("title") String title);
+
+    @Results({
+            @Result(property = "id", column = "id"),
+            @Result(property = "createTime", column = "create_time"),
+            @Result(property = "title", column = "title"),
+            @Result(property = "summary", column = "summary"),
+            @Result(property = "image", column = "image"),
             @Result(property = "category", column = "name"),
     })
     @Select("select a.id, a.create_time, a.title, a.summary, a.image, c.name " +

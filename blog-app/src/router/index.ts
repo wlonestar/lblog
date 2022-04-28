@@ -1,5 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
+import AdminHomeView from '../views/admin/AdminHomeView.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -15,7 +16,7 @@ const router = createRouter({
       component: () => import('../views/PostsView.vue')
     },
     {
-      path: '/posts/:id',
+      path: '/posts/:title',
       name: 'post',
       props: true,
       component: () => import('../views/PostView.vue')
@@ -46,6 +47,27 @@ const router = createRouter({
       path: '/about',
       name: 'about',
       component: () => import('../views/HomeView.vue')
+    },
+    {
+      path: '/auth',
+      name: 'auth',
+      component: () => import('../views/admin/AuthView.vue')
+    },
+    {
+      path: '/admin',
+      name: 'admin',
+      component: AdminHomeView
+      // meta: {
+      //   auth: true
+      // },
+      // redirect: '/login',
+      // children: [
+      //   {
+      //     path: '/admin/home',
+      //     name: 'home',
+      //     component: () => import('../views/admin/AdminHomeView.vue')
+      //   }
+      // ]
     }
   ]
 })
