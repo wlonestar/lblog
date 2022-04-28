@@ -1,0 +1,3125 @@
+{
+  "components": {
+    "schemas": {
+      "_article_all_summaryresponse": {
+        "properties": {
+          "status": {
+            "format": "int32",
+            "description": "No comments found.",
+            "type": "integer"
+          },
+          "msg": {
+            "format": "string",
+            "description": "No comments found.",
+            "type": "string"
+          },
+          "data": {
+            "description": "No comments found.(object)",
+            "type": "object"
+          }
+        }
+      },
+      "_idea_pagerequest": {},
+      "_article__id_request": {},
+      "_article_request": {
+        "properties": {
+          "title": {
+            "format": "string",
+            "description": "No comments found.",
+            "type": "string"
+          },
+          "summary": {
+            "format": "string",
+            "description": "No comments found.",
+            "type": "string"
+          },
+          "image": {
+            "format": "string",
+            "description": "No comments found.",
+            "type": "string"
+          },
+          "content": {
+            "format": "string",
+            "description": "No comments found.",
+            "type": "string"
+          },
+          "category": {
+            "format": "string",
+            "description": "No comments found.",
+            "type": "string"
+          },
+          "tags": {
+            "description": "No comments found.",
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/_article_request"
+            }
+          }
+        }
+      },
+      "_comment__id_request": {},
+      "_tag_allresponse": {
+        "properties": {
+          "status": {
+            "format": "int32",
+            "description": "No comments found.",
+            "type": "integer"
+          },
+          "msg": {
+            "format": "string",
+            "description": "No comments found.",
+            "type": "string"
+          },
+          "data": {
+            "description": "No comments found.(object)",
+            "type": "object"
+          }
+        }
+      },
+      "_comment_response": {
+        "properties": {
+          "status": {
+            "format": "int32",
+            "description": "No comments found.",
+            "type": "integer"
+          },
+          "msg": {
+            "format": "string",
+            "description": "No comments found.",
+            "type": "string"
+          },
+          "data": {
+            "description": "No comments found.(object)",
+            "type": "object"
+          }
+        }
+      },
+      "_category_response": {
+        "properties": {
+          "status": {
+            "format": "int32",
+            "description": "No comments found.",
+            "type": "integer"
+          },
+          "msg": {
+            "format": "string",
+            "description": "No comments found.",
+            "type": "string"
+          },
+          "data": {
+            "description": "No comments found.(object)",
+            "type": "object"
+          }
+        }
+      },
+      "_category_idresponse": {
+        "properties": {
+          "status": {
+            "format": "int32",
+            "description": "No comments found.",
+            "type": "integer"
+          },
+          "msg": {
+            "format": "string",
+            "description": "No comments found.",
+            "type": "string"
+          },
+          "data": {
+            "description": "No comments found.(object)",
+            "type": "object"
+          }
+        }
+      },
+      "_idea_response": {
+        "properties": {
+          "status": {
+            "format": "int32",
+            "description": "No comments found.",
+            "type": "integer"
+          },
+          "msg": {
+            "format": "string",
+            "description": "No comments found.",
+            "type": "string"
+          },
+          "data": {
+            "description": "No comments found.(object)",
+            "type": "object"
+          }
+        }
+      },
+      "_category_namerequest": {},
+      "_article_page_summaryrequest": {},
+      "_files_uploadrequest": {},
+      "_category_article_idrequest": {},
+      "_article_all_detailresponse": {
+        "properties": {
+          "status": {
+            "format": "int32",
+            "description": "No comments found.",
+            "type": "integer"
+          },
+          "msg": {
+            "format": "string",
+            "description": "No comments found.",
+            "type": "string"
+          },
+          "data": {
+            "description": "No comments found.(object)",
+            "type": "object"
+          }
+        }
+      },
+      "_idea__id_request": {},
+      "_files_allresponse": {
+        "properties": {
+          "status": {
+            "format": "int32",
+            "description": "No comments found.",
+            "type": "integer"
+          },
+          "msg": {
+            "format": "string",
+            "description": "No comments found.",
+            "type": "string"
+          },
+          "data": {
+            "description": "No comments found.(object)",
+            "type": "object"
+          }
+        }
+      },
+      "_article_summaryresponse": {
+        "properties": {
+          "status": {
+            "format": "int32",
+            "description": "No comments found.",
+            "type": "integer"
+          },
+          "msg": {
+            "format": "string",
+            "description": "No comments found.",
+            "type": "string"
+          },
+          "data": {
+            "description": "No comments found.(object)",
+            "type": "object"
+          }
+        }
+      },
+      "_auth_loginrequest": {
+        "properties": {
+          "username": {
+            "format": "string",
+            "description": "No comments found.",
+            "type": "string"
+          },
+          "password": {
+            "format": "string",
+            "description": "No comments found.",
+            "type": "string"
+          }
+        }
+      },
+      "_tag_idrequest": {},
+      "_idea_allresponse": {
+        "properties": {
+          "status": {
+            "format": "int32",
+            "description": "No comments found.",
+            "type": "integer"
+          },
+          "msg": {
+            "format": "string",
+            "description": "No comments found.",
+            "type": "string"
+          },
+          "data": {
+            "description": "No comments found.(object)",
+            "type": "object"
+          }
+        }
+      },
+      "_user_request": {
+        "properties": {
+          "username": {
+            "format": "string",
+            "description": "No comments found.",
+            "type": "string"
+          },
+          "password": {
+            "format": "string",
+            "description": "No comments found.",
+            "type": "string"
+          },
+          "avatar": {
+            "format": "string",
+            "description": "No comments found.",
+            "type": "string"
+          },
+          "age": {
+            "format": "int32",
+            "description": "No comments found.",
+            "type": "integer"
+          },
+          "gender": {
+            "format": "int32",
+            "description": "No comments found.",
+            "type": "integer"
+          },
+          "location": {
+            "format": "string",
+            "description": "No comments found.",
+            "type": "string"
+          },
+          "signature": {
+            "format": "string",
+            "description": "No comments found.",
+            "type": "string"
+          },
+          "profile": {
+            "format": "string",
+            "description": "No comments found.",
+            "type": "string"
+          }
+        }
+      },
+      "_tag_nameresponse": {
+        "properties": {
+          "status": {
+            "format": "int32",
+            "description": "No comments found.",
+            "type": "integer"
+          },
+          "msg": {
+            "format": "string",
+            "description": "No comments found.",
+            "type": "string"
+          },
+          "data": {
+            "description": "No comments found.(object)",
+            "type": "object"
+          }
+        }
+      },
+      "_tag__id_response": {
+        "properties": {
+          "status": {
+            "format": "int32",
+            "description": "No comments found.",
+            "type": "integer"
+          },
+          "msg": {
+            "format": "string",
+            "description": "No comments found.",
+            "type": "string"
+          },
+          "data": {
+            "description": "No comments found.(object)",
+            "type": "object"
+          }
+        }
+      },
+      "_category_allrequest": {},
+      "_category_idrequest": {},
+      "_tag_article_idrequest": {},
+      "_category_allresponse": {
+        "properties": {
+          "status": {
+            "format": "int32",
+            "description": "No comments found.",
+            "type": "integer"
+          },
+          "msg": {
+            "format": "string",
+            "description": "No comments found.",
+            "type": "string"
+          },
+          "data": {
+            "description": "No comments found.(object)",
+            "type": "object"
+          }
+        }
+      },
+      "_files_pageresponse": {
+        "properties": {
+          "status": {
+            "format": "int32",
+            "description": "No comments found.",
+            "type": "integer"
+          },
+          "msg": {
+            "format": "string",
+            "description": "No comments found.",
+            "type": "string"
+          },
+          "data": {
+            "description": "No comments found.(object)",
+            "type": "object"
+          }
+        }
+      },
+      "_article_detail_idrequest": {},
+      "_comment_allrequest": {},
+      "_article_summaryrequest": {},
+      "_category_pagerequest": {},
+      "_category__id_request": {},
+      "_auth_registerresponse": {
+        "properties": {
+          "status": {
+            "format": "int32",
+            "description": "No comments found.",
+            "type": "integer"
+          },
+          "msg": {
+            "format": "string",
+            "description": "No comments found.",
+            "type": "string"
+          },
+          "data": {
+            "description": "No comments found.(object)",
+            "type": "object"
+          }
+        }
+      },
+      "_tag_idresponse": {
+        "properties": {
+          "status": {
+            "format": "int32",
+            "description": "No comments found.",
+            "type": "integer"
+          },
+          "msg": {
+            "format": "string",
+            "description": "No comments found.",
+            "type": "string"
+          },
+          "data": {
+            "description": "No comments found.(object)",
+            "type": "object"
+          }
+        }
+      },
+      "_auth_logoutresponse": {
+        "properties": {
+          "status": {
+            "format": "int32",
+            "description": "No comments found.",
+            "type": "integer"
+          },
+          "msg": {
+            "format": "string",
+            "description": "No comments found.",
+            "type": "string"
+          },
+          "data": {
+            "description": "No comments found.(object)",
+            "type": "object"
+          }
+        }
+      },
+      "_article_detail_idresponse": {
+        "properties": {
+          "status": {
+            "format": "int32",
+            "description": "No comments found.",
+            "type": "integer"
+          },
+          "msg": {
+            "format": "string",
+            "description": "No comments found.",
+            "type": "string"
+          },
+          "data": {
+            "description": "No comments found.(object)",
+            "type": "object"
+          }
+        }
+      },
+      "_idea_request": {
+        "properties": {
+          "title": {
+            "format": "string",
+            "description": "No comments found.",
+            "type": "string"
+          },
+          "content": {
+            "format": "string",
+            "description": "No comments found.",
+            "type": "string"
+          }
+        }
+      },
+      "_user_response": {
+        "properties": {
+          "status": {
+            "format": "int32",
+            "description": "No comments found.",
+            "type": "integer"
+          },
+          "msg": {
+            "format": "string",
+            "description": "No comments found.",
+            "type": "string"
+          },
+          "data": {
+            "description": "No comments found.(object)",
+            "type": "object"
+          }
+        }
+      },
+      "_idea_pageresponse": {
+        "properties": {
+          "status": {
+            "format": "int32",
+            "description": "No comments found.",
+            "type": "integer"
+          },
+          "msg": {
+            "format": "string",
+            "description": "No comments found.",
+            "type": "string"
+          },
+          "data": {
+            "description": "No comments found.(object)",
+            "type": "object"
+          }
+        }
+      },
+      "_auth_registerrequest": {
+        "properties": {
+          "username": {
+            "format": "string",
+            "description": "No comments found.",
+            "type": "string"
+          },
+          "password": {
+            "format": "string",
+            "description": "No comments found.",
+            "type": "string"
+          }
+        }
+      },
+      "_article_detail_titleresponse": {
+        "properties": {
+          "status": {
+            "format": "int32",
+            "description": "No comments found.",
+            "type": "integer"
+          },
+          "msg": {
+            "format": "string",
+            "description": "No comments found.",
+            "type": "string"
+          },
+          "data": {
+            "description": "No comments found.(object)",
+            "type": "object"
+          }
+        }
+      },
+      "_comment__id_response": {
+        "properties": {
+          "status": {
+            "format": "int32",
+            "description": "No comments found.",
+            "type": "integer"
+          },
+          "msg": {
+            "format": "string",
+            "description": "No comments found.",
+            "type": "string"
+          },
+          "data": {
+            "description": "No comments found.(object)",
+            "type": "object"
+          }
+        }
+      },
+      "_comment_allresponse": {
+        "properties": {
+          "status": {
+            "format": "int32",
+            "description": "No comments found.",
+            "type": "integer"
+          },
+          "msg": {
+            "format": "string",
+            "description": "No comments found.",
+            "type": "string"
+          },
+          "data": {
+            "description": "No comments found.(object)",
+            "type": "object"
+          }
+        }
+      },
+      "_article_all_summaryrequest": {},
+      "_tag_article_idresponse": {
+        "properties": {
+          "status": {
+            "format": "int32",
+            "description": "No comments found.",
+            "type": "integer"
+          },
+          "msg": {
+            "format": "string",
+            "description": "No comments found.",
+            "type": "string"
+          },
+          "data": {
+            "description": "No comments found.(object)",
+            "type": "object"
+          }
+        }
+      },
+      "_tag_response": {
+        "properties": {
+          "status": {
+            "format": "int32",
+            "description": "No comments found.",
+            "type": "integer"
+          },
+          "msg": {
+            "format": "string",
+            "description": "No comments found.",
+            "type": "string"
+          },
+          "data": {
+            "description": "No comments found.(object)",
+            "type": "object"
+          }
+        }
+      },
+      "_article_response": {
+        "properties": {
+          "status": {
+            "format": "int32",
+            "description": "No comments found.",
+            "type": "integer"
+          },
+          "msg": {
+            "format": "string",
+            "description": "No comments found.",
+            "type": "string"
+          },
+          "data": {
+            "description": "No comments found.(object)",
+            "type": "object"
+          }
+        }
+      },
+      "_category_article_nameresponse": {
+        "properties": {
+          "status": {
+            "format": "int32",
+            "description": "No comments found.",
+            "type": "integer"
+          },
+          "msg": {
+            "format": "string",
+            "description": "No comments found.",
+            "type": "string"
+          },
+          "data": {
+            "description": "No comments found.(object)",
+            "type": "object"
+          }
+        }
+      },
+      "_category_pageresponse": {
+        "properties": {
+          "status": {
+            "format": "int32",
+            "description": "No comments found.",
+            "type": "integer"
+          },
+          "msg": {
+            "format": "string",
+            "description": "No comments found.",
+            "type": "string"
+          },
+          "data": {
+            "description": "No comments found.(object)",
+            "type": "object"
+          }
+        }
+      },
+      "_comment_request": {
+        "properties": {
+          "content": {
+            "format": "string",
+            "description": "No comments found.",
+            "type": "string"
+          },
+          "username": {
+            "format": "string",
+            "description": "No comments found.",
+            "type": "string"
+          },
+          "avatar": {
+            "format": "string",
+            "description": "No comments found.",
+            "type": "string"
+          },
+          "site": {
+            "format": "string",
+            "description": "No comments found.",
+            "type": "string"
+          },
+          "email": {
+            "format": "string",
+            "description": "No comments found.",
+            "type": "string"
+          }
+        }
+      },
+      "_auth_loginresponse": {
+        "properties": {
+          "status": {
+            "format": "int32",
+            "description": "No comments found.",
+            "type": "integer"
+          },
+          "msg": {
+            "format": "string",
+            "description": "No comments found.",
+            "type": "string"
+          },
+          "data": {
+            "description": "No comments found.(object)",
+            "type": "object"
+          }
+        }
+      },
+      "_comment_pageresponse": {
+        "properties": {
+          "status": {
+            "format": "int32",
+            "description": "No comments found.",
+            "type": "integer"
+          },
+          "msg": {
+            "format": "string",
+            "description": "No comments found.",
+            "type": "string"
+          },
+          "data": {
+            "description": "No comments found.(object)",
+            "type": "object"
+          }
+        }
+      },
+      "_article_page_detailresponse": {
+        "properties": {
+          "status": {
+            "format": "int32",
+            "description": "No comments found.",
+            "type": "integer"
+          },
+          "msg": {
+            "format": "string",
+            "description": "No comments found.",
+            "type": "string"
+          },
+          "data": {
+            "description": "No comments found.(object)",
+            "type": "object"
+          }
+        }
+      },
+      "_article_page_detailrequest": {},
+      "_tag_article_nameresponse": {
+        "properties": {
+          "status": {
+            "format": "int32",
+            "description": "No comments found.",
+            "type": "integer"
+          },
+          "msg": {
+            "format": "string",
+            "description": "No comments found.",
+            "type": "string"
+          },
+          "data": {
+            "description": "No comments found.(object)",
+            "type": "object"
+          }
+        }
+      },
+      "_files_pagerequest": {},
+      "_user_userresponse": {
+        "properties": {
+          "status": {
+            "format": "int32",
+            "description": "No comments found.",
+            "type": "integer"
+          },
+          "msg": {
+            "format": "string",
+            "description": "No comments found.",
+            "type": "string"
+          },
+          "data": {
+            "description": "No comments found.(object)",
+            "type": "object"
+          }
+        }
+      },
+      "_comment_pagerequest": {},
+      "_tag_allrequest": {},
+      "_files_uploadresponse": {
+        "properties": {
+          "status": {
+            "format": "int32",
+            "description": "No comments found.",
+            "type": "integer"
+          },
+          "msg": {
+            "format": "string",
+            "description": "No comments found.",
+            "type": "string"
+          },
+          "data": {
+            "description": "No comments found.(object)",
+            "type": "object"
+          }
+        }
+      },
+      "_tag_namerequest": {},
+      "_files_allrequest": {},
+      "_tag_request": {
+        "properties": {
+          "name": {
+            "format": "string",
+            "description": "name",
+            "type": "string"
+          }
+        }
+      },
+      "_article_detail_titlerequest": {},
+      "_article_all_detailrequest": {},
+      "_idea__id_response": {
+        "properties": {
+          "status": {
+            "format": "int32",
+            "description": "No comments found.",
+            "type": "integer"
+          },
+          "msg": {
+            "format": "string",
+            "description": "No comments found.",
+            "type": "string"
+          },
+          "data": {
+            "description": "No comments found.(object)",
+            "type": "object"
+          }
+        }
+      },
+      "_auth_checkresponse": {
+        "properties": {
+          "status": {
+            "format": "int32",
+            "description": "No comments found.",
+            "type": "integer"
+          },
+          "msg": {
+            "format": "string",
+            "description": "No comments found.",
+            "type": "string"
+          },
+          "data": {
+            "description": "No comments found.(object)",
+            "type": "object"
+          }
+        }
+      },
+      "_category__id_response": {
+        "properties": {
+          "status": {
+            "format": "int32",
+            "description": "No comments found.",
+            "type": "integer"
+          },
+          "msg": {
+            "format": "string",
+            "description": "No comments found.",
+            "type": "string"
+          },
+          "data": {
+            "description": "No comments found.(object)",
+            "type": "object"
+          }
+        }
+      },
+      "_user_userrequest": {},
+      "_tag_pageresponse": {
+        "properties": {
+          "status": {
+            "format": "int32",
+            "description": "No comments found.",
+            "type": "integer"
+          },
+          "msg": {
+            "format": "string",
+            "description": "No comments found.",
+            "type": "string"
+          },
+          "data": {
+            "description": "No comments found.(object)",
+            "type": "object"
+          }
+        }
+      },
+      "_tag__id_request": {},
+      "_article__id_response": {
+        "properties": {
+          "status": {
+            "format": "int32",
+            "description": "No comments found.",
+            "type": "integer"
+          },
+          "msg": {
+            "format": "string",
+            "description": "No comments found.",
+            "type": "string"
+          },
+          "data": {
+            "description": "No comments found.(object)",
+            "type": "object"
+          }
+        }
+      },
+      "_idea_allrequest": {},
+      "_auth_checkrequest": {},
+      "_tag_pagerequest": {},
+      "_category_article_idresponse": {
+        "properties": {
+          "status": {
+            "format": "int32",
+            "description": "No comments found.",
+            "type": "integer"
+          },
+          "msg": {
+            "format": "string",
+            "description": "No comments found.",
+            "type": "string"
+          },
+          "data": {
+            "description": "No comments found.(object)",
+            "type": "object"
+          }
+        }
+      },
+      "_category_article_namerequest": {},
+      "_tag_article_namerequest": {},
+      "_auth_logoutrequest": {},
+      "_category_request": {
+        "properties": {
+          "category": {
+            "format": "string",
+            "description": "category",
+            "type": "string"
+          }
+        }
+      },
+      "_article_page_summaryresponse": {
+        "properties": {
+          "status": {
+            "format": "int32",
+            "description": "No comments found.",
+            "type": "integer"
+          },
+          "msg": {
+            "format": "string",
+            "description": "No comments found.",
+            "type": "string"
+          },
+          "data": {
+            "description": "No comments found.(object)",
+            "type": "object"
+          }
+        }
+      },
+      "_category_nameresponse": {
+        "properties": {
+          "status": {
+            "format": "int32",
+            "description": "No comments found.",
+            "type": "integer"
+          },
+          "msg": {
+            "format": "string",
+            "description": "No comments found.",
+            "type": "string"
+          },
+          "data": {
+            "description": "No comments found.(object)",
+            "type": "object"
+          }
+        }
+      }
+    }
+  },
+  "servers": [
+    {
+      "url": "http://localhost:8088/"
+    }
+  ],
+  "openapi": "3.0.3",
+  "paths": {
+    "/category/article/id": {
+      "get": {
+        "summary": "分页查询某分类下文章",
+        "deprecated": false,
+        "description": "分页查询某分类下文章",
+        "tags": [
+          "分类接口"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/_category_article_idresponse"
+                },
+                "examples": {
+                  "json": {
+                    "summary": "test data",
+                    "value": "{\n  \"status\": 238,\n  \"msg\": \"pxtdaq\",\n  \"data\": {}\n}"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "operationId": "4add7921df3bbb06ef5c12840c12e68c",
+        "parameters": [
+          {
+            "schema": {
+              "format": "int64",
+              "type": "integer"
+            },
+            "in": "query",
+            "description": "id",
+            "required": true,
+            "example": "278",
+            "name": "id"
+          },
+          {
+            "schema": {
+              "format": "int32",
+              "type": "integer"
+            },
+            "in": "query",
+            "description": "page",
+            "required": true,
+            "example": "1",
+            "name": "page"
+          },
+          {
+            "schema": {
+              "format": "int32",
+              "type": "integer"
+            },
+            "in": "query",
+            "description": "size",
+            "required": true,
+            "example": "7",
+            "name": "size"
+          }
+        ]
+      }
+    },
+    "/article/page/detail": {
+      "get": {
+        "summary": "分页查询文章详情",
+        "deprecated": false,
+        "description": "分页查询文章详情",
+        "tags": [
+          "文章接口"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/_article_page_detailresponse"
+                },
+                "examples": {
+                  "json": {
+                    "summary": "test data",
+                    "value": "{\n  \"status\": 529,\n  \"msg\": \"4bkm5o\",\n  \"data\": {}\n}"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "operationId": "006851b720057f1607c43101aa838708",
+        "parameters": [
+          {
+            "schema": {
+              "format": "int32",
+              "type": "integer"
+            },
+            "in": "query",
+            "description": "page",
+            "required": true,
+            "example": "1",
+            "name": "page"
+          },
+          {
+            "schema": {
+              "format": "int32",
+              "type": "integer"
+            },
+            "in": "query",
+            "description": "size",
+            "required": true,
+            "example": "5",
+            "name": "size"
+          }
+        ]
+      }
+    },
+    "/idea/all": {
+      "get": {
+        "summary": "查询所有时间线",
+        "deprecated": false,
+        "description": "查询所有时间线",
+        "tags": [
+          "时间线接口"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/_idea_allresponse"
+                },
+                "examples": {
+                  "json": {
+                    "summary": "test data",
+                    "value": "{\n  \"status\": 85,\n  \"msg\": \"kygbvk\",\n  \"data\": {}\n}"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "operationId": "854318e26b0afdc32f8dd297ab03085b",
+        "parameters": []
+      }
+    },
+    "/user/": {
+      "post": {
+        "summary": "添加用户",
+        "deprecated": false,
+        "description": "添加用户",
+        "tags": [
+          "用户接口"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json; charset\u003dutf-8": {
+              "schema": {
+                "$ref": "#/components/schemas/_user_request"
+              },
+              "examples": {
+                "json": {
+                  "summary": "test data",
+                  "value": "{\n  \"username\": \"rhett.schneider\",\n  \"password\": \"qysq50\",\n  \"avatar\": \"c1xvg1\",\n  \"age\": 61,\n  \"gender\": 1,\n  \"location\": \"doc8b6\",\n  \"signature\": \"68u43e\",\n  \"profile\": \"uc0sv5\"\n}"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/_user_response"
+                },
+                "examples": {
+                  "json": {
+                    "summary": "test data",
+                    "value": "{\n  \"status\": 417,\n  \"msg\": \"d5pekz\",\n  \"data\": {}\n}"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "operationId": "72a4cb66c8d41be7a0d0bb583aa48bdf",
+        "parameters": []
+      },
+      "put": {
+        "summary": "更新用户信息",
+        "deprecated": false,
+        "description": "更新用户信息",
+        "tags": [
+          "用户接口"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json; charset\u003dutf-8": {
+              "schema": {
+                "$ref": "#/components/schemas/_user_request"
+              },
+              "examples": {
+                "json": {
+                  "summary": "test data",
+                  "value": "{\n  \"username\": \"rhett.schneider\",\n  \"password\": \"6ttdja\",\n  \"avatar\": \"mpbz7h\",\n  \"age\": 61,\n  \"gender\": 1,\n  \"location\": \"ib577x\",\n  \"signature\": \"lyscuq\",\n  \"profile\": \"13a1a0\"\n}"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/_user_response"
+                },
+                "examples": {
+                  "json": {
+                    "summary": "test data",
+                    "value": "{\n  \"status\": 289,\n  \"msg\": \"4onicf\",\n  \"data\": {}\n}"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "operationId": "83281d45d0bbf279f049718db0b4b85f",
+        "parameters": [
+          {
+            "schema": {
+              "format": "int64",
+              "type": "integer"
+            },
+            "in": "query",
+            "description": "No comments found.",
+            "required": true,
+            "example": "348",
+            "name": "id"
+          }
+        ]
+      }
+    },
+    "/category/{id}": {
+      "delete": {
+        "summary": "根据 id 删除分类",
+        "deprecated": false,
+        "description": "根据 id 删除分类",
+        "tags": [
+          "分类接口"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/_category__id_response"
+                },
+                "examples": {
+                  "json": {
+                    "summary": "test data",
+                    "value": "{\n  \"status\": 986,\n  \"msg\": \"8suv4m\",\n  \"data\": {}\n}"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "operationId": "d0da227fb215eb2a15a5fe80143aba93",
+        "parameters": [
+          {
+            "schema": {
+              "format": "int64",
+              "type": "integer"
+            },
+            "in": "path",
+            "description": "id",
+            "required": true,
+            "example": "90",
+            "name": "id"
+          }
+        ]
+      }
+    },
+    "/article/detail/id": {
+      "get": {
+        "summary": "根据 id 查询文章详情",
+        "deprecated": false,
+        "description": "根据 id 查询文章详情",
+        "tags": [
+          "文章接口"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/_article_detail_idresponse"
+                },
+                "examples": {
+                  "json": {
+                    "summary": "test data",
+                    "value": "{\n  \"status\": 990,\n  \"msg\": \"i3ibcc\",\n  \"data\": {}\n}"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "operationId": "03bfc6ec7a47c48901b79cf5b67b4c16",
+        "parameters": [
+          {
+            "schema": {
+              "format": "int64",
+              "type": "integer"
+            },
+            "in": "query",
+            "description": "id",
+            "required": true,
+            "example": "935",
+            "name": "id"
+          }
+        ]
+      }
+    },
+    "/tag/": {
+      "post": {
+        "summary": "增加标签",
+        "deprecated": false,
+        "description": "增加标签",
+        "tags": [
+          "标签接口"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json; charset\u003dutf-8": {
+              "schema": {
+                "type": "string"
+              },
+              "examples": {
+                "json": {
+                  "summary": "test data",
+                  "value": "rhett.schneider"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/_tag_response"
+                },
+                "examples": {
+                  "json": {
+                    "summary": "test data",
+                    "value": "{\n  \"status\": 568,\n  \"msg\": \"wgqfsz\",\n  \"data\": {}\n}"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "operationId": "754fe76087f7046cab769c264eabde5d",
+        "parameters": []
+      }
+    },
+    "/article/page/summary": {
+      "get": {
+        "summary": "分页查询文章摘要",
+        "deprecated": false,
+        "description": "分页查询文章摘要",
+        "tags": [
+          "文章接口"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/_article_page_summaryresponse"
+                },
+                "examples": {
+                  "json": {
+                    "summary": "test data",
+                    "value": "{\n  \"status\": 782,\n  \"msg\": \"804ir8\",\n  \"data\": {}\n}"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "operationId": "28c90ed6277e181c7ca88235e9b5123f",
+        "parameters": [
+          {
+            "schema": {
+              "format": "int32",
+              "type": "integer"
+            },
+            "in": "query",
+            "description": "page",
+            "required": true,
+            "example": "1",
+            "name": "page"
+          },
+          {
+            "schema": {
+              "format": "int32",
+              "type": "integer"
+            },
+            "in": "query",
+            "description": "size",
+            "required": true,
+            "example": "5",
+            "name": "size"
+          }
+        ]
+      }
+    },
+    "/article/{id}": {
+      "delete": {
+        "summary": "根据 id 删除文章",
+        "deprecated": false,
+        "description": "根据 id 删除文章",
+        "tags": [
+          "文章接口"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/_article__id_response"
+                },
+                "examples": {
+                  "json": {
+                    "summary": "test data",
+                    "value": "{\n  \"status\": 779,\n  \"msg\": \"ma7dof\",\n  \"data\": {}\n}"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "operationId": "d3ae440fb7d0926146045d94034a17ea",
+        "parameters": [
+          {
+            "schema": {
+              "format": "int64",
+              "type": "integer"
+            },
+            "in": "path",
+            "description": "id",
+            "required": true,
+            "example": "853",
+            "name": "id"
+          }
+        ]
+      }
+    },
+    "/article/all/detail": {
+      "get": {
+        "summary": "查询所有文章详情",
+        "deprecated": false,
+        "description": "查询所有文章详情",
+        "tags": [
+          "文章接口"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/_article_all_detailresponse"
+                },
+                "examples": {
+                  "json": {
+                    "summary": "test data",
+                    "value": "{\n  \"status\": 518,\n  \"msg\": \"jd22k3\",\n  \"data\": {}\n}"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "operationId": "2e3e561193cec188523c57e552c7b220",
+        "parameters": []
+      }
+    },
+    "/category/name": {
+      "get": {
+        "summary": "根据名称查询分类实体",
+        "deprecated": false,
+        "description": "根据名称查询分类实体",
+        "tags": [
+          "分类接口"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/_category_nameresponse"
+                },
+                "examples": {
+                  "json": {
+                    "summary": "test data",
+                    "value": "{\n  \"status\": 222,\n  \"msg\": \"ttbuyf\",\n  \"data\": {}\n}"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "operationId": "5126e807b1584763cfd78a3723591a52",
+        "parameters": [
+          {
+            "schema": {
+              "type": "string"
+            },
+            "in": "query",
+            "description": "name",
+            "required": true,
+            "example": "rhett.schneider",
+            "name": "name"
+          }
+        ]
+      }
+    },
+    "/category/page": {
+      "get": {
+        "summary": "分页查询分类实体",
+        "deprecated": false,
+        "description": "分页查询分类实体",
+        "tags": [
+          "分类接口"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/_category_pageresponse"
+                },
+                "examples": {
+                  "json": {
+                    "summary": "test data",
+                    "value": "{\n  \"status\": 288,\n  \"msg\": \"1ysgji\",\n  \"data\": {}\n}"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "operationId": "b0478a75adb04456a889fdb5815fee0d",
+        "parameters": [
+          {
+            "schema": {
+              "format": "int32",
+              "type": "integer"
+            },
+            "in": "query",
+            "description": "页数",
+            "required": true,
+            "example": "1",
+            "name": "page"
+          },
+          {
+            "schema": {
+              "format": "int32",
+              "type": "integer"
+            },
+            "in": "query",
+            "description": "数量",
+            "required": true,
+            "example": "5",
+            "name": "size"
+          }
+        ]
+      }
+    },
+    "/category/article/name": {
+      "get": {
+        "summary": "分页查询某分类下文章",
+        "deprecated": false,
+        "description": "分页查询某分类下文章",
+        "tags": [
+          "分类接口"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/_category_article_nameresponse"
+                },
+                "examples": {
+                  "json": {
+                    "summary": "test data",
+                    "value": "{\n  \"status\": 348,\n  \"msg\": \"httgno\",\n  \"data\": {}\n}"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "operationId": "a8009eed0d8d94a8d57fb3125d4e77a9",
+        "parameters": [
+          {
+            "schema": {
+              "type": "string"
+            },
+            "in": "query",
+            "description": "name",
+            "required": true,
+            "example": "rhett.schneider",
+            "name": "name"
+          },
+          {
+            "schema": {
+              "format": "int32",
+              "type": "integer"
+            },
+            "in": "query",
+            "description": "page",
+            "required": true,
+            "example": "1",
+            "name": "page"
+          },
+          {
+            "schema": {
+              "format": "int32",
+              "type": "integer"
+            },
+            "in": "query",
+            "description": "size",
+            "required": true,
+            "example": "7",
+            "name": "size"
+          }
+        ]
+      }
+    },
+    "/comment/": {
+      "post": {
+        "summary": "增加留言",
+        "deprecated": false,
+        "description": "增加留言",
+        "tags": [
+          "留言接口"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json; charset\u003dutf-8": {
+              "schema": {
+                "$ref": "#/components/schemas/_comment_request"
+              },
+              "examples": {
+                "json": {
+                  "summary": "test data",
+                  "value": "{\n  \"content\": \"5ensn3\",\n  \"username\": \"rhett.schneider\",\n  \"avatar\": \"1o6c9a\",\n  \"site\": \"q6e00k\",\n  \"email\": \"cordell.ziemann@gmail.com\"\n}"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/_comment_response"
+                },
+                "examples": {
+                  "json": {
+                    "summary": "test data",
+                    "value": "{\n  \"status\": 780,\n  \"msg\": \"iutkfn\",\n  \"data\": {}\n}"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "operationId": "b4844eddb044dde179ee16d58954f1bc",
+        "parameters": []
+      },
+      "get": {
+        "summary": "根据 id 查询留言",
+        "deprecated": false,
+        "description": "根据 id 查询留言",
+        "tags": [
+          "留言接口"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/_comment_response"
+                },
+                "examples": {
+                  "json": {
+                    "summary": "test data",
+                    "value": "{\n  \"status\": 250,\n  \"msg\": \"zbuzlh\",\n  \"data\": {}\n}"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "operationId": "6c6be96376e88d6bfe2738f2a763ae1a",
+        "parameters": [
+          {
+            "schema": {
+              "format": "int64",
+              "type": "integer"
+            },
+            "in": "query",
+            "description": "id",
+            "required": true,
+            "example": "486",
+            "name": "id"
+          }
+        ]
+      }
+    },
+    "/article/": {
+      "post": {
+        "summary": "增加文章",
+        "deprecated": false,
+        "description": "增加文章",
+        "tags": [
+          "文章接口"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json; charset\u003dutf-8": {
+              "schema": {
+                "$ref": "#/components/schemas/_article_request"
+              },
+              "examples": {
+                "json": {
+                  "summary": "test data",
+                  "value": "{\n  \"title\": \"qg2c65\",\n  \"summary\": \"p66k7a\",\n  \"image\": \"rm573s\",\n  \"content\": \"mo33k3\",\n  \"category\": \"15peyx\",\n  \"tags\": [\n    \"zr4hvd\"\n  ]\n}"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/_article_response"
+                },
+                "examples": {
+                  "json": {
+                    "summary": "test data",
+                    "value": "{\n  \"status\": 323,\n  \"msg\": \"lm9l9e\",\n  \"data\": {}\n}"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "operationId": "d90c93ab5307d6aac2a53353c2654128",
+        "parameters": []
+      },
+      "put": {
+        "summary": "根据 id 更新文章",
+        "deprecated": false,
+        "description": "根据 id 更新文章",
+        "tags": [
+          "文章接口"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json; charset\u003dutf-8": {
+              "schema": {
+                "$ref": "#/components/schemas/_article_request"
+              },
+              "examples": {
+                "json": {
+                  "summary": "test data",
+                  "value": "{\n  \"title\": \"mmzqpg\",\n  \"summary\": \"ts2pfg\",\n  \"image\": \"cmxlfb\",\n  \"content\": \"9chh7c\",\n  \"category\": \"ea70h1\",\n  \"tags\": [\n    \"c82p7i\"\n  ]\n}"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/_article_response"
+                },
+                "examples": {
+                  "json": {
+                    "summary": "test data",
+                    "value": "{\n  \"status\": 615,\n  \"msg\": \"6x0teq\",\n  \"data\": {}\n}"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "operationId": "32671117175bd6bba46d0837fa08f07b",
+        "parameters": [
+          {
+            "schema": {
+              "format": "int64",
+              "type": "integer"
+            },
+            "in": "query",
+            "description": "id",
+            "required": true,
+            "example": "915",
+            "name": "id"
+          }
+        ]
+      }
+    },
+    "/tag/{id}": {
+      "delete": {
+        "summary": "根据 id 删除标签",
+        "deprecated": false,
+        "description": "根据 id 删除标签",
+        "tags": [
+          "标签接口"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/_tag__id_response"
+                },
+                "examples": {
+                  "json": {
+                    "summary": "test data",
+                    "value": "{\n  \"status\": 948,\n  \"msg\": \"h5mde6\",\n  \"data\": {}\n}"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "operationId": "3455775daecdbc9b8b73ac5de303366f",
+        "parameters": [
+          {
+            "schema": {
+              "format": "int64",
+              "type": "integer"
+            },
+            "in": "path",
+            "description": "id",
+            "required": true,
+            "example": "410",
+            "name": "id"
+          }
+        ]
+      }
+    },
+    "/article/summary": {
+      "get": {
+        "summary": "根据 id 查询文章摘要",
+        "deprecated": false,
+        "description": "根据 id 查询文章摘要",
+        "tags": [
+          "文章接口"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/_article_summaryresponse"
+                },
+                "examples": {
+                  "json": {
+                    "summary": "test data",
+                    "value": "{\n  \"status\": 172,\n  \"msg\": \"1ti4z5\",\n  \"data\": {}\n}"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "operationId": "caa027dd3961b96b635f45398f228d29",
+        "parameters": [
+          {
+            "schema": {
+              "format": "int64",
+              "type": "integer"
+            },
+            "in": "query",
+            "description": "id",
+            "required": true,
+            "example": "999",
+            "name": "id"
+          }
+        ]
+      }
+    },
+    "/comment/all": {
+      "get": {
+        "summary": "查询所有留言",
+        "deprecated": false,
+        "description": "查询所有留言",
+        "tags": [
+          "留言接口"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/_comment_allresponse"
+                },
+                "examples": {
+                  "json": {
+                    "summary": "test data",
+                    "value": "{\n  \"status\": 76,\n  \"msg\": \"h5k5nu\",\n  \"data\": {}\n}"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "operationId": "522a1fc4406d914b6e82ac1f2ad7d10b",
+        "parameters": []
+      }
+    },
+    "/auth/login": {
+      "post": {
+        "summary": "登录",
+        "deprecated": false,
+        "description": "登录",
+        "tags": [
+          "认证接口"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json; charset\u003dutf-8": {
+              "schema": {
+                "$ref": "#/components/schemas/_auth_loginrequest"
+              },
+              "examples": {
+                "json": {
+                  "summary": "test data",
+                  "value": "{\n  \"username\": \"rhett.schneider\",\n  \"password\": \"8qjs58\"\n}"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/_auth_loginresponse"
+                },
+                "examples": {
+                  "json": {
+                    "summary": "test data",
+                    "value": "{\n  \"status\": 416,\n  \"msg\": \"y4qgnc\",\n  \"data\": {}\n}"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "operationId": "4cdeb6b700503c80f9996a03414c1ca2",
+        "parameters": []
+      }
+    },
+    "/files/all": {
+      "get": {
+        "summary": "获取已上传的图片列表",
+        "deprecated": false,
+        "description": "获取已上传的图片列表",
+        "tags": [
+          "图片接口"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/_files_allresponse"
+                },
+                "examples": {
+                  "json": {
+                    "summary": "test data",
+                    "value": "{\n  \"status\": 569,\n  \"msg\": \"4yvrbo\",\n  \"data\": {}\n}"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "operationId": "084a80ec4e332d60e406574d6270706a",
+        "parameters": []
+      }
+    },
+    "/files/page": {
+      "get": {
+        "summary": "分页查询",
+        "deprecated": false,
+        "description": "分页查询",
+        "tags": [
+          "图片接口"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/_files_pageresponse"
+                },
+                "examples": {
+                  "json": {
+                    "summary": "test data",
+                    "value": "{\n  \"status\": 91,\n  \"msg\": \"l0f0dl\",\n  \"data\": {}\n}"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "operationId": "76a6eecea0fbe140bc19eb4512e79cd0",
+        "parameters": [
+          {
+            "schema": {
+              "format": "int32",
+              "type": "integer"
+            },
+            "in": "query",
+            "description": "page",
+            "required": true,
+            "example": "1",
+            "name": "page"
+          },
+          {
+            "schema": {
+              "format": "int32",
+              "type": "integer"
+            },
+            "in": "query",
+            "description": "size",
+            "required": true,
+            "example": "10",
+            "name": "size"
+          }
+        ]
+      }
+    },
+    "/article/detail/title": {
+      "get": {
+        "summary": "根据标题查询文章详情",
+        "deprecated": false,
+        "description": "根据标题查询文章详情",
+        "tags": [
+          "文章接口"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/_article_detail_titleresponse"
+                },
+                "examples": {
+                  "json": {
+                    "summary": "test data",
+                    "value": "{\n  \"status\": 423,\n  \"msg\": \"5g422t\",\n  \"data\": {}\n}"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "operationId": "8d88a1cebd45f6b2a9b7f3bc107fa95f",
+        "parameters": [
+          {
+            "schema": {
+              "type": "string"
+            },
+            "in": "query",
+            "description": "title",
+            "required": true,
+            "example": "il3hln",
+            "name": "title"
+          }
+        ]
+      }
+    },
+    "/article/all/summary": {
+      "get": {
+        "summary": "查询所有文章摘要",
+        "deprecated": false,
+        "description": "查询所有文章摘要",
+        "tags": [
+          "文章接口"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/_article_all_summaryresponse"
+                },
+                "examples": {
+                  "json": {
+                    "summary": "test data",
+                    "value": "{\n  \"status\": 256,\n  \"msg\": \"4d2trr\",\n  \"data\": {}\n}"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "operationId": "221676b2ad7fe033ca27c4295c3136a9",
+        "parameters": []
+      }
+    },
+    "/tag/article/name": {
+      "get": {
+        "summary": "分页查询某标签下文章",
+        "deprecated": false,
+        "description": "分页查询某标签下文章",
+        "tags": [
+          "标签接口"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/_tag_article_nameresponse"
+                },
+                "examples": {
+                  "json": {
+                    "summary": "test data",
+                    "value": "{\n  \"status\": 372,\n  \"msg\": \"p3ll1q\",\n  \"data\": {}\n}"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "operationId": "ff5ff1ccf9fc96861a7322c66142cdca",
+        "parameters": [
+          {
+            "schema": {
+              "type": "string"
+            },
+            "in": "query",
+            "description": "name",
+            "required": true,
+            "example": "rhett.schneider",
+            "name": "name"
+          },
+          {
+            "schema": {
+              "format": "int32",
+              "type": "integer"
+            },
+            "in": "query",
+            "description": "page",
+            "required": true,
+            "example": "1",
+            "name": "page"
+          },
+          {
+            "schema": {
+              "format": "int32",
+              "type": "integer"
+            },
+            "in": "query",
+            "description": "size",
+            "required": true,
+            "example": "5",
+            "name": "size"
+          }
+        ]
+      }
+    },
+    "/comment/{id}": {
+      "delete": {
+        "summary": "根据 id 删除留言",
+        "deprecated": false,
+        "description": "根据 id 删除留言",
+        "tags": [
+          "留言接口"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/_comment__id_response"
+                },
+                "examples": {
+                  "json": {
+                    "summary": "test data",
+                    "value": "{\n  \"status\": 185,\n  \"msg\": \"gcu5gu\",\n  \"data\": {}\n}"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "operationId": "e369634eb676c1d45b3d533b51f4813b",
+        "parameters": [
+          {
+            "schema": {
+              "format": "int64",
+              "type": "integer"
+            },
+            "in": "path",
+            "description": "id",
+            "required": true,
+            "example": "69",
+            "name": "id"
+          }
+        ]
+      }
+    },
+    "/tag/id": {
+      "get": {
+        "summary": "根据 id 查询标签实体",
+        "deprecated": false,
+        "description": "根据 id 查询标签实体",
+        "tags": [
+          "标签接口"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/_tag_idresponse"
+                },
+                "examples": {
+                  "json": {
+                    "summary": "test data",
+                    "value": "{\n  \"status\": 395,\n  \"msg\": \"o0eeq5\",\n  \"data\": {}\n}"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "operationId": "69f253aa10e74b7c3eaec7881720f283",
+        "parameters": [
+          {
+            "schema": {
+              "format": "int64",
+              "type": "integer"
+            },
+            "in": "query",
+            "description": "id",
+            "required": true,
+            "example": "516",
+            "name": "id"
+          }
+        ]
+      }
+    },
+    "/auth/register": {
+      "post": {
+        "summary": "注册",
+        "deprecated": false,
+        "description": "注册",
+        "tags": [
+          "认证接口"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json; charset\u003dutf-8": {
+              "schema": {
+                "$ref": "#/components/schemas/_auth_registerrequest"
+              },
+              "examples": {
+                "json": {
+                  "summary": "test data",
+                  "value": "{\n  \"username\": \"rhett.schneider\",\n  \"password\": \"hb4ykv\"\n}"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/_auth_registerresponse"
+                },
+                "examples": {
+                  "json": {
+                    "summary": "test data",
+                    "value": "{\n  \"status\": 88,\n  \"msg\": \"ueg6h8\",\n  \"data\": {}\n}"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "operationId": "3520b1794122536c9e8426970f840546",
+        "parameters": []
+      }
+    },
+    "/auth/check": {
+      "get": {
+        "summary": "验证是否登录",
+        "deprecated": false,
+        "description": "验证是否登录",
+        "tags": [
+          "认证接口"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/_auth_checkresponse"
+                },
+                "examples": {
+                  "json": {
+                    "summary": "test data",
+                    "value": "{\n  \"status\": 405,\n  \"msg\": \"kpb3xq\",\n  \"data\": {}\n}"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "operationId": "a48d1ea188320811c962c82043eb1b6f",
+        "parameters": [
+          {
+            "schema": {
+              "format": "int64",
+              "type": "integer"
+            },
+            "in": "query",
+            "description": "username",
+            "required": true,
+            "example": "495",
+            "name": "uid"
+          },
+          {
+            "schema": {
+              "format": "string",
+              "type": "string"
+            },
+            "in": "header",
+            "description": "token",
+            "required": true,
+            "name": "satoken"
+          }
+        ]
+      }
+    },
+    "/comment/page": {
+      "get": {
+        "summary": "分页查询留言",
+        "deprecated": false,
+        "description": "分页查询留言",
+        "tags": [
+          "留言接口"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/_comment_pageresponse"
+                },
+                "examples": {
+                  "json": {
+                    "summary": "test data",
+                    "value": "{\n  \"status\": 50,\n  \"msg\": \"obnn1i\",\n  \"data\": {}\n}"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "operationId": "4da305f33b299e6064d61421f67c2c74",
+        "parameters": [
+          {
+            "schema": {
+              "format": "int32",
+              "type": "integer"
+            },
+            "in": "query",
+            "description": "page",
+            "required": true,
+            "example": "1",
+            "name": "page"
+          },
+          {
+            "schema": {
+              "format": "int32",
+              "type": "integer"
+            },
+            "in": "query",
+            "description": "size",
+            "required": true,
+            "example": "5",
+            "name": "size"
+          }
+        ]
+      }
+    },
+    "/files/upload": {
+      "post": {
+        "summary": "图片上传",
+        "deprecated": false,
+        "description": "图片上传",
+        "tags": [
+          "图片接口"
+        ],
+        "requestBody": {
+          "content": {
+            "application/x-www-form-urlencoded;charset\u003dutf-8": {
+              "schema": {
+                "$ref": "#/components/schemas/_files_uploadrequest"
+              },
+              "examples": {
+                "json": {
+                  "summary": "test data",
+                  "value": "curl -X POST -i http://localhost:8088/files/upload --data \u0027file\u003d\u0027"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/_files_uploadresponse"
+                },
+                "examples": {
+                  "json": {
+                    "summary": "test data",
+                    "value": "{\n  \"status\": 25,\n  \"msg\": \"syaleo\",\n  \"data\": {}\n}"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "operationId": "5a3cb85b47e9796c9a3dedb7ad563639",
+        "parameters": [
+          {
+            "schema": {
+              "format": "binary",
+              "type": "object"
+            },
+            "in": "query",
+            "description": "file",
+            "required": true,
+            "example": "",
+            "name": "file"
+          }
+        ]
+      }
+    },
+    "/user/user": {
+      "get": {
+        "summary": "根据 id 获取用户信息",
+        "deprecated": false,
+        "description": "根据 id 获取用户信息",
+        "tags": [
+          "用户接口"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/_user_userresponse"
+                },
+                "examples": {
+                  "json": {
+                    "summary": "test data",
+                    "value": "{\n  \"status\": 465,\n  \"msg\": \"7am93p\",\n  \"data\": {}\n}"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "operationId": "783b5c5659c910487a6e38fe07623d99",
+        "parameters": [
+          {
+            "schema": {
+              "format": "int64",
+              "type": "integer"
+            },
+            "in": "query",
+            "description": "id",
+            "required": true,
+            "example": "717",
+            "name": "id"
+          }
+        ]
+      }
+    },
+    "/idea/": {
+      "post": {
+        "summary": "增加时间线",
+        "deprecated": false,
+        "description": "增加时间线",
+        "tags": [
+          "时间线接口"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json; charset\u003dutf-8": {
+              "schema": {
+                "$ref": "#/components/schemas/_idea_request"
+              },
+              "examples": {
+                "json": {
+                  "summary": "test data",
+                  "value": "{\n  \"title\": \"gbbnwj\",\n  \"content\": \"c58bk4\"\n}"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/_idea_response"
+                },
+                "examples": {
+                  "json": {
+                    "summary": "test data",
+                    "value": "{\n  \"status\": 778,\n  \"msg\": \"tjqo8x\",\n  \"data\": {}\n}"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "operationId": "52b20e7252c517febf59077d853d3396",
+        "parameters": []
+      },
+      "put": {
+        "summary": "更新时间线",
+        "deprecated": false,
+        "description": "更新时间线",
+        "tags": [
+          "时间线接口"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json; charset\u003dutf-8": {
+              "schema": {
+                "$ref": "#/components/schemas/_idea_request"
+              },
+              "examples": {
+                "json": {
+                  "summary": "test data",
+                  "value": "{\n  \"title\": \"vxwp8e\",\n  \"content\": \"dc6t9b\"\n}"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/_idea_response"
+                },
+                "examples": {
+                  "json": {
+                    "summary": "test data",
+                    "value": "{\n  \"status\": 726,\n  \"msg\": \"p8l3n7\",\n  \"data\": {}\n}"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "operationId": "7d85edff9e84931041b0304f39aa37f4",
+        "parameters": [
+          {
+            "schema": {
+              "format": "int64",
+              "type": "integer"
+            },
+            "in": "query",
+            "description": "id",
+            "required": true,
+            "example": "31",
+            "name": "id"
+          }
+        ]
+      },
+      "get": {
+        "summary": "根据 id 查询时间线",
+        "deprecated": false,
+        "description": "根据 id 查询时间线",
+        "tags": [
+          "时间线接口"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/_idea_response"
+                },
+                "examples": {
+                  "json": {
+                    "summary": "test data",
+                    "value": "{\n  \"status\": 557,\n  \"msg\": \"e2i19b\",\n  \"data\": {}\n}"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "operationId": "17e02903e1cd28a5ddef5472974b85a2",
+        "parameters": [
+          {
+            "schema": {
+              "format": "int64",
+              "type": "integer"
+            },
+            "in": "query",
+            "description": "id",
+            "required": true,
+            "example": "322",
+            "name": "id"
+          }
+        ]
+      }
+    },
+    "/auth/logout": {
+      "post": {
+        "summary": "注销",
+        "deprecated": false,
+        "description": "注销",
+        "tags": [
+          "认证接口"
+        ],
+        "requestBody": {
+          "content": {
+            "application/x-www-form-urlencoded;charset\u003dutf-8": {
+              "schema": {
+                "$ref": "#/components/schemas/_auth_logoutrequest"
+              },
+              "examples": {
+                "json": {
+                  "summary": "test data",
+                  "value": "curl -X POST -H \u0027satoken\u0027 -i http://localhost:8088/auth/logout"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/_auth_logoutresponse"
+                },
+                "examples": {
+                  "json": {
+                    "summary": "test data",
+                    "value": "{\n  \"status\": 371,\n  \"msg\": \"rz2u7z\",\n  \"data\": {}\n}"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "operationId": "1a4ed11ad66d881156b248f51b4458f7",
+        "parameters": [
+          {
+            "schema": {
+              "format": "string",
+              "type": "string"
+            },
+            "in": "header",
+            "description": "token",
+            "required": true,
+            "name": "satoken"
+          }
+        ]
+      }
+    },
+    "/tag/name": {
+      "get": {
+        "summary": "根据名称查询标签实体",
+        "deprecated": false,
+        "description": "根据名称查询标签实体",
+        "tags": [
+          "标签接口"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/_tag_nameresponse"
+                },
+                "examples": {
+                  "json": {
+                    "summary": "test data",
+                    "value": "{\n  \"status\": 528,\n  \"msg\": \"6gjjiu\",\n  \"data\": {}\n}"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "operationId": "9532b11cb320c043ab5785b3cbb80e12",
+        "parameters": [
+          {
+            "schema": {
+              "type": "string"
+            },
+            "in": "query",
+            "description": "name",
+            "required": true,
+            "example": "rhett.schneider",
+            "name": "name"
+          }
+        ]
+      }
+    },
+    "/tag/all": {
+      "get": {
+        "summary": "查询所有标签实体",
+        "deprecated": false,
+        "description": "查询所有标签实体",
+        "tags": [
+          "标签接口"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/_tag_allresponse"
+                },
+                "examples": {
+                  "json": {
+                    "summary": "test data",
+                    "value": "{\n  \"status\": 501,\n  \"msg\": \"yt9kb9\",\n  \"data\": {}\n}"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "operationId": "cede1ec6e73402e4ca7345c61ea30747",
+        "parameters": []
+      }
+    },
+    "/tag/page": {
+      "get": {
+        "summary": "分页查询标签实体",
+        "deprecated": false,
+        "description": "分页查询标签实体",
+        "tags": [
+          "标签接口"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/_tag_pageresponse"
+                },
+                "examples": {
+                  "json": {
+                    "summary": "test data",
+                    "value": "{\n  \"status\": 224,\n  \"msg\": \"6k86m6\",\n  \"data\": {}\n}"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "operationId": "77cae6cd50d2d8f958ac51da15a89339",
+        "parameters": [
+          {
+            "schema": {
+              "format": "int32",
+              "type": "integer"
+            },
+            "in": "query",
+            "description": "page",
+            "required": true,
+            "example": "1",
+            "name": "page"
+          },
+          {
+            "schema": {
+              "format": "int32",
+              "type": "integer"
+            },
+            "in": "query",
+            "description": "size",
+            "required": true,
+            "example": "5",
+            "name": "size"
+          }
+        ]
+      }
+    },
+    "/category/": {
+      "post": {
+        "summary": "增加分类",
+        "deprecated": false,
+        "description": "增加分类",
+        "tags": [
+          "分类接口"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json; charset\u003dutf-8": {
+              "schema": {
+                "type": "string"
+              },
+              "examples": {
+                "json": {
+                  "summary": "test data",
+                  "value": "9k518k"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/_category_response"
+                },
+                "examples": {
+                  "json": {
+                    "summary": "test data",
+                    "value": "{\n  \"status\": 514,\n  \"msg\": \"akevlv\",\n  \"data\": {}\n}"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "operationId": "7c90aa25c17a82c811221fb8d462b166",
+        "parameters": []
+      }
+    },
+    "/category/id": {
+      "get": {
+        "summary": "根据 id 查询分类实体",
+        "deprecated": false,
+        "description": "根据 id 查询分类实体",
+        "tags": [
+          "分类接口"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/_category_idresponse"
+                },
+                "examples": {
+                  "json": {
+                    "summary": "test data",
+                    "value": "{\n  \"status\": 250,\n  \"msg\": \"waum5t\",\n  \"data\": {}\n}"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "operationId": "de24ef4a92ae592d765520ef651f872e",
+        "parameters": [
+          {
+            "schema": {
+              "format": "int64",
+              "type": "integer"
+            },
+            "in": "query",
+            "description": "id",
+            "required": true,
+            "example": "512",
+            "name": "id"
+          }
+        ]
+      }
+    },
+    "/idea/{id}": {
+      "delete": {
+        "summary": "根据 id 删除时间线",
+        "deprecated": false,
+        "description": "根据 id 删除时间线",
+        "tags": [
+          "时间线接口"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/_idea__id_response"
+                },
+                "examples": {
+                  "json": {
+                    "summary": "test data",
+                    "value": "{\n  \"status\": 46,\n  \"msg\": \"1votlg\",\n  \"data\": {}\n}"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "operationId": "553ea245f7c1a23f1edf78daa941d9bf",
+        "parameters": [
+          {
+            "schema": {
+              "format": "int64",
+              "type": "integer"
+            },
+            "in": "path",
+            "description": "id",
+            "required": true,
+            "example": "497",
+            "name": "id"
+          }
+        ]
+      }
+    },
+    "/category/all": {
+      "get": {
+        "summary": "查询所有分类实体",
+        "deprecated": false,
+        "description": "查询所有分类实体",
+        "tags": [
+          "分类接口"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/_category_allresponse"
+                },
+                "examples": {
+                  "json": {
+                    "summary": "test data",
+                    "value": "{\n  \"status\": 625,\n  \"msg\": \"vgxmk7\",\n  \"data\": {}\n}"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "operationId": "5d717ce6c2605d8fc877b397c088f04a",
+        "parameters": []
+      }
+    },
+    "/tag/article/id": {
+      "get": {
+        "summary": "分页查询某标签下文章",
+        "deprecated": false,
+        "description": "分页查询某标签下文章",
+        "tags": [
+          "标签接口"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/_tag_article_idresponse"
+                },
+                "examples": {
+                  "json": {
+                    "summary": "test data",
+                    "value": "{\n  \"status\": 480,\n  \"msg\": \"rb2jft\",\n  \"data\": {}\n}"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "operationId": "5c69d522d4b8ddbd569a4d7495da1a7f",
+        "parameters": [
+          {
+            "schema": {
+              "format": "int64",
+              "type": "integer"
+            },
+            "in": "query",
+            "description": "id",
+            "required": true,
+            "example": "449",
+            "name": "id"
+          },
+          {
+            "schema": {
+              "format": "int32",
+              "type": "integer"
+            },
+            "in": "query",
+            "description": "page",
+            "required": true,
+            "example": "1",
+            "name": "page"
+          },
+          {
+            "schema": {
+              "format": "int32",
+              "type": "integer"
+            },
+            "in": "query",
+            "description": "size",
+            "required": true,
+            "example": "5",
+            "name": "size"
+          }
+        ]
+      }
+    },
+    "/idea/page": {
+      "get": {
+        "summary": "分页查询时间线",
+        "deprecated": false,
+        "description": "分页查询时间线",
+        "tags": [
+          "时间线接口"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "$ref": "#/components/schemas/_idea_pageresponse"
+                },
+                "examples": {
+                  "json": {
+                    "summary": "test data",
+                    "value": "{\n  \"status\": 938,\n  \"msg\": \"3wt0bv\",\n  \"data\": {}\n}"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "operationId": "38c9b897ebd2187e0ceb5bc57687c686",
+        "parameters": [
+          {
+            "schema": {
+              "format": "int32",
+              "type": "integer"
+            },
+            "in": "query",
+            "description": "页数",
+            "required": true,
+            "example": "1",
+            "name": "page"
+          },
+          {
+            "schema": {
+              "format": "int32",
+              "type": "integer"
+            },
+            "in": "query",
+            "description": "数量",
+            "required": true,
+            "example": "10",
+            "name": "size"
+          }
+        ]
+      }
+    }
+  },
+  "info": {
+    "title": "lblog",
+    "version": "1.0.0"
+  }
+}

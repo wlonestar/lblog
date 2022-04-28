@@ -38,8 +38,8 @@ data|object|No comments found.|-
 **Response-example:**
 ```
 {
-  "status": 232,
-  "msg": "k8tbvj",
+  "status": 634,
+  "msg": "oq8yxw",
   "data": {}
 }
 ```
@@ -76,8 +76,8 @@ data|object|No comments found.|-
 **Response-example:**
 ```
 {
-  "status": 2,
-  "msg": "yd3q7o",
+  "status": 262,
+  "msg": "ly3yn8",
   "data": {}
 }
 ```
@@ -107,8 +107,8 @@ data|object|No comments found.|-
 **Response-example:**
 ```
 {
-  "status": 444,
-  "msg": "ffoezb",
+  "status": 250,
+  "msg": "6ucdoq",
   "data": {}
 }
 ```
@@ -138,14 +138,14 @@ data|object|No comments found.|-
 **Response-example:**
 ```
 {
-  "status": 172,
-  "msg": "93ebpn",
+  "status": 616,
+  "msg": "9oguib",
   "data": {}
 }
 ```
 
 ### 根据 id 查询文章详情
-**URL:** http://localhost:8088/article/detail
+**URL:** http://localhost:8088/article/detail/id
 
 **Type:** GET
 
@@ -162,7 +162,7 @@ id|int64|id|true|-
 
 **Request-example:**
 ```
-curl -X GET -i http://localhost:8088/article/detail?id=105 --data '105'
+curl -X GET -i http://localhost:8088/article/detail/id?id=119 --data '119'
 ```
 **Response-fields:**
 
@@ -175,21 +175,21 @@ data|object|No comments found.|-
 **Response-example:**
 ```
 {
-  "status": 13,
-  "msg": "ybfina",
+  "status": 889,
+  "msg": "5il8e8",
   "data": {}
 }
 ```
 
-### 根据 id 查询文章详情
-**URL:** http://localhost:8088/article/detail
+### 根据标题查询文章详情
+**URL:** http://localhost:8088/article/detail/title
 
 **Type:** GET
 
 
 **Content-Type:** application/x-www-form-urlencoded;charset=utf-8
 
-**Description:** 根据 id 查询文章详情
+**Description:** 根据标题查询文章详情
 
 **Query-parameters:**
 
@@ -199,7 +199,7 @@ title|string|title|true|-
 
 **Request-example:**
 ```
-curl -X GET -i http://localhost:8088/article/detail?title=8lesvk --data '8lesvk'
+curl -X GET -i http://localhost:8088/article/detail/title?title=9eqd0b --data '9eqd0b'
 ```
 **Response-fields:**
 
@@ -212,8 +212,8 @@ data|object|No comments found.|-
 **Response-example:**
 ```
 {
-  "status": 976,
-  "msg": "k0o1me",
+  "status": 782,
+  "msg": "zkh3ys",
   "data": {}
 }
 ```
@@ -236,7 +236,7 @@ id|int64|id|true|-
 
 **Request-example:**
 ```
-curl -X GET -i http://localhost:8088/article/summary?id=578 --data '578'
+curl -X GET -i http://localhost:8088/article/summary?id=415 --data '415'
 ```
 **Response-fields:**
 
@@ -249,8 +249,8 @@ data|object|No comments found.|-
 **Response-example:**
 ```
 {
-  "status": 649,
-  "msg": "clrl69",
+  "status": 443,
+  "msg": "4f44ls",
   "data": {}
 }
 ```
@@ -279,13 +279,13 @@ tags|array|No comments found.|false|-
 **Request-example:**
 ```
 curl -X POST -H 'Content-Type: application/json; charset=utf-8' -i http://localhost:8088/article/ --data '{
-  "title": "vxyb0a",
-  "summary": "ggob1d",
-  "image": "4sklds",
-  "content": "rzb41p",
-  "category": "luu8pb",
+  "title": "3qxtdy",
+  "summary": "c6vtvw",
+  "image": "x44eei",
+  "content": "xkrs00",
+  "category": "93npme",
   "tags": [
-    "u7a3s0"
+    "wm7iap"
   ]
 }'
 ```
@@ -300,8 +300,8 @@ data|object|No comments found.|-
 **Response-example:**
 ```
 {
-  "status": 942,
-  "msg": "99u5ta",
+  "status": 950,
+  "msg": "duw88w",
   "data": {}
 }
 ```
@@ -335,14 +335,14 @@ tags|array|No comments found.|false|-
 
 **Request-example:**
 ```
-curl -X PUT -H 'Content-Type: application/json; charset=utf-8' -i http://localhost:8088/article/?id=66 --data '{
-  "title": "iggueu",
-  "summary": "i45gl5",
-  "image": "9dq0ls",
-  "content": "hy1vda",
-  "category": "c2jb86",
+curl -X PUT -H 'Content-Type: application/json; charset=utf-8' -i http://localhost:8088/article/?id=885 --data '{
+  "title": "75wlv2",
+  "summary": "k7wamw",
+  "image": "2u7s5h",
+  "content": "s6n9dl",
+  "category": "4pxwmo",
   "tags": [
-    "bgkdrb"
+    "vfkcti"
   ]
 }'
 ```
@@ -357,8 +357,8 @@ data|object|No comments found.|-
 **Response-example:**
 ```
 {
-  "status": 433,
-  "msg": "6ptlks",
+  "status": 697,
+  "msg": "usx96w",
   "data": {}
 }
 ```
@@ -381,7 +381,7 @@ id|int64|id|true|-
 
 **Request-example:**
 ```
-curl -X DELETE -i http://localhost:8088/article/565
+curl -X DELETE -i http://localhost:8088/article/315
 ```
 **Response-fields:**
 
@@ -394,8 +394,8 @@ data|object|No comments found.|-
 **Response-example:**
 ```
 {
-  "status": 767,
-  "msg": "ya18tr",
+  "status": 628,
+  "msg": "imfhpr",
   "data": {}
 }
 ```
@@ -422,7 +422,7 @@ password|string|No comments found.|false|-
 ```
 curl -X POST -H 'Content-Type: application/json; charset=utf-8' -i http://localhost:8088/auth/login --data '{
   "username": "rhett.schneider",
-  "password": "aqenk2"
+  "password": "3b2ie8"
 }'
 ```
 **Response-fields:**
@@ -436,8 +436,8 @@ data|object|No comments found.|-
 **Response-example:**
 ```
 {
-  "status": 683,
-  "msg": "m8of8j",
+  "status": 109,
+  "msg": "1i947y",
   "data": {}
 }
 ```
@@ -463,7 +463,7 @@ password|string|No comments found.|false|-
 ```
 curl -X POST -H 'Content-Type: application/json; charset=utf-8' -i http://localhost:8088/auth/register --data '{
   "username": "rhett.schneider",
-  "password": "5mr7n3"
+  "password": "5u4s43"
 }'
 ```
 **Response-fields:**
@@ -477,8 +477,8 @@ data|object|No comments found.|-
 **Response-example:**
 ```
 {
-  "status": 188,
-  "msg": "syxc0w",
+  "status": 589,
+  "msg": "fuzuyg",
   "data": {}
 }
 ```
@@ -508,7 +508,7 @@ uid|int64|username|true|-
 
 **Request-example:**
 ```
-curl -X GET -H 'satoken' -i http://localhost:8088/auth/check?uid=274 --data '274'
+curl -X GET -H 'satoken' -i http://localhost:8088/auth/check?uid=158 --data '158'
 ```
 **Response-fields:**
 
@@ -521,8 +521,8 @@ data|object|No comments found.|-
 **Response-example:**
 ```
 {
-  "status": 357,
-  "msg": "0mpgg5",
+  "status": 718,
+  "msg": "p9v3tk",
   "data": {}
 }
 ```
@@ -559,8 +559,8 @@ data|object|No comments found.|-
 **Response-example:**
 ```
 {
-  "status": 471,
-  "msg": "v37d7u",
+  "status": 365,
+  "msg": "216yvv",
   "data": {}
 }
 ```
@@ -598,8 +598,8 @@ data|object|No comments found.|-
 **Response-example:**
 ```
 {
-  "status": 404,
-  "msg": "f1gpox",
+  "status": 562,
+  "msg": "n7g3iy",
   "data": {}
 }
 ```
@@ -629,8 +629,8 @@ data|object|No comments found.|-
 **Response-example:**
 ```
 {
-  "status": 38,
-  "msg": "d14eij",
+  "status": 493,
+  "msg": "7vycdo",
   "data": {}
 }
 ```
@@ -655,7 +655,7 @@ size|int32|size|true|-
 
 **Request-example:**
 ```
-curl -X GET -i http://localhost:8088/category/article/id?id=85&page=1&size=7 --data '"7"'
+curl -X GET -i http://localhost:8088/category/article/id?id=53&page=1&size=7 --data '"7"'
 ```
 **Response-fields:**
 
@@ -668,8 +668,8 @@ data|object|No comments found.|-
 **Response-example:**
 ```
 {
-  "status": 80,
-  "msg": "hwkvbd",
+  "status": 205,
+  "msg": "l2php1",
   "data": {}
 }
 ```
@@ -707,8 +707,8 @@ data|object|No comments found.|-
 **Response-example:**
 ```
 {
-  "status": 503,
-  "msg": "li0vue",
+  "status": 780,
+  "msg": "jmblr3",
   "data": {}
 }
 ```
@@ -731,7 +731,7 @@ id|int64|id|true|-
 
 **Request-example:**
 ```
-curl -X GET -i http://localhost:8088/category/id?id=243 --data '243'
+curl -X GET -i http://localhost:8088/category/id?id=94 --data '94'
 ```
 **Response-fields:**
 
@@ -744,8 +744,8 @@ data|object|No comments found.|-
 **Response-example:**
 ```
 {
-  "status": 128,
-  "msg": "h0caw5",
+  "status": 413,
+  "msg": "nhr022",
   "data": {}
 }
 ```
@@ -781,8 +781,8 @@ data|object|No comments found.|-
 **Response-example:**
 ```
 {
-  "status": 527,
-  "msg": "aue98s",
+  "status": 537,
+  "msg": "nqg0j8",
   "data": {}
 }
 ```
@@ -805,7 +805,7 @@ category|string|category|false|-
 
 **Request-example:**
 ```
-curl -X POST -H 'Content-Type: application/json; charset=utf-8' -i http://localhost:8088/category/ --data 'w1q7l6'
+curl -X POST -H 'Content-Type: application/json; charset=utf-8' -i http://localhost:8088/category/ --data 'cyie7w'
 ```
 **Response-fields:**
 
@@ -818,8 +818,8 @@ data|object|No comments found.|-
 **Response-example:**
 ```
 {
-  "status": 76,
-  "msg": "hqbs1v",
+  "status": 666,
+  "msg": "x23z7y",
   "data": {}
 }
 ```
@@ -842,7 +842,7 @@ id|int64|id|true|-
 
 **Request-example:**
 ```
-curl -X DELETE -i http://localhost:8088/category/272
+curl -X DELETE -i http://localhost:8088/category/216
 ```
 **Response-fields:**
 
@@ -855,8 +855,8 @@ data|object|No comments found.|-
 **Response-example:**
 ```
 {
-  "status": 611,
-  "msg": "uuygjj",
+  "status": 550,
+  "msg": "dhwyi0",
   "data": {}
 }
 ```
@@ -894,8 +894,8 @@ data|object|No comments found.|-
 **Response-example:**
 ```
 {
-  "status": 571,
-  "msg": "mbdq7l",
+  "status": 695,
+  "msg": "d90854",
   "data": {}
 }
 ```
@@ -925,8 +925,8 @@ data|object|No comments found.|-
 **Response-example:**
 ```
 {
-  "status": 547,
-  "msg": "p2s9mi",
+  "status": 174,
+  "msg": "d7cgt5",
   "data": {}
 }
 ```
@@ -949,7 +949,7 @@ id|int64|id|true|-
 
 **Request-example:**
 ```
-curl -X GET -i http://localhost:8088/comment/?id=69 --data '69'
+curl -X GET -i http://localhost:8088/comment/?id=742 --data '742'
 ```
 **Response-fields:**
 
@@ -962,8 +962,8 @@ data|object|No comments found.|-
 **Response-example:**
 ```
 {
-  "status": 76,
-  "msg": "pvlndu",
+  "status": 127,
+  "msg": "w2x3fk",
   "data": {}
 }
 ```
@@ -991,10 +991,10 @@ email|string|No comments found.|false|-
 **Request-example:**
 ```
 curl -X POST -H 'Content-Type: application/json; charset=utf-8' -i http://localhost:8088/comment/ --data '{
-  "content": "k4lyf9",
+  "content": "2jzbk0",
   "username": "rhett.schneider",
-  "avatar": "6tdy8u",
-  "site": "bfby4q",
+  "avatar": "3qj16l",
+  "site": "5exsno",
   "email": "cordell.ziemann@gmail.com"
 }'
 ```
@@ -1009,8 +1009,8 @@ data|object|No comments found.|-
 **Response-example:**
 ```
 {
-  "status": 474,
-  "msg": "0eb9h0",
+  "status": 896,
+  "msg": "ke4g1z",
   "data": {}
 }
 ```
@@ -1033,7 +1033,7 @@ id|int64|id|true|-
 
 **Request-example:**
 ```
-curl -X DELETE -i http://localhost:8088/comment/792
+curl -X DELETE -i http://localhost:8088/comment/486
 ```
 **Response-fields:**
 
@@ -1046,8 +1046,8 @@ data|object|No comments found.|-
 **Response-example:**
 ```
 {
-  "status": 510,
-  "msg": "u2i4bz",
+  "status": 173,
+  "msg": "qjcc7u",
   "data": {}
 }
 ```
@@ -1078,8 +1078,8 @@ data|object|No comments found.|-
 **Response-example:**
 ```
 {
-  "status": 164,
-  "msg": "x1ttlx",
+  "status": 8,
+  "msg": "k1h6su",
   "data": {}
 }
 ```
@@ -1116,8 +1116,8 @@ data|object|No comments found.|-
 **Response-example:**
 ```
 {
-  "status": 120,
-  "msg": "fgz8tv",
+  "status": 595,
+  "msg": "1q0w3h",
   "data": {}
 }
 ```
@@ -1153,8 +1153,8 @@ data|object|No comments found.|-
 **Response-example:**
 ```
 {
-  "status": 509,
-  "msg": "wx5j2t",
+  "status": 498,
+  "msg": "s7tsxp",
   "data": {}
 }
 ```
@@ -1192,8 +1192,8 @@ data|object|No comments found.|-
 **Response-example:**
 ```
 {
-  "status": 327,
-  "msg": "a0m1iw",
+  "status": 174,
+  "msg": "43418i",
   "data": {}
 }
 ```
@@ -1223,8 +1223,8 @@ data|object|No comments found.|-
 **Response-example:**
 ```
 {
-  "status": 938,
-  "msg": "w2v48z",
+  "status": 431,
+  "msg": "zpyyoh",
   "data": {}
 }
 ```
@@ -1249,7 +1249,7 @@ size|int32|size|true|-
 
 **Request-example:**
 ```
-curl -X GET -i http://localhost:8088/tag/article/id?id=402&page=1&size=5 --data '"5"'
+curl -X GET -i http://localhost:8088/tag/article/id?id=823&page=1&size=5 --data '"5"'
 ```
 **Response-fields:**
 
@@ -1262,8 +1262,8 @@ data|object|No comments found.|-
 **Response-example:**
 ```
 {
-  "status": 151,
-  "msg": "mnfewy",
+  "status": 466,
+  "msg": "41ssxx",
   "data": {}
 }
 ```
@@ -1301,8 +1301,8 @@ data|object|No comments found.|-
 **Response-example:**
 ```
 {
-  "status": 775,
-  "msg": "0cnarb",
+  "status": 824,
+  "msg": "phx7ff",
   "data": {}
 }
 ```
@@ -1325,7 +1325,7 @@ id|int64|id|true|-
 
 **Request-example:**
 ```
-curl -X GET -i http://localhost:8088/tag/id?id=569 --data '569'
+curl -X GET -i http://localhost:8088/tag/id?id=898 --data '898'
 ```
 **Response-fields:**
 
@@ -1338,8 +1338,8 @@ data|object|No comments found.|-
 **Response-example:**
 ```
 {
-  "status": 779,
-  "msg": "hs9he1",
+  "status": 672,
+  "msg": "b5z5uy",
   "data": {}
 }
 ```
@@ -1375,8 +1375,8 @@ data|object|No comments found.|-
 **Response-example:**
 ```
 {
-  "status": 518,
-  "msg": "fxnxev",
+  "status": 843,
+  "msg": "s9yir6",
   "data": {}
 }
 ```
@@ -1412,8 +1412,8 @@ data|object|No comments found.|-
 **Response-example:**
 ```
 {
-  "status": 792,
-  "msg": "xct7vr",
+  "status": 767,
+  "msg": "u6budw",
   "data": {}
 }
 ```
@@ -1436,7 +1436,7 @@ id|int64|id|true|-
 
 **Request-example:**
 ```
-curl -X DELETE -i http://localhost:8088/tag/990
+curl -X DELETE -i http://localhost:8088/tag/912
 ```
 **Response-fields:**
 
@@ -1449,8 +1449,8 @@ data|object|No comments found.|-
 **Response-example:**
 ```
 {
-  "status": 272,
-  "msg": "dq4hhr",
+  "status": 860,
+  "msg": "hrne24",
   "data": {}
 }
 ```
@@ -1488,8 +1488,8 @@ data|object|No comments found.|-
 **Response-example:**
 ```
 {
-  "status": 689,
-  "msg": "kya642",
+  "status": 568,
+  "msg": "1x6f86",
   "data": {}
 }
 ```
@@ -1519,8 +1519,8 @@ data|object|No comments found.|-
 **Response-example:**
 ```
 {
-  "status": 182,
-  "msg": "ivve6w",
+  "status": 695,
+  "msg": "kmuzzf",
   "data": {}
 }
 ```
@@ -1543,7 +1543,7 @@ id|int64|id|true|-
 
 **Request-example:**
 ```
-curl -X GET -i http://localhost:8088/idea/?id=992 --data '992'
+curl -X GET -i http://localhost:8088/idea/?id=594 --data '594'
 ```
 **Response-fields:**
 
@@ -1556,8 +1556,8 @@ data|object|No comments found.|-
 **Response-example:**
 ```
 {
-  "status": 67,
-  "msg": "dpodks",
+  "status": 908,
+  "msg": "ss5izj",
   "data": {}
 }
 ```
@@ -1582,8 +1582,8 @@ content|string|No comments found.|false|-
 **Request-example:**
 ```
 curl -X POST -H 'Content-Type: application/json; charset=utf-8' -i http://localhost:8088/idea/ --data '{
-  "title": "tnyotr",
-  "content": "8ctamj"
+  "title": "luv53d",
+  "content": "9sbdar"
 }'
 ```
 **Response-fields:**
@@ -1597,8 +1597,8 @@ data|object|No comments found.|-
 **Response-example:**
 ```
 {
-  "status": 138,
-  "msg": "r01bdz",
+  "status": 354,
+  "msg": "gb8sp8",
   "data": {}
 }
 ```
@@ -1628,9 +1628,9 @@ content|string|No comments found.|false|-
 
 **Request-example:**
 ```
-curl -X PUT -H 'Content-Type: application/json; charset=utf-8' -i http://localhost:8088/idea/?id=394 --data '{
-  "title": "od3ud5",
-  "content": "jglkcp"
+curl -X PUT -H 'Content-Type: application/json; charset=utf-8' -i http://localhost:8088/idea/?id=141 --data '{
+  "title": "0d835j",
+  "content": "wouozp"
 }'
 ```
 **Response-fields:**
@@ -1644,8 +1644,8 @@ data|object|No comments found.|-
 **Response-example:**
 ```
 {
-  "status": 902,
-  "msg": "7bcdt6",
+  "status": 573,
+  "msg": "ph4fvn",
   "data": {}
 }
 ```
@@ -1668,7 +1668,7 @@ id|int64|id|true|-
 
 **Request-example:**
 ```
-curl -X DELETE -i http://localhost:8088/idea/171
+curl -X DELETE -i http://localhost:8088/idea/319
 ```
 **Response-fields:**
 
@@ -1681,8 +1681,8 @@ data|object|No comments found.|-
 **Response-example:**
 ```
 {
-  "status": 712,
-  "msg": "l0r2a6",
+  "status": 123,
+  "msg": "f09bij",
   "data": {}
 }
 ```
@@ -1706,7 +1706,7 @@ id|int64|id|true|-
 
 **Request-example:**
 ```
-curl -X GET -i http://localhost:8088/user/user?id=537 --data '537'
+curl -X GET -i http://localhost:8088/user/user?id=886 --data '886'
 ```
 **Response-fields:**
 
@@ -1719,8 +1719,8 @@ data|object|No comments found.|-
 **Response-example:**
 ```
 {
-  "status": 415,
-  "msg": "n9qyym",
+  "status": 902,
+  "msg": "nkd0qb",
   "data": {}
 }
 ```
@@ -1752,13 +1752,13 @@ profile|string|No comments found.|false|-
 ```
 curl -X POST -H 'Content-Type: application/json; charset=utf-8' -i http://localhost:8088/user/ --data '{
   "username": "rhett.schneider",
-  "password": "xt89he",
-  "avatar": "y4d0x8",
+  "password": "wn50qd",
+  "avatar": "6iqqk1",
   "age": 61,
   "gender": 1,
-  "location": "jbh906",
-  "signature": "bkoahr",
-  "profile": "t75lwf"
+  "location": "x8mznf",
+  "signature": "37uyaf",
+  "profile": "1vukp0"
 }'
 ```
 **Response-fields:**
@@ -1772,8 +1772,8 @@ data|object|No comments found.|-
 **Response-example:**
 ```
 {
-  "status": 484,
-  "msg": "sft53c",
+  "status": 645,
+  "msg": "gjxb2o",
   "data": {}
 }
 ```
@@ -1809,15 +1809,15 @@ profile|string|No comments found.|false|-
 
 **Request-example:**
 ```
-curl -X PUT -H 'Content-Type: application/json; charset=utf-8' -i http://localhost:8088/user/?id=500 --data '{
+curl -X PUT -H 'Content-Type: application/json; charset=utf-8' -i http://localhost:8088/user/?id=509 --data '{
   "username": "rhett.schneider",
-  "password": "ol8rhj",
-  "avatar": "x45ua6",
+  "password": "4xggq7",
+  "avatar": "5p1ylu",
   "age": 61,
   "gender": 1,
-  "location": "6i0lrl",
-  "signature": "gstqze",
-  "profile": "o40imp"
+  "location": "xziedz",
+  "signature": "yexgdu",
+  "profile": "p040lv"
 }'
 ```
 **Response-fields:**
@@ -1831,8 +1831,8 @@ data|object|No comments found.|-
 **Response-example:**
 ```
 {
-  "status": 652,
-  "msg": "q8sj2x",
+  "status": 775,
+  "msg": "xyrwsb",
   "data": {}
 }
 ```
