@@ -42,11 +42,12 @@ export default {
     login () {
       this.$refs.form.validate((valid) => {
         if (valid) {
-          request.post('/login', this.form).then(res => {
-            if (res.code === 200) {
+          request.post('/auth/login', this.form).then(res => {
+            console.log(res)
+            if (res.status === 0) {
               this.$message({ type: 'success', message: '登录成功' })
-              localStorage.setItem('satoken', JSON.stringify(res.data.satoken))
-              localStorage.setItem('user', res.data.username)
+              localStorage.setItem('satoken', JSON.stringify(res.data.tokenValue))
+              localStorage.setItem('user', res.data.loginId)
               this.$router.push('/home')
             } else {
               this.$message({ type: 'error', message: res.msg })

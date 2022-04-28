@@ -30,11 +30,6 @@
         </router-link>
       </li>
       <li>
-        <router-link to="/link">
-          <Link class="icon"></Link><span>友链</span>
-        </router-link>
-      </li>
-      <li>
         <router-link to="/comment">
           <Comment class="icon"></Comment><span>留言</span>
         </router-link>
@@ -49,15 +44,14 @@
 </template>
 
 <script>
-import { Home, Archive, Bookmark, Link, Comment, User } from '@vicons/fa'
-import { getInfoById } from '../api/user'
+import { Home, Archive, Bookmark, Comment, User } from '@vicons/fa'
+import { getInfoById } from '@/api/user'
 export default {
   name: 'Left',
   components: {
     Home,
     Archive,
     Bookmark,
-    Link,
     Comment,
     User
   },
@@ -71,8 +65,9 @@ export default {
   },
   methods: {
     load () {
-      getInfoById(1).then(data => {
-        this.info = data.data.data
+      getInfoById(3).then(res => {
+        console.log(res)
+        this.info = res.data.data
       })
     }
   }

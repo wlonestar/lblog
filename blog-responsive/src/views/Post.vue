@@ -20,10 +20,10 @@
               <Calendar></Calendar>
               <time class="article-time--published">{{ new Date(article.createTime).toLocaleString() }}</time>
             </div>
-            <div>
-              <ClockRegular></ClockRegular>
-              <time class="article-time--reading">ReadingTime</time>
-            </div>
+<!--            <div>-->
+<!--              <ClockRegular></ClockRegular>-->
+<!--              <time class="article-time&#45;&#45;reading">ReadingTime</time>-->
+<!--            </div>-->
           </footer>
         </div>
       </header>
@@ -40,11 +40,11 @@
 </template>
 
 <script>
-import { Calendar, ClockRegular } from '@vicons/fa'
-import { getByTitle } from '../api/article'
+import { Calendar } from '@vicons/fa'
+import { getByTitle } from '@/api/article'
 export default {
   name: 'Post',
-  components: { Calendar, ClockRegular },
+  components: { Calendar },
   data () {
     return {
       article: {

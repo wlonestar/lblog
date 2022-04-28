@@ -3,7 +3,7 @@ import request from '../utils/request'
 // 分页查询留言
 export function getCommentByPage (page, size) {
   return request({
-    url: '/comment',
+    url: '/comment/page',
     method: 'get',
     params: {
       page: page,
@@ -23,7 +23,7 @@ export function getAllComment () {
 // 根据 id 查询留言
 export function getComment (id) {
   return request({
-    url: '/comment',
+    url: '/comment/',
     method: 'get',
     params: {
       id: id
@@ -34,7 +34,7 @@ export function getComment (id) {
 // 增加留言
 export function addComment (comment) {
   return request({
-    url: '/comment',
+    url: '/comment/',
     method: 'post',
     data: comment
   })

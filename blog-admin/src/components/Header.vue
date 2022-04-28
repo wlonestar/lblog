@@ -20,8 +20,8 @@
 </template>
 
 <script>
-import logout from '../utils/logout'
-import { getInfo } from '../api/setting'
+import { getInfo } from '@/api/setting'
+import { logout } from '@/api/logout'
 
 export default {
   name: 'Header',
@@ -35,19 +35,22 @@ export default {
   },
   methods: {
     load () {
-      getInfo(localStorage.getItem('user')).then(data => {
+      getInfo(3).then(data => {
         this.user = data.data
       })
     },
     logout () {
-      logout.post('/logout').then(data => {
-        if (data.data.code === 200) {
+      const token = localStorage.getItem('satoken')
+      console.log(token)
+      logout(token).then(res => {
+        console.log(res)
+        if (res.status === 0) {
           this.$message({ type: 'success', message: '注销成功' })
           this.$router.push('/login')
           localStorage.removeItem('satoken')
           localStorage.removeItem('user')
         } else {
-          this.$message({ type: 'error', message: data.data.msg })
+          this.$message({ type: 'error', message: res.data.msg })
         }
       })
     }

@@ -28,11 +28,6 @@ const routes = [
     component: () => import('../views/Category.vue')
   },
   {
-    path: '/link',
-    name: 'Link',
-    component: () => import('../views/Link.vue')
-  },
-  {
     path: '/comment',
     name: 'Comment',
     component: () => import('../views/Comment.vue')

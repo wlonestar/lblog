@@ -56,7 +56,7 @@
 </template>
 
 <script>
-import { deleteComment, getCommentByPage } from '../api/comment'
+import { deleteComment, getCommentByPage } from '@/api/comment'
 
 export default {
   name: 'Comment',
@@ -84,8 +84,8 @@ export default {
   methods: {
     load () {
       getCommentByPage(this.pageNum, this.pageSize).then(data => {
-        this.tableData = data.data.content
-        this.total = data.data.totalElements
+        this.tableData = data.data.records
+        this.total = data.data.total
       })
     },
     add () {
@@ -98,7 +98,7 @@ export default {
     },
     handleDelete (id) {
       deleteComment(id).then(res => {
-        if (res.code === 200) {
+        if (res.status === 0) {
           this.$message({
             type: 'success',
             message: '删除动态成功'

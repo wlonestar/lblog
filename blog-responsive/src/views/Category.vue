@@ -1,16 +1,16 @@
 <template>
   <div class="section-card">
     <div class="section-details">
-      <h3 class="section-count">{{ category.number }} 篇文章</h3>
+<!--      <h3 class="section-count">{{ category.number }} 篇文章</h3>-->
       <h1 class="section-term">{{ category.name }}</h1>
-      <h2 class="section-description">{{ category.description }}</h2>
+<!--      <h2 class="section-description">{{ category.description }}</h2>-->
     </div>
-    <div class="section-image">
-      <img :src="category.image" width="60px" height="60px" loading="lazy" alt="">
-    </div>
+<!--    <div class="section-image">-->
+<!--      <img :src="category.image" width="60px" height="60px" loading="lazy" alt="">-->
+<!--    </div>-->
   </div>
   <section class="article-list--compact">
-    <article v-for="article in category.articleList" :key="article">
+    <article v-for="article in category.articles.records" :key="article">
       <a @click="redirectToArticle(article.title)">
         <div class="article-details">
           <h2 class="article-title">{{ article.title }}</h2>
@@ -24,26 +24,13 @@
 </template>
 
 <script>
-import { getByName } from '../api/category'
+import { getByName } from '@/api/category'
 
 export default {
   name: 'Category',
   data () {
     return {
-      category: {
-        id: 0,
-        image: 'https://blog.wangjialei.xyz/images/2021-09-20.png',
-        number: 3,
-        name: '开源项目',
-        description: '我的开源项目的README',
-        articleList: [
-          {
-            id: 0,
-            title: '个人博客项目开发完成',
-            createTime: 'Sep 20 2021'
-          }
-        ]
-      }
+      category: {}
     }
   },
   created () {
@@ -51,9 +38,9 @@ export default {
   },
   methods: {
     load () {
-      getByName(this.$route.params.name).then(data => {
-        this.category = data.data.data
-        console.log(data.data.data)
+      getByName(this.$route.params.name).then(res => {
+        this.category = res.data.data
+        console.log(res.data.data)
       })
     },
     redirectToArticle (title) {

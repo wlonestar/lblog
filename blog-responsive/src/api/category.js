@@ -3,7 +3,7 @@ import request from '../utils/request'
 // 分页查询分类
 export function getCategoryByPage (page, size) {
   return request({
-    url: '/category',
+    url: '/category/page',
     method: 'get',
     params: {
       page: page,
@@ -23,16 +23,18 @@ export function getAllCategory () {
 // 根据 id 查询分类
 export function getCategory (id) {
   return request({
-    url: `/category/${id}`,
+    url: '/category/article/id',
     method: 'get',
-    data: id
+    params: {
+      id: id
+    }
   })
 }
 
 // 根据标题查询分类
 export function getByName (name) {
   return request({
-    url: '/category/c',
+    url: '/category/article/name',
     method: 'get',
     params: {
       name: name

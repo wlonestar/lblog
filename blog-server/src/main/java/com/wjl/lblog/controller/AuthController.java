@@ -109,7 +109,7 @@ public class AuthController {
     @RequestMapping(value = "/logout", method = RequestMethod.POST)
     public MyResult<?> logout(@RequestHeader(name = "satoken") String satoken) {
         if (!Objects.isNull(satoken)) {
-            StpUtil.checkLogin();
+//            StpUtil.checkLogin();
             StpUtil.logoutByTokenValue(satoken);
             return MyResult.success("logout success");
         }

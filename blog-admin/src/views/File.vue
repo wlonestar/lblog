@@ -1,7 +1,7 @@
 <template>
   <div style="margin: 20px 20px 20px 20px;">
     <el-upload class="upload-demo"
-      action="http://localhost:8088/files/"
+      action="http://localhost:8088/files/upload"
       :on-success="fileUploadSuccess">
       <el-button size="small" type="primary">点击上传</el-button>
       <template #tip style="margin-top: 20px;">
@@ -45,14 +45,14 @@ export default {
   },
   methods: {
     load () {
-      getAllByPage(this.pageNum, this.pageSize).then(data => {
-        this.images = data.data.content
-        console.log(this.data)
-        this.total = data.data.totalElements
+      getAllByPage(this.pageNum, this.pageSize).then(res => {
+        this.images = res.data.records
+        console.log(res.data)
+        this.total = res.data.total
       })
     },
     fileUploadSuccess (data) {
-      if (data.code === 200) {
+      if (data.status === 0) {
         this.$message({
           type: 'success',
           message: '上传成功'

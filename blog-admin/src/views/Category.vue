@@ -4,14 +4,11 @@
       <el-button type="primary" @click="add">新增</el-button>
     </div>
     <el-table :data="tableData" border stripe style="width: 100%">
-      <el-table-column prop="name" label="名称" sortable></el-table-column>
       <el-table-column prop="createTime" label="创建时间" sortable></el-table-column>
-      <el-table-column prop="updateTime" label="更新时间" sortable></el-table-column>
-      <el-table-column prop="description" label="描述" sortable></el-table-column>
-      <el-table-column prop="number" label="文章数" sortable></el-table-column>
+      <el-table-column prop="name" label="名称" sortable></el-table-column>
       <el-table-column label="操作">
         <template #default="scope">
-          <el-button @click="handleEdit(scope.row)" size="mini">编辑</el-button>
+<!--          <el-button @click="handleEdit(scope.row)" size="mini">编辑</el-button>-->
           <el-popconfirm title="确定删除分类吗？请确定该分类下文章数为零" @confirm="handleDelete(scope.row.id)">
             <template #reference>
               <el-button type="danger" size="mini">删除</el-button>
@@ -35,9 +32,6 @@
           <el-form-item label="名称">
             <el-input v-model="form.name" style="width: 60%;"></el-input>
           </el-form-item>
-          <el-form-item label="描述">
-            <el-input v-model="form.description" style="width: 60%;"></el-input>
-          </el-form-item>
         </el-form>
         <template #footer>
           <span class="dialog-footer">
@@ -51,7 +45,7 @@
 </template>
 
 <script>
-import { addCategory, deleteCategory, getCategoryByPage, updateCategory } from '../api/category'
+import { addCategory, deleteCategory, getCategoryByPage } from '@/api/category'
 
 export default {
   name: 'Category',
@@ -71,9 +65,9 @@ export default {
   },
   methods: {
     load () {
-      getCategoryByPage(this.pageNum, this.pageSize).then(data => {
-        this.tableData = data.data.content
-        this.total = data.data.totalElements
+      getCategoryByPage(this.pageNum, this.pageSize).then(res => {
+        this.tableData = res.data.records
+        this.total = res.data.total
       })
     },
     add () {
@@ -82,26 +76,10 @@ export default {
     },
     save () {
       if (this.form.id) {
-        updateCategory(this.form.id, this.form).then(data => {
-          // console.log(data)
-          if (data.code === 200) {
-            this.$message({
-              type: 'success',
-              message: '更新成功'
-            })
-          } else {
-            this.$message({
-              type: 'error',
-              message: data.msg
-            })
-          }
-          this.load()
-          this.dialogVisible = false
-        })
       } else {
-        addCategory(this.form).then(data => {
-          // console.log(data)
-          if (data.code === 200) {
+        addCategory(this.form).then(res => {
+          // console.log(res)
+          if (res.status === 0) {
             this.$message({
               type: 'success',
               message: '更新成功'
@@ -109,7 +87,7 @@ export default {
           } else {
             this.$message({
               type: 'error',
-              message: data.msg
+              message: res.msg
             })
           }
           this.load()
@@ -118,21 +96,6 @@ export default {
       }
     },
     update (id, form) {
-      updateCategory(id, form).then(res => {
-        if (res.code === 200) {
-          this.$message({
-            type: 'success',
-            message: 'add success'
-          })
-        } else {
-          this.$message({
-            type: 'error',
-            message: res.msg
-          })
-        }
-        this.load()
-        this.dialogVisible = false
-      })
     },
     handleEdit (row) {
       this.form = JSON.parse(JSON.stringify(row))
@@ -141,7 +104,7 @@ export default {
     },
     handleDelete (id) {
       deleteCategory(id).then(res => {
-        if (res.code === 200) {
+        if (res.status === 0) {
           this.$message({
             type: 'success',
             message: '删除分类成功'

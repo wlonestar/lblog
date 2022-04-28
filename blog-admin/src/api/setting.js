@@ -1,18 +1,18 @@
 import request from '../utils/request'
 
-export function getInfo (username) {
+export function getInfo (id) {
   return request({
-    url: '/user',
+    url: '/user/user',
     method: 'get',
     params: {
-      username: username
+      id: id
     }
   })
 }
 
 export function update (id, user) {
   return request({
-    url: '/user',
+    url: '/user/',
     method: 'put',
     params: {
       id: id

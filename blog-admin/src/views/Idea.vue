@@ -13,7 +13,7 @@
       <el-table-column prop="updateTime" label="更新时间" sortable width="180px;">
         <template #default="scope">
           <i class="el-icon-time"></i>
-          <span style="margin-left: 10px">{{ new Date(scope.row.updateTime).toLocaleString() }}</span>
+          <span style="margin-left: 10px">{{ new Date(scope.row.modifyTime).toLocaleString() }}</span>
         </template>
       </el-table-column>
       <el-table-column prop="content" label="内容" sortable></el-table-column>
@@ -56,20 +56,13 @@
 </template>
 
 <script>
-import { addIdea, deleteIdea, getIdeaByPage, updateIdea } from '../api/idea'
+import { addIdea, deleteIdea, getIdeaByPage, updateIdea } from '@/api/idea'
 
 export default {
   name: 'Idea',
   data () {
     return {
-      form: {
-        id: '',
-        title: '',
-        image: '',
-        category: '',
-        summary: '',
-        content: ''
-      },
+      form: {},
       dialogVisible: false,
       currentPage: 1,
       pageNum: 1,
@@ -83,10 +76,10 @@ export default {
   },
   methods: {
     load () {
-      getIdeaByPage(this.pageNum, this.pageSize).then(data => {
-        // console.log(data)
-        this.tableData = data.data.content
-        this.total = data.data.totalElements
+      getIdeaByPage(this.pageNum, this.pageSize).then(res => {
+        console.log(res)
+        this.tableData = res.data.records
+        this.total = res.data.total
       })
     },
     add () {
@@ -96,7 +89,7 @@ export default {
     save () {
       if (this.form.id) {
         updateIdea(this.form.id, this.form).then(res => {
-          if (res.code === 200) {
+          if (res.status === 0) {
             this.$message({
               type: 'success',
               message: 'add success'
@@ -112,7 +105,7 @@ export default {
         })
       } else {
         addIdea(this.form).then(data => {
-          if (data.code === 200) {
+          if (data.status === 0) {
             this.$message({
               type: 'success',
               message: 'add success'
@@ -135,7 +128,7 @@ export default {
     },
     handleDelete (id) {
       deleteIdea(id).then(res => {
-        if (res.code === 200) {
+        if (res.status === 0) {
           this.$message({
             type: 'success',
             message: '删除动态成功'

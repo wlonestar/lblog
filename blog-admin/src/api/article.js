@@ -3,7 +3,7 @@ import request from '../utils/request'
 // 分页查询文章
 export function getArticleByPage (page, size) {
   return request({
-    url: '/article',
+    url: '/article/page/detail',
     method: 'get',
     params: {
       page: page,
@@ -15,7 +15,7 @@ export function getArticleByPage (page, size) {
 // 查询所有文章
 export function getAllArticle () {
   return request({
-    url: '/article/all',
+    url: '/article/all/detail',
     method: 'get'
   })
 }
@@ -23,7 +23,7 @@ export function getAllArticle () {
 // 根据 id 查询文章
 export function getArticle (id) {
   return request({
-    url: '/article',
+    url: '/article/detail/id',
     method: 'get',
     params: {
       id: id
@@ -34,7 +34,7 @@ export function getArticle (id) {
 // 增加文章
 export function addArticle (article) {
   return request({
-    url: '/article',
+    url: '/article/',
     method: 'post',
     data: article
   })
@@ -43,7 +43,7 @@ export function addArticle (article) {
 // 根据 id 更新文章
 export function updateArticle (id, article) {
   return request({
-    url: '/article',
+    url: '/article/',
     method: 'put',
     params: {
       id: id
@@ -55,10 +55,7 @@ export function updateArticle (id, article) {
 // 根据 id 删除文章
 export function deleteArticle (id) {
   return request({
-    url: '/article',
-    method: 'delete',
-    params: {
-      id
-    }
+    url: `/article/${id}`,
+    method: 'delete'
   })
 }

@@ -19,10 +19,10 @@
             <Calendar></Calendar>
             <time class="article-time--published">{{ new Date(article.createTime).toLocaleString() }}</time>
           </div>
-          <div>
-            <ClockRegular></ClockRegular>
-            <time class="article-time--reading">阅读时长：{{ article.readTime }} 分钟</time>
-          </div>
+<!--          <div>-->
+<!--            <ClockRegular></ClockRegular>-->
+<!--            <time class="article-time&#45;&#45;reading">阅读时长：{{ article.readTime }} 分钟</time>-->
+<!--          </div>-->
         </footer>
       </div>
     </article>
@@ -33,12 +33,12 @@
 </template>
 
 <script>
-import { Calendar, ClockRegular } from '@vicons/fa'
+import { Calendar } from '@vicons/fa'
 import { NButton } from 'naive-ui'
-import { getAllArticle } from '../api/article'
+import { getAllArticle } from '@/api/article'
 export default {
   name: 'Home',
-  components: { Calendar, ClockRegular, NButton },
+  components: { Calendar, NButton },
   data () {
     return {
       articles: [
@@ -61,7 +61,7 @@ export default {
   methods: {
     load () {
       getAllArticle().then(data => {
-        this.articles = data.data.data.reverse()
+        this.articles = data.data.data
       })
     },
     redirectToArticle (name) {

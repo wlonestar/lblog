@@ -10,12 +10,6 @@
           <span style="margin-left: 10px">{{ new Date(scope.row.createTime).toLocaleString() }}</span>
         </template>
       </el-table-column>
-      <el-table-column prop="updateTime" label="更新时间" sortable width="180px;">
-        <template #default="scope">
-          <i class="el-icon-time"></i>
-          <span style="margin-left: 10px">{{ new Date(scope.row.updateTime).toLocaleString() }}</span>
-        </template>
-      </el-table-column>
       <el-table-column prop="title" label="标题" sortable></el-table-column>
       <el-table-column prop="summary" label="摘要" sortable></el-table-column>
       <el-table-column label="题图">
@@ -107,14 +101,14 @@ export default {
   },
   methods: {
     load () {
-      getArticleByPage(this.pageNum, this.pageSize).then(data => {
-        this.tableData = data.data.content
-        this.total = data.data.totalElements
+      getArticleByPage(this.pageNum, this.pageSize).then(res => {
+        this.tableData = res.data.records
+        this.total = res.data.total
       })
     },
     update (id, form) {
-      updateArticle(id, form).then(data => {
-        if (data.code === 200) {
+      updateArticle(id, form).then(res => {
+        if (res.status === 0) {
           this.$message({
             type: 'success',
             message: 'add success'
@@ -122,7 +116,7 @@ export default {
         } else {
           this.$message({
             type: 'error',
-            message: data.msg
+            message: res.msg
           })
         }
         this.load()
@@ -134,8 +128,8 @@ export default {
       this.dialogVisible = true
     },
     handleDelete (id) {
-      deleteArticle(id).then(data => {
-        if (data.code === 200) {
+      deleteArticle(id).then(res => {
+        if (res.status === 0) {
           this.$message({
             type: 'success',
             message: '删除文章成功'
@@ -143,7 +137,7 @@ export default {
         } else {
           this.$message({
             type: 'error',
-            message: data.msg
+            message: res.msg
           })
         }
         this.load()

@@ -3,7 +3,7 @@ import request from '../utils/request'
 // 分页查询分类
 export function getIdeaByPage (page, size) {
   return request({
-    url: '/idea',
+    url: '/idea/page',
     method: 'get',
     params: {
       page: page,
@@ -23,7 +23,7 @@ export function getAllIdea () {
 // 根据 id 查询分类
 export function getIdea (id) {
   return request({
-    url: '/idea',
+    url: '/idea/',
     method: 'get',
     params: {
       id: id
@@ -34,7 +34,7 @@ export function getIdea (id) {
 // 增加分类
 export function addIdea (idea) {
   return request({
-    url: '/idea',
+    url: '/idea/',
     method: 'post',
     data: idea
   })
@@ -43,7 +43,7 @@ export function addIdea (idea) {
 // 根据 id 更新分类
 export function updateIdea (id, idea) {
   return request({
-    url: '/idea',
+    url: '/idea/',
     method: 'put',
     params: {
       id: id
@@ -55,10 +55,7 @@ export function updateIdea (id, idea) {
 // 根据 id 删除分类
 export function deleteIdea (id) {
   return request({
-    url: '/idea',
-    method: 'delete',
-    params: {
-      id
-    }
+    url: `/idea/${id}`,
+    method: 'delete'
   })
 }

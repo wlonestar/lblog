@@ -5,17 +5,17 @@
       <router-view></router-view>
       <Footer></Footer>
     </main>
-    <Right></Right>
+<!--    <Right></Right>-->
   </div>
 </template>
 
 <script>
 import Left from './components/Left.vue'
-import Right from './components/Right.vue'
+// import Right from './components/Right.vue'
 import Footer from './components/Footer.vue'
 export default {
   name: 'App',
-  components: { Left, Right, Footer }
+  components: { Left, Footer }
 }
 </script>
 

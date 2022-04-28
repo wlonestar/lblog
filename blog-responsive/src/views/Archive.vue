@@ -19,24 +19,13 @@
 </template>
 
 <script>
-import { getAllArticle } from '../api/article'
+import { getAllArticle } from '@/api/article'
 
 export default {
   name: 'Archive',
   data () {
     return {
-      articles: [
-        {
-          id: 0,
-          image: 'https://blog.wangjialei.xyz/images/2021-09-20.png',
-          categoryId: 0,
-          category: '开源项目',
-          title: '个人博客项目开发完成',
-          subtitle: 'SpringBoot + Vue 个人博客',
-          createTime: 'Sep 20 2021',
-          readTime: '2'
-        }
-      ]
+      articles: []
     }
   },
   created () {
@@ -44,8 +33,9 @@ export default {
   },
   methods: {
     load () {
-      getAllArticle().then(data => {
-        this.articles = data.data.data.reverse()
+      getAllArticle().then(res => {
+        console.log(res.data.data)
+        this.articles = res.data.data
       })
     },
     redirectToArticle (title) {

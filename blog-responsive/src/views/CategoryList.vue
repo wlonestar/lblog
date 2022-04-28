@@ -20,19 +20,13 @@
 </template>
 
 <script>
-import { getAllCategory } from '../api/category'
+import { getAllCategory } from '@/api/category'
 
 export default {
   name: 'CategoryList',
   data () {
     return {
-      categories: [
-        {
-          id: 0,
-          name: '开源项目',
-          createTime: 'Sep 20 2021'
-        }
-      ]
+      categories: []
     }
   },
   created () {
@@ -40,8 +34,9 @@ export default {
   },
   methods: {
     load () {
-      getAllCategory().then(data => {
-        this.categories = data.data.data
+      getAllCategory().then(res => {
+        console.log(res.data.data)
+        this.categories = res.data.data
       })
     },
     redirectToCategory (name) {

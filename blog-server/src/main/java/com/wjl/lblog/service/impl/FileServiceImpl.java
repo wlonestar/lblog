@@ -1,5 +1,6 @@
 package com.wjl.lblog.service.impl;
 
+import cn.dev33.satoken.secure.SaBase64Util;
 import com.qcloud.cos.COSClient;
 import com.qcloud.cos.ClientConfig;
 import com.qcloud.cos.auth.BasicCOSCredentials;
@@ -23,8 +24,8 @@ import java.io.File;
 public class FileServiceImpl implements FileService {
 
     private COSClient createClient() {
-        var secretId = GlobalConstants.SECRET_ID;
-        var secretKey = GlobalConstants.SECRET_KEY;
+        var secretId = SaBase64Util.decode(GlobalConstants.SECRET_ID);
+        var secretKey = SaBase64Util.decode(GlobalConstants.SECRET_KEY);
         var credentials = new BasicCOSCredentials(secretId, secretKey);
         var region = new Region(GlobalConstants.REGION);
         var clientConfig = new ClientConfig(region);
