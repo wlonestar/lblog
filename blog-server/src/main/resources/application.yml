@@ -15,6 +15,17 @@ spring:
       connection-timeout: 20000
       idle-timeout: 300000
       max-lifetime: 1200000
+  redis:
+    host: 127.0.0.1
+    port: 6379
+    database: 1
+    password:
+    lettuce:
+      pool:
+        max-idle: 8
+        max-active: 8
+        max-wait: -1ms
+        min-idle: 0
 
 sa-token:
   token-name: satoken

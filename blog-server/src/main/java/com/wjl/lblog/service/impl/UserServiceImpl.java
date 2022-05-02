@@ -102,16 +102,29 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User>
             if (selectAllUsername().contains(userDto.getUsername())) {
                 return false;
             } else {
-                var user = User.builder()
-                        .username(userDto.getUsername())
-                        .password(SaBase64Util.encode(userDto.getPassword()))
-                        .avatar(userDto.getAvatar())
-                        .age(userDto.getAge())
-                        .gender(userDto.getGender())
-                        .location(userDto.getLocation())
-                        .signature(userDto.getSignature())
-                        .profile(userDto.getProfile())
-                        .build();
+                var user = new User();
+                if (!Objects.isNull(userDto.getAvatar())) {
+                    user = User.builder()
+                            .username(userDto.getUsername())
+                            .password(SaBase64Util.encode(userDto.getPassword()))
+                            .avatar(userDto.getAvatar())
+                            .age(userDto.getAge())
+                            .gender(userDto.getGender())
+                            .location(userDto.getLocation())
+                            .signature(userDto.getSignature())
+                            .profile(userDto.getProfile())
+                            .build();
+                } else {
+                    user = User.builder()
+                            .username(userDto.getUsername())
+                            .password(SaBase64Util.encode(userDto.getPassword()))
+                            .age(userDto.getAge())
+                            .gender(userDto.getGender())
+                            .location(userDto.getLocation())
+                            .signature(userDto.getSignature())
+                            .profile(userDto.getProfile())
+                            .build();
+                }
                 var res = userMapper.insert(user);
                 return res == 1;
             }
